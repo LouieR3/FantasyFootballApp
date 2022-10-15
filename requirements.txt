@@ -1,0 +1,10 @@
+matplotlib
+bs4
+numpy
+# pydeck
+pandas
+unidecode
+lxml
+requests
+espn_api
+streamlit
