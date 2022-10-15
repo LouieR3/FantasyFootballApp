@@ -16,15 +16,19 @@ import numpy as np
 # import actors2
 import unidecode
 import espl
+import records
+import sos
+import expectedWins
+import lpi
 from espn_api.football import League
 
 st.set_page_config(page_title="Louie's Fantasy Football Page", layout="wide")
 
 PAGES = {
-    "Schedule Grid": intro,
-    "Strength of Schedule": actors,
-    "Expected Wins": director,
-    "Louie Power Index (LPI)": length
+    "Schedule Grid": records,
+    "Strength of Schedule": sos,
+    "Expected Wins": expectedWins,
+    "Louie Power Index (LPI)": lpi
 }
 st.sidebar.title('EBC League')
 selection = st.sidebar.radio("Go to", list(PAGES.keys()))
