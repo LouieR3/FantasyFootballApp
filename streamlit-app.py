@@ -14,21 +14,20 @@ import asyncio
 # from streamlit_pandas_profiling import st_profile_report
 import numpy as np
 # import actors2
-import records
-import sos
+import EBCleague
+import FamilyLeague
 import expectedWins
-import lpi
+import PennoniYounglings
 from espn_api.football import League
 
 st.set_page_config(page_title="Louie's Fantasy Football Page", layout="wide")
 
 PAGES = {
-    "Schedule Grid": records,
-    "Strength of Schedule": sos,
-    "Expected Wins": expectedWins,
-    "Louie Power Index (LPI)": lpi
+    "EBC League": EBCleague,
+    "Family League": FamilyLeague,
+    "Pennoni Younglings": PennoniYounglings
 }
-st.sidebar.title('EBC League')
+st.sidebar.title('Navigation')
 selection = st.sidebar.radio("Go to", list(PAGES.keys()))
 page = PAGES[selection]
 page.app()
