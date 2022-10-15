@@ -15,11 +15,11 @@ def app():
 
     st.header('Strength of Schedule')
     st.caption('The lower the number, the harder the schedule the team has had. If your average wins against schedule is 1, that means every team in the league would only average 1 win all season with your schedule')
-    df = pd.read_excel(file, sheet_name="Strength of Schedule")
+    df = pd.read_excel(file, sheet_name="Wins Against Schedule")
     df = df.iloc[: , 1:]
     df.index += 1 
     pd.options.mode.chained_assignment = None
-    df3 = df.style.background_gradient(subset=['Wins Against Schedule'])
+    df3 = df.style.background_gradient(subset=['Avg Wins Against Schedule'])
     st.dataframe(df3, height=460)
 
     st.header('Expected Wins')
