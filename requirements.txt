@@ -8,4 +8,3 @@ lxml
 requests
 espn_api
 streamlit
-itemgetter
