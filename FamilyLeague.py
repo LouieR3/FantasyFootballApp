@@ -3,9 +3,8 @@ def app():
     from operator import itemgetter
     import streamlit as st
 
-    st.header('Strength of Schedule')
-    st.caption('The lower the number, the harder the schedule the team has had. If your average wins against schedule is 1, that means every team in the league would only average 1 win all season with your schedule')
-    # league = "EBCLeague"
+    st.header('Schedule Record Matrix')
+    st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')# league = "EBCLeague"
     league = "FamilyLeague"
     # league = "PennoniYounglings"
     file = league + ".xlsx"

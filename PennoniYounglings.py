@@ -3,10 +3,8 @@ def app():
     from operator import itemgetter
     import streamlit as st
 
-    st.header('The Louie Power Index (LPI)')
-    st.caption('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
-    st.caption('It is not an exact science yet, but a negative score is a bad team, any score around 0 is average, and any score above 10 is a true contender')
-
+    st.header('Schedule Record Matrix')
+    st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
     # league = "EBCLeague"
     # league = "FamilyLeague"
     league = "PennoniYounglings"
