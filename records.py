@@ -9,7 +9,7 @@ def app():
 
     file = league()
     df = pd.read_excel(file, sheet_name="Schedule Grid")
-
+    df.index += 1 
     pd.options.mode.chained_assignment = None
 
-    st.dataframe(df, height=500, width=2000)
+    st.dataframe(df, width=2000)
