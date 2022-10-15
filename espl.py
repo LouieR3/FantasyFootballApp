@@ -1,7 +1,7 @@
 from espn_api.football import League
 import pandas as pd
 import time
-from tabulate import tabulate
+# from tabulate import tabulate
 from operator import itemgetter
 import xlsxwriter
 
