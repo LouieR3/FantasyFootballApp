@@ -12,5 +12,5 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1 
     pd.options.mode.chained_assignment = None
-
-    st.dataframe(df)
+    df3 = df.style.background_gradient(subset=['Avg Wins Against Schedule'])
+    st.dataframe(df3)
