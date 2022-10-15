@@ -14,8 +14,6 @@ import asyncio
 # from streamlit_pandas_profiling import st_profile_report
 import numpy as np
 # import actors2
-import unidecode
-import espl
 import records
 import sos
 import expectedWins
