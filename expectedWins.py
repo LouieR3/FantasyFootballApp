@@ -10,7 +10,8 @@ def app():
 
     file = league()
     df = pd.read_excel(file, sheet_name="Expected Wins")
-
+    df = df.iloc[: , 1:]
+    df.index += 1 
     pd.options.mode.chained_assignment = None
 
     st.dataframe(df, width=2000)
