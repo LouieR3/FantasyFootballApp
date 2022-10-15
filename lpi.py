@@ -14,4 +14,4 @@ def app():
     df.index += 1 
     pd.options.mode.chained_assignment = None
 
-    st.dataframe(df, width=2000)
+    st.dataframe(df)
