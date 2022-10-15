@@ -16,7 +16,6 @@ import numpy as np
 # import actors2
 import EBCleague
 import FamilyLeague
-import expectedWins
 import PennoniYounglings
 from espn_api.football import League
 
