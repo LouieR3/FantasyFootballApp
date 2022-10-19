@@ -1,7 +1,7 @@
 from espn_api.football import League
 import pandas as pd
 import time
-# from tabulate import tabulate
+from tabulate import tabulate
 from operator import itemgetter
 # import xlsxwriter
 
@@ -51,10 +51,23 @@ names.insert(0, "Teams")
 masterList = []
 schedList = []
 schedMaster = []
+
+check = True
+count = 1
+for week in range(1, 17):
+    scoreboard = league.scoreboard(week=week)
+    if check:
+        for sc in scoreboard:
+            if sc.home_score == 0 and sc.away_score == 0:
+                count = week
+                check = False
+    else:
+        break
+
 for i in range(len(keyList)):
     for team in keyList:
         checkTeam = team[1]
-        while tot < 6:
+        while tot < count:
             scoreboard = league.scoreboard(week=tot)
             myTeam = keyList[i][1]
             for sc in scoreboard:
@@ -118,8 +131,10 @@ rankList = []
 for i in range(len(df2)):
     team = df.iloc[i]["Teams"]
     tot = sum(df2.iloc[i])
+    seasonWins = df2.iloc[i][team]
+    difference = tot - seasonWins
     actualWins = df1[team][team]
-    rankList.append([team, tot, actualWins])
+    rankList.append([team, tot, difference, actualWins])
 
 # print(df)
 sortList = sorted(schedRank, key=itemgetter(1))
@@ -145,6 +160,7 @@ for s in range(len(sortList)):
 for s in range(len(sortList2)):
     num = sortList2[s][1] / len(keyList)
     sortList2[s][1] = num
+
 # print(tabulate(sortList2, headers=["Teams", "Expected Wins"]))
 
 # WHAT IF YOU ARE 5-0 AGAINST ALL BUT EVERYONE IS 5-0 AGAINST YOUR SCHEDULE
@@ -152,9 +168,11 @@ for s in range(len(sortList2)):
 # print(tabulate(sortFinal, headers=["Teams", "Louie Power Index (LPI)"]))
 
 dfSched = pd.DataFrame(sortList, columns = ["Teams", "Avg Wins Against Schedule", "Record"])
-dfRank = pd.DataFrame(sortList2, columns = ["Teams", "Expected Wins", "Record"])
+dfRank = pd.DataFrame(sortList2, columns = ["Teams", "Expected Wins", "Difference", "Record"])
 dfPowerRank = pd.DataFrame(sortFinal, columns = ["Teams", "Louie Power Index (LPI)", "Record"])
-writer = pd.ExcelWriter("PennoniYounglings1.xlsx", engine = 'xlsxwriter')
+# writer = pd.ExcelWriter("FamilyLeague.xlsx", engine = 'xlsxwriter')
+# writer = pd.ExcelWriter("EBCLeague.xlsx", engine = 'xlsxwriter')
+writer = pd.ExcelWriter("PennoniYounglings.xlsx", engine = 'xlsxwriter')
 df1.to_excel(writer, sheet_name = 'Schedule Grid')
 dfSched.to_excel(writer, sheet_name = 'Wins Against Schedule')
 dfRank.to_excel(writer, sheet_name = 'Expected Wins')
