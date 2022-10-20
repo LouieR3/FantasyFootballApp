@@ -17,6 +17,9 @@ import numpy as np
 import EBCleague
 import FamilyLeague
 import PennoniYounglings
+import PrahladFriendsLeague
+import PennoniTransportation
+import EBCLeague2021
 from espn_api.football import League
 
 st.set_page_config(page_title="Louie's Fantasy Football Page", layout="wide")
@@ -24,7 +27,11 @@ st.set_page_config(page_title="Louie's Fantasy Football Page", layout="wide")
 PAGES = {
     "EBC League": EBCleague,
     "Family League": FamilyLeague,
-    "Pennoni Younglings": PennoniYounglings
+    "Pennoni Younglings": PennoniYounglings,
+    "EBC League 2021": EBCLeague2021,
+    "Pennoni Transportation": PennoniTransportation,
+    "Prahlad Friends League": PrahladFriendsLeague,
+
 }
 st.sidebar.title('Navigation')
 selection = st.sidebar.radio("Go to", list(PAGES.keys()))
