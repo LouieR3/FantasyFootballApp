@@ -177,13 +177,28 @@ for s in range(len(sortList2)):
 # print(tabulate(sortFinal, headers=["Teams", "Louie Power Index (LPI)"]))
 
 dfSched = pd.DataFrame(sortList, columns = ["Teams", "Avg Wins Against Schedule", "Record"])
+top20 = round(count * 0.8)
+bot20 = round(count * 0.2)
+def highlight_cells(val):
+    val1 = str(val.split(" ")[0])
+    print(val)
+    val1 = int(val1)
+    color = 'blue' if val1 >= top20 else ''
+    print(val1 >= top20)
+    return 'background-color: {}'.format(color)
+def highlight_cellsBad(val):
+    color = 'red' if val <= bot20 else ''
+    return 'background-color: {}'.format(color)
+dfSched1 = dfSched.style.applymap(highlight_cells)
+dfSched2 = dfSched1.style.applymap(highlight_cellsBad)
+print(dfSched)
 dfRank = pd.DataFrame(sortList2, columns = ["Teams", "Expected Wins", "Difference", "Record"])
 dfPowerRank = pd.DataFrame(sortFinal, columns = ["Teams", "Louie Power Index (LPI)", "Record"])
 # writer = pd.ExcelWriter("FamilyLeague.xlsx", engine = 'xlsxwriter')
 # writer = pd.ExcelWriter("EBCLeague.xlsx", engine = 'xlsxwriter')
 writer = pd.ExcelWriter(leagueName + ".xlsx", engine = 'xlsxwriter')
 df1.to_excel(writer, sheet_name = 'Schedule Grid')
-dfSched.to_excel(writer, sheet_name = 'Wins Against Schedule')
+dfSched2.to_excel(writer, sheet_name = 'Wins Against Schedule')
 dfRank.to_excel(writer, sheet_name = 'Expected Wins')
 dfPowerRank.to_excel(writer, sheet_name = 'Louie Power Index')
 writer.save()
