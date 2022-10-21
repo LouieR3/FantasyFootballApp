@@ -12,6 +12,21 @@ def app():
     df = pd.read_excel(file, sheet_name="Schedule Grid")
     df.index += 1 
     pd.options.mode.chained_assignment = None
+    count = 14
+    top20 = round(count * 0.8)
+    bot20 = round(count * 0.2)
+    def highlight_cells(val):
+        val1 = str(val.split(" ")[0])
+        print(val)
+        val1 = int(val1)
+        color = 'blue' if val1 >= top20 else ''
+        print(val1 >= top20)
+        return 'background-color: {}'.format(color)
+    def highlight_cellsBad(val):
+        color = 'red' if val <= bot20 else ''
+        return 'background-color: {}'.format(color)
+    df.style.applymap(highlight_cells)
+    df.style.applymap(highlight_cellsBad)
     st.dataframe(df, width=2000)
 
     st.header('Strength of Schedule')
