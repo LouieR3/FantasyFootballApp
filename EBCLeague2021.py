@@ -9,6 +9,7 @@ def app():
     # league = "FamilyLeague"
     # league = "PennoniYounglings"
     file = league + ".xlsx"
+    print(league)
     df = pd.read_excel(file, sheet_name="Schedule Grid")
     df.index += 1 
     pd.options.mode.chained_assignment = None
