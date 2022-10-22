@@ -28,12 +28,21 @@ def app():
     #     return 'background-color: {}'.format(color)
     # df.style.applymap(highlight_cellsGood)
     # df3 = df.style.applymap(highlight_cellsBad)
-
+    
     def highlight_cells(val):
+        print(val)
         color = 'yellow' if val == "8 - 6 - 0" else ''
         return 'background-color: {}'.format(color)
 
     df.style.applymap(highlight_cells)
+    def highlight_cols(col):
+        if col.name == 'Hungry Dogs':
+            color = '#A79AFF' # Dark purple
+        else:
+            color = '#DCD3FF' # Light purple
+        return ['background-color: {}'.format(color) for c in col]
+
+    df.style.apply(highlight_cols, axis=0)
     st.dataframe(df, width=2000)
 
     st.header('Strength of Schedule')
