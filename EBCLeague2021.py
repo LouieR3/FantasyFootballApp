@@ -35,14 +35,16 @@ def app():
         return 'background-color: {}'.format(color)
 
     df.style.applymap(highlight_cells)
-    def highlight_cols(col):
-        if col == '8 - 6 - 0':
+    def highlight_cols(val):
+        if val == '8 - 6 - 0':
             color = '#A79AFF' # Dark purple
         else:
             color = '#DCD3FF' # Light purple
-        return ['background-color: {}'.format(color) for c in col]
+        return ['background-color: {}'.format(color) for c in val]
 
-    df3 = df.style.apply(highlight_cols, axis=1)
+    df3 = df.style.apply(lambda x: ["background-color: #ff33aa" 
+                          if (i == '8 - 6 - 0') 
+                          else "" for i, v in enumerate(x)], axis = 1)
     st.dataframe(df3, width=2000)
 
     st.header('Strength of Schedule')
