@@ -23,7 +23,7 @@ def app():
 
     df2 = df.style.apply(lambda x: ["background-color: gold" 
                           if (int(i.split(" ")[0]) >= top30 and int(i.split(" ")[0]) < count) 
-                          else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot30) else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: royalblue; color: white; border-style: solid" if (int(i.split(" ")[0]) == count) else "" for i in x], axis = 1, subset=names)
+                          else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot30) else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: royalblue; color: white" if (int(i.split(" ")[0]) == count) else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) else "" for i in x], axis = 1, subset=names)
 
     st.dataframe(df2, height=460, width=2000)
 

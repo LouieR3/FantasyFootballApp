@@ -22,9 +22,8 @@ def app():
     bot30 = round(count * 0.25)
 
     df2 = df.style.apply(lambda x: ["background-color: gold" 
-                          if (int(i.split(" ")[0]) >= top30) 
-                          else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot30) else "" for i in x], axis = 1, subset=names)
-
+                        if (int(i.split(" ")[0]) >= top30 and int(i.split(" ")[0]) < count) 
+                        else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot30) else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: royalblue; color: white" if (int(i.split(" ")[0]) == count) else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) else "" for i in x], axis = 1, subset=names)
     st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
