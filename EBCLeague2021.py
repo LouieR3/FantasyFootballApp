@@ -48,9 +48,9 @@ def app():
         if col != "Teams":
             names.append(col)
 
-    df2 = df.style.apply(lambda x: ["background-color: blue" 
+    df2 = df.style.apply(lambda x: ["background-color: gold" 
                           if (int(i.split(" ")[0]) >= top20) 
-                          else "" for i in x], axis = 1, subset=names)
+                          else (["background-color: red"] if (int(i.split(" ")[0]) <= bot20) else "") for i in x], axis = 1, subset=names)
     
     # df3 = df2.style.apply(lambda x: ["background-color: red" 
     #                       if (str(i.split(" ")[0]) <= bot20) 
