@@ -44,7 +44,7 @@ def app():
         return ['background-color: {}'.format(color) for c in val]
 
     df2 = df.style.apply(lambda x: ["background-color: blue" 
-                          if (str(i.split(" ")[0]) >= top20) 
+                          if (int(i.split(" ")[0]) >= top20) 
                           else "" for i in x], axis = 1)
     
     # df3 = df2.style.apply(lambda x: ["background-color: red" 
