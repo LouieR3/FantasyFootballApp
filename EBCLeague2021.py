@@ -13,40 +13,15 @@ def app():
     df = pd.read_excel(file, sheet_name="Schedule Grid")
     df.index += 1 
     pd.options.mode.chained_assignment = None
-    count = 14
-    top30 = round(count * 0.7)
-    bot30 = round(count * 0.3)
-    # def highlight_cellsGood(val):
-    #     val1 = str(val.split(" ")[0])
-    #     print(val)
-    #     val1 = int(val1)
-    #     color = 'blue' if val1 >= top20 else ''
-    #     print(val1 >= top20)
-    #     return 'background-color: {}'.format(color)
-    # def highlight_cellsBad(val):
-    #     color = 'red' if val <= bot20 else ''
-    #     return 'background-color: {}'.format(color)
-    # df.style.applymap(highlight_cellsGood)
-    # df3 = df.style.applymap(highlight_cellsBad)
-    
-    def highlight_cells(val):
-        print(val)
-        color = 'yellow' if val == "8 - 6 - 0" else ''
-        return 'background-color: {}'.format(color)
-
-    df.style.applymap(highlight_cells)
-    def highlight_cols(val):
-        val1 = str(val.split(" ")[0])
-        if val1 >= top30:
-            color = 'blue' # Dark purple
-        elif val <= bot30:
-            color = 'red' # Light purple
-        return ['background-color: {}'.format(color) for c in val]
 
     names = []
     for col in df.columns:
         if col != "Teams":
             names.append(col)
+    
+    count = int(df[names[0]][1].split(" ")[0]) + int(df[names[0]][1].split(" ")[2]) + int(df[names[0]][1].split(" ")[4])
+    top30 = round(count * 0.7)
+    bot30 = round(count * 0.3)
 
     df2 = df.style.apply(lambda x: ["background-color: gold" 
                           if (int(i.split(" ")[0]) >= top30) 
