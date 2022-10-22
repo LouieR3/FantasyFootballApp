@@ -14,8 +14,8 @@ def app():
     df.index += 1 
     pd.options.mode.chained_assignment = None
     count = 14
-    top20 = round(count * 0.8)
-    bot20 = round(count * 0.2)
+    top30 = round(count * 0.7)
+    bot30 = round(count * 0.3)
     # def highlight_cellsGood(val):
     #     val1 = str(val.split(" ")[0])
     #     print(val)
@@ -37,9 +37,9 @@ def app():
     df.style.applymap(highlight_cells)
     def highlight_cols(val):
         val1 = str(val.split(" ")[0])
-        if val1 >= top20:
+        if val1 >= top30:
             color = 'blue' # Dark purple
-        elif val <= bot20:
+        elif val <= bot30:
             color = 'red' # Light purple
         return ['background-color: {}'.format(color) for c in val]
 
@@ -49,8 +49,8 @@ def app():
             names.append(col)
 
     df2 = df.style.apply(lambda x: ["background-color: gold" 
-                          if (int(i.split(" ")[0]) >= top20) 
-                          else (["background-color: red"] if (int(i.split(" ")[0]) <= bot20) else "") for i in x], axis = 1, subset=names)
+                          if (int(i.split(" ")[0]) >= top30) 
+                          else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red" if (int(i.split(" ")[0]) <= bot30) else "" for i in x], axis = 1, subset=names)
     
     # df3 = df2.style.apply(lambda x: ["background-color: red" 
     #                       if (str(i.split(" ")[0]) <= bot20) 
