@@ -36,13 +36,13 @@ def app():
 
     df.style.applymap(highlight_cells)
     def highlight_cols(col):
-        if col.name == 'Hungry Dogs':
+        if col == '8 - 6 - 0':
             color = '#A79AFF' # Dark purple
         else:
             color = '#DCD3FF' # Light purple
         return ['background-color: {}'.format(color) for c in col]
 
-    df3 = df.style.apply(highlight_cols, axis=0)
+    df3 = df.style.apply(highlight_cols, axis=1)
     st.dataframe(df3, width=2000)
 
     st.header('Strength of Schedule')
