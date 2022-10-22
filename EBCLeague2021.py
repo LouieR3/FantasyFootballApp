@@ -16,18 +16,24 @@ def app():
     count = 14
     top20 = round(count * 0.8)
     bot20 = round(count * 0.2)
+    # def highlight_cellsGood(val):
+    #     val1 = str(val.split(" ")[0])
+    #     print(val)
+    #     val1 = int(val1)
+    #     color = 'blue' if val1 >= top20 else ''
+    #     print(val1 >= top20)
+    #     return 'background-color: {}'.format(color)
+    # def highlight_cellsBad(val):
+    #     color = 'red' if val <= bot20 else ''
+    #     return 'background-color: {}'.format(color)
+    # df.style.applymap(highlight_cellsGood)
+    # df3 = df.style.applymap(highlight_cellsBad)
+
     def highlight_cells(val):
-        val1 = str(val.split(" ")[0])
-        print(val)
-        val1 = int(val1)
-        color = 'blue' if val1 >= top20 else ''
-        print(val1 >= top20)
+        color = 'yellow' if val == "8 - 6 - 0" else ''
         return 'background-color: {}'.format(color)
-    def highlight_cellsBad(val):
-        color = 'red' if val <= bot20 else ''
-        return 'background-color: {}'.format(color)
+
     df.style.applymap(highlight_cells)
-    df3 = df.style.applymap(highlight_cellsBad)
     st.dataframe(df, width=2000)
 
     st.header('Strength of Schedule')
