@@ -11,7 +11,20 @@ def app():
     df = pd.read_excel(file, sheet_name="Schedule Grid")
     df.index += 1 
     pd.options.mode.chained_assignment = None
-    st.dataframe(df, height=460, width=2000)
+    names = []
+    for col in df.columns:
+        if col != "Teams":
+            names.append(col)
+    
+    count = int(df[names[0]][1].split(" ")[0]) + int(df[names[0]][1].split(" ")[2]) + int(df[names[0]][1].split(" ")[4])
+    top30 = round(count * 0.7)
+    bot30 = round(count * 0.3)
+
+    df2 = df.style.apply(lambda x: ["background-color: gold" 
+                          if (int(i.split(" ")[0]) >= top30) 
+                          else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot30) else "" for i in x], axis = 1, subset=names)
+
+    st.dataframe(df2, height=460, width=2000)
 
     st.header('Strength of Schedule')
     st.caption('The lower the number, the harder the schedule the team has had. If your average wins against schedule is 1, that means every team in the league would only average 1 win all season with your schedule')
