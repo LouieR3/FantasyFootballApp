@@ -47,9 +47,9 @@ def app():
                           if (str(i.split(" ")[0]) >= top20) 
                           else "" for i in x], axis = 1)
     
-    df3 = df2.style.apply(lambda x: ["background-color: red" 
-                          if (str(i.split(" ")[0]) <= bot20) 
-                          else "" for i in x], axis = 1)
+    # df3 = df2.style.apply(lambda x: ["background-color: red" 
+    #                       if (str(i.split(" ")[0]) <= bot20) 
+    #                       else "" for i in x], axis = 1)
     st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
