@@ -50,7 +50,7 @@ def app():
     df3 = df2.style.apply(lambda x: ["background-color: red" 
                           if (str(i.split(" ")[0]) <= bot20) 
                           else "" for i in x], axis = 1)
-    st.dataframe(df3, width=2000)
+    st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
     st.caption('The lower the number, the harder the schedule the team has had. If your average wins against schedule is 1, that means every team in the league would only average 1 win all season with your schedule')
