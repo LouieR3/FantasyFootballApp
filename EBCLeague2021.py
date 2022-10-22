@@ -50,7 +50,7 @@ def app():
 
     df2 = df.style.apply(lambda x: ["background-color: gold" 
                           if (int(i.split(" ")[0]) >= top30) 
-                          else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red" if (int(i.split(" ")[0]) <= bot30) else "" for i in x], axis = 1, subset=names)
+                          else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot30) else "" for i in x], axis = 1, subset=names)
     
     # df3 = df2.style.apply(lambda x: ["background-color: red" 
     #                       if (str(i.split(" ")[0]) <= bot20) 
