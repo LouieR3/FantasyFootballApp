@@ -36,14 +36,19 @@ def app():
 
     df.style.applymap(highlight_cells)
     def highlight_cols(val):
-        if val == '8 - 6 - 0':
-            color = '#A79AFF' # Dark purple
-        else:
-            color = '#DCD3FF' # Light purple
+        val1 = str(val.split(" ")[0])
+        if val1 >= top20:
+            color = 'blue' # Dark purple
+        elif val <= bot20:
+            color = 'red' # Light purple
         return ['background-color: {}'.format(color) for c in val]
 
-    df3 = df.style.apply(lambda x: ["background-color: #ff33aa" 
-                          if (i == '8 - 6 - 0') 
+    df2 = df.style.apply(lambda x: ["background-color: blue" 
+                          if (str(i.split(" ")[0]) >= top20) 
+                          else "" for i in x], axis = 1)
+    
+    df3 = df2.style.apply(lambda x: ["background-color: red" 
+                          if (str(i.split(" ")[0]) <= bot20) 
                           else "" for i in x], axis = 1)
     st.dataframe(df3, width=2000)
 
