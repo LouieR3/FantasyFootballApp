@@ -42,8 +42,8 @@ def app():
             color = '#DCD3FF' # Light purple
         return ['background-color: {}'.format(color) for c in col]
 
-    df.style.apply(highlight_cols, axis=0)
-    st.dataframe(df, width=2000)
+    df3 = df.style.apply(highlight_cols, axis=0)
+    st.dataframe(df3, width=2000)
 
     st.header('Strength of Schedule')
     st.caption('The lower the number, the harder the schedule the team has had. If your average wins against schedule is 1, that means every team in the league would only average 1 win all season with your schedule')
