@@ -43,9 +43,14 @@ def app():
             color = 'red' # Light purple
         return ['background-color: {}'.format(color) for c in val]
 
+    names = []
+    for col in df.columns:
+        if col != "Teams":
+            names.append(col)
+
     df2 = df.style.apply(lambda x: ["background-color: blue" 
                           if (int(i.split(" ")[0]) >= top20) 
-                          else "" for i in x], axis = 1)
+                          else "" for i in x], axis = 1, subset=names)
     
     # df3 = df2.style.apply(lambda x: ["background-color: red" 
     #                       if (str(i.split(" ")[0]) <= bot20) 
