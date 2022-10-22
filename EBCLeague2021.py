@@ -44,7 +44,7 @@ def app():
 
     df3 = df.style.apply(lambda x: ["background-color: #ff33aa" 
                           if (i == '8 - 6 - 0') 
-                          else "" for i, v in enumerate(x)], axis = 1)
+                          else "" for i in x], axis = 1)
     st.dataframe(df3, width=2000)
 
     st.header('Strength of Schedule')
