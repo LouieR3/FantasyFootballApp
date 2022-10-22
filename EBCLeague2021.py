@@ -20,8 +20,8 @@ def app():
             names.append(col)
     
     count = int(df[names[0]][1].split(" ")[0]) + int(df[names[0]][1].split(" ")[2]) + int(df[names[0]][1].split(" ")[4])
-    top30 = round(count * 0.7)
-    bot30 = round(count * 0.3)
+    top30 = round(count * 0.8)
+    bot30 = round(count * 0.2)
 
     df2 = df.style.apply(lambda x: ["background-color: gold" 
                           if (int(i.split(" ")[0]) >= top30) 
