@@ -16,8 +16,8 @@ def app():
     dfFINAL = pd.concat(appended_data)
     dfFINAL = dfFINAL.iloc[: , 1:]
     # dfFINAL.index += 1
-    dfFINAL.sort_values(by=['Louie Power Index (LPI)'])
+    df1 = dfFINAL.sort_values(by=['Louie Power Index (LPI)'], ascending=False)
     
-    df3 = dfFINAL.reset_index(drop=True).style.background_gradient(subset=['Louie Power Index (LPI)'])
-    st.dataframe(df3, height=1000)
+    df3 = df1.reset_index(drop=True).style.background_gradient(subset=['Louie Power Index (LPI)'])
+    st.dataframe(df3, height=2000)
 
