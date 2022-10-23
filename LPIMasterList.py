@@ -18,6 +18,6 @@ def app():
     # dfFINAL.index += 1
     dfFINAL.sort_values(by=['Louie Power Index (LPI)'])
     
-    df3 = dfFINAL.style.background_gradient(subset=['Louie Power Index (LPI)'])
+    df3 = dfFINAL.reset_index(drop=True).style.background_gradient(subset=['Louie Power Index (LPI)'])
     st.dataframe(df3)
 

@@ -10,4 +10,6 @@ for file in files:
 dfFINAL = pd.concat(appended_data)
 dfFINAL = dfFINAL.iloc[: , 1:]
 dfFINAL.index += 1
+# dfFINAL.sort_values(by=['Louie Power Index (LPI)'])
+
 print(dfFINAL)
