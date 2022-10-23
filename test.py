@@ -3,11 +3,11 @@ from operator import itemgetter
 import glob
 pd.options.mode.chained_assignment = None
 files = glob.glob('*.xlsx')
-dfFINAL = pd.DataFrame()
+appended_data = []
 for file in files:
     df = pd.read_excel(file, sheet_name="Louie Power Index")
-    dfFINAL.append(df)
-
+    appended_data.append(df)
+dfFINAL = pd.concat(appended_data)
 dfFINAL = dfFINAL.iloc[: , 1:]
-dfFINAL.index += 1 
+dfFINAL.index += 1
 print(dfFINAL)

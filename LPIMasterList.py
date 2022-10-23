@@ -1,18 +1,22 @@
 def app():
     import pandas as pd
     from operator import itemgetter
-    import streamlit as st
     import glob
+    import streamlit as st
+
+    pd.options.mode.chained_assignment = None
 
     files = glob.glob('*.xlsx')
-    dfFINAL = pd.DataFrame()
+
+    appended_data = []
     for file in files:
         df = pd.read_excel(file, sheet_name="Louie Power Index")
-        dfFINAL.append(df)
+        appended_data.append(df)
 
+    dfFINAL = pd.concat(appended_data)
     dfFINAL = dfFINAL.iloc[: , 1:]
-    dfFINAL.index += 1 
-    pd.options.mode.chained_assignment = None
+    dfFINAL.index += 1
+    
     df3 = dfFINAL.style.background_gradient(subset=['Louie Power Index (LPI)'])
     st.dataframe(df3)
 
