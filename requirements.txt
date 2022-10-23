@@ -10,3 +10,4 @@ espn_api
 streamlit
 openpyxl
 jinja2
+glob

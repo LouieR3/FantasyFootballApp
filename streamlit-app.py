@@ -21,6 +21,7 @@ import PrahladFriendsLeague
 import PennoniTransportation
 import EBCLeague2021
 from espn_api.football import League
+import LPIMasterList
 
 st.set_page_config(page_title="Louie's Fantasy Football Page", layout="wide")
 
@@ -31,7 +32,7 @@ PAGES = {
     "EBC League 2021": EBCLeague2021,
     "Pennoni Transportation": PennoniTransportation,
     "Prahlad Friends League": PrahladFriendsLeague,
-
+    "LPI Master List": LPIMasterList,
 }
 st.sidebar.title('Navigation')
 selection = st.sidebar.radio("Go to", list(PAGES.keys()))
