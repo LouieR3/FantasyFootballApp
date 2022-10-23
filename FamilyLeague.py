@@ -17,12 +17,15 @@ def app():
             names.append(col)
     
     count = int(df[names[0]][1].split(" ")[0]) + int(df[names[0]][1].split(" ")[2]) + int(df[names[0]][1].split(" ")[4])
-    top30 = round(count * 0.75)
-    bot30 = round(count * 0.25)
+    top25 = round(count * 0.75)
+    bot25 = round(count * 0.25)
 
     df2 = df.style.apply(lambda x: ["background-color: gold" 
-                          if (int(i.split(" ")[0]) >= top30 and int(i.split(" ")[0]) < count) 
-                          else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot30) else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: goldenrod" if (int(i.split(" ")[0]) == count) else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) else "" for i in x], axis = 1, subset=names)
+                    if (int(i.split(" ")[0]) >= top25 and int(i.split(" ")[0]) < count) 
+                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot25) 
+                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: goldenrod" if (int(i.split(" ")[0]) == count) 
+                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) 
+                            else "" for i in x], axis = 1, subset=names)
     st.dataframe(df2, height=460, width=2000)
 
     st.header('Strength of Schedule')
