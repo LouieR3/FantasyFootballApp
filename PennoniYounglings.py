@@ -2,6 +2,7 @@ def app():
     import pandas as pd
     from operator import itemgetter
     import streamlit as st
+    from calcPercent import percent
 
     st.header('Schedule Record Matrix')
     st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
@@ -17,14 +18,19 @@ def app():
         if col != "Teams":
             names.append(col)
     
-    count = int(df[names[0]][1].split(" ")[0]) + int(df[names[0]][1].split(" ")[2]) + int(df[names[0]][1].split(" ")[4])
-    top25 = round(count * 0.75)
-    bot25 = round(count * 0.25)
+    percentList = percent(file)
+    count = percentList[0]
+    top25 = percentList[1]
+    bot25 = percentList[2]
+    top10 = percentList[3]
+    bot10 = percentList[4]
 
-    df2 = df.style.apply(lambda x: ["background-color: gold" 
-                          if (int(i.split(" ")[0]) >= top25 and int(i.split(" ")[0]) < count) 
-                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot25) 
+    df2 = df.style.apply(lambda x: ["background-color: khaki" 
+                            if (int(i.split(" ")[0]) >= top25 and int(i.split(" ")[0]) < top10) 
+                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: gold; color: white" if (int(i.split(" ")[0]) >= top10 and int(i.split(" ")[0]) < count) 
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: goldenrod" if (int(i.split(" ")[0]) == count) 
+                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(i.split(" ")[0]) <= bot25 and int(i.split(" ")[0]) > bot10) 
+                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot10 and int(i.split(" ")[0]) > 0) 
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) 
                             else "" for i in x], axis = 1, subset=names)
 
