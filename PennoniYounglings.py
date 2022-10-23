@@ -8,7 +8,7 @@ def app():
     st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
     # league = "EBCLeague"
     # league = "FamilyLeague"
-    league = "PennoniYounglings"
+    league = "Pennoni Younglings"
     file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
     df.index += 1 

@@ -10,7 +10,9 @@ def app():
 
     appended_data = []
     for file in files:
+        leagueName = file.split(".xlsx")[0]
         df = pd.read_excel(file, sheet_name="Louie Power Index")
+        df["League"] = leagueName
         appended_data.append(df)
 
     dfFINAL = pd.concat(appended_data)
