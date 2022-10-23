@@ -19,5 +19,5 @@ def app():
     df1 = dfFINAL.sort_values(by=['Louie Power Index (LPI)'], ascending=False)
     
     df3 = df1.reset_index(drop=True).style.background_gradient(subset=['Louie Power Index (LPI)'])
-    st.dataframe(df3, height=2400)
+    st.dataframe(df3, height=2450)
 
