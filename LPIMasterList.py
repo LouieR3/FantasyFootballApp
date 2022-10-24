@@ -24,9 +24,9 @@ def app():
     
     df3 = df1.reset_index(drop=True).style.background_gradient(subset=['Louie Power Index (LPI)']).apply(lambda x: ["background-color: purple; color: white" 
                             if i == leagueList[0]
-                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: darkgray" if i == leagueList[1]
+                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: green; color: white" if i == leagueList[1]
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: goldenrod" if i == leagueList[2]
-                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: green; color: white" if i == leagueList[3]
+                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: darkgray; color: white" if i == leagueList[3]
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: gray; color: white" if i == leagueList[4]
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: maroon; color: white" if i == leagueList[5]
                             else "" for i in x], axis = 1)
