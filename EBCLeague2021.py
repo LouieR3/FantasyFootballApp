@@ -43,7 +43,7 @@ def app():
             df.iloc[team, team] = color
         return df
 
-    df.style.apply(style_specific_cell, axis=None)
+    df2 = df.style.apply(style_specific_cell, axis=None)
     st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
