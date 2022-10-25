@@ -61,6 +61,8 @@ masterList = []
 schedList = []
 schedMaster = []
 
+settings = league.settings
+
 check = True
 # count = 15
 count = 0
