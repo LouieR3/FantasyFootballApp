@@ -3,6 +3,7 @@ def app():
     from operator import itemgetter
     import streamlit as st
     from calcPercent import percent
+    import numpy as np
 
     st.header('Schedule Record Matrix')
     st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
@@ -26,7 +27,7 @@ def app():
     top10 = percentList[3]
     bot10 = percentList[4]
 
-    df2 = df.style.apply(lambda x: ["background-color: khaki" 
+    df.style.apply(lambda x: ["background-color: khaki" 
                             if (int(i.split(" ")[0]) >= top25 and int(i.split(" ")[0]) < top10) 
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: gold" if (int(i.split(" ")[0]) >= top10 and int(i.split(" ")[0]) < count) 
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: goldenrod" if (int(i.split(" ")[0]) == count) 
@@ -35,13 +36,12 @@ def app():
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) 
                             else "" for i in x], axis = 1, subset=names)
 
-    # def style_specific_cell():
-    #     color = 'background-color: gray'
-    #     for team in names:
-    #         df.iloc[team][team] = color
-    #     return df
+    def highlight_diag(df):
+        a = np.full(df.shape, '', dtype='<U24')
+        np.fill_diagonal(a, 'background-color: gray')
+        return pd.DataFrame(a, index=df.index, columns=df.columns)
 
-    # df2 = df.style.apply(style_specific_cell)
+    df2 = df.style.apply(highlight_diag, axis=None)
     st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
