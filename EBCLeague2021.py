@@ -35,13 +35,13 @@ def app():
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) 
                             else "" for i in x], axis = 1, subset=names)
 
-    def style_specific_cell():
-        color = 'background-color: gray'
-        for team in names:
-            df.iloc[team][team] = color
-        return df
+    # def style_specific_cell():
+    #     color = 'background-color: gray'
+    #     for team in names:
+    #         df.iloc[team][team] = color
+    #     return df
 
-    df2 = df.style.apply(style_specific_cell)
+    # df2 = df.style.apply(style_specific_cell)
     st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
