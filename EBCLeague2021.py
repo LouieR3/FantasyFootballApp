@@ -34,13 +34,11 @@ def app():
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot10 and int(i.split(" ")[0]) > 0) 
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) 
                             else "" for i in x], axis = 1, subset=names)
-    # for team in names:
-    #     df[team][team].style.apply(
 
     def style_specific_cell():
         color = 'background-color: gray'
         for team in names:
-            df.iloc[team, team] = color
+            df.iloc[team][team] = color
         return df
 
     df2 = df.style.apply(style_specific_cell, axis=None)
