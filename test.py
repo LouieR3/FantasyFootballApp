@@ -23,15 +23,17 @@ league = "EBC League 2021"
 # league = "PennoniYounglings"
 file = league + ".xlsx"
 print(league)
-df = pd.read_excel(file, sheet_name="Schedule Grid")
-
+df1 = pd.read_excel(file, sheet_name="Schedule Grid")
+df = pd.read_excel(file, sheet_name="Louie Power Index")
+df = df.iloc[: , 1:]
 names = []
-for col in df.columns:
+for col in df1.columns:
     if col != "Teams":
         names.append(col)
 count = 0
+print(names)
 for team in names:
-    print(df[team][count])
+    print(df.loc[df["Teams"] == team]["Louie Power Index (LPI)"])
     count += 1
 # print()
 
