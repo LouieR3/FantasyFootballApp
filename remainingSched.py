@@ -61,13 +61,11 @@ for name in names:
     expWinPercent = round(expectWins / count, 3)
     totalWins = (expectWins + diff) + wins
     magicNumber = (expWinPercent * 2) - winPercent
-    print(team.team_name + " vs " + team.schedule[7].team_name)
     roundWins = round(totalWins)
     losses = regCount - roundWins
     total += roundWins
     record = str(roundWins) + " - " + str(losses) + " - 0"
     winList.append([name, magicNumber, record])
-    print("======================")
 
 df = pd.DataFrame(winList, columns=['Team', 'Percent', 'Record'])
 print(df)
