@@ -30,16 +30,16 @@ leagueName = settings.name.replace(" 22/23", "")
 file = leagueName + ".xlsx"
 
 scoresList = []
-schedList = []
+winsList = []
 count = 0
 keyList = []
 for team in league.teams:
     scoresList.append(team.scores)
-    schedList.append(team.schedule)
+    winsList.append(team.schedule)
     keyList.append([count, team.team_name])
     count += 1
 
-print(schedList[5][0])
+print(winsList[5][0])
 # print(scoresList[5][0])
 # print(scoresList[5])
 # print(league.scoreboard(week=1))
@@ -62,8 +62,8 @@ records = []
 names.insert(0, "Teams")
 # df = pd.DataFrame(columns=namesIndex)
 masterList = []
-schedList = []
-schedMaster = []
+winsList = []
+winsMaster = []
 
 check = True
 # count = 15
@@ -118,40 +118,55 @@ for i in range(len(keyList)):
             tot += 1
         record = str(win) + " - " + str(loss) + " - " + str(tie)
         records.append(record)
-        schedList.append(win)
+        winsList.append(win)
         tot = 1
         win = 0
         loss = 0
         tie = 0
     records.insert(0, myTeam)
-    schedList.insert(0, myTeam)
+    winsList.insert(0, myTeam)
     masterList.append(records)
-    schedMaster.append(schedList)
-    schedList = []
+    winsMaster.append(winsList)
+    winsList = []
     records = []
 
 df = pd.DataFrame(masterList, columns = names)
 df1 = pd.DataFrame(masterList, columns = names)
 df1 = df1.set_index("Teams")
 
-df2 = pd.DataFrame(schedMaster, columns = names)
-df2 = df2.set_index("Teams")
+winsDF = pd.DataFrame(winsMaster, columns = names)
+winsDF = winsDF.set_index("Teams")
 
 schedRank = []
 for k in keyList:
     team = k[1]
-    tot = sum(df2[team])
+    tot = sum(winsDF[team])
     actualWins = df1[team][team]
     schedRank.append([team, tot, actualWins])
 
+regCount = settings.reg_season_count
+teams = league.teams
+
+remainingWeeks = regCount - count
+multiplier = regCount / count
+
 rankList = []
-for i in range(len(df2)):
-    team = df.iloc[i]["Teams"]
-    tot = sum(df2.iloc[i])
-    seasonWins = df2.iloc[i][team]
-    difference = (tot/ len(keyList)) - seasonWins
-    actualWins = df1[team][team]
-    rankList.append([team, tot, difference, actualWins])
+for i in range(len(winsDF)):
+    name = df.iloc[i]["Teams"]
+    # sum of all wins for this team
+    expectWins = sum(winsDF.iloc[i])
+    wins = winsDF.iloc[i][team]
+    winPercent = round(wins / count, 3)
+    difference = (expectWins/ len(keyList)) - wins
+
+    expWinPercent = round(expectWins / count, 3)
+    totalWins = round((expectWins + difference) + wins)
+    magicNumber = (expWinPercent * 2) - winPercent
+    losses = regCount - totalWins
+    record = str(totalWins) + " - " + str(losses) + " - 0"
+
+    actualWins = df1[name][name]
+    rankList.append([name, expectWins, difference, actualWins, record])
 
 # print(df)
 sortList = sorted(schedRank, key=itemgetter(1))
@@ -193,7 +208,7 @@ for s in range(len(sortList2)):
 # print(tabulate(sortFinal, headers=["Teams", "Louie Power Index (LPI)"]))
 
 dfSched = pd.DataFrame(sortList, columns = ["Teams", "Avg Wins Against Schedule", "Record"])
-dfRank = pd.DataFrame(sortList2, columns = ["Teams", "Expected Wins", "Difference", "Record"])
+dfRank = pd.DataFrame(sortList2, columns = ["Teams", "Expected Wins", "Difference", "Record", "Expected Record"])
 dfLPI = pd.DataFrame(sortLPI, columns = ["Teams", "Louie Power Index (LPI)", "Record", "Change From Last Week"])
 # writer = pd.ExcelWriter("FamilyLeague.xlsx", engine = 'xlsxwriter')
 # writer = pd.ExcelWriter("EBCLeague.xlsx", engine = 'xlsxwriter')

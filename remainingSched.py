@@ -4,7 +4,7 @@ import time
 from tabulate import tabulate
 from operator import itemgetter
 from calcPercent import percent
-# import xlsxwriter
+import random
 
 start_time = time.time()
 
@@ -42,58 +42,76 @@ regCount = settings.reg_season_count
 teams = league.teams
 
 remainingWeeks = regCount - count
-print(remainingWeeks)
 multiplier = regCount / count
-print(multiplier)
 
-total = 0
 winList = []
+recordList = []
 for name in names:
     team = league.teams[0]
     for t in teams:
         if t.team_name == name:
             team = t
     wins = team.wins
+    loss1 = team.losses
     winPercent = round(wins / count, 3)
     xdf = df.loc[df["Teams"] == name]
     expectWins = xdf["Expected Wins"].item()
     diff = xdf["Difference"].item()
     expWinPercent = round(expectWins / count, 3)
-    totalWins = (expectWins + diff) + wins
+    totalWins = round((expectWins + diff) + wins)
     magicNumber = (expWinPercent * 2) - winPercent
-    roundWins = round(totalWins)
-    losses = regCount - roundWins
-    total += roundWins
-    record = str(roundWins) + " - " + str(losses) + " - 0"
+    losses = regCount - totalWins
+    record = str(totalWins) + " - " + str(losses) + " - 0"
     winList.append([name, magicNumber, record])
+    recordList.append([name, wins, loss1])
 
 df = pd.DataFrame(winList, columns=['Team', 'Percent', 'Record'])
-print(df)
+
+dfRecord = pd.DataFrame(recordList, columns=['Team', 'Wins', 'Losses'])
+
 testList = []
-for x in winList:
-    name = x[0]
-    prcnt = round(x[1], 3) * 1000
-    record = x[2]
-    if name not in testList:
-        team = league.teams[0]
-        for t in teams:
-            if t.team_name == name:
-                team = t
+for i in range(count, regCount):
+    # print("Week " + str(i+1))
+    for x in winList:
+        name = x[0]
+        prcnt = round(x[1], 3) * 1000
+        record = x[2]
+        if name not in testList:
+            team = league.teams[0]
+            for t in teams:
+                if t.team_name == name:
+                    team = t
+            cnt = count
+            oppo = team.schedule[i].team_name
+            xdf = df.loc[df["Team"] == oppo]
+            oppoPrcnt = round(xdf["Percent"].item(), 3) * 1000
 
-        cnt = count
-        oppo = team.schedule[cnt].team_name
-        xdf = df.loc[df["Team"] == oppo]
-        oppoPrcnt = round(xdf["Percent"].item(), 3) * 1000
+            testList.append(name)
+            testList.append(oppo)
+            tot = oppoPrcnt + prcnt
+            myPERCENT = round(((prcnt / tot) * 100), 1)
+            oppoPERCENT = round(((oppoPrcnt / tot) * 100), 1)
+            picker = random.randint(-prcnt, oppoPrcnt)
+            winner = ""
+            if picker > 0:
+                winner = oppo
+                xdf = dfRecord.loc[dfRecord["Team"] == winner]
+                ldf = dfRecord.loc[dfRecord["Team"] == name]
+                dfRecord.loc[dfRecord.Team == winner, 'Wins'] = xdf["Wins"].item() + 1
+                dfRecord.loc[dfRecord.Team == name, 'Losses'] = ldf["Losses"].item() + 1
+            else:
+                winner = name
+                xdf = dfRecord.loc[df["Team"] == winner]
+                ldf = dfRecord.loc[df["Team"] == oppo]
+                dfRecord.loc[dfRecord.Team == winner, 'Wins'] = xdf["Wins"].item() + 1
+                dfRecord.loc[dfRecord.Team == oppo, 'Losses'] = ldf["Losses"].item() + 1
+            # print("======================")
+            # print(name + " vs " + oppo)
+            # print(str(myPERCENT) + "% vs " + str(oppoPERCENT) + "%")
+            # print("Winner is: " + winner)
+    testList = []
+    # print()
+dfRecord = dfRecord.sort_values(by=['Wins'], ascending=False, ignore_index=True)
+print(dfRecord)
 
-        print(name + " vs " + oppo)
-        testList.append(name)
-        testList.append(oppo)
-        tot = oppoPrcnt + prcnt
-        myPERCENT = round(((prcnt / tot) * 100), 1)
-        oppoPERCENT = round(((oppoPrcnt / tot) * 100), 1)
-        print(str(myPERCENT) + "% vs " + str(oppoPERCENT) + "%")
-        print("======================")
-
-print()
-print(regCount * (len(teams) / 2))
-print(total)
+print(settings.playoff_team_count)
