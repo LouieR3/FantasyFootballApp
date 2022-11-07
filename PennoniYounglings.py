@@ -11,7 +11,7 @@ def app():
     league = "Pennoni Younglings"
     file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
-    df.index += 1 
+    df = df.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
     for col in df.columns:
