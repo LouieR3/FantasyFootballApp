@@ -51,7 +51,7 @@ def app():
         df.style.apply(highlight_cell, col_label=team, row_label=count)
         count += 1
     # df2 = df.style.apply(highlight_cell, col_label="A", row_label="b")
-    st.dataframe(df2, width=2000)
+    st.dataframe(df, width=2000)
 
     st.header('Strength of Schedule')
     st.caption('The lower the number, the harder the schedule the team has had. If your average wins against schedule is 1, that means every team in the league would only average 1 win all season with your schedule')
