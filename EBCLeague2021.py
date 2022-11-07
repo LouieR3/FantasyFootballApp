@@ -36,22 +36,22 @@ def app():
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) 
                             else "" for i in x], axis = 1, subset=names)
 
-    def highlight_cell(col, col_label, row_label):
-    # check if col is a column we want to highlight
-        if col.name == col_label:
-            # a boolean mask where True represents a row we want to highlight
-            mask = (col.index == row_label)
-            # return an array of string styles (e.g. ["", "background-color: yellow"])
-            return ["background-color: gray" if val_bool else "" for val_bool in mask]
-        else:
-            # return an array of empty strings that has the same size as col (e.g. ["",""])
-            return np.full_like(col, "", dtype="str")
-    count = 0
-    for team in names:
-        df.style.apply(highlight_cell, col_label=team, row_label=count)
-        count += 1
+    # def highlight_cell(col, col_label, row_label):
+    # # check if col is a column we want to highlight
+    #     if col.name == col_label:
+    #         # a boolean mask where True represents a row we want to highlight
+    #         mask = (col.index == row_label)
+    #         # return an array of string styles (e.g. ["", "background-color: yellow"])
+    #         return ["background-color: gray" if val_bool else "" for val_bool in mask]
+    #     else:
+    #         # return an array of empty strings that has the same size as col (e.g. ["",""])
+    #         return np.full_like(col, "", dtype="str")
+    # count = 0
+    # for team in names:
+    #     df.style.apply(highlight_cell, col_label=team, row_label=count)
+    #     count += 1
     # df2 = df.style.apply(highlight_cell, col_label="A", row_label="b")
-    st.dataframe(df, width=2000)
+    st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
     st.caption('The lower the number, the harder the schedule the team has had. If your average wins against schedule is 1, that means every team in the league would only average 1 win all season with your schedule')
