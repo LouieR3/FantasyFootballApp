@@ -50,7 +50,7 @@ def app():
     for team in names:
         df.style.apply(highlight_cell, col_label=team, row_label=count)
         count += 1
-    df2 = df.style.apply(highlight_cell, col_label="A", row_label="b")
+    # df2 = df.style.apply(highlight_cell, col_label="A", row_label="b")
     st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
