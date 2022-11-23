@@ -11,10 +11,10 @@ start_time = time.time()
 # league = League(league_id=310334683, year=2022, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # Family League
-league = League(league_id=1725372613, year=2022, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+# league = League(league_id=1725372613, year=2022, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # EBC League
-# league = League(league_id=1118513122, year=2022, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=1118513122, year=2022, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 # league = League(league_id=1118513122, year=2021, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # Pennoni Transportation
@@ -133,7 +133,7 @@ for i in range(len(keyList)):
 df = pd.DataFrame(masterList, columns = names)
 df1 = pd.DataFrame(masterList, columns = names)
 df1 = df1.set_index("Teams")
-
+print(winsMaster)
 winsDF = pd.DataFrame(winsMaster, columns = names)
 winsDF = winsDF.set_index("Teams")
 
@@ -154,21 +154,26 @@ rankList = []
 for i in range(len(winsDF)):
     name = df.iloc[i]["Teams"]
     # sum of all wins for this team
-    expectWins = sum(winsDF.iloc[i])
+    totalWins = sum(winsDF.iloc[i])
     eWins = sum(winsDF.iloc[i]) / len(keyList)
-    wins = winsDF.iloc[i][team]
+    wins = winsDF.iloc[i][name]
     winPercent = round(wins / count, 3)
-    difference = (expectWins/ len(keyList)) - wins
-
-    expWinPercent = round(expectWins / count, 3)
+    difference = (totalWins/ len(keyList)) - wins
+    print(name)
+    print(i)
+    print(eWins)
+    print(wins)
+    print(difference)
+    print()
+    expWinPercent = round(totalWins / count, 3)
     totalWins = round((eWins * multiplier) + wins)
     magicNumber = (expWinPercent * 2) - winPercent
     losses = regCount - totalWins
     record = str(totalWins) + " - " + str(losses) + " - 0"
 
     actualWins = df1[name][name]
-    rankList.append([name, expectWins, difference, actualWins])
-    # rankList.append([name, expectWins, difference, actualWins, record])
+    rankList.append([name, totalWins, difference, actualWins])
+    # rankList.append([name, totalWins, difference, actualWins, record])
 
 # print(df)
 sortList = sorted(schedRank, key=itemgetter(1))
@@ -185,8 +190,8 @@ for t in range(len(s1)):
     ranking = (s2[t][1] - s1[t][1]) 
     actualWins = df1[s1[t][0]][s1[t][0]]
     dad = s1[t][0]
-    if s1[t][0] == "Your Dad":
-        dad = "DadBod 69ers"
+    # if s1[t][0] == "Your Dad":
+    #     dad = "DadBod 69ers"
     lastWeek = dfLastWeek.loc[dfLastWeek["Teams"] == dad]["Louie Power Index (LPI)"].item()
     weekChange = int(ranking) - int(lastWeek)
     if weekChange > 0:
@@ -213,17 +218,15 @@ for s in range(len(sortList2)):
 # print(tabulate(sortFinal, headers=["Teams", "Louie Power Index (LPI)"]))
 
 dfSched = pd.DataFrame(sortList, columns = ["Teams", "Avg Wins Against Schedule", "Record"])
-# dfRank = pd.DataFrame(sortList2, columns = ["Teams", "Expected Wins", "Difference", "Record", "Expected Record"])
 dfRank = pd.DataFrame(sortList2, columns = ["Teams", "Expected Wins", "Difference", "Record"])
 dfLPI = pd.DataFrame(sortLPI, columns = ["Teams", "Louie Power Index (LPI)", "Record", "Change From Last Week"])
-# writer = pd.ExcelWriter("FamilyLeague.xlsx", engine = 'xlsxwriter')
-# writer = pd.ExcelWriter("EBCLeague.xlsx", engine = 'xlsxwriter')
 writer = pd.ExcelWriter(leagueName + ".xlsx", engine = 'xlsxwriter')
 df1.to_excel(writer, sheet_name = 'Schedule Grid')
 dfSched.to_excel(writer, sheet_name = 'Wins Against Schedule')
 dfRank.to_excel(writer, sheet_name = 'Expected Wins')
 dfLPI.to_excel(writer, sheet_name = 'Louie Power Index')
 writer.save()
+
 # writer.close()
 
 print("--- %s seconds ---" % (time.time() - start_time))
