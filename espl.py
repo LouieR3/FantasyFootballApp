@@ -153,19 +153,19 @@ rankList = []
 for i in range(len(winsDF)):
     name = df.iloc[i]["Teams"]
     # sum of all wins for this team
-    totalWins = sum(winsDF.iloc[i])
+    totWins = sum(winsDF.iloc[i])
     eWins = sum(winsDF.iloc[i]) / len(keyList)
     wins = winsDF.iloc[i][name]
     winPercent = round(wins / count, 3)
-    difference = (totalWins/ len(keyList)) - wins
-    expWinPercent = round(totalWins / count, 3)
+    difference = (totWins/ len(keyList)) - wins
+    expWinPercent = round(totWins / count, 3)
     totalWins = round((eWins * multiplier) + wins)
     magicNumber = (expWinPercent * 2) - winPercent
     losses = regCount - totalWins
     record = str(totalWins) + " - " + str(losses) + " - 0"
 
     actualWins = df1[name][name]
-    rankList.append([name, totalWins, difference, actualWins])
+    rankList.append([name, totWins, difference, actualWins])
     # rankList.append([name, totalWins, difference, actualWins, record])
 
 # print(df)
