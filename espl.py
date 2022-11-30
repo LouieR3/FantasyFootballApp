@@ -192,8 +192,10 @@ for t in range(len(s1)):
     weekChange = int(ranking) - int(lastWeek)
     if weekChange > 0:
         weekChange = "↑" + str(weekChange)
-    else:
+    elif(weekChange < 0):
         weekChange = "↓" + str(abs(weekChange))
+    else:
+        weekChange = str(weekChange)
     powerRank.append([s1[t][0], ranking, actualWins, weekChange])
 sortLPI = sorted(powerRank, key=itemgetter(1), reverse=True)
 
