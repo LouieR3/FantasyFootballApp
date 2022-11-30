@@ -191,9 +191,9 @@ for t in range(len(s1)):
     lastWeek = dfLastWeek.loc[dfLastWeek["Teams"] == dad]["Louie Power Index (LPI)"].item()
     weekChange = int(ranking) - int(lastWeek)
     if weekChange > 0:
-        weekChange = "+" + str(weekChange)
+        weekChange = "↑" + str(weekChange)
     else:
-        weekChange = str(weekChange)
+        weekChange = "↓" + str(abs(weekChange))
     powerRank.append([s1[t][0], ranking, actualWins, weekChange])
 sortLPI = sorted(powerRank, key=itemgetter(1), reverse=True)
 
