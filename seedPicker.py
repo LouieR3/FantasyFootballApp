@@ -33,25 +33,32 @@ lpiDF = lpiDF.iloc[: , 1:]
 
 teamList = []
 for team in teams:
+    teamName = team.team_name
     wins = team.wins
     losses = team.losses
     points = team.points_for
-    teamList.append([team.team_name, wins, losses, points])
+    lpi = lpiDF.loc[lpiDF["Teams"] == teamName]["Louie Power Index (LPI)"].item()
+    teamList.append([teamName, wins, losses, points, lpi])
 
-df = pd.DataFrame(teamList, columns = ["Teams", "Wins", "Losses", "Points"])
+df = pd.DataFrame(teamList, columns = ["Teams", "Wins", "Losses", "Points", "LPI"])
 df.sort_values(by=['Wins','Points'], inplace=True,
                ascending = [False, False])
 df = df.reset_index(drop=True)
 df.index += 1
-print(df)
+# print(df)
+
+playoffs = df.head(settings.playoff_team_count)
+print(playoffs)
 
 check = True
 count = 0
 for week in range(1, 18):
     scoreboard = league.scoreboard(week=week)
     if check:
+        print(week)
+        print(scoreboard[0].home_score)
         if scoreboard[0].home_score == 0 and scoreboard[0].away_score == 0:
-            count = week
+            count = week -1
             check = False
     else:
         break
@@ -61,6 +68,7 @@ if count == 0:
 regCount = settings.reg_season_count
 remainingWeeks = regCount - count
 print()
+print(len(playoffs))
 print(remainingWeeks)
 
 print("--- %s seconds ---" % (time.time() - start_time))
