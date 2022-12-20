@@ -17,6 +17,7 @@ import numpy as np
 import EBCleague
 import FamilyLeague
 import PennoniYounglings
+import PennoniPlayoffs
 import PrahladFriendsLeague
 import PennoniTransportation
 import EBCLeague2021
@@ -29,6 +30,7 @@ PAGES = {
     "EBC League": EBCleague,
     "Family League": FamilyLeague,
     "Pennoni Younglings": PennoniYounglings,
+    "Pennoni Playoffs": PennoniPlayoffs,
     "EBC League 2021": EBCLeague2021,
     "Pennoni Transportation": PennoniTransportation,
     "Prahlad Friends League": PrahladFriendsLeague,
