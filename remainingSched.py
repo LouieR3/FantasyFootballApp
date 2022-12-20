@@ -61,17 +61,63 @@ for name in names:
     totalWins = round((expectWins + diff) + wins)
     magicNumber = (expWinPercent * 2) - winPercent
     losses = regCount - totalWins
-    record = str(totalWins) + " - " + str(losses) + " - 0"
+    record = str(wins) + " - " + str(loss1) + " - 0"
     winList.append([name, magicNumber, record])
     recordList.append([name, wins, loss1])
 
 df = pd.DataFrame(winList, columns=['Team', 'Percent', 'Record'])
+print(winList)
+# dfRecord = pd.DataFrame(recordList, columns=['Team', 'Wins', 'Losses'])
 
-dfRecord = pd.DataFrame(recordList, columns=['Team', 'Wins', 'Losses'])
+# testList = []
+# for i in range(count, regCount):
+#     print("Week " + str(i+1))
+#     for x in winList:
+#         name = x[0]
+#         prcnt = round(x[1], 3) * 1000
+#         record = x[2]
+#         if name not in testList:
+#             team = league.teams[0]
+#             for t in teams:
+#                 if t.team_name == name:
+#                     team = t
+#             cnt = count
+#             oppo = team.schedule[i].team_name
+#             xdf = df.loc[df["Team"] == oppo]
+#             oppoPrcnt = round(xdf["Percent"].item(), 3) * 1000
+
+#             testList.append(name)
+#             testList.append(oppo)
+#             tot = oppoPrcnt + prcnt
+#             myPERCENT = round(((prcnt / tot) * 100), 1)
+#             oppoPERCENT = round(((oppoPrcnt / tot) * 100), 1)
+#             picker = random.randint(-prcnt, oppoPrcnt)
+#             winner = ""
+#             if picker > 0:
+#                 winner = oppo
+#                 # xdf = dfRecord.loc[dfRecord["Team"] == winner]
+#                 # ldf = dfRecord.loc[dfRecord["Team"] == name]
+#                 # dfRecord.loc[dfRecord.Team == winner, 'Wins'] = xdf["Wins"].item() + 1
+#                 # dfRecord.loc[dfRecord.Team == name, 'Losses'] = ldf["Losses"].item() + 1
+#             else:
+#                 winner = name
+#                 # xdf = dfRecord.loc[df["Team"] == winner]
+#                 # ldf = dfRecord.loc[df["Team"] == oppo]
+#                 # dfRecord.loc[dfRecord.Team == winner, 'Wins'] = xdf["Wins"].item() + 1
+#                 # dfRecord.loc[dfRecord.Team == oppo, 'Losses'] = ldf["Losses"].item() + 1
+#             print("======================")
+#             print(name + " vs " + oppo)
+#             print(str(myPERCENT) + "% vs " + str(oppoPERCENT) + "%")
+#             print("Winner is: " + winner)
+#     print()
+#     print()
+#     testList = []
+#     print()
 
 testList = []
-for i in range(count, regCount):
-    print("Week " + str(i+1))
+print("Week " + str(15))
+i = 0
+while i < 10:
     for x in winList:
         name = x[0]
         prcnt = round(x[1], 3) * 1000
@@ -82,7 +128,7 @@ for i in range(count, regCount):
                 if t.team_name == name:
                     team = t
             cnt = count
-            oppo = team.schedule[i].team_name
+            oppo = team.schedule[14].team_name
             xdf = df.loc[df["Team"] == oppo]
             oppoPrcnt = round(xdf["Percent"].item(), 3) * 1000
 
@@ -95,28 +141,27 @@ for i in range(count, regCount):
             winner = ""
             if picker > 0:
                 winner = oppo
-                xdf = dfRecord.loc[dfRecord["Team"] == winner]
-                ldf = dfRecord.loc[dfRecord["Team"] == name]
-                dfRecord.loc[dfRecord.Team == winner, 'Wins'] = xdf["Wins"].item() + 1
-                dfRecord.loc[dfRecord.Team == name, 'Losses'] = ldf["Losses"].item() + 1
+                # xdf = dfRecord.loc[dfRecord["Team"] == winner]
+                # ldf = dfRecord.loc[dfRecord["Team"] == name]
+                # dfRecord.loc[dfRecord.Team == winner, 'Wins'] = xdf["Wins"].item() + 1
+                # dfRecord.loc[dfRecord.Team == name, 'Losses'] = ldf["Losses"].item() + 1
             else:
                 winner = name
-                xdf = dfRecord.loc[df["Team"] == winner]
-                ldf = dfRecord.loc[df["Team"] == oppo]
-                dfRecord.loc[dfRecord.Team == winner, 'Wins'] = xdf["Wins"].item() + 1
-                dfRecord.loc[dfRecord.Team == oppo, 'Losses'] = ldf["Losses"].item() + 1
+                # xdf = dfRecord.loc[df["Team"] == winner]
+                # ldf = dfRecord.loc[df["Team"] == oppo]
+                # dfRecord.loc[dfRecord.Team == winner, 'Wins'] = xdf["Wins"].item() + 1
+                # dfRecord.loc[dfRecord.Team == oppo, 'Losses'] = ldf["Losses"].item() + 1
             print("======================")
             print(name + " vs " + oppo)
             print(str(myPERCENT) + "% vs " + str(oppoPERCENT) + "%")
             print("Winner is: " + winner)
-    print()
-    print()
-    testList = []
-    # print()
-dfRecord = dfRecord.sort_values(by=['Wins'], ascending=False, ignore_index=True)
-dfRecord.index += 1
-print(dfRecord)
+    i += 1
 
-print(settings.playoff_team_count)
+
+# dfRecord = dfRecord.sort_values(by=['Wins'], ascending=False, ignore_index=True)
+# dfRecord.index += 1
+# print(dfRecord)
+
+# print(settings.playoff_team_count)
 
 print("--- %s seconds ---" % (time.time() - start_time))
