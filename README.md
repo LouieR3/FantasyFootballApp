@@ -1,6 +1,6 @@
 # Louie's Fantasy Football Analysis App
 
-https://louier3-fantasyfootballapp-streamlit-app-7hoygx.streamlitapp.com/
+https://louier3-fantasy-football-page.streamlit.app/
 
 This site analyzes a few ESPN fantasy I or a friend are in and provides 
 * a grid of every team's schedule if they were to play every other team's schedule
