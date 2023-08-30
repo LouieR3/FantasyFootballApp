@@ -24,7 +24,7 @@ import EBCLeague2021
 from espn_api.football import League
 import LPIMasterList
 
-st.set_page_config(page_title="Louie's Fantasy Football Page", layout="wide")
+st.set_page_config(page_title="Louie's Fantasy Football App", layout="wide")
 
 PAGES = {
     "Pennoni Younglings 2022": PennoniYounglings,
@@ -36,7 +36,7 @@ PAGES = {
     "LPI Master List": LPIMasterList,
 }
 st.sidebar.title('Navigation')
-selection = st.sidebar.radio("Go to", list(PAGES.keys()))
+selection = st.sidebar.radio("Leagues:", list(PAGES.keys()))
 page = PAGES[selection]
 page.app()
 
