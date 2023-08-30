@@ -27,13 +27,12 @@ import LPIMasterList
 st.set_page_config(page_title="Louie's Fantasy Football Page", layout="wide")
 
 PAGES = {
-    "EBC League": EBCleague,
-    "Family League": FamilyLeague,
-    "Pennoni Younglings": PennoniYounglings,
-    "Pennoni Playoffs": PennoniPlayoffs,
+    "Pennoni Younglings 2022": PennoniYounglings,
+    "Pennoni Transportation 2022": PennoniTransportation,
+    "Prahlad Friends League 2022": PrahladFriendsLeague,
+    "EBC League 2022": EBCleague,
     "EBC League 2021": EBCLeague2021,
-    "Pennoni Transportation": PennoniTransportation,
-    "Prahlad Friends League": PrahladFriendsLeague,
+    "Family League 2022": FamilyLeague,
     "LPI Master List": LPIMasterList,
 }
 st.sidebar.title('Navigation')
