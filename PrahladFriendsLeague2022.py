@@ -4,9 +4,10 @@ def app():
     import streamlit as st
     from calcPercent import percent
 
+    league = "Game of Yards! 2022"
+    st.title(league)
     st.header('Schedule Record Matrix')
     st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
-    league = "Game of Yards! 2022"
     # league = "FamilyLeague"
     # league = "PennoniYounglings"
     file = league + ".xlsx"

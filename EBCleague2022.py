@@ -4,6 +4,7 @@ def app():
     import streamlit as st
     from calcPercent import percent
 
+    st.title('EBC League 2022')
     st.header('Schedule Record Matrix')
     st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
     league = "EBC League 2022"
