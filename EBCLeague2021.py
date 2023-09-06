@@ -55,7 +55,7 @@ def app():
     st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
-    st.caption('The lower the number, the harder the schedule the team has had. If your average wins against schedule is 1, that means every team in the league would only average 1 win all season with your schedule')
+    st.caption("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
     df = pd.read_excel(file, sheet_name="Wins Against Schedule")
     df = df.iloc[: , 1:]
     df.index += 1
@@ -63,8 +63,8 @@ def app():
     st.dataframe(df3)
 
     st.header('Expected Wins')
-    st.caption('This is your average wins for the season across everyones schedule')
-    st.caption('If the number is higher than your actual record, you have had an unlucky schedule, and if the number is lower than your record, than you have been getting lucky')
+    st.caption('The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule.')
+    st.caption('Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules.')
     df = pd.read_excel(file, sheet_name="Expected Wins")
     df = df.iloc[: , 1:]
     df.index += 1
@@ -72,8 +72,9 @@ def app():
     st.dataframe(df3)
 
     st.header('The Louie Power Index (LPI)')
-    st.caption('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
-    st.caption('It is not an exact science yet, but a negative score is a bad team, any score around 0 is average, and any score above 10 is a true contender')
+    st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
+    st.write('Positive scores indicate winning against tough schedules. Negative scores mean losing with an easy schedule. Higher scores are better. Scores near zero are neutral.')
+    st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
     df = pd.read_excel(file, sheet_name="Louie Power Index")
     df = df.iloc[: , 1:]
     df.index += 1
