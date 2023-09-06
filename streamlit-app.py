@@ -27,12 +27,12 @@ import LPIMasterList
 st.set_page_config(page_title="Louie's Fantasy Football App", layout="wide")
 
 PAGES = {
-    "Pennoni Younglings 2022": PennoniYounglings2022,
-    "Pennoni Transportation 2022": PennoniTransportation2022,
-    "Prahlad Friends League 2022": PrahladFriendsLeague2022,
-    "EBC League 2022": EBCleague2022,
-    "EBC League 2021": EBCLeague2021,
-    "Family League 2022": FamilyLeague2022,
+    "🏈 Pennoni Younglings 2022": PennoniYounglings2022,
+    "🎮 EBC League 2022": EBCleague2022,
+    "🎮 EBC League 2021": EBCLeague2021,
+    "👪 Family League 2022": FamilyLeague2022,
+    "🛠️ Pennoni Transportation 2022": PennoniTransportation2022,
+    "🧑‍🤝‍🧑 Prahlad Friends League 2022": PrahladFriendsLeague2022,
     "LPI Master List": LPIMasterList,
 }
 st.sidebar.title('Navigation')
