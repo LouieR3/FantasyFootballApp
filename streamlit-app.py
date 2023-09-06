@@ -23,6 +23,7 @@ import PennoniTransportation2022
 import EBCLeague2021
 from espn_api.football import League
 import LPIMasterList
+import st_pages
 from st_pages import Page, Section, add_page_title, show_pages
 
 st.set_page_config(page_title="Louie's Fantasy Football App", layout="wide")
