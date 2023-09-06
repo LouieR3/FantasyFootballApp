@@ -6,7 +6,7 @@ def app():
 
     st.header('Schedule Record Matrix')
     st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
-    league = "EBC League"
+    league = "EBC League 2022"
     # league = "FamilyLeague"
     # league = "PennoniYounglings"
     file = league + ".xlsx"

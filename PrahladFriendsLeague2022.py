@@ -6,9 +6,9 @@ def app():
 
     st.header('Schedule Record Matrix')
     st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
-    # league = "EBCLeague"
+    league = "Game of Yards! 2022"
     # league = "FamilyLeague"
-    league = "Pennoni Younglings"
+    # league = "PennoniYounglings"
     file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
     df = df.set_index("Teams")
@@ -33,8 +33,7 @@ def app():
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot10 and int(i.split(" ")[0]) > 0) 
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) 
                             else "" for i in x], axis = 1, subset=names)
-
-    st.dataframe(df2, height=460, width=2000)
+    st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
     st.caption('The lower the number, the harder the schedule the team has had. If your average wins against schedule is 1, that means every team in the league would only average 1 win all season with your schedule')
@@ -42,7 +41,7 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Avg Wins Against Schedule'])
-    st.dataframe(df3, height=460)
+    st.dataframe(df3)
 
     st.header('Expected Wins')
     st.caption('This is your average wins for the season across everyones schedule')
@@ -51,7 +50,7 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Expected Wins'])
-    st.dataframe(df3, height=460)
+    st.dataframe(df3)
 
     st.header('The Louie Power Index (LPI)')
     st.caption('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
@@ -60,4 +59,4 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
-    st.dataframe(df3, height=460)
+    st.dataframe(df3)
