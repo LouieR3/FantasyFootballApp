@@ -11,3 +11,4 @@ streamlit
 openpyxl
 jinja2
 # glob
+st_pages
