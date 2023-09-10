@@ -6,7 +6,7 @@ def app():
     import numpy as np
 
     st.title('EBC League 2021')
-    st.header('Schedule Record Matrix')
+    st.header('Schedule Comparisson')
     st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
     league = "EBC League 2021"
     # league = "FamilyLeague"

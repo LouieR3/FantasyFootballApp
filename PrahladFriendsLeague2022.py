@@ -6,7 +6,7 @@ def app():
 
     league = "Game of Yards! 2022"
     st.title(league)
-    st.header('Schedule Record Matrix')
+    st.header('Schedule Comparisson')
     st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
     # league = "FamilyLeague"
     # league = "PennoniYounglings"

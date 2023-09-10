@@ -98,13 +98,6 @@ for i in range(len(keyList)):
             myTeam = keyList[i][1]
             for sc in scoreboard:
                 myScore = scoresList[i][tot-1]
-                # print(sc.home_team)
-                # print(sc.home_team.team_name)
-                # print()
-                # print(sc.away_team)
-                # print(sc.away_team.team_name)
-                # print(checkTeam)
-                # print("-------")
                 if sc.home_team.team_name == checkTeam:
                     if myScore > sc.away_score:
                         win += 1

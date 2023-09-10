@@ -5,11 +5,13 @@ import time
 from tabulate import tabulate
 from operator import itemgetter
 # import xlsxwriter
+from itertools import combinations
+import itertools
 
 start_time = time.time()
 
 # Pennoni Younglings
-league = League(league_id=310334683, year=2023, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',
+league = League(league_id=310334683, year=2022, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',
                 swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 settings = league.settings
@@ -28,7 +30,7 @@ for team in league.teams:
     keyList.append([count, team.team_name])
     count += 1
 
-print(league.teams)
+# print(league.teams)
 # print(scoresList[5][0])
 # print(scoresList[5])
 # print(league.scoreboard(week=1))
@@ -65,12 +67,93 @@ for week in range(1, 18):
 
 if count == 0:
     count = settings.reg_season_count + 1
-print(keyList)
+# print(keyList)
 
+team_owners = [team.owner for team in league.teams]
+# print(team_owners)
+# print()
 team_names = [team.team_name for team in league.teams]
+# print(team_names)
+# print()
 team_scores = [team.scores for team in league.teams] 
+# print(team_scores)
+# print()
 schedules = [team.schedule for team in league.teams]
+# print(schedules)
+# print()
+# print(league.scoreboard(week=1))
+# print()
+# print(settings.reg_season_count)
 
+# Precompute current week 
+current_week = None
+for week in range(1, settings.reg_season_count+1):
+    scoreboard = league.scoreboard(week)
+    if not any(matchup.home_score for matchup in scoreboard):
+        current_week = week
+        break 
+
+if current_week is None:
+    current_week = settings.reg_season_count
+
+# Store data in DataFrames 
+scores_df = pd.DataFrame(team_scores, index=team_names)
+schedules_df = pd.DataFrame(schedules, index=team_names)
+print(scores_df)
+print(schedules_df)
+print()
+# Team name -> index mapping
+team_name_to_idx = {n: i for i, n in enumerate(team_names)}
+
+# Precompute results 
+results = []
+for wk in range(1, current_week+1):
+    for matchup in league.scoreboard(wk):
+        res = {'week': wk}
+        res['team'] = matchup.home_team.team_name
+        res['opponent'] = matchup.away_team.team_name 
+        res['team_score'] = scores_df.loc[res['team'], wk-1]
+        res['opp_score'] = scores_df.loc[res['opponent'], wk-1]
+        results.append(res)
+results_df = pd.DataFrame(results)  
+print(results_df)
+
+# Create empty dataframe  
+records_df = pd.DataFrame(index=team_names, columns=team_names)
+
+# Fill diagonal with team names
+records_df.fillna(value=records_df.index, inplace=True) 
+
+# Iterate through teams
+for team in team_names:
+
+  # Get team scores
+  team_scores = scores_df.loc[team].tolist() 
+  
+  # Iterate through opponents
+  for opp in team_names:
+    
+    if team == opp:
+      continue
+    
+    # Get opponent schedule
+    opp_schedule = schedules_df.loc[opp].tolist()
+    
+    # Get opponent scores
+    opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
+    
+    # Compare scores
+    wins = sum(s1 > s2 for s1, s2 in zip(team_scores, opp_scores))
+    losses = sum(s1 < s2 for s1, s2 in zip(team_scores, opp_scores))
+    ties = sum(s1 == s2 for s1, s2 in zip(team_scores, opp_scores))
+    
+    # Record result
+    record = f"{wins}-{losses}-{ties}"
+    records_df.at[team, opp] = record 
+
+print(records_df)
+print("--- %s seconds ---" % (time.time() - start_time))
+sdfsdfsdf
 for i, team_i in enumerate(team_names):
     for j, team_j in enumerate(team_names):
       
@@ -98,3 +181,71 @@ for i, team_i in enumerate(team_names):
         df.at[team_i, team_j] = record
         
 print(df)
+
+
+league = League(league_id=310334683, year=2022, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',
+                swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+
+settings = league.settings
+team_owners = [team.owner for team in league.teams]
+team_names = [team.team_name for team in league.teams]
+team_scores = [team.scores for team in league.teams] 
+schedules = [team.schedule for team in league.teams]
+matchups = league.scoreboard(week=week+1)
+def get_schedule_comparison(league):
+  teams = league.teams
+
+  team_names = [team.team_name for team in teams]
+  team_scores = [team.scores for team in teams]
+  schedules = [team.schedule for team in teams]
+
+  # Initialize comparison
+  comparison = []
+  for team in teams:
+    comparison.append({'team': team, 'weekly_results': [], 'schedule_comparison': []})  
+  # Get weekly results
+  for week in range(1, league.settings.reg_season_count+1):
+    matchups = league.scoreboard(week=week)
+    for matchup in matchups:
+      team1 = matchup.home_team
+      team2 = matchup.away_team
+
+      team1_score = team_scores[team_names.index(team1.team_name)][week-1]
+      team2_score = team_scores[team_names.index(team2.team_name)][week-1]
+
+      # Update weekly results
+      for team in comparison:
+        if team['team'].team_name == team1.team_name:
+          # Update team1 weekly results
+          if team1_score > team2_score:
+            team['weekly_results'].append({'wins': 1})
+          # etc...
+        if team['team'].team_name == team2.team_name:
+          # Update team2 weekly results
+          if team2_score > team1_score:
+            team['weekly_results'].append({'losses': 1})
+          # etc...
+
+  # Populate schedule comparison
+  for team in comparison:
+    for opponent in comparison:
+      if team == opponent:
+        continue
+        
+      wins = 0 
+      losses = 0
+      ties = 0
+      
+      # Count results vs opponent schedule
+      for i in range(len(team['weekly_results'])):
+        if team['weekly_results'][i].get('wins'):
+          if opponent['weekly_results'][i].get('losses'):
+            wins += 1
+        # Tally wins, losses, ties
+
+      team['schedule_comparison'].append({'team': opponent['team'], 
+                                         'wins': wins, 
+                                         'losses': losses,
+                                         'ties': ties}) 
+
+  return comparison
