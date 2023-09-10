@@ -78,7 +78,10 @@ team_names = [team.team_name for team in league.teams]
 team_scores = [team.scores for team in league.teams] 
 # print(team_scores)
 # print()
-schedules = [team.schedule for team in league.teams]
+schedules = []
+for team in league.teams:
+  schedule = [opponent.team_name for opponent in team.schedule]
+  schedules.append(schedule)
 # print(schedules)
 # print()
 # print(league.scoreboard(week=1))
@@ -95,13 +98,13 @@ for week in range(1, settings.reg_season_count+1):
 
 if current_week is None:
     current_week = settings.reg_season_count
-
+# print(current_week)
 # Store data in DataFrames 
 scores_df = pd.DataFrame(team_scores, index=team_names)
 schedules_df = pd.DataFrame(schedules, index=team_names)
-print(scores_df)
-print(schedules_df)
-print()
+# print(scores_df)
+# print(schedules_df)
+# print()
 # Team name -> index mapping
 team_name_to_idx = {n: i for i, n in enumerate(team_names)}
 
@@ -116,36 +119,53 @@ for wk in range(1, current_week+1):
         res['opp_score'] = scores_df.loc[res['opponent'], wk-1]
         results.append(res)
 results_df = pd.DataFrame(results)  
-print(results_df)
+# print(results_df)
 
 # Create empty dataframe  
 records_df = pd.DataFrame(index=team_names, columns=team_names)
 
 # Fill diagonal with team names
-records_df.fillna(value=records_df.index, inplace=True) 
+records_df.fillna('', inplace=True) 
 
 # Iterate through teams
 for team in team_names:
-
   # Get team scores
   team_scores = scores_df.loc[team].tolist() 
-  
   # Iterate through opponents
   for opp in team_names:
     
-    if team == opp:
-      continue
-    
-    # Get opponent schedule
-    opp_schedule = schedules_df.loc[opp].tolist()
-    
-    # Get opponent scores
-    opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
-    
     # Compare scores
-    wins = sum(s1 > s2 for s1, s2 in zip(team_scores, opp_scores))
-    losses = sum(s1 < s2 for s1, s2 in zip(team_scores, opp_scores))
-    ties = sum(s1 == s2 for s1, s2 in zip(team_scores, opp_scores))
+    wins = 0
+    losses = 0
+    ties = 0
+    for i in range(current_week):
+      # Get opponent schedule
+      opp_schedule = schedules_df.loc[opp].tolist()
+      
+      # Get opponent scores
+      opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
+      if team == opp: 
+        # Opponent is the same team, compare scores
+        team_score = scores_df.loc[team, i]
+        opp_score = scores_df.loc[opp, i]
+        if team_score > opp_score:
+          wins += 1
+        elif team_score < opp_score:
+          losses += 1
+        else:
+          ties += 1
+
+      else:
+        # Opponent is different team
+        opp_schedule = schedules_df.loc[opp].tolist() 
+        opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
+        if team_scores[i] > opp_scores[i]:
+          wins += 1
+        elif team_scores[i] < opp_scores[i]:
+          losses += 1
+        else:
+          ties += 1
+    
     
     # Record result
     record = f"{wins}-{losses}-{ties}"
