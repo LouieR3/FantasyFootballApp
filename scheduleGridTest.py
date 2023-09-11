@@ -102,9 +102,9 @@ if current_week is None:
 # Store data in DataFrames 
 scores_df = pd.DataFrame(team_scores, index=team_names)
 schedules_df = pd.DataFrame(schedules, index=team_names)
-# print(scores_df)
-# print(schedules_df)
-# print()
+print(scores_df)
+print(schedules_df)
+print()
 # Team name -> index mapping
 team_name_to_idx = {n: i for i, n in enumerate(team_names)}
 
@@ -144,10 +144,14 @@ for team in team_names:
       
       # Get opponent scores
       opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
-      if team == opp: 
-        # Opponent is the same team, compare scores
+      if team == opp:
+        # Get team's opponent this week 
+        opp_team = schedules_df.loc[team, i]
+        
+        # Get team and opponent score
         team_score = scores_df.loc[team, i]
-        opp_score = scores_df.loc[opp, i]
+        opp_score = scores_df.loc[opp_team, i]
+
         if team_score > opp_score:
           wins += 1
         elif team_score < opp_score:
@@ -156,12 +160,23 @@ for team in team_names:
           ties += 1
 
       else:
-        # Opponent is different team
-        opp_schedule = schedules_df.loc[opp].tolist() 
-        opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
-        if team_scores[i] > opp_scores[i]:
+        # Check if opponent is the same 
+        if opp == schedules_df.loc[team, i]:
+          # Opponent is the same, get correct scores
+          team_score = scores_df.loc[team, i]
+          opp_score = scores_df.loc[schedules_df.loc[team, i], i]
+
+        else:  
+          # Opponent is different
+          opp_schedule = schedules_df.loc[opp].tolist()
+          opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
+          team_score = team_scores[i]
+          opp_score = opp_scores[i]
+
+        # Compare scores
+        if team_score > opp_score:
           wins += 1
-        elif team_scores[i] < opp_scores[i]:
+        elif team_score < opp_score:
           losses += 1
         else:
           ties += 1
