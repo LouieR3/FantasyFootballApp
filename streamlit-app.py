@@ -22,7 +22,7 @@ import PennoniTransportation2022
 import EBCLeague2021
 from espn_api.football import League
 import LPIMasterList
-from streamlit_option_menu import option_menu
+# from streamlit_option_menu import option_menu
 # from st_pages import Page, show_pages, add_page_title
 
 st.set_page_config(page_title="Louie's Fantasy Football App", layout="wide")
@@ -37,16 +37,16 @@ PAGES = {
     "LPI Master List": LPIMasterList,
 }
 st.sidebar.title('Navigation')
-# selection = st.sidebar.radio("Leagues:", list(PAGES.keys()))
-# page = PAGES[selection]
+selection = st.sidebar.radio("Leagues:", list(PAGES.keys()))
+page = PAGES[selection]
 
 # 1. as sidebar menu
-with st.sidebar:
-    selected = option_menu("Main Menu", ["🏈 Pennoni Younglings 2022", '🎮 EBC League 2022'], 
-        icons=['house', 'gear'], menu_icon="cast", default_index=1)
-    selected
+# with st.sidebar:
+#     selected = option_menu("Main Menu", ["🏈 Pennoni Younglings 2022", '🎮 EBC League 2022'], 
+#         icons=['house', 'gear'], menu_icon="cast", default_index=1)
+#     selected
 
-# page.app()
+page.app()
 
 # show_pages(
 #     [

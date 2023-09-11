@@ -12,4 +12,4 @@ openpyxl
 jinja2
 # glob
 st_pages
-streamlit_option_menu
+# streamlit_option_menu
