@@ -28,12 +28,12 @@ from espn_api.football import League
 st.set_page_config(page_title="Louie's Fantasy Football App", page_icon="👋", layout="wide")
 
 # PAGES = {
-#     "🏈 Pennoni Younglings 2022": PennoniYounglings2022,
+#     "🏈_Pennoni_Younglings_2022": PennoniYounglings2022,
 #     "🎮 EBC League 2022": EBCleague2022,
-#     "👪 Family League 2022": FamilyLeague2022,
-#     "🛠️ Pennoni Transportation 2022": PennoniTransportation2022,
-#     "🧑‍🤝‍🧑 Prahlad Friends League 2022": PrahladFriendsLeague2022,
-#     "🎮 EBC League 2021": EBCLeague2021,
+#     "👪_Family_League_2022": FamilyLeague2022,
+#     "🛠️_Pennoni_Transportation_2022": PennoniTransportation2022,
+#     "🧑‍🤝‍🧑_Prahlad_Friends_League_2022": PrahladFriendsLeague2022,
+#     "🎮_EBC League 2021": EBCLeague2021,
 #     "LPI Master List": LPIMasterList,
 # }
 # st.sidebar.title('Navigation')
