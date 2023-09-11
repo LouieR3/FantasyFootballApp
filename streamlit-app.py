@@ -25,7 +25,7 @@ from espn_api.football import League
 # from streamlit_option_menu import option_menu
 # from st_pages import Page, show_pages, add_page_title
 
-st.set_page_config(page_title="Louie's Fantasy Football App", layout="wide")
+st.set_page_config(page_title="Louie's Fantasy Football App", page_icon="👋", layout="wide")
 
 # PAGES = {
 #     "🏈 Pennoni Younglings 2022": PennoniYounglings2022,
