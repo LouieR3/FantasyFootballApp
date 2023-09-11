@@ -27,46 +27,55 @@ import LPIMasterList
 
 st.set_page_config(page_title="Louie's Fantasy Football App", layout="wide")
 
-PAGES = {
-    "🏈 Pennoni Younglings 2022": PennoniYounglings2022,
-    "🎮 EBC League 2022": EBCleague2022,
-    "👪 Family League 2022": FamilyLeague2022,
-    "🛠️ Pennoni Transportation 2022": PennoniTransportation2022,
-    "🧑‍🤝‍🧑 Prahlad Friends League 2022": PrahladFriendsLeague2022,
-    "🎮 EBC League 2021": EBCLeague2021,
-    "LPI Master List": LPIMasterList,
-}
-st.sidebar.title('Navigation')
-selection = st.sidebar.radio("Leagues:", list(PAGES.keys()))
-page = PAGES[selection]
+# PAGES = {
+#     "🏈 Pennoni Younglings 2022": PennoniYounglings2022,
+#     "🎮 EBC League 2022": EBCleague2022,
+#     "👪 Family League 2022": FamilyLeague2022,
+#     "🛠️ Pennoni Transportation 2022": PennoniTransportation2022,
+#     "🧑‍🤝‍🧑 Prahlad Friends League 2022": PrahladFriendsLeague2022,
+#     "🎮 EBC League 2021": EBCLeague2021,
+#     "LPI Master List": LPIMasterList,
+# }
+# st.sidebar.title('Navigation')
+# selection = st.sidebar.radio("Leagues:", list(PAGES.keys()))
+# page = PAGES[selection]
 
-# 1. as sidebar menu
-# with st.sidebar:
-#     selected = option_menu("Main Menu", ["🏈 Pennoni Younglings 2022", '🎮 EBC League 2022'], 
-#         icons=['house', 'gear'], menu_icon="cast", default_index=1)
-#     selected
+# # 1. as sidebar menu
+# # with st.sidebar:
+# #     selected = option_menu("Main Menu", ["🏈 Pennoni Younglings 2022", '🎮 EBC League 2022'], 
+# #         icons=['house', 'gear'], menu_icon="cast", default_index=1)
+# #     selected
 
-page.app()
+# page.app()
 
-# show_pages(
-#     [
-#         Page("example_app/PennoniTransportation2022.py", "Home", "🏠"),
-#         # Can use :<icon-name>: or the actual icon
-#         Page("example_app/PennoniYounglings2022.py", "Example One", ":books:"),
-#         # Since this is a Section, all the pages underneath it will be indented
-#         # The section itself will look like a normal page, but it won't be clickable
-#         Section(name="Cool apps", icon=":pig:"),
-#         # The pages appear in the order you pass them
-#         Page("example_app/PrahladFriendsLeague2022.py", "Example Four", "📖"),
-#         Page("example_app/LPIMasterList.py", "Example Two", "✏️"),
-#         Section(name="Other apps", icon=":horse:"),
-#         # Will use the default icon and name based on the filename if you don't
-#         # pass them
-#         Page("example_app/EBCLeague2021.py"),
-#         # You can also pass in_section=False to a page to make it un-indented
-#         Page("example_app/EBCleague2022.py", "Example Five", "🧰", in_section=False),
-#     ]
-# )
+# Main Description
+st.markdown("## 👋 Welcome to SurViZ, your best tool to compare and explore galaxy SurVeys!")
+st.markdown("Developed by __Hubert Bretonnière__: https://github.com/Hbretonniere/SurViZ")
+st.markdown("The app is still under development. Please reach me in the github repo if you have any comments or suggestions.")
+st.markdown("For a more quantitative comparison of some of the surveys, you can visit and use galcheat (https://github.com/aboucaud/galcheat)")
 
-# pr = df.profile_report()
-# st_profile_report(pr)
+# Description of the features. 
+st.markdown(
+    """
+    ### Select on the left panel what you want to explore:
+
+    - With 🔭 General info, you will have a short description of the telescopes, their scientific goals, instruments and surveys.
+    
+    - With 🎨 Filters, you will explore the spectral bands of each telescopes' instruments.
+
+    - With 👁️ FOV, you will be able to explore the Field of View of each telescope.
+
+    - With 📈characteristics, you will explore the capacity of the missions regarding filters, resolution and depth.
+    
+    - With 🌌 Galaxy, you will explore the surveys and instruments' image quality (resolution and PSF) in a TNG galaxy.
+
+    - With ✨ Galaxy fields, you will explore the surveys and instruments' depths in a simulated galaxy field.
+
+    - With 🗺️ Survey footprint, you will visualise the sizes and positions of the various surveys.
+
+    - With 🪞 Mirror , you will explore the size of the telescopes' primary mirror.
+    \n  
+    
+    More information can be found by clicking in the READMEs of each tab.
+    """
+)

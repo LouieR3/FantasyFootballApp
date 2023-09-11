@@ -11,5 +11,5 @@ streamlit
 openpyxl
 jinja2
 # glob
-st_pages
+st_pages>=0.4.3
 # streamlit_option_menu
