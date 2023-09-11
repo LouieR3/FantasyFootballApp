@@ -22,6 +22,8 @@ import PennoniTransportation2022
 import EBCLeague2021
 from espn_api.football import League
 import LPIMasterList
+from streamlit_option_menu import option_menu
+# from st_pages import Page, show_pages, add_page_title
 
 st.set_page_config(page_title="Louie's Fantasy Football App", layout="wide")
 
@@ -31,14 +33,20 @@ PAGES = {
     "👪 Family League 2022": FamilyLeague2022,
     "🛠️ Pennoni Transportation 2022": PennoniTransportation2022,
     "🧑‍🤝‍🧑 Prahlad Friends League 2022": PrahladFriendsLeague2022,
-    "2021 Leagues" : "",
     "🎮 EBC League 2021": EBCLeague2021,
     "LPI Master List": LPIMasterList,
 }
 st.sidebar.title('Navigation')
-selection = st.sidebar.radio("Leagues:", list(PAGES.keys()))
-page = PAGES[selection]
-page.app()
+# selection = st.sidebar.radio("Leagues:", list(PAGES.keys()))
+# page = PAGES[selection]
+
+# 1. as sidebar menu
+with st.sidebar:
+    selected = option_menu("Main Menu", ["🏈 Pennoni Younglings 2022", '🎮 EBC League 2022'], 
+        icons=['house', 'gear'], menu_icon="cast", default_index=1)
+    selected
+
+# page.app()
 
 # show_pages(
 #     [
