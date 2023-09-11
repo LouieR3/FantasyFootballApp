@@ -25,7 +25,7 @@ from espn_api.football import League
 # from streamlit_option_menu import option_menu
 # from st_pages import Page, show_pages, add_page_title
 
-st.set_page_config(page_title="Louie's Fantasy Football App", page_icon="👋", layout="wide")
+st.set_page_config(page_title="Louie's Fantasy Football App", page_icon="🏈", layout="wide")
 
 # PAGES = {
 #     "🏈_Pennoni_Younglings_2022": PennoniYounglings2022,
@@ -49,7 +49,7 @@ st.set_page_config(page_title="Louie's Fantasy Football App", page_icon="👋", 
 # page.app()
 
 # Main Description
-st.markdown("## 👋 Welcome to Louie's Fantasy Football App!")
+st.markdown("## 🏈 Welcome to Louie's Fantasy Football App!")
 st.markdown("Developed by __Louie Rodriguez__: https://github.com/LouieR3/FantasyFootballApp")
 st.markdown("League's are labeled by league name and year on the side.")
 
