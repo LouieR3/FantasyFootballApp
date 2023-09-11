@@ -11,7 +11,7 @@ from copy import deepcopy
 start_time = time.time()
 
 # Pennoni Younglings
-league = League(league_id=310334683, year=2023, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',
+league = League(league_id=310334683, year=2022, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',
                 swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 team_names = [team.team_name for team in league.teams]
@@ -57,7 +57,7 @@ for i in range(len(team_names)):
     std_dev = standard_deviation([total_points] * num_weeks_played) * std_dev_factor
     
     team_data[team_name] = {'average_score': average_score, 'std_dev': std_dev}
-print(team_data)
+# print(team_data)
 # Initialize a dictionary to store the results
 results = {team: [0] * (len(team_names) + 1) for team in team_data}
 
@@ -91,7 +91,6 @@ for team, rank_counts in results.items():
 #         print(f"   Finish in Position {rank}: {odds_percentage:.2f}%")
 # Create a DataFrame
 odds_df = pd.DataFrame(odds).T
-print(odds)
 
 # Add a column for the team names (optional)
 odds_df.index.name = 'Team'
@@ -103,14 +102,28 @@ max_positions = max(len(odds_df.columns), max([len(team_odds) for team_odds in o
 # Fill missing positions with 0
 for team_odds in odds_df.columns:
     odds_df[team_odds] = odds_df[team_odds].fillna(0)
-print(odds_df)
 
 # Rename the columns to represent the positions a team can finish
 odds_df.columns = [f'Place {i}' for i in range(1, max_positions)]
 
 # Display the DataFrame
-print(odds_df)
+# print(odds_df)
+# Get number of playoff teams 
+num_playoff_teams = settings.playoff_team_count  
 
+# Add new column 
+odds_df['Chance of making playoffs'] = 0
+
+# Sum the top # of finish places based on playoff teams
+for i, row in odds_df.iterrows():
+    odds_df.at[i, 'Chance of making playoffs'] = row[:num_playoff_teams].sum()
+
+# Sort by 'Chance of making playoffs' column
+sort_cols = ['Place 1', 'Place 2', 'Place 3', 'Place 4', 'Place 5', 'Place 6', 'Place 7', 'Place 8', 'Place 9', 'Place 10', 'Place 11', 'Place 12', 'Chance of making playoffs']
+
+odds_df = odds_df.sort_values(by=sort_cols, ascending=False)
+
+print(odds_df)
 def random_value():
     u = 0
     v = 0
@@ -499,3 +512,7 @@ def add_tiebreaker_to_team(team, tiebreaker, tiebreaker_to_add):
 
         team['tiebreakers'].append(tiebreaker_copy)
 print("--- %s seconds ---" % (time.time() - start_time))
+
+print()
+print(settings.playoff_team_count)
+print(settings.team_count)

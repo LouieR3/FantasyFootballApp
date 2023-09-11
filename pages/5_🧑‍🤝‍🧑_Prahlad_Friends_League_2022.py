@@ -62,3 +62,5 @@ def app():
     df.index += 1
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
     st.dataframe(df3)
+
+app()

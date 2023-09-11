@@ -65,3 +65,5 @@ def app():
     pd.options.mode.chained_assignment = None
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
     st.dataframe(df3)
+
+app()

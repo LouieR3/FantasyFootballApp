@@ -49,33 +49,26 @@ st.set_page_config(page_title="Louie's Fantasy Football App", page_icon="👋", 
 # page.app()
 
 # Main Description
-st.markdown("## 👋 Welcome to SurViZ, your best tool to compare and explore galaxy SurVeys!")
-st.markdown("Developed by __Hubert Bretonnière__: https://github.com/Hbretonniere/SurViZ")
-st.markdown("The app is still under development. Please reach me in the github repo if you have any comments or suggestions.")
-st.markdown("For a more quantitative comparison of some of the surveys, you can visit and use galcheat (https://github.com/aboucaud/galcheat)")
+st.markdown("## 👋 Welcome to Louie's Fantasy Football App!")
+st.markdown("Developed by __Louie Rodriguez__: https://github.com/LouieR3/FantasyFootballApp")
+st.markdown("League's are labeled by league name and year on the side.")
 
 # Description of the features. 
 st.markdown(
     """
-    ### Select on the left panel what you want to explore:
+    ### Some info on analysis you will see on each page:
 
-    - With 🔭 General info, you will have a short description of the telescopes, their scientific goals, instruments and surveys.
+    - Schedule Comparison - This shows you what your team's record would be against everyone elses schedule when reading from left to right. Looking at the records for your team top to bottom shows what each teams record would be with your schedule. A deep yellow color indicates a record in the top 10%, a lighter yellow color indicates a top 25% record, a light red color indicates a bottom 25% record, and a dark red color indicates a bottom 10% record.
     
-    - With 🎨 Filters, you will explore the spectral bands of each telescopes' instruments.
+    - Strength of Schdeule - This table ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents. A lighter color in the grid represents a hard schedule and the darker the blue, the easier the schedule.
 
-    - With 👁️ FOV, you will be able to explore the Field of View of each telescope.
+    - Expected Wins - The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule. Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules. A lighter color in the grid represents that your team would not have many wins regardless of your schedule, and the darker the blue shows how well your team would do regardless of schedule. A positive value in the Difference column means you should have that many more wins added onto your record, and a negative number means you are that many wins above what you really should have.
 
-    - With 📈characteristics, you will explore the capacity of the missions regarding filters, resolution and depth.
+    - Playoff Odds - This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.
     
-    - With 🌌 Galaxy, you will explore the surveys and instruments' image quality (resolution and PSF) in a TNG galaxy.
-
-    - With ✨ Galaxy fields, you will explore the surveys and instruments' depths in a simulated galaxy field.
-
-    - With 🗺️ Survey footprint, you will visualise the sizes and positions of the various surveys.
-
-    - With 🪞 Mirror , you will explore the size of the telescopes' primary mirror.
+    - The Louie Power Index (LPI) - The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score. Positive scores indicate winning against tough schedules. Negative scores mean losing with an easy schedule. Higher scores are better. Scores near zero are neutral. The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline. Think of it like counting cards for a fantasy football regular season.
     \n  
     
-    More information can be found by clicking in the READMEs of each tab.
+    A smaller description can be found by under each tab.
     """
 )

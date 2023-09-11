@@ -32,3 +32,4 @@ def app():
                             else "" for i in x], axis = 1)
     st.dataframe(df3, height=2150)
 
+app()
