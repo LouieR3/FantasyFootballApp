@@ -64,7 +64,7 @@ st.markdown(
 
     - __Expected Wins__ - The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule. Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules. A positive value in the Difference column means you should have that many more wins added onto your record, and a negative number means you are that many wins above what you really should have.
 
-    - __Playoff Odds__ - This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.
+    - __*NEW* Playoff Odds__ - This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.
     
     - __The Louie Power Index (LPI)__ - The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score. Positive scores indicate winning against tough schedules. Negative scores mean losing with an easy schedule. Higher scores are better. Scores near zero are neutral. The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.
     
