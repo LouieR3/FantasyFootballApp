@@ -76,6 +76,9 @@ records_df = pd.DataFrame(index=team_names, columns=team_names)
 # Fill diagonal with team names
 records_df.fillna('', inplace=True) 
 
+# Initialize a DataFrame to store total wins for each team against all schedules
+total_wins_df = pd.DataFrame(0, columns=team_names, index=team_names)
+
 # Iterate through teams
 for team in team_names:
   # Get team scores
@@ -134,6 +137,67 @@ for team in team_names:
     # Record result
     record = f"{wins}-{losses}-{ties}"
     records_df.at[team, opp] = record 
+    
+    # Update the total wins DataFrame
+    total_wins_df.at[team, opp] = wins
 
 print(records_df)
+
+
+# Calculate the total wins for each team
+team_wins = total_wins_df.sum(axis=1)
+avg_team_wins = team_wins / len(team_names)
+
+# Calculate expected wins
+expected_wins = total_wins_df.mean(axis=1)
+
+# Calculate differences
+differences = team_wins - total_wins_df.values.diagonal()
+
+# Calculate actual wins
+actual_wins = records_df.values.diagonal()
+
+# Calculate win percentages
+win_percentages = team_wins / current_week
+
+# Create a DataFrame for ranking
+rank_df = pd.DataFrame({
+    'Team': team_names,
+    'Expected Wins': avg_team_wins,
+    'Difference': differences,
+    'Record': actual_wins,
+})
+
+# Sort the DataFrame by total wins and difference
+sorted_rank_df = rank_df.sort_values(by=['Expected Wins', 'Difference'], ascending=[False, True])
+sorted_rank_df.reset_index(drop=True, inplace=True)
+sorted_rank_df.index = sorted_rank_df.index + 1 
+# Print the sorted rank DataFrame
+print(sorted_rank_df)
+
+# Create schedule_rank_df
+schedule_rank_df = pd.DataFrame({
+    'Teams': sorted_rank_df['Team'],
+    'Wins Against Schedule': [sum(total_wins_df[team]) / len(team_names) for team in sorted_rank_df['Team']],
+    'Record': sorted_rank_df['Record']
+})
+schedule_rank_df = schedule_rank_df.sort_values(by=['Wins Against Schedule'], ascending=[True])
+
+print(schedule_rank_df)
+
+schedule_wins = [sum(total_wins_df[team]) for team in sorted_rank_df['Team']]
+
+# Create the final DataFrame
+final_df = pd.DataFrame({
+    'Teams': sorted_rank_df['Team'],
+    'Louie Power Index': team_wins - schedule_wins,
+    'Record': sorted_rank_df['Record'],
+    # 'Change From Last Week': 0,
+})
+print()
+print()
+print(final_df)
+print()
+final_df = final_df.sort_values(by=['Louie Power Index'], ascending=[True])
+print(final_df)
 print("--- %s seconds ---" % (time.time() - start_time))
