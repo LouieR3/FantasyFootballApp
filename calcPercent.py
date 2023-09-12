@@ -1,11 +1,16 @@
 def percent(file):
     import pandas as pd
     from espn_api.football import League
-    import re
+    import os
 
-    pattern = r"^(.*?2023)"
-    match = re.search(pattern, file)
-    result = match.group(1).strip()
+    # Split the filename and extension
+    name, extension = os.path.splitext(file)
+
+    # Check if the last part of the name is a year (assumes it's a 4-digit year)
+    parts = name.split()
+    if parts and parts[-1].isdigit() and len(parts[-1]) == 4:
+        result = " ".join(parts[:-1])
+
     print(result)
 
     if result == "Pennoni Younglings":
