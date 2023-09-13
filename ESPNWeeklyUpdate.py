@@ -32,7 +32,6 @@ league = League(league_id=310334683, year=2023, espn_s2='AEC3jc8inPISUEojfHvhzvO
 # Prahlad Friends League
 # league = League(league_id=1781851, year=2022, espn_s2='AEBnVIPLGawrfX3pYmFejB2uTpTrDT5gKM7jbAqOtvaNBfAF0muAaPFFZBzwevb6Robdlp8Ruok9B8MFrXj6DEDW6m3zhlv0j9q%2BSVF446Q%2BU3ui%2F2mNHJK34K7mlc9dhW03a4HgrNWR4GDPukRdI5orkAF3Kl5KeDamvTff%2BaIlroUAgYyKLzQyEueU%2BLCCn4Jwb5ZLPBFSW00QQ3UbYc9tGwNeDZAKIiEEfd%2FQiKWXYfQnwep48PkunIN5%2FhYoa5MsjfG6jMhQAX22al5F%2F%2Fpuq6X7ei4emvlW3KAUbUMiY%2Bx4ViHMbWOcmrwkMPPFFqOsW8%2BkFK%2B1C40tt7Z3%2BaY1', swid='{634597F9-8435-46D1-9314-B554E8B4BB2A}')
 
-
 settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
@@ -46,20 +45,6 @@ schedules = []
 for team in league.teams:
   schedule = [opponent.team_name for opponent in team.schedule]
   schedules.append(schedule)
-
-# print(team_owners)
-# print()
-# print(team_names)
-# print()
-# print(team_scores)
-# print()
-# print(schedules)
-# print()
-# print(league.scoreboard(week=1))
-# print()
-# print(league.scoreboard(week=2))
-# print()
-# print(settings.reg_season_count)
 
 # Precompute current week 
 current_week = None
@@ -79,22 +64,6 @@ elif current_week != settings.reg_season_count:
 # Store data in DataFrames 
 scores_df = pd.DataFrame(team_scores, index=team_names)
 schedules_df = pd.DataFrame(schedules, index=team_names)
-# print(scores_df)
-# print(schedules_df)
-# print()
-
-# Precompute results 
-# results = []
-# for wk in range(1, current_week+1):
-#     for matchup in league.scoreboard(wk):
-#         res = {'week': wk}
-#         res['team'] = matchup.home_team.team_name
-#         res['opponent'] = matchup.away_team.team_name 
-#         res['team_score'] = scores_df.loc[res['team'], wk-1]
-#         res['opp_score'] = scores_df.loc[res['opponent'], wk-1]
-#         results.append(res)
-# results_df = pd.DataFrame(results)  
-# print(results_df)
 
 # Create empty dataframe  
 records_df = pd.DataFrame(index=team_names, columns=team_names)
