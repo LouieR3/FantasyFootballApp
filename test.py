@@ -63,8 +63,8 @@ league = "Pennoni Younglings 2023"
 # league = "EBCLeague"
 # league = "FamilyLeague"
 file = league + ".xlsx"
-df = pd.read_excel(file, sheet_name="Schedule Grid")
-df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+df = pd.read_excel(file, sheet_name="Playoff Odds")
+# df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
 df = df.set_index("Teams")
 print(df)
 print("--- %s seconds ---" % (time.time() - start_time))
