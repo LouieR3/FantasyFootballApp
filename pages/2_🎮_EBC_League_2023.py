@@ -55,7 +55,7 @@ def app():
     # df = df.iloc[: , 1:]
     # df.index += 1
     # df3 = df.style.background_gradient(subset=['Expected Wins'])
-    st.dataframe(df, height=330)
+    st.dataframe(df)
 
     st.header('The Louie Power Index (LPI)')
     st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
