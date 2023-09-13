@@ -10,9 +10,11 @@ def percent(file):
     parts = name.split()
     if parts and parts[-1].isdigit() and len(parts[-1]) == 4:
         result = " ".join(parts[:-1])
-        year = parts[-1]
+        year = int(parts[-1])
 
     print(result)
+    # print(parts)
+    # print(year)
 
     if result == "Pennoni Younglings":
         # Pennoni Younglings
@@ -68,3 +70,5 @@ def percent(file):
     percentList.append(bot10)
 
     return percentList
+file = "EBC League 2021.xlsx"
+percent(file)
