@@ -51,10 +51,11 @@ def app():
     st.header('*NEW* Playoff Odds')
     st.caption("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     df = pd.read_excel(file, sheet_name="Playoff Odds")
+    df = df.set_index("Teams")
     # df = df.iloc[: , 1:]
     # df.index += 1
     # df3 = df.style.background_gradient(subset=['Expected Wins'])
-    st.dataframe(df, height=360)
+    st.dataframe(df, height=330)
 
     st.header('The Louie Power Index (LPI)')
     st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
