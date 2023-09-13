@@ -168,20 +168,22 @@ schedule_rank_df = pd.DataFrame({
     'Record': rank_df['Record']
 })
 
-schedule_wins = [sum(total_wins_df[team]) for team in rank_df['Team']]
-# Create the final DataFrame
-lpi_df = pd.DataFrame({
-    'Teams': rank_df['Team'],
-    'Louie Power Index (LPI)': team_wins - schedule_wins,
-    'Record': rank_df['Record'],
-    'Change From Last Week': 0,
-})
-# print()
-lpi_df = lpi_df.sort_values(by=['Louie Power Index (LPI)'], ascending=[False])
-lpi_df.reset_index(drop=True, inplace=True)
-lpi_df.index = lpi_df.index + 1 
-print(lpi_df)
-
+def lpi(rank_df, team_wins, total_wins_df):
+  schedule_wins = [sum(total_wins_df[team]) for team in rank_df['Team']]
+  # Create the final DataFrame
+  lpi_df = pd.DataFrame({
+      'Teams': rank_df['Team'],
+      'Louie Power Index (LPI)': team_wins - schedule_wins,
+      'Record': rank_df['Record'],
+      'Change From Last Week': 0,
+  })
+  # print()
+  lpi_df = lpi_df.sort_values(by=['Louie Power Index (LPI)'], ascending=[False])
+  lpi_df.reset_index(drop=True, inplace=True)
+  lpi_df.index = lpi_df.index + 1 
+  print(lpi_df)
+  return lpi_df
+lpi_df = lpi(rank_df, team_wins, total_wins_df)
 
 schedule_rank_df = schedule_rank_df.sort_values(by=['Wins Against Schedule'], ascending=[True])
 schedule_rank_df.reset_index(drop=True, inplace=True)

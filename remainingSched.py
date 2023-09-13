@@ -21,7 +21,7 @@ league = League(league_id=310334683, year=2022, espn_s2='AEC3jc8inPISUEojfHvhzvO
 settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
-file = leagueName + "PLAYOFFS.xlsx"
+file = leagueName + " 2022.xlsx"
 
 df = pd.read_excel(file, sheet_name="Expected Wins")
 df = df.iloc[:, 1:]

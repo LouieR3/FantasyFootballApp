@@ -1,0 +1,5 @@
+* Owner next to LPI
+* See stats based on owner
+* Adjust LPI to league size
+* Use LPI and future schedule to predict record and do power ranking
+* Use LPI and scores/standard deviation to predict winner next week
