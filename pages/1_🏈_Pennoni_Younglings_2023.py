@@ -73,6 +73,6 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
-    st.dataframe(df3, height=480)
+    st.dataframe(df3, height=460)
 
 app()
