@@ -35,22 +35,22 @@ def app():
                             else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) 
                             else "" for i in x], axis = 1, subset=names)
     # Custom function to apply styling based on wins
-    def style_wins(val):
-        wins = int(val.split(' ')[0])  # Extract wins as an integer
-        if wins >= top10:  # Top 10% (10 wins out of 10 weeks)
-            return 'background-color: gold'
-        elif wins >= top25:  # Top 25% (8 or 9 wins out of 10 weeks)
-            return 'background-color: goldenrod'
-        elif wins <= bot25:  # Bottom 25% (0 to 2 wins out of 10 weeks)
-            return 'background-color: tomato; color: white'
-        elif wins <= bot10:  # Bottom 10% (0 to 1 wins out of 10 weeks)
-            return 'background-color: red; color: white'
-        else:  # Any other case
-            return 'background-color: white'
+    # def style_wins(val):
+    #     wins = int(val.split(' ')[0])  # Extract wins as an integer
+    #     if wins >= top10:  # Top 10% (10 wins out of 10 weeks)
+    #         return 'background-color: gold'
+    #     elif wins >= top25:  # Top 25% (8 or 9 wins out of 10 weeks)
+    #         return 'background-color: goldenrod'
+    #     elif wins <= bot25:  # Bottom 25% (0 to 2 wins out of 10 weeks)
+    #         return 'background-color: tomato; color: white'
+    #     elif wins <= bot10:  # Bottom 10% (0 to 1 wins out of 10 weeks)
+    #         return 'background-color: red; color: white'
+    #     else:  # Any other case
+    #         return 'background-color: white'
 
-    # Apply the custom styling function to the 'Wins' column
-    styled_df = df.style.applymap(style_wins, subset=['Wins'])
-    st.dataframe(styled_df, width=2000)
+    # # Apply the custom styling function to the 'Wins' column
+    # styled_df = df.style.applymap(style_wins, subset=['Wins'])
+    st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
     st.caption("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
