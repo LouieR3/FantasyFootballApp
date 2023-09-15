@@ -135,6 +135,81 @@ for team in team_names:
     # Update the total wins DataFrame
     total_wins_df.at[team, opp] = wins
 
+
+# Initialize an empty DataFrame to store LPI scores for each week
+lpi_weekly_df = pd.DataFrame(columns=team_names)
+
+# Iterate through each week
+for week in range(1, current_week):
+    # Initialize a DataFrame to store total wins for each team against all schedules for this week
+    total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
+
+    # Iterate through teams (similar to your previous code)
+    for team in team_names:
+        team_scores = []  # Replace with actual scores
+        opp_scores = []   # Replace with actual scores
+
+        wins = 0
+        losses = 0
+        ties = 0
+
+        # Get opponent schedule
+        opp_schedule = schedules_df.loc[opp].tolist()
+        
+        # Get opponent scores
+        opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
+        if team == opp:
+          # Get team's opponent this week 
+          opp_team = schedules_df.loc[team, i]
+          
+          # Get team and opponent score
+          team_score = scores_df.loc[team, i]
+          opp_score = scores_df.loc[opp_team, i]
+
+          if team_score > opp_score:
+            wins += 1
+          elif team_score < opp_score:
+            losses += 1
+          else:
+            ties += 1
+
+        else:
+          # Check if opponent is the same 
+          if opp == schedules_df.loc[team, i]:
+            # Opponent is the same, get correct scores
+            team_score = scores_df.loc[team, i]
+            opp_score = scores_df.loc[schedules_df.loc[team, i], i]
+
+          else:  
+            # Opponent is different
+            opp_schedule = schedules_df.loc[opp].tolist()
+            opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
+            team_score = team_scores[i]
+            opp_score = opp_scores[i]
+
+          # Compare scores
+          if team_score > opp_score:
+            wins += 1
+          elif team_score < opp_score:
+            losses += 1
+          else:
+            ties += 1
+
+        # Update the total wins DataFrame for this week
+        total_wins_weekly_df.at[team, :] = wins  # Set wins for all opponents
+
+    # Calculate LPI scores for this week
+    team_wins = total_wins_weekly_df.sum(axis=1)
+    schedule_wins = [sum(total_wins_weekly_df[team]) for team in team_names]
+    num_teams_in_league = len(team_names)
+    lpi_scores = ((team_wins - schedule_wins) * (12 / num_teams_in_league)).round().astype(int)
+
+    # Add LPI scores for this week to the weekly DataFrame
+    lpi_weekly_df[week] = lpi_scores
+
+# Display the DataFrame with LPI scores for each week
+print(lpi_weekly_df)
+
 # print(records_df)
 # Calculate the total wins for each team
 team_wins = total_wins_df.sum(axis=1)

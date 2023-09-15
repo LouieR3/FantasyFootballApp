@@ -7,7 +7,7 @@ def app():
     league = "Pennoni Younglings 2023"
     st.title("🏈 " + league)
     st.header('Schedule Comparisson')
-    st.caption('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
+    st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
     # league = "EBCLeague"
     # league = "FamilyLeague"
     file = league + ".xlsx"
@@ -40,7 +40,7 @@ def app():
     st.dataframe(df2, height=460, width=2000)
 
     st.header('Strength of Schedule')
-    st.caption("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
+    st.write("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
     df = pd.read_excel(file, sheet_name="Wins Against Schedule")
     df = df.iloc[: , 1:]
     df.index += 1
@@ -48,8 +48,8 @@ def app():
     st.dataframe(df3, height=460)
 
     st.header('Expected Wins')
-    st.caption('The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule.')
-    st.caption('Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules.')
+    st.write('The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule.')
+    st.write('Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules.')
     df = pd.read_excel(file, sheet_name="Expected Wins")
     df = df.iloc[: , 1:]
     df.index += 1
@@ -57,7 +57,7 @@ def app():
     st.dataframe(df3, height=460)
 
     st.header('*NEW* Playoff Odds')
-    st.caption("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
+    st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     df = pd.read_excel(file, sheet_name="Playoff Odds")
     df = df.set_index("Teams")
     # df = df.iloc[: , 1:]

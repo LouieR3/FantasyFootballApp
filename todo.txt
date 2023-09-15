@@ -2,3 +2,7 @@
 * See stats based on owner
 * Use LPI and future schedule to predict record and do power ranking
 * Use LPI and scores/standard deviation to predict winner next week
+* Figure out how to calculate last week score
+* LPI by the week
+* LPI normalized for the week
+* ELO rating
