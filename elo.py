@@ -13,12 +13,12 @@ import numpy as np
 start_time = time.time()
 
 # Pennoni Younglings
-# league = League(league_id=310334683, year=2023, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=310334683, year=2023, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 # league = League(league_id=310334683, year=2022, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # Family League
 # league = League(league_id=1725372613, year=2023, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
-league = League(league_id=1725372613, year=2022, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+# league = League(league_id=1725372613, year=2022, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # EBC League
 # league = League(league_id=1118513122, year=2023, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
@@ -184,4 +184,63 @@ print("Normalized Ratings for 8-Team League:", elo_ratings_scores)
 # print("Normalized Ratings for 8-Team League:", normalized_ratings_8_teams)
 # print("Normalized Ratings for 10-Team League:", normalized_ratings_10_teams)
 # print("Normalized Ratings for 12-Team League:", normalized_ratings_12_teams)
+
+# Initialize a dictionary to store Elo changes for each team
+elo_changes = {team: [] for team in team_names}
+
+# Iterate through teams
+for team in team_names:
+    # Get team scores and Elo rating
+    team_scores = scores_df.loc[team].tolist()
+    team_elo = elo_ratings[team]
+
+    # Initialize Elo change for the current week
+    elo_change_this_week = 0
+
+    # Iterate through opponents
+    for week in range(current_week):
+        # Get opponent schedule
+        opp_schedule = schedules_df.loc[team].tolist()
+        # Get opponent scores
+        opp_scores = [scores_df.loc[o][week] for o in opp_schedule]
+
+        if team == opp_schedule[week]:
+            # Get team's opponent this week
+            opp_team = schedules_df.loc[team, week]
+            # Get team and opponent score
+            team_score = scores_df.loc[team, week]
+            opp_score = scores_df.loc[opp_team, week]
+            if team_score > opp_score:
+                wins += 1
+                elo_change_this_week += k_factor
+            elif team_score < opp_score:
+                losses += 1
+                elo_change_this_week -= k_factor
+            else:
+                ties += 1
+        else:
+            opp_score = opp_scores[week]
+            team_score = team_scores[week]
+            # Compare scores
+            if team_score > opp_score:
+                wins += 1
+                elo_change_this_week += k_factor
+            elif team_score < opp_score:
+                losses += 1
+                elo_change_this_week -= k_factor
+            else:
+                ties += 1
+
+        # Record Elo change for this week
+        elo_changes[team].append(elo_change_this_week)
+
+
+# Print Elo changes along with other information
+print("Ranked Teams by Elo Ratings:")
+elo_ratings_scores = []
+for rank, team in enumerate(ranked_teams, start=1):
+    elo_change = elo_changes[team][current_week - 1] if current_week > 0 else 0
+    elo_ratings_scores.append(elo_ratings[team])
+    print(f"Rank {rank}: {team} | Elo Rating: {round(elo_ratings[team])} | {records_df.at[team, team]} | Elo Change: {elo_change}")
+
 print("--- %s seconds ---" % (time.time() - start_time))

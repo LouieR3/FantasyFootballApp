@@ -70,5 +70,5 @@ def percent(file):
     percentList.append(bot10)
 
     return percentList
-file = "EBC League 2021.xlsx"
-percent(file)
+# file = "EBC League 2021.xlsx"
+# percent(file)

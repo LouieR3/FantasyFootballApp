@@ -11,7 +11,7 @@ from copy import deepcopy
 start_time = time.time()
 
 # Pennoni Younglings
-league = League(league_id=310334683, year=2022, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',
+league = League(league_id=310334683, year=2023, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',
                 swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 team_names = [team.team_name for team in league.teams]
@@ -26,8 +26,8 @@ team_scores = [team.scores for team in league.teams]
 # print(len(team_scores[0]))
 # print()
 team_totals = [team.points_for for team in league.teams]
-# print(team_totals)
-# print()
+print(team_totals)
+print()
 
 schedules = [team.schedule for team in league.teams]
 
@@ -57,9 +57,10 @@ for i in range(len(team_names)):
     std_dev = standard_deviation([total_points] * num_weeks_played) * std_dev_factor
     
     team_data[team_name] = {'average_score': average_score, 'std_dev': std_dev}
-# print(team_data)
+print(team_data)
 # Initialize a dictionary to store the results
 results = {team: [0] * (len(team_names) + 1) for team in team_data}
+# print(results)
 
 # Number of simulations to run
 num_simulations = 10000
