@@ -18,7 +18,6 @@ def app():
         "Lockett inma pockett": "CHUBBER",
         "Wallingford  Wild Hormones": "Waverly  Wild Hormones",
     })
-    
     df = df.rename(columns={
         'Sweet Dee’Fence': "Ball Too Well (Diana's Version)",
         'Villanova Uncle NUTZ': 'Deez Uncle NUTZ',
@@ -55,6 +54,13 @@ def app():
     st.header('Strength of Schedule')
     st.write("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
     df = pd.read_excel(file, sheet_name="Wins Against Schedule")
+    df['Teams'] = df['Teams'].replace({
+        'Sweet Dee’Fence': "Ball Too Well (Diana's Version)",
+        'Villanova Uncle NUTZ': 'Deez Uncle NUTZ',
+        "Kuppcakes  .": "The Adams Family",
+        "Lockett inma pockett": "CHUBBER",
+        "Wallingford  Wild Hormones": "Waverly  Wild Hormones",
+    })
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Wins Against Schedule'])
@@ -64,6 +70,13 @@ def app():
     st.write('The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule.')
     st.write('Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules.')
     df = pd.read_excel(file, sheet_name="Expected Wins")
+    df['Teams'] = df['Teams'].replace({
+        'Sweet Dee’Fence': "Ball Too Well (Diana's Version)",
+        'Villanova Uncle NUTZ': 'Deez Uncle NUTZ',
+        "Kuppcakes  .": "The Adams Family",
+        "Lockett inma pockett": "CHUBBER",
+        "Wallingford  Wild Hormones": "Waverly  Wild Hormones",
+    })
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Expected Wins'])
@@ -72,6 +85,13 @@ def app():
     st.header('*NEW* Playoff Odds')
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     df = pd.read_excel(file, sheet_name="Playoff Odds")
+    df['Teams'] = df['Teams'].replace({
+        'Sweet Dee’Fence': "Ball Too Well (Diana's Version)",
+        'Villanova Uncle NUTZ': 'Deez Uncle NUTZ',
+        "Kuppcakes  .": "The Adams Family",
+        "Lockett inma pockett": "CHUBBER",
+        "Wallingford  Wild Hormones": "Waverly  Wild Hormones",
+    })
     df = df.set_index("Teams")
     # df = df.iloc[: , 1:]
     # df.index += 1
@@ -83,6 +103,13 @@ def app():
     st.write('Positive scores indicate winning against tough schedules. Negative scores mean losing with an easy schedule. Higher scores are better. Scores near zero are neutral.')
     st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
     df = pd.read_excel(file, sheet_name="Louie Power Index")
+    df['Teams'] = df['Teams'].replace({
+        'Sweet Dee’Fence': "Ball Too Well (Diana's Version)",
+        'Villanova Uncle NUTZ': 'Deez Uncle NUTZ',
+        "Kuppcakes  .": "The Adams Family",
+        "Lockett inma pockett": "CHUBBER",
+        "Wallingford  Wild Hormones": "Waverly  Wild Hormones",
+    })
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
