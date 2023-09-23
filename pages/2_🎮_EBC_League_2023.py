@@ -12,6 +12,11 @@ def app():
     # league = "PennoniYounglings"
     file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
+    df['Teams'] = df['Teams'].replace({
+        'Champagne  Papi': 'THE POOL',
+        'Seigaku FC': 'Inter Miami CF',
+        "Pitman MaleManipulator": "Bryson Stott Fan Club"
+    })
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df = df.set_index("Teams")
     pd.options.mode.chained_assignment = None

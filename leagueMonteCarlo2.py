@@ -59,14 +59,23 @@ team_data = {}
 for i in range(len(team_names)):
     team_name = team_names[i]
     total_points = team_totals[i]
+    team_score = team_scores[i]
     num_weeks_played = 14  # Assuming 14 weeks in the regular season
+    # print(team_score)
+    
+    non_zero_values = []
+    for score in team_score:
+        if score != 0.0:
+            non_zero_values.append(score)
+        else:
+            break
     
     # Calculate the average score (total points divided by weeks played)
     average_score = total_points / current_week
     
     # Calculate the standard deviation using the standard_deviation function
-    std_dev_factor = 0.2  # Adjust this value based on your league's characteristics
-    std_dev = standard_deviation([total_points] * num_weeks_played) * std_dev_factor
+    std_dev_factor = 0.4  # Adjust this value based on your league's characteristics
+    std_dev = standard_deviation(non_zero_values) * std_dev_factor
     
     team_data[team_name] = {'average_score': average_score, 'std_dev': std_dev}
 print(team_data)
@@ -93,6 +102,8 @@ for _ in range(num_simulations):
             results[team][rank + 1] += 1
         else:
             results[team][current_week] += 1
+print()
+print(results)
 
 # Calculate the odds of each team finishing in each position
 odds = {}
