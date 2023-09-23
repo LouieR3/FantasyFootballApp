@@ -17,6 +17,12 @@ def app():
         'Seigaku FC': 'Inter Miami CF',
         "Pitman MaleManipulator": "Bryson Stott Fan Club"
     })
+    
+    df = df.rename(columns={
+        'Champagne  Papi': 'THE POOL',
+        'Seigaku FC': 'Inter Miami CF',
+        "Pitman MaleManipulator": "Bryson Stott Fan Club"
+    })
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df = df.set_index("Teams")
     pd.options.mode.chained_assignment = None

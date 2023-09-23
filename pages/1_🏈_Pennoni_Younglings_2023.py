@@ -19,6 +19,12 @@ def app():
         "Rizzo's Crash Test Dummy": "Prahlad's Ghost",
         "Girth Brooks": "Bli Erinker"
     })
+    df = df.rename(columns={
+        'PAI Athletic Director': 'PAI India Division Manager',
+        'Team Corner Office': 'Pennoni Adjacent',
+        "Rizzo's Crash Test Dummy": "Prahlad's Ghost",
+        "Girth Brooks": "Bli Erinker"
+    })
     df = df.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []

@@ -18,6 +18,14 @@ def app():
         "Lockett inma pockett": "CHUBBER",
         "Wallingford  Wild Hormones": "Waverly  Wild Hormones",
     })
+    
+    df = df.rename(columns={
+        'Sweet Dee’Fence': "Ball Too Well (Diana's Version)",
+        'Villanova Uncle NUTZ': 'Deez Uncle NUTZ',
+        "Kuppcakes  .": "The Adams Family",
+        "Lockett inma pockett": "CHUBBER",
+        "Wallingford  Wild Hormones": "Waverly  Wild Hormones",
+    })
     df = df.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
