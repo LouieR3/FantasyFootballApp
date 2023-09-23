@@ -70,7 +70,7 @@ def app():
     st.write('The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule.')
     st.write('Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules.')
     df = pd.read_excel(file, sheet_name="Expected Wins")
-    df['Teams'] = df['Teams'].replace({
+    df['Team'] = df['Team'].replace({
         'Sweet Dee’Fence': "Ball Too Well (Diana's Version)",
         'Villanova Uncle NUTZ': 'Deez Uncle NUTZ',
         "Kuppcakes  .": "The Adams Family",

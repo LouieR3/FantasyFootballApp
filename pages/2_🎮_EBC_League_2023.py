@@ -68,7 +68,7 @@ def app():
     st.write('The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule.')
     st.write('Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules.')
     df = pd.read_excel(file, sheet_name="Expected Wins")
-    df['Teams'] = df['Teams'].replace({
+    df['Team'] = df['Team'].replace({
         'Champagne  Papi': 'THE POOL',
         'Seigaku FC': 'Inter Miami CF',
         "Pitman MaleManipulator": "Bryson Stott Fan Club"
@@ -81,7 +81,7 @@ def app():
     st.header('*NEW* Playoff Odds')
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     df = pd.read_excel(file, sheet_name="Playoff Odds")
-    df['Team'] = df['Team'].replace({
+    df['Teams'] = df['Teams'].replace({
         'Champagne  Papi': 'THE POOL',
         'Seigaku FC': 'Inter Miami CF',
         "Pitman MaleManipulator": "Bryson Stott Fan Club"
