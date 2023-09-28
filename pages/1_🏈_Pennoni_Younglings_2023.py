@@ -3,6 +3,7 @@ def app():
     from operator import itemgetter
     import streamlit as st
     from calcPercent import percent
+    from playoffNum import playoff_num
 
     league = "Pennoni Younglings 2023"
     st.title("🏈 " + league)
@@ -100,10 +101,13 @@ def app():
         "Girth Brooks": "Bli Erinker"
     })
     df = df.set_index("Teams")
+    playoff_number = playoff_num(file)
+    styled_df = df.style.apply(lambda row: ['background: lightgray' if cell < playoff_number else '' for cell in row], axis=1)
+
     # df = df.iloc[: , 1:]
     # df.index += 1
     # df3 = df.style.background_gradient(subset=['Expected Wins'])
-    st.dataframe(df, height=460)
+    st.dataframe(styled_df, height=460)
 
     st.header('The Louie Power Index (LPI)')
     st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
