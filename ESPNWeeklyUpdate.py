@@ -9,6 +9,7 @@ from itertools import combinations
 import itertools
 import math
 import numpy as np
+import random
 
 start_time = time.time()
 
@@ -59,7 +60,7 @@ team_names = [team.team_name for team in league.teams]
 #               for team_name in team_names]
 #    print(team_names)
 
-team_scores = [team.scores for team in league.teams] 
+team_scores_x = [team.scores for team in league.teams] 
 schedules = []
 for team in league.teams:
   schedule = [opponent.team_name for opponent in team.schedule]
@@ -81,7 +82,7 @@ elif current_week != settings.reg_season_count:
 # print(current_week)
 
 # Store data in DataFrames 
-scores_df = pd.DataFrame(team_scores, index=team_names)
+scores_df = pd.DataFrame(team_scores_x, index=team_names)
 schedules_df = pd.DataFrame(schedules, index=team_names)
 
 # Create empty dataframe  
@@ -288,14 +289,16 @@ def lpi(rank_df, team_wins, total_wins_df, dfLastWeek):
       this_week_lpi = lpi.loc[team]
       last_week_lpi = last_week.loc[last_week.index == team].item()
       
-      change = this_week_lpi - last_week_lpi
+      # change = this_week_lpi - last_week_lpi
       
-      if change > 0:
-          change_strings.append(f'↑{change}')
-      elif change < 0:
-          change_strings.append(f'↓{abs(change)}')
-      else:
-          change_strings.append(str(change))
+      # if change > 0:
+      #     change_strings.append(f'↑{change}')
+      # elif change < 0:
+      #     change_strings.append(f'↓{abs(change)}')
+      # else:
+      #     change_strings.append(str(change))
+
+      change_strings.append(str(last_week_lpi))
   lpi_df = pd.DataFrame({
       'Teams': rank_df['Team'],
       # "Owner": team_owners,
@@ -326,98 +329,120 @@ rank_df.index = rank_df.index + 1
 # print(rank_df)
 
 def oddsCalculator():
-  team_scores = [team.scores for team in league.teams] 
+  team_totals = [team.points_for for team in league.teams]
+  reg_season = settings.reg_season_count
   def standard_deviation(values):
-      avg = sum(values) / len(values)
-      square_diffs = [(value - avg) ** 2 for value in values]
-      avg_square_diff = sum(square_diffs) / len(values)
-      return math.sqrt(avg_square_diff)
+    avg = sum(values) / len(values)
+    square_diffs = [(value - avg) ** 2 for value in values]
+    avg_square_diff = sum(square_diffs) / len(values)
+    return math.sqrt(avg_square_diff)
 
   # Initialize a dictionary to store the results
   team_data = {}
-  team_totals = [team.points_for for team in league.teams]
+
+  # Define a function to calculate the dynamic std_dev_factor based on the current week
+  def calculate_dynamic_std_dev_factor(current_week, total_weeks, initial_std_dev_factor, min_std_dev_factor):
+      # Calculate a factor that decreases as the season progresses
+      week_factor = current_week / total_weeks
+      # Use the factor to interpolate between initial and minimum std_dev_factors
+      dynamic_std_dev_factor = initial_std_dev_factor - (initial_std_dev_factor - min_std_dev_factor) * week_factor
+      return dynamic_std_dev_factor
+
+  # Set initial and maximum std_dev_factors
+  initial_std_dev_factor = 1  # Initial factor for week 1
+  min_std_dev_factor  = 0.5  # Maximum factor for later weeks
+
+  # Calculate the dynamic std_dev_factor for the current week
+  dynamic_std_dev_factor = calculate_dynamic_std_dev_factor(current_week, reg_season, initial_std_dev_factor, min_std_dev_factor)
+  print(dynamic_std_dev_factor)
 
   # Calculate average score and standard deviation based on team totals
   for i in range(len(team_names)):
       team_name = team_names[i]
       total_points = team_totals[i]
-      num_weeks_played = 14  # Assuming 14 weeks in the regular season
+      team_score_x = team_scores_x[i]
+      
+      non_zero_values = []
+      for score in team_score_x:
+          if score != 0.0:
+              non_zero_values.append(score)
+          else:
+              break
       
       # Calculate the average score (total points divided by weeks played)
-      average_score = total_points / len(team_scores[0])
+      average_score = total_points / current_week
       
       # Calculate the standard deviation using the standard_deviation function
-      std_dev_factor = 0.2  # Adjust this value based on your league's characteristics
-      std_dev = standard_deviation([total_points] * num_weeks_played) * std_dev_factor
+      std_dev = standard_deviation(non_zero_values) * dynamic_std_dev_factor
       
       team_data[team_name] = {'average_score': average_score, 'std_dev': std_dev}
-  # print(team_data)
-  # Initialize a dictionary to store the results
-  results = {team: [0] * (len(team_names) + 1) for team in team_data}
 
-  # Number of simulations to run
+  # Define the number of Monte Carlo simulations
   num_simulations = 10000
+  # Function to simulate a season
+  def simulate_season(team_data, schedules_df):
+      standings = {team: 0 for team in team_data}
+      # Simulate each week's matchups
+      for week in range(schedules_df.shape[1]):
+          week_schedule = schedules_df[week].to_list()
+          random.shuffle(week_schedule)
+          # Simulate each matchup
+          for i in range(0, len(week_schedule), 2):
+              team1 = week_schedule[i]
+              team2 = week_schedule[i + 1]
+              # Generate random scores based on team data
+              score1 = random.gauss(team_data[team1]['average_score'], team_data[team1]['std_dev'])
+              score2 = random.gauss(team_data[team2]['average_score'], team_data[team2]['std_dev'])
+              if score1 > score2:
+                  standings[team1] += 2
+              elif score1 < score2:
+                  standings[team2] += 2
+              else:
+                  standings[team1] += 1
+                  standings[team2] += 1
+
+      # Sort the standings by both total points and average score
+      sorted_standings = sorted(standings.items(), key=lambda x: (-x[1], team_data[x[0]]['average_score']), reverse=True)
+      return [team for team, _ in sorted_standings]
+
+  # Dictionary to store the final standings for each simulation
+  final_standings = {team: [0] * len(team_data) for team in team_data}
+
   # Run Monte Carlo simulations
   for _ in range(num_simulations):
-      # Simulate scores for each team based on normal distribution
-      team_scores = {
-          team: np.random.normal(data['average_score'], data['std_dev'])
-          for team, data in team_data.items()
-      }
-      
-      # Sort teams by their simulated scores
-      sorted_teams = sorted(team_scores.keys(), key=lambda x: team_scores[x], reverse=True)
-      
-      # Assign rankings to teams
-      for rank, team in enumerate(sorted_teams):
-          results[team][rank + 1] += 1
+      simulated_season = simulate_season(team_data, schedules_df)
+      for i, team in enumerate(simulated_season):
+          final_standings[team][i] += 1
 
-  # Calculate the odds of each team finishing in each position
-  odds = {}
-  for team, rank_counts in results.items():
-      total_simulations = sum(rank_counts)
-      odds[team] = [(count / total_simulations) * 100 for count in rank_counts]
+  for team in final_standings:
+      final_standings[team] = final_standings[team][::-1]
+  # Calculate the percentage chance for each position
+  position_chances = {i + 1: {} for i in range(len(team_data))}
+  for position in range(1, len(team_data) + 1):
+      for team in team_data:
+          team_index = list(team_data.keys()).index(team)
+          count = final_standings[team][position - 1]
+          position_chances[position][team] = (count / num_simulations) * 100
 
-  # # Print the odds for each team in each position
-  # for team, team_odds in odds.items():
-  #     print(f"Team: {team}")
-  #     for rank, odds_percentage in enumerate(team_odds[1:], start=1):
-  #         print(f"   Finish in Position {rank}: {odds_percentage:.2f}%")
   # Create a DataFrame
-  odds_df = pd.DataFrame(odds).T
-
+  position_chances_df = pd.DataFrame(position_chances)
   # Add a column for the team names (optional)
-  odds_df.index.name = 'Teams'
-
-  odds_df = odds_df.iloc[:, 1:]
+  position_chances_df.index.name = 'Team'
   # Determine the maximum number of positions
-  max_positions = max(len(odds_df.columns), max([len(team_odds) for team_odds in odds.values()]))
-
-  # Fill missing positions with 0
-  for team_odds in odds_df.columns:
-      odds_df[team_odds] = odds_df[team_odds].fillna(0)
-
+  max_positions = len(position_chances_df.columns)
   # Rename the columns to represent the positions a team can finish
-  odds_df.columns = [f'Place {i}' for i in range(1, max_positions)]
-
-  # Display the DataFrame
-  # print(odds_df)
-  # Get number of playoff teams 
-  num_playoff_teams = settings.playoff_team_count  
-
-  # Add new column 
-  odds_df['Chance of making playoffs'] = 0
-
+  position_chances_df.columns = [f'Place {i}' for i in range(1, max_positions + 1)]
+  # Add a new column for the chance of making playoffs
+  num_playoff_teams = settings.playoff_team_count
+  position_chances_df['Chance of making playoffs'] = 0
   # Sum the top # of finish places based on playoff teams
-  for i, row in odds_df.iterrows():
-      odds_df.at[i, 'Chance of making playoffs'] = row[:num_playoff_teams].sum()
-
-  # Sort by 'Chance of making playoffs' column
-  # sort_cols = ['Place 1', 'Place 2', 'Place 3', 'Place 4', 'Place 5', 'Place 6', 'Place 7', 'Place 8', 'Place 9', 'Place 10', 'Place 11', 'Place 12', 'Chance of making playoffs']
-  sort_cols = ['Place 1', 'Place 2', 'Place 3', 'Place 4', 'Place 5', 'Place 6', 'Place 7', 'Place 8', 'Chance of making playoffs']
-
-  odds_df = odds_df.sort_values(by=sort_cols, ascending=False)
-  return odds_df
+  for team in position_chances_df.index:
+      top_finishes = position_chances_df.iloc[position_chances_df.index.get_loc(team), :num_playoff_teams]
+      position_chances_df.at[team, 'Chance of making playoffs'] = top_finishes.sum()
+  # Sort the DataFrame by 'Chance of making playoffs' column
+  sort_cols = [f'Place {i}' for i in range(1, max_positions + 1)] + ['Chance of making playoffs']
+  position_chances_df = position_chances_df.sort_values(by=sort_cols, ascending=False)
+  return position_chances_df
 
 odds_df = oddsCalculator()
 # print(odds_df)
