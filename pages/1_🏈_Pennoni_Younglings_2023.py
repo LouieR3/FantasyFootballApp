@@ -102,12 +102,19 @@ def app():
     })
     df = df.set_index("Teams")
     playoff_number = playoff_num(file)
-    styled_df = df.style.apply(lambda row: ['background: lightgray' if cell < playoff_number else '' for cell in row], axis=1)
+    # styled_df = df.style.apply(lambda row: ['background: lightgray' if cell < playoff_number else '' for cell in row], axis=1)
+    # Function to format and round the values
+    def format_and_round(cell):
+        if isinstance(cell, (int, float)):
+            return f"{cell:.2f}"
+        return cell
 
+    # Apply the formatting function to the entire DataFrame
+    formatted_df = df.applymap(format_and_round)
     # df = df.iloc[: , 1:]
     # df.index += 1
     # df3 = df.style.background_gradient(subset=['Expected Wins'])
-    st.dataframe(styled_df, height=460)
+    st.dataframe(formatted_df, height=460)
 
     st.header('The Louie Power Index (LPI)')
     st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
