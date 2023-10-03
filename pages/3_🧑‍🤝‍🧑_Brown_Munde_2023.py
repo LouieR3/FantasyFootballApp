@@ -79,6 +79,7 @@ def app():
 
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
+    df = df.set_index("Teams")
     # df = df.iloc[: , 1:]
     # df.index += 1
     st.dataframe(df)
