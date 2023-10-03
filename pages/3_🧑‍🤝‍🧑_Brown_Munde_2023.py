@@ -73,6 +73,12 @@ def app():
     # df3 = df.style.background_gradient(subset=['Expected Wins'])
     st.dataframe(styled_df)
 
+    st.header('Louie Power Index Each Week')
+    df = pd.read_excel(file, sheet_name="LPI By Week")
+    df = df.iloc[: , 1:]
+    df.index += 1
+    st.dataframe(df)
+
     st.header('The Louie Power Index (LPI)')
     st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
     st.write('Positive scores indicate winning against tough schedules. Negative scores mean losing with an easy schedule. Higher scores are better. Scores near zero are neutral.')

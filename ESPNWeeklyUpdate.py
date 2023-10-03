@@ -252,11 +252,10 @@ schedule_rank_df.reset_index(drop=True, inplace=True)
 schedule_rank_df.index = schedule_rank_df.index + 1 
 # print(schedule_rank_df)
 
-
 # Sort the DataFrame by total wins and difference
 rank_df = rank_df.sort_values(by=['Expected Wins', 'Difference'], ascending=[False, True])
 rank_df.reset_index(drop=True, inplace=True)
-rank_df.index = rank_df.index + 1 
+rank_df.index = rank_df.index + 1
 # Print the sorted rank DataFrame
 # print(rank_df)
 
