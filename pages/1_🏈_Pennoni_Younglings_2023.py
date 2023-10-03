@@ -127,6 +127,7 @@ def app():
         "Rizzo's Crash Test Dummy": "Prahlad's Ghost",
         "Girth Brooks": "Bli Erinker"
     })
+    df = df.set_index("Teams")
     df = df.iloc[: , 1:]
     df.index += 1
     st.dataframe(df, height=460)

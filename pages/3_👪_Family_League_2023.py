@@ -132,6 +132,7 @@ def app():
         "Lockett inma pockett": "CHUBBER",
         "Wallingford  Wild Hormones": "Waverly  Wild Hormones",
     })
+    df = df.set_index("Teams")
     df = df.iloc[: , 1:]
     df.index += 1
     # df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
