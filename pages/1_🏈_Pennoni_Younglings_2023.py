@@ -128,8 +128,8 @@ def app():
         "Girth Brooks": "Bli Erinker"
     })
     df = df.set_index("Teams")
-    df = df.iloc[: , 1:]
-    df.index += 1
+    # df = df.iloc[: , 1:]
+    # df.index += 1
     st.dataframe(df, height=460)
 
     st.header('The Louie Power Index (LPI)')

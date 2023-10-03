@@ -125,8 +125,8 @@ def app():
         "Pitman MaleManipulator": "Bryson Stott Fan Club"
     })
     df = df.set_index("Teams")
-    df = df.iloc[: , 1:]
-    df.index += 1
+    # df = df.iloc[: , 1:]
+    # df.index += 1
     st.dataframe(df)
 
     st.header('The Louie Power Index (LPI)')

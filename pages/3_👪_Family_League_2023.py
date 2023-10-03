@@ -133,8 +133,8 @@ def app():
         "Wallingford  Wild Hormones": "Waverly  Wild Hormones",
     })
     df = df.set_index("Teams")
-    df = df.iloc[: , 1:]
-    df.index += 1
+    # df = df.iloc[: , 1:]
+    # df.index += 1
     # df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
     st.dataframe(df, height=460)
 
