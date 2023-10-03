@@ -44,7 +44,7 @@ def app():
     df = pd.read_excel(file, sheet_name="Wins Against Schedule")
     df = df.iloc[: , 1:]
     df.index += 1
-    df3 = df.style.background_gradient(subset=['Avg Wins Against Schedule'])
+    df3 = df.style.background_gradient(subset=['Wins Against Schedule'])
     st.dataframe(df3, height=460)
 
     st.header('Expected Wins')
