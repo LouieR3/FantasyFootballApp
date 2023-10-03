@@ -27,11 +27,15 @@ start_time = time.time()
 # league = League(league_id=1118513122, year=2021, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # Pennoni Transportation
-# league = League(league_id=1339704102, year=2023, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
+league = League(league_id=1339704102, year=2023, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 # league = League(league_id=1339704102, year=2022, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 # Prahlad Friends League
-league = League(league_id=1781851, year=2022, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
+# league = League(league_id=1781851, year=2023, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
+# league = League(league_id=1781851, year=2022, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
+
+# Prahlad Other Friends League
+# league = League(league_id=367134149, year=2023, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 settings = league.settings
 playoff_num = settings.playoff_team_count
@@ -157,81 +161,6 @@ for team in team_names:
     # Update the total wins DataFrame
     total_wins_df.at[team, opp] = wins
 
-
-# Initialize an empty DataFrame to store LPI scores for each week
-# lpi_weekly_df = pd.DataFrame(columns=team_names)
-
-# # Iterate through each week
-# for week in range(1, current_week):
-#     # Initialize a DataFrame to store total wins for each team against all schedules for this week
-#     total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
-
-#     # Iterate through teams (similar to your previous code)
-#     for team in team_names:
-#         team_scores = []  # Replace with actual scores
-#         opp_scores = []   # Replace with actual scores
-
-#         wins = 0
-#         losses = 0
-#         ties = 0
-
-#         # Get opponent schedule
-#         opp_schedule = schedules_df.loc[opp].tolist()
-        
-#         # Get opponent scores
-#         opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
-#         if team == opp:
-#           # Get team's opponent this week 
-#           opp_team = schedules_df.loc[team, i]
-          
-#           # Get team and opponent score
-#           team_score = scores_df.loc[team, i]
-#           opp_score = scores_df.loc[opp_team, i]
-
-#           if team_score > opp_score:
-#             wins += 1
-#           elif team_score < opp_score:
-#             losses += 1
-#           else:
-#             ties += 1
-
-#         else:
-#           # Check if opponent is the same 
-#           if opp == schedules_df.loc[team, i]:
-#             # Opponent is the same, get correct scores
-#             team_score = scores_df.loc[team, i]
-#             opp_score = scores_df.loc[schedules_df.loc[team, i], i]
-
-#           else:  
-#             # Opponent is different
-#             opp_schedule = schedules_df.loc[opp].tolist()
-#             opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
-#             team_score = team_scores[i]
-#             opp_score = opp_scores[i]
-
-#           # Compare scores
-#           if team_score > opp_score:
-#             wins += 1
-#           elif team_score < opp_score:
-#             losses += 1
-#           else:
-#             ties += 1
-
-#         # Update the total wins DataFrame for this week
-#         total_wins_weekly_df.at[team, :] = wins  # Set wins for all opponents
-
-#     # Calculate LPI scores for this week
-#     team_wins = total_wins_weekly_df.sum(axis=1)
-#     schedule_wins = [sum(total_wins_weekly_df[team]) for team in team_names]
-#     num_teams_in_league = len(team_names)
-#     lpi_scores = ((team_wins - schedule_wins) * (12 / num_teams_in_league)).round().astype(int)
-
-#     # Add LPI scores for this week to the weekly DataFrame
-#     lpi_weekly_df[week] = lpi_scores
-
-# # Display the DataFrame with LPI scores for each week
-# print(lpi_weekly_df)
-
 # print(records_df)
 # Calculate the total wins for each team
 team_wins = total_wins_df.sum(axis=1)
@@ -244,7 +173,7 @@ expected_wins = total_wins_df.mean(axis=1)
 differences = avg_team_wins - total_wins_df.values.diagonal()
 
 # Calculate actual wins
-actual_wins = records_df.values.diagonal()
+actual_records = records_df.values.diagonal()
 
 # Calculate win percentages
 win_percentages = team_wins / current_week
@@ -254,7 +183,7 @@ rank_df = pd.DataFrame({
     'Team': team_names,
     'Expected Wins': avg_team_wins,
     'Difference': differences,
-    'Record': actual_wins,
+    'Record': actual_records,
 })
 
 # Create schedule_rank_df
@@ -264,19 +193,19 @@ schedule_rank_df = pd.DataFrame({
     'Record': rank_df['Record']
 })
 dfLastWeek = ""
-# dfLastWeek = pd.read_excel(file, sheet_name="Louie Power Index")
+dfLastWeek = pd.read_excel(file, sheet_name="Louie Power Index")
 def lpi(rank_df, team_wins, total_wins_df, dfLastWeek):
   schedule_wins = [sum(total_wins_df[team]) for team in rank_df['Team']]
   # Create the final DataFrame
   num_teams_in_league = len(team_names)
 
   # Sort dfLastWeek by team names to match the order
-  # dfLastWeek = dfLastWeek.sort_values(by='Teams')
+  dfLastWeek = dfLastWeek.sort_values(by='Teams')
 
   # Extract Louie Power Index values for last week in the same order as rank_df
-  # last_week = dfLastWeek.set_index('Teams')['Louie Power Index (LPI)']
-  # print(last_week)
-  # print()
+  last_week = dfLastWeek.set_index('Teams')['Louie Power Index (LPI)']
+  print(last_week)
+  print()
 
   # Create the final DataFrame
   num_teams_in_league = len(team_names)
@@ -284,29 +213,29 @@ def lpi(rank_df, team_wins, total_wins_df, dfLastWeek):
   print(lpi)
 
   # Calculate the change from last week
-  # change_from_last_week = lpi - last_week
-  # change_strings = []
+  change_from_last_week = lpi - last_week
+  change_strings = []
 
   for team in team_names:
       this_week_lpi = lpi.loc[team]
-      # last_week_lpi = last_week.loc[last_week.index == team].item()
+      last_week_lpi = last_week.loc[last_week.index == team].item()
       
-      # change = this_week_lpi - last_week_lpi
+      change = this_week_lpi - last_week_lpi
       
-      # if change > 0:
-      #     change_strings.append(f'↑{change}')
-      # elif change < 0:
-      #     change_strings.append(f'↓{abs(change)}')
-      # else:
-      #     change_strings.append(str(change))
+      if change > 0:
+          change_strings.append(f'↑{change}')
+      elif change < 0:
+          change_strings.append(f'↓{abs(change)}')
+      else:
+          change_strings.append(str(change))
 
-      # change_strings.append(str(last_week_lpi))
+      change_strings.append(str(last_week_lpi))
   lpi_df = pd.DataFrame({
       'Teams': rank_df['Team'],
       # "Owner": team_owners,
       'Louie Power Index (LPI)': lpi,
       'Record': rank_df['Record'],
-      # 'Change From Last Week': change_strings,
+      'Change From Last Week': change_strings,
       'Change From Last Week': 0,
   })
   print()
