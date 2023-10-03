@@ -198,6 +198,7 @@ def format_change(change):
 
 # Apply the formatting function to the "Change from last week" column
 lpi_weekly_df['Change From Last Week'] = lpi_weekly_df['Change From Last Week'].apply(format_change)
+lpi_weekly_df.insert(loc = 0, column = 'Teams', value = lpi_weekly_df.index)
 
 # Display the updated DataFrame
 print(lpi_weekly_df)
@@ -341,7 +342,7 @@ def oddsCalculator():
   return position_chances_df
 
 odds_df = oddsCalculator()
-# print(odds_df)
+print(odds_df)
 
 writer = pd.ExcelWriter(fileName + ".xlsx", engine='xlsxwriter')
 records_df.to_excel(writer, sheet_name='Schedule Grid')

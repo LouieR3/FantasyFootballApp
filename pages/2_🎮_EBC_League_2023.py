@@ -93,7 +93,7 @@ def app():
     st.header('*NEW* Playoff Odds')
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     df = pd.read_excel(file, sheet_name="Playoff Odds")
-    df['Team'] = df['Team'].replace({
+    df['Teams'] = df['Teams'].replace({
         'Champagne  Papi': 'THE POOL',
         'Seigaku FC': 'Inter Miami CF',
         "Pitman MaleManipulator": "Bryson Stott Fan Club"
