@@ -77,4 +77,5 @@ def percent(file):
 
     return percentList
 file = "Brown Munde 2023.xlsx"
-percent(file)
+percentLis = percent(file)
+print(percentLis)
