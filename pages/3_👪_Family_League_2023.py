@@ -129,6 +129,7 @@ def app():
 
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
+    df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df['Teams'] = df['Teams'].replace({
         'Sweet Dee’Fence': "Ball Too Well (Diana's Version)",
         'Villanova Uncle NUTZ': 'Deez Uncle NUTZ',

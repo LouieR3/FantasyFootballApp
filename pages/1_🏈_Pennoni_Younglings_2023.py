@@ -125,6 +125,7 @@ def app():
 
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
+    df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df['Teams'] = df['Teams'].replace({
         'PAI Athletic Director': 'PAI India Division Manager',
         'Team Corner Office': 'Pennoni Adjacent',
