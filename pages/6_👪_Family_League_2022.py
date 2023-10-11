@@ -67,7 +67,6 @@ def app():
     slice_ = df.columns[:playoff_number]
     styled_df = formatted_df.style.set_properties(**{'background-color': 'lightgray'}, subset=slice_)
     st.dataframe(styled_df, height=460)
-
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
     st.dataframe(df, height=460)

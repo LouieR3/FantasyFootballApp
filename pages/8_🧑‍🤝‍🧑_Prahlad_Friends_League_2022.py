@@ -3,6 +3,7 @@ def app():
     from operator import itemgetter
     import streamlit as st
     from calcPercent import percent
+    from playoffNum import playoff_num
 
     league = "Game of Yards! 2022"
     st.title("🧑‍🤝‍🧑 " + league)
@@ -12,6 +13,7 @@ def app():
     # league = "PennoniYounglings"
     file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
+    df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df = df.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
@@ -27,13 +29,13 @@ def app():
     bot10 = percentList[4]
 
     df2 = df.style.apply(lambda x: ["background-color: khaki" 
-                            if (int(i.split(" ")[0]) >= top25 and int(i.split(" ")[0]) < top10) 
-                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: gold" if (int(i.split(" ")[0]) >= top10 and int(i.split(" ")[0]) < count) 
-                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: goldenrod" if (int(i.split(" ")[0]) == count) 
-                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(i.split(" ")[0]) <= bot25 and int(i.split(" ")[0]) > bot10) 
-                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot10 and int(i.split(" ")[0]) > 0) 
-                            else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) 
-                            else "" for i in x], axis = 1, subset=names)
+                            if (int(x.split(" ")[0].split('-')[0]) >= top25 and int(x.split(" ")[0].split('-')[0]) < top10) 
+                            else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: gold" if (int(x.split(" ")[0].split('-')[0]) >= top10 and int(x.split(" ")[0].split('-')[0]) < count) 
+                            else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: yellow" if (int(x.split(" ")[0].split('-')[0]) == count) 
+                            else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot25 and int(x.split(" ")[0].split('-')[0]) > bot10) 
+                            else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot10 and int(x.split(" ")[0].split('-')[0]) > 0) 
+                            else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(x.split(" ")[0].split('-')[0]) == 0) 
+                            else "" for x in x], axis = 1, subset=names)
     st.dataframe(df2, width=2000)
 
     st.header('Strength of Schedule')
@@ -41,7 +43,7 @@ def app():
     df = pd.read_excel(file, sheet_name="Wins Against Schedule")
     df = df.iloc[: , 1:]
     df.index += 1
-    df3 = df.style.background_gradient(subset=['Avg Wins Against Schedule'])
+    df3 = df.style.background_gradient(subset=['Wins Against Schedule'])
     st.dataframe(df3)
 
     st.header('Expected Wins')
@@ -52,6 +54,24 @@ def app():
     df.index += 1
     df3 = df.style.background_gradient(subset=['Expected Wins'])
     st.dataframe(df3)
+
+    st.header('*NEW* Playoff Odds')
+    st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
+    df = pd.read_excel(file, sheet_name="Playoff Odds")
+    def format_and_round(cell):
+        if isinstance(cell, (int, float)):
+            return f"{cell:.2f}"
+        return cell
+
+    # Apply the formatting function to the entire DataFrame
+    formatted_df = df.applymap(format_and_round)
+    playoff_number = playoff_num(file)
+    slice_ = df.columns[:playoff_number]
+    styled_df = formatted_df.style.set_properties(**{'background-color': 'lightgray'}, subset=slice_)
+    st.dataframe(styled_df, height=460)
+    st.header('Louie Power Index Each Week')
+    df = pd.read_excel(file, sheet_name="LPI By Week")
+    st.dataframe(df, height=460)
 
     st.header('The Louie Power Index (LPI)')
     st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
