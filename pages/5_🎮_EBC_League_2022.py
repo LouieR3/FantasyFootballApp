@@ -3,6 +3,7 @@ def app():
     from operator import itemgetter
     import streamlit as st
     from calcPercent import percent
+    from playoffNum import playoff_num
 
     st.title('🎮 EBC League 2022')
     st.header('Schedule Comparisson')
@@ -57,7 +58,7 @@ def app():
     df = pd.read_excel(file, sheet_name="Wins Against Schedule")
     df = df.iloc[: , 1:]
     df.index += 1
-    df3 = df.style.background_gradient(subset=['Avg Wins Against Schedule'])
+    df3 = df.style.background_gradient(subset=['Wins Against Schedule'])
     st.dataframe(df3)
 
     st.header('Expected Wins')
@@ -68,6 +69,29 @@ def app():
     df.index += 1
     df3 = df.style.background_gradient(subset=['Expected Wins'])
     st.dataframe(df3)
+
+    st.header('*NEW* Playoff Odds')
+    st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
+    df = pd.read_excel(file, sheet_name="Playoff Odds")
+    df = df.set_index("Team")
+    # Function to format and round the values
+    def format_and_round(cell):
+        if isinstance(cell, (int, float)):
+            return f"{cell:.2f}"
+        return cell
+
+    # Apply the formatting function to the entire DataFrame
+    formatted_df = df.applymap(format_and_round)
+    playoff_number = playoff_num(file)
+    slice_ = df.columns[:playoff_number]
+    styled_df = formatted_df.style.set_properties(**{'background-color': 'lightgray'}, subset=slice_)
+    st.dataframe(styled_df)
+
+    st.header('Louie Power Index Each Week')
+    df = pd.read_excel(file, sheet_name="LPI By Week")
+    df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+    df = df.set_index("Teams")
+    st.dataframe(df)
 
     st.header('The Louie Power Index (LPI)')
     st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')

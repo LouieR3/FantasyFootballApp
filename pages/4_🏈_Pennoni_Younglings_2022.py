@@ -59,8 +59,6 @@ def app():
     st.header('*NEW* Playoff Odds')
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     df = pd.read_excel(file, sheet_name="Playoff Odds")
-    # df = df.set_index("Team")
-    # Function to format and round the values
     def format_and_round(cell):
         if isinstance(cell, (int, float)):
             return f"{cell:.2f}"
@@ -71,17 +69,10 @@ def app():
     playoff_number = playoff_num(file)
     slice_ = df.columns[:playoff_number]
     styled_df = formatted_df.style.set_properties(**{'background-color': 'lightgray'}, subset=slice_)
-
-    # styled_df = formatted_df.style.apply(lambda row: ['background: lightgray' if cell < playoff_number else '' for cell in row], axis=1)
-    # df = df.iloc[: , 1:]
-    # df.index += 1
-    # df3 = df.style.background_gradient(subset=['Expected Wins'])
     st.dataframe(styled_df, height=460)
 
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
-    # df = df.iloc[: , 1:]
-    # df.index += 1
     st.dataframe(df, height=460)
 
     st.header('The Louie Power Index (LPI)')
