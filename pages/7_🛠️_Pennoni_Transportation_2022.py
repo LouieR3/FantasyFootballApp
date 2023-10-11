@@ -70,10 +70,10 @@ def app():
     playoff_number = playoff_num(file)
     slice_ = df.columns[:playoff_number]
     styled_df = formatted_df.style.set_properties(**{'background-color': 'lightgray'}, subset=slice_)
-    st.dataframe(styled_df, height=460)
+    st.dataframe(styled_df)
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
-    st.dataframe(df, height=460)
+    st.dataframe(df)
 
     st.header('The Louie Power Index (LPI)')
     st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
