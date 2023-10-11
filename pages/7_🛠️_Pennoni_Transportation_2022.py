@@ -71,8 +71,11 @@ def app():
     slice_ = df.columns[:playoff_number]
     styled_df = formatted_df.style.set_properties(**{'background-color': 'lightgray'}, subset=slice_)
     st.dataframe(styled_df)
+
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
+    df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+    df = df.set_index("Teams")
     st.dataframe(df)
 
     st.header('The Louie Power Index (LPI)')
