@@ -13,6 +13,7 @@ def app():
     # league = "PennoniYounglings"
     file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
+    df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df = df.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
