@@ -2,7 +2,6 @@ def app():
     import pandas as pd
     from operator import itemgetter
     import streamlit as st
-    from calcPercent import percent
     from playoffNum import playoff_num
     league = "0755 Fantasy Football 2022"
 

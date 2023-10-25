@@ -2,7 +2,6 @@ def app():
     import pandas as pd
     from operator import itemgetter
     import streamlit as st
-    from calcPercent import percent
     import numpy as np
     from playoffNum import playoff_num
 
