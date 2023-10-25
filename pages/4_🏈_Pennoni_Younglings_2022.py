@@ -2,7 +2,6 @@ def app():
     import pandas as pd
     from operator import itemgetter
     import streamlit as st
-    from playoffNum import playoff_num
 
     league = "Pennoni Younglings 2022"
     st.title("🏈 " + league)
@@ -65,7 +64,7 @@ def app():
 
     # Apply the formatting function to the entire DataFrame
     formatted_df = df.applymap(format_and_round)
-    playoff_number = playoff_num(file)
+    playoff_number = 8
     slice_ = df.columns[:playoff_number]
     styled_df = formatted_df.style.set_properties(**{'background-color': 'lightgray'}, subset=slice_)
     st.dataframe(styled_df, height=460)
