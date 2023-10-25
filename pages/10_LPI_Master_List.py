@@ -29,6 +29,9 @@ def app():
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: gray; color: white" if i == leagueList[3]
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: green; color: white" if i == leagueList[4]
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: maroon; color: white" if i == leagueList[5]
+                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: red; color: white" if i == leagueList[6]
+                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: blue; color: white" if i == leagueList[7]
+                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: yellow" if i == leagueList[8]
                             else "" for i in x], axis = 1)
     st.dataframe(df3, height=2150)
 
