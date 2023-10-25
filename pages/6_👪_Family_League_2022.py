@@ -19,7 +19,7 @@ def app():
         if col != "Teams":
             names.append(col)
     
-    percentList = percent(file)
+    percentList = [14, 10, 4, 13, 1]
     count = percentList[0]
     top25 = percentList[1]
     bot25 = percentList[2]
