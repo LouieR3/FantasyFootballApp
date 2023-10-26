@@ -216,7 +216,11 @@ team_to_record = dict(zip(rank_df['Team'], rank_df['Record']))
 
 # Map the records to lpi_df based on matching team names
 lpi_df['Record'] = lpi_df['Teams'].map(team_to_record)
-# print(lpi_df)
+team_dict = dict(zip(team_names, team_owners))
+
+# Apply dictionary mapping to Teams column
+lpi_df.insert(1, "Owner", lpi_df['Teams'].map(team_dict))
+print(lpi_df)
 
 matchup_results = []
 # Iterate through each week's matchups
@@ -263,25 +267,14 @@ matchup_results_df = pd.DataFrame(matchup_results)
 # Find the biggest upsets based on LPI difference
 biggest_upsets = matchup_results_df.nlargest(30, 'LPI_Difference')
 print("Biggest Upsets of the Year:")
-# print(biggest_upsets)
-
 # Filter for rows where the LPI_Difference is negative and the AwayTeam won
-# upsets_df = biggest_upsets[(biggest_upsets['Winner'] == biggest_upsets['AwayTeam'])]
-# upsets_df = biggest_upsets[biggest_upsets['Winner'] == biggest_upsets[['HomeTeam', 'AwayTeam']].apply(lambda x: x[0] if x[0] == biggest_upsets['Winner'] and biggest_upsets['HomeLPI'] < biggest_upsets['AwayLPI'] else x[1], axis=1)]
 upsets_df = biggest_upsets[((biggest_upsets['Winner'] == biggest_upsets['AwayTeam']) & (biggest_upsets['HomeLPI'] > biggest_upsets['AwayLPI'])) | ((biggest_upsets['Winner'] == biggest_upsets['HomeTeam']) & (biggest_upsets['AwayLPI'] > biggest_upsets['HomeLPI']))]
-
 # Print the resulting DataFrame
 print(upsets_df)
-
-# upsets_df = matchup_results_df[(matchup_results_df['Week'] == 17)]
-# # Print the resulting DataFrame
-# print(upsets_df)
 
 schedule_rank_df = schedule_rank_df.sort_values(by=['Wins Against Schedule'], ascending=[True])
 schedule_rank_df.reset_index(drop=True, inplace=True)
 schedule_rank_df.index = schedule_rank_df.index + 1 
-# print(schedule_rank_df)
-
 # Sort the DataFrame by total wins and difference
 rank_df = rank_df.sort_values(by=['Expected Wins', 'Difference'], ascending=[False, True])
 rank_df.reset_index(drop=True, inplace=True)

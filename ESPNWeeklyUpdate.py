@@ -18,13 +18,13 @@ start_time = time.time()
 # league = League(league_id=310334683, year=2022, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # Family League
-league = League(league_id=1725372613, year=2023, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+# league = League(league_id=1725372613, year=2023, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 # league = League(league_id=1725372613, year=2022, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # EBC League
 # league = League(league_id=1118513122, year=2023, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 # league = League(league_id=1118513122, year=2022, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
-# league = League(league_id=1118513122, year=2021, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=1118513122, year=2021, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # Pennoni Transportation
 # league = League(league_id=1339704102, year=2023, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
@@ -40,7 +40,7 @@ league = League(league_id=1725372613, year=2023, espn_s2='AEBxvJwo9gYK1pk%2B3S36
 settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
-fileName = leagueName + " 2023"
+fileName = leagueName + " 2021"
 file = leagueName + ".xlsx"
 
 team_owners = [team.owner for team in league.teams]
@@ -214,7 +214,50 @@ team_to_record = dict(zip(rank_df['Team'], rank_df['Record']))
 
 # Map the records to lpi_df based on matching team names
 lpi_df['Record'] = lpi_df['Teams'].map(team_to_record)
+team_dict = dict(zip(team_names, team_owners))
+
+# Apply dictionary mapping to Teams column
+lpi_df.insert(1, "Owner", lpi_df['Teams'].map(team_dict))
 print(lpi_df)
+
+matchup_results = []
+# Iterate through each week's matchups
+for week in range(1, current_week + 1):
+    matchups = league.scoreboard(week)
+    for matchup in matchups:
+        if matchup.home_score == 0 or matchup.away_score == 0:
+          # Skip this matchup
+          continue
+        home_team = matchup.home_team.team_name
+        away_team = matchup.away_team.team_name
+        # Get LPI for home and away teams for this week
+        home_lpi = lpi_weekly_df.at[home_team, 'Week ' + str(week)]
+        away_lpi = lpi_weekly_df.at[away_team, 'Week ' + str(week)]
+        # Calculate LPI difference
+        higher_lpi = max(home_lpi, away_lpi)
+        lower_lpi = min(home_lpi, away_lpi)
+        lpi_difference = higher_lpi - lower_lpi
+        # Determine the winner of the matchup
+        winner = home_team if matchup.home_score > matchup.away_score else away_team
+        # Record the matchup results and LPI differences
+        matchup_result = {
+            'Week': week,
+            'HomeTeam': home_team,
+            'AwayTeam': away_team,
+            'HomeLPI': home_lpi,
+            'AwayLPI': away_lpi,
+            'LPI_Difference': lpi_difference,
+            'Winner': winner
+        }
+        # Append the dictionary to the list
+        matchup_results.append(matchup_result)
+# Convert the list of matchup results to a DataFrame
+matchup_results_df = pd.DataFrame(matchup_results)
+# Find the biggest upsets based on LPI difference
+biggest_upsets = matchup_results_df.nlargest(30, 'LPI_Difference')
+# Filter for rows where the LPI_Difference is negative and the AwayTeam won
+upsets_df = biggest_upsets[((biggest_upsets['Winner'] == biggest_upsets['AwayTeam']) & (biggest_upsets['HomeLPI'] > biggest_upsets['AwayLPI'])) | ((biggest_upsets['Winner'] == biggest_upsets['HomeTeam']) & (biggest_upsets['AwayLPI'] > biggest_upsets['HomeLPI']))]
+
 
 schedule_rank_df = schedule_rank_df.sort_values(by=['Wins Against Schedule'], ascending=[True])
 schedule_rank_df.reset_index(drop=True, inplace=True)
@@ -332,7 +375,7 @@ def oddsCalculator():
   position_chances_df.columns = [f'Place {i}' for i in range(1, max_positions + 1)]
   # Add a new column for the chance of making playoffs
   num_playoff_teams = settings.playoff_team_count
-  position_chances_df['Chance of making playoffs'] = 0
+  position_chances_df['Chance of making playoffs'] = 0.0
   # Sum the top # of finish places based on playoff teams
   for team in position_chances_df.index:
       top_finishes = position_chances_df.iloc[position_chances_df.index.get_loc(team), :num_playoff_teams]
@@ -352,6 +395,7 @@ rank_df.to_excel(writer, sheet_name='Expected Wins')
 odds_df.to_excel(writer, sheet_name='Playoff Odds')
 lpi_df.to_excel(writer, sheet_name='Louie Power Index')
 lpi_weekly_df.to_excel(writer, sheet_name='LPI By Week')
+upsets_df.to_excel(writer, sheet_name='Biggest Upsets')
 writer.close()
 
 print("--- %s seconds ---" % (time.time() - start_time))
