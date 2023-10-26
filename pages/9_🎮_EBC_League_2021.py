@@ -106,7 +106,7 @@ def app():
     st.header('Biggest LPI Upsets')
     # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
     df = pd.read_excel(file, sheet_name="Biggest Upsets")
-    # df = df.iloc[: , 1:]
+    df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['LPI Difference'])
     st.dataframe(df3)
