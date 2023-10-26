@@ -257,7 +257,7 @@ matchup_results_df = pd.DataFrame(matchup_results)
 biggest_upsets = matchup_results_df.nlargest(30, 'LPI Difference')
 # Filter for rows where the LPI_Difference is negative and the AwayTeam won
 upsets_df = biggest_upsets[((biggest_upsets['Winner'] == biggest_upsets['Away Team']) & (biggest_upsets['Home LPI'] > biggest_upsets['Away LPI'])) | ((biggest_upsets['Winner'] == biggest_upsets['Home Team']) & (biggest_upsets['Away LPI'] > biggest_upsets['Home LPI']))]
-
+upsets_df.reset_index(drop=True, inplace=True)
 
 schedule_rank_df = schedule_rank_df.sort_values(by=['Wins Against Schedule'], ascending=[True])
 schedule_rank_df.reset_index(drop=True, inplace=True)
