@@ -63,15 +63,15 @@ league = League(league_id=1118513122, year=2023, espn_s2='AEBxvJwo9gYK1pk%2B3S36
 # league = "EBC League 2023"
 league = "Family League 2023"
 file = league + ".xlsx"
-df = pd.read_excel(file, sheet_name="Playoff Odds")
-df['Teams'] = df['Teams'].replace({
-    'Sweet Dee’Fence': "Ball Too Well (Diana's Version)",
-    'Villanova Uncle NUTZ': 'Deez Uncle NUTZ',
-    "Kuppcakes  .": "The Adams Family",
-    "Lockett inma pockett": "CHUBBER",
-    "Wallingford  Wild Hormones": "Waverly  Wild Hormones",
-})
-# df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-df = df.set_index("Teams")
+df = pd.read_excel(file, sheet_name="Louie Power Index")
 print(df)
+record_split = df['Record'].iloc[0].split('-')
+
+# Convert to ints
+record_nums = [int(num) for num in record_split] 
+
+# Sum 
+record_sum = sum(record_nums)
+
+print(record_sum)
 print("--- %s seconds ---" % (time.time() - start_time))

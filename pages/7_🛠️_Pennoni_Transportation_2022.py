@@ -94,6 +94,6 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['LPI Difference'])
-    st.dataframe(df3, height=560)
+    st.dataframe(df3, height=600)
 
 app()
