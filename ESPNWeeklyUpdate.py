@@ -40,7 +40,7 @@ league = League(league_id=1118513122, year=2021, espn_s2='AEBxvJwo9gYK1pk%2B3S36
 settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
-fileName = leagueName + " 2021"
+fileName = leagueName + " 2023"
 file = leagueName + ".xlsx"
 
 team_owners = [team.owner for team in league.teams]
@@ -242,11 +242,11 @@ for week in range(1, current_week + 1):
         # Record the matchup results and LPI differences
         matchup_result = {
             'Week': week,
-            'HomeTeam': home_team,
-            'AwayTeam': away_team,
-            'HomeLPI': home_lpi,
-            'AwayLPI': away_lpi,
-            'LPI_Difference': lpi_difference,
+            'Home Team': home_team,
+            'Away Team': away_team,
+            'Home LPI': home_lpi,
+            'Away LPI': away_lpi,
+            'LPI Difference': lpi_difference,
             'Winner': winner
         }
         # Append the dictionary to the list
@@ -254,9 +254,9 @@ for week in range(1, current_week + 1):
 # Convert the list of matchup results to a DataFrame
 matchup_results_df = pd.DataFrame(matchup_results)
 # Find the biggest upsets based on LPI difference
-biggest_upsets = matchup_results_df.nlargest(30, 'LPI_Difference')
+biggest_upsets = matchup_results_df.nlargest(30, 'LPI Difference')
 # Filter for rows where the LPI_Difference is negative and the AwayTeam won
-upsets_df = biggest_upsets[((biggest_upsets['Winner'] == biggest_upsets['AwayTeam']) & (biggest_upsets['HomeLPI'] > biggest_upsets['AwayLPI'])) | ((biggest_upsets['Winner'] == biggest_upsets['HomeTeam']) & (biggest_upsets['AwayLPI'] > biggest_upsets['HomeLPI']))]
+upsets_df = biggest_upsets[((biggest_upsets['Winner'] == biggest_upsets['Away Team']) & (biggest_upsets['Home LPI'] > biggest_upsets['Away LPI'])) | ((biggest_upsets['Winner'] == biggest_upsets['Home Team']) & (biggest_upsets['Away LPI'] > biggest_upsets['Home LPI']))]
 
 
 schedule_rank_df = schedule_rank_df.sort_values(by=['Wins Against Schedule'], ascending=[True])
