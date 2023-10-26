@@ -19,6 +19,11 @@ def app():
 
     dfFINAL = pd.concat(appended_data)
     dfFINAL = dfFINAL.iloc[: , 1:]
+    first_column = dfFINAL.pop('Owner') 
+  
+    # insert column using insert(position,column_name, 
+    # first_column) function 
+    dfFINAL.insert(1, 'Owner', first_column) 
     # dfFINAL.index += 1
     df1 = dfFINAL.sort_values(by=['Louie Power Index (LPI)'], ascending=False)
     
