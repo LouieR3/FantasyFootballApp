@@ -19,7 +19,7 @@ def app():
 
     dfFINAL = pd.concat(appended_data)
     dfFINAL = dfFINAL.iloc[: , 1:]
-    # dfFINAL.index += 1
+    dfFINAL.index += 1
     df1 = dfFINAL.sort_values(by=['LPI Difference'], ascending=False)
     
     df3 = df1.reset_index(drop=True).style.background_gradient(subset=['LPI Difference']).apply(lambda x: ["background-color: purple; color: white" 
