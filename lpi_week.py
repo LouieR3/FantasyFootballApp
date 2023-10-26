@@ -40,7 +40,7 @@ league = League(league_id=1118513122, year=2021, espn_s2='AEBxvJwo9gYK1pk%2B3S36
 settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
-fileName = leagueName + " 2023"
+fileName = leagueName + " 2021"
 file = leagueName + ".xlsx"
 
 team_owners = [team.owner for team in league.teams]
@@ -64,7 +64,7 @@ if current_week is None:
     current_week = settings.reg_season_count
 elif current_week != settings.reg_season_count:
   current_week -= 1
-# current_week = 17
+current_week = 17
 
 # Store data in DataFrames 
 scores_df = pd.DataFrame(team_scores, index=team_names)
