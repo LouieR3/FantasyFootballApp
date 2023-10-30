@@ -143,7 +143,14 @@ def app():
     weeks = [col for col in df_chart.columns if col != "Teams"]
     print(weeks)
     print(df_chart)
+    st.line_chart(df_chart, x=['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7'], y="Teams")
     st.line_chart(df_chart, x=weeks, y="Teams")
+
+    # Reshape the DataFrame for plotting
+    df_chart = df_chart.melt(id_vars=["Teams"], var_name="Week", value_name="LPI")
+
+    # Plot the data using line_chart
+    st.line_chart(df_chart, use_container_width=True)
     # Update X and Y axis labels
     # fig.update_xaxes(title="Weeks")
     # fig.update_yaxes(title="Teams")
