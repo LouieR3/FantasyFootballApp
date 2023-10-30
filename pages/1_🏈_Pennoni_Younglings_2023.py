@@ -136,7 +136,8 @@ def app():
     # df = df.iloc[: , 1:]
     # df.index += 1
     st.dataframe(df, height=460)
-    st.line_chart(df)
+    df_by_week = df.loc[:, df.columns != 'Change From Last Week']
+    st.line_chart(df, y="Teams")
 
     st.header('The Louie Power Index (LPI)')
     st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
