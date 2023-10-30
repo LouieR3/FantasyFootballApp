@@ -141,7 +141,8 @@ def app():
     # st.line_chart(df, y="Teams")
     # Create a Streamlit app
     weeks = [col for col in df_chart.columns if col != "Teams"]
-
+    print(weeks)
+    print(df_chart)
     st.line_chart(df_chart, x=weeks, y="Teams")
     # Update X and Y axis labels
     # fig.update_xaxes(title="Weeks")
