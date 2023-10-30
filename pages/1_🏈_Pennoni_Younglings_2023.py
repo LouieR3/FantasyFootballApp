@@ -145,7 +145,7 @@ def app():
     current_week = df_chart.shape[1] - 1
     # Exclude "Change From Last Week" column
     weeks = [col for col in df_chart.columns if col != "Change From Last Week"]
-    st.line_chart(df_chart, x="Teams", y=weeks)
+    st.line_chart(df_chart, x=weeks, y="Teams")
     # Update X and Y axis labels
     # fig.update_xaxes(title="Weeks")
     # fig.update_yaxes(title="Teams")
