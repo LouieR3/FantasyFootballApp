@@ -126,7 +126,7 @@ def app():
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-    df_chart = df
+    df_chart = df.loc[:, df.columns != 'Change From Last Week']
     # df['Teams'] = df['Teams'].replace({
     #     'PAI Athletic Director': 'PAI India Division Manager',
     #     'Team Corner Office': 'Pennoni Adjacent',
@@ -143,9 +143,16 @@ def app():
     st.title("LPI by Week")
     # Select weeks from Week 1 to the current week
     current_week = df_chart.shape[1] - 1
-    # Exclude "Change From Last Week" column
-    weeks = [col for col in df_chart.columns if col != "Change From Last Week"]
-    st.line_chart(df_chart, x=weeks, y="Teams")
+    # Create the new DataFrame
+    teams = df_chart["Teams"]
+    lpi_by_week = pd.DataFrame({
+        "Teams": teams,
+        "LPI By Week": df_chart.loc[:, "Week 1":"Week " + str(current_week)].values.tolist()
+    })
+
+    # Print the new DataFrame
+    print(lpi_by_week)
+    st.line_chart(lpi_by_week, x="LPI By Week", y="Teams")
     # Update X and Y axis labels
     # fig.update_xaxes(title="Weeks")
     # fig.update_yaxes(title="Teams")
