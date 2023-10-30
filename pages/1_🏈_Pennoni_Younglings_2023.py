@@ -4,7 +4,6 @@ def app():
     import streamlit as st
     from calcPercent import percent
     from playoffNum import playoff_num
-    import plotly.express as px
 
     league = "Pennoni Younglings 2023"
     st.title("🏈 " + league)
@@ -152,20 +151,13 @@ def app():
     # Exclude "Change From Last Week" column
     weeks = [col for col in df.columns if col != "Change From Last Week"]
 
-    # Create a Line Chart
-    fig = px.line(
-        df,
-        x=weeks,
-        y=teams,
-        title="LPI by Week (Excluding Change From Last Week)",
-    )
-
+    st.line_chart(df, x=weeks, y=teams)
     # Update X and Y axis labels
-    fig.update_xaxes(title="Weeks")
-    fig.update_yaxes(title="Teams")
+    # fig.update_xaxes(title="Weeks")
+    # fig.update_yaxes(title="Teams")
 
     # Show the Line Chart
-    st.plotly_chart(fig)
+    # st.plotly_chart(fig)
 
     st.header('The Louie Power Index (LPI)')
     st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
