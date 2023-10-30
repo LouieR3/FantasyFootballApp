@@ -140,19 +140,9 @@ def app():
     # df_by_week = df.loc[:, df.columns != 'Change From Last Week']
     # st.line_chart(df, y="Teams")
     # Create a Streamlit app
-    st.title("LPI by Week")
-    # Select weeks from Week 1 to the current week
-    current_week = df_chart.shape[1] - 1
-    # Create the new DataFrame
-    teams = df_chart["Teams"]
-    lpi_by_week = pd.DataFrame({
-        "Teams": teams,
-        "LPI By Week": df_chart.loc[:, "Week 1":"Week " + str(current_week)].values.tolist()
-    })
+    weeks = [col for col in df_chart.columns if col != "Teams"]
 
-    # Print the new DataFrame
-    print(lpi_by_week)
-    st.line_chart(lpi_by_week, x="LPI By Week", y="Teams")
+    st.line_chart(df_chart, x=weeks, y="Teams")
     # Update X and Y axis labels
     # fig.update_xaxes(title="Weeks")
     # fig.update_yaxes(title="Teams")
