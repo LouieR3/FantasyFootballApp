@@ -126,16 +126,16 @@ def app():
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-    df['Teams'] = df['Teams'].replace({
-        'PAI Athletic Director': 'PAI India Division Manager',
-        'Team Corner Office': 'Pennoni Adjacent',
-        "Rizzo's Crash Test Dummy": "Prahlad's Ghost",
-        "Girth Brooks": "Bli Erinker"
-    })
-    df = df.set_index("Teams")
+    # df['Teams'] = df['Teams'].replace({
+    #     'PAI Athletic Director': 'PAI India Division Manager',
+    #     'Team Corner Office': 'Pennoni Adjacent',
+    #     "Rizzo's Crash Test Dummy": "Prahlad's Ghost",
+    #     "Girth Brooks": "Bli Erinker"
+    # })
+    df_print = df.set_index("Teams")
     # df = df.iloc[: , 1:]
     # df.index += 1
-    st.dataframe(df, height=460)
+    st.dataframe(df_print, height=460)
     # df_by_week = df.loc[:, df.columns != 'Change From Last Week']
     # st.line_chart(df, y="Teams")
     # Get the list of teams
