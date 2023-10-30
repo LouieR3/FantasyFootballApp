@@ -126,6 +126,7 @@ def app():
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+    df_chart = df
     # df['Teams'] = df['Teams'].replace({
     #     'PAI Athletic Director': 'PAI India Division Manager',
     #     'Team Corner Office': 'Pennoni Adjacent',
@@ -138,20 +139,13 @@ def app():
     st.dataframe(df_print, height=460)
     # df_by_week = df.loc[:, df.columns != 'Change From Last Week']
     # st.line_chart(df, y="Teams")
-    # Get the list of teams
-    teams = df["Teams"]
-
     # Create a Streamlit app
     st.title("LPI by Week")
-
     # Select weeks from Week 1 to the current week
-    current_week = df.shape[1] - 1
-    selected_week = st.slider("Select Week", 1, current_week, current_week)
-
+    current_week = df_chart.shape[1] - 1
     # Exclude "Change From Last Week" column
-    weeks = [col for col in df.columns if col != "Change From Last Week"]
-
-    st.line_chart(df, x="Teams", y=teams)
+    weeks = [col for col in df_chart.columns if col != "Change From Last Week"]
+    st.line_chart(df_chart, x="Teams", y=weeks)
     # Update X and Y axis labels
     # fig.update_xaxes(title="Weeks")
     # fig.update_yaxes(title="Teams")
