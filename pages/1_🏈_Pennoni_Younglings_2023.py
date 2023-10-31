@@ -145,7 +145,7 @@ def app():
     print(df_chart)
 
     # st.line_chart(df_chart, x=['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7'], y="Teams")
-    st.line_chart(df_chart)
+    # st.line_chart(df_chart)
     # Reshape the DataFrame for plotting
     # df_chart = df_chart.melt(id_vars=["Teams"], var_name="Week", value_name="LPI")
     # # Plot the data using line_chart
