@@ -26,6 +26,14 @@ def app():
     dfFINAL.insert(1, 'Owner', first_column) 
     df1 = dfFINAL.sort_values(by=['Louie Power Index (LPI)'], ascending=False)
     df1.index += 1
+
+    option = st.selectbox(
+        "Choose a year",
+        ("All", "2021", "2022", "2023"),
+        index=None,
+        placeholder="Select year...",
+    )
+    st.write('You selected:', option)
     
     df3 = df1.reset_index(drop=True).style.background_gradient(subset=['Louie Power Index (LPI)']).apply(lambda x: ["background-color: purple; color: white" 
                             if i == leagueList[0]
