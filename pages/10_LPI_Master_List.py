@@ -50,6 +50,7 @@ def app():
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: red; color: white" if i == leagueList[6]
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: blue; color: white" if i == leagueList[7]
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: yellow" if i == leagueList[8]
+                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: tan" if i == leagueList[9]
                             else "" for i in x], axis = 1)
     st.dataframe(df3, height=2150)
 
