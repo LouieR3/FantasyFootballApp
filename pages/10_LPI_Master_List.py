@@ -29,7 +29,7 @@ def app():
 
     option = st.selectbox(
         "Choose a year",
-        ("All", "2021", "2022", "2023"),
+        ("All", "2023", "2022", "2021"),
         placeholder="Select year...",
     )
     st.write('You selected:', option)

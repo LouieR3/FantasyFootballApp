@@ -21,8 +21,20 @@ def app():
     dfFINAL = dfFINAL.iloc[: , 1:]
     dfFINAL.index += 1
     df1 = dfFINAL.sort_values(by=['LPI Difference'], ascending=False)
+
+    option = st.selectbox(
+        "Choose a year",
+        ("All", "2023", "2022", "2021"),
+        placeholder="Select year...",
+    )
+    st.write('You selected:', option)
+
+    if option == "All":
+        filtered_df = df1
+    else:
+        filtered_df = df1[df1['League'].str.contains(option)]
     
-    df3 = df1.reset_index(drop=True).style.background_gradient(subset=['LPI Difference']).apply(lambda x: ["background-color: purple; color: white" 
+    df3 = filtered_df.reset_index(drop=True).style.background_gradient(subset=['LPI Difference']).apply(lambda x: ["background-color: purple; color: white" 
                             if i == leagueList[0]
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: skyblue" if i == leagueList[1]
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: goldenrod" if i == leagueList[2]
