@@ -148,6 +148,7 @@ for week in range(1, current_week+1):
                 else:
                     standings[team1] += 1
                     standings[team2] += 1
+            print(standings)
 
         # Sort the standings by both total points and average score
         sorted_standings = sorted(standings.items(), key=lambda x: (-x[1], team_data[x[0]]['average_score']), reverse=True)

@@ -389,16 +389,4 @@ def oddsCalculator():
   return position_chances_df
 
 odds_df = oddsCalculator()
-# print(odds_df)
-
-writer = pd.ExcelWriter(fileName + ".xlsx", engine='xlsxwriter')
-records_df.to_excel(writer, sheet_name='Schedule Grid')
-schedule_rank_df.to_excel(writer, sheet_name='Wins Against Schedule')
-rank_df.to_excel(writer, sheet_name='Expected Wins')
-odds_df.to_excel(writer, sheet_name='Playoff Odds')
-lpi_df.to_excel(writer, sheet_name='Louie Power Index')
-lpi_weekly_df.to_excel(writer, sheet_name='LPI By Week')
-upsets_df.to_excel(writer, sheet_name='Biggest Upsets')
-writer.close()
-
-print("--- %s seconds ---" % (time.time() - start_time))
+print(odds_df)
