@@ -43,6 +43,15 @@ leagueName = settings.name.replace(" 22/23", "")
 fileName = leagueName + " 2023"
 file = leagueName + ".xlsx"
 
+team_owners = [team.owner for team in league.teams]
+team_names = [team.team_name for team in league.teams]
+team_scores = [team.scores for team in league.teams] 
+team_scores_x = [team.scores for team in league.teams] 
+schedules = []
+for team in league.teams:
+  schedule = [opponent.team_name for opponent in team.schedule]
+  schedules.append(schedule)
+
 # Precompute current week 
 current_week = None
 for week in range(1, settings.reg_season_count+1):
@@ -55,44 +64,24 @@ if current_week is None:
     current_week = settings.reg_season_count
 elif current_week != settings.reg_season_count:
   current_week -= 1
+# current_week = 3
 
-team_owners = [team.owner for team in league.teams]
-team_names = [team.team_name for team in league.teams]
+# Store data in DataFrames 
+scores_df = pd.DataFrame(team_scores, index=team_names)
+schedules_df = pd.DataFrame(schedules, index=team_names)
 
-schedules = []
-for team in league.teams:
-    schedule = [opponent.team_name for opponent in team.schedule]
-schedules.append(schedule)
+# Create empty dataframe  
+records_df = pd.DataFrame(index=team_names, columns=team_names)
 
-col_list = [f'Week {i} Chances' for i in range(1, current_week + 1)]
-final_df = pd.DataFrame(0, columns=col_list, index=team_names)
-final_df.index.name = 'Team'
-position_chances_dfs = {}
-for week in range(1, current_week+1):
-    team_scores = [team.scores for team in league.teams]
-    team_scores_x = [team.scores for team in league.teams] 
-    for i, team in enumerate(team_names):
-        team_scores[i] = team_scores[i][:week]
-    for i, team in enumerate(team_names):
-        team_scores_x[i] = team_scores_x[i][:week]
-    team_totals = []
-    for team_data in team_scores_x:
-        team_total = sum(team_data)
-        team_totals.append(team_total)
+# Fill diagonal with team names
+records_df.fillna('', inplace=True) 
 
-    # Store data in DataFrames 
-    scores_df = pd.DataFrame(team_scores, index=team_names)
-    schedules_df = pd.DataFrame(schedules, index=team_names)
+# Initialize a DataFrame to store total wins for each team against all schedules
+total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
 
-    # Create empty dataframe  
-    records_df = pd.DataFrame(index=team_names, columns=team_names)
-
-    # Fill diagonal with team names
-    records_df.fillna('', inplace=True) 
-
-    # Initialize a DataFrame to store total wins for each team against all schedules
-    total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
-
+def oddsCalculator():
+    team_totals = [team.points_for for team in league.teams]
+    reg_season = settings.reg_season_count
     def standard_deviation(values):
         avg = sum(values) / len(values)
         square_diffs = [(value - avg) ** 2 for value in values]
@@ -102,37 +91,28 @@ for week in range(1, current_week+1):
     # Initialize a dictionary to store the results
     team_data = {}
 
-    # Calculate average score and standard deviation based on team totals
-    for i in range(len(team_names)):
-        team_name = team_names[i]
-        total_points = team_totals[i]
-        team_score_x = team_scores_x[i]
-        
-        non_zero_values = []
-        for score in team_score_x:
-            if score != 0.0:
-                non_zero_values.append(score)
-            else:
-                break
-        
-        # Calculate the average score (total points divided by weeks played)
-        average_score = total_points / week
-        
-        # Calculate the standard deviation using the standard_deviation function
-        std_dev = standard_deviation(non_zero_values)
-        
-        team_data[team_name] = {'average_score': average_score, 'std_dev': std_dev}
+    # Define a function to calculate the dynamic std_dev_factor based on the current week
+    def calculate_dynamic_std_dev_factor(current_week, total_weeks, initial_std_dev_factor, min_std_dev_factor):
+        # Calculate a factor that decreases as the season progresses
+        week_factor = current_week / total_weeks
+        # Use the factor to interpolate between initial and minimum std_dev_factors
+        dynamic_std_dev_factor = initial_std_dev_factor - (initial_std_dev_factor - min_std_dev_factor) * week_factor
+        return dynamic_std_dev_factor
 
-    # Define the number of Monte Carlo simulations
+    # Set initial and maximum std_dev_factors
+    initial_std_dev_factor = 1  # Initial factor for week 1
+    min_std_dev_factor  = 0.5  # Maximum factor for later weeks
+
+    # Calculate the dynamic std_dev_factor for the current week
+    dynamic_std_dev_factor = calculate_dynamic_std_dev_factor(current_week, reg_season, initial_std_dev_factor, min_std_dev_factor)
+    # print(dynamic_std_dev_factor)
     num_simulations = 10000
-
-    # Function to simulate a season
-    def simulate_season(team_data, schedules_df, week):
-        schedules_df = schedules_df.iloc[:, :week]
+      # Function to simulate a season
+    def simulate_season(team_data, schedules_df):
         standings = {team: 0 for team in team_data}
         # Simulate each week's matchups
-        for week_use in range(schedules_df.shape[1]):
-            week_schedule = schedules_df[week_use].to_list()
+        for week in range(schedules_df.shape[1]):
+            week_schedule = schedules_df[week].to_list()
             random.shuffle(week_schedule)
             # Simulate each matchup
             for i in range(0, len(week_schedule), 2):
@@ -152,48 +132,59 @@ for week in range(1, current_week+1):
         # Sort the standings by both total points and average score
         sorted_standings = sorted(standings.items(), key=lambda x: (-x[1], team_data[x[0]]['average_score']), reverse=True)
         return [team for team, _ in sorted_standings]
+    # Calculate average score and standard deviation based on team totals
+    # Loop through each week 
+    for week in range(1, current_week+1):
 
-    # Dictionary to store the final standings for each simulation
-    final_standings = {team: [0] * len(team_data) for team in team_data}
-    print(team_data)
-    # Run Monte Carlo simulations
-    for _ in range(num_simulations):
-        simulated_season = simulate_season(team_data, schedules_df, week)
-        for i, team in enumerate(simulated_season):
-            final_standings[team][i] += 1
+        # Update team scores
+        for i, team in enumerate(team_names):
+            team_scores_x[i] = team_scores[i][:week]
 
-    for team in final_standings:
-        final_standings[team] = final_standings[team][::-1]
-    
-    print(final_standings)
-    # Calculate the percentage chance for each position
-    position_chances = {i + 1: {} for i in range(len(team_data))}
-    for position in range(1, len(team_data) + 1):
-        for team in team_data:
-            team_index = list(team_data.keys()).index(team)
-            count = final_standings[team][position - 1]
-            position_chances[position][team] = (count / num_simulations) * 100
+        # Recalculate team data
+        team_data = {}
+        for i in range(len(team_names)):
+            team_name = team_names[i]
+            total_points = sum(team_scores_x[i])
+            non_zero_values = [x for x in team_scores_x[i] if x != 0]
+            
+            average_score = total_points / week        
+            std_dev = standard_deviation(non_zero_values) * dynamic_std_dev_factor
+            
+            team_data[team_name] = {'average_score': average_score, 'std_dev': std_dev}
 
-    # Create a DataFrame
-    position_chances_df = pd.DataFrame(position_chances)
-    # Add a column for the team names (optional)
-    position_chances_df.index.name = 'Team'
-    # Add a new column for the chance of making playoffs
-    num_playoff_teams = settings.playoff_team_count
-    position_chances_df[f'Week {week} Chances'] = 0.0
-    # Sum the top # of finish places based on playoff teams
-    for team in position_chances_df.index:
-        top_finishes = position_chances_df.iloc[position_chances_df.index.get_loc(team), :num_playoff_teams]
-        position_chances_df.at[team, f'Week {week} Chances'] = top_finishes.sum()
-    position_chances_dfs[week] = position_chances_df
+        # Run simulations
+        final_standings = {team: [0] * len(team_data) for team in team_data}
+        for _ in range(num_simulations):
+            simulated_season = simulate_season(team_data, schedules_df)
+            for i, team in enumerate(simulated_season):
+                final_standings[team][i] += 1
 
-    # final_df[f'Week {week} Chances'] = position_chances_df[[f'Week {week} Chances']]
-    # final_df = position_chances_df.sort_values(by=f'Week {week} Chances', ascending=False)
-    # print(final_df)
+        # Calculate chances
+        position_chances = {i + 1: {} for i in range(len(team_data))}
+        for position in range(1, len(team_data) + 1):
+            for team in team_data:
+                # Calculate chances
+                count = final_standings[team][position - 1]
+                position_chances[position][team] = (count / num_simulations) * 100
 
-# final_df = pd.DataFrame(index=team_names, columns=col_list)
-for week in position_chances_dfs:
-    final_df[f'Week {week} Chances'] = position_chances_dfs[week][f'Week {week} Chances']
+        # Store in DataFrame
+        position_chances_df = pd.DataFrame(position_chances)
 
-# odds_df = oddsCalculator()
-print(final_df)
+        position_chances_df.index.name = 'Team'
+        # Add a new column for the chance of making playoffs
+        num_playoff_teams = settings.playoff_team_count
+        position_chances_df['Chance of making playoffs'] = 0.0
+        # Sum the top # of finish places based on playoff teams
+        for team in position_chances_df.index:
+            top_finishes = position_chances_df.iloc[position_chances_df.index.get_loc(team), :num_playoff_teams]
+            position_chances_df.at[team, 'Chance of making playoffs'] = top_finishes.sum()
+
+        playoff_chances = position_chances_df['Chance of making playoffs']
+        
+        # Print or store playoff chances for this week
+        print(f"Week {week} playoff chances:")
+        print(playoff_chances)
+
+
+odds_df = oddsCalculator()
+print(odds_df)
