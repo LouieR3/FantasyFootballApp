@@ -30,7 +30,6 @@ def app():
     option = st.selectbox(
         "Choose a year",
         ("All", "2021", "2022", "2023"),
-        index=None,
         placeholder="Select year...",
     )
     st.write('You selected:', option)
