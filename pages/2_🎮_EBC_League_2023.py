@@ -94,7 +94,7 @@ def app():
     df3 = df.style.background_gradient(subset=['Expected Wins'])
     st.dataframe(df3)
 
-    st.header('*NEW* Playoff Odds')
+    st.header('*UNDER CONSTRUCTION* Playoff Odds')
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     df = pd.read_excel(file, sheet_name="Playoff Odds")
     df['Team'] = df['Team'].replace({
