@@ -64,7 +64,7 @@ if current_week is None:
     current_week = settings.reg_season_count
 elif current_week != settings.reg_season_count:
   current_week -= 1
-current_week = 13
+current_week = 14
 
 # Store data in DataFrames 
 scores_df = pd.DataFrame(team_scores, index=team_names)
