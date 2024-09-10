@@ -43,7 +43,7 @@ leagueName = settings.name.replace(" 22/23", "")
 fileName = leagueName + " 2023"
 file = leagueName + ".xlsx"
 
-team_owners = [team.owner for team in league.teams]
+team_owners = [team.owners for team in league.teams]
 team_names = [team.team_name for team in league.teams]
 team_scores = [team.scores for team in league.teams] 
 team_scores_x = [team.scores for team in league.teams] 

@@ -50,13 +50,16 @@ league = League(league_id=310334683, year=2023, espn_s2='AEAfTKrAtdKbMxfMyenv9DJ
 
 # Prahlad Friends League
 # league = League(league_id=1781851, year=2023, espn_s2='AEBnVIPLGawrfX3pYmFejB2uTpTrDT5gKM7jbAqOtvaNBfAF0muAaPFFZBzwevb6Robdlp8Ruok9B8MFrXj6DEDW6m3zhlv0j9q%2BSVF446Q%2BU3ui%2F2mNHJK34K7mlc9dhW03a4HgrNWR4GDPukRdI5orkAF3Kl5KeDamvTff%2BaIlroUAgYyKLzQyEueU%2BLCCn4Jwb5ZLPBFSW00QQ3UbYc9tGwNeDZAKIiEEfd%2FQiKWXYfQnwep48PkunIN5%2FhYoa5MsjfG6jMhQAX22al5F%2F%2Fpuq6X7ei4emvlW3KAUbUMiY%2Bx4ViHMbWOcmrwkMPPFFqOsW8%2BkFK%2B1C40tt7Z3%2BaY1', swid='{634597F9-8435-46D1-9314-B554E8B4BB2A}')
-print(league.power_rankings(week=5))
+# print(league.power_rankings(week=5))
 settings = league.settings
-print(settings.reg_season_count)
-print(settings.playoff_team_count)
+# print(league.standings_weekly(week=5))
+# print(league.standings)
+# print(league._get_positional_ratings(week=5))
 
-# team_owners = [team.owner for team in league.teams]
-# print(team_owners)
+team_owners = [team.owners for team in league.teams]
+print(team_owners)
+team_owner = [team.owner[0] for team in league.teams]
+print(team_owner)
 # team_names = [team.team_name for team in league.teams]
 # print(team_names)
 # print(settings = league.settings4)
