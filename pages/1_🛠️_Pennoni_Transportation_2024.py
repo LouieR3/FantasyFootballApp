@@ -2,6 +2,7 @@ def app():
     import pandas as pd
     from operator import itemgetter
     import streamlit as st
+    from calcPercent import percent
     league = "0755 Fantasy Football 2024"
 
     st.title("🛠️ " + league)
@@ -19,7 +20,7 @@ def app():
         if col != "Teams":
             names.append(col)
     
-    percentList = [14, 10, 4, 13, 1]
+    percentList = percent(file)
     count = percentList[0]
     top25 = percentList[1]
     bot25 = percentList[2]
