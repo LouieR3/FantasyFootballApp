@@ -40,6 +40,7 @@ espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a
 
 # Pennoni Younglings
 league = League(league_id=310334683, year=2024, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=1339704102, year=2024, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 # Family League
 # league = League(league_id=1725372613, year=2023, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
@@ -59,9 +60,21 @@ settings = league.settings
 # print(league._get_positional_ratings(week=5))
 
 team_owners = [team.owners for team in league.teams]
-print(team_owners)
+flat_owners = [owner[0] for owner in team_owners]
+
+# Creating the DataFrame
+df = pd.DataFrame(flat_owners, columns=['displayName', 'firstName', 'lastName', 'id'])
+# Map team names to their corresponding owners based on the `id` matching `team_owner`
+
 team_owner = [team.owner[0] for team in league.teams]
-print(team_owner)
+# print(team_owner)
+team_name = [team.team_name for team in league.teams]
+print(team_name)
+df['team_name'] = df['id'].map(dict(zip(team_owner, team_name)))
+
+# Display the updated DataFrame
+print(df)
+
 # team_names = [team.team_name for team in league.teams]
 # print(team_names)
 # print(settings = league.settings4)
