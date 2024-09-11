@@ -5,7 +5,7 @@ def app():
     from calcPercent import percent
     from playoffNum import playoff_num
 
-    league = "Family League 2024"
+    league = "Family Fantasy 2024"
     st.title("👪 " + league)
     st.header('Schedule Comparisson')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')# league = "EBCLeague"
