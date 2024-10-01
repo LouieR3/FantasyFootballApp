@@ -5,6 +5,12 @@ from espn_api.football import League
 
 files = glob.glob('*.xlsx')
 
+league = League(league_id=1339704102, year=2024, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
+team_owners = [team.owner for team in league.teams]
+team_names = [team.team_name for team in league.teams]
+team_dict = dict(zip(team_names, team_owners))
+print(team_owners)
+afds
 appended_data = []
 leagueList = []
 for file in files:
