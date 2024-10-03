@@ -104,28 +104,33 @@ async def fetch_property_data(session, parcel_num):
 # Main function
 async def main():
     # Load the Excel file
-    df = load_excel_file('arcgis_with_service_lines.xlsx')
+    df = load_excel_file('updated_arcgis_with_service_lines.xlsx')
 
     # Create an aiohttp session for async requests
     async with aiohttp.ClientSession() as session:
         tasks = []
-        # Iterate over rows in the dataframe
-        for index, row in df.iterrows():
+        
+        # Iterate over rows in the dataframe where 'Property Date' is blank
+        for index, row in df[df['Property Date'].isna()].iterrows():
             parcel_num = row['PARCEL_NUM']
             task = asyncio.ensure_future(fetch_property_data(session, parcel_num))
-            tasks.append(task)
+            tasks.append((task, index))  # Track the task with its index
         
         # Gather all tasks and get the results
-        results = await asyncio.gather(*tasks)
-        
-        # Add the results as a new column in the DataFrame
-        df['Property Date'] = results
+        task_results = await asyncio.gather(*[task for task, index in tasks])
 
-        # Handle special cases where year ends in '00'
+        # Update only the blank 'Property Date' rows with the new data
+        for (result, index) in zip(task_results, [index for _, index in tasks]):
+            if result:  # Only update if there's a valid result
+                df.at[index, 'Property Date'] = result
+
+        # Handle special cases where year is '2000' and set it to None
         df['Property Date'] = df['Property Date'].apply(lambda x: None if x == 2000 else x)
 
-        # Save the updated DataFrame to a new Excel file
-        df.to_excel('updated_arcgis_with_service_lines.xlsx', index=False)
+        # Save the updated DataFrame to a new Excel file (appending data without overwriting)
+        df.to_excel('updated_arcgis_fetched_dates.xlsx', index=False)
+
+    print("Processing complete. Data saved to 'updated_arcgis_fetched_dates.xlsx'")
 
 # Run the async main function
 if __name__ == "__main__":
