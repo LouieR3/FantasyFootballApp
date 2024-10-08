@@ -13,7 +13,7 @@ def app():
     selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
 
     # Create the league string based on the selected year
-    league = f"EBC league {selected_year}"
+    league = f"EBC League {selected_year}"
     # league = "FamilyLeague"
     # league = "PennoniYounglings"
     file = league + ".xlsx"
