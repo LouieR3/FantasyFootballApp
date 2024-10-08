@@ -5,26 +5,18 @@ def app():
     from calcPercent import percent
     from playoffNum import playoff_num
 
-    st.title('🎮 EBC League 2023')
+    # Initialize the dropdown for year selection
+    year_options = ['2023', '2024']
+    selected_year = st.selectbox("Select Year", year_options, index=1)  # Defaults to 2024
+    league = f"Brown Munde {selected_year}"
+    st.title("🧑‍🤝‍🧑 " + league)
     st.header('Schedule Comparisson')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
-    league = "EBC League 2023"
     # league = "FamilyLeague"
     # league = "PennoniYounglings"
     file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-    df['Teams'] = df['Teams'].replace({
-        'Champagne  Papi': 'THE POOL',
-        'Seigaku FC': 'Inter Miami CF',
-        "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    })
-    
-    df = df.rename(columns={
-        'Champagne  Papi': 'THE POOL',
-        'Seigaku FC': 'Inter Miami CF',
-        "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    })
     df = df.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
@@ -39,24 +31,6 @@ def app():
     top10 = percentList[3]
     bot10 = percentList[4]
 
-    # df2 = df.style.apply(lambda x: ["background-color: white" if (int(x.split(" ")[0].split('-')[0]) >= top25 and int(x.split(" ")[0].split('-')[0]) < top10) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: gold" if (int(x.split(" ")[0].split('-')[0]) >= top10 and int(x.split(" ")[0].split('-')[0]) < count) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: goldenrod" if (int(x.split(" ")[0].split('-')[0]) == count) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot25 and int(x.split(" ")[0].split('-')[0]) > bot10) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot10 and int(x.split(" ")[0].split('-')[0]) > 0) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(x.split(" ")[0].split('-')[0]) == 0) else "" for x in x], axis=1, subset=names)
-    # df2 = df.style.apply(lambda x: ["background-color: khaki" 
-    #                         if (int(i.split(" ")[0]) >= top25 and int(i.split(" ")[0]) < top10) 
-    #                         else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: gold" if (int(i.split(" ")[0]) >= top10 and int(i.split(" ")[0]) < count) 
-    #                         else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: goldenrod" if (int(i.split(" ")[0]) == count) 
-    #                         else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(i.split(" ")[0]) <= bot25 and int(i.split(" ")[0]) > bot10) 
-    #                         else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot10 and int(i.split(" ")[0]) > 0) 
-    #                         else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) 
-    #                         else "" for i in x], axis = 1, subset=names)
-        # df2 = df.style.apply(lambda x: ["background-color: khaki" 
-    #                         if (int(i.split(" ")[0]) >= top25 and int(i.split(" ")[0]) < top10) 
-    #                         else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: gold" if (int(i.split(" ")[0]) >= top10 and int(i.split(" ")[0]) < count) 
-    #                         else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: goldenrod" if (int(i.split(" ")[0]) == count) 
-    #                         else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(i.split(" ")[0]) <= bot25 and int(i.split(" ")[0]) > bot10) 
-    #                         else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(i.split(" ")[0]) <= bot10 and int(i.split(" ")[0]) > 0) 
-    #                         else "" for i in x], axis = 1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(i.split(" ")[0]) == 0) 
-    #                         else "" for i in x], axis = 1, subset=names)
-
     df2 = df.style.apply(lambda x: ["background-color: khaki" 
                             if (int(x.split(" ")[0].split('-')[0]) >= top25 and int(x.split(" ")[0].split('-')[0]) < top10) 
                             else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: gold" if (int(x.split(" ")[0].split('-')[0]) >= top10 and int(x.split(" ")[0].split('-')[0]) < count) 
@@ -70,11 +44,6 @@ def app():
     st.header('Strength of Schedule')
     st.write("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
     df = pd.read_excel(file, sheet_name="Wins Against Schedule")
-    df['Teams'] = df['Teams'].replace({
-        'Champagne  Papi': 'THE POOL',
-        'Seigaku FC': 'Inter Miami CF',
-        "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    })
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Wins Against Schedule'])
@@ -84,24 +53,14 @@ def app():
     st.write('The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule.')
     st.write('Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules.')
     df = pd.read_excel(file, sheet_name="Expected Wins")
-    df['Team'] = df['Team'].replace({
-        'Champagne  Papi': 'THE POOL',
-        'Seigaku FC': 'Inter Miami CF',
-        "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    })
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Expected Wins'])
     st.dataframe(df3)
 
-    st.header('*UNDER CONSTRUCTION* Playoff Odds')
+    st.header('*NEW* Playoff Odds')
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     df = pd.read_excel(file, sheet_name="Playoff Odds")
-    df['Team'] = df['Team'].replace({
-        'Champagne  Papi': 'THE POOL',
-        'Seigaku FC': 'Inter Miami CF',
-        "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    })
     df = df.set_index("Team")
     # Function to format and round the values
     def format_and_round(cell):
@@ -124,11 +83,6 @@ def app():
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-    df['Teams'] = df['Teams'].replace({
-        'Champagne  Papi': 'THE POOL',
-        'Seigaku FC': 'Inter Miami CF',
-        "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    })
     df = df.set_index("Teams")
     # df = df.iloc[: , 1:]
     # df.index += 1
@@ -139,23 +93,10 @@ def app():
     st.write('Positive scores indicate winning against tough schedules. Negative scores mean losing with an easy schedule. Higher scores are better. Scores near zero are neutral.')
     st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
     df = pd.read_excel(file, sheet_name="Louie Power Index")
-    df['Teams'] = df['Teams'].replace({
-        'Champagne  Papi': 'THE POOL',
-        'Seigaku FC': 'Inter Miami CF',
-        "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    })
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
     st.dataframe(df3)
-
-    # st.header('Upset Factor of Previous Week')
-    # st.write('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
-    # df = pd.read_excel(file, sheet_name="Louie Power Index")
-    # df = df.iloc[: , 1:]
-    # df.index += 1
-    # df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
-    # st.dataframe(df3)
 
     st.header('Biggest LPI Upsets')
     # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')

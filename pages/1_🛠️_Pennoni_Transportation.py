@@ -2,9 +2,14 @@ def app():
     import pandas as pd
     from operator import itemgetter
     import streamlit as st
+    from calcPercent import percent
+    
+    # Initialize the dropdown for year selection
+    year_options = ['2022', '2023', '2024']
+    selected_year = st.selectbox("Select Year", year_options, index=2)  # Defaults to 2024
+    league = f"0755 Fantasy Football {selected_year}"
 
-    league = "Game of Yards! 2022"
-    st.title("🧑‍🤝‍🧑 " + league)
+    st.title("🛠️ " + league)
     st.header('Schedule Comparisson')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
     # league = "FamilyLeague"
@@ -19,7 +24,7 @@ def app():
         if col != "Teams":
             names.append(col)
     
-    percentList = [14, 10, 4, 13, 1]
+    percentList = percent(file)
     count = percentList[0]
     top25 = percentList[1]
     bot25 = percentList[2]
@@ -40,7 +45,8 @@ def app():
     st.write("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
     df = pd.read_excel(file, sheet_name="Wins Against Schedule")
     df = df.iloc[: , 1:]
-    df.index += 1
+    df.index += 1 
+    pd.options.mode.chained_assignment = None
     df3 = df.style.background_gradient(subset=['Wins Against Schedule'])
     st.dataframe(df3)
 
@@ -49,11 +55,12 @@ def app():
     st.write('Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules.')
     df = pd.read_excel(file, sheet_name="Expected Wins")
     df = df.iloc[: , 1:]
-    df.index += 1
+    df.index += 1 
+    pd.options.mode.chained_assignment = None
     df3 = df.style.background_gradient(subset=['Expected Wins'])
     st.dataframe(df3)
 
-    st.header('*NEW* Playoff Odds')
+    st.header('*UNDER CONSTRUCTION* Playoff Odds')
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     df = pd.read_excel(file, sheet_name="Playoff Odds")
     df = df.set_index("Team")
@@ -81,7 +88,8 @@ def app():
     st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
     df = pd.read_excel(file, sheet_name="Louie Power Index")
     df = df.iloc[: , 1:]
-    df.index += 1
+    df.index += 1 
+    pd.options.mode.chained_assignment = None
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
     st.dataframe(df3)
 
@@ -91,6 +99,6 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['LPI Difference'])
-    st.dataframe(df3)
+    st.dataframe(df3, height=600)
 
 app()
