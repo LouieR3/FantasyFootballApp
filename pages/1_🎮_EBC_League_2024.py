@@ -8,7 +8,12 @@ def app():
     st.title('🎮 EBC League 2024')
     st.header('Schedule Comparisson')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
-    league = "EBC League 2024"
+    # Initialize the dropdown for year selection
+    year_options = ['2021', '2022', '2023', '2024']
+    selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
+
+    # Create the league string based on the selected year
+    league = f"EBC league {selected_year}"
     # league = "FamilyLeague"
     # league = "PennoniYounglings"
     file = league + ".xlsx"
