@@ -104,7 +104,7 @@ async def fetch_property_data(session, parcel_num):
 # Main function
 async def main():
     # Load the Excel file
-    df = load_excel_file('updated_arcgis_with_service_lines.xlsx')
+    df = load_excel_file('usmam_merged_output.xlsx')
 
     # Create an aiohttp session for async requests
     async with aiohttp.ClientSession() as session:
