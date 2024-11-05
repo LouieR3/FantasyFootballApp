@@ -14,11 +14,11 @@ import random
 start_time = time.time()
 
 # Pennoni Younglings
-# league = League(league_id=310334683, year=2023, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=310334683, year=2023, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 # league = League(league_id=310334683, year=2022, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # Family League
-league = League(league_id=1725372613, year=2023, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+# league = League(league_id=1725372613, year=2023, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 # league = League(league_id=1725372613, year=2022, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # EBC League
@@ -95,3 +95,88 @@ else:
     final_teams_df = teams_df.head(playoff_team_count)
 
 print(final_teams_df)
+
+# team_owners = [team.owners for team in league.teams]
+team_names = [team.team_name for team in league.teams]
+team_scores = [team.scores for team in league.teams] 
+team_scores_x = [team.scores for team in league.teams] 
+schedules = []
+for team in league.teams:
+  schedule = [opponent.team_name for opponent in team.schedule]
+  schedules.append(schedule)
+
+# Precompute current week 
+current_week = None
+for week in range(1, settings.reg_season_count+1):
+    scoreboard = league.scoreboard(week)
+    if not any(matchup.home_score for matchup in scoreboard):
+        current_week = week
+        break 
+# print()
+if current_week is None:
+    current_week = settings.reg_season_count
+elif current_week != settings.reg_season_count:
+  current_week -= 1
+# current_week = 15
+# print(current_week)
+# Store data in DataFrames 
+scores_df = pd.DataFrame(team_scores, index=team_names)
+schedules_df = pd.DataFrame(schedules, index=team_names)
+# print(scores_df)
+# print()
+# print(schedules_df)
+# Create empty dataframe  
+records_df = pd.DataFrame(index=team_names, columns=team_names)
+
+# Fill diagonal with team names
+records_df.fillna('', inplace=True) 
+
+
+
+# Assuming `playoff_teams` is a list of the teams that made it to the playoffs based on regular season rankings
+# and `playoff_schedule` is a dictionary with week-by-week playoff matchups. 
+# Example playoff_schedule:
+# playoff_schedule = {
+#     "Quarterfinals": [("Team1", "Team8"), ("Team4", "Team5"), ("Team2", "Team7"), ("Team3", "Team6")],
+#     "Semifinals": [],
+#     "Finals": []
+# }
+
+# Dictionary to store playoff results
+playoff_results = {"Quarterfinals": [], "Semifinals": [], "Finals": []}
+
+# Iterate through each playoff week and calculate results
+for week, matchups in playoff_schedule.items():
+    print(f"\n{week} Results:")
+    advancing_teams = []
+    
+    # Iterate through each playoff matchup for the week
+    for team1, team2 in matchups:
+        # Get scores for team1 and team2 for this playoff week
+        team1_score = scores_df.loc[team1, current_week - len(playoff_schedule) + list(playoff_schedule.keys()).index(week)]
+        team2_score = scores_df.loc[team2, current_week - len(playoff_schedule) + list(playoff_schedule.keys()).index(week)]
+        
+        # Determine the result of the matchup
+        if team1_score > team2_score:
+            print(f"{team1} ({team1_score}) defeated {team2} ({team2_score})")
+            advancing_teams.append(team1)
+            playoff_results[week].append((team1, team2, team1_score, team2_score))
+        elif team2_score > team1_score:
+            print(f"{team2} ({team2_score}) defeated {team1} ({team1_score})")
+            advancing_teams.append(team2)
+            playoff_results[week].append((team2, team1, team2_score, team1_score))
+        else:
+            print(f"{team1} and {team2} tied with {team1_score}-{team2_score} (decide tie-breaker rule)")
+            # Use a tie-breaker if necessary, like higher seed advances
+            # advancing_teams.append(<winner based on tie-breaker>)
+    
+    # Move advancing teams to the next round
+    if week == "Quarterfinals":
+        playoff_schedule["Semifinals"] = [(advancing_teams[0], advancing_teams[1]), (advancing_teams[2], advancing_teams[3])]
+    elif week == "Semifinals":
+        playoff_schedule["Finals"] = [(advancing_teams[0], advancing_teams[1])]
+
+# Print the final winner after the Finals
+final_matchup = playoff_results["Finals"][0]
+winner = final_matchup[0] if final_matchup[2] > final_matchup[3] else final_matchup[1]
+print(f"\nLeague Champion: {winner} with a score of {final_matchup[2]} to {final_matchup[3]}!")
