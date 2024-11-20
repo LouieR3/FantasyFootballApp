@@ -23,8 +23,8 @@ league_id = 1118513122
 league_id = 1725372613
 years = [2022, 2023]
 # Pennoni Younglings
-# league_id = 310334683
-# years = [2022, 2023]
+league_id = 310334683
+years = [2022, 2023, 2024]
 
 # List to store matchup statistics
 all_matchups = [] 
@@ -113,23 +113,63 @@ matchups_df['Team Pair'] = matchups_df.apply(lambda row: tuple(sorted([row['Team
 # filtered_matchups = matchups_df[matchups_df['Team 1'] == 'Golden Receivers']
 # filtered_matchups = matchups_df[matchups_df['Team 1'] == 'The Hungry Dogs']
 # Function to get owner ID from the team name
-def get_owner_id_from_team_name(team_name, owner_to_team_name):
-    for owner, name in owner_to_team_name.items():
-        if name == team_name:
-            return owner
-    return None  # Return None if the team name is not found
+def get_owner_id_from_team_name(team_name_to_filter, owner_to_team_name):
+    """
+    Returns the owner ID for a given team name from a dictionary mapping team names to owner IDs.
+
+    Parameters:
+    - team_name_to_filter (str): The name of the team to filter.
+    - owner_to_team_name (dict): Dictionary mapping team names to owner IDs.
+
+    Returns:
+    - str: The owner ID if found, else 'ID not found'.
+    """
+    for team_name, ids in owner_to_team_name.items():
+        if team_name == team_name_to_filter:
+            # Assuming a team name maps to a single ID or list of IDs
+            return ids[0] if isinstance(ids, list) else ids
+    return "ID not found"
+
+def owner_df_creation():
+    team_owners = [team.owners for team in league.teams]
+    team_names  = [team.team_name for team in league.teams]
+    team_dict   = dict(zip(team_names, team_owner))
+
+    # Create a list of dictionaries for the DataFrame
+    data = []
+    for team in team_owners:
+        team = team[0]
+        data.append({
+            "Display Name": team['firstName'] + " " + team['lastName'],
+            "ID": team['id']
+        })
+
+    # Create the DataFrame
+    df = pd.DataFrame(data)
+    # Reverse the team_dict to map IDs to team names
+    id_to_team_name = {id_: team_name for team_name, ids in team_dict.items() for id_ in ids}
+    # Map team names to the DataFrame based on ID
+    df['Team Name'] = df['ID'].map(id_to_team_name)
+
+    # Display the DataFrame
+    return df
+
+owners_df = owner_df_creation()
 
 # Example team name to filter on
 team_name_to_filter = 'The Golden Receivers'
-team_name_to_filter = 'The Hungry Dogs'
-team_name_to_filter = 'Golden Receivers'
+# team_name_to_filter = 'The Hungry Dogs'
+# team_name_to_filter = 'Golden Receivers'
 
 # Get the owner ID corresponding to the given team name
 team_owner_id = get_owner_id_from_team_name(team_name_to_filter, owner_to_team_name)
+print(team_owner_id)
 
 if team_owner_id:
-    filtered_matchups = matchups_df[matchups_df['Team 1 Owner'] == '{4656A2AD-A939-460B-96A2-ADA939760B8B}']
+    # filtered_matchups = matchups_df[matchups_df['Team 1'] == team_name_to_filter]
+    # print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
 
+    filtered_matchups = matchups_df[matchups_df['Team 1 Owner'] == team_owner_id]
     print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
 
     # Helper function to calculate the record for Team 1
