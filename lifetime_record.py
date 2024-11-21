@@ -1,11 +1,7 @@
 from espn_api.football import League
 import pandas as pd
 import time
-from tabulate import tabulate
 from operator import itemgetter
-# from calcPercent import percent 
-import random
-from collections import defaultdict
 
 start_time = time.time()
 
