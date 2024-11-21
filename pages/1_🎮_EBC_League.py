@@ -4,9 +4,15 @@ def app():
     import streamlit as st
     from calcPercent import percent
     from playoffNum import playoff_num
+    from lifetime_record import lifetime_record
+
+    league_id = 1118513122
+    espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
+    swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
 
     # Initialize the dropdown for year selection
     year_options = ['2021', '2022', '2023', '2024']
+    
     selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
     st.title(f'🎮 EBC League {selected_year}')
     st.header('Schedule Comparisson')
@@ -14,22 +20,11 @@ def app():
 
     # Create the league string based on the selected year
     league = f"EBC League {selected_year}"
-    # league = "FamilyLeague"
-    # league = "PennoniYounglings"
+    
     file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-    # df['Teams'] = df['Teams'].replace({
-    #     'Champagne  Papi': 'THE POOL',
-    #     'Seigaku FC': 'Inter Miami CF',
-    #     "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    # })
     
-    # df = df.rename(columns={
-    #     'Champagne  Papi': 'THE POOL',
-    #     'Seigaku FC': 'Inter Miami CF',
-    #     "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    # })
     df = df.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
@@ -75,11 +70,7 @@ def app():
     st.header('Strength of Schedule')
     st.write("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
     df = pd.read_excel(file, sheet_name="Wins Against Schedule")
-    # df['Teams'] = df['Teams'].replace({
-    #     'Champagne  Papi': 'THE POOL',
-    #     'Seigaku FC': 'Inter Miami CF',
-    #     "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    # })
+    
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Wins Against Schedule'])
@@ -89,11 +80,7 @@ def app():
     st.write('The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule.')
     st.write('Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules.')
     df = pd.read_excel(file, sheet_name="Expected Wins")
-    # df['Team'] = df['Team'].replace({
-    #     'Champagne  Papi': 'THE POOL',
-    #     'Seigaku FC': 'Inter Miami CF',
-    #     "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    # })
+    
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Expected Wins'])
@@ -102,11 +89,7 @@ def app():
     st.header('*UNDER CONSTRUCTION* Playoff Odds')
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     df = pd.read_excel(file, sheet_name="Playoff Odds")
-    # df['Team'] = df['Team'].replace({
-    #     'Champagne  Papi': 'THE POOL',
-    #     'Seigaku FC': 'Inter Miami CF',
-    #     "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    # })
+    
     df = df.set_index("Team")
     # Function to format and round the values
     def format_and_round(cell):
@@ -129,11 +112,7 @@ def app():
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-    # df['Teams'] = df['Teams'].replace({
-    #     'Champagne  Papi': 'THE POOL',
-    #     'Seigaku FC': 'Inter Miami CF',
-    #     "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    # })
+    
     df = df.set_index("Teams")
     # df = df.iloc[: , 1:]
     # df.index += 1
@@ -144,11 +123,7 @@ def app():
     st.write('Positive scores indicate winning against tough schedules. Negative scores mean losing with an easy schedule. Higher scores are better. Scores near zero are neutral.')
     st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
     df = pd.read_excel(file, sheet_name="Louie Power Index")
-    # df['Teams'] = df['Teams'].replace({
-    #     'Champagne  Papi': 'THE POOL',
-    #     'Seigaku FC': 'Inter Miami CF',
-    #     "Pitman MaleManipulator": "Bryson Stott Fan Club"
-    # })
+    
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
@@ -169,5 +144,14 @@ def app():
     df.index += 1
     df3 = df.style.background_gradient(subset=['LPI Difference'])
     st.dataframe(df3)
+
+    st.header('Lifetime Record')
+    st.write('Select a team and see their record vs all other teams over every year and every game of that league')
+ 
+    selected_team = st.selectbox("Select Team", names)
+    lifetime_record_df = lifetime_record(league_id, espn_s2, swid, year_options, selected_team)
+    
+    df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
+    st.dataframe(df4)
 
 app()

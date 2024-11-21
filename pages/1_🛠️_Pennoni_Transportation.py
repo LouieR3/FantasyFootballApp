@@ -3,7 +3,13 @@ def app():
     from operator import itemgetter
     import streamlit as st
     from calcPercent import percent
+    from lifetime_record import lifetime_record
+    from lifetime_record import lifetime_record
     
+    league_id = 1339704102
+    espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4'
+    swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}'
+
     # Initialize the dropdown for year selection
     year_options = ['2022', '2024']
     selected_year = st.selectbox("Select Year", year_options, index=1)  # Defaults to 2024
@@ -101,4 +107,13 @@ def app():
     df3 = df.style.background_gradient(subset=['LPI Difference'])
     st.dataframe(df3, height=600)
 
+    st.header('Lifetime Record')
+    st.write('Select a team and see their record vs all other teams over every year and every game of that league')
+ 
+    selected_team = st.selectbox("Select Team", names)
+    lifetime_record_df = lifetime_record(league_id, espn_s2, swid, year_options, selected_team)
+    
+    df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
+    st.dataframe(df4)
+    
 app()
