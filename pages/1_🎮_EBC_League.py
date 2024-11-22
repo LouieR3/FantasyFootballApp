@@ -163,7 +163,7 @@ def app():
 
     # Convert to integers
     years = convert_to_int_list(year_options)
-    lifetime_record_df, year_df = lifetime_record(league_id, espn_s2, swid, years, selected_team)
+    lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, selected_team)
     
     df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
     st.dataframe(df4)
@@ -171,5 +171,9 @@ def app():
     # df5 = year_df.style.background_gradient(subset=['Win Percentage'])
     st.write("Here is this team's record by year:")
     st.dataframe(year_df)
+
+    # st.write("Breakdown a team's performance vs. another team")
+ 
+    # selected_team = st.selectbox("Select Team", names)
 
 app()

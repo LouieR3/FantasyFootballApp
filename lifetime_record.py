@@ -171,7 +171,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
         filtered_matchups = matchups_df[matchups_df['Team 1 Owner'] == team_owner_id]
         # print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
-        print(filtered_matchups[["Team 1", "Team 2", "Record", "My Points", "Their Points", "Year"]])
+        print(filtered_matchups[["Team 1", "Team 2", "Record", "Points Scored", "Average Points Difference", "Year"]])
 
         def year_by_year(filtered_matchups):
             # Step 1: Calculate Wins, Losses, Points Scored, and Points Against per Year
@@ -213,11 +213,24 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
             # Append the All Time row
             year_by_year_df = pd.concat([grouped, pd.DataFrame([all_time])], ignore_index=True)
+            year_by_year_df = year_by_year_df.drop(columns=['Record'])
 
             # Display the final DataFrame
             return year_by_year_df
         
         year_by_year_df = year_by_year(filtered_matchups)
+
+
+        # Create a mapping for ID to Display Name
+        owner_to_display_name = dict(zip(owners_df["ID"], owners_df["Display Name"]))
+
+        # Map Display Names to Team 1 Name and Team 2 Name
+        filtered_matchups["Team 1 Name"] = filtered_matchups["Team 1 Owner"].map(owner_to_display_name)
+        filtered_matchups["Team 2 Name"] = filtered_matchups["Team 2 Owner"].map(owner_to_display_name)
+
+        all_matchups_df = filtered_matchups[["Team 1", "Team 2", "Team 1 Name", "Team 2 Name", "Record", "Points Scored", "Average Points Difference", "Year"]]
+        print(all_matchups_df)
+        gdf
         
         def calculate_win_percentage(records):
             """
@@ -337,7 +350,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
         # Display the final DataFrame
         # print(grouped)
-        return grouped, year_by_year_df
+        return grouped, year_by_year_df, all_matchups_df
 
-df, year_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
-print(df)
+# df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
+# print(df)
