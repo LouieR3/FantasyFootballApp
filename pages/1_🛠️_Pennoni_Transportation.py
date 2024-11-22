@@ -111,7 +111,21 @@ def app():
     st.write('Select a team and see their record vs all other teams over every year and every game of that league')
  
     selected_team = st.selectbox("Select Team", names)
-    lifetime_record_df = lifetime_record(league_id, espn_s2, swid, year_options, selected_team)
+    def convert_to_int_list(original_list):
+        """
+        Converts all elements in a list to integers.
+
+        Parameters:
+        - original_list (list): A list of elements that can be converted to integers.
+
+        Returns:
+        - list: A new list with all elements as integers.
+        """
+        return [int(item) for item in original_list]
+
+    # Convert to integers
+    years = convert_to_int_list(year_options)
+    lifetime_record_df = lifetime_record(league_id, espn_s2, swid, years, selected_team)
     
     df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
     st.dataframe(df4)
