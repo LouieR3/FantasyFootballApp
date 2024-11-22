@@ -46,9 +46,9 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
         # print(team_owners)
         
         team_scores = [team.scores for team in teams]  # Each team's weekly scores
-        schedules = [[opponent.owner[0] for opponent in team.schedule] for team in teams]  # Use opponent owner ID
+        # schedules = [[opponent.owner[0] for opponent in team.schedule] for team in teams]  # Use opponent owner ID
         # print(schedules_df)
-        # schedules = [[opponent.owners[0]['id'] for opponent in team.schedule] for team in teams]  # Use opponent owner ID
+        schedules = [[opponent.owners[0]['id'] for opponent in team.schedule] for team in teams]  # Use opponent owner ID
         # print()
         # print(schedules_df)
         # sfd
@@ -287,7 +287,6 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
         # Drop the 'Team Pair' and 'Owner' columns as they're no longer needed
         grouped = grouped.drop(columns=['Team Pair', 'Team 1 Owner', 'Team 2 Owner'])
 
-        print(grouped)
         # Ensure team_name_to_filter is always in the 'Team 1' position
         def reorder_teams(row):
             if row['Team 2'] == team_name_to_filter:
