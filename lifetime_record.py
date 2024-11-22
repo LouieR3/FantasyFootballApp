@@ -229,8 +229,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
         filtered_matchups["Team 2 Name"] = filtered_matchups["Team 2 Owner"].map(owner_to_display_name)
 
         all_matchups_df = filtered_matchups[["Team 1", "Team 2", "Team 1 Name", "Team 2 Name", "Record", "Points Scored", "Average Points Difference", "Year"]]
-        print(all_matchups_df)
-        gdf
+        # print(all_matchups_df)
         
         def calculate_win_percentage(records):
             """
