@@ -47,6 +47,11 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
         
         team_scores = [team.scores for team in teams]  # Each team's weekly scores
         schedules = [[opponent.owner[0] for opponent in team.schedule] for team in teams]  # Use opponent owner ID
+        # print(schedules_df)
+        # schedules = [[opponent.owners[0]['id'] for opponent in team.schedule] for team in teams]  # Use opponent owner ID
+        # print()
+        # print(schedules_df)
+        # sfd
         
         # Track the most recent team name for each owner
         for owner, name in zip(team_owners, team_names):
@@ -139,24 +144,30 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
     def owner_df_creation():
         team_owners = [team.owners for team in league.teams]
         team_names  = [team.team_name for team in league.teams]
-        team_owner = [team.owners[0]['id'] for team in league.teams]
-        team_dict   = dict(zip(team_names, team_owner))
+        # team_owner = [team.owners[0]['id'] for team in league.teams]
+        # team_dict   = dict(zip(team_names, team_owner))
 
         # Create a list of dictionaries for the DataFrame
         data = []
+        count = 0
         for team in team_owners:
             team = team[0]
+            team_name = team_names[count]
             data.append({
                 "Display Name": team['firstName'] + " " + team['lastName'],
-                "ID": team['id']
+                "ID": team['id'],
+                "Team Name": team_name
             })
+            count += 1
 
         # Create the DataFrame
         df = pd.DataFrame(data)
+        # print(df)
         # Reverse the team_dict to map IDs to team names
-        id_to_team_name = {id_: team_name for team_name, ids in team_dict.items() for id_ in ids}
-        # Map team names to the DataFrame based on ID
-        df['Team Name'] = df['ID'].map(id_to_team_name)
+        # id_to_team_name = {id_: team_name for team_name, ids in team_dict.items() for id_ in ids}
+        # print(id_to_team_name)
+        # # Map team names to the DataFrame based on ID
+        # df['Team Name'] = df['ID'].map(id_to_team_name)
 
         # Display the DataFrame
         return df
@@ -179,7 +190,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
         # print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
 
         filtered_matchups = matchups_df[matchups_df['Team 1 Owner'] == team_owner_id]
-        print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
+        # print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
 
         def calculate_win_percentage(records):
             """
@@ -194,12 +205,18 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
             total_games = len(records)
             if total_games == 0:
                 return ".000"  # No games played
-            
+
+            # Count wins based on '1-0' outcomes
             wins = sum(1 for record in records if record == '1-0')
+
+            # Calculate win percentage
             win_percentage = round(wins / total_games, 3)
-            
-            # Format the win percentage to always have three decimals
-            return f"{win_percentage:.3f}"[1:]  # Strip leading 0 to match the desired format
+
+            # Format the win percentage: keep leading '1' for 1.000, strip leading '0' for others
+            if win_percentage == 1.0:
+                return "1.000"
+            else:
+                return f"{win_percentage:.3f}"[1:]
 
         # Helper function to calculate the record for Team 1
         def calculate_record(records):
@@ -270,6 +287,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
         # Drop the 'Team Pair' and 'Owner' columns as they're no longer needed
         grouped = grouped.drop(columns=['Team Pair', 'Team 1 Owner', 'Team 2 Owner'])
 
+        print(grouped)
         # Ensure team_name_to_filter is always in the 'Team 1' position
         def reorder_teams(row):
             if row['Team 2'] == team_name_to_filter:
