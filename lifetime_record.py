@@ -39,11 +39,12 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
         # Get teams' data
         teams = league.teams
         team_names = [team.team_name for team in teams]
-        team_owners = [team.owner[0] for team in teams]  # Use owner ID as unique identifier
-        print(teams[0].owner)
-        print()
-        print(teams[0].owner[0])
-        das
+        # team_owners = [team.owner[0] for team in teams]  # Use owner ID as unique identifier
+        # print(team_owners)
+        team_owners = [team.owners[0]['id'] for team in league.teams]
+        # print()
+        # print(team_owners)
+        
         team_scores = [team.scores for team in teams]  # Each team's weekly scores
         schedules = [[opponent.owner[0] for opponent in team.schedule] for team in teams]  # Use opponent owner ID
         
@@ -138,7 +139,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
     def owner_df_creation():
         team_owners = [team.owners for team in league.teams]
         team_names  = [team.team_name for team in league.teams]
-        team_owner = [team.owner for team in league.teams]
+        team_owner = [team.owners[0]['id'] for team in league.teams]
         team_dict   = dict(zip(team_names, team_owner))
 
         # Create a list of dictionaries for the DataFrame
