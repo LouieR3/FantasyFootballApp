@@ -39,19 +39,10 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
         # Get teams' data
         teams = league.teams
         team_names = [team.team_name for team in teams]
-        # team_owners = [team.owner[0] for team in teams]  # Use owner ID as unique identifier
-        # print(team_owners)
         team_owners = [team.owners[0]['id'] for team in league.teams]
-        # print()
-        # print(team_owners)
         
         team_scores = [team.scores for team in teams]  # Each team's weekly scores
-        # schedules = [[opponent.owner[0] for opponent in team.schedule] for team in teams]  # Use opponent owner ID
-        # print(schedules_df)
         schedules = [[opponent.owners[0]['id'] for opponent in team.schedule] for team in teams]  # Use opponent owner ID
-        # print()
-        # print(schedules_df)
-        # sfd
         
         # Track the most recent team name for each owner
         for owner, name in zip(team_owners, team_names):
@@ -91,6 +82,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                 # Calculate points difference and trend
                 points_scored = f"{team_score}-{opponent_score}"
                 points_diff = abs(team_score - opponent_score)
+                points_diff = f"{points_diff:.2f}"
                 trend = f"{winner} W1"
 
                 # Append the result to the matchups list
@@ -102,24 +94,20 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                     "Record": team_record,
                     "Points Scored": points_scored,
                     "Average Points Difference": points_diff,
-                    "Trend": trend
+                    "Trend": trend,
+                    "Year": year,
+                    "My Points": team_score,
+                    "Their Points": opponent_score
                 })
 
     # Convert the matchups data into a DataFrame
     matchups_df = pd.DataFrame(all_matchups)
 
-    # Display or further process the matchups_df DataFrame as needed
-    # print(matchups_df)
-
     # Create a consistent order for team pairs to avoid duplicates
     matchups_df['Team Pair'] = matchups_df.apply(lambda row: tuple(sorted([row['Team 1 Owner'], row['Team 2 Owner']])), axis=1)
+    # print(matchups_df[["Team 1", "Team 2", "Record", "My Points", "Their Points", "Year"]])
+    # sfd
 
-    # # Drop duplicate rows based on 'Team Pair' to ensure only one instance of each pair is processed
-    # matchups_df = matchups_df.drop_duplicates(subset=['Team Pair'])
-
-    # filtered_matchups = matchups_df[matchups_df['Team 1'] == 'The Golden Receivers']
-    # filtered_matchups = matchups_df[matchups_df['Team 1'] == 'Golden Receivers']
-    # filtered_matchups = matchups_df[matchups_df['Team 1'] == 'The Hungry Dogs']
     # Function to get owner ID from the team name
     def get_owner_id_from_team_name(team_name_to_filter, owners_df):
         """
@@ -144,8 +132,6 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
     def owner_df_creation():
         team_owners = [team.owners for team in league.teams]
         team_names  = [team.team_name for team in league.teams]
-        # team_owner = [team.owners[0]['id'] for team in league.teams]
-        # team_dict   = dict(zip(team_names, team_owner))
 
         # Create a list of dictionaries for the DataFrame
         data = []
@@ -162,12 +148,6 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
         # Create the DataFrame
         df = pd.DataFrame(data)
-        # print(df)
-        # Reverse the team_dict to map IDs to team names
-        # id_to_team_name = {id_: team_name for team_name, ids in team_dict.items() for id_ in ids}
-        # print(id_to_team_name)
-        # # Map team names to the DataFrame based on ID
-        # df['Team Name'] = df['ID'].map(id_to_team_name)
 
         # Display the DataFrame
         return df
@@ -191,7 +171,54 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
         filtered_matchups = matchups_df[matchups_df['Team 1 Owner'] == team_owner_id]
         # print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
+        print(filtered_matchups[["Team 1", "Team 2", "Record", "My Points", "Their Points", "Year"]])
 
+        def year_by_year(filtered_matchups):
+            # Step 1: Calculate Wins, Losses, Points Scored, and Points Against per Year
+            def parse_record(record):
+                wins, losses = map(int, record.split("-"))
+                return wins, losses
+
+            # Add wins and losses columns for easier summation
+            filtered_matchups["Wins"] = filtered_matchups["Record"].apply(lambda x: parse_record(x)[0])
+            filtered_matchups["Losses"] = filtered_matchups["Record"].apply(lambda x: parse_record(x)[1])
+
+            # Group by Year
+            grouped = filtered_matchups.groupby("Year").agg(
+                Wins=("Wins", "sum"),
+                Losses=("Losses", "sum"),
+                Points_Scored=("My Points", "sum"),
+                Points_Against=("Their Points", "sum")
+            ).reset_index()
+
+            # Add Record column
+            grouped["Record"] = grouped["Wins"].astype(str) + "-" + grouped["Losses"].astype(str)
+
+            # Rename columns
+            grouped = grouped.rename(columns={
+                "Year": "Year",
+                "Points_Scored": "Points Scored",
+                "Points_Against": "Points Against"
+            })
+
+            # Step 2: Add Cumulative Row for "All Time"
+            all_time = {
+                "Year": "All Time",
+                "Wins": grouped["Wins"].sum(),
+                "Losses": grouped["Losses"].sum(),
+                "Points Scored": grouped["Points Scored"].sum(),
+                "Points Against": grouped["Points Against"].sum(),
+                "Record": f"{grouped['Wins'].sum()}-{grouped['Losses'].sum()}"
+            }
+
+            # Append the All Time row
+            year_by_year_df = pd.concat([grouped, pd.DataFrame([all_time])], ignore_index=True)
+
+            # Display the final DataFrame
+            return year_by_year_df
+        
+        year_by_year_df = year_by_year(filtered_matchups)
+        
         def calculate_win_percentage(records):
             """
             Calculates and returns the win percentage as a three-decimal string.
@@ -310,7 +337,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
         # Display the final DataFrame
         # print(grouped)
-        return grouped
+        return grouped, year_by_year_df
 
-df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
+df, year_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
 print(df)
