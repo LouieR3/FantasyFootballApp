@@ -169,7 +169,8 @@ def app():
     # Convert to integers
     years = convert_to_int_list(year_options)
     print(years)
-    lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, selected_team)
+    years_int = [2022, 2023, 2024]
+    lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years_int, selected_team)
     
     df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
     st.dataframe(df4)
