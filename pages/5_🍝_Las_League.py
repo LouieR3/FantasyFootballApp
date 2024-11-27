@@ -13,7 +13,7 @@ def app():
     # Initialize the dropdown for year selection
     year_options = ['2022', '2023', '2024']
     
-    selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
+    selected_year = st.selectbox("Select Year", year_options, index=2)  # Defaults to 2024
     st.title(f'🍝 Las League {selected_year}')
     # st.title(f'🍝 Las League 2024')
     st.header('Schedule Comparisson')
