@@ -165,7 +165,7 @@ def app():
         return [int(item) for item in original_list]
 
     # Convert to integers
-    year_options = ['2018', '2019', '2020', '2021', '2022', '2023', '2024']
+    # year_options = ['2018', '2019', '2020', '2021', '2022', '2023', '2024']
     years = convert_to_int_list(year_options)
     print(years)
     lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, selected_team)
