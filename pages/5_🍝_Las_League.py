@@ -67,7 +67,7 @@ def app():
                             else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot10 and int(x.split(" ")[0].split('-')[0]) > 0) 
                             else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(x.split(" ")[0].split('-')[0]) == 0) 
                             else "" for x in x], axis = 1, subset=names)
-    st.dataframe(df2, width=2000, height=560)
+    st.dataframe(df2, width=2000, height=540)
 
     st.header('Strength of Schedule')
     st.write("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
@@ -76,7 +76,7 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Wins Against Schedule'])
-    st.dataframe(df3, height=600)
+    st.dataframe(df3, height=560)
 
     st.header('Expected Wins')
     st.write('The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule.')
@@ -86,13 +86,14 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Expected Wins'])
-    st.dataframe(df3, height=600)
+    st.dataframe(df3, height=560)
 
     st.header('*UNDER CONSTRUCTION* Playoff Odds')
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     df = pd.read_excel(file, sheet_name="Playoff Odds")
     
     df = df.set_index("Team")
+    df = df.sort_values(by='Chance of making playoffs')
     # Function to format and round the values
     def format_and_round(cell):
         if isinstance(cell, (int, float)):
@@ -119,7 +120,7 @@ def app():
     df = df.set_index("Teams")
     # df = df.iloc[: , 1:]
     # df.index += 1
-    st.dataframe(df, height=600)
+    st.dataframe(df, height=560)
 
     st.header('The Louie Power Index (LPI)')
     st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
@@ -130,7 +131,7 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
-    st.dataframe(df3, height=600)
+    st.dataframe(df3, height=580)
 
     # st.header('Upset Factor of Previous Week')
     # st.write('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
@@ -146,7 +147,7 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['LPI Difference'])
-    st.dataframe(df3, height=600)
+    st.dataframe(df3, height=560)
 
     st.header('Lifetime Record')
     st.write('Select a team and see their record vs all other teams over every year and every game of that league')
@@ -171,7 +172,7 @@ def app():
     lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, selected_team)
     
     df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
-    st.dataframe(df4, height=600)
+    st.dataframe(df4, height=560)
 
     # df5 = year_df.style.background_gradient(subset=['Win Percentage'])
     st.write("Here is this team's record by year:")
