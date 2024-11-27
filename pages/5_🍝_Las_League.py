@@ -11,15 +11,17 @@ def app():
     swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
 
     # Initialize the dropdown for year selection
-    year_options = ['2024']
+    # year_options = ['2024']
     
-    selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
-    st.title(f'🍝 Las League {selected_year}')
+    # selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
+    # st.title(f'🍝 Las League {selected_year}')
+    st.title(f'🍝 Las League 2024')
     st.header('Schedule Comparisson')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
 
     # Create the league string based on the selected year
-    league = f"THE BEST OF THE BEST {selected_year}"
+    # league = f"THE BEST OF THE BEST {selected_year}"
+    league = f"THE BEST OF THE BEST 2024"
     
     file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
