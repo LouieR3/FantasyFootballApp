@@ -21,9 +21,9 @@ swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
 # league_id = 1725372613
 # years = [2022, 2023]
 # Pennoni Younglings
-league_id = 310334683
-years = [2022, 2023, 2024]
-team_name_to_filter = 'The Golden Receivers'
+# league_id = 310334683
+# years = [2022, 2023, 2024]
+# team_name_to_filter = 'The Golden Receivers'
 
 
 def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
@@ -107,7 +107,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
     # Create a consistent order for team pairs to avoid duplicates
     matchups_df['Team Pair'] = matchups_df.apply(lambda row: tuple(sorted([row['Team 1 Owner'], row['Team 2 Owner']])), axis=1)
-    # print(matchups_df[["Team 1", "Team 2", "Record", "My Points", "Their Points", "Year"]])
+    print(matchups_df[["Team 1", "Team 2", "Record", "My Points", "Their Points", "Year"]])
     # sfd
 
     # Function to get owner ID from the team name
@@ -370,16 +370,16 @@ def convert_to_int_list(original_list):
 # espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
 # swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
 
-# league_id = 1049459
-# espn_s2='AEC6x9TPufDhJAV682o%2BK6c8XdanPIkD8i3F4MF%2Fgtb1A4FD9SJMNrFoDt2sVHcppQpcYUIDF7kRotFrq8u%2Bkd4W94iy%2B952I9AG4ykEF3y2YRBvm75VMpecOvj7tZiv7iZ8R2K2SEqMExArEwMg3Bnbj161G3gMS6I%2F7YOKKMPTnC1VSTWuF5JlljFfFZz5hswmCr6IMZnZCzFmy%2FnPdwymI1NZ9IOAwJVn9pnBi9FpvyzcdcyYG2NOaarBmTLqyAd3%2BEdrDEpre%2F6Cfz6c3KcwO%2FFjPBkIFDxC1szNelynxfJZCupLm%2FEFFhXdbKnBeesbbOXJg%2BDLqZU1KGdCTU0FyEKr%2BcouwUy%2BnyDCuMYUog%3D%3D'
-# swid='{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}'
+league_id = 1049459
+espn_s2='AEC6x9TPufDhJAV682o%2BK6c8XdanPIkD8i3F4MF%2Fgtb1A4FD9SJMNrFoDt2sVHcppQpcYUIDF7kRotFrq8u%2Bkd4W94iy%2B952I9AG4ykEF3y2YRBvm75VMpecOvj7tZiv7iZ8R2K2SEqMExArEwMg3Bnbj161G3gMS6I%2F7YOKKMPTnC1VSTWuF5JlljFfFZz5hswmCr6IMZnZCzFmy%2FnPdwymI1NZ9IOAwJVn9pnBi9FpvyzcdcyYG2NOaarBmTLqyAd3%2BEdrDEpre%2F6Cfz6c3KcwO%2FFjPBkIFDxC1szNelynxfJZCupLm%2FEFFhXdbKnBeesbbOXJg%2BDLqZU1KGdCTU0FyEKr%2BcouwUy%2BnyDCuMYUog%3D%3D'
+swid='{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}'
 
-# # Initialize the dropdown for year selection
+# Initialize the dropdown for year selection
 # year_options = ['2018', '2019', '2020', '2021', '2022', '2023', '2024']
 # year_options = ['2022', '2023', '2024']
 # # Convert to integers
 # years = convert_to_int_list(year_options)
 # print(years)
-# lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'BB')
+# lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'Team Rodriguez')
 # # df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
 # print(lifetime_record_df)

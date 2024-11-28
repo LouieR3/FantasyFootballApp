@@ -111,7 +111,7 @@ def app():
     # df = df.iloc[: , 1:]
     # df.index += 1
     # df3 = df.style.background_gradient(subset=['Expected Wins'])
-    st.dataframe(styled_df, height=570)
+    st.dataframe(styled_df, height=540)
 
     st.header('Louie Power Index Each Week')
     df = pd.read_excel(file, sheet_name="LPI By Week")
@@ -131,7 +131,7 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
-    st.dataframe(df3, height=580)
+    st.dataframe(df3, height=560)
 
     # st.header('Upset Factor of Previous Week')
     # st.write('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
@@ -147,7 +147,7 @@ def app():
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['LPI Difference'])
-    st.dataframe(df3, height=560)
+    st.dataframe(df3)
 
     st.header('Lifetime Record')
     st.write('Select a team and see their record vs all other teams over every year and every game of that league')
