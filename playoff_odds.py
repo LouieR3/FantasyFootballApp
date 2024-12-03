@@ -42,8 +42,8 @@ league = League(league_id=1118513122, year=2024, espn_s2=espn_s2, swid='{4656A2A
 # Brown Munde
 # league = League(league_id=367134149, year=2024, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
-espn_s2 = "AECbYb8WaMMCKHklAi740KXDsHbXHTaW5mI%2FLPUegrKbIb6MRovW0L4NPTBpsC%2Bc2%2Fn7UeX%2Bac0lk3KGEwyeI%2FgF9WynckxWNIfe8m8gh43s68UyfhDj5K187Fj5764WUA%2BTlCh1AF04x9xnKwwsneSvEng%2BfACneWjyu7hJy%2FOVWsHlEm3nfMbU7WbQRDBRfkPy7syz68C4pgMYN2XaU1kgd9BRj9rwrmXZCvybbezVEOEsApniBWRtx2lD3yhJnXYREAupVlIbRcd3TNBP%2F5Frfr6pnMMfUZrR9AP1m1OPGcQ0bFaZbJBoAKdWDk%2F6pJs%3D"
-league = League(league_id=1242265374, year=2024, espn_s2=espn_s2, swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
+# espn_s2 = "AECbYb8WaMMCKHklAi740KXDsHbXHTaW5mI%2FLPUegrKbIb6MRovW0L4NPTBpsC%2Bc2%2Fn7UeX%2Bac0lk3KGEwyeI%2FgF9WynckxWNIfe8m8gh43s68UyfhDj5K187Fj5764WUA%2BTlCh1AF04x9xnKwwsneSvEng%2BfACneWjyu7hJy%2FOVWsHlEm3nfMbU7WbQRDBRfkPy7syz68C4pgMYN2XaU1kgd9BRj9rwrmXZCvybbezVEOEsApniBWRtx2lD3yhJnXYREAupVlIbRcd3TNBP%2F5Frfr6pnMMfUZrR9AP1m1OPGcQ0bFaZbJBoAKdWDk%2F6pJs%3D"
+# league = League(league_id=1242265374, year=2024, espn_s2=espn_s2, swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
@@ -79,6 +79,7 @@ schedules_df = pd.DataFrame(schedules, index=team_names)
 # print(scores_df)
 # print()
 # print(schedules_df)
+
 # Create empty dataframe  
 records_df = pd.DataFrame(index=team_names, columns=team_names)
 
@@ -243,18 +244,18 @@ def oddsCalculator():
       std_dev = standard_deviation(non_zero_values) * dynamic_std_dev_factor
       
       team_data[team_name] = {'average_score': average_score, 'std_dev': std_dev}
-  # Define the number of Monte Carlo simulations
-  num_simulations = 10000
   # Function to simulate a season
   def simulate_season(team_data, schedules_df):
       standings = {team: 0 for team in team_data}
       # Simulate each week's matchups
       for week in range(current_week, schedules_df.shape[1]):
         week_schedule = schedules_df.iloc[:, week].to_list()
-        # print(week_schedule)
+        print(standings)
+        print()
         random.shuffle(week_schedule)
-        # print(week_schedule)
-        # print()
+        print()
+        print(week_schedule)
+        print()
         # Simulate each matchup
         for i in range(0, len(week_schedule), 2):
             team1 = week_schedule[i]
@@ -262,6 +263,13 @@ def oddsCalculator():
             # Generate random scores based on team data
             score1 = random.gauss(team_data[team1]['average_score'], team_data[team1]['std_dev'])
             score2 = random.gauss(team_data[team2]['average_score'], team_data[team2]['std_dev'])
+            print("======")
+            print(team1)
+            print(team2)
+            print()
+            print(score1)
+            print(score2)
+            print("======")
             if score1 > score2:
                 standings[team1] += 2
             elif score1 < score2:
@@ -270,14 +278,22 @@ def oddsCalculator():
                 standings[team1] += 1
                 standings[team2] += 1
 
+      print()
+      print(standings)
+      print()
       # Sort the standings by both total points and average score
       sorted_standings = sorted(standings.items(), key=lambda x: (-x[1], team_data[x[0]]['average_score']), reverse=True)
+      print(sorted_standings)
+      print()
+      afsd
       return [team for team, _ in sorted_standings]
 
   # Dictionary to store the final standings for each simulation
   final_standings = {team: [0] * len(team_data) for team in team_data}
 
   # Run Monte Carlo simulations
+  # Define the number of Monte Carlo simulations
+  num_simulations = 10000
   for _ in range(num_simulations):
       simulated_season = simulate_season(team_data, schedules_df)
       for i, team in enumerate(simulated_season):

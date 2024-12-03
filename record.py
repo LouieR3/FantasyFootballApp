@@ -28,11 +28,15 @@ settings = league.settings
 
 regCount = settings.reg_season_count
 teams = league.teams
-
+playoff_num = settings.playoff_team_count
 team = league.teams[0]
 wins = team.wins
 loss1 = team.losses
 print(team)
 print(wins)
 print(loss1)
+
+print()
+print(regCount)
+print(playoff_num)
 
