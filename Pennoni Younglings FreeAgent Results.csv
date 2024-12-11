@@ -1,55 +1,55 @@
-Player,Position,Team,Projected Points,Projected Avg Points,Points,Avg Points,Games Played
-Broncos D/ST,D/ST,Daddy's Home,68.4,4.02,134.0,10.31,13
-Chris Boswell,K,Daddy's Home,125.7,7.39,162.0,12.46,13
-Ameer Abdullah,RB,Daddy's Home,39.89,2.85,68.4,5.26,13
-Isaac Guerendo,RB,Daddy's Home,40.36,2.88,68.3,5.25,13
-Zach Ertz,TE,Partners for What's Possible,74.01,4.93,130.1,10.01,13
-Sam Darnold,QB,19th St Halal Cart,193.18,14.86,241.36,18.57,13
-Vikings D/ST,D/ST,19th St Halal Cart,98.22,5.78,137.0,10.54,13
-Tucker Kraft,TE,19th St Halal Cart,89.95,6.0,133.5,10.27,13
-Bo Nix,QB,Pho_King,193.34,13.81,227.28,17.48,13
-Cole Kmet,TE,Pho_King,113.67,7.58,106.8,8.22,13
-Jameis Winston,QB,Pho_King,28.36,7.09,133.5,12.14,11
-Brandon McManus,K,Pho_King,0.0,0.0,55.0,7.86,7
-Michael Wilson,WR,Came and Wentz,142.03,9.47,108.3,8.33,13
-Commanders D/ST,D/ST,Came and Wentz,83.45,4.91,69.0,5.31,13
-Will Levis,QB,Came and Wentz,230.49,15.37,112.58,11.26,10
-Patrick Taylor Jr.,RB,Came and Wentz,15.04,1.16,13.2,1.47,9
-Kenny McIntosh,RB,Came and Wentz,32.37,2.49,8.1,0.62,13
-Cade Otton,TE,The Golden Receivers,109.63,7.31,136.2,10.48,13
-Packers D/ST,D/ST,The Golden Receivers,104.03,6.12,109.0,8.38,13
-Tyler Bass,K,The Golden Receivers,120.92,7.11,100.0,7.69,13
-Kimani Vidal,RB,The Golden Receivers,37.3,2.66,23.7,3.95,6
-Jauan Jennings,WR,PAI Alcoholics Anonymous ,73.16,4.88,170.4,15.49,11
-Nick Folk,K,PAI Alcoholics Anonymous ,132.01,7.77,103.0,7.92,13
-Cooper Rush,QB,PAI Alcoholics Anonymous ,34.58,8.64,55.32,6.92,8
-Jamaal Williams,RB,PAI Alcoholics Anonymous ,95.26,6.8,29.7,2.97,10
-Seahawks D/ST,D/ST,PAI Alcoholics Anonymous ,113.67,6.69,108.0,8.31,13
-Baker Mayfield,QB,Pennoni Adjacent,246.49,16.43,259.26,19.94,13
-Chase McLaughlin,K,Pennoni Adjacent,129.69,7.63,112.0,8.62,13
-Texans D/ST,D/ST,Pennoni Adjacent,98.92,5.82,119.0,9.15,13
-Jonnu Smith,TE,Pennoni Adjacent,83.39,5.56,160.1,12.32,13
-Quentin Johnston,WR,Pennoni Adjacent,110.27,7.35,113.0,10.27,11
-Elijah Moore,WR,Pennoni Adjacent,71.95,4.8,107.2,8.25,13
-Nick Westbrook-Ikhine,WR,Pennoni Adjacent,22.26,1.59,107.4,8.26,13
-Chargers D/ST,D/ST,Pennoni Adjacent,87.64,5.16,118.0,9.08,13
-Geno Smith,QB,Philadelphia Bills Mafia,227.89,16.28,205.56,15.81,13
-Ray Davis,RB,Philadelphia Bills Mafia,75.16,5.37,84.5,6.5,13
-Rashod Bateman,WR,Philadelphia Bills Mafia,113.32,7.55,122.4,9.42,13
-Justice Hill,RB,Philadelphia Bills Mafia,89.11,6.36,106.3,8.18,13
-Juwan Johnson,TE,Philadelphia Bills Mafia,119.96,8.0,88.3,6.79,13
-Kareem Hunt,RB,Eli,0.0,0.0,125.6,12.56,10
-Tyrone Tracy Jr.,RB,Eli,82.88,5.92,143.0,11.0,13
-Mike Gesicki,TE,Eli,79.22,5.28,92.6,7.72,12
-Buccaneers D/ST,D/ST,Eli,82.89,4.88,62.0,4.77,13
-Jason Myers,K,Eli,123.54,7.27,102.0,7.85,13
-Bills D/ST,D/ST,Prahlad's Ghost,87.59,5.15,102.0,7.85,13
-Russell Wilson,QB,Prahlad's Ghost,177.04,14.75,121.76,17.39,7
-Cam Akers,RB,Prahlad's Ghost,23.03,1.77,64.3,4.95,13
-Will Dissly,TE,Prahlad's Ghost,65.27,4.35,90.8,6.98,13
-Will Reichard,K,Prahlad's Ghost,119.12,7.01,76.0,8.44,9
-Tank Bigsby,RB,Team Cogs,74.42,5.32,100.2,8.35,12
-Cedric Tillman,WR,Team Cogs,78.84,5.26,80.4,7.31,11
-Marquez Valdes-Scantling,WR,Team Cogs,27.72,1.85,69.4,6.31,11
-Devaughn Vele,WR,Team Cogs,33.56,2.24,76.7,8.52,9
-Cardinals D/ST,D/ST,Team Cogs,58.33,3.43,80.0,6.15,13
+Player,Position,Team,Projected Points,Projected Avg Points,Points,Avg Points,Games Played,Position Value,Performance Grade
+Baker Mayfield,QB,Pennoni Adjacent,246.49,16.43,259.26,19.94,13,1.3609210687477034,A+
+Geno Smith,QB,Philadelphia Bills Mafia,227.89,16.28,205.56,15.81,13,1.0790362373361797,B-
+Sam Darnold,QB,19th St Halal Cart,193.18,14.86,241.36,18.57,13,1.2669594582771957,B-
+Jonnu Smith,TE,Pennoni Adjacent,83.39,5.56,160.1,12.32,13,1.373975807835804,C+
+Chris Boswell,K,Daddy's Home,125.7,7.39,162.0,12.46,13,1.6349873843566023,C+
+Bo Nix,QB,Pho_King,193.34,13.81,227.28,17.48,13,1.1930499903763714,C+
+Jauan Jennings,WR,PAI Alcoholics Anonymous ,73.16,4.88,170.4,15.49,11,1.2942230863878719,C
+Vikings D/ST,D/ST,19th St Halal Cart,98.22,5.78,137.0,10.54,13,1.6801886792452831,C
+Chargers D/ST,D/ST,Pennoni Adjacent,87.64,5.16,118.0,9.08,13,1.4471698113207547,C-
+Texans D/ST,D/ST,Pennoni Adjacent,98.92,5.82,119.0,9.15,13,1.459433962264151,C-
+Broncos D/ST,D/ST,Daddy's Home,68.4,4.02,134.0,10.31,13,1.6433962264150945,D+
+Bills D/ST,D/ST,Prahlad's Ghost,87.59,5.15,102.0,7.85,13,1.2509433962264151,D
+Tyrone Tracy Jr.,RB,Eli,82.88,5.92,143.0,11.0,13,1.067279225787191,D
+Cade Otton,TE,The Golden Receivers,109.63,7.31,136.2,10.48,13,1.1688663649421394,D
+Seahawks D/ST,D/ST,PAI Alcoholics Anonymous ,113.67,6.69,108.0,8.31,13,1.3245283018867926,D
+Packers D/ST,D/ST,The Golden Receivers,104.03,6.12,109.0,8.38,13,1.3367924528301887,D
+Tucker Kraft,TE,19th St Halal Cart,89.95,6.0,133.5,10.27,13,1.1456950052846961,D-
+Chase McLaughlin,K,Pennoni Adjacent,129.69,7.63,112.0,8.62,13,1.1303616484440706,F-
+Kareem Hunt,RB,Eli,0.0,0.0,125.6,12.56,10,0.9374144808312671,F-
+Rashod Bateman,WR,Philadelphia Bills Mafia,113.32,7.55,122.4,9.42,13,0.9296532028983305,F-
+Zach Ertz,TE,Partners for What's Possible,74.01,4.93,130.1,10.01,13,1.1165162560864341,F-
+Jason Myers,K,Eli,123.54,7.27,102.0,7.85,13,1.0294365012615645,F-
+Nick Folk,K,PAI Alcoholics Anonymous ,132.01,7.77,103.0,7.92,13,1.039529015979815,F-
+Quentin Johnston,WR,Pennoni Adjacent,110.27,7.35,113.0,10.27,11,0.8582582673816287,F-
+Tyler Bass,K,The Golden Receivers,120.92,7.11,100.0,7.69,13,1.0092514718250631,F-
+Nick Westbrook-Ikhine,WR,Pennoni Adjacent,22.26,1.59,107.4,8.26,13,0.8157251143078489,F-
+Michael Wilson,WR,Came and Wentz,142.03,9.47,108.3,8.33,13,0.8225607996232778,F-
+Cardinals D/ST,D/ST,Team Cogs,58.33,3.43,80.0,6.15,13,0.9811320754716982,F-
+Jameis Winston,QB,Pho_King,28.36,7.09,133.5,12.14,11,0.7007751395426152,F-
+Cole Kmet,TE,Pho_King,113.67,7.58,106.8,8.22,13,0.9165560042277568,F-
+Mike Gesicki,TE,Eli,79.22,5.28,98.0,7.54,13,0.8410345357146084,F-
+Juwan Johnson,TE,Philadelphia Bills Mafia,119.96,8.0,88.3,6.79,13,0.7577892806489788,F-
+Will Dissly,TE,Prahlad's Ghost,65.27,4.35,90.8,6.98,13,0.7792442432947596,F-
+Will Reichard,K,Prahlad's Ghost,119.12,7.01,76.0,8.44,9,0.767031118587048,F-
+Elijah Moore,WR,Pennoni Adjacent,71.95,4.8,107.2,8.25,13,0.8142060731266424,F-
+Justice Hill,RB,Philadelphia Bills Mafia,89.11,6.36,106.3,8.18,13,0.7933691028054434,F-
+Cedric Tillman,WR,Team Cogs,78.84,5.26,80.4,7.31,11,0.6106545548449819,F-
+Buccaneers D/ST,D/ST,Eli,82.89,4.88,62.0,4.77,13,0.7603773584905661,F-
+Commanders D/ST,D/ST,Came and Wentz,83.45,4.91,69.0,5.31,13,0.8462264150943397,F-
+Russell Wilson,QB,Prahlad's Ghost,177.04,14.75,121.76,17.39,7,0.6391489212787178,F-
+Will Levis,QB,Came and Wentz,230.49,15.37,112.58,11.26,10,0.5909607880876975,F-
+Tank Bigsby,RB,Team Cogs,74.42,5.32,100.2,8.35,12,0.7478418071599758,F-
+Ray Davis,RB,Philadelphia Bills Mafia,75.16,5.37,84.5,6.5,13,0.6306649970560674,F-
+Devaughn Vele,WR,Team Cogs,33.56,2.24,76.7,8.52,9,0.582552292992663,F-
+Marquez Valdes-Scantling,WR,Team Cogs,27.72,1.85,69.4,6.31,11,0.5271072898786286,F-
+Cam Akers,RB,Prahlad's Ghost,23.03,1.77,64.3,4.95,13,0.4799024770497649,F-
+Isaac Guerendo,RB,Daddy's Home,40.36,2.88,68.3,5.25,13,0.5097564414074486,F-
+Ameer Abdullah,RB,Daddy's Home,39.89,2.85,68.4,5.26,13,0.5105027905163907,F-
+Brandon McManus,K,Pho_King,0.0,0.0,55.0,7.86,7,0.5550883095037847,F-
+Cooper Rush,QB,PAI Alcoholics Anonymous ,34.58,8.64,69.14,7.68,9,0.36293328200731395,F-
+Jamaal Williams,RB,PAI Alcoholics Anonymous ,95.26,6.8,29.7,2.97,10,0.22166568535580122,F-
+Kimani Vidal,RB,The Golden Receivers,37.3,2.66,23.7,3.95,6,0.17688473881927572,F-
+Kenny McIntosh,RB,Came and Wentz,32.37,2.49,8.1,0.62,13,0.06045427782430942,F-
+Patrick Taylor Jr.,RB,Came and Wentz,15.04,1.16,13.2,1.47,9,0.09851808238035609,F-
