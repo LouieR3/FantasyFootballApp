@@ -5,11 +5,6 @@
 * LPI normalized for the week
 * ELO rating
 
--- HOW MANY TIMES DID THE TEAM WITH MORE LPI WIN (WEEK 2 on)
--- HOW ACCURATE WAS LPI IN PREDICTING PLAYOFFS/SEEDS
--- HOW ACCURATE WAS LPI IN PREDICTING FINAL STANDINGS / WINNER
--- ANALYZE WINNER OF EACH LEAGUE AGAINST DRAFTING GRADE / DRAFT POSITIION
-
 1 ADD PLACE IN YEAR BY YEAR stats
     DISPLAY PLAYOFF BRACKET ON PAGE WITH LPI NEXT TO TEAM
 2 FINALIZE DRAFT RECAP Data 
@@ -23,3 +18,37 @@
 3 FIX PLAYOFF ODDS ITS NOT LOOKING AT THE RIGHT SCHEDULE WHEN IT simulates 
 4 PLAYOFF HISTORY AND CHAMPION DATA 
 5 DATA ABOUT STATISTICS ON HOW SEEDS AND PEOPLE PERFORM IN THE PLAYOFFS
+
+Final Standings:
+ - Wins
+ - Losses
+ - Points Scored
+ - Points AGAINST
+ - Draft Grade
+ - LPI
+ = Shaded for playoffs
+
+ Draft Results:
+ - table with all fields
+ - ability to sort on everything, each round shaded diff color, shaded color by Grade
+ - ability to filter to position, round, team, Grade
+ - button to show:
+    * best possible team
+    * best pick of each round
+    * biggest steals / biggest busts
+
+Lifetime record:
+ - YEAR
+ - Wins
+ - Losses
+ - Points Scored
+ - Points AGAINST
+ - * PLACE
+ - * Draft Grade
+ = Adds in playoff matchups
+
+LEAGUE ANALYSIS PAGE:
+-- HOW MANY TIMES DID THE TEAM WITH MORE LPI WIN (WEEK 2 on)
+-- HOW ACCURATE WAS LPI IN PREDICTING PLAYOFFS/SEEDS
+-- HOW ACCURATE WAS LPI IN PREDICTING FINAL STANDINGS / WINNER
+-- ANALYZE WINNER OF EACH LEAGUE AGAINST DRAFTING GRADE / DRAFT POSITIION

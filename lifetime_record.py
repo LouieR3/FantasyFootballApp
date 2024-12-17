@@ -2,7 +2,7 @@ from espn_api.football import League
 import pandas as pd
 import time
 from operator import itemgetter
-
+import inflect
 start_time = time.time()
 
 # Pennoni Younglings
@@ -12,7 +12,7 @@ start_time = time.time()
 # league = League(league_id=1725372613, year=2022, espn_s2='AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
 swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
-
+p = inflect.engine()
 
 # years = [2021, 2022, 2023]
 # # EBC League
@@ -27,6 +27,21 @@ swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
 
 
 def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
+    def grade_to_letter(grade):
+        if grade >= 97: return "A+"
+        elif grade >= 93: return "A"
+        elif grade >= 90: return "A-"
+        elif grade >= 87: return "B+"
+        elif grade >= 83: return "B"
+        elif grade >= 80: return "B-"
+        elif grade >= 77: return "C+"
+        elif grade >= 73: return "C"
+        elif grade >= 70: return "C-"
+        elif grade >= 67: return "D+"
+        elif grade >= 63: return "D"
+        elif grade >= 60: return "D-"
+        else: return "F-"
+
     # List to store matchup statistics
     all_matchups = [] 
     owner_to_team_name = {}  # Mapping from owner ID to most recent team name
@@ -156,6 +171,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
     owners_df = owner_df_creation()
     # print(owners_df)
+    # sgdf
 
     # Example team name to filter on
     # team_name_to_filter = 'The Golden Receivers'
@@ -202,6 +218,54 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                 "Points_Scored": "Points Scored",
                 "Points_Against": "Points Against"
             })
+            print(grouped)
+            
+            owners_df = owner_df_creation()
+            # Create a dictionary for efficient lookup from owner_df
+            owner_mapping = dict(zip(owners_df["ID"], owners_df["Team Name"]))
+            team_name = owner_mapping.get(team_owner_id, "Unknown")
+            
+            # Populate standings
+            for index, row in grouped.iterrows():
+                year = row["Year"]
+
+                # Initialize league for the given year
+                league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+                leagueName = settings.name.replace(" 22/23", "")
+                fileDraft = leagueName + " Draft Results" + " " + str(year) + ".csv"
+                draft_df = pd.read_csv(fileDraft)
+
+                # Get final and regular season standings
+                standings = [team.team_name for team in league.standings()]
+                reg_standings = [team.team_name for team in league.standings_weekly(14)]
+
+                # Calculate places
+                final_place = standings.index(team_name) + 1
+                reg_season_place = reg_standings.index(team_name) + 1
+
+                # Convert to ordinal (e.g., 1st, 2nd)
+                final_place_ordinal = p.ordinal(final_place)
+                reg_season_place_ordinal = p.ordinal(reg_season_place)
+
+                # Update the DataFrame
+                grouped.at[index, "Regular Season Place"] = reg_season_place_ordinal
+                grouped.at[index, "Final Place"] = final_place_ordinal
+
+
+                # Filter for the specific team
+                team_draft = draft_df[draft_df["Team"].str.strip() == team_name]
+                print(team_draft)
+
+                # Group by `Draft Grade` and count
+                avg_draft_grade = team_draft["Draft Grade"].mean().round(2)
+
+                print(avg_draft_grade)
+
+                # Store the Draft Grade Count as a string for clarity
+                grouped.at[index, "Draft Grade"] = avg_draft_grade
+
+            grouped['Letter Grade'] = grouped['Draft Grade'].apply(grade_to_letter)
+            print(grouped)
 
             # Step 2: Add Cumulative Row for "All Time"
             all_time = {
@@ -210,12 +274,19 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                 "Losses": grouped["Losses"].sum(),
                 "Points Scored": grouped["Points Scored"].sum(),
                 "Points Against": grouped["Points Against"].sum(),
-                "Record": f"{grouped['Wins'].sum()}-{grouped['Losses'].sum()}"
+                "Record": f"{grouped['Wins'].sum()}-{grouped['Losses'].sum()}",
+                "Regular Season Place": "",
+                "Final Place": "",
+                "Draft Grade": grouped["Draft Grade"].mean(),
+                "Letter Grade": ""
             }
 
             # Append the All Time row
             year_by_year_df = pd.concat([grouped, pd.DataFrame([all_time])], ignore_index=True)
+            year_by_year_df['Letter Grade'] = year_by_year_df['Draft Grade'].apply(grade_to_letter)
             year_by_year_df = year_by_year_df.drop(columns=['Record'])
+            print(year_by_year_df)
+            dfsa
 
             # Display the final DataFrame
             return year_by_year_df
@@ -366,20 +437,17 @@ def convert_to_int_list(original_list):
     """
     return [int(item) for item in original_list]
 
-# league_id = 310334683
-# espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
-# swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
-
-league_id = 1049459
-espn_s2='AEC6x9TPufDhJAV682o%2BK6c8XdanPIkD8i3F4MF%2Fgtb1A4FD9SJMNrFoDt2sVHcppQpcYUIDF7kRotFrq8u%2Bkd4W94iy%2B952I9AG4ykEF3y2YRBvm75VMpecOvj7tZiv7iZ8R2K2SEqMExArEwMg3Bnbj161G3gMS6I%2F7YOKKMPTnC1VSTWuF5JlljFfFZz5hswmCr6IMZnZCzFmy%2FnPdwymI1NZ9IOAwJVn9pnBi9FpvyzcdcyYG2NOaarBmTLqyAd3%2BEdrDEpre%2F6Cfz6c3KcwO%2FFjPBkIFDxC1szNelynxfJZCupLm%2FEFFhXdbKnBeesbbOXJg%2BDLqZU1KGdCTU0FyEKr%2BcouwUy%2BnyDCuMYUog%3D%3D'
-swid='{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}'
+league_id = 310334683
+espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
+swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
 
 # Initialize the dropdown for year selection
 # year_options = ['2018', '2019', '2020', '2021', '2022', '2023', '2024']
-# year_options = ['2022', '2023', '2024']
+year_options = ['2022', '2023', '2024']
 # # Convert to integers
-# years = convert_to_int_list(year_options)
+years = convert_to_int_list(year_options)
 # print(years)
-# lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'Team Rodriguez')
+lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
+# lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
 # # df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
-# print(lifetime_record_df)
+print(lifetime_record_df)

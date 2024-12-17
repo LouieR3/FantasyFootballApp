@@ -51,16 +51,16 @@ league = League(league_id=310334683, year=2023, espn_s2=espn_s2, swid='{4656A2AD
 louie_espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
 prahlad_espn_s2 = "AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4"
 la_espn_s2 = "AEC6x9TPufDhJAV682o%2BK6c8XdanPIkD8i3F4MF%2Fgtb1A4FD9SJMNrFoDt2sVHcppQpcYUIDF7kRotFrq8u%2Bkd4W94iy%2B952I9AG4ykEF3y2YRBvm75VMpecOvj7tZiv7iZ8R2K2SEqMExArEwMg3Bnbj161G3gMS6I%2F7YOKKMPTnC1VSTWuF5JlljFfFZz5hswmCr6IMZnZCzFmy%2FnPdwymI1NZ9IOAwJVn9pnBi9FpvyzcdcyYG2NOaarBmTLqyAd3%2BEdrDEpre%2F6Cfz6c3KcwO%2FFjPBkIFDxC1szNelynxfJZCupLm%2FEFFhXdbKnBeesbbOXJg%2BDLqZU1KGdCTU0FyEKr%2BcouwUy%2BnyDCuMYUog%3D%3D"
-year = 2024
+year = 2021
 # List of league configurations
 leagues = [
     {"league_id": 310334683, "year": year, "espn_s2": louie_espn_s2, "swid": "{4656A2AD-A939-460B-96A2-ADA939760B8B}", "name": "Pennoni Younglings"},
-    # {"league_id": 996930954, "year": year, "espn_s2": louie_espn_s2, "swid": "{4656A2AD-A939-460B-96A2-ADA939760B8B}", "name": "Family League"},
-    # {"league_id": 1118513122, "year": year, "espn_s2": louie_espn_s2, "swid": "{4656A2AD-A939-460B-96A2-ADA939760B8B}", "name": "EBC League"},
-    # {"league_id": 1339704102, "year": year, "espn_s2": prahlad_espn_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "Pennoni Transportation"},
-    # {"league_id": 1781851, "year": year, "espn_s2": prahlad_espn_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "Game of Yards"},
-    # {"league_id": 367134149, "year": year, "espn_s2": prahlad_espn_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "Brown Munde"},
-    # {"league_id": 1049459, "year": year, "espn_s2": la_espn_s2, "swid": "{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}", "name": "Las League"},
+    {"league_id": 996930954, "year": year, "espn_s2": louie_espn_s2, "swid": "{4656A2AD-A939-460B-96A2-ADA939760B8B}", "name": "Family League"},
+    {"league_id": 1118513122, "year": year, "espn_s2": louie_espn_s2, "swid": "{4656A2AD-A939-460B-96A2-ADA939760B8B}", "name": "EBC League"},
+    {"league_id": 1339704102, "year": year, "espn_s2": prahlad_espn_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "Pennoni Transportation"},
+    {"league_id": 1781851, "year": year, "espn_s2": prahlad_espn_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "Game of Yards"},
+    {"league_id": 367134149, "year": year, "espn_s2": prahlad_espn_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "Brown Munde"},
+    {"league_id": 1049459, "year": year, "espn_s2": la_espn_s2, "swid": "{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}", "name": "Las League"},
 ]
 
 # Loop through each league configuration
@@ -101,16 +101,12 @@ for league_config in leagues:
                 stats = player.stats[0] if player.stats else {}  # Handle cases with no stats
 
                 # Extract required stats, using 0 if stats are unavailable
-                projected_points = stats.get('projected_points', 0)
-                projected_avg_points = stats.get('projected_avg_points', 0)
                 points = stats.get('points', 0)
                 avg_points = stats.get('avg_points', 0)
 
                 # Calculate Games Played
                 games_played = 0
                 if player.stats:
-                    # print(player)
-                    # print(player.stats)
                     for key, stat in player.stats.items():
                         # Skip index 0 (season totals or projections)
                         if key == 0:
@@ -118,8 +114,6 @@ for league_config in leagues:
                         # Increment games_played if 'breakdown' is non-empty
                         if stat.get('breakdown'):
                             games_played += 1
-                # print(games_played)
-                # sfdg
 
                 # Append data for this pick
                 data.append({
@@ -127,8 +121,6 @@ for league_config in leagues:
                     "Player": player_name,
                     "Position": position,
                     "Team": team,
-                    "Projected Points": projected_points,
-                    "Projected Avg Points": projected_avg_points,
                     "Points": points,
                     "Avg Points": avg_points,
                     "Games Played": games_played
@@ -146,37 +138,19 @@ for league_config in leagues:
         draft_df.insert(loc = 1,
                 column = 'Total Pick',
                 value = draft_df.index + 1)
-        
-        # Extract the round from the 'Pick' column
-        draft_df['Round'] = draft_df['Pick'].str.split(' - ').str[0].astype(int)
-
-        # Compute average `Avg Points` by draft round
-        average_points_by_round = draft_df.groupby('Round')['Avg Points'].mean().to_dict()
-
-        # Add Round Value column to the DataFrame
-        draft_df['Round Value'] = draft_df.apply(
-            lambda row: row['Avg Points'] / average_points_by_round[row['Round']], axis=1
-        )
-
         # Constants to weigh the different factors
-        W1 = 0.6  # Weight for points vs. projected points
-        W2 = 0.3  # Weight for avg points vs. projected avg points
+        W1 = 0.6  # Weight for points
+        W2 = 0.3  # Weight for avg points
         W3 = 0.2  # Weight for games played
-        W4 = 0.4  # Weight for draft position (steals)
+        W4 = 0.2  # Weight for draft position (steals)
         W5 = 0.5  # Weight for position value (new metric)
-        W6 = 0.6  # Weight for total points
-        W8 = 0.4  # Weight for avg points
-        W7 = 0.5  # Weight for round value (new metric)
 
         # Get the maximum points scored by any player
         max_points = draft_df['Points'].max()
         max_avg_points = draft_df['Avg Points'].max()
 
         # Add a column for Draft Grade
-        max_games = 14  # Maximum possible games (e.g., full NFL season)
-
-        # Get the maximum pick number
-        max_pick = draft_df['Total Pick'].max()
+        max_games = 17  # Maximum possible games (e.g., full NFL season)
 
         # Compute average points by position
         average_points_by_position = draft_df.groupby('Position')['Points'].mean().to_dict()
@@ -187,36 +161,13 @@ for league_config in leagues:
         )
 
         # Recalculate Draft Grade
-        if year == 2024:
-            draft_df['Draft Grade'] = (
-                (draft_df['Points'] / draft_df['Projected Points']) * W1 +
-                (draft_df['Avg Points'] / draft_df['Projected Avg Points']) * W2 +
-                (draft_df['Games Played'] / max_games) * W3 +
-                (draft_df['Total Pick'] - 1) / (max_pick - 1) * W4 + 
-                (draft_df['Position Value']) * W5 +
-                (draft_df['Points'] / max_points) * W6  +
-                (draft_df['Avg Points'] / max_avg_points) * W8  +
-                (draft_df['Round Value']) * W7
-            )
-            draft_df['Pick Grade'] = (draft_df['Total Pick'] - 1) / (max_pick - 1) * W4
-            draft_df['Points Grade'] = (draft_df['Points'] / max_points) * W6
-            draft_df['Points Grade2'] = (draft_df['Points'] / max_points) * 0.4
-        else:
-            W1 = 0.6  # Weight for points
-            W2 = 0.3  # Weight for avg points
-            W3 = 0.2  # Weight for games played
-            W4 = 0.2  # Weight for draft position (steals)
-            W5 = 0.5  # Weight for position value (new metric)
-            W7 = 0.7  # Weight for round value (new metric)
-            max_avg_points = draft_df['Avg Points'].max()
-            draft_df['Draft Grade'] = (
-                (draft_df['Points'] / max_points) * W1 +
-                (draft_df['Avg Points'] / max_avg_points) * W2 +
-                (draft_df['Games Played'] / max_games) * W3 +
-                ((max_pick - draft_df['Total Pick']) / max_pick) * W4 + 
-                (draft_df['Position Value']) * W5  +
-                (draft_df['Round Value']) * W7
-            )
+        draft_df['Draft Grade'] = (
+            (draft_df['Points'] / max_points) * W1 +
+            (draft_df['Avg Points'] / max_avg_points) * W2 +
+            (draft_df['Games Played'] / max_games) * W3 +
+            (1 / draft_df['Total Pick']) * W4 +
+            (draft_df['Position Value']) * W5
+        )
 
         # Sort by Draft Grade to see best values
         draft_df = draft_df.sort_values(by='Draft Grade', ascending=False)
@@ -249,14 +200,12 @@ for league_config in leagues:
 
         # Apply the function to create a new column for letter grades
         draft_df['Letter Grade'] = draft_df['Draft Grade'].apply(grade_to_letter)
-        draft_df = draft_df.drop(['Position Value', 'Round', 'Round Value'], axis=1)
+        draft_df = draft_df.drop(['Position Value'], axis=1)
         # Display the DataFrame
         draft_df['Draft Grade'] = draft_df['Draft Grade'].round(2)
 
-        print(draft_df[["Total Pick", "Player", "Projected Points", "Points", "Avg Points", "Games Played", "Draft Grade", "Pick Grade", "Points Grade", "Points Grade2", "Letter Grade"]])
-        team_draft = draft_df[draft_df["Team"].str.strip() == "The Golden Receivers"]
-        print(team_draft[["Total Pick", "Player", "Projected Points", "Points", "Avg Points", "Games Played", "Draft Grade", "Pick Grade", "Points Grade", "Points Grade2", "Letter Grade"]])
-        gsdf
+        print(draft_df.head(20))
+        # print(draft_df)
         draft_df.to_csv(fileDraft, index=False)
         # --------------------------------------------------------------------------------------
 
@@ -289,8 +238,6 @@ for league_config in leagues:
                 stats = player_info.stats[0] if player_info.stats else {}
 
                 # Extract required stats, with defaults for missing values
-                projected_points = stats.get('projected_points', 0)
-                projected_avg_points = stats.get('projected_avg_points', 0)
                 points = stats.get('points', 0)
                 avg_points = stats.get('avg_points', 0)
                 
@@ -309,8 +256,6 @@ for league_config in leagues:
                     "Player": player_name,
                     "Position": position,
                     "Team": team_name,
-                    "Projected Points": projected_points,
-                    "Projected Avg Points": projected_avg_points,
                     "Points": points,
                     "Avg Points": avg_points,
                     "Games Played": games_played
@@ -325,28 +270,12 @@ for league_config in leagues:
         )
 
         # Recalculate Draft Grade
-        if year == 2024:
-            additions_df['Performance Grade'] = (
-                (additions_df['Points'] / draft_df['Projected Points']) * W1 +
-                (additions_df['Avg Points'] / draft_df['Projected Avg Points']) * W2 +
-                (additions_df['Games Played'] / max_games) * W3 +
-                (additions_df['Position Value']) * W5+
-                (additions_df['Points'] / max_points) * W6 
-            )
-        else:
-            W1 = 0.6  # Weight for points
-            W2 = 0.3  # Weight for avg points
-            W3 = 0.2  # Weight for games played
-            W4 = 0.2  # Weight for draft position (steals)
-            W5 = 0.5  # Weight for position value (new metric)
-            W7 = 0.5  # Weight for round value (new metric)
-            max_avg_points = draft_df['Avg Points'].max()
-            additions_df['Performance Grade'] = (
-                (draft_df['Points'] / max_points) * W1 +
-                (draft_df['Avg Points'] / max_avg_points) * W2 +
-                (additions_df['Games Played'] / max_games) * W3 +
-                (additions_df['Position Value']) * W5
-            )
+        additions_df['Performance Grade'] = (
+            (draft_df['Points'] / max_points) * W1 +
+            (draft_df['Avg Points'] / max_avg_points) * W2 +
+            (additions_df['Games Played'] / max_games) * W3 +
+            (additions_df['Position Value']) * W5
+        )
 
         # Get the min and max of the Draft Grade column
         min_grade = additions_df['Performance Grade'].min()
@@ -382,9 +311,9 @@ for league_config in leagues:
         additions_df = additions_df.drop(['Position Value'], axis=1)
         # Display the DataFrame
         print(additions_df)
-        fileFreeAgent = leagueName + " FreeAgent Results" + " " + str(year) + ".csv"
+        fileDraft = leagueName + " FreeAgent Results" + " " + str(year) + ".csv"
 
-        additions_df.to_csv(fileFreeAgent, index=False)
+        additions_df.to_csv(fileDraft, index=False)
         print("=======")
         # --------------------------------------------------------------------------------------
     except Exception as e:
@@ -394,13 +323,3 @@ for league_config in leagues:
         print(f"Details: {str(e)}")
         continue  # Move to the next league
 
-# team = league.teams[2]
-# print(team.roster[0])
-
-# player = league.player_info('Christian McCaffrey')
-# print(player.stats[1]['points'])
-# print()
-# print(player.stats[0]['projected_points'])
-# print(player.stats[0]['projected_avg_points'])
-# print(player.stats[0]['points'])
-# print(player.stats[0]['avg_points'])
