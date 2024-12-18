@@ -13,3 +13,4 @@ jinja2
 # glob
 st_pages>=0.4.3
 # streamlit_option_menu
+inflect
