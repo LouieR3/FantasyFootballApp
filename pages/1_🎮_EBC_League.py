@@ -144,10 +144,10 @@ def app():
                 row_idx = row.name
                 
                 # Last row: bright gold
-                if row_idx == len(df) - 1:
+                if row_idx == len(df):
                     return ['background-color: #FFD700'] * len(row)
                 # Second and third to last rows: muted gold
-                elif row_idx == len(df) - 2 or row_idx == len(df) - 3:
+                elif row_idx == len(df) - 1 or row_idx == len(df) - 2:
                     return ['background-color: #EEC900'] * len(row)
                 # Default: no styling
                 return [''] * len(row)
