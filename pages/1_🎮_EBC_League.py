@@ -129,6 +129,21 @@ def app():
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
     st.dataframe(df3)
 
+    st.header('Playoff Results')
+    # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
+    df = pd.read_excel(file, sheet_name="Playoff Results")
+    
+    # df = df.iloc[: , 1:]
+    df.index += 1
+    def highlight_last_row(row):
+        if row.name == df.index[-1]:
+            return ['background-color: gold'] * len(row)
+        else:
+            return [''] * len(row)
+
+    # Apply the styling function
+    df4= df.style.apply(highlight_last_row, axis=1)
+    st.dataframe(df4)
     # st.header('Upset Factor of Previous Week')
     # st.write('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
     # df = pd.read_excel(file, sheet_name="Louie Power Index")
