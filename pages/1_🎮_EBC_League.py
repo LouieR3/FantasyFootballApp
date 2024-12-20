@@ -145,7 +145,7 @@ def app():
                 
                 # Last row: bright gold
                 if row_idx == len(df):
-                    return ['background-color: #FFD700'] * len(row)
+                    return ['background-color: #ffe064'] * len(row)
                 # Second and third to last rows: muted gold
                 elif row_idx == len(df) - 1 or row_idx == len(df) - 2:
                     return ['background-color: #EEC900'] * len(row)
