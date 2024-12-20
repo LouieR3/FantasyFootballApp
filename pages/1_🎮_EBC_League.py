@@ -129,21 +129,37 @@ def app():
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
     st.dataframe(df3)
 
-    st.header('Playoff Results')
-    # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
-    df = pd.read_excel(file, sheet_name="Playoff Results")
-    
-    # df = df.iloc[: , 1:]
-    df.index += 1
-    def highlight_last_row(row):
-        if row.name == df.index[-1]:
-            return ['background-color: gold'] * len(row)
-        else:
-            return [''] * len(row)
+    try:
+        df = pd.read_excel(file, sheet_name="Playoff Results")
+        st.header('Playoff Results')
+        # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
+        # df = df.iloc[: , 1:]
+        df.index += 1
+        def style_gold(df):
+            """
+            Styles the last row bright gold and the 2nd and 3rd to last rows muted gold.
+            """
+            def highlight_rows(row):
+                # Index of the row in the DataFrame
+                row_idx = row.name
+                
+                # Last row: bright gold
+                if row_idx == len(df) - 1:
+                    return ['background-color: #FFD700'] * len(row)
+                # Second and third to last rows: muted gold
+                elif row_idx == len(df) - 2 or row_idx == len(df) - 3:
+                    return ['background-color: #EEC900'] * len(row)
+                # Default: no styling
+                return [''] * len(row)
+            
+            # Apply styling
+            return df.style.apply(highlight_rows, axis=1)
+        # Apply the styling function
+        styled_df = style_gold(df)
+        st.dataframe(styled_df)
+    except:
+        print("No Playoffs Yet")
 
-    # Apply the styling function
-    df4= df.style.apply(highlight_last_row, axis=1)
-    st.dataframe(df4)
     # st.header('Upset Factor of Previous Week')
     # st.write('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
     # df = pd.read_excel(file, sheet_name="Louie Power Index")
