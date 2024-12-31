@@ -161,6 +161,8 @@ def app():
             def bold_winner(row):
                 # Determine the winner columns
                 winner = row["Winner"]
+                print("BOLD ASSESS:")
+                print(winner == row["Team 1"])
                 if winner == row["Team 1"]:
                     return ['font-weight: bold' if col.endswith("1") else '' for col in df.columns]
                 elif winner == row["Team 2"]:
