@@ -138,7 +138,7 @@ def app():
 
         # Round the specified columns to the 100th
         columns_to_round = ["Score 1", "Total Points 1", "Score 2", "Total Points 2"]
-        df[columns_to_round] = str(df[columns_to_round].round(2))
+        df[columns_to_round] = df[columns_to_round].round(2).astype(str)
 
         def style_gold_and_bold(df):
             """
