@@ -135,27 +135,27 @@ def app():
         # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
         # df = df.iloc[: , 1:]
         df.index += 1
-        # def style_gold(df):
-        #     """
-        #     Styles the last row bright gold and the 2nd and 3rd to last rows muted gold.
-        #     """
-        #     def highlight_rows(row):
-        #         # Index of the row in the DataFrame
-        #         row_idx = row.name
+        def style_gold(df):
+            """
+            Styles the last row bright gold and the 2nd and 3rd to last rows muted gold.
+            """
+            def highlight_rows(row):
+                # Index of the row in the DataFrame
+                row_idx = row.name
                 
-        #         # Last row: bright gold
-        #         if row_idx == len(df):
-        #             return ['background-color: #FFD700'] * len(row)
-        #         # Second and third to last rows: muted gold
-        #         elif row_idx == len(df) - 1 or row_idx == len(df) - 2:
-        #             return ['background-color: #ffe064'] * len(row)
-        #         # Default: no styling
-        #         return [''] * len(row)
+                # Last row: bright gold
+                if row_idx == len(df):
+                    return ['background-color: #FFD700'] * len(row)
+                # Second and third to last rows: muted gold
+                elif row_idx == len(df) - 1 or row_idx == len(df) - 2:
+                    return ['background-color: #ffe064'] * len(row)
+                # Default: no styling
+                return [''] * len(row)
             
-        #     # Apply styling
-        #     return df.style.apply(highlight_rows, axis=1)
-        # # Apply the styling function
-        # styled_df = style_gold(df)
+            # Apply styling
+            return df.style.apply(highlight_rows, axis=1)
+        # Apply the styling function
+        styled_df = style_gold(df)
         st.dataframe(styled_df)
     except:
         print("No Playoffs Yet")
