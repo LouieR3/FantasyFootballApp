@@ -132,12 +132,18 @@ def app():
     try:
         df = pd.read_excel(file, sheet_name="Playoff Results")
         st.header('Playoff Results')
-        # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
-        # df = df.iloc[: , 1:]
+
+        # Increment index to start at 1
         df.index += 1
-        def style_gold(df):
+
+        # Round the specified columns to the 100th
+        columns_to_round = ["Score 1", "Total Points 1", "Score 2", "Total Points 2"]
+        df[columns_to_round] = df[columns_to_round].round(2)
+
+        def style_gold_and_bold(df):
             """
-            Styles the last row bright gold and the 2nd and 3rd to last rows muted gold.
+            Styles the last row bright gold, the 2nd and 3rd to last rows muted gold,
+            and bolds the winning team's columns.
             """
             def highlight_rows(row):
                 # Index of the row in the DataFrame
@@ -151,11 +157,24 @@ def app():
                     return ['background-color: #ffe064'] * len(row)
                 # Default: no styling
                 return [''] * len(row)
-            
-            # Apply styling
-            return df.style.apply(highlight_rows, axis=1)
+
+            def bold_winner(row):
+                # Determine the winner columns
+                winner = row["Winner"]
+                if winner == row["Team 1"]:
+                    return ['font-weight: bold' if col.endswith("1") else '' for col in df.columns]
+                elif winner == row["Team 2"]:
+                    return ['font-weight: bold' if col.endswith("2") else '' for col in df.columns]
+                return [''] * len(row)
+
+            # Combine the row and column styles
+            styled = df.style.apply(highlight_rows, axis=1).apply(bold_winner, axis=1)
+            return styled
+
         # Apply the styling function
-        styled_df = style_gold(df)
+        styled_df = style_gold_and_bold(df)
+
+        # Display the styled DataFrame
         st.dataframe(styled_df)
     except:
         print("No Playoffs Yet")
