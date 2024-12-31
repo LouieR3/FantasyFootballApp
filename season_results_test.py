@@ -13,10 +13,12 @@ import openpyxl
 
 start_time = time.time()
 espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
+prahlad_espn_s2 = "AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4"
 
-year = 2024
+year = 2023
 # FileName for the Excel file and sheet
-league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=1781851, year=year, espn_s2=prahlad_espn_s2, swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
+# league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
@@ -40,6 +42,15 @@ lpi_df = lpi_df.drop(['Change From Last Week'], axis=1)
 # team_owners = [team.owners for team in league.teams]
 team_names = [team.team_name for team in league.teams]
 team_scores = [team.scores for team in league.teams] 
+# print(league.standings())
+# print()
+num_playoff_teams = settings.playoff_team_count
+reg_season_count = settings.reg_season_count
+# print(num_playoff_teams)
+# print(reg_season_count)
+# print()
+# print(league.recent_activity())
+
 
 schedules = []
 for team in league.teams:
@@ -66,10 +77,67 @@ schedules_df = pd.DataFrame(schedules, index=team_names)
 last_column_name = scores_df.columns[-1]
 # print(schedules_df)
 
+settings = league.settings
+
+leagueName = settings.name.replace(" 22/23", "")
+fileName = leagueName + " " + str(year) +".xlsx"
+sheet_name = "LPI By Week"
+
+# Read the LPI data
+lpi_df = pd.read_excel(fileName, sheet_name=sheet_name, index_col=0)  # Team names as index
+lpi_df = lpi_df.drop(['Change From Last Week'], axis=1)
+
+# --------------------------------------------------------------------------------------
+# PLAYOFF RESULTS
+# --------------------------------------------------------------------------------------
+
+# team_owners = [team.owners for team in league.teams]
+team_names = [team.team_name for team in league.teams]
+team_scores = [team.scores for team in league.teams] 
+# Create a list of records for each team in the format "wins-losses-ties"
+team_records = [f"{team.wins}-{team.losses}-{team.ties}" for team in league.teams]
+
+
+schedules = []
+for team in league.teams:
+    schedule = [opponent.team_name for opponent in team.schedule]
+    schedules.append(schedule)
+
+# Precompute current week 
+current_week = None
+for week in range(1, settings.reg_season_count+1):
+    scoreboard = league.scoreboard(week)
+    if not any(matchup.home_score for matchup in scoreboard):
+        current_week = week
+        break 
+
+if current_week is None:
+    current_week = settings.reg_season_count
+elif current_week != settings.reg_season_count:
+    current_week -= 1
+
+# Store data in DataFrames 
+scores_df = pd.DataFrame(team_scores, index=team_names)
+# Retrieve total points for the first 14 weeks
+# scores_df['Total Points'] = scores_df.iloc[:, :14].mean(axis=1)
+scores_df['Total Points'] = scores_df.iloc[:, :14].sum(axis=1)
+# scores_df['Final 5 Week Points'] = scores_df.iloc[:, 9:14].mean (axis=1)
+# print(scores_df[[9, 10, 11, 12, 13, 14, 15, 16, "Total Points", "Final 5 Week Points"]])
+# print(scores_df[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, "Final 5 Week Points"]])
+# sgfd
+schedules_df = pd.DataFrame(schedules, index=team_names)
+# Create the DataFrame
+record_df = pd.DataFrame(team_records, index=team_names, columns=["Record"])
+# print(scores_df)
+# last_column_name = scores_df.columns[-1]
+print(schedules_df)
+# gfsd
+
 # Playoff teams and seeds
 standings = [team.team_name for team in league.standings_weekly(settings.reg_season_count)]
+
 num_playoff_teams = settings.playoff_team_count
-playoff_teams = standings[:num_playoff_teams]  # Top teams in the playoffs
+playoff_teams = standings[:4]  # Top teams in the playoffs
 reg_season_count = settings.reg_season_count
 # Initialize the results list
 playoff_results = []
@@ -86,12 +154,12 @@ def get_round_name(num_teams):
         return "Final Team"  # Special case if there's one team left (shouldn't be used in matchups)
 
 # Iterate through playoff weeks
-last_column_name = scores_df.columns[-1]
+last_column_name = scores_df.columns[-2]
 for week in range(reg_season_count, last_column_name+1):
+
     round_name = get_round_name(len(playoff_teams))
     print(f"Processing Playoff Round {round_name} (Week {week + 1})")
     print(playoff_teams)
-    print()
     advancing_teams = []  # Teams that win in the current week
     round_number = week - reg_season_count + 1
     teams_already_processed = set()  # Track teams already in a matchup
@@ -103,7 +171,6 @@ for week in range(reg_season_count, last_column_name+1):
             continue
 
         opponent = schedules_df.loc[team, week]  # Get opponent for the current week
-
         # Skip if the team has a bye (e.g., they face themselves)
         if opponent == team:
             playoff_results.append({
@@ -111,10 +178,17 @@ for week in range(reg_season_count, last_column_name+1):
                 "Team 1": team,
                 "Seed 1": standings.index(team) + 1,
                 "Score 1": scores_df.loc[team, week],
-                "Team 1 LPI": lpi_df.loc[team, f"Week {week + 1}"],  # Add LPI value
+                "LPI 1": lpi_df.loc[team, f"Week {week + 1}"],  # Add LPI value
+                "Total Points 1": scores_df.loc[team, 'Total Points'],  # Add total points
+                # "Team 1 Final 5": scores_df.loc[team, 'Final 5 Week Points'],  # Add total points
+                "Record 1": record_df.loc[team, "Record"],
                 "Team 2": "Bye",
                 "Seed 2": "-",
                 "Score 2": "-",
+                "LPI 2": "-",
+                "Total Points 2": "-",  # Bye has no total points
+                # "Team 2 Final 5": "-",  # Add total points
+                "Record 2": "-",  # Bye has no total points
                 "Winner": team
             })
             advancing_teams.append(team)  # Auto-advance the team
@@ -136,6 +210,10 @@ for week in range(reg_season_count, last_column_name+1):
         seed_1 = standings.index(team) + 1
         seed_2 = standings.index(opponent) + 1
 
+        # Retrieve total points
+        team_1_total_points = scores_df.loc[team, 'Total Points']
+        team_2_total_points = scores_df.loc[opponent, 'Total Points']
+        
         # Determine winner
         if score_1 > score_2:
             winner = team
@@ -150,11 +228,17 @@ for week in range(reg_season_count, last_column_name+1):
             "Team 1": team,
             "Seed 1": seed_1,
             "Score 1": score_1,
-            "Team 1 LPI": team_1_lpi,
+            "LPI 1": team_1_lpi,
+            "Total Points 1": team_1_total_points,  # Add total points
+            # "Team 1 Final 5": scores_df.loc[team, 'Final 5 Week Points'],  # Add total points
+            "Record 1": record_df.loc[team, "Record"],
             "Team 2": opponent,
             "Seed 2": seed_2,
             "Score 2": score_2,
-            "Team 2 LPI": team_2_lpi,
+            "LPI 2": team_2_lpi,
+            "Total Points 2": team_2_total_points,  # Add total points
+            # "Team 2 Final 5": scores_df.loc[opponent, 'Final 5 Week Points'],  # Add total points
+            "Record 2": record_df.loc[opponent, "Record"],
             "Winner": winner
         })
 
@@ -177,8 +261,16 @@ for week in range(reg_season_count, last_column_name+1):
 playoff_df = pd.DataFrame(playoff_results)
 
 # Display the DataFrame
-print(playoff_df)
+# print(playoff_df[["Team 1", "Seed 1", "Score 1", "LPI 1", "Record 1", "Team 1 Final 5", "Team 2", "Seed 2", "Score 2", "LPI 2", "Record 2", "Team 2 Final 5"]])
+
+workbook = openpyxl.load_workbook(fileName)
+# Check if the sheet already exists
+if "Playoff Results" in workbook.sheetnames:
+    # Remove the sheet
+    del workbook["Playoff Results"]
+# Save the workbook after removing the sheet
+workbook.save(fileName)
 
 # Add playoff_df as a new sheet to the existing Excel file
-# with pd.ExcelWriter(fileName, engine="openpyxl", mode="a") as writer:
-#     playoff_df.to_excel(writer, sheet_name="Playoff Results", index=False)
+with pd.ExcelWriter(fileName, engine="openpyxl", mode="a") as writer:
+    playoff_df.to_excel(writer, sheet_name="Playoff Results", index=False)

@@ -63,6 +63,7 @@ for league_config in leagues:
         # team_owners = [team.owners for team in league.teams]
         team_names = [team.team_name for team in league.teams]
         team_scores = [team.scores for team in league.teams] 
+        team_records = [f"{team.wins}-{team.losses}-{team.ties}" for team in league.teams]
 
         schedules = []
         for team in league.teams:
@@ -84,7 +85,10 @@ for league_config in leagues:
 
         # Store data in DataFrames 
         scores_df = pd.DataFrame(team_scores, index=team_names)
+        # Retrieve total points for the first 14 weeks
+        scores_df['Total Points'] = scores_df.iloc[:, :14].sum(axis=1)
         schedules_df = pd.DataFrame(schedules, index=team_names)
+        record_df = pd.DataFrame(team_records, index=team_names, columns=["Record"])
         # print(scores_df)
         last_column_name = scores_df.columns[-1]
         # print(schedules_df)
@@ -109,7 +113,7 @@ for league_config in leagues:
                 return "Final Team"  # Special case if there's one team left (shouldn't be used in matchups)
 
         # Iterate through playoff weeks
-        last_column_name = scores_df.columns[-1]
+        last_column_name = scores_df.columns[-2]
         for week in range(reg_season_count, last_column_name+1):
             round_name = get_round_name(len(playoff_teams))
             print(f"Processing Playoff Round {round_name} (Week {week + 1})")
@@ -134,11 +138,15 @@ for league_config in leagues:
                         "Team 1": team,
                         "Seed 1": standings.index(team) + 1,
                         "Score 1": scores_df.loc[team, week],
-                        "Team 1 LPI": lpi_df.loc[team, f"Week {week + 1}"],  # Add LPI value
+                        "LPI 1": lpi_df.loc[team, f"Week {week + 1}"],  # Add LPI value
+                        "Total Points 1": scores_df.loc[team, 'Total Points'],  # Add total points
+                        "Record 1": record_df.loc[team, "Record"],
                         "Team 2": "Bye",
                         "Seed 2": "-",
                         "Score 2": "-",
-                        "Team 2 LPI": "-",
+                        "LPI 2": "-",
+                        "Total Points 2": "-",  # Bye has no total points
+                        "Record 2": "-",  # Bye has no total points
                         "Winner": team
                     })
                     advancing_teams.append(team)  # Auto-advance the team
@@ -160,6 +168,10 @@ for league_config in leagues:
                 seed_1 = standings.index(team) + 1
                 seed_2 = standings.index(opponent) + 1
 
+                # Retrieve total points
+                team_1_total_points = scores_df.loc[team, 'Total Points']
+                team_2_total_points = scores_df.loc[opponent, 'Total Points']
+                
                 # Determine winner
                 if score_1 > score_2:
                     winner = team
@@ -174,11 +186,15 @@ for league_config in leagues:
                     "Team 1": team,
                     "Seed 1": seed_1,
                     "Score 1": score_1,
-                    "Team 1 LPI": team_1_lpi,
+                    "LPI 1": team_1_lpi,
+                    "Total Points 1": team_1_total_points,  # Add total points
+                    "Record 1": record_df.loc[team, "Record"],
                     "Team 2": opponent,
                     "Seed 2": seed_2,
                     "Score 2": score_2,
-                    "Team 2 LPI": team_2_lpi,
+                    "LPI 2": team_2_lpi,
+                    "Total Points 2": team_2_total_points,  # Add total points
+                    "Record 2": record_df.loc[opponent, "Record"],
                     "Winner": winner
                 })
 
