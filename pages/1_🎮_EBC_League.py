@@ -183,6 +183,13 @@ def app():
     except:
         print("No Playoffs Yet")
 
+    df = pd.read_csv(draft_file)
+    st.header('Draft Results')
+
+    # Increment index to start at 1
+    df.index += 1
+    AgGrid(df)
+
     try:
         df = pd.read_csv(draft_file)
         st.header('Draft Results')
@@ -190,8 +197,6 @@ def app():
         # Increment index to start at 1
         df.index += 1
         AgGrid(df)
-
-        
     except:
         print("No Playoffs Yet")
 

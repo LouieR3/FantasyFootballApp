@@ -122,9 +122,9 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
     # Create a consistent order for team pairs to avoid duplicates
     matchups_df['Team Pair'] = matchups_df.apply(lambda row: tuple(sorted([row['Team 1 Owner'], row['Team 2 Owner']])), axis=1)
-    print()
-    print("ALL MATCHUPS")
-    print(matchups_df[["Team 1", "Team 2", "Record", "My Points", "Their Points", "Year"]])
+    # print()
+    # print("ALL MATCHUPS")
+    # print(matchups_df[["Team 1", "Team 2", "Record", "My Points", "Their Points", "Year"]])
     # sfd
 
     # Function to get owner ID from the team name
@@ -190,8 +190,8 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
         # print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
 
         filtered_matchups = matchups_df[matchups_df['Team 1 Owner'] == team_owner_id]
-        print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
-        print(filtered_matchups)
+        # print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
+        # print(filtered_matchups)
         # print(filtered_matchups[["Team 1", "Team 2", "Record", "Points Scored", "Average Points Difference", "Year"]])
 
         def year_by_year(filtered_matchups):
@@ -221,7 +221,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                 "Points_Scored": "Points Scored",
                 "Points_Against": "Points Against"
             })
-            print(grouped)
+            # print(grouped)
             
             # Populate standings
             for index, row in grouped.iterrows():
@@ -233,10 +233,10 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                 owner_mapping = dict(zip(owners_df["ID"], owners_df["Team Name"]))
                 team_name = owner_mapping.get(team_owner_id, "Unknown")
                 
-                print(owners_df)
-                print(team_owner_id)
-                print(team_name)
-                print()
+                # print(owners_df)
+                # print(team_owner_id)
+                # print(team_name)
+                # print()
 
                 # Initialize league for the given year
                 league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
@@ -247,7 +247,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                 # Get final and regular season standings
                 standings = [team.team_name for team in league.standings()]
                 reg_standings = [team.team_name for team in league.standings_weekly(14)]
-                print(year)
+                # print(year)
 
                 # Calculate places
                 final_place = standings.index(team_name) + 1
@@ -264,18 +264,18 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
                 # Filter for the specific team
                 team_draft = draft_df[draft_df["Team"].str.strip() == team_name]
-                print(team_draft)
+                # print(team_draft)
 
                 # Group by `Draft Grade` and count
                 avg_draft_grade = team_draft["Draft Grade"].mean().round(2)
 
-                print(avg_draft_grade)
+                # print(avg_draft_grade)
 
                 # Store the Draft Grade Count as a string for clarity
                 grouped.at[index, "Draft Grade"] = avg_draft_grade
 
             grouped['Letter Grade'] = grouped['Draft Grade'].apply(grade_to_letter)
-            print(grouped)
+            # print(grouped)
 
             # Step 2: Add Cumulative Row for "All Time"
             all_time = {
@@ -295,7 +295,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
             year_by_year_df = pd.concat([grouped, pd.DataFrame([all_time])], ignore_index=True)
             year_by_year_df['Letter Grade'] = year_by_year_df['Draft Grade'].apply(grade_to_letter)
             year_by_year_df = year_by_year_df.drop(columns=['Record'])
-            print(year_by_year_df)
+            # print(year_by_year_df)
             # dfsa
 
             # Display the final DataFrame
