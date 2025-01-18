@@ -21,7 +21,7 @@ def app():
 
     # Create the league string based on the selected year
     league = f"EBC League {selected_year}"
-    draft_file = f"EBC League Draft Results {selected_year}.csv"
+    draft_file = f"drafts/EBC League Draft Results {selected_year}.csv"
     
     file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
