@@ -5,6 +5,7 @@ def app():
     from calcPercent import percent
     from playoffNum import playoff_num
     from lifetime_record import lifetime_record
+    from st_aggrid import AgGrid
 
     league_id = 1118513122
     espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
@@ -20,6 +21,7 @@ def app():
 
     # Create the league string based on the selected year
     league = f"EBC League {selected_year}"
+    draft_file = f"EBC League Draft Results {selected_year}.csv"
     
     file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
@@ -181,6 +183,18 @@ def app():
     except:
         print("No Playoffs Yet")
 
+    try:
+        df = pd.read_csv(draft_file)
+        st.header('Draft Results')
+
+        # Increment index to start at 1
+        df.index += 1
+        AgGrid(df)
+
+        
+    except:
+        print("No Playoffs Yet")
+
     # st.header('Upset Factor of Previous Week')
     # st.write('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
     # df = pd.read_excel(file, sheet_name="Louie Power Index")
@@ -200,7 +214,7 @@ def app():
     st.header('Lifetime Record')
     st.write('Select a team and see their record vs all other teams over every year and every game of that league')
  
-    selected_team = st.selectbox("Select Team",  )
+    selected_team = st.selectbox("Select Team", names)
     def convert_to_int_list(original_list):
         """
         Converts all elements in a list to integers.
