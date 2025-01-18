@@ -378,7 +378,7 @@ def wins_by_seed():
     championship_games = all_playoff_dfs[all_playoff_dfs['Round'] == 'Championship']
     # print(championship_games)
     # print(championship_games[["Team 1", "Seed 1", "Score 1", "LPI 1", "Record 1", "Team 2", "Seed 2", "Score 2", "LPI 2", "Record 2", "File Name"]])
-    print(championship_games[["Team 1", "Seed 1", "Total Points 1", "LPI 1", "Record 1", "Team 2", "Seed 2", "Total Points 2", "LPI 2", "Record 2", "File Name"]])
+    # print(championship_games[["Team 1", "Seed 1", "Total Points 1", "LPI 1", "Record 1", "Team 2", "Seed 2", "Total Points 2", "LPI 2", "Record 2", "File Name"]])
 
     # Create a Winner DataFrame by selecting respective columns based on the Winner
     winner_df = championship_games.apply(
@@ -399,7 +399,7 @@ def wins_by_seed():
 
     # Print the Winner DataFrame
     print(winner_df)
-    dfsa
+    # dfsa
     # Map winner seeds and determine wins by seed
     def get_winner_seed(row):
         if row['Score 1'] > row['Score 2']:
@@ -459,7 +459,7 @@ def wins_by_record(all_playoff_dfs):
     all_playoff_dfs['Wins 2'] = all_playoff_dfs['Record 2'].str.split('-').str[0].astype(int)
     all_playoff_dfs['Losses 1'] = all_playoff_dfs['Record 1'].str.split('-').str[1].astype(int)
     all_playoff_dfs['Losses 2'] = all_playoff_dfs['Record 2'].str.split('-').str[1].astype(int)
-    print(all_playoff_dfs)
+    # print(all_playoff_dfs)
     # --------------------------------------------------------------------------------------------
     # --------------------------------------------------------------------------------------------
     # Calculate win counts for each record
@@ -490,6 +490,35 @@ def wins_by_record(all_playoff_dfs):
         "Total Record": total_record,
         "Total Games": record_game_counts.astype(int)
     })
+
+    # Add a new column for win percentage
+    record_summary_df["Win Percentage"] = (
+        record_summary_df.index.map(lambda r: int(r.split('-')[0]) / (int(r.split('-')[0]) + int(r.split('-')[1])))
+    ).round(3)
+
+    # Filter records that total to 14 games
+    record_summary_df["Total Games Played"] = record_summary_df.index.map(lambda r: sum(map(int, r.split('-'))))
+    records_14_games = record_summary_df[record_summary_df["Total Games Played"] == 14].copy()
+
+    # # Combine records not totaling 14 games into their corresponding win percentage
+    # records_other = record_summary_df[record_summary_df["Total Games Played"] != 14]
+    # print(records_14_games)
+    # for idx, row in records_other.iterrows():
+    #     win_percentage = row["Win Percentage"]
+    #     match_idx = records_14_games.index[
+    #         records_14_games["Win Percentage"] == win_percentage
+    #     ].tolist()
+
+    #     # If a match exists, combine the values
+    #     if match_idx:
+    #         match_idx = match_idx[0]  # Get the first matching index
+    #         # Parse and add Total Record (wins and losses)
+    #         existing_wins, existing_losses = map(int, records_14_games.loc[match_idx, "Total Record"].split("-"))
+    #         new_wins, new_losses = map(int, row["Total Record"].split("-"))
+    #         records_14_games.loc[match_idx, "Total Record"] = f"{existing_wins + new_wins}-{existing_losses + new_losses}"
+    #         # Add Total Games
+    #         records_14_games.loc[match_idx, "Total Games"] += row["Total Games"]
+
     # Ensure the index is sorted by the number of wins in ascending order
     record_summary_df.index = pd.Categorical(
         record_summary_df.index, 
@@ -497,53 +526,90 @@ def wins_by_record(all_playoff_dfs):
         ordered=True
     )
     record_summary_df = record_summary_df.sort_index()
+    record_summary_df.drop(columns=["Total Games Played"], inplace=True)
 
     # Print results
     print("Win rates by record:")
-    print(record_summary_df)
-    xcv
+    # print(record_summary_df)
+    # print()
+    records_14_games.index = pd.Categorical(
+        records_14_games.index, 
+        categories=sorted(records_14_games.index, key=lambda r: int(r.split('-')[0])),
+        ordered=True
+    )
+    records_14_games = records_14_games.sort_index()
+    records_14_games.drop(columns=["Total Games Played"], inplace=True)
+    print(records_14_games)
+    print()
     # --------------------------------------------------------------------------------------------
 
     # --------------------------------------------------------------------------------------------
     # Filter first round games
     total_seasons = all_playoff_dfs['File Name'].nunique()
     # print(all_playoff_dfs[all_playoff_dfs['Round'] == 'Championship'])
-    # print(total_seasons)
     # sfd
     first_round_games = all_playoff_dfs[all_playoff_dfs['Round'] == 'Quarter Final']
 
-    # Map winner records
-    first_round_wins_by_record = first_round_games['Winner'].map(
-        lambda x: all_playoff_dfs.loc[
-            (all_playoff_dfs['Team 1'] == x), 'Wins 1'
-        ].values[0] if x in all_playoff_dfs['Team 1'].values else 
-        all_playoff_dfs.loc[
-            (all_playoff_dfs['Team 2'] == x), 'Seed 2'
-        ].values[0]
-    ).value_counts()
+    # Initialize counters for the first round wins by record
+    first_round_wins_by_record = {}
 
-    # Count total first round appearances by record
-    first_round_game_counts = first_round_games['Seed 1'].value_counts().add(
-        first_round_games['Seed 2'].value_counts(), fill_value=0
+    # Loop through the first round games and count wins for each record
+    for _, game in first_round_games.iterrows():
+        # Extract winner and their record (either Record 1 or Record 2)
+        winner = game['Winner']
+        if winner == game['Team 1']:
+            winner_record = game['Record 1']
+        else:
+            winner_record = game['Record 2']
+        
+        # Count wins for each record
+        if winner_record in first_round_wins_by_record:
+            first_round_wins_by_record[winner_record] += 1
+        else:
+            first_round_wins_by_record[winner_record] = 1
+
+    # Count total appearances of each record in the first round (both Record 1 and Record 2)
+    first_round_game_counts = first_round_games['Record 1'].value_counts().add(
+        first_round_games['Record 2'].value_counts(), fill_value=0
     ).astype(int)
 
     # Ensure both indices align, and fill missing values with 0
-    all_records = first_round_game_counts.index.union(first_round_wins_by_record.index)
-    first_round_wins_by_record = first_round_wins_by_record.reindex(all_records, fill_value=0)
+    all_records = first_round_game_counts.index.union(first_round_wins_by_record.keys())
+    first_round_wins_by_record = {record: first_round_wins_by_record.get(record, 0) for record in all_records}
     first_round_game_counts = first_round_game_counts.reindex(all_records, fill_value=0)
-    # Calculate first round probabilities
-    first_round_probabilities = (first_round_wins_by_record / first_round_game_counts * 100).fillna(0).round(2).map(lambda x: f"{x:.2f}%")
+
+    # Calculate first round win probabilities
+    first_round_probabilities = (
+        pd.Series(first_round_wins_by_record) / first_round_game_counts * 100
+    ).fillna(0).round(2).map(lambda x: f"{x:.2f}%")
+
+    # Calculate total record (wins-losses) for each record
+    first_round_losses_by_record = first_round_game_counts - pd.Series(first_round_wins_by_record)
+    total_record = (
+        pd.Series(first_round_wins_by_record).astype(int).astype(str) + "-" +
+        first_round_losses_by_record.astype(int).astype(str)
+    )
 
     # Combine into a DataFrame
     first_round_summary_df = pd.DataFrame({
         "Win Probability": first_round_probabilities,
+        "Total Record": total_record,
         "Total Games": first_round_game_counts
     })
-    first_round_summary_df.index = first_round_summary_df.index.map(lambda x: f"Seed {int(x)}")
 
-    # Remove "Seed 0" row if it exists
-    if "Seed 0" in first_round_summary_df.index:
-        first_round_summary_df = first_round_summary_df.drop(index="Seed 0")
+    first_round_summary_df["Total Games Played"] = first_round_summary_df.index.map(lambda r: sum(map(int, r.split('-'))))
+    first_round_summary_df = first_round_summary_df[first_round_summary_df["Total Games Played"] == 14].copy()
+    first_round_summary_df.drop(columns=["Total Games Played"], inplace=True)
+
+    # Ensure the index is sorted by the number of wins in ascending order
+    first_round_summary_df.index = pd.Categorical(
+        first_round_summary_df.index, 
+        categories=sorted(first_round_summary_df.index, key=lambda r: int(r.split('-')[0])),
+        ordered=True
+    )
+    first_round_summary_df = first_round_summary_df.sort_index()
+    # Map record indices to "x" format
+    first_round_summary_df.index = first_round_summary_df.index.map(lambda x: f"{x}")
 
     # Print results
     print("First round win probabilities by record:")
@@ -555,88 +621,141 @@ def wins_by_record(all_playoff_dfs):
     # Filter second round games
     second_round_games = all_playoff_dfs[all_playoff_dfs['Round'] == 'Semi Final']
 
-    # Map winner records
-    second_round_wins_by_record = second_round_games['Winner'].map(
-        lambda x: all_playoff_dfs.loc[
-            (all_playoff_dfs['Team 1'] == x), 'Seed 1'
-        ].values[0] if x in all_playoff_dfs['Team 1'].values else 
-        all_playoff_dfs.loc[
-            (all_playoff_dfs['Team 2'] == x), 'Seed 2'
-        ].values[0]
-    ).value_counts()
+    # Initialize counters for the second round wins by record
+    second_round_wins_by_record = {}
 
-    # Count total second round appearances by record
-    second_round_game_counts = second_round_games['Seed 1'].value_counts().add(
-        second_round_games['Seed 2'].value_counts(), fill_value=0
+    # Loop through the second round games and count wins for each record
+    for _, game in second_round_games.iterrows():
+        # Extract winner and their record (either Record 1 or Record 2)
+        winner = game['Winner']
+        if winner == game['Team 1']:
+            winner_record = game['Record 1']
+        else:
+            winner_record = game['Record 2']
+        
+        # Count wins for each record
+        if winner_record in second_round_wins_by_record:
+            second_round_wins_by_record[winner_record] += 1
+        else:
+            second_round_wins_by_record[winner_record] = 1
+
+    # Count total appearances of each record in the second round (both Record 1 and Record 2)
+    second_round_game_counts = second_round_games['Record 1'].value_counts().add(
+        second_round_games['Record 2'].value_counts(), fill_value=0
     ).astype(int)
 
     # Ensure both indices align, and fill missing values with 0
-    all_records = second_round_game_counts.index.union(second_round_wins_by_record.index)
-    second_round_wins_by_record = second_round_wins_by_record.reindex(all_records, fill_value=0)
+    all_records = second_round_game_counts.index.union(second_round_wins_by_record.keys())
+    second_round_wins_by_record = {record: second_round_wins_by_record.get(record, 0) for record in all_records}
     second_round_game_counts = second_round_game_counts.reindex(all_records, fill_value=0)
-    # Calculate second round probabilities
-    second_round_probabilities = (second_round_wins_by_record / second_round_game_counts * 100).fillna(0).round(2).map(lambda x: f"{x:.2f}%")
+
+    # Calculate second round win probabilities
+    second_round_probabilities = (
+        pd.Series(second_round_wins_by_record) / second_round_game_counts * 100
+    ).fillna(0).round(2).map(lambda x: f"{x:.2f}%")
+
+    # Calculate total record (wins-losses) for each record
+    second_round_losses_by_record = second_round_game_counts - pd.Series(second_round_wins_by_record)
+    total_record = (
+        pd.Series(second_round_wins_by_record).astype(int).astype(str) + "-" +
+        second_round_losses_by_record.astype(int).astype(str)
+    )
 
     # Combine into a DataFrame
     second_round_summary_df = pd.DataFrame({
         "Win Probability": second_round_probabilities,
+        "Total Record": total_record,
         "Total Games": second_round_game_counts
     })
-    second_round_summary_df.index = second_round_summary_df.index.map(lambda x: f"Seed {int(x)}")
 
-    # Remove "Seed 0" row if it exists
-    if "Seed 0" in second_round_summary_df.index:
-        second_round_summary_df = second_round_summary_df.drop(index="Seed 0")
+    # Add and filter by "Total Games Played" (only 14-game records)
+    second_round_summary_df["Total Games Played"] = second_round_summary_df.index.map(lambda r: sum(map(int, r.split('-'))))
+    second_round_summary_df = second_round_summary_df[second_round_summary_df["Total Games Played"] == 14].copy()
+    second_round_summary_df.drop(columns=["Total Games Played"], inplace=True)
+
+    # Ensure the index is sorted by the number of wins in ascending order
+    second_round_summary_df.index = pd.Categorical(
+        second_round_summary_df.index, 
+        categories=sorted(second_round_summary_df.index, key=lambda r: int(r.split('-')[0])),
+        ordered=True
+    )
+    second_round_summary_df = second_round_summary_df.sort_index()
+
+    # Map record indices to "x" format
+    second_round_summary_df.index = second_round_summary_df.index.map(lambda x: f"{x}")
 
     # Print results
-    print("Semi Final win probabilities by record:")
+    print("Second round win probabilities by record:")
     print(second_round_summary_df)
     print()
     # --------------------------------------------------------------------------------------------
 
     # --------------------------------------------------------------------------------------------
-    # Identify championship games
+    # Filter championship games
     championship_games = all_playoff_dfs[all_playoff_dfs['Round'] == 'Championship']
-    print(championship_games[["Team 1", "Seed 1", "Score 1", "LPI 1", "Record 1", "Team 2", "Seed 2", "Score 2", "LPI 2", "Record 2", "File Name"]])
 
-    # Map winner records and determine wins by record
-    def get_winner_record(row):
-        if row['Score 1'] > row['Score 2']:
-            return row['Seed 1']
-        elif row['Score 2'] > row['Score 1']:
-            return row['Seed 2']
+    # Initialize counters for the championship wins by record
+    championship_wins_by_record = {}
+
+    # Loop through the championship games and count wins for each record
+    for _, game in championship_games.iterrows():
+        # Extract winner and their record (either Record 1 or Record 2)
+        winner = game['Winner']
+        if winner == game['Team 1']:
+            winner_record = game['Record 1']
         else:
-            return None  # In case of a tie (if applicable)
+            winner_record = game['Record 2']
+        
+        # Count wins for each record
+        if winner_record in championship_wins_by_record:
+            championship_wins_by_record[winner_record] += 1
+        else:
+            championship_wins_by_record[winner_record] = 1
 
-    # Apply the function to get the winning record
-    championship_games['Winning Seed'] = championship_games.apply(get_winner_record, axis=1)
-
-    # Count the number of championships won by each record (new column)
-    championship_wins_by_record = championship_games['Winning Seed'].value_counts()
-
-    # Count total championship appearances by record (unchanged)
-    championship_game_counts = championship_games['Seed 1'].value_counts().add(
-        championship_games['Seed 2'].value_counts(), fill_value=0
+    # Count total appearances of each record in the championship round (both Record 1 and Record 2)
+    championship_game_counts = championship_games['Record 1'].value_counts().add(
+        championship_games['Record 2'].value_counts(), fill_value=0
     ).astype(int)
 
-    # Calculate the total number of seasons
-    total_seasons = championship_games['File Name'].nunique()
-
     # Ensure both indices align, and fill missing values with 0
-    all_records = championship_game_counts.index.union(championship_wins_by_record.index)
-    championship_wins_by_record = championship_wins_by_record.reindex(all_records, fill_value=0)
+    all_records = championship_game_counts.index.union(championship_wins_by_record.keys())
+    championship_wins_by_record = {record: championship_wins_by_record.get(record, 0) for record in all_records}
     championship_game_counts = championship_game_counts.reindex(all_records, fill_value=0)
 
-    # Calculate championship probabilities as percentage of total seasons
-    championship_probabilities = (championship_wins_by_record / total_seasons * 100).round(2).map(lambda x: f"{x:.2f}%")
+    # Calculate championship win probabilities
+    championship_probabilities = (
+        pd.Series(championship_wins_by_record) / championship_game_counts * 100
+    ).fillna(0).round(2).map(lambda x: f"{x:.2f}%")
+
+    # Calculate total record (wins-losses) for each record
+    championship_losses_by_record = championship_game_counts - pd.Series(championship_wins_by_record)
+    total_record = (
+        pd.Series(championship_wins_by_record).astype(int).astype(str) + "-" +
+        championship_losses_by_record.astype(int).astype(str)
+    )
 
     # Combine into a DataFrame
     championship_summary_df = pd.DataFrame({
-        "Championship Probability": championship_probabilities,
-        "Total Championships": championship_game_counts,
-        "Championships Won": championship_wins_by_record
+        "Win Probability": championship_probabilities,
+        "Total Record": total_record,
+        "Total Games": championship_game_counts
     })
-    championship_summary_df.index = championship_summary_df.index.map(lambda x: f"Seed {int(x)}")
+
+    # Add and filter by "Total Games Played" (only 14-game records)
+    championship_summary_df["Total Games Played"] = championship_summary_df.index.map(lambda r: sum(map(int, r.split('-'))))
+    championship_summary_df = championship_summary_df[championship_summary_df["Total Games Played"] == 14].copy()
+    championship_summary_df.drop(columns=["Total Games Played"], inplace=True)
+
+    # Ensure the index is sorted by the number of wins in ascending order
+    championship_summary_df.index = pd.Categorical(
+        championship_summary_df.index, 
+        categories=sorted(championship_summary_df.index, key=lambda r: int(r.split('-')[0])),
+        ordered=True
+    )
+    championship_summary_df = championship_summary_df.sort_index()
+
+    # Map record indices to "x" format
+    championship_summary_df.index = championship_summary_df.index.map(lambda x: f"{x}")
 
     # Print results
     print("Out of " + str(total_seasons)+ " seasons analyzed")

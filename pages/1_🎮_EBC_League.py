@@ -200,7 +200,7 @@ def app():
     st.header('Lifetime Record')
     st.write('Select a team and see their record vs all other teams over every year and every game of that league')
  
-    selected_team = st.selectbox("Select Team", names)
+    selected_team = st.selectbox("Select Team",  )
     def convert_to_int_list(original_list):
         """
         Converts all elements in a list to integers.
