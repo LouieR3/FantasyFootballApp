@@ -185,20 +185,10 @@ def app():
 
     df = pd.read_csv(draft_file)
     st.header('Draft Results')
-
+    df = df.drop(columns=['Owner ID'])
     # Increment index to start at 1
     df.index += 1
     AgGrid(df)
-
-    try:
-        df = pd.read_csv(draft_file)
-        st.header('Draft Results')
-
-        # Increment index to start at 1
-        df.index += 1
-        AgGrid(df)
-    except:
-        print("No Playoffs Yet")
 
     # st.header('Upset Factor of Previous Week')
     # st.write('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
