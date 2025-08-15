@@ -36,7 +36,7 @@ def app():
                 # Highlight the "Round" column if it's "Championship"
                 round_color = 'background-color: gold' if row["Round"] == "Championship" else ''
                 # Highlight the "Winner" column
-                winner_color = ['background-color: gold' if col == "Winner" else '' for col in df.columns]
+                winner_color = ['background-color: gold' if (col == "Winner" and row["Round"] == "Championship") else '' for col in df.columns]
                 return [round_color] + winner_color[1:]
 
             return df.style.apply(highlight_championship_and_winner, axis=1)
