@@ -16,6 +16,15 @@ def app():
     
     selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
     st.title(f'🎮 EBC League {selected_year}')
+    
+    # Try reading the "Playoff Results" sheet and display it if it exists
+    try:
+        playoff_results_df = pd.read_excel(file, sheet_name="Playoff Results")
+        st.header('Season Results')
+        st.dataframe(playoff_results_df, width=2000)
+    except Exception as e:
+        st.write("No 'Playoff Results' sheet found in the file.")
+
     st.header('Schedule Comparisson')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
 
