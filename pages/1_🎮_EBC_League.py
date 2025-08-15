@@ -45,7 +45,7 @@ def app():
         # styled_playoff_results = style_playoff_results(playoff_results_df).hide_index()
 
         st.header('Season Results')
-        st.dataframe(playoff_results_df, width=2000)
+        st.dataframe(playoff_results_df, width=2000, hide_index=True)
     except Exception as e:
         st.write(e)
 
