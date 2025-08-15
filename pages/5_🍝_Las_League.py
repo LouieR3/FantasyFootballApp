@@ -15,6 +15,7 @@ def app():
     
     selected_year = st.selectbox("Select Year", year_options, index=2)  # Defaults to 2024
     st.title(f'🍝 Las League {selected_year}')
+    league = f"THE BEST OF THE BEST {selected_year}"
     file = league + ".xlsx"
     st.title("🏈 " + league)
     # Try reading the "Playoff Results" sheet and display it if it exists
@@ -47,7 +48,6 @@ def app():
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
 
     # Create the league string based on the selected year
-    league = f"THE BEST OF THE BEST {selected_year}"
     # league = f"THE BEST OF THE BEST 2024"
     
     file = league + ".xlsx"
