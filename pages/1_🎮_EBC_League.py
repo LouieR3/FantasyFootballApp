@@ -22,12 +22,31 @@ def app():
     draft_file = f"drafts/EBC League Draft Results {selected_year}.csv"
     
     file = league + ".xlsx"
+
     
     # Try reading the "Playoff Results" sheet and display it if it exists
     try:
         playoff_results_df = pd.read_excel(file, sheet_name="Playoff Results")
+
+        # Drop unnecessary columns
+        playoff_results_df = playoff_results_df.drop(columns=["Total Points 1", "Total Points 2"])
+
+        # Style the DataFrame
+        def style_playoff_results(df):
+            def highlight_championship_and_winner(row):
+                # Highlight the "Round" column if it's "Championship"
+                round_color = 'background-color: gold' if row["Round"] == "Championship" else ''
+                # Highlight the "Winner" column
+                winner_color = ['background-color: gold' if col == "Winner" else '' for col in df.columns]
+                return [round_color] + winner_color[1:]
+
+            return df.style.apply(highlight_championship_and_winner, axis=1)
+
+        # Apply styling and remove the index
+        styled_playoff_results = style_playoff_results(playoff_results_df).hide_index()
+
         st.header('Season Results')
-        st.dataframe(playoff_results_df, width=2000)
+        st.dataframe(styled_playoff_results, width=2000)
     except Exception as e:
         st.write("No 'Playoff Results' sheet found in the file.")
 
