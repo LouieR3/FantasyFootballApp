@@ -15,6 +15,33 @@ def app():
     selected_year = st.selectbox("Select Year", year_options, index=2)  # Defaults to 2024
     league = f"Family Fantasy {selected_year}"
     st.title("👪 " + league)
+    file = league + ".xlsx"
+    st.title("🏈 " + league)
+    # Try reading the "Playoff Results" sheet and display it if it exists
+    try:
+        playoff_results_df = pd.read_excel(file, sheet_name="Playoff Results")
+
+        # Drop unnecessary columns
+        playoff_results_df = playoff_results_df.drop(columns=["Total Points 1", "Total Points 2"])
+
+        # Style the DataFrame
+        def style_playoff_results(df):
+            def highlight_championship_and_winner(row):
+                # Highlight the "Round" column if it's "Championship"
+                round_color = 'background-color: gold' if row["Round"] == "Championship" else ''
+                # Highlight the "Winner" column
+                winner_color = ['background-color: gold' if (col == "Winner" and row["Round"] == "Championship") else '' for col in df.columns]
+                return [round_color] + winner_color[1:]
+
+            return df.style.apply(highlight_championship_and_winner, axis=1)
+
+        # Apply styling and remove the index
+        styled_playoff_results = style_playoff_results(playoff_results_df)
+
+        st.header('Season Results')
+        st.dataframe(styled_playoff_results, width=2000, hide_index=True)
+    except Exception as e:
+        st.write(e)
     st.header('Schedule Comparisson')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')# league = "EBCLeague"
     file = league + ".xlsx"
