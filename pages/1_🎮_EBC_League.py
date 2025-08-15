@@ -17,6 +17,12 @@ def app():
     selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
     st.title(f'🎮 EBC League {selected_year}')
     
+    # Create the league string based on the selected year
+    league = f"EBC League {selected_year}"
+    draft_file = f"drafts/EBC League Draft Results {selected_year}.csv"
+    
+    file = league + ".xlsx"
+    
     # Try reading the "Playoff Results" sheet and display it if it exists
     try:
         playoff_results_df = pd.read_excel(file, sheet_name="Playoff Results")
@@ -28,11 +34,6 @@ def app():
     st.header('Schedule Comparisson')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
 
-    # Create the league string based on the selected year
-    league = f"EBC League {selected_year}"
-    draft_file = f"drafts/EBC League Draft Results {selected_year}.csv"
-    
-    file = league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     
