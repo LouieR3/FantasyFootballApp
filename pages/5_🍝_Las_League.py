@@ -14,7 +14,7 @@ def app():
     year_options = ['2022', '2023', '2024']
     
     selected_year = st.selectbox("Select Year", year_options, index=2)  # Defaults to 2024
-    st.title(f'🍝 Las League {selected_year}')
+    # st.title(f'🍝 Las League {selected_year}')
     league = f"THE BEST OF THE BEST {selected_year}"
     file = league + ".xlsx"
     st.title("🏈 " + league)

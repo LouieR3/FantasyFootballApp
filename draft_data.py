@@ -16,7 +16,7 @@ start_time = time.time()
 
 espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
 # Pennoni Younglings
-league = League(league_id=310334683, year=2023, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=310334683, year=2024, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 # print(league.settings)
 # gfds
 # league = League(league_id=310334683, year=2023, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
@@ -62,6 +62,29 @@ leagues = [
     {"league_id": 367134149, "year": year, "espn_s2": prahlad_espn_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "Brown Munde"},
     {"league_id": 1049459, "year": year, "espn_s2": la_espn_s2, "swid": "{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}", "name": "Las League"},
 ]
+
+def owner_df_creation():
+    team_owners = [team.owners for team in league.teams]
+    team_names  = [team.team_name for team in league.teams]
+
+    # Create a list of dictionaries for the DataFrame
+    data = []
+    count = 0
+    for team in team_owners:
+        team = team[0]
+        team_name = team_names[count]
+        data.append({
+            "Display Name": team['firstName'] + " " + team['lastName'],
+            "ID": team['id'],
+            "Team Name": team_name
+        })
+        count += 1
+
+    # Create the DataFrame
+    df = pd.DataFrame(data)
+
+    # Display the DataFrame
+    return df
 
 # Loop through each league configuration
 for league_config in leagues:
@@ -267,6 +290,13 @@ for league_config in leagues:
         # print(team_draft[["Player", "Position", "Projected Points", "Points", "Avg Points", "Draft Grade", "Points Grade", "Avg Grade", "GamesPlay Grade", "Pick Grade", "Position Grade", "Points MAX Grade", "Avg MAX Grade", "Letter Grade"]])
         # test = draft_df[["Player", "Position", "Projected Points", "Points", "Avg Points", "Draft Grade", "Points Grade", "Avg Grade", "GamesPlay Grade", "Pick Grade", "Position Grade", "Points MAX Grade", "Avg MAX Grade", "Letter Grade"]]
 
+        owners_df = owner_df_creation()
+        # Create a dictionary for efficient lookup from owner_df
+        owner_mapping = dict(zip(owners_df["Team Name"], owners_df["ID"]))
+
+        # Add Owner ID column to draft_df
+        draft_df["Owner ID"] = draft_df["Team"].map(owner_mapping)
+
         draft_df.to_csv(fileDraft, index=False)
         # --------------------------------------------------------------------------------------
 
@@ -394,6 +424,8 @@ for league_config in leagues:
             # Display the DataFrame
             print(additions_df)
             fileFreeAgent = leagueName + " FreeAgent Results" + " " + str(year) + ".csv"
+            # Add Owner ID column to free_agent_df
+            additions_df["Owner ID"] = additions_df["Team"].map(owner_mapping)
 
             additions_df.to_csv(fileFreeAgent, index=False)
         # freeAgentResults()
