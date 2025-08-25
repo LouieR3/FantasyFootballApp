@@ -16,7 +16,7 @@ def app():
     league = f"Brown Munde {selected_year}"
     st.title("🧑‍🤝‍🧑 " + league)
     file = league + ".xlsx"
-    st.title("🏈 " + league)
+    # st.title("🏈 " + league)
 
     try:
         df = pd.read_excel(file, sheet_name="Playoff Results")
