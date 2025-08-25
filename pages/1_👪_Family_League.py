@@ -17,31 +17,58 @@ def app():
     st.title("👪 " + league)
     file = league + ".xlsx"
     st.title("🏈 " + league)
-    # Try reading the "Playoff Results" sheet and display it if it exists
     try:
-        playoff_results_df = pd.read_excel(file, sheet_name="Playoff Results")
+        df = pd.read_excel(file, sheet_name="Playoff Results")
+        st.header('Playoff Results')
 
-        # Drop unnecessary columns
-        playoff_results_df = playoff_results_df.drop(columns=["Total Points 1", "Total Points 2"])
+        # Increment index to start at 1
+        df.index += 1
 
-        # Style the DataFrame
-        def style_playoff_results(df):
-            def highlight_championship_and_winner(row):
-                # Highlight the "Round" column if it's "Championship"
-                round_color = 'background-color: gold' if row["Round"] == "Championship" else ''
-                # Highlight the "Winner" column
-                winner_color = ['background-color: gold' if (col == "Winner" and row["Round"] == "Championship") else '' for col in df.columns]
-                return [round_color] + winner_color[1:]
+        # Round the specified columns to the 100th
+        columns_to_round = ["Score 1", "Total Points 1", "Score 2", "Total Points 2"]
+        df[columns_to_round] = df[columns_to_round].round(2).astype(str)
 
-            return df.style.apply(highlight_championship_and_winner, axis=1)
+        def style_gold_and_bold(df):
+            """
+            Styles the last row bright gold, the 2nd and 3rd to last rows muted gold,
+            and bolds the winning team's columns.
+            """
+            def highlight_rows(row):
+                # Index of the row in the DataFrame
+                row_idx = row.name
+                
+                # Last row: bright gold
+                if row_idx == len(df):
+                    return ['background-color: #FFD700'] * len(row)
+                # Second and third to last rows: muted gold
+                elif row_idx == len(df) - 1 or row_idx == len(df) - 2:
+                    return ['background-color: #ffe064'] * len(row)
+                # Default: no styling
+                return [''] * len(row)
 
-        # Apply styling and remove the index
-        styled_playoff_results = style_playoff_results(playoff_results_df)
+            def bold_winner(row):
+                # Determine the winner columns
+                winner = row["Winner"]
+                print("BOLD ASSESS:")
+                print(winner == row["Team 1"])
+                if winner == row["Team 1"]:
+                    return ['font-weight: bold' if col.endswith("1") else '' for col in df.columns]
+                elif winner == row["Team 2"]:
+                    return ['font-weight: bold' if col.endswith("2") else '' for col in df.columns]
+                return [''] * len(row)
 
-        st.header('Season Results')
-        st.dataframe(styled_playoff_results, width=2000, hide_index=True)
-    except Exception as e:
-        st.write(e)
+            # Combine the row and column styles
+            styled = df.style.apply(highlight_rows, axis=1).apply(bold_winner, axis=1)
+            return styled
+
+        # Apply the styling function
+        styled_df = style_gold_and_bold(df)
+
+        # Display the styled DataFrame
+        st.dataframe(styled_df)
+    except:
+        print("No Playoffs Yet")
+
     st.header('Schedule Comparisson')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')# league = "EBCLeague"
     file = league + ".xlsx"
@@ -145,58 +172,6 @@ def app():
     df.index += 1
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
     st.dataframe(df3, height=460)
-
-    try:
-        df = pd.read_excel(file, sheet_name="Playoff Results")
-        st.header('Playoff Results')
-
-        # Increment index to start at 1
-        df.index += 1
-
-        # Round the specified columns to the 100th
-        columns_to_round = ["Score 1", "Total Points 1", "Score 2", "Total Points 2"]
-        df[columns_to_round] = df[columns_to_round].round(2).astype(str)
-
-        def style_gold_and_bold(df):
-            """
-            Styles the last row bright gold, the 2nd and 3rd to last rows muted gold,
-            and bolds the winning team's columns.
-            """
-            def highlight_rows(row):
-                # Index of the row in the DataFrame
-                row_idx = row.name
-                
-                # Last row: bright gold
-                if row_idx == len(df):
-                    return ['background-color: #FFD700'] * len(row)
-                # Second and third to last rows: muted gold
-                elif row_idx == len(df) - 1 or row_idx == len(df) - 2:
-                    return ['background-color: #ffe064'] * len(row)
-                # Default: no styling
-                return [''] * len(row)
-
-            def bold_winner(row):
-                # Determine the winner columns
-                winner = row["Winner"]
-                print("BOLD ASSESS:")
-                print(winner == row["Team 1"])
-                if winner == row["Team 1"]:
-                    return ['font-weight: bold' if col.endswith("1") else '' for col in df.columns]
-                elif winner == row["Team 2"]:
-                    return ['font-weight: bold' if col.endswith("2") else '' for col in df.columns]
-                return [''] * len(row)
-
-            # Combine the row and column styles
-            styled = df.style.apply(highlight_rows, axis=1).apply(bold_winner, axis=1)
-            return styled
-
-        # Apply the styling function
-        styled_df = style_gold_and_bold(df)
-
-        # Display the styled DataFrame
-        st.dataframe(styled_df)
-    except:
-        print("No Playoffs Yet")
 
     st.header('Biggest LPI Upsets')
     # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
