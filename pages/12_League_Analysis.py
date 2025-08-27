@@ -11,13 +11,13 @@ def app():
 
     pd.options.mode.chained_assignment = None
     st.header('League Analysis Across All Leagues')
-    st.subheader('In looking at regular season and playoff data across all leagues, how well does LPI predict winners? How about seeds, records, or total points? How often do top seeds win the championship? How often do lower seeds win the championship?')
+    # Get all Excel files in the current directory
+    xlsx_files = glob.glob("*.xlsx")
+    number_of_files = len(xlsx_files)
+    st.subheader('In looking at ' + str(number_of_files) + ' seasons, how well does LPI predict winners? How about seeds, records, or total points? How often do top seeds win the championship? How often do lower seeds win the championship?')
     st.divider()
     # Initialize an empty list to store all playoff_dfs
     combined_playoff_dfs = []
-
-    # Get all Excel files in the current directory
-    xlsx_files = glob.glob("*.xlsx")
 
     # Loop through each file
     for file in xlsx_files:
@@ -382,7 +382,7 @@ def app():
         print(second_round_summary_df)
         print()
         st.write("Semi Final win probabilities by seed:")
-        st.dataframe(second_round_summary_df)
+        st.dataframe(second_round_summary_df, width=500)
         st.write()
         # --------------------------------------------------------------------------------------------
 
@@ -411,11 +411,12 @@ def app():
         winner_df.reset_index(drop=True, inplace=True)
 
         # Print the Winner DataFrame
-        winner_df["File Name"] = winner_df["File Name"].str.replace('.xlsx', '', regex=False)
+        winner_df["League"] = winner_df["File Name"].str.replace('.xlsx', '', regex=False)
+        winner_df = winner_df[["Team", "Seed", "Total Points", "LPI", "Record", "League"]]
         print(winner_df)
         st.divider()
         st.write("All Champions:")
-        st.dataframe(winner_df)
+        st.dataframe(winner_df, height=1000)
         st.divider()
 
         # dfsa
