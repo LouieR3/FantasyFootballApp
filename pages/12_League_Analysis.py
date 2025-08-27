@@ -336,7 +336,7 @@ def app():
         print(first_round_summary_df)
         print()
         st.write("First round win probabilities by seed:")
-        st.dataframe(first_round_summary_df)
+        st.dataframe(first_round_summary_df, width=500)
         st.write()
         # --------------------------------------------------------------------------------------------
 
@@ -366,9 +366,19 @@ def app():
         # Calculate second round probabilities
         second_round_probabilities = (second_round_wins_by_seed / second_round_game_counts * 100).fillna(0).round(2).map(lambda x: f"{x:.2f}%")
 
+        # Calculate loss counts
+        sr_seed_loss_counts = second_round_game_counts - second_round_wins_by_seed
+
+        # Ensure Total Record values are properly aligned
+        total_record = (
+            second_round_wins_by_seed.astype(int).astype(str) + "-" +
+            sr_seed_loss_counts.astype(int).astype(str)
+        )   
+
         # Combine into a DataFrame
         second_round_summary_df = pd.DataFrame({
             "Win Probability": second_round_probabilities,
+            "Total Record": total_record,
             "Total Games": second_round_game_counts
         })
         second_round_summary_df.index = second_round_summary_df.index.map(lambda x: f"Seed {int(x)}")
@@ -382,7 +392,7 @@ def app():
         print(second_round_summary_df)
         print()
         st.write("Semi Final win probabilities by seed:")
-        st.dataframe(second_round_summary_df, width=500)
+        st.dataframe(second_round_summary_df, width=600)
         st.write()
         # --------------------------------------------------------------------------------------------
 
@@ -416,7 +426,7 @@ def app():
         print(winner_df)
         st.divider()
         st.write("All Champions:")
-        st.dataframe(winner_df, height=1000)
+        st.dataframe(winner_df, height=800)
         st.divider()
 
         # dfsa
