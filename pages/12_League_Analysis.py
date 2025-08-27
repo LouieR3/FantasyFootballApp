@@ -263,7 +263,7 @@ def app():
         print("Win rates by seed:")
         st.write("Win rates by seed:")
         print(seed_summary_df)
-        st.dataframe(seed_summary_df)
+        st.dataframe(seed_summary_df, width=500)
         st.write()
         print()
         # --------------------------------------------------------------------------------------------
@@ -392,7 +392,7 @@ def app():
         print(second_round_summary_df)
         print()
         st.write("Semi Final win probabilities by seed:")
-        st.dataframe(second_round_summary_df, width=600)
+        st.dataframe(second_round_summary_df, width=500)
         st.write()
         # --------------------------------------------------------------------------------------------
 
@@ -426,7 +426,7 @@ def app():
         print(winner_df)
         st.divider()
         st.write("All Champions:")
-        st.dataframe(winner_df, height=800)
+        st.dataframe(winner_df, height=700)
         st.divider()
 
         # dfsa
@@ -477,7 +477,7 @@ def app():
         st.divider()
         st.write("Out of " + str(total_seasons)+ " seasons analyzed:")
         st.write("Championship win probabilities by seed:")
-        st.dataframe(championship_summary_df)
+        st.dataframe(championship_summary_df, width=500)
         st.divider()
         # --------------------------------------------------------------------------------------------
 
@@ -485,7 +485,6 @@ def app():
     st.divider()
     def wins_by_record(all_playoff_dfs):
         print()
-        print("WIN RATE BY RECORD:")
         all_playoff_dfs = all_playoff_dfs[all_playoff_dfs['Is Bye'] == False]
         # all_playoff_dfs = all_playoff_dfs[(all_playoff_dfs['Record 1'] == "6-8-0") | (all_playoff_dfs['Record 2'] == "6-8-0")]
         # print(all_playoff_dfs[["Team 1", "Seed 1", "Score 1", "LPI 1", "Record 1", "Team 2", "Seed 2", "Score 2", "LPI 2", "Record 2", "Winner"]])
@@ -576,6 +575,9 @@ def app():
         records_14_games.drop(columns=["Total Games Played"], inplace=True)
         print(records_14_games)
         print()
+        st.write("Win rates by record:")
+        st.dataframe(records_14_games, width=500)
+        st.divider()
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
@@ -650,6 +652,9 @@ def app():
         print("First round win probabilities by record:")
         print(first_round_summary_df)
         print()
+        st.write("First round win probabilities by record:")
+        st.dataframe(first_round_summary_df, width=500)
+        st.divider()
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
@@ -723,6 +728,9 @@ def app():
         print("Second round win probabilities by record:")
         print(second_round_summary_df)
         print()
+        st.write("Second round win probabilities by record:")
+        st.dataframe(second_round_summary_df, width=500)
+        st.divider()
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
@@ -797,6 +805,10 @@ def app():
         print("Championship win probabilities by record:")
         print(championship_summary_df)
         print()
+        st.write("Out of " + str(total_seasons)+ " seasons analyzed")
+        st.write("Championship win probabilities by record:")
+        st.dataframe(championship_summary_df, width=500)
+        st.divider()
         # --------------------------------------------------------------------------------------------
 
     wins_by_record(all_playoff_dfs)
