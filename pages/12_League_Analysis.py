@@ -10,8 +10,9 @@ def app():
     import time
 
     pd.options.mode.chained_assignment = None
-    st.header('Biggest Upsets By LPI')
-    
+    st.header('League Analysis Across All Leagues')
+    st.subheader('In looking at regular season and playoff data across all leagues, how well does LPI predict winners? How about seeds, records, or total points? How often do top seeds win the championship? How often do lower seeds win the championship?')
+    st.divider()
     # Initialize an empty list to store all playoff_dfs
     combined_playoff_dfs = []
 
@@ -95,8 +96,8 @@ def app():
         lpi_correct = no_byes['LPI Winner'].sum()
         total_games = len(no_byes)
         lpi_accuracy = lpi_correct / total_games * 100
-        print(f"LPI was correct in predicting {lpi_correct}/{total_games} games ({lpi_accuracy:.2f}%).")
-        st.write(f"LPI was correct in predicting {lpi_correct}/{total_games} games ({lpi_accuracy:.2f}%).")
+        print(f"LPI was correct in predicting the winner in {lpi_correct}/{total_games} games ({lpi_accuracy:.2f}%)")
+        st.write(f"LPI was correct in predicting the winner in {lpi_correct}/{total_games} games ({lpi_accuracy:.2f}%)")
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
@@ -113,8 +114,8 @@ def app():
         total_games = len(no_byes)
         total_points_accuracy = total_points_correct / total_games * 100
 
-        print(f"Total Points was correct in predicting {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%).")
-        st.write(f"Total Points was correct in predicting {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%).")
+        print(f"Total Points was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
+        st.write(f"Total Points was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
@@ -131,8 +132,8 @@ def app():
         total_games = len(no_byes)
         total_points_accuracy = total_points_correct / total_games * 100
 
-        print(f"Seed was correct in predicting {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%).")
-        st.write(f"Seed was correct in predicting {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%).")
+        print(f"Seed was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
+        st.write(f"Seed was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
@@ -156,9 +157,10 @@ def app():
         total_games = len(no_byes_different_wins)
         total_points_accuracy = total_points_correct / total_games * 100
 
-        print(f"Record was correct in predicting {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%).")
-        st.write(f"Record was correct in predicting {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%).")
+        print(f"Record was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
+        st.write(f"Record was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
         print()
+        st.divider()
         # print(no_byes_different_wins[["Team 1", "Seed 1", "Score 1", "LPI 1", "Record 1", "Team 2", "Seed 2", "Score 2", "LPI 2", "Record 2", "More Wins Winner"]])
         # print()
         # --------------------------------------------------------------------------------------------
@@ -171,8 +173,8 @@ def app():
         ).sum()
         negative_lpi_total = len(negative_lpi_games)
         negative_lpi_accuracy = negative_lpi_wins / negative_lpi_total * 100
-        print(f"Teams with negative LPI won {negative_lpi_wins}/{negative_lpi_total} games ({negative_lpi_accuracy:.2f}%).")
-        st.write(f"Teams with negative LPI won {negative_lpi_wins}/{negative_lpi_total} games ({negative_lpi_accuracy:.2f}%).")
+        print(f"Teams with negative LPI won {negative_lpi_wins}/{negative_lpi_total} games ({negative_lpi_accuracy:.2f}%)")
+        st.write(f"Teams with negative LPI won {negative_lpi_wins}/{negative_lpi_total} games ({negative_lpi_accuracy:.2f}%)")
 
         # Calculate win rate for teams with LPI >= 20
         lpi_20_games = no_byes[(no_byes['LPI 1'] >= 20) | (no_byes['LPI 2'] >= 20)]
@@ -182,8 +184,8 @@ def app():
         ).sum()
         lpi_20_total = len(lpi_20_games)
         lpi_20_accuracy = lpi_20_wins / lpi_20_total * 100
-        print(f"Teams with LPI >= 20 won {lpi_20_wins}/{lpi_20_total} games ({lpi_20_accuracy:.2f}%).")
-        st.write(f"Teams with LPI >= 20 won {lpi_20_wins}/{lpi_20_total} games ({lpi_20_accuracy:.2f}%).")
+        print(f"Teams with LPI >= 20 won {lpi_20_wins}/{lpi_20_total} games ({lpi_20_accuracy:.2f}%)")
+        st.write(f"Teams with LPI >= 20 won {lpi_20_wins}/{lpi_20_total} games ({lpi_20_accuracy:.2f}%)")
 
         # Calculate win rate for teams with LPI >= 40
         lpi_40_games = no_byes[(no_byes['LPI 1'] >= 40) | (no_byes['LPI 2'] >= 40)]
@@ -193,8 +195,8 @@ def app():
         ).sum()
         lpi_40_total = len(lpi_40_games)
         lpi_40_accuracy = lpi_40_wins / lpi_40_total * 100
-        print(f"Teams with LPI >= 40 won {lpi_40_wins}/{lpi_40_total} games ({lpi_40_accuracy:.2f}%).")
-        st.write(f"Teams with LPI >= 40 won {lpi_40_wins}/{lpi_40_total} games ({lpi_40_accuracy:.2f}%).")
+        print(f"Teams with LPI >= 40 won {lpi_40_wins}/{lpi_40_total} games ({lpi_40_accuracy:.2f}%)")
+        st.write(f"Teams with LPI >= 40 won {lpi_40_wins}/{lpi_40_total} games ({lpi_40_accuracy:.2f}%)")
 
         # Select relevant columns from no_byes and no_byes_different_wins for merging
         # no_byes_merge = no_byes[['Team 1', 'Team 2', 'File Name', 'LPI Winner', 'Total Points Winner', 'Seed Winner']]
@@ -212,7 +214,7 @@ def app():
 
     all_playoff_dfs = correct_percentages(all_playoff_dfs)
     # all_playoff_dfs.to_csv("all_playoffs.csv", index=False)
-
+    st.divider()
     def wins_by_seed():
         # --------------------------------------------------------------------------------------------
         # Calculate win counts for each seed
@@ -259,7 +261,10 @@ def app():
         seed_summary_df.index = seed_summary_df.index.map(lambda x: f"Seed {x}")
         # Print results
         print("Win rates by seed:")
+        st.write("Win rates by seed:")
         print(seed_summary_df)
+        st.dataframe(seed_summary_df)
+        st.write()
         print()
         # --------------------------------------------------------------------------------------------
 
@@ -330,6 +335,9 @@ def app():
         print("First round win probabilities by seed:")
         print(first_round_summary_df)
         print()
+        st.write("First round win probabilities by seed:")
+        st.dataframe(first_round_summary_df)
+        st.write()
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
@@ -373,6 +381,9 @@ def app():
         print("Semi Final win probabilities by seed:")
         print(second_round_summary_df)
         print()
+        st.write("Semi Final win probabilities by seed:")
+        st.dataframe(second_round_summary_df)
+        st.write()
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
@@ -400,7 +411,13 @@ def app():
         winner_df.reset_index(drop=True, inplace=True)
 
         # Print the Winner DataFrame
+        winner_df["File Name"] = winner_df["File Name"].str.replace('.xlsx', '', regex=False)
         print(winner_df)
+        st.divider()
+        st.write("All Champions:")
+        st.dataframe(winner_df)
+        st.divider()
+
         # dfsa
         # Map winner seeds and determine wins by seed
         def get_winner_seed(row):
@@ -446,10 +463,15 @@ def app():
         print("Championship win probabilities by seed:")
         print(championship_summary_df)
         print()
+        st.divider()
+        st.write("Out of " + str(total_seasons)+ " seasons analyzed:")
+        st.write("Championship win probabilities by seed:")
+        st.dataframe(championship_summary_df)
+        st.divider()
         # --------------------------------------------------------------------------------------------
 
     wins_by_seed()
-
+    st.divider()
     def wins_by_record(all_playoff_dfs):
         print()
         print("WIN RATE BY RECORD:")
