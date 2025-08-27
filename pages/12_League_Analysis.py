@@ -482,7 +482,6 @@ def app():
         # --------------------------------------------------------------------------------------------
 
     wins_by_seed()
-    st.divider()
     def wins_by_record(all_playoff_dfs):
         print()
         all_playoff_dfs = all_playoff_dfs[all_playoff_dfs['Is Bye'] == False]
