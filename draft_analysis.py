@@ -2,9 +2,18 @@ import pandas as pd
 import os
 import glob
 
+from espn_api.football import League
 # Path to the drafts folder
 drafts_folder = "drafts"
 
+file_path = os.path.join(drafts_folder, "Draft_Grades_with_Standings.csv")
+df = pd.read_csv(file_path)
+print(df)
+
+df['Draft Grade'] = df['Draft Grade'].round(2)
+print(df)
+df.to_csv(os.path.join(drafts_folder, "Draft_Grades_with_Standings.csv"), index=False)
+asdfda
 # Initialize an empty list to store dataframes
 dataframes = []
 
@@ -72,71 +81,71 @@ print(final_df)
 
 # Optionally, save the final dataframe to a new Excel file
 output_path = os.path.join(drafts_folder, "Aggregated_Draft_Grades.csv")
-final_df.to_csv(output_path, index=False)
-
-import pandas as pd
-import os
+# final_df.to_csv(output_path, index=False)
 
 # Path to the drafts folder
 drafts_folder = "drafts"
 
 # Function to determine final standings based on the Playoff Results sheet
 def determine_final_standings(league_name, year):
-    # Construct the file path for the league's Excel file
-    file_path = os.path.join(drafts_folder, f"{league_name} {year}.xlsx")
-    
-    try:
-        # Read the Playoff Results sheet
-        playoff_results = pd.read_excel(file_path, sheet_name="Playoff Results")
-        
-        # Extract the winners from each round
-        standings = []
-        for round_name in ["Championship", "Semi Final", "Quarter Final"]:
-            round_results = playoff_results[playoff_results["Round"] == round_name]
-            for _, row in round_results.iterrows():
-                if round_name == "Championship":
-                    standings.append({"Team": row["Winner"], "Standing": "Champion"})
-                elif round_name == "Semi Final":
-                    standings.append({"Team": row["Winner"], "Standing": "2nd"})
-                elif round_name == "Quarter Final":
-                    standings.append({"Team": row["Winner"], "Standing": "3rd"})
-        
-        # Convert standings to a DataFrame
-        standings_df = pd.DataFrame(standings)
-        
-        # Add teams that didn't make playoffs
-        all_teams = playoff_results["Team 1"].dropna().unique().tolist() + playoff_results["Team 2"].dropna().unique().tolist()
-        all_teams = list(set(all_teams))  # Remove duplicates
-        for team in all_teams:
-            if team not in standings_df["Team"].values:
-                standings_df = pd.concat([standings_df, pd.DataFrame([{"Team": team, "Standing": "Didn't Make Playoffs"}])], ignore_index=True)
-        
-        # Add the league name and year
-        standings_df["League Name"] = league_name
-        standings_df["Year"] = year
-        
-        return standings_df
-    except Exception as e:
-        print(f"Error processing file {file_path}: {e}")
+    year = int(year)
+    louie_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
+    prahlad_s2 = "AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4"
+    la_s2 = "AEC6x9TPufDhJAV682o%2BK6c8XdanPIkD8i3F4MF%2Fgtb1A4FD9SJMNrFoDt2sVHcppQpcYUIDF7kRotFrq8u%2Bkd4W94iy%2B952I9AG4ykEF3y2YRBvm75VMpecOvj7tZiv7iZ8R2K2SEqMExArEwMg3Bnbj161G3gMS6I%2F7YOKKMPTnC1VSTWuF5JlljFfFZz5hswmCr6IMZnZCzFmy%2FnPdwymI1NZ9IOAwJVn9pnBi9FpvyzcdcyYG2NOaarBmTLqyAd3%2BEdrDEpre%2F6Cfz6c3KcwO%2FFjPBkIFDxC1szNelynxfJZCupLm%2FEFFhXdbKnBeesbbOXJg%2BDLqZU1KGdCTU0FyEKr%2BcouwUy%2BnyDCuMYUog%3D%3D"
+    hannah_s2 = "AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D"
+    leagues = [
+        {"league_id": 310334683, "year": year, "espn_s2": louie_s2, "swid": "{4656A2AD-A939-460B-96A2-ADA939760B8B}", "name": "Pennoni Younglings"},
+        {"league_id": 996930954, "year": year, "espn_s2": louie_s2, "swid": "{4656A2AD-A939-460B-96A2-ADA939760B8B}", "name": "Family Fantasy"},
+        {"league_id": 1118513122, "year": year, "espn_s2": louie_s2, "swid": "{4656A2AD-A939-460B-96A2-ADA939760B8B}", "name": "EBC League"},
+        {"league_id": 1339704102, "year": year, "espn_s2": prahlad_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "0755 Fantasy Football"},
+        {"league_id": 1781851, "year": year, "espn_s2": prahlad_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "Game of Yards!"},
+        {"league_id": 367134149, "year": year, "espn_s2": prahlad_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "Brown Munde"},
+        {"league_id": 1049459, "year": year, "espn_s2": la_s2, "swid": "{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}", "name": "THE BEST OF THE BEST"},
+    ]
+    # Find the league config by name and year
+    league_config = next((l for l in leagues if l["name"] == league_name and l["year"] == year), None)
+    print(league_config)
+    if not league_config:
+        print(f"League config not found for {league_name} {year}")
         return pd.DataFrame()
+    league = League(
+        league_id=league_config["league_id"],
+        year=league_config["year"],
+        espn_s2=league_config["espn_s2"],
+        swid=league_config["swid"],
+    )
+    pr = league.standings()
+    standings = [
+        {"Team": team.team_name, "Standing": team.final_standing}
+        for team in pr
+    ]
+    standings_df = pd.DataFrame(standings)
+    print(standings_df)
+    standings_df["League Name"] = league_name
+    standings_df["Year"] = year
+    return standings_df
 
-# Example usage
-# Assuming `final_df` contains the aggregated draft grades with League Name and Year columns
-final_standings = []
-for _, row in final_df.iterrows():
-    league_name = row["League Name"]
-    year = league_name.split()[-1]  # Extract the year from the league name
-    league_name = " ".join(league_name.split()[:-1])  # Extract the league name without the year
-    
+# Get unique league names (with year) from final_df
+unique_leagues = final_df["League Name"].unique()
+
+# Collect all standings for each league
+all_standings = []
+for league_name_with_year in unique_leagues:
+    # Split out year and league name
+    parts = league_name_with_year.split()
+    year = int(parts[-1])
+    league_name = " ".join(parts[:-1])
     standings_df = determine_final_standings(league_name, year)
-    final_standings.append(standings_df)
+    # Recombine league name and year for merging
+    standings_df["League Name"] = league_name_with_year
+    all_standings.append(standings_df)
 
-# Combine all standings into a single DataFrame
-final_standings_df = pd.concat(final_standings, ignore_index=True)
+# Combine all standings into one DataFrame
+standings_all_df = pd.concat(all_standings, ignore_index=True)
 
-# Save the final standings to a CSV file
-output_path = os.path.join(drafts_folder, "Final_Standings.csv")
-final_standings_df.to_csv(output_path, index=False)
+# Merge standings onto final_df by Team and League Name
+final_df_with_standings = pd.merge(final_df, standings_all_df, on=["Team", "League Name"], how="left")
 
-# Display the final standings
-print(final_standings_df)
+# Save or display as needed
+print(final_df_with_standings)
+final_df_with_standings.to_csv(os.path.join(drafts_folder, "Draft_Grades_with_Standings.csv"), index=False)

@@ -43,8 +43,24 @@ for league_config in leagues:
         settings = league.settings
 
         leagueName = settings.name.replace(" 22/23", "")
-        pr = league.power_rankings(week=17)
-        print(tabulate(pr, headers="keys", tablefmt="pretty", showindex="always"))
+        # pr = league.power_rankings(week=17)
+        pr = league.standings()
+        table = [
+            [
+                team.team_name,
+                team.points_for,
+                team.points_against,
+                team.wins,
+                team.losses,
+                team.trades,
+                team.final_standing
+            ]
+            for team in pr
+        ]
+        headers = ["Team Name", "Points For", "Points Against", "Wins", "Losses", "Trades", "Final Standing"]
+        print(tabulate(table, headers=headers, tablefmt="pretty"))
+        # pr = league.standings_weekly(week=17)
+        # print(tabulate(pr, headers="keys", tablefmt="pretty", showindex="always"))
     except Exception as e:
         print(f"Error processing league {league_config['name']}: {e}")
         continue
