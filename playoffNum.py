@@ -25,6 +25,6 @@ def playoff_num(file):
         playoff_number = 6
     return playoff_number
 
-file = "0755 Fantasy Football 2022.xlsx"
-percentLis = playoff_num(file)
-print(percentLis)
+# file = "0755 Fantasy Football 2022.xlsx"
+# percentLis = playoff_num(file)
+# print(percentLis)
