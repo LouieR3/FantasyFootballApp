@@ -12,6 +12,7 @@ def app():
     leagueList = []
     for file in files:
         leagueName = file.split(".xlsx")[0]
+        leagueName = leagueName.split("leagues/")[0]
         leagueList.append(leagueName)
         df = pd.read_excel(file, sheet_name="Louie Power Index")
         df["League"] = leagueName
