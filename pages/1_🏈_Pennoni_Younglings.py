@@ -16,7 +16,7 @@ def app():
     league = f"Pennoni Younglings {selected_year}"    
     # league = "EBCLeague"
     # league = "FamilyLeague"
-    file = league + ".xlsx"
+    file = "leagues/" + league + ".xlsx"
     st.title("🏈 " + league)
     
     try:

@@ -12,7 +12,7 @@ def app():
     pd.options.mode.chained_assignment = None
     st.header('League Analysis Across All Leagues')
     # Get all Excel files in the current directory
-    xlsx_files = glob.glob("*.xlsx")
+    xlsx_files = glob.glob("leagues/*.xlsx")
     number_of_files = len(xlsx_files)
     st.subheader('In looking at ' + str(number_of_files) + ' seasons, how well does LPI predict winners? How about seeds, records, or total points? How often do top seeds win the championship? How often do lower seeds win the championship?')
     st.divider()

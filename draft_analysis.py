@@ -6,45 +6,24 @@ from espn_api.football import League
 # Path to the drafts folder
 drafts_folder = "drafts"
 
-file_path = os.path.join(drafts_folder, "Draft_Grades_with_Standings.csv")
-df = pd.read_csv(file_path)
-print(df)
-
-df['Draft Grade'] = df['Draft Grade'].round(2)
-print(df)
-df.to_csv(os.path.join(drafts_folder, "Draft_Grades_with_Standings.csv"), index=False)
-asdfda
 # Initialize an empty list to store dataframes
 dataframes = []
 
 # Function to calculate letter grade based on average draft grade
-def calculate_letter_grade(avg_grade):
-    if avg_grade >= 90:
-        return "A+"
-    elif avg_grade >= 85:
-        return "A"
-    elif avg_grade >= 80:
-        return "A-"
-    elif avg_grade >= 75:
-        return "B+"
-    elif avg_grade >= 70:
-        return "B"
-    elif avg_grade >= 65:
-        return "B-"
-    elif avg_grade >= 60:
-        return "C+"
-    elif avg_grade >= 55:
-        return "C"
-    elif avg_grade >= 50:
-        return "C-"
-    elif avg_grade >= 45:
-        return "D+"
-    elif avg_grade >= 40:
-        return "D"
-    elif avg_grade >= 35:
-        return "D-"
-    else:
-        return "F"
+def calculate_letter_grade(grade):
+    if grade >= 97: return "A+"
+    elif grade >= 93: return "A"
+    elif grade >= 90: return "A-"
+    elif grade >= 87: return "B+"
+    elif grade >= 83: return "B"
+    elif grade >= 80: return "B-"
+    elif grade >= 77: return "C+"
+    elif grade >= 73: return "C"
+    elif grade >= 70: return "C-"
+    elif grade >= 67: return "D+"
+    elif grade >= 63: return "D"
+    elif grade >= 60: return "D-"
+    else: return "F-"
 
 
 print(os.listdir(drafts_folder))
@@ -116,7 +95,12 @@ def determine_final_standings(league_name, year):
     )
     pr = league.standings()
     standings = [
-        {"Team": team.team_name, "Standing": team.final_standing}
+        {
+            "Team": team.team_name,
+            "Standing": team.final_standing,
+            "Points For": team.points_for,
+            "Record": f"{team.wins}-{team.losses}-{team.ties}"
+        }
         for team in pr
     ]
     standings_df = pd.DataFrame(standings)
@@ -144,7 +128,11 @@ for league_name_with_year in unique_leagues:
 standings_all_df = pd.concat(all_standings, ignore_index=True)
 
 # Merge standings onto final_df by Team and League Name
+# final_df['League Name'] = final_df['League Name'].apply(lambda x: " ".join(x.split()[:-1]))  # Remove year from League Name
 final_df_with_standings = pd.merge(final_df, standings_all_df, on=["Team", "League Name"], how="left")
+final_df_with_standings['Draft Grade'] = final_df_with_standings['Draft Grade'].round(2)
+final_df_with_standings['League Name'] = final_df_with_standings['League Name'].apply(lambda x: " ".join(x.split()[:-1]))  # Remove year from League Name
+final_df_with_standings['Points For'] = final_df_with_standings['Points For'].round(2)
 
 # Save or display as needed
 print(final_df_with_standings)

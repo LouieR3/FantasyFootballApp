@@ -15,7 +15,7 @@ def app():
     selected_year = st.selectbox("Select Year", year_options, index=2)  # Defaults to 2024
     league = f"Family Fantasy {selected_year}"
     st.title("👪 " + league)
-    file = league + ".xlsx"
+    file = "leagues/" + league + ".xlsx"
     # st.title("🏈 " + league)
     try:
         df = pd.read_excel(file, sheet_name="Playoff Results")
@@ -71,7 +71,7 @@ def app():
 
     st.header('Schedule Comparisson')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')# league = "EBCLeague"
-    file = league + ".xlsx"
+    file = "leagues/" + league + ".xlsx"
     df = pd.read_excel(file, sheet_name="Schedule Grid")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df = df.set_index("Teams")

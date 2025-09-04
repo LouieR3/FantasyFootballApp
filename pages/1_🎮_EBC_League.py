@@ -21,7 +21,7 @@ def app():
     league = f"EBC League {selected_year}"
     draft_file = f"drafts/EBC League Draft Results {selected_year}.csv"
     
-    file = league + ".xlsx"
+    file = "leagues/" + league + ".xlsx"
     
     try:
         df = pd.read_excel(file, sheet_name="Playoff Results")

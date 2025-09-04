@@ -6,7 +6,7 @@ def app():
 
     pd.options.mode.chained_assignment = None
     st.header('Biggest Upsets By LPI')
-    files = glob.glob('*.xlsx')
+    files = glob.glob('leagues/*.xlsx')
 
     appended_data = []
     leagueList = []
