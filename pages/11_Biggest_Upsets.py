@@ -11,8 +11,7 @@ def app():
     appended_data = []
     leagueList = []
     for file in files:
-        leagueName = file.split(".xlsx")[0]
-        leagueName = leagueName.split("leagues/")[0]
+        leagueName = file.split("leagues/")[1].split(".xlsx")[0]
         leagueList.append(leagueName)
         df = pd.read_excel(file, sheet_name="Biggest Upsets")
         df["League"] = leagueName
