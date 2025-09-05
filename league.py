@@ -11,7 +11,7 @@ from .box_score import BoxScore
 from .box_player import BoxPlayer
 from .player import Player
 from .activity import Activity
-from .utils import power_points, two_step_dominance
+from .page_functions import power_points, two_step_dominance
 from .constant import POSITION_MAP, ACTIVITY_MAP
 
 class League(BaseLeague):

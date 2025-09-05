@@ -122,7 +122,7 @@ def app():
                             else "" for x in x], axis = 1, subset=names)
     st.dataframe(df2, width=2000)
 
-    from utils import display_strength_of_schedule
+    from page_functions import display_strength_of_schedule
 
     # Call the function where needed
     display_strength_of_schedule(file)
