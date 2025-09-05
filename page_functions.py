@@ -2,6 +2,8 @@ import pandas as pd
 import streamlit as st
 from calcPercent import percent
 from playoffNum import playoff_num
+from st_aggrid import AgGrid
+from lifetime_record import lifetime_record
 
 def display_playoff_results(file):
     try:
@@ -222,6 +224,62 @@ def display_lpi(file):
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
     st.dataframe(df3)
 
+def display_draft_results(draft_file):
+    try:
+        df = pd.read_csv(draft_file)
+        st.header('Draft Results')
+        df = df.drop(columns=['Owner ID'])
+        # Increment index to start at 1
+        df.index += 1
+        AgGrid(df)
+    except:
+        print("No Draft Results Yet")
+
+def display_biggest_lpi_upsets(file):
+    st.header('Biggest LPI Upsets')
+    # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
+    df = pd.read_excel(file, sheet_name="Biggest Upsets")
+    df = df.iloc[: , 1:]
+    df.index += 1
+    df3 = df.style.background_gradient(subset=['LPI Difference'])
+    st.dataframe(df3)
+
+def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
+    df = pd.read_excel(file, sheet_name="Schedule Grid")
+    df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+    df = df.set_index("Teams")
+    names = []
+    for col in df.columns:
+        if col != "Teams":
+            names.append(col)
+
+    st.header('Lifetime Record')
+    st.write('Select a team and see their record vs all other teams over every year and every game of that league')
+ 
+    selected_team = st.selectbox("Select Team", names)
+    def convert_to_int_list(original_list):
+        """
+        Converts all elements in a list to integers.
+
+        Parameters:
+        - original_list (list): A list of elements that can be converted to integers.
+
+        Returns:
+        - list: A new list with all elements as integers.
+        """
+        return [int(item) for item in original_list]
+
+    # Convert to integers
+    years = convert_to_int_list(year_options)
+    print(years)
+    lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, selected_team)
+    
+    df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
+    st.dataframe(df4)
+
+    # df5 = year_df.style.background_gradient(subset=['Win Percentage'])
+    st.write("Here is this team's record by year:")
+    st.dataframe(year_df)
 
 # st.header('Upset Factor of Previous Week')
 # st.write('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')

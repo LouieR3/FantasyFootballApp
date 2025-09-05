@@ -22,8 +22,10 @@ def app():
     draft_file = f"drafts/EBC League Draft Results {selected_year}.csv"
     
     file = "leagues/" + league + ".xlsx"
-    from page_functions import display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds, display_lpi_by_week, display_expected_wins, display_lpi
-    
+
+
+    from page_functions import display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds
+    from page_functions import display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results
     display_playoff_results(file)
     
 
@@ -35,53 +37,16 @@ def app():
 
     display_playoff_odds(file)
     display_lpi_by_week(file)
-    
+
     display_lpi(file)
 
-
-    df = pd.read_csv(draft_file)
-    st.header('Draft Results')
-    df = df.drop(columns=['Owner ID'])
-    # Increment index to start at 1
-    df.index += 1
-    AgGrid(df)
-
-
-    st.header('Biggest LPI Upsets')
-    # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
-    df = pd.read_excel(file, sheet_name="Biggest Upsets")
-    df = df.iloc[: , 1:]
-    df.index += 1
-    df3 = df.style.background_gradient(subset=['LPI Difference'])
-    st.dataframe(df3)
-
-    st.header('Lifetime Record')
-    st.write('Select a team and see their record vs all other teams over every year and every game of that league')
- 
-    selected_team = st.selectbox("Select Team", names)
-    def convert_to_int_list(original_list):
-        """
-        Converts all elements in a list to integers.
-
-        Parameters:
-        - original_list (list): A list of elements that can be converted to integers.
-
-        Returns:
-        - list: A new list with all elements as integers.
-        """
-        return [int(item) for item in original_list]
-
-    # Convert to integers
-    years = convert_to_int_list(year_options)
-    print(years)
-    lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, selected_team)
+    display_draft_results(draft_file)
     
-    df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
-    st.dataframe(df4)
 
-    # df5 = year_df.style.background_gradient(subset=['Win Percentage'])
-    st.write("Here is this team's record by year:")
-    st.dataframe(year_df)
+    display_biggest_lpi_upsets(file)
+
+    display_lifetime_record(file, league_id, espn_s2, swid, year_options)
+   
 
     # st.write("Breakdown a team's performance vs. another team")
  
