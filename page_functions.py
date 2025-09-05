@@ -180,7 +180,7 @@ def display_expected_wins(file):
     st.dataframe(df3, height=height)
 
 
-def display_playoff_odds(file):
+def display_playoff_odds(file, league_id, espn_s2, swid, year):
     """
     Displays the Playoff Odds table with formatting in Streamlit.
 
@@ -204,7 +204,7 @@ def display_playoff_odds(file):
     formatted_df = df.applymap(format_and_round)
     
     # Get the number of playoff positions
-    playoff_number = playoff_num(file)
+    playoff_number = playoff_num(league_id, espn_s2, swid, year)
     slice_ = df.columns[:playoff_number]
     
     # Style the DataFrame

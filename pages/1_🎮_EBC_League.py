@@ -36,7 +36,7 @@ def app():
 
     display_expected_wins(file)
 
-    display_playoff_odds(file)
+    display_playoff_odds(file, league_id, espn_s2, swid, selected_year)
     display_lpi_by_week(file)
 
     display_lpi(file)
