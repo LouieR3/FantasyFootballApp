@@ -80,7 +80,7 @@ def display_schedule_comparison(file):
     if len(names) <= 10:
         height = "auto"
     else:
-        height = 460 + (len(names) - 10) * 20
+        height = 460 + (len(names) - 12) * 40
     print("HEIGHT:", height)
     # df2 = df.style.apply(lambda x: ["background-color: white" if (int(x.split(" ")[0].split('-')[0]) >= top25 and int(x.split(" ")[0].split('-')[0]) < top10) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: gold" if (int(x.split(" ")[0].split('-')[0]) >= top10 and int(x.split(" ")[0].split('-')[0]) < count) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: goldenrod" if (int(x.split(" ")[0].split('-')[0]) == count) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot25 and int(x.split(" ")[0].split('-')[0]) > bot10) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot10 and int(x.split(" ")[0].split('-')[0]) > 0) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(x.split(" ")[0].split('-')[0]) == 0) else "" for x in x], axis=1, subset=names)
     # df2 = df.style.apply(lambda x: ["background-color: khaki" 
@@ -131,8 +131,18 @@ def display_strength_of_schedule(file):
     # Apply gradient styling
     df_styled = df.style.background_gradient(subset=['Wins Against Schedule'])
     
+    df = df.set_index("Teams")
+    pd.options.mode.chained_assignment = None
+    names = []
+    for col in df.columns:
+        if col != "Teams":
+            names.append(col)
+    if len(names) <= 10:
+        height = "auto"
+    else:
+        height = 460 + (len(names) - 12) * 40
     # Display the styled DataFrame
-    st.dataframe(df_styled)
+    st.dataframe(df_styled, height=height)
 
 def display_expected_wins(file):
     """
@@ -154,7 +164,18 @@ def display_expected_wins(file):
     # Apply gradient styling
     df3 = df.style.background_gradient(subset=['Expected Wins'])
     # Display the styled DataFrame
-    st.dataframe(df3)
+    df = df.set_index("Teams")
+    pd.options.mode.chained_assignment = None
+    names = []
+    for col in df.columns:
+        if col != "Teams":
+            names.append(col)
+    if len(names) <= 10:
+        height = "auto"
+    else:
+        height = 460 + (len(names) - 12) * 40
+    # Display the styled DataFrame
+    st.dataframe(df3, height=height)
 
 
 def display_playoff_odds(file):
@@ -186,9 +207,18 @@ def display_playoff_odds(file):
     
     # Style the DataFrame
     styled_df = formatted_df.style.set_properties(**{'background-color': 'lightgray'}, subset=slice_)
-    
+    df = df.set_index("Teams")
+    pd.options.mode.chained_assignment = None
+    names = []
+    for col in df.columns:
+        if col != "Teams":
+            names.append(col)
+    if len(names) <= 10:
+        height = "auto"
+    else:
+        height = 460 + (len(names) - 12) * 40
     # Display the styled DataFrame
-    st.dataframe(styled_df)
+    st.dataframe(styled_df, height=height)
 
 def display_lpi_by_week(file):
     """
@@ -203,9 +233,18 @@ def display_lpi_by_week(file):
     df = pd.read_excel(file, sheet_name="LPI By Week")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df = df.set_index("Teams")
-    
+    df = df.set_index("Teams")
+    pd.options.mode.chained_assignment = None
+    names = []
+    for col in df.columns:
+        if col != "Teams":
+            names.append(col)
+    if len(names) <= 10:
+        height = "auto"
+    else:
+        height = 460 + (len(names) - 12) * 40
     # Display the DataFrame
-    st.dataframe(df)
+    st.dataframe(df, height=height)
 
 def display_lpi(file):
     """
@@ -227,7 +266,17 @@ def display_lpi(file):
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
-    st.dataframe(df3)
+    df = df.set_index("Teams")
+    pd.options.mode.chained_assignment = None
+    names = []
+    for col in df.columns:
+        if col != "Teams":
+            names.append(col)
+    if len(names) <= 10:
+        height = "auto"
+    else:
+        height = 460 + (len(names) - 12) * 40
+    st.dataframe(df3, height=height)
 
 def display_draft_results(draft_file):
     try:
@@ -247,7 +296,17 @@ def display_biggest_lpi_upsets(file):
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['LPI Difference'])
-    st.dataframe(df3)
+    df = df.set_index("Teams")
+    pd.options.mode.chained_assignment = None
+    names = []
+    for col in df.columns:
+        if col != "Teams":
+            names.append(col)
+    if len(names) <= 10:
+        height = "auto"
+    else:
+        height = 460 + (len(names) - 12) * 40
+    st.dataframe(df3, height=height)
 
 def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     df = pd.read_excel(file, sheet_name="Schedule Grid")
@@ -280,7 +339,17 @@ def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, selected_team)
     
     df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
-    st.dataframe(df4)
+    df = df.set_index("Teams")
+    pd.options.mode.chained_assignment = None
+    names = []
+    for col in df.columns:
+        if col != "Teams":
+            names.append(col)
+    if len(names) <= 10:
+        height = "auto"
+    else:
+        height = 460 + (len(names) - 12) * 40
+    st.dataframe(df4, height=height)
 
     # df5 = year_df.style.background_gradient(subset=['Win Percentage'])
     st.write("Here is this team's record by year:")
