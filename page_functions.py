@@ -259,51 +259,39 @@ def display_lpi_by_week(file):
     # Display the DataFrame
     st.dataframe(df, height=height, hide_index=True)
 
+    # Create a new DataFrame excluding "Change From Last Week"
+    df_chart = df.drop(columns=["Change From Last Week"])
+
+    # Prepare data for the ECharts stacked line chart
+    teams = df_chart["Teams"].tolist()
+    weeks = df_chart.columns[1:]  # Exclude the "Teams" column
+    series_data = []
+
+    for _, row in df_chart.iterrows():
+        series_data.append({
+            "name": row["Teams"],
+            "type": "line",
+            "stack": "Total",
+            "data": row[1:].tolist()  # Exclude the "Teams" column
+        })
+
+    # ECharts options
     options = {
-        "title": {"text": "折线图堆叠"},
+        "title": {"text": "LPI By Week"},
         "tooltip": {"trigger": "axis"},
-        "legend": {"data": ["邮件营销", "联盟广告", "视频广告", "直接访问", "搜索引擎"]},
+        "legend": {"data": teams},
         "grid": {"left": "3%", "right": "4%", "bottom": "3%", "containLabel": True},
         "toolbox": {"feature": {"saveAsImage": {}}},
         "xAxis": {
             "type": "category",
             "boundaryGap": False,
-            "data": ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+            "data": weeks.tolist(),  # X-axis labels (Week 1, Week 2, ...)
         },
         "yAxis": {"type": "value"},
-        "series": [
-            {
-                "name": "邮件营销",
-                "type": "line",
-                "stack": "总量",
-                "data": [120, 132, 101, 134, 90, 230, 210],
-            },
-            {
-                "name": "联盟广告",
-                "type": "line",
-                "stack": "总量",
-                "data": [220, 182, 191, 234, 290, 330, 310],
-            },
-            {
-                "name": "视频广告",
-                "type": "line",
-                "stack": "总量",
-                "data": [150, 232, 201, 154, 190, 330, 410],
-            },
-            {
-                "name": "直接访问",
-                "type": "line",
-                "stack": "总量",
-                "data": [320, 332, 301, 334, 390, 330, 320],
-            },
-            {
-                "name": "搜索引擎",
-                "type": "line",
-                "stack": "总量",
-                "data": [820, 932, 901, 934, 1290, 1330, 1320],
-            },
-        ],
+        "series": series_data
     }
+
+    # Render the ECharts stacked line chart
     st_echarts(options=options, height="400px")
 
 def display_lpi(file):
