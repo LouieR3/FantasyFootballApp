@@ -51,3 +51,12 @@ LEAGUE ANALYSIS PAGE:
 -- HOW ACCURATE WAS LPI IN PREDICTING PLAYOFFS/SEEDS
 -- HOW ACCURATE WAS LPI IN PREDICTING FINAL STANDINGS / WINNER
 -- ANALYZE WINNER OF EACH LEAGUE AGAINST DRAFTING GRADE / DRAFT POSITIION
+
+https://github.com/null-jones/streamlit-plotly-events
+https://extras.streamlit.app/
+https://github.com/tvst/plost
+https://github.com/andfanilo/streamlit-echarts
+https://echarts.streamlit.app/
+https://github.com/explosion/spacy-streamlit
+https://spacy.io/
+https://github.com/explosion/spacy-layout
