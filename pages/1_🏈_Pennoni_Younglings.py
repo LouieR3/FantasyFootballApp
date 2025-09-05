@@ -115,8 +115,13 @@ def app():
     #                                 else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(x.split(" ")[0].split('-')[0]) == 0) else "" for x in x], axis=1, subset=names)
     # df2= df
     # st.dataframe(df2, height=460, width=2000)
-    height = 460 + (len(names) - 10) * 20
-    st.dataframe(df2, height=height, width=2000)
+    # Dynamically set the height based on the length of names
+    if len(names) <= 10:
+        height = "auto"
+    else:
+        height = 460 + (len(names) - 10) * 20
+
+    st.dataframe(df2, height=height, width="content")
 
     st.header('Strength of Schedule')
     st.write("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
