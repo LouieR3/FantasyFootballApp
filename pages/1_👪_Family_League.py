@@ -16,6 +16,7 @@ def app():
     league = f"Family Fantasy {selected_year}"
     st.title("👪 " + league)
     file = "leagues/" + league + ".xlsx"
+    
     # st.title("🏈 " + league)
     try:
         df = pd.read_excel(file, sheet_name="Playoff Results")
@@ -113,7 +114,8 @@ def app():
                             else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot10 and int(x.split(" ")[0].split('-')[0]) > 0) 
                             else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(x.split(" ")[0].split('-')[0]) == 0) 
                             else "" for x in x], axis = 1, subset=names)
-    st.dataframe(df2, height=460, width=2000)
+    # st.dataframe(df2, height=460, width=2000)
+    st.dataframe(df2, height="auto", width=2000)
 
     st.header('Strength of Schedule')
     st.write("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")

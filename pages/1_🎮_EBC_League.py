@@ -19,10 +19,11 @@ def app():
     
     # Create the league string based on the selected year
     league = f"EBC League {selected_year}"
-    draft_file = f"drafts/EBC League Draft Results {selected_year}.csv"
+    # Extract the league name without the year
+    league_name = " ".join(league.split()[:-1])  # Removes the year from the league string
+    draft_file = f"drafts/{league_name} Draft Results {selected_year}.csv"
     
     file = "leagues/" + league + ".xlsx"
-
 
     from page_functions import display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds
     from page_functions import display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results
