@@ -5,6 +5,7 @@ import glob
 from espn_api.football import League
 # Path to the drafts folder
 drafts_folder = "drafts"
+leagues_folder = "leagues"
 
 # Initialize an empty list to store dataframes
 dataframes = []
@@ -99,6 +100,7 @@ def determine_final_standings(league_name, year):
             "Team": team.team_name,
             "Standing": team.final_standing,
             "Points For": team.points_for,
+            "Points Against": team.points_against,
             "Record": f"{team.wins}-{team.losses}-{team.ties}"
         }
         for team in pr
@@ -133,6 +135,42 @@ final_df_with_standings = pd.merge(final_df, standings_all_df, on=["Team", "Leag
 final_df_with_standings['Draft Grade'] = final_df_with_standings['Draft Grade'].round(2)
 final_df_with_standings['League Name'] = final_df_with_standings['League Name'].apply(lambda x: " ".join(x.split()[:-1]))  # Remove year from League Name
 final_df_with_standings['Points For'] = final_df_with_standings['Points For'].round(2)
+final_df_with_standings['Points Against'] = final_df_with_standings['Points Against'].round(2)
+
+# Process the Louie Power Index (LPI) sheet for each league file
+lpi_dataframes = []
+
+for file in os.listdir(leagues_folder):
+    if file.endswith(".xlsx"):
+        # Extract league name and year from the file name
+        league_name_with_year = file.replace(".xlsx", "")
+        parts = league_name_with_year.split()
+        year = int(parts[-1])
+        league_name = " ".join(parts[:-1])
+
+        # Read the Louie Power Index sheet
+        file_path = os.path.join(leagues_folder, file)
+        try:
+            lpi_df = pd.read_excel(file_path, sheet_name="Louie Power Index")
+            lpi_df.rename(columns={'Louie Power Index (LPI)': 'LPI'}, inplace=True)
+            lpi_df = lpi_df[['Teams', 'LPI']]  # Keep only relevant columns
+            lpi_df.rename(columns={'Teams': 'Team'}, inplace=True)
+
+            # Add League Name and Year columns
+            lpi_df['League Name'] = league_name
+            lpi_df['Year'] = year
+
+            # Append to the list of dataframes
+            lpi_dataframes.append(lpi_df)
+        except Exception as e:
+            print(f"Error reading LPI sheet for {file}: {e}")
+
+# Combine all LPI dataframes into one
+lpi_all_df = pd.concat(lpi_dataframes, ignore_index=True)
+
+# Merge LPI data with final_df_with_standings
+final_df_with_standings = pd.merge(final_df_with_standings, lpi_all_df, on=["Team", "League Name", "Year"], how="left")
+
 
 # Save or display as needed
 print(final_df_with_standings)

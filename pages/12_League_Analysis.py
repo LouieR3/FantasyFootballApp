@@ -8,6 +8,7 @@ def app():
     import pandas as pd
     from openpyxl import load_workbook
     import time
+    from streamlit_echarts5 import st_echarts
 
     pd.options.mode.chained_assignment = None
     st.header('League Analysis Across All Leagues')
