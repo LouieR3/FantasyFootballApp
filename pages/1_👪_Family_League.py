@@ -32,8 +32,8 @@ def app():
     display_strength_of_schedule(file)
 
     display_expected_wins(file)
-
-    display_playoff_odds(file, league_id, espn_s2, swid, selected_year)
+    year = int(selected_year)
+    display_playoff_odds(file, league_id, espn_s2, swid, year)
     display_lpi_by_week(file)
 
     display_lpi(file)
