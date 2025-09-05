@@ -16,3 +16,4 @@ st_pages>=0.4.3
 inflect
 streamlit-aggrid
 streamlit-echarts5
+streamlit_echarts
