@@ -130,11 +130,12 @@ def display_strength_of_schedule(file):
     
     # Apply gradient styling
     df_styled = df.style.background_gradient(subset=['Wins Against Schedule'])
-    
-    df = df.set_index("Teams")
+    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    # Display the styled DataFrame
+    df_names = df_names.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
-    for col in df.columns:
+    for col in df_names.columns:
         if col != "Teams":
             names.append(col)
     if len(names) <= 10:
@@ -164,7 +165,7 @@ def display_expected_wins(file):
     # Apply gradient styling
     df3 = df.style.background_gradient(subset=['Expected Wins'])
     
-    df_names = pd.read_excel(file, sheet_name="Wins Against Schedule")
+    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
     df_names = df_names.set_index("Teams")
     pd.options.mode.chained_assignment = None
@@ -238,9 +239,8 @@ def display_lpi_by_week(file):
     # Read the LPI By Week sheet
     df = pd.read_excel(file, sheet_name="LPI By Week")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-    df_names = pd.read_excel(file, sheet_name="Wins Against Schedule")
+    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
-    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
@@ -274,9 +274,8 @@ def display_lpi(file):
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
-    df_names = pd.read_excel(file, sheet_name="Wins Against Schedule")
+    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
-    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
@@ -307,9 +306,8 @@ def display_biggest_lpi_upsets(file):
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['LPI Difference'])
-    df_names = pd.read_excel(file, sheet_name="Wins Against Schedule")
+    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
-    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
@@ -353,9 +351,8 @@ def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, selected_team)
     
     df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
-    df_names = pd.read_excel(file, sheet_name="Wins Against Schedule")
+    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
-    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
