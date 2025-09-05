@@ -287,7 +287,11 @@ def display_lpi_by_week(file):
             "boundaryGap": False,
             "data": weeks.tolist(),  # X-axis labels (Week 1, Week 2, ...)
         },
-        "yAxis": {"type": "value"},
+        "yAxis": {
+            "type": "value",
+            "min": -100,  # Set the minimum value for the y-axis
+            "max": 100,   # Set the maximum value for the y-axis
+        },
         "series": series_data
     }
 
