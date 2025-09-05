@@ -42,6 +42,6 @@ def app():
 
     display_biggest_lpi_upsets(file)
 
-    display_lifetime_record(file, league_id, espn_s2, swid, '2024')
+    # display_lifetime_record(file, league_id, espn_s2, swid, '2024')
 
 app()
