@@ -15,6 +15,7 @@ def app():
     selected_year = st.selectbox("Select Year", year_options, index=2)  # Defaults to 2024
     league = f"Family Fantasy {selected_year}"
     st.title("👪 " + league)
+    file = "leagues/" + league + ".xlsx"
     # Extract the league name without the year
     league_name = " ".join(league.split()[:-1])  # Removes the year from the league string
     draft_file = f"drafts/{league_name} Draft Results {selected_year}.csv"
@@ -42,5 +43,5 @@ def app():
 
     display_biggest_lpi_upsets(file)
 
-    display_lifetime_record(file, league_id, espn_s2, swid, year_options)
+    # display_lifetime_record(file, league_id, espn_s2, swid, year_options)
 app()
