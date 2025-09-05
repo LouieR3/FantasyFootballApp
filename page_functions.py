@@ -256,7 +256,7 @@ def display_lpi_by_week(file):
     else:
         height = 460 + (len(names) - 12) * 40
     # Display the DataFrame
-    st.dataframe(df, height=height)
+    st.dataframe(df, height=height, hide_index=True)
 
 def display_lpi(file):
     """
@@ -370,11 +370,11 @@ def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
         height = "auto"
     else:
         height = 460 + (len(names) - 12) * 40
-    st.dataframe(df4, height=height)
+    st.dataframe(df4, height=height, hide_index=True)
 
     # df5 = year_df.style.background_gradient(subset=['Win Percentage'])
     st.write("Here is this team's record by year:")
-    st.dataframe(year_df)
+    st.dataframe(year_df, hide_index=True)
 
 # st.header('Upset Factor of Previous Week')
 # st.write('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
