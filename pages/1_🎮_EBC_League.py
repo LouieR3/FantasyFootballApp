@@ -55,8 +55,6 @@ def app():
             def bold_winner(row):
                 # Determine the winner columns
                 winner = row["Winner"]
-                print("BOLD ASSESS:")
-                print(winner == row["Team 1"])
                 if winner == row["Team 1"]:
                     return ['font-weight: bold' if col.endswith("1") else '' for col in df.columns]
                 elif winner == row["Team 2"]:
@@ -74,6 +72,8 @@ def app():
         st.dataframe(styled_df)
     except:
         print("No Playoffs Yet")
+    
+
     st.header('Schedule Comparisson')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
 
@@ -122,14 +122,10 @@ def app():
                             else "" for x in x], axis = 1, subset=names)
     st.dataframe(df2, width=2000)
 
-    st.header('Strength of Schedule')
-    st.write("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
-    df = pd.read_excel(file, sheet_name="Wins Against Schedule")
-    
-    df = df.iloc[: , 1:]
-    df.index += 1
-    df3 = df.style.background_gradient(subset=['Wins Against Schedule'])
-    st.dataframe(df3)
+    from utils import display_strength_of_schedule
+
+    # Call the function where needed
+    display_strength_of_schedule(file)
 
     st.header('Expected Wins')
     st.write('The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule.')
