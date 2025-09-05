@@ -275,7 +275,7 @@ def display_lpi_by_week(file):
     line_chart = Line().set_global_opts(
         title_opts=opts.TitleOpts(title="Louie Power Index By Week"),
         tooltip_opts=opts.TooltipOpts(trigger="axis"),
-        xaxis_opts=opts.AxisOpts(type_="category", name="Weeks"),
+        xaxis_opts=opts.AxisOpts(type_="category", name="Weeks", data=x_axis),
         yaxis_opts=opts.AxisOpts(type_="value", name="LPI", min_=-100, max_=100),
         legend_opts=opts.LegendOpts(pos_top="5%"),
     )
