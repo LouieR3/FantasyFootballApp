@@ -45,7 +45,7 @@ def app():
 
     display_biggest_lpi_upsets(file)
 
-    # display_lifetime_record(file, league_id, espn_s2, swid, year_options)
+    display_lifetime_record(file, league_id, espn_s2, swid, year_options)
    
 
     # st.write("Breakdown a team's performance vs. another team")
