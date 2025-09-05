@@ -292,7 +292,7 @@ def display_lpi_by_week(file):
     }
 
     # Render the ECharts stacked line chart
-    st_echarts(options=options, height="400px")
+    st_echarts(options=options, height="500px")
 
 def display_lpi(file):
     """
