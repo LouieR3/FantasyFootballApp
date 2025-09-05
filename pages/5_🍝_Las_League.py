@@ -126,6 +126,7 @@ def app():
         height = "auto"
     else:
         height = 460 + (len(names) - 10) * 20
+    print("HEIGHT:", height)
     st.dataframe(df2, width="stretch", height=height)
 
     st.header('Strength of Schedule')
