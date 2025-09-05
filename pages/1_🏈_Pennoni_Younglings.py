@@ -119,7 +119,7 @@ def app():
     if len(names) <= 10:
         height = "auto"
     else:
-        height = 460 + (len(names) - 10) * 20
+        height = 460 + (len(names) - 12) * 20
         
     print("HEIGHT:", height)
 
