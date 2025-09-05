@@ -261,42 +261,50 @@ def display_lpi_by_week(file):
 
     # Create a new DataFrame excluding "Change From Last Week"
     df_chart = df.drop(columns=["Change From Last Week"])
+    # Set the "Teams" column as the index for plotting
+    df_chart.set_index("Teams", inplace=True)
 
-    # Prepare data for the ECharts stacked line chart
-    teams = df_chart["Teams"].tolist()
-    weeks = df_chart.columns[1:]  # Exclude the "Teams" column
-    series_data = []
+    # Transpose the DataFrame so weeks are on the x-axis and teams are the lines
+    df_chart = df_chart.T
 
-    for _, row in df_chart.iterrows():
-        series_data.append({
-            "name": row["Teams"],
-            "type": "line",
-            "stack": "Total",
-            "data": row[1:].tolist()  # Exclude the "Teams" column
-        })
+    # Display the line chart
+    st.line_chart(df_chart)
 
-    # ECharts options
-    options = {
-        "title": {"text": ""},
-        "tooltip": {"trigger": "axis"},
-        "legend": {"data": teams},
-        "grid": {"left": "3%", "right": "4%", "bottom": "3%", "containLabel": True},
-        "toolbox": {"feature": {"saveAsImage": {}}},
-        "xAxis": {
-            "type": "category",
-            "boundaryGap": False,
-            "data": weeks.tolist(),  # X-axis labels (Week 1, Week 2, ...)
-        },
-        "yAxis": {
-            "type": "value",
-            "min": -100,  # Set the minimum value for the y-axis
-            "max": 100,   # Set the maximum value for the y-axis
-        },
-        "series": series_data
-    }
+    # # Prepare data for the ECharts stacked line chart
+    # teams = df_chart["Teams"].tolist()
+    # weeks = df_chart.columns[1:]  # Exclude the "Teams" column
+    # series_data = []
 
-    # Render the ECharts stacked line chart
-    st_echarts(options=options, height="450px")
+    # for _, row in df_chart.iterrows():
+    #     series_data.append({
+    #         "name": row["Teams"],
+    #         "type": "line",
+    #         "stack": "Total",
+    #         "data": row[1:].tolist()  # Exclude the "Teams" column
+    #     })
+
+    # # ECharts options
+    # options = {
+    #     "title": {"text": ""},
+    #     "tooltip": {"trigger": "axis"},
+    #     "legend": {"data": teams},
+    #     "grid": {"left": "3%", "right": "4%", "bottom": "3%", "containLabel": True},
+    #     "toolbox": {"feature": {"saveAsImage": {}}},
+    #     "xAxis": {
+    #         "type": "category",
+    #         "boundaryGap": False,
+    #         "data": weeks.tolist(),  # X-axis labels (Week 1, Week 2, ...)
+    #     },
+    #     "yAxis": {
+    #         "type": "value",
+    #         # "min": -100,  # Set the minimum value for the y-axis
+    #         # "max": 100,   # Set the maximum value for the y-axis
+    #     },
+    #     "series": series_data
+    # }
+
+    # # Render the ECharts stacked line chart
+    # st_echarts(options=options, height="450px")
 
 def display_lpi(file):
     """
