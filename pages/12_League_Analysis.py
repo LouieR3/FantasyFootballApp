@@ -235,57 +235,13 @@ def app():
         st.header("Scatter Chart: Points For vs LPI")
         plost.scatter_chart(
             data=df,
-            x='LPI',
-            y='Points For',
+            x='Points For',
+            y='LPI',
             size='Place Finished',  # Use the calculated size for the points
             color='Hover Info',  # Add hover information
             height=500
         )
 
-        # Prepare the data for the scatter chart
-        # scatter_data = []
-        # for _, row in df.iterrows():
-        #     scatter_data.append([row['Points For'], row['LPI'], row['Standing']])
-
-        # # Define the color palette for the standings
-        # color_palette = [
-        #     '#FFD700',  # Gold
-        #     "#CA9C03",  # Yellow-Gold
-        #     "#B37D0B",  # Yellow-Orange
-        #     "#7c6d27", '#fb628b', '#785db0', '#3fbe95', '#ff6f61', 
-        #     '#6a5acd', '#ff4500', '#32cd32', '#ff1493'
-        # ]
-
-        # # Define the ECharts options
-        # options = {
-        #     "tooltip": {
-        #         "trigger": "item",
-        #         "formatter": "Points For: {c0}<br>LPI: {c1}<br>Standing: {c2}"
-        #     },
-        #     "visualMap": {
-        #         "type": "piecewise",
-        #         "top": "middle",
-        #         "left": 10,
-        #         "dimension": 2,  # The dimension for the Standing
-        #         "pieces": [
-        #             {"value": i + 1, "label": f"Place {i + 1}", "color": color_palette[i]}
-        #             for i in range(len(color_palette))
-        #         ]
-        #     },
-        #     "xAxis": {"name": "LPI"},
-        #     "yAxis": {"name": "Points For"},
-        #     "series": [
-        #         {
-        #             "type": "scatter",
-        #             "data": scatter_data,
-        #             "symbolSize": 20,
-        #             "itemStyle": {"borderColor": "#555"},
-        #         }
-        #     ],
-        # }
-
-        # # Render the chart in Streamlit
-        # st_echarts(options=options, height="600px")
     st.divider()
     scatter_plot()
 
