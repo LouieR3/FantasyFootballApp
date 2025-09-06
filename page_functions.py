@@ -265,7 +265,7 @@ def display_lpi_by_week(file):
     # Create a new DataFrame excluding "Change From Last Week"
     df_chart = df.drop(columns=["Change From Last Week"])
     # Set the "Teams" column as the index for plotting
-    df_chart.set_index("Teams", inplace=True)
+    # df_chart.set_index("Teams", inplace=True)
 
     # # Transpose the DataFrame so weeks are on the x-axis and teams are the lines
     # df_chart = df_chart.T
