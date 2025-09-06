@@ -25,7 +25,6 @@ p = inflect.engine()
 # years = [2022, 2023, 2024]
 # team_name_to_filter = 'The Golden Receivers'
 
-
 def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
     def grade_to_letter(grade):
         if grade >= 97: return "A+"

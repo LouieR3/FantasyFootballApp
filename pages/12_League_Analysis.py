@@ -218,7 +218,7 @@ def app():
 
     def scatter_plot():
         # Load the Draft Grades CSV file
-        file_path = "drafts\Draft_Grades_with_Standings.csv"
+        file_path = "drafts/Draft_Grades_with_Standings.csv"
         df = pd.read_csv(file_path)
 
         # Calculate the size of the points based on Standing
@@ -237,7 +237,7 @@ def app():
         )
     scatter_plot()
 
-    
+
     # all_playoff_dfs.to_csv("all_playoffs.csv", index=False)
     st.divider()
     def wins_by_seed():
