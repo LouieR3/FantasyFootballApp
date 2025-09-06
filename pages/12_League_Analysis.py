@@ -237,7 +237,7 @@ def app():
             data=df,
             x='LPI',
             y='Points For',
-            size='Size',  # Use the calculated size for the points
+            size='Place Finished',  # Use the calculated size for the points
             color='Hover Info',  # Add hover information
             height=500
         )
