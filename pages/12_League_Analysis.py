@@ -217,10 +217,7 @@ def app():
 
     all_playoff_dfs = correct_percentages(all_playoff_dfs)
 
-    def scatter_plot():
-        # Load the Draft Grades CSV file
-        file_path = "drafts/Draft_Grades_with_Standings.csv"
-        df = pd.read_csv(file_path)
+    def scatter_plot(df):
         df['Place Finished'] = df['Standing']
         df['League'] = df['League Name'] + " " + df['Year'].astype(str)
 
@@ -321,7 +318,11 @@ def app():
         # )
 
     st.divider()
-    scatter_plot()
+    
+    # Load the Draft Grades CSV file
+    file_path = "drafts/Draft_Grades_with_Standings.csv"
+    df = pd.read_csv(file_path)
+    scatter_plot(df)
 
 
     # all_playoff_dfs.to_csv("all_playoffs.csv", index=False)
@@ -548,13 +549,7 @@ def app():
 
         # Plot the scatter chart
         st.header("Scatter Chart: Points For vs LPI")
-        plost.scatter_chart(
-            data=df_standing_1,
-            x='Points For',
-            y='LPI',
-            color='Hover Info',  # Add hover information
-            height=500
-        )
+        scatter_plot(df_standing_1)
         st.divider()
 
         # dfsa
