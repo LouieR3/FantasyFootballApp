@@ -237,9 +237,9 @@ def app():
             9: "#6495ED",  # Cornflower Blue
             10: "#87CEEB",  # Sky Blue
             11: "#87CEFA",  # Light Sky Blue
-            12: "#ADD8E6",  # Light Blue
-            13: "#B0E0E6",  # Powder Blue
-            14: "#E0FFFF",  # Light Cyan
+            12: "#9DD2E4",  # Light Blue
+            13: "#8ED5DF",  # Powder Blue
+            14: "#9CE2E2",  # Light Cyan
         }
 
         # Define the shape mapping for Place Finished
