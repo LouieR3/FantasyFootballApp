@@ -286,11 +286,11 @@ def app():
 
         # # Render the chart in Streamlit
         # st_echarts(options=options, height="600px")
+    st.divider()
     scatter_plot()
 
 
     # all_playoff_dfs.to_csv("all_playoffs.csv", index=False)
-    st.divider()
     def wins_by_seed():
         # --------------------------------------------------------------------------------------------
         # Calculate win counts for each seed
@@ -503,6 +503,24 @@ def app():
         st.divider()
         st.write("All Champions:")
         st.dataframe(winner_df, height=700)
+
+        
+        # Load the Draft Grades CSV file
+        file_path = "drafts/Draft_Grades_with_Standings.csv"
+        df = pd.read_csv(file_path)
+        # Query the DataFrame for rows where Standing = 1
+        df_standing_1 = df[df['Standing'] == 1]
+
+
+        # Plot the scatter chart
+        st.header("Scatter Chart: Points For vs LPI")
+        plost.scatter_chart(
+            data=df_standing_1,
+            x='LPI',
+            y='Points For',
+            color='Hover Info',  # Add hover information
+            height=500
+        )
         st.divider()
 
         # dfsa
