@@ -226,9 +226,9 @@ def app():
 
         # Define the color palette for Place Finished
         color_palette = {
-            1: "#C4A600",  # Gold
-            2: "#C0C0C0",  # Silver
-            3: "#CD7F32",  # Bronze
+            1: "#DFBD00",  # Gold
+            2: "#9B9B9B",  # Silver
+            3: "#995919",  # Bronze
             4: "#36366D",  # Dark Blue
             5: "#47478A",  # Medium Blue
             6: "#59668D",  # Royal Blue
