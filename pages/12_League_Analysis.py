@@ -232,10 +232,10 @@ def app():
             return {
                 "mark": "point",
                 "encoding": {
-                    "x": {"field": x_field, "type": "quantitative"},
-                    "y": {"field": y_field, "type": "quantitative"},
+                    "x": {"field": x_field, "type": "quantitative", "scale": {"zero": False}},
+                    "y": {"field": y_field, "type": "quantitative", "scale": {"zero": False}},
                     "color": {"field": "Place Finished", "type": "ordinal"},
-                    "size": {"field": "Place Finished", "type": "ordinal"},
+                    "shape": {"field": "Place Finished", "type": "ordinal"},
                     "tooltip": [
                         {"field": "Team", "type": "nominal"},
                         {"field": "League", "type": "nominal"},
