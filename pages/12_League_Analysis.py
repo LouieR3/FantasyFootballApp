@@ -227,6 +227,34 @@ def app():
         # Combine Team and League for the hover tooltip
         df['Hover Info'] = df['Team'] + " (" + df['League'] + ")"
 
+        # Define the color palette for Place Finished
+        color_palette = {
+            1: "#FFD700",  # Gold
+            2: "#C0C0C0",  # Silver
+            3: "#CD7F32",  # Bronze
+            4: "#00008B",  # Dark Blue
+            5: "#0000CD",  # Medium Blue
+            6: "#4169E1",  # Royal Blue
+            7: "#4682B4",  # Steel Blue
+            8: "#5F9EA0",  # Cadet Blue
+            9: "#6495ED",  # Cornflower Blue
+            10: "#87CEEB",  # Sky Blue
+            11: "#87CEFA",  # Light Sky Blue
+            12: "#ADD8E6",  # Light Blue
+            13: "#B0E0E6",  # Powder Blue
+            14: "#E0FFFF",  # Light Cyan
+        }
+
+        # Define the shape mapping for Place Finished
+        shape_mapping = {
+            1: "diamond",
+            2: "triangle",
+            3: "square",
+        }
+
+        # Default shape for places 4-14
+        default_shape = "circle"
+
         # Define the base chart configuration
         def create_chart(x_field, y_field):
             return {
@@ -234,8 +262,20 @@ def app():
                 "encoding": {
                     "x": {"field": x_field, "type": "quantitative", "scale": {"zero": False}},
                     "y": {"field": y_field, "type": "quantitative", "scale": {"zero": False}},
-                    "color": {"field": "Place Finished", "type": "ordinal"},
-                    "shape": {"field": "Place Finished", "type": "ordinal"},
+                    "color": {
+                        "field": "Place Finished",
+                        "type": "ordinal",
+                        "scale": {"domain": list(color_palette.keys()), "range": list(color_palette.values())},
+                    },
+                    "shape": {
+                        "field": "Place Finished",
+                        "type": "ordinal",
+                        "scale": {
+                            "domain": list(shape_mapping.keys()),
+                            "range": list(shape_mapping.values()),
+                        },
+                        "legend": None,  # Hide shape legend
+                    },
                     "tooltip": [
                         {"field": "Team", "type": "nominal"},
                         {"field": "League", "type": "nominal"},
