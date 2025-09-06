@@ -243,8 +243,10 @@ def app():
 
         # Define the color palette for the standings
         color_palette = [
-            '#5070dd', '#b6d634', '#505372', '#ff994d', '#0ca8df', 
-            '#ffd10a', '#fb628b', '#785db0', '#3fbe95', '#ff6f61', 
+            '#FFD700',  # Gold
+            "#CA9C03",  # Yellow-Gold
+            "#B37D0B",  # Yellow-Orange
+            "#7c6d27", '#fb628b', '#785db0', '#3fbe95', '#ff6f61', 
             '#6a5acd', '#ff4500', '#32cd32', '#ff1493'
         ]
 
@@ -264,8 +266,8 @@ def app():
                     for i in range(len(color_palette))
                 ]
             },
-            "xAxis": {"name": "Points For"},
-            "yAxis": {"name": "LPI"},
+            "xAxis": {"name": "LPI"},
+            "yAxis": {"name": "Points For"},
             "series": [
                 {
                     "type": "scatter",
