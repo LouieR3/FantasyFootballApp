@@ -232,10 +232,10 @@ def app():
             1: "#FFD700",  # Gold
             2: "#C0C0C0",  # Silver
             3: "#CD7F32",  # Bronze
-            4: "#00008B",  # Dark Blue
-            5: "#0000CD",  # Medium Blue
-            6: "#4169E1",  # Royal Blue
-            7: "#4682B4",  # Steel Blue
+            4: "#36366D",  # Dark Blue
+            5: "#47478A",  # Medium Blue
+            6: "#59668D",  # Royal Blue
+            7: "#5C7080",  # Steel Blue
             8: "#5F9EA0",  # Cadet Blue
             9: "#6495ED",  # Cornflower Blue
             10: "#87CEEB",  # Sky Blue
@@ -258,7 +258,11 @@ def app():
         # Define the base chart configuration
         def create_chart(x_field, y_field):
             return {
-                "mark": "point",
+                "mark": {
+                    "type": "point",
+                    "size": {"expr": 100},
+                    "strokeWidth": {"expr": 2.5}
+                },
                 "encoding": {
                     "x": {"field": x_field, "type": "quantitative", "scale": {"zero": False}},
                     "y": {"field": y_field, "type": "quantitative", "scale": {"zero": False}},
