@@ -10,6 +10,7 @@ def app():
     import time
     from streamlit_echarts5 import st_echarts
     import plost
+    from vega_datasets import data
 
     pd.options.mode.chained_assignment = None
     st.header('League Analysis Across All Leagues')
@@ -223,24 +224,57 @@ def app():
         df['Place Finished'] = df['Standing']
         df['League'] = df['League Name'] + " " + df['Year'].astype(str)
 
-        # Calculate the size of the points based on Standing
-        # Invert the Standing so that 1 is the largest size and the largest Standing is the smallest size
-        max_standing = df['Standing'].max()
-        df['Size'] = max_standing - df['Standing'] + 1
-
         # Combine Team and League for the hover tooltip
         df['Hover Info'] = df['Team'] + " (" + df['League'] + ")"
 
-        # Plot the scatter chart
-        st.header("Scatter Chart: Points For vs LPI")
-        plost.scatter_chart(
-            data=df,
-            x='Points For',
-            y='LPI',
-            size='Place Finished',  # Use the calculated size for the points
-            color='Hover Info',  # Add hover information
-            height=500
-        )
+        # Define the base chart configuration
+        def create_chart(x_field, y_field):
+            return {
+                "mark": "point",
+                "encoding": {
+                    "x": {"field": x_field, "type": "quantitative"},
+                    "y": {"field": y_field, "type": "quantitative"},
+                    "color": {"field": "Place Finished", "type": "ordinal"},
+                    "size": {"field": "Place Finished", "type": "ordinal"},
+                    "tooltip": [
+                        {"field": "Team", "type": "nominal"},
+                        {"field": "League", "type": "nominal"},
+                        {"field": "Points For", "type": "quantitative"},
+                        {"field": "LPI", "type": "quantitative"},
+                        {"field": "Draft Grade", "type": "quantitative"},
+                        {"field": "Place Finished", "type": "ordinal"},
+                    ],
+                },
+            }
+
+        # Create tabs for the scatter plots
+        tab1, tab2, tab3 = st.tabs(["Points For vs LPI", "Points For vs Draft Grade", "Draft Grade vs LPI"])
+
+        with tab1:
+            st.subheader("Scatter Plot: Points For vs LPI")
+            chart = create_chart("Points For", "LPI")
+            st.vega_lite_chart(df, chart, theme="streamlit", use_container_width=True)
+
+        with tab2:
+            st.subheader("Scatter Plot: Points For vs Draft Grade")
+            chart = create_chart("Points For", "Draft Grade")
+            st.vega_lite_chart(df, chart, theme="streamlit", use_container_width=True)
+
+        with tab3:
+            st.subheader("Scatter Plot: Draft Grade vs LPI")
+            chart = create_chart("Draft Grade", "LPI")
+            st.vega_lite_chart(df, chart, theme="streamlit", use_container_width=True)
+
+        # # Plot the scatter chart
+        # st.header("Scatter Chart: Points For vs LPI")
+        # plost.scatter_chart(
+        #     data=df,
+        #     x='Points For',
+        #     y='LPI',
+        #     size='Place Finished',  # Use the calculated size for the points
+        #     color='Hover Info',  # Add hover information
+        #     height=500
+        # )
 
     st.divider()
     scatter_plot()

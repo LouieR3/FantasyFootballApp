@@ -18,3 +18,4 @@ streamlit-aggrid
 streamlit-echarts5
 streamlit_echarts
 plost
+vega_datasets
