@@ -516,8 +516,8 @@ def app():
         st.header("Scatter Chart: Points For vs LPI")
         plost.scatter_chart(
             data=df_standing_1,
-            x='LPI',
-            y='Points For',
+            x='Points For',
+            y='LPI',
             color='Hover Info',  # Add hover information
             height=500
         )
