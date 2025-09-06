@@ -9,6 +9,7 @@ def app():
     from openpyxl import load_workbook
     import time
     from streamlit_echarts5 import st_echarts
+    import plost
 
     pd.options.mode.chained_assignment = None
     st.header('League Analysis Across All Leagues')
@@ -214,6 +215,29 @@ def app():
         return all_playoff_dfs
 
     all_playoff_dfs = correct_percentages(all_playoff_dfs)
+
+    def scatter_plot():
+        # Load the Draft Grades CSV file
+        file_path = "drafts\Draft_Grades_with_Standings.csv"
+        df = pd.read_csv(file_path)
+
+        # Calculate the size of the points based on Standing
+        # Invert the Standing so that 1 is the largest size and the largest Standing is the smallest size
+        max_standing = df['Standing'].max()
+        df['Size'] = max_standing - df['Standing'] + 1
+
+        # Plot the scatter chart
+        st.header("Scatter Chart: Points For vs LPI")
+        plost.scatter_chart(
+            data=df,
+            x='Points For',
+            y='LPI',
+            size='Size',
+            height=500
+        )
+    scatter_plot()
+
+    
     # all_playoff_dfs.to_csv("all_playoffs.csv", index=False)
     st.divider()
     def wins_by_seed():
