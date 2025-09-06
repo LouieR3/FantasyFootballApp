@@ -600,7 +600,40 @@ def app():
         st.divider()
         st.write("Out of " + str(total_seasons)+ " seasons analyzed:")
         st.write("Championship win probabilities by seed:")
-        st.dataframe(championship_summary_df, width=500)
+        col1, col2 = st.columns([2, 1])  # Create two columns: one for the DataFrame and one for the pie chart
+
+        with col1:
+            st.dataframe(championship_summary_df, width=500)
+
+        with col2:
+            # Prepare data for the pie chart
+            pie_data = championship_summary_df.reset_index()[["Championship Probability", "index"]]
+            pie_data["Championship Probability"] = pie_data["Championship Probability"].str.replace("%", "").astype(float)
+            pie_data.rename(columns={"index": "Seed", "Championship Probability": "Probability"}, inplace=True)
+
+            # Define the Vega-Lite chart configuration
+            pie_chart = {
+                "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+                "description": "Pie Chart of Championship Probabilities by Seed",
+                "data": {
+                    "values": pie_data.to_dict(orient="records")
+                },
+                "mark": {"type": "arc", "tooltip": True},
+                "encoding": {
+                    "theta": {"field": "Probability", "type": "quantitative", "stack": "normalize"},
+                    "color": {"field": "Seed", "type": "nominal"},
+                    "tooltip": [
+                        {"field": "Seed", "type": "nominal", "title": "Seed"},
+                        {"field": "Probability", "type": "quantitative", "title": "Championship Probability (%)"}
+                    ]
+                },
+                "view": {"stroke": None}
+            }
+
+            # Render the pie chart
+            st.vega_lite_chart(pie_chart, use_container_width=True)
+
+
         st.divider()
         # --------------------------------------------------------------------------------------------
 
