@@ -221,7 +221,7 @@ def app():
         file_path = "drafts/Draft_Grades_with_Standings.csv"
         df = pd.read_csv(file_path)
         df['Place Finished'] = df['Standing']
-        df['League'] = df['League Name'] + " " + df['Year']
+        df['League'] = df['League Name'] + " " + df['Year'].astype(str)
 
         # Calculate the size of the points based on Standing
         # Invert the Standing so that 1 is the largest size and the largest Standing is the smallest size
