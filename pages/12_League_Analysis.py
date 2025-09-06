@@ -297,17 +297,17 @@ def app():
         with tab1:
             st.subheader("Scatter Plot: Points For vs LPI")
             chart = create_chart("Points For", "LPI")
-            st.vega_lite_chart(df, chart, theme="streamlit", use_container_width=True)
+            st.vega_lite_chart(df, chart, theme="streamlit", use_container_width=True, height=450)
 
         with tab2:
             st.subheader("Scatter Plot: Points For vs Draft Grade")
             chart = create_chart("Points For", "Draft Grade")
-            st.vega_lite_chart(df, chart, theme="streamlit", use_container_width=True)
+            st.vega_lite_chart(df, chart, theme="streamlit", use_container_width=True, height=450)
 
         with tab3:
             st.subheader("Scatter Plot: Draft Grade vs LPI")
             chart = create_chart("Draft Grade", "LPI")
-            st.vega_lite_chart(df, chart, theme="streamlit", use_container_width=True)
+            st.vega_lite_chart(df, chart, theme="streamlit", use_container_width=True, height=450)
 
         # # Plot the scatter chart
         # st.header("Scatter Chart: Points For vs LPI")
