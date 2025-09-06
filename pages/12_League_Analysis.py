@@ -221,10 +221,15 @@ def app():
         file_path = "drafts/Draft_Grades_with_Standings.csv"
         df = pd.read_csv(file_path)
         df['Place Finished'] = df['Standing']
+        df['League'] = df['League Name'] + " " + df['Year']
 
         # Calculate the size of the points based on Standing
         # Invert the Standing so that 1 is the largest size and the largest Standing is the smallest size
         max_standing = df['Standing'].max()
+        df['Size'] = max_standing - df['Standing'] + 1
+
+        # Combine Team and League for the hover tooltip
+        df['Hover Info'] = df['Team'] + " (" + df['League'] + ")"
 
         # Plot the scatter chart
         st.header("Scatter Chart: Points For vs LPI")
@@ -232,7 +237,8 @@ def app():
             data=df,
             x='LPI',
             y='Points For',
-            size='Place Finished',
+            size='Size',  # Use the calculated size for the points
+            color='Hover Info',  # Add hover information
             height=500
         )
 
