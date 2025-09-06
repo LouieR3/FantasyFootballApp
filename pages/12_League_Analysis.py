@@ -230,9 +230,9 @@ def app():
         st.header("Scatter Chart: Points For vs LPI")
         plost.scatter_chart(
             data=df,
-            x='Points For',
-            y='LPI',
-            size='Size',
+            x='LPI',
+            y='Points For',
+            size='Standing',
             height=500
         )
     scatter_plot()
