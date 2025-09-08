@@ -264,33 +264,6 @@ def display_lpi_by_week(file):
 
     # Create a new DataFrame excluding "Change From Last Week"
     df_chart = df.drop(columns=["Change From Last Week"])
-    # Set the "Teams" column as the index for plotting
-    # df_chart.set_index("Teams", inplace=True)
-
-    # # Transpose the DataFrame so weeks are on the x-axis and teams are the lines
-    # df_chart = df_chart.T
-
-    # # Prepare data for pyecharts
-    # x_axis = df_chart.index.tolist()  # Weeks (x-axis)
-    # line_chart = Line().set_global_opts(
-    #     title_opts=opts.TitleOpts(title="Louie Power Index By Week"),
-    #     tooltip_opts=opts.TooltipOpts(trigger="axis"),
-    #     xaxis_opts=opts.AxisOpts(type_="category", name="Weeks"),
-    #     yaxis_opts=opts.AxisOpts(type_="value", name="LPI", min_=-100, max_=100),
-    #     legend_opts=opts.LegendOpts(pos_top="5%"),
-    # )
-
-    # # Add each team's data as a line
-    # for team in df_chart.columns:
-    #     line_chart.add_yaxis(
-    #         series_name=team,
-    #         y_axis=df_chart[team].tolist(),
-    #         is_smooth=True,  # Smooth the lines
-    #         label_opts=opts.LabelOpts(is_show=False),
-    #     )
-
-    # # Render the chart in Streamlit
-    # st_pyecharts(line_chart, height="500px")
 
     # Prepare data for the ECharts line chart
     teams = df_chart["Teams"].tolist()
@@ -298,8 +271,6 @@ def display_lpi_by_week(file):
     series_data = []
 
     for _, row in df_chart.iterrows():
-        print(f"Processing team: {row['Teams']}")
-        print(f"Data: {row[1:].tolist()}")  # Exclude the "Teams" column
         series_data.append({
             "name": row["Teams"],
             "type": "line",
