@@ -298,6 +298,8 @@ def display_lpi_by_week(file):
     series_data = []
 
     for _, row in df_chart.iterrows():
+        print(f"Processing team: {row['Teams']}")
+        print(f"Data: {row[1:].tolist()}")  # Exclude the "Teams" column
         series_data.append({
             "name": row["Teams"],
             "type": "line",
