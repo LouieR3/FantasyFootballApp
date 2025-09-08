@@ -309,7 +309,7 @@ def display_lpi_by_week(file):
 
     # ECharts options
     options = {
-        "title": {"text": "Louie Power Index By Week"},
+        "title": {"text": ""},
         "tooltip": {"trigger": "axis"},
         "legend": {"data": teams},
         "grid": {"left": "3%", "right": "4%", "bottom": "3%", "containLabel": True},
