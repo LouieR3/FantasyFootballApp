@@ -292,7 +292,7 @@ def display_lpi_by_week(file):
     # # Render the chart in Streamlit
     # st_pyecharts(line_chart, height="500px")
 
-    # Prepare data for the ECharts stacked line chart
+    # Prepare data for the ECharts line chart
     teams = df_chart["Teams"].tolist()
     weeks = df_chart.columns[1:]  # Exclude the "Teams" column
     series_data = []
@@ -303,13 +303,13 @@ def display_lpi_by_week(file):
         series_data.append({
             "name": row["Teams"],
             "type": "line",
-            "stack": "Total",
+            # Remove the "stack" property to ensure lines are independent
             "data": row[1:].tolist()  # Exclude the "Teams" column
         })
 
     # ECharts options
     options = {
-        "title": {"text": ""},
+        "title": {"text": "Louie Power Index By Week"},
         "tooltip": {"trigger": "axis"},
         "legend": {"data": teams},
         "grid": {"left": "3%", "right": "4%", "bottom": "3%", "containLabel": True},
@@ -321,13 +321,11 @@ def display_lpi_by_week(file):
         },
         "yAxis": {
             "type": "value",
-            # "min": -100,  # Set the minimum value for the y-axis
-            # "max": 100,   # Set the maximum value for the y-axis
         },
         "series": series_data
     }
 
-    # Render the ECharts stacked line chart
+    # Render the ECharts line chart
     st_echarts(options=options, height="450px")
 
 def display_lpi(file):
