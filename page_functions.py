@@ -85,7 +85,14 @@ def display_schedule_comparison(file):
         height = "auto"
     else:
         height = 460 + (len(names) - 12) * 40
-    print("HEIGHT:", height)
+    
+    # Check number of games played from the first value in df
+    first_record = df.iloc[0, 0]  # e.g., "0-1-0"
+    games_played = sum(int(x) for x in first_record.split('-'))
+    
+    if games_played < 4:
+        st.dataframe(df, height="auto", width=2000)
+        return
     # df2 = df.style.apply(lambda x: ["background-color: white" if (int(x.split(" ")[0].split('-')[0]) >= top25 and int(x.split(" ")[0].split('-')[0]) < top10) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: gold" if (int(x.split(" ")[0].split('-')[0]) >= top10 and int(x.split(" ")[0].split('-')[0]) < count) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: goldenrod" if (int(x.split(" ")[0].split('-')[0]) == count) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot25 and int(x.split(" ")[0].split('-')[0]) > bot10) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot10 and int(x.split(" ")[0].split('-')[0]) > 0) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(x.split(" ")[0].split('-')[0]) == 0) else "" for x in x], axis=1, subset=names)
     # df2 = df.style.apply(lambda x: ["background-color: khaki" 
     #                         if (int(i.split(" ")[0]) >= top25 and int(i.split(" ")[0]) < top10) 
