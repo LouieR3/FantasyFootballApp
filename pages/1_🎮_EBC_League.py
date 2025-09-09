@@ -12,9 +12,9 @@ def app():
     swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
 
     # Initialize the dropdown for year selection
-    year_options = ['2021', '2022', '2023', '2024']
+    year_options = ['2021', '2022', '2023', '2024', '2025']
     
-    selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
+    selected_year = st.selectbox("Select Year", year_options, index=4)  # Defaults to 2024
     st.title(f'🎮 EBC League {selected_year}')
     
     # Create the league string based on the selected year

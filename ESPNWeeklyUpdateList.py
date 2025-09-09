@@ -36,7 +36,7 @@ leagues = [
     # Brown Munde
     {"league_id": 367134149, "year": year, "espn_s2": prahlad_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "Brown Munde"},
     # Other Prahlad League
-    # {"league_id"=1242265374, "year"=year, "espn_s2"="AECbYb8WaMMCKHklAi740KXDsHbXHTaW5mI%2FLPUegrKbIb6MRovW0L4NPTBpsC%2Bc2%2Fn7UeX%2Bac0lk3KGEwyeI%2FgF9WynckxWNIfe8m8gh43s68UyfhDj5K187Fj5764WUA%2BTlCh1AF04x9xnKwwsneSvEng%2BfACneWjyu7hJy%2FOVWsHlEm3nfMbU7WbQRDBRfkPy7syz68C4pgMYN2XaU1kgd9BRj9rwrmXZCvybbezVEOEsApniBWRtx2lD3yhJnXYREAupVlIbRcd3TNBP%2F5Frfr6pnMMfUZrR9AP1m1OPGcQ0bFaZbJBoAKdWDk%2F6pJs%3D", "swid"='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}', "name": "Brown Munde"},
+    {"league_id":1242265374, "year":year, "espn_s2":"AECbYb8WaMMCKHklAi740KXDsHbXHTaW5mI%2FLPUegrKbIb6MRovW0L4NPTBpsC%2Bc2%2Fn7UeX%2Bac0lk3KGEwyeI%2FgF9WynckxWNIfe8m8gh43s68UyfhDj5K187Fj5764WUA%2BTlCh1AF04x9xnKwwsneSvEng%2BfACneWjyu7hJy%2FOVWsHlEm3nfMbU7WbQRDBRfkPy7syz68C4pgMYN2XaU1kgd9BRj9rwrmXZCvybbezVEOEsApniBWRtx2lD3yhJnXYREAupVlIbRcd3TNBP%2F5Frfr6pnMMfUZrR9AP1m1OPGcQ0bFaZbJBoAKdWDk%2F6pJs%3D", "swid":'{4C1C5213-4BB5-4243-87AC-0BCB2D637264}', "name": "Brown Munde"},
     # Las League
     {"league_id": 1049459, "year": year, "espn_s2": la_s2, "swid": "{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}", "name": "THE BEST OF THE BEST"},
     # Hannahs League
@@ -85,7 +85,7 @@ for league_config in leagues:
             current_week = settings.reg_season_count
         elif current_week != settings.reg_season_count:
             current_week -= 1
-        current_week = 17
+        # current_week = 17
         # print(current_week)
         # Store data in DataFrames 
         scores_df = pd.DataFrame(team_scores, index=team_names)
@@ -420,7 +420,8 @@ for league_config in leagues:
         # print(odds_df)
 
         if current_week > settings.reg_season_count:
-            fileName = leagueName + " " + str(year) +".xlsx"
+            fileName = leagueName + " " + str(year)
+            fileName = f"leagues/{fileName}.xlsx"
             sheet_name = "LPI By Week"
 
             # Read the LPI data
@@ -587,7 +588,7 @@ for league_config in leagues:
             with pd.ExcelWriter(fileName, engine="openpyxl", mode="a") as writer:
                 playoff_df.to_excel(writer, sheet_name="Playoff Results", index=False)
 
-        writer = pd.ExcelWriter(fileName + ".xlsx", engine='xlsxwriter')
+        writer = pd.ExcelWriter(f"leagues/{fileName}.xlsx", engine='xlsxwriter')
         records_df.to_excel(writer, sheet_name='Schedule Grid')
         schedule_rank_df.to_excel(writer, sheet_name='Wins Against Schedule')
         rank_df.to_excel(writer, sheet_name='Expected Wins')

@@ -11,8 +11,8 @@ def app():
     swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}'
 
     # Initialize the dropdown for year selection
-    year_options = ['2022', '2023', '2024']
-    selected_year = st.selectbox("Select Year", year_options, index=1)  # Defaults to 2024
+    year_options = ['2022', '2023', '2024', '2025']
+    selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
     league = f"0755 Fantasy Football {selected_year}"
 
     st.title("🛠️ " + league)

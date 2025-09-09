@@ -11,8 +11,8 @@ def app():
     swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
 
     # Initialize the dropdown for year selection
-    year_options = ['2022', '2023', '2024']
-    selected_year = st.selectbox("Select Year", year_options, index=2)  # Defaults to 2024
+    year_options = ['2022', '2023', '2024', '2025']
+    selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
     league = f"Family Fantasy {selected_year}"
     st.title("👪 " + league)
     file = "leagues/" + league + ".xlsx"

@@ -11,9 +11,9 @@ def app():
     swid='{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}'
 
     # Initialize the dropdown for year selection
-    year_options = ['2022', '2023', '2024']
+    year_options = ['2022', '2023', '2024', '2025']
     
-    selected_year = st.selectbox("Select Year", year_options, index=2)  # Defaults to 2024
+    selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
     # st.title(f'🍝 Las League {selected_year}')
     league = f"THE BEST OF THE BEST {selected_year}"
     file = "leagues/" + league + ".xlsx"
