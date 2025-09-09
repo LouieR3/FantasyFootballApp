@@ -227,7 +227,6 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
     df_names = pd.read_excel(file, sheet_name="Wins Against Schedule")
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     # Display the styled DataFrame
-    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
@@ -359,20 +358,8 @@ def display_biggest_lpi_upsets(file):
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['LPI Difference'])
-    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
-    # Display the styled DataFrame
-    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-    df_names = df_names.set_index("Teams")
-    pd.options.mode.chained_assignment = None
-    names = []
-    for col in df_names.columns:
-        if col != "Teams":
-            names.append(col)
-    if len(names) <= 10:
-        height = "auto"
-    else:
-        height = 460 + (len(names) - 12) * 40
-    st.dataframe(df3, height=height)
+    
+    st.dataframe(df3, height="auto")
 
 def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     df = pd.read_excel(file, sheet_name="Schedule Grid")
