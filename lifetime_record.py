@@ -41,25 +41,88 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
         elif grade >= 60: return "D-"
         else: return "F-"
 
+    # Function to get owner ID from the team name
+    def get_owner_id_from_team_name(team_name_to_filter, owners_df):
+        """
+        Returns the owner ID for a given team name from the owners DataFrame.
+
+        Parameters:
+        - team_name_to_filter (str): The name of the team to filter.
+        - owners_df (pd.DataFrame): DataFrame containing 'ID', 'Display Name', and 'Team Name'.
+
+        Returns:
+        - str: The owner ID if found, else 'ID not found'.
+        """
+        # Strip spaces from the team name to filter
+        team_name_to_filter = team_name_to_filter.strip()
+
+        # Strip spaces from the 'Team Name' column in the DataFrame
+        owners_df['Team Name'] = owners_df['Team Name'].str.strip()
+
+        # Filter the DataFrame for the given team name
+        filtered_df = owners_df[owners_df['Team Name'] == team_name_to_filter]
+        # print(filtered_df)
+        if not filtered_df.empty:
+            # Return the ID of the first match
+            return filtered_df.iloc[0]['ID']
+        else:
+            return None
+
+    def owner_df_creation(league):
+        team_owners = [team.owners for team in league.teams]
+        team_names  = [team.team_name for team in league.teams]
+        # print(team_names)
+
+        # Create a list of dictionaries for the DataFrame
+        data = []
+        count = 0
+        for team in team_owners:
+            team = team[0]
+            team_name = team_names[count].strip()
+            data.append({
+                "Display Name": team['firstName'] + " " + team['lastName'],
+                "ID": team['id'],
+                "Team Name": team_name
+            })
+            count += 1
+
+        # Create the DataFrame
+        df = pd.DataFrame(data)
+
+        # Display the DataFrame
+        return df
+
     # List to store matchup statistics
-    all_matchups = [] 
+    all_matchups = []
     owner_to_team_name = {}  # Mapping from owner ID to most recent team name
+
     for year in years:
         print(f"Processing year: {year}")
-        
+
         # Instantiate the league object for the current year
         league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+        owners_df = owner_df_creation(league)
+
+        # Get the owner ID for the team name in the current year
+        team_owner_id = get_owner_id_from_team_name(team_name_to_filter, owners_df)
+        print(team_owner_id)
+
+        if team_owner_id is None:
+            print(f"Owner for team '{team_name_to_filter}' not found in year {year}. Skipping this year.")
+            continue  # Skip this year if the owner is not found
+
+        # Proceed with processing for the year if the owner is found
         settings = league.settings
         reg_season_count = settings.reg_season_count  # Regular season weeks
-        
+
         # Get teams' data
         teams = league.teams
         team_names = [team.team_name for team in teams]
         team_owners = [team.owners[0]['id'] for team in league.teams]
-        
+
         team_scores = [team.scores for team in teams]  # Each team's weekly scores
         schedules = [[opponent.owners[0]['id'] for opponent in team.schedule] for team in teams]  # Use opponent owner ID
-        
+
         # Track the most recent team name for each owner
         for owner, name in zip(team_owners, team_names):
             owner_to_team_name[owner] = name  # Always update with the most recent name
@@ -74,7 +137,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                 opponent_owner = schedules_df.iloc[team_idx, week]
                 if opponent_owner == team_owner:
                     continue  # Skip self-matches if somehow the team faces itself
-                
+
                 # Get scores of the current team and the opponent for the week
                 team_score = scores_df.iloc[team_idx, week]
                 opponent_score = scores_df.loc[opponent_owner, week]
@@ -94,7 +157,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                     loser = team_1_name
                 else:
                     continue  # Skip ties for this example
-                
+
                 # Calculate points difference and trend
                 points_scored = f"{team_score}-{opponent_score}"
                 points_diff = abs(team_score - opponent_score)
@@ -121,56 +184,8 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
     # Create a consistent order for team pairs to avoid duplicates
     matchups_df['Team Pair'] = matchups_df.apply(lambda row: tuple(sorted([row['Team 1 Owner'], row['Team 2 Owner']])), axis=1)
-    # print()
-    # print("ALL MATCHUPS")
-    # print(matchups_df[["Team 1", "Team 2", "Record", "My Points", "Their Points", "Year"]])
-    # sfd
-
-    # Function to get owner ID from the team name
-    def get_owner_id_from_team_name(team_name_to_filter, owners_df):
-        """
-        Returns the owner ID for a given team name from the owners DataFrame.
-
-        Parameters:
-        - team_name_to_filter (str): The name of the team to filter.
-        - owners_df (pd.DataFrame): DataFrame containing 'ID', 'Display Name', and 'Team Name'.
-
-        Returns:
-        - str: The owner ID if found, else 'ID not found'.
-        """
-        # Filter the DataFrame for the given team name
-        filtered_df = owners_df[owners_df['Team Name'] == team_name_to_filter]
-        if not filtered_df.empty:
-            # Return the ID of the first match
-            return filtered_df.iloc[0]['ID']
-        else:
-            return "ID not found"
-
-    def owner_df_creation(league):
-        team_owners = [team.owners for team in league.teams]
-        team_names  = [team.team_name for team in league.teams]
-
-        # Create a list of dictionaries for the DataFrame
-        data = []
-        count = 0
-        for team in team_owners:
-            team = team[0]
-            team_name = team_names[count]
-            data.append({
-                "Display Name": team['firstName'] + " " + team['lastName'],
-                "ID": team['id'],
-                "Team Name": team_name
-            })
-            count += 1
-
-        # Create the DataFrame
-        df = pd.DataFrame(data)
-
-        # Display the DataFrame
-        return df
 
     owners_df = owner_df_creation(league)
-    # print(owners_df)
 
     # Example team name to filter on
     # team_name_to_filter = 'The Golden Receivers'
@@ -182,7 +197,6 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
     # print(team_name_to_filter)
     team_owner_id = get_owner_id_from_team_name(team_name_to_filter, owners_df)
     # print(team_owner_id)
-    # sgdf
 
     if team_owner_id:
         # filtered_matchups = matchups_df[matchups_df['Team 1'] == team_name_to_filter]
@@ -220,7 +234,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                 "Points_Scored": "Points Scored",
                 "Points_Against": "Points Against"
             })
-            # print(grouped)
+            print(grouped)
             
             # Populate standings
             for index, row in grouped.iterrows():
@@ -244,9 +258,11 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                 draft_df = pd.read_csv(fileDraft)
 
                 # Get final and regular season standings
-                standings = [team.team_name for team in league.standings()]
-                reg_standings = [team.team_name for team in league.standings_weekly(14)]
-                # print(year)
+                standings = [team.team_name.strip() for team in league.standings()]
+                reg_standings = [team.team_name.strip() for team in league.standings_weekly(14)]
+                print(year)
+                print(draft_df)
+                print("==")
 
                 # Calculate places
                 final_place = standings.index(team_name) + 1
@@ -263,12 +279,12 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
                 # Filter for the specific team
                 team_draft = draft_df[draft_df["Team"].str.strip() == team_name]
-                # print(team_draft)
+                print(team_draft)
 
                 # Group by `Draft Grade` and count
                 avg_draft_grade = team_draft["Draft Grade"].mean().round(2)
 
-                # print(avg_draft_grade)
+                print(avg_draft_grade)
 
                 # Store the Draft Grade Count as a string for clarity
                 grouped.at[index, "Draft Grade"] = avg_draft_grade
@@ -446,19 +462,19 @@ def convert_to_int_list(original_list):
     """
     return [int(item) for item in original_list]
 
-# league_id = 310334683
-# espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
-# swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
+league_id = 310334683
+espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
+swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
 
-# # Initialize the dropdown for year selection
-# # year_options = ['2018', '2019', '2020', '2021', '2022', '2023', '2024']
-# # year_options = ['2022', '2023', '2024']
-# year_options = ['2021', '2022', '2023', '2024']
-# # # Convert to integers
-# years = convert_to_int_list(year_options)
-# # print(years)
-# # lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
-# lifetime_record_df, year_df, all_matchups_df = lifetime_record(1118513122, espn_s2, swid, years, 'The Hungry Dogs')
-# # lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
-# # # df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
-# print(lifetime_record_df)
+# Initialize the dropdown for year selection
+# year_options = ['2018', '2019', '2020', '2021', '2022', '2023', '2024']
+# year_options = ['2022', '2023', '2024']
+year_options = ['2021', '2022', '2023', '2024']
+# # Convert to integers
+years = convert_to_int_list(year_options)
+# print(years)
+# lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
+lifetime_record_df, year_df, all_matchups_df = lifetime_record(1118513122, espn_s2, swid, years, 'First down syndrome')
+# lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
+# # df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
+print(lifetime_record_df)

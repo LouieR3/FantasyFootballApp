@@ -58,17 +58,20 @@ if current_week is None:
     current_week = settings.reg_season_count
 elif current_week != settings.reg_season_count:
   current_week -= 1
-# print(current_week)
+print(current_week)
 # current_week -= 1
 # Store data in DataFrames 
 scores_df = pd.DataFrame(team_scores, index=team_names)
+print(scores_df)
 schedules_df = pd.DataFrame(schedules, index=team_names)
+print(schedules_df)
 
 # Create empty dataframe  
 records_df = pd.DataFrame(index=team_names, columns=team_names)
 
 # Fill diagonal with team names
 records_df.fillna('', inplace=True) 
+print(records_df)
 
 # Initialize a DataFrame to store total wins for each team against all schedules
 total_wins_df = pd.DataFrame(0, columns=team_names, index=team_names)

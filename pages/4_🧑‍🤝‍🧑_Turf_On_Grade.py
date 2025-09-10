@@ -14,7 +14,7 @@ def app():
     selected_year = st.selectbox("Select Year", year_options, index=1)  # Defaults to 2024
     # selected_year = '2024'
     # league = f"Game of Yards! {selected_year}"
-    league = f"Turf On Grade 2.0 2024"
+    league = f"Turf On Grade 2.0 {selected_year}"
     st.title("🧑‍🤝‍🧑 " + league)
     file = "leagues/" + league + ".xlsx"
     # Extract the league name without the year
