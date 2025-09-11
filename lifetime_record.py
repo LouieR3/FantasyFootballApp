@@ -470,19 +470,16 @@ def convert_to_int_list(original_list):
     """
     return [int(item) for item in original_list]
 
-# league_id = 310334683
-# espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
-# swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
+league_id = 310334683
+espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
+swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
 
-# # Initialize the dropdown for year selection
-# # year_options = ['2018', '2019', '2020', '2021', '2022', '2023', '2024']
-# # year_options = ['2022', '2023', '2024']
-# year_options = ['2021', '2022', '2023', '2024']
-# # # Convert to integers
-# years = convert_to_int_list(year_options)
-# # print(years)
-# # lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
-# lifetime_record_df, year_df, all_matchups_df = lifetime_record(1118513122, espn_s2, swid, years, 'First down syndrome')
-# # lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
-# # # df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
-# print(lifetime_record_df)
+# Initialize the dropdown for year selection
+year_options = ['2021', '2022', '2023', '2024', '2025']
+# # Convert to integers
+years = convert_to_int_list(year_options)
+# lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
+lifetime_record_df, year_df, all_matchups_df = lifetime_record(1118513122, espn_s2, swid, years, 'Werewolves of London')
+# lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
+# # df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
+print(lifetime_record_df)
