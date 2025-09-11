@@ -38,3 +38,9 @@ https://echarts.streamlit.app/
 https://github.com/explosion/spacy-streamlit
 https://spacy.io/
 https://github.com/explosion/spacy-layout
+
+https://doritostats.up.railway.app/fantasy_stats/simulation/2024/310334683?n_simulations=50
+http://github.com/DesiPilla/espn-api-v3
+https://github.com/DesiPilla/espn-api-v3/tree/master/backend/fantasy_stats
+https://github.com/DesiPilla/espn-api-v3/blob/master/backend/src/doritostats/filter_utils.py
+https://github.com/cwendt94/espn-api/blob/be5e92b8573d126a7231069742aa07798b952938/espn_api/football/league.py#L321C1-L340C17
