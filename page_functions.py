@@ -9,6 +9,8 @@ from streamlit_echarts5 import st_echarts
 from pyecharts.charts import Line
 from pyecharts import options as opts
 from streamlit_echarts import st_pyecharts
+from espn_api.football import League
+import os
 
 def display_playoff_results(file):
     try:
@@ -362,14 +364,44 @@ def display_biggest_lpi_upsets(file):
     
     st.dataframe(df3, height="auto")
 
+def owner_df_creation(league):
+    """
+    Creates a DataFrame mapping owner IDs to Display Names and Team Names for a given league.
+
+    Parameters:
+    - league (League): The league object.
+
+    Returns:
+    - pd.DataFrame: A DataFrame with columns 'Display Name', 'ID', and 'Team Name'.
+    """
+    team_owners = [team.owners for team in league.teams]
+    team_names = [team.team_name for team in league.teams]
+
+    # Create a list of dictionaries for the DataFrame
+    data = []
+    for team, team_name in zip(team_owners, team_names):
+        team = team[0]
+        data.append({
+            "Display Name": team['firstName'] + " " + team['lastName'],
+            "ID": team['id'],
+            "Team Name": team_name.strip()
+        })
+
+    # Create the DataFrame
+    return pd.DataFrame(data)
+
 def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
-    df = pd.read_excel(file, sheet_name="Schedule Grid")
-    df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-    df = df.set_index("Teams")
-    names = []
-    for col in df.columns:
-        if col != "Teams":
-            names.append(col)
+    # Extract year from file name, e.g., '0755 Fantasy Football 2022.xlsx'
+    base_name = os.path.basename(file)
+    # Remove extension
+    name_no_ext = base_name.rsplit('.', 1)[0]
+    # Split by spaces and get the second to last part (the year)
+    year_str = name_no_ext.split()[-1]
+    year = int(year_str)
+
+    league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+    owner_df = owner_df_creation(league)
+    names = owner_df["Display Name"].tolist()
 
     st.header('Lifetime Record')
     st.write('Select a team and see their record vs all other teams over every year and every game of that league')
