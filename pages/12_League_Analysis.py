@@ -323,9 +323,14 @@ def app():
     # Load the Draft Grades CSV file
     winless_file_path = "playoff_chances_winless.csv"
     winless_df = pd.read_csv(winless_file_path)
-    # Load the Draft Grades CSV file
     undefeated_file_path = "playoff_chances_undefeated.csv"
     undefeated_df = pd.read_csv(undefeated_file_path)
+
+    # Rename column and round to 2 decimals
+    for df in [winless_df, undefeated_df]:
+        if 'Playoff Percentage' in df.columns:
+            df.rename(columns={'Playoff Percentage': 'Chance of Making Playoffs'}, inplace=True)
+            df['Chance of Making Playoffs'] = df['Chance of Making Playoffs'].round(2)
 
     col1, col2 = st.columns(2)
     with col1:
