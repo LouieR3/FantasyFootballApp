@@ -318,6 +318,22 @@ def app():
         # )
 
     st.divider()
+
+    
+    # Load the Draft Grades CSV file
+    winless_file_path = "playoff_chances_winless.csv"
+    winless_df = pd.read_csv(winless_file_path)
+    # Load the Draft Grades CSV file
+    undefeated_file_path = "playoff_chances_undefeated.csv"
+    undefeated_df = pd.read_csv(undefeated_file_path)
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.write("Winless Teams Playoff Chances")
+        st.dataframe(winless_df, hide_index=True)
+    with col2:
+        st.write("Undefeated Teams Playoff Chances")
+        st.dataframe(undefeated_df, hide_index=True)
     
     # Load the Draft Grades CSV file
     file_path = "drafts/Draft_Grades_with_Standings.csv"

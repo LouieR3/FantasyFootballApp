@@ -183,6 +183,7 @@ def display_strength_of_schedule(file):
         height = "auto"
     else:
         height = 460 + (len(names) - 12) * 40
+        
     # Display the styled DataFrame
     st.dataframe(df_styled, height=height)
 
@@ -252,9 +253,9 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
     # Style the DataFrame
     styled_df = formatted_df.style.set_properties(**{'background-color': 'lightgray'}, subset=slice_)
     
-    df_names = pd.read_excel(file, sheet_name="Wins Against Schedule")
-    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
+    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
