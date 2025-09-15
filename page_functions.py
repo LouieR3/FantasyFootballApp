@@ -12,6 +12,32 @@ from streamlit_echarts import st_pyecharts
 from espn_api.football import League
 import os
 
+def owner_df_creation(league):
+    """
+    Creates a DataFrame mapping owner IDs to Display Names and Team Names for a given league.
+
+    Parameters:
+    - league (League): The league object.
+
+    Returns:
+    - pd.DataFrame: A DataFrame with columns 'Display Name', 'ID', and 'Team Name'.
+    """
+    team_owners = [team.owners for team in league.teams]
+    team_names = [team.team_name for team in league.teams]
+
+    # Create a list of dictionaries for the DataFrame
+    data = []
+    for team, team_name in zip(team_owners, team_names):
+        team = team[0]
+        data.append({
+            "Display Name": team['firstName'] + " " + team['lastName'],
+            "ID": team['id'],
+            "Team Name": team_name.strip()
+        })
+
+    # Create the DataFrame
+    return pd.DataFrame(data)
+
 def display_playoff_results(file):
     try:
         df = pd.read_excel(file, sheet_name="Playoff Results")
@@ -196,7 +222,6 @@ def display_expected_wins(file):
     # Display the styled DataFrame
     st.dataframe(df3, height=height)
 
-
 def display_playoff_odds(file, league_id, espn_s2, swid, year):
     """
     Displays the Playoff Odds table with formatting in Streamlit.
@@ -308,7 +333,7 @@ def display_lpi_by_week(file):
     # Render the ECharts line chart
     st_echarts(options=options, height="450px")
 
-def display_lpi(file):
+def display_lpi(league_id, espn_s2, swid, file):
     """
     Reads the 'Louie Power Index' sheet from the given Excel file
     and returns the DataFrame.
@@ -327,7 +352,33 @@ def display_lpi(file):
     
     df = df.iloc[: , 1:]
     df.index += 1
+
+    # Extract year from file name, e.g., '0755 Fantasy Football 2022.xlsx'
+    base_name = os.path.basename(file)
+    # Remove extension
+    name_no_ext = base_name.rsplit('.', 1)[0]
+    # Split by spaces and get the second to last part (the year)
+    year_str = name_no_ext.split()[-1]
+    year = int(year_str)
+
+    league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+    owner_df = owner_df_creation(league)
+
+    # Map Team Name to Display Name
+    team_to_owner = dict(zip(owner_df["Team Name"], owner_df["Display Name"]))
+
+    # Insert Owners column next to Teams
+    if "Teams" in df.columns:
+        owners = df["Teams"].map(team_to_owner)
+        df.insert(1, "Owners", owners)
+    else:
+        # If Teams is index, try to use index
+        owners = df.index.map(team_to_owner)
+        df.insert(0, "Owners", owners)
+
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
+    owner_names = owner_df["Display Name"].tolist()
+
     df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
@@ -341,6 +392,7 @@ def display_lpi(file):
         height = "auto"
     else:
         height = 460 + (len(names) - 12) * 40
+
     st.dataframe(df3, height=height)
 
 def display_draft_results(draft_file):
@@ -364,32 +416,6 @@ def display_biggest_lpi_upsets(file):
     
     st.dataframe(df3, height="auto")
 
-def owner_df_creation(league):
-    """
-    Creates a DataFrame mapping owner IDs to Display Names and Team Names for a given league.
-
-    Parameters:
-    - league (League): The league object.
-
-    Returns:
-    - pd.DataFrame: A DataFrame with columns 'Display Name', 'ID', and 'Team Name'.
-    """
-    team_owners = [team.owners for team in league.teams]
-    team_names = [team.team_name for team in league.teams]
-
-    # Create a list of dictionaries for the DataFrame
-    data = []
-    for team, team_name in zip(team_owners, team_names):
-        team = team[0]
-        data.append({
-            "Display Name": team['firstName'] + " " + team['lastName'],
-            "ID": team['id'],
-            "Team Name": team_name.strip()
-        })
-
-    # Create the DataFrame
-    return pd.DataFrame(data)
-
 def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     # Extract year from file name, e.g., '0755 Fantasy Football 2022.xlsx'
     base_name = os.path.basename(file)
@@ -402,6 +428,7 @@ def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
     owner_df = owner_df_creation(league)
     names = owner_df["Display Name"].tolist()
+    # print(names)
 
     st.header('Lifetime Record')
     st.write('Select a team and see their record vs all other teams over every year and every game of that league')
