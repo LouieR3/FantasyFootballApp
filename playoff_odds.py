@@ -72,7 +72,8 @@ if current_week is None:
 elif current_week != settings.reg_season_count:
   current_week -= 1
 # current_week = 15
-# print(current_week)
+print(current_week)
+sgd
 # Store data in DataFrames 
 scores_df = pd.DataFrame(team_scores, index=team_names)
 schedules_df = pd.DataFrame(schedules, index=team_names)
@@ -285,7 +286,7 @@ def oddsCalculator():
       sorted_standings = sorted(standings.items(), key=lambda x: (-x[1], team_data[x[0]]['average_score']), reverse=True)
       print(sorted_standings)
       print()
-      afsd
+      # afsd
       return [team for team, _ in sorted_standings]
 
   # Dictionary to store the final standings for each simulation

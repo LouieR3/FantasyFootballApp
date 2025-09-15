@@ -90,6 +90,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
         # Create the DataFrame
         df = pd.DataFrame(data)
+        print(df)
 
         # Display the DataFrame
         return df
@@ -325,6 +326,7 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
             return year_by_year_df
         
         year_by_year_df = year_by_year(filtered_matchups)
+        print(year_by_year_df)
 
 
         # Create a mapping for ID to Display Name
@@ -479,7 +481,9 @@ year_options = ['2021', '2022', '2023', '2024', '2025']
 # # Convert to integers
 years = convert_to_int_list(year_options)
 # lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
-lifetime_record_df, year_df, all_matchups_df = lifetime_record(1118513122, espn_s2, swid, years, 'Werewolves of London')
+lifetime_record_df, year_df, all_matchups_df = lifetime_record(1118513122, espn_s2, swid, years, 'First down syndrome')
 # lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
 # # df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
 print(lifetime_record_df)
+print(year_df)
+print(all_matchups_df)

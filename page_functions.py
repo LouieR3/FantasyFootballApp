@@ -4,6 +4,7 @@ from calcPercent import percent
 from playoffNum import playoff_num
 from st_aggrid import AgGrid
 from lifetime_record import lifetime_record
+from lifetime_record_owner import lifetime_record_owner
 from streamlit_echarts5 import st_echarts
 from pyecharts.charts import Line
 from pyecharts import options as opts
@@ -389,7 +390,7 @@ def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     # Convert to integers
     years = convert_to_int_list(year_options)
     print(years)
-    lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, selected_team)
+    lifetime_record_df, year_df, all_matchups_df = lifetime_record_owner(league_id, espn_s2, swid, years, selected_team)
     
     df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
     df_names = pd.read_excel(file, sheet_name="Schedule Grid")
