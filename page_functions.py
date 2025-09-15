@@ -32,7 +32,7 @@ def owner_df_creation(league):
         data.append({
             "Display Name": team['firstName'] + " " + team['lastName'],
             "ID": team['id'],
-            "Team Name": team_name.strip()
+            "Team Name": team_name
         })
 
     # Create the DataFrame
