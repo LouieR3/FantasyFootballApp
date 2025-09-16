@@ -221,17 +221,17 @@ def create_summary_dataframes(team_stats, final_records, playoff_makes, seed_cou
     # Add playoff chance column (sum of top N places)
     playoff_places = [f'{i}{get_ordinal_suffix(i)} Place' for i in range(1, num_playoff_teams + 1)]
     seed_df['Chance of Making Playoffs'] = seed_df[playoff_places].sum(axis=1).round(1)
-    summary_df = (
-        summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
-                .reset_index(drop=True)
-                .set_index("Team")
-    )
+    # summary_df = (
+    #     summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
+    #             .reset_index(drop=True)
+    #             .set_index("Team")
+    # )
 
-    seed_df = (
-        seed_df.sort_values('Chance of Making Playoffs', ascending=False)
-            .reset_index(drop=True)
-            .set_index("Team")
-    )
+    # seed_df = (
+    #     seed_df.sort_values('Chance of Making Playoffs', ascending=False)
+    #         .reset_index(drop=True)
+    #         .set_index("Team")
+    # )
     
     return summary_df, seed_df
 
@@ -335,17 +335,17 @@ def main():
     #     print(f"\nResults saved to 'fantasy_predictions.xlsx'")
     # except:
     #     print(f"\nCould not save Excel file - results displayed above")
-    summary_df = (
-        summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
-                .reset_index(drop=True)
-                .set_index("Team")
-    )
+    # summary_df = (
+    #     summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
+    #             .reset_index(drop=True)
+    #             .set_index("Team")
+    # )
 
-    seed_df = (
-        seed_df.sort_values('Chance of Making Playoffs', ascending=False)
-            .reset_index(drop=True)
-            .set_index("Team")
-    )
+    # seed_df = (
+    #     seed_df.sort_values('Chance of Making Playoffs', ascending=False)
+    #         .reset_index(drop=True)
+    #         .set_index("Team")
+    # )
     
     return summary_df, seed_df
 

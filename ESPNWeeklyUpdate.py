@@ -40,7 +40,7 @@ league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2A
 # league = League(league_id=367134149, year=year, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 # Other Prahlad League
-# league = League(league_id=1242265374, year=year, espn_s2="AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D", swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
+league = League(league_id=1242265374, year=year, espn_s2="AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D", swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
 
 # Las League
 # league = League(league_id=1049459, year=year, espn_s2='AEC6x9TPufDhJAV682o%2BK6c8XdanPIkD8i3F4MF%2Fgtb1A4FD9SJMNrFoDt2sVHcppQpcYUIDF7kRotFrq8u%2Bkd4W94iy%2B952I9AG4ykEF3y2YRBvm75VMpecOvj7tZiv7iZ8R2K2SEqMExArEwMg3Bnbj161G3gMS6I%2F7YOKKMPTnC1VSTWuF5JlljFfFZz5hswmCr6IMZnZCzFmy%2FnPdwymI1NZ9IOAwJVn9pnBi9FpvyzcdcyYG2NOaarBmTLqyAd3%2BEdrDEpre%2F6Cfz6c3KcwO%2FFjPBkIFDxC1szNelynxfJZCupLm%2FEFFhXdbKnBeesbbOXJg%2BDLqZU1KGdCTU0FyEKr%2BcouwUy%2BnyDCuMYUog%3D%3D', swid='{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}')
@@ -81,7 +81,7 @@ scores_df = pd.DataFrame(team_scores, index=team_names)
 # Calculate current week
 zero_week = (scores_df == 0.0).all(axis=0)
 if zero_week.any():
-    current_week = zero_week.idxmax() +1
+    current_week = zero_week.idxmax() + 1
 else:
     current_week = scores_df.shape[1]
 schedules_df = pd.DataFrame(schedules, index=team_names)
@@ -101,7 +101,7 @@ total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
 lpi_weekly_df = pd.DataFrame()
 
 # Iterate through each week
-for week in range(1, current_week+1):
+for week in range(1, current_week):
     # Initialize a DataFrame to store total wins for each team against all schedules for this week
     total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
 
@@ -305,11 +305,13 @@ final_records, playoff_makes, seed_counts = simulate_remaining_season(
 summary_df, seed_df = create_summary_dataframes(
     team_stats, final_records, playoff_makes, seed_counts, 1000, len(teams), reg_season_count
 )
+print(summary_df)
 summary_df = (
     summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
       .reset_index(drop=True)
       .set_index("Team")
 )
+print(seed_df)
 
 seed_df = (
     seed_df.sort_values('Chance of Making Playoffs', ascending=False)

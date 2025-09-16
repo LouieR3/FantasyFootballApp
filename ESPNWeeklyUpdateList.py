@@ -46,13 +46,13 @@ leagues = [
     # Las League
     {"league_id": 1049459, "year": year, "espn_s2": la_s2, "swid": "{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}", "name": "THE BEST OF THE BEST"},
     # Hannahs League
-    {"league_id": 1399036372, "year": year, "espn_s2": hannah_s2, "swid": "{46993514-CB12-4CFA-9935-14CB122CFA5F}", "name": "Hannahs League"},
+    {"league_id": 1399036372, "year": year, "espn_s2": hannah_s2, "swid": "{46993514-CB12-4CFA-9935-14CB122CFA5F}", "name": "The Girl's Room 💞🏈"},
     # Avas League
-    {"league_id": 417131856, "year": year, "espn_s2": ava_s2, "swid": "{9B611343-247D-458B-88C3-50BB33789365}", "name": "Avas League"},
+    {"league_id": 417131856, "year": year, "espn_s2": ava_s2, "swid": "{9B611343-247D-458B-88C3-50BB33789365}", "name": "Philly Extra Special"},
     # Matts League
-    {"league_id": 261375772, "year": year, "espn_s2": matt_s2, "swid": "{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64}", "name": "Matts League"},
+    {"league_id": 261375772, "year": year, "espn_s2": matt_s2, "swid": "{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64}", "name": "BP- Loudoun 2025"},
     # Elles League
-    {"league_id": 1259693145, "year": year, "espn_s2": elle_s2, "swid": "{B6F0817B-1DC0-4E29-B020-68B8E12B6931}", "name": "Matts League"},
+    {"league_id": 1259693145, "year": year, "espn_s2": elle_s2, "swid": "{B6F0817B-1DC0-4E29-B020-68B8E12B6931}", "name": "Operators Football League"},
 ]
 
 # Loop through each league configuration
@@ -81,6 +81,10 @@ for league_config in leagues:
             schedule = [opponent.team_name for opponent in team.schedule]
             schedules.append(schedule)
 
+
+        # Store data in DataFrames 
+        scores_df = pd.DataFrame(team_scores, index=team_names)
+
         # Calculate current week
         zero_week = (scores_df == 0.0).all(axis=0)
         if zero_week.any():
@@ -88,8 +92,6 @@ for league_config in leagues:
         else:
             current_week = scores_df.shape[1]
         # print(current_week)
-        # Store data in DataFrames 
-        scores_df = pd.DataFrame(team_scores, index=team_names)
         schedules_df = pd.DataFrame(schedules, index=team_names)
         # print(scores_df)
         # print()
@@ -107,7 +109,7 @@ for league_config in leagues:
         lpi_weekly_df = pd.DataFrame()
 
         # Iterate through each week
-        for week in range(1, current_week+1):
+        for week in range(1, current_week):
             # Initialize a DataFrame to store total wins for each team against all schedules for this week
             total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
 
@@ -252,7 +254,7 @@ for league_config in leagues:
 
         matchup_results = []
         # Iterate through each week's matchups
-        for week in range(1, current_week + 1):
+        for week in range(1, current_week):
             matchups = league.scoreboard(week)
             for matchup in matchups:
                 if matchup.home_score == 0 or matchup.away_score == 0:
@@ -300,6 +302,8 @@ for league_config in leagues:
         rank_df.index = rank_df.index + 1
 
         teams= league.teams
+        reg_season_count = settings.reg_season_count
+        num_playoff_teams = settings.playoff_team_count
         # Then use them step by step in your existing code
         team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
         final_records, playoff_makes, seed_counts = simulate_remaining_season(
@@ -307,6 +311,19 @@ for league_config in leagues:
         )
         summary_df, seed_df = create_summary_dataframes(
             team_stats, final_records, playoff_makes, seed_counts, 1000, len(teams), reg_season_count
+        )
+        print(summary_df)
+        summary_df = (
+            summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
+            .reset_index(drop=True)
+            .set_index("Team")
+        )
+        print(seed_df)
+
+        seed_df = (
+            seed_df.sort_values('Chance of Making Playoffs', ascending=False)
+                .reset_index(drop=True)
+                .set_index("Team")
         )
         # odds_df = oddsCalculator()
         # print(odds_df)
@@ -488,7 +505,6 @@ for league_config in leagues:
     except Exception as e:
         # Handle errors, such as the league not existing
         print(f"Error: League '{league_config['name']}' for year {league_config['year']} does not exist or could not be loaded.")
-        print(f"Details: {str(e)}")
         print(f"Details: {str(e)}")
         continue  # Move to the next league
 
