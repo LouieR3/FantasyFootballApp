@@ -276,6 +276,7 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
         # Read the Playoff Odds sheet
         df = pd.read_excel(file, sheet_name="Record Odds")
         df = df.set_index("Team")
+        df.columns = [col.replace('_', ' ') for col in df.columns]
         st.dataframe(df, height=height)
     except:
         print("No Record Predictions Yet")
