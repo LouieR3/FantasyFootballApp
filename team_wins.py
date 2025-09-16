@@ -31,14 +31,29 @@ league = League(league_id=310334683, year=2023, espn_s2=espn_s2, swid='{4656A2AD
 team_names = [team.team_name for team in league.teams]
 print(team_names)
 
+team_owners = [team.owners[0]['id'] for team in league.teams]
+print(team_owners)
+
+team_scores = [team.scores for team in league.teams] 
+print(team_scores)
+
 teams = league.teams
+schedules = [[opponent.owners[0]['id'] for opponent in team.schedule] for team in teams]
+schedules = [team.schedule for team in teams]
+print(schedules)
+scores_df = pd.DataFrame(team_scores, index=team_owners)
+
+current_week = scores_df.apply(lambda row: row[row != 0.0].last_valid_index(), axis=1).max() + 1
+print(current_week)
+
 team = teams[5]
 
-wins = team.wins
 print(team.team_name)
-print(team.standing)
-print(team.final_standing)
 print(team.outcomes)
-print(team.streak_length)
-print(team.streak_type)
-print(team.playoff_pct)
+
+wins = team.wins
+# print(team.standing)
+# print(team.final_standing)
+# print(team.streak_length)
+# print(team.streak_type)
+# print(team.playoff_pct)
