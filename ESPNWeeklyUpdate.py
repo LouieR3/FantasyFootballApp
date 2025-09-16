@@ -40,7 +40,7 @@ league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2A
 # league = League(league_id=367134149, year=year, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 # Other Prahlad League
-league = League(league_id=1242265374, year=year, espn_s2="AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D", swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
+# league = League(league_id=1242265374, year=year, espn_s2="AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D", swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
 
 # Las League
 # league = League(league_id=1049459, year=year, espn_s2='AEC6x9TPufDhJAV682o%2BK6c8XdanPIkD8i3F4MF%2Fgtb1A4FD9SJMNrFoDt2sVHcppQpcYUIDF7kRotFrq8u%2Bkd4W94iy%2B952I9AG4ykEF3y2YRBvm75VMpecOvj7tZiv7iZ8R2K2SEqMExArEwMg3Bnbj161G3gMS6I%2F7YOKKMPTnC1VSTWuF5JlljFfFZz5hswmCr6IMZnZCzFmy%2FnPdwymI1NZ9IOAwJVn9pnBi9FpvyzcdcyYG2NOaarBmTLqyAd3%2BEdrDEpre%2F6Cfz6c3KcwO%2FFjPBkIFDxC1szNelynxfJZCupLm%2FEFFhXdbKnBeesbbOXJg%2BDLqZU1KGdCTU0FyEKr%2BcouwUy%2BnyDCuMYUog%3D%3D', swid='{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}')
@@ -225,14 +225,47 @@ if current_week > 1:
 else:
    lpi_weekly_df['Change From Last Week'] = 0
 
+def owner_df_creation(league):
+    """
+    Creates a DataFrame mapping owner IDs to Display Names and Team Names for a given league.
+
+    Parameters:
+    - league (League): The league object.
+
+    Returns:
+    - pd.DataFrame: A DataFrame with columns 'Display Name', 'ID', and 'Team Name'.
+    """
+    team_owners = [team.owners for team in league.teams]
+    team_names = [team.team_name for team in league.teams]
+
+    # Create a list of dictionaries for the DataFrame
+    data = []
+    for team, team_name in zip(team_owners, team_names):
+        team = team[0]
+        data.append({
+            "Display Name": team['firstName'] + " " + team['lastName'],
+            "ID": team['id'],
+            "Team Name": team_name
+        })
+
+    # Create the DataFrame
+    return pd.DataFrame(data)
+
+owner_df = owner_df_creation(league)
+team_dict = dict(zip(owner_df['Team Name'], owner_df['Display Name']))
 # Display the updated DataFrame
 print(lpi_weekly_df)
 lpi_df = lpi_weekly_df[[week_name, 'Change From Last Week']]
 lpi_df = lpi_df.rename(columns={week_name: "Louie Power Index (LPI)"})
 lpi_df.insert(loc = 0, column = 'Teams', value = lpi_df.index)
+
+lpi_df.insert(loc = 1, column = 'Owners', value = "")
+# Map the records to lpi_df based on matching team names
+lpi_df['Owners'] = lpi_df['Teams'].map(team_dict)
+
 lpi_df.reset_index(drop=True, inplace=True)
 lpi_df.index = lpi_df.index + 1 
-lpi_df.insert(loc = 2, column = 'Record', value = "")
+lpi_df.insert(loc = 3, column = 'Record', value = "")
 # Create a dictionary to map team names to records from rank_df
 team_to_record = dict(zip(rank_df['Team'], rank_df['Record']))
 

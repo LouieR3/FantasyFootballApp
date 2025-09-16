@@ -5,38 +5,60 @@ from espn_api.football import League
 
 files = glob.glob('*.xlsx')
 
+def owner_df_creation(league):
+    """
+    Creates a DataFrame mapping owner IDs to Display Names and Team Names for a given league.
+
+    Parameters:
+    - league (League): The league object.
+
+    Returns:
+    - pd.DataFrame: A DataFrame with columns 'Display Name', 'ID', and 'Team Name'.
+    """
+    team_owners = [team.owners for team in league.teams]
+    team_names = [team.team_name for team in league.teams]
+
+    # Create a list of dictionaries for the DataFrame
+    data = []
+    for team, team_name in zip(team_owners, team_names):
+        team = team[0]
+        data.append({
+            "Display Name": team['firstName'] + " " + team['lastName'],
+            "ID": team['id'],
+            "Team Name": team_name
+        })
+
+    # Create the DataFrame
+    return pd.DataFrame(data)
+
 # league = League(league_id=1339704102, year=2024, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
-league = League(league_id=310334683, year=2025, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
-team_owner = [team.owner for team in league.teams]
-team_owners = [team.owners for team in league.teams]
-# print(team_owners)
-# sfd
-team_names  = [team.team_name for team in league.teams]
-team_dict   = dict(zip(team_names, team_owner))
-# print(team_names)
-# print(team_dict)
+ava_s2 = "AEBL5xTPsfrhYhP04Dc%2FHGojCvZAK7pmvEtoKwm%2FDUFjM86FeGyFUfomgi6VkRTlpDC0bXAOQyOy9UfdWQm%2FAbZUPauwvbn%2Bfn9pkW4BTpHapwqDSJyXSMWoH7GJyQjI8Oq7AF4bkD8A5Vm31unAN0dn6ar5h2YdSy7USKAbm8vH%2BVmQ3yAoT8QQ23V4mCQM7ztjkA3hkEYf%2BFfyB1ASlVb%2B0286sPBoPaaESQv45qLuCUG6883kq4SXq7PUACFpAUICO7ahS%2F06pr1Gg%2BzhO79cea6jXKNJsgRYQLQmHea7Yw%3D%3D"
+# league = League(league_id=310334683, year=2025, espn_s2='AEC3jc8inPISUEojfHvhzvOsdtsGWNv8sGIxjkBQjQyNQgX%2FDRaM5IKm%2BwyY2guiak1uwiE0xIkP4XEcoTzgLlumNMYgQbnqS3HjnAWI9%2BTZYo2N70ktU9isjCRXRlIvcOFKDV1OmY71%2FgJhMWKodsvEmli0dYCDTMXFF%2Bd7nuCxvGsFSBxV2BPdh8NdKpTEasZN4VhjgG6o9Iczv%2FySPOI9N2x1CGiVJNx8E8rblTk86tPPIr4QdKjYSS7a7Xs2h6KG9i9sLCV%2Be1DJvwtVhgOX',swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=417131856, year=2025, espn_s2=ava_s2, swid='{9B611343-247D-458B-88C3-50BB33789365}')
 
-# Create a list of dictionaries for the DataFrame
-data = []
-for team in team_owners:
-    team = team[0]
-    data.append({
-        "Display Name": team['firstName'] + " " + team['lastName'],
-        "ID": team['id']
-    })
 
-# Create the DataFrame
-df = pd.DataFrame(data)
-# print(df)
+# league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+owner_df = owner_df_creation(league)
+file = "leagues/Philly Extra Special 2025.xlsx"
+# Map Team Name to Display Name
+team_to_owner = dict(zip(owner_df["Team Name"], owner_df["Display Name"]))
+print(team_to_owner)
+df = pd.read_excel(file, sheet_name="Louie Power Index")
 
-# Reverse the team_dict to map IDs to team names
-id_to_team_name = {id_: team_name for team_name, ids in team_dict.items() for id_ in ids}
+df = df.iloc[: , 1:]
+df.index += 1
 
-# Map team names to the DataFrame based on ID
-df['Team Name'] = df['ID'].map(id_to_team_name)
+# Insert Owners column next to Teams
+if "Teams" in df.columns:
+    print("Teams is a column")
+    owners = df["Teams"].map(team_to_owner)
+    df.insert(1, "Owners", owners)
+else:
+    # If Teams is index, try to use index
+    print("NO")
+    owners = df.index.map(team_to_owner)
 
-# Display the DataFrame
-print(df)
+print(owners)
 sdf
 louie_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
 prahlad_s2 = "AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4"

@@ -42,7 +42,7 @@ leagues = [
     # Brown Munde
     {"league_id": 367134149, "year": year, "espn_s2": prahlad_s2, "swid": "{4C1C5213-4BB5-4243-87AC-0BCB2D637264}", "name": "Brown Munde"},
     # Other Prahlad League
-    {"league_id":1242265374, "year":year, "espn_s2":"AECbYb8WaMMCKHklAi740KXDsHbXHTaW5mI%2FLPUegrKbIb6MRovW0L4NPTBpsC%2Bc2%2Fn7UeX%2Bac0lk3KGEwyeI%2FgF9WynckxWNIfe8m8gh43s68UyfhDj5K187Fj5764WUA%2BTlCh1AF04x9xnKwwsneSvEng%2BfACneWjyu7hJy%2FOVWsHlEm3nfMbU7WbQRDBRfkPy7syz68C4pgMYN2XaU1kgd9BRj9rwrmXZCvybbezVEOEsApniBWRtx2lD3yhJnXYREAupVlIbRcd3TNBP%2F5Frfr6pnMMfUZrR9AP1m1OPGcQ0bFaZbJBoAKdWDk%2F6pJs%3D", "swid":'{4C1C5213-4BB5-4243-87AC-0BCB2D637264}', "name": "Brown Munde"},
+    # {"league_id":1242265374, "year":year, "espn_s2":"AECbYb8WaMMCKHklAi740KXDsHbXHTaW5mI%2FLPUegrKbIb6MRovW0L4NPTBpsC%2Bc2%2Fn7UeX%2Bac0lk3KGEwyeI%2FgF9WynckxWNIfe8m8gh43s68UyfhDj5K187Fj5764WUA%2BTlCh1AF04x9xnKwwsneSvEng%2BfACneWjyu7hJy%2FOVWsHlEm3nfMbU7WbQRDBRfkPy7syz68C4pgMYN2XaU1kgd9BRj9rwrmXZCvybbezVEOEsApniBWRtx2lD3yhJnXYREAupVlIbRcd3TNBP%2F5Frfr6pnMMfUZrR9AP1m1OPGcQ0bFaZbJBoAKdWDk%2F6pJs%3D", "swid":'{4C1C5213-4BB5-4243-87AC-0BCB2D637264}', "name": "Brown Munde"},
     # Las League
     {"league_id": 1049459, "year": year, "espn_s2": la_s2, "swid": "{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}", "name": "THE BEST OF THE BEST"},
     # Hannahs League
@@ -235,12 +235,47 @@ for league_config in leagues:
 
         # Display the updated DataFrame
         print(lpi_weekly_df)
+        def owner_df_creation(league):
+            """
+            Creates a DataFrame mapping owner IDs to Display Names and Team Names for a given league.
+
+            Parameters:
+            - league (League): The league object.
+
+            Returns:
+            - pd.DataFrame: A DataFrame with columns 'Display Name', 'ID', and 'Team Name'.
+            """
+            team_owners = [team.owners for team in league.teams]
+            team_names = [team.team_name for team in league.teams]
+
+            # Create a list of dictionaries for the DataFrame
+            data = []
+            for team, team_name in zip(team_owners, team_names):
+                team = team[0]
+                data.append({
+                    "Display Name": team['firstName'] + " " + team['lastName'],
+                    "ID": team['id'],
+                    "Team Name": team_name
+                })
+
+            # Create the DataFrame
+            return pd.DataFrame(data)
+
+        owner_df = owner_df_creation(league)
+        team_dict = dict(zip(owner_df['Team Name'], owner_df['Display Name']))
+        # Display the updated DataFrame
+        print(lpi_weekly_df)
         lpi_df = lpi_weekly_df[[week_name, 'Change From Last Week']]
         lpi_df = lpi_df.rename(columns={week_name: "Louie Power Index (LPI)"})
         lpi_df.insert(loc = 0, column = 'Teams', value = lpi_df.index)
+
+        lpi_df.insert(loc = 1, column = 'Owners', value = "")
+        # Map the records to lpi_df based on matching team names
+        lpi_df['Owners'] = lpi_df['Teams'].map(team_dict)
+
         lpi_df.reset_index(drop=True, inplace=True)
         lpi_df.index = lpi_df.index + 1 
-        lpi_df.insert(loc = 2, column = 'Record', value = "")
+        lpi_df.insert(loc = 3, column = 'Record', value = "")
         # Create a dictionary to map team names to records from rank_df
         team_to_record = dict(zip(rank_df['Team'], rank_df['Record']))
 

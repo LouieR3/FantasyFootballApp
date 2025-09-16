@@ -54,9 +54,10 @@ def calculate_team_stats(teams, scores_df, current_week, reg_season_count):
         
         # Adjust std dev based on sample size (more games = more confidence)
         games_played = len(reg_season_scores)
-        confidence_factor = max(0.5, 1 - (games_played / 20))  # Gets tighter with more games
+        confidence_factor = max(0.5, 1 - (games_played / 40))  # Gets tighter with more games
         adjusted_std = score_std * (1 + confidence_factor)
-        
+        print(f"{team.team_name}: Avg Score={avg_score}, Std Dev={score_std}, Adjusted Std Dev={adjusted_std}, Games Played={games_played}")
+        # asdf
         team_stats[team.team_name] = {
             'team_obj': team,
             'wins': wins,
