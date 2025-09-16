@@ -374,23 +374,23 @@ def display_lpi(league_id, espn_s2, swid, file):
     year_str = name_no_ext.split()[-1]
     year = int(year_str)
 
-    league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
-    owner_df = owner_df_creation(league)
+    # league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+    # owner_df = owner_df_creation(league)
 
-    # Map Team Name to Display Name
-    team_to_owner = dict(zip(owner_df["Team Name"], owner_df["Display Name"]))
+    # # Map Team Name to Display Name
+    # team_to_owner = dict(zip(owner_df["Team Name"], owner_df["Display Name"]))
 
-    # Insert Owners column next to Teams
-    if "Teams" in df.columns:
-        owners = df["Teams"].map(team_to_owner)
-        df.insert(1, "Owners", owners)
-    else:
-        # If Teams is index, try to use index
-        owners = df.index.map(team_to_owner)
-        df.insert(0, "Owners", owners)
+    # # Insert Owners column next to Teams
+    # if "Teams" in df.columns:
+    #     owners = df["Teams"].map(team_to_owner)
+    #     df.insert(1, "Owners", owners)
+    # else:
+    #     # If Teams is index, try to use index
+    #     owners = df.index.map(team_to_owner)
+    #     df.insert(0, "Owners", owners)
 
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
-    owner_names = owner_df["Display Name"].tolist()
+    # owner_names = owner_df["Display Name"].tolist()
 
     df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
