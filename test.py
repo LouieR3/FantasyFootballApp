@@ -16,7 +16,7 @@ start_time = time.time()
 
 espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
 # Pennoni Younglings
-league = League(league_id=310334683, year=2025, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=310334683, year=2024, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 def test_league_data(league):
     print(league.settings)
@@ -31,7 +31,7 @@ def test_league_data(league):
     # print(league.previousSeasons)
     print(league.recent_activity())
 
-test_league_data(league)
+# test_league_data(league)
 
 def test_matchup_data(league):
     playoff_round_1 = league.box_scores(week=1)
@@ -41,11 +41,15 @@ def test_matchup_data(league):
         print(match.home_team)
         print(match.home_projected)
         print(match.home_score)
-        print(match.is_playoff)
+        print(match.away_team)
+        print(match.away_projected)
+        print(match.away_score)
+        # print(match.matchup_type)
         print()
-# test_matchup_data(league)
+test_matchup_data(league)
 
-# playoff_round_1 = league.box_scores(week=15)
+playoff_round_1 = league.box_scores(week=15)[0]
+playoff_round_1.matchup_type
 # player = playoff_round_1[0].home_lineup[0]
 # print(player.points_breakdown)
 def test_player_data(league):
