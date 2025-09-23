@@ -19,41 +19,41 @@ def app():
     number_of_files = len(xlsx_files)
     st.subheader('In looking at ' + str(number_of_files) + ' seasons, how well does LPI predict winners? How about seeds, records, or total points? How often do top seeds win the championship? How often do lower seeds win the championship?')
     st.divider()
-    # # Initialize an empty list to store all playoff_dfs
-    # combined_playoff_dfs = []
+    # Initialize an empty list to store all playoff_dfs
+    combined_playoff_dfs = []
 
-    # # Loop through each file
-    # for file in xlsx_files:
-    #     try:
-    #         # Load the workbook
-    #         workbook = load_workbook(file, read_only=True)
+    # Loop through each file
+    for file in xlsx_files:
+        try:
+            # Load the workbook
+            workbook = load_workbook(file, read_only=True)
 
-    #         # Check if "Playoff Results" sheet exists
-    #         if "Playoff Results" not in workbook.sheetnames:
-    #             # print(f"Skipping {file}: 'Playoff Results' sheet not found.")
-    #             continue
+            # Check if "Playoff Results" sheet exists
+            if "Playoff Results" not in workbook.sheetnames:
+                # print(f"Skipping {file}: 'Playoff Results' sheet not found.")
+                continue
 
-    #         # Read the Playoff Results sheet into a DataFrame
-    #         playoff_df = pd.read_excel(file, sheet_name="Playoff Results")
-    #         playoff_df['File Name'] = file  # Add file name for identification
-    #         combined_playoff_dfs.append(playoff_df)
+            # Read the Playoff Results sheet into a DataFrame
+            playoff_df = pd.read_excel(file, sheet_name="Playoff Results")
+            playoff_df['File Name'] = file  # Add file name for identification
+            combined_playoff_dfs.append(playoff_df)
 
-    #         # print(f"Processed {file}: 'Playoff Results' sheet loaded.")
+            # print(f"Processed {file}: 'Playoff Results' sheet loaded.")
 
-    #     except Exception as e:
-    #         print(f"Error processing {file}: {e}")
+        except Exception as e:
+            print(f"Error processing {file}: {e}")
 
-    # # Combine all DataFrames into one
-    # if combined_playoff_dfs:
-    #     all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
-    #     # print("Combined all playoff data successfully.")
-    # else:
-    #     print("No valid playoff data found.")
+    # Combine all DataFrames into one
+    if combined_playoff_dfs:
+        all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
+        # print("Combined all playoff data successfully.")
+    else:
+        print("No valid playoff data found.")
 
 
-    # # Combine all DataFrames into one
-    # all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
-    all_playoff_dfs = pd.read_csv("all_playoff_dfs.csv")
+    # Combine all DataFrames into one
+    all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
+    # all_playoff_dfs = pd.read_csv("all_playoff_dfs.csv")
     # print(all_playoff_dfs)
 
     # Ensure LPI columns are numeric
