@@ -410,15 +410,15 @@ leagues = [
 years = [2018, 2019, 2020, 2021, 2022, 2023, 2024]
 league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
-# aggregated_df, playoff_chances_df = winless_record_chances(leagues, years)
-# print(playoff_chances_df)
-# print()
-# print(aggregated_df)
+aggregated_df, playoff_chances_df = winless_record_chances(leagues, years)
+print(playoff_chances_df)
+print()
+print(aggregated_df)
 
-# aggregated_df.to_csv("playoff_chances_aggregated.csv", index=False)
+aggregated_df.to_csv("playoff_chances_winless.csv", index=False)
 aggregated_df, playoff_chances_df = undefeated_record_chances(leagues, years)
 print(playoff_chances_df)
 print()
 print(aggregated_df)
-# aggregated_df.to_csv("playoff_chances_undefeated.csv", index=False)
+aggregated_df.to_csv("playoff_chances_undefeated.csv", index=False)
 # playoff_chances_df.to_csv("all_undefeated_playoffs.csv", index=False)

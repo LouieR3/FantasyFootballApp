@@ -554,12 +554,12 @@ def app():
         winner_df.reset_index(drop=True, inplace=True)
 
         # Print the Winner DataFrame
-        winner_df["League"] = winner_df["File Name"].str.replace('.xlsx', '', regex=False)
+        winner_df["League"] = winner_df["File Name"].str.replace('.xlsx', '', regex=False).str.replace('leagues/', '', regex=False)
         winner_df = winner_df[["Team", "Seed", "Total Points", "LPI", "Record", "League"]]
         print(winner_df)
         st.divider()
         st.write("All Champions:")
-        st.dataframe(winner_df, height=700)
+        st.dataframe(winner_df, height=700, hide_index=True)
 
         
         # Load the Draft Grades CSV file
@@ -570,7 +570,7 @@ def app():
 
 
         # Plot the scatter chart
-        st.header("Scatter Chart: Points For vs LPI")
+        st.header("All Champions Scatter Chart")
         scatter_plot(df_standing_1)
         st.divider()
 
