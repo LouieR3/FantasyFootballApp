@@ -91,9 +91,9 @@ else:
 schedules_df = pd.DataFrame(schedules, index=team_names)
 print(current_week)
 print(settings.reg_season_count)
-# print(current_week)
-# print()
-print(schedules_df)
+print(settings.playoff_team_count)
+print()
+# print(schedules_df)
 # Create empty dataframe  
 records_df = pd.DataFrame(index=team_names, columns=team_names)
 
