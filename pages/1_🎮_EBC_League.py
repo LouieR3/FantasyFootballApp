@@ -4,7 +4,6 @@ def app():
     import streamlit as st
     from calcPercent import percent
     from playoffNum import playoff_num
-    from lifetime_record import lifetime_record
     from st_aggrid import AgGrid
 
     league_id = 1118513122

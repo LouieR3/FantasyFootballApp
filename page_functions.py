@@ -3,7 +3,6 @@ import streamlit as st
 from calcPercent import percent
 from playoffNum import playoff_num
 from st_aggrid import AgGrid
-from lifetime_record import lifetime_record
 from lifetime_record_owner import lifetime_record_owner
 from streamlit_echarts5 import st_echarts
 from pyecharts.charts import Line
