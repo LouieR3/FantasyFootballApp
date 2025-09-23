@@ -14,62 +14,71 @@ def winless_record_chances(leagues, years):
     Returns:
     - pd.DataFrame: A DataFrame summarizing the playoff chances for each winless record.
     """
-    # Initialize an empty list to store all playoff data
-    combined_playoff_dfs = []
+    def create_playoff_df(leagues, years):
+        
+        # Initialize an empty list to store all playoff data
+        combined_playoff_dfs = []
 
-    # Loop through each league
-    for league_config in leagues:
-        league_id = league_config['league_id']
-        espn_s2 = league_config['espn_s2']
-        swid = league_config['swid']
-        league_name = league_config['name']
+        # Loop through each league
+        for league_config in leagues:
+            league_id = league_config['league_id']
+            espn_s2 = league_config['espn_s2']
+            swid = league_config['swid']
+            league_name = league_config['name']
 
-        for year in years:
-            print(f"Processing league: {league_name}, year: {year}")
+            for year in years:
+                print(f"Processing league: {league_name}, year: {year}")
 
-            # Instantiate the league object for the current year
-            try:
-                league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
-            except Exception as e:
-                # print(f"Error initializing league {league_name} for year {year}: {e}")
-                continue
-
-            # Get the league name and construct the file path
-            file_path = f"leagues/{league_name} {year}.xlsx"
-
-            # Check if the file exists
-            if not os.path.exists(file_path):
-                # print(f"File not found for year {year}: {file_path}. Skipping this year.")
-                continue
-
-            try:
-                # Load the workbook
-                workbook = load_workbook(file_path, read_only=True)
-
-                # Check if "Playoff Results" sheet exists
-                if "Playoff Results" not in workbook.sheetnames:
-                    # print(f"Skipping {file_path}: 'Playoff Results' sheet not found.")
+                # Instantiate the league object for the current year
+                try:
+                    league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+                except Exception as e:
+                    # print(f"Error initializing league {league_name} for year {year}: {e}")
                     continue
 
-                # Read the Playoff Results sheet into a DataFrame
-                playoff_df = pd.read_excel(file_path, sheet_name="Playoff Results")
-                playoff_df['Year'] = year  # Add year for identification
-                playoff_df['League'] = league_name  # Add league name for identification
-                playoff_df['File Name'] = file_path  # Add file name for identification
-                combined_playoff_dfs.append(playoff_df)
+                # Get the league name and construct the file path
+                file_path = f"leagues/{league_name} {year}.xlsx"
 
-                print(f"Processed {file_path}: 'Playoff Results' sheet loaded.")
+                # Check if the file exists
+                if not os.path.exists(file_path):
+                    # print(f"File not found for year {year}: {file_path}. Skipping this year.")
+                    continue
 
-            except Exception as e:
-                print(f"Error processing {file_path}: {e}")
+                try:
+                    # Load the workbook
+                    workbook = load_workbook(file_path, read_only=True)
 
-    # Combine all playoff DataFrames into one
-    if not combined_playoff_dfs:
-        # print("No playoff data found.")
-        return pd.DataFrame(), pd.DataFrame()  # Return empty DataFrames if no data is found
+                    # Check if "Playoff Results" sheet exists
+                    if "Playoff Results" not in workbook.sheetnames:
+                        # print(f"Skipping {file_path}: 'Playoff Results' sheet not found.")
+                        continue
 
-    all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
-    print(f"Combined playoff DataFrame:\n{all_playoff_dfs}")
+                    # Read the Playoff Results sheet into a DataFrame
+                    playoff_df = pd.read_excel(file_path, sheet_name="Playoff Results")
+                    playoff_df['Year'] = year  # Add year for identification
+                    playoff_df['League'] = league_name  # Add league name for identification
+                    playoff_df['File Name'] = file_path  # Add file name for identification
+                    combined_playoff_dfs.append(playoff_df)
+
+                    print(f"Processed {file_path}: 'Playoff Results' sheet loaded.")
+
+                except Exception as e:
+                    print(f"Error processing {file_path}: {e}")
+
+        # Combine all playoff DataFrames into one
+        if not combined_playoff_dfs:
+            # print("No playoff data found.")
+            return pd.DataFrame(), pd.DataFrame()  # Return empty DataFrames if no data is found
+
+        all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
+        all_playoff_dfs.to_csv("all_playoff_dfs.csv", index=False)
+        print(f"Combined playoff DataFrame:\n{all_playoff_dfs}")
+        return all_playoff_dfs
+    # all_playoff_dfs = create_playoff_df(leagues, years)
+    all_playoff_dfs = pd.read_csv("all_playoff_dfs.csv")
+    if all_playoff_dfs.empty:
+        return pd.DataFrame(), pd.DataFrame()
+    print(f"All playoff DataFrame:\n{all_playoff_dfs}")
 
     # Analyze playoff chances for teams starting 0-1 through 0-7
     playoff_chances = []
@@ -151,63 +160,71 @@ def undefeated_record_chances(leagues, years):
     Returns:
     - pd.DataFrame: A DataFrame summarizing the playoff chances for each winless record.
     """
-    # Initialize an empty list to store all playoff data
-    combined_playoff_dfs = []
+    def create_playoff_df(leagues, years):
+        
+        # Initialize an empty list to store all playoff data
+        combined_playoff_dfs = []
 
-    # Loop through each league
-    for league_config in leagues:
-        league_id = league_config['league_id']
-        espn_s2 = league_config['espn_s2']
-        swid = league_config['swid']
-        league_name = league_config['name']
+        # Loop through each league
+        for league_config in leagues:
+            league_id = league_config['league_id']
+            espn_s2 = league_config['espn_s2']
+            swid = league_config['swid']
+            league_name = league_config['name']
 
-        for year in years:
-            print(f"Processing league: {league_name}, year: {year}")
+            for year in years:
+                print(f"Processing league: {league_name}, year: {year}")
 
-            # Instantiate the league object for the current year
-            try:
-                league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
-            except Exception as e:
-                # print(f"Error initializing league {league_name} for year {year}: {e}")
-                continue
-
-            # Get the league name and construct the file path
-            file_path = f"leagues/{league_name} {year}.xlsx"
-
-            # Check if the file exists
-            if not os.path.exists(file_path):
-                # print(f"File not found for year {year}: {file_path}. Skipping this year.")
-                continue
-
-            try:
-                # Load the workbook
-                workbook = load_workbook(file_path, read_only=True)
-
-                # Check if "Playoff Results" sheet exists
-                if "Playoff Results" not in workbook.sheetnames:
-                    # print(f"Skipping {file_path}: 'Playoff Results' sheet not found.")
+                # Instantiate the league object for the current year
+                try:
+                    league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+                except Exception as e:
+                    # print(f"Error initializing league {league_name} for year {year}: {e}")
                     continue
 
-                # Read the Playoff Results sheet into a DataFrame
-                playoff_df = pd.read_excel(file_path, sheet_name="Playoff Results")
-                playoff_df['Year'] = year  # Add year for identification
-                playoff_df['League'] = league_name  # Add league name for identification
-                playoff_df['File Name'] = file_path  # Add file name for identification
-                combined_playoff_dfs.append(playoff_df)
+                # Get the league name and construct the file path
+                file_path = f"leagues/{league_name} {year}.xlsx"
 
-                print(f"Processed {file_path}: 'Playoff Results' sheet loaded.")
+                # Check if the file exists
+                if not os.path.exists(file_path):
+                    # print(f"File not found for year {year}: {file_path}. Skipping this year.")
+                    continue
 
-            except Exception as e:
-                print(f"Error processing {file_path}: {e}")
+                try:
+                    # Load the workbook
+                    workbook = load_workbook(file_path, read_only=True)
 
-    # Combine all playoff DataFrames into one
-    if not combined_playoff_dfs:
-        # print("No playoff data found.")
-        return pd.DataFrame(), pd.DataFrame()  # Return empty DataFrames if no data is found
+                    # Check if "Playoff Results" sheet exists
+                    if "Playoff Results" not in workbook.sheetnames:
+                        # print(f"Skipping {file_path}: 'Playoff Results' sheet not found.")
+                        continue
 
-    all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
-    all_playoff_dfs.to_csv("all_playoff_dfs.csv", index=False)
-    print(f"Combined playoff DataFrame:\n{all_playoff_dfs}")
+                    # Read the Playoff Results sheet into a DataFrame
+                    playoff_df = pd.read_excel(file_path, sheet_name="Playoff Results")
+                    playoff_df['Year'] = year  # Add year for identification
+                    playoff_df['League'] = league_name  # Add league name for identification
+                    playoff_df['File Name'] = file_path  # Add file name for identification
+                    combined_playoff_dfs.append(playoff_df)
+
+                    print(f"Processed {file_path}: 'Playoff Results' sheet loaded.")
+
+                except Exception as e:
+                    print(f"Error processing {file_path}: {e}")
+
+        # Combine all playoff DataFrames into one
+        if not combined_playoff_dfs:
+            # print("No playoff data found.")
+            return pd.DataFrame(), pd.DataFrame()  # Return empty DataFrames if no data is found
+
+        all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
+        all_playoff_dfs.to_csv("all_playoff_dfs.csv", index=False)
+        print(f"Combined playoff DataFrame:\n{all_playoff_dfs}")
+        return all_playoff_dfs
+    # all_playoff_dfs = create_playoff_df(leagues, years)
+    all_playoff_dfs = pd.read_csv("all_playoff_dfs.csv")
+    if all_playoff_dfs.empty:
+        return pd.DataFrame(), pd.DataFrame()
+    print(f"All playoff DataFrame:\n{all_playoff_dfs}")
 
     # Analyze playoff chances for teams starting 0-1 through 0-7
     playoff_chances = []
@@ -221,7 +238,7 @@ def undefeated_record_chances(leagues, years):
             try:
                 league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
             except Exception as e:
-                print(f"Error initializing league {league_name} for year {year}: {e}")
+                # print(f"Error initializing league {league_name} for year {year}: {e}")
                 continue
 
             # Filter the playoff DataFrame for the current year and league
@@ -278,6 +295,75 @@ def undefeated_record_chances(leagues, years):
     # Return the final DataFrames
     return aggregated_df, playoff_chances_df
 
+def all_record_chances(leagues, years):
+    def create_playoff_df(leagues, years):
+        
+        # Initialize an empty list to store all playoff data
+        combined_playoff_dfs = []
+
+        # Loop through each league
+        for league_config in leagues:
+            league_id = league_config['league_id']
+            espn_s2 = league_config['espn_s2']
+            swid = league_config['swid']
+            league_name = league_config['name']
+
+            for year in years:
+                print(f"Processing league: {league_name}, year: {year}")
+
+                # Instantiate the league object for the current year
+                try:
+                    league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+                except Exception as e:
+                    # print(f"Error initializing league {league_name} for year {year}: {e}")
+                    continue
+
+                # Get the league name and construct the file path
+                file_path = f"leagues/{league_name} {year}.xlsx"
+
+                # Check if the file exists
+                if not os.path.exists(file_path):
+                    # print(f"File not found for year {year}: {file_path}. Skipping this year.")
+                    continue
+
+                try:
+                    # Load the workbook
+                    workbook = load_workbook(file_path, read_only=True)
+
+                    # Check if "Playoff Results" sheet exists
+                    if "Playoff Results" not in workbook.sheetnames:
+                        # print(f"Skipping {file_path}: 'Playoff Results' sheet not found.")
+                        continue
+
+                    # Read the Playoff Results sheet into a DataFrame
+                    playoff_df = pd.read_excel(file_path, sheet_name="Playoff Results")
+                    playoff_df['Year'] = year  # Add year for identification
+                    playoff_df['League'] = league_name  # Add league name for identification
+                    playoff_df['File Name'] = file_path  # Add file name for identification
+                    combined_playoff_dfs.append(playoff_df)
+
+                    print(f"Processed {file_path}: 'Playoff Results' sheet loaded.")
+
+                except Exception as e:
+                    print(f"Error processing {file_path}: {e}")
+
+        # Combine all playoff DataFrames into one
+        if not combined_playoff_dfs:
+            # print("No playoff data found.")
+            return pd.DataFrame(), pd.DataFrame()  # Return empty DataFrames if no data is found
+
+        all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
+        all_playoff_dfs.to_csv("all_playoff_dfs.csv", index=False)
+        print(f"Combined playoff DataFrame:\n{all_playoff_dfs}")
+        return all_playoff_dfs
+    # all_playoff_dfs = create_playoff_df(leagues, years)
+    all_playoff_dfs = pd.read_csv("all_playoff_dfs.csv")
+    if all_playoff_dfs.empty:
+        return pd.DataFrame(), pd.DataFrame()
+    print(f"All playoff DataFrame:\n{all_playoff_dfs}")
+
+    
+    return combined_aggregated_df, combined_playoff_df
 # Example usage
 league_id = 1118513122
 espn_s2 = 'AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
@@ -322,7 +408,7 @@ leagues = [
 ]
 
 years = [2018, 2019, 2020, 2021, 2022, 2023, 2024]
-# league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
 # aggregated_df, playoff_chances_df = winless_record_chances(leagues, years)
 # print(playoff_chances_df)
@@ -334,5 +420,5 @@ aggregated_df, playoff_chances_df = undefeated_record_chances(leagues, years)
 print(playoff_chances_df)
 print()
 print(aggregated_df)
-aggregated_df.to_csv("playoff_chances_undefeated.csv", index=False)
-playoff_chances_df.to_csv("all_undefeated_playoffs.csv", index=False)
+# aggregated_df.to_csv("playoff_chances_undefeated.csv", index=False)
+# playoff_chances_df.to_csv("all_undefeated_playoffs.csv", index=False)

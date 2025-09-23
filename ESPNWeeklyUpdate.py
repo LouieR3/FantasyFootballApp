@@ -10,6 +10,7 @@ import itertools
 import math
 import numpy as np
 import random
+import openpyxl
 from monte_carlo_odds import (
     calculate_team_stats, 
     simulate_remaining_season, 
@@ -34,19 +35,22 @@ league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2A
 # league = League(league_id=1339704102, year=year, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 # Game of Yards
+# year = 2019
 # league = League(league_id=1781851, year=year, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 # Brown Munde
 # league = League(league_id=367134149, year=year, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 # Other Prahlad League
-# league = League(league_id=1242265374, year=year, espn_s2="AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D", swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
+year = 2024
+league = League(league_id=1242265374, year=year, espn_s2="AECbYb8WaMMCKHklAi740KXDsHbXHTaW5mI%2FLPUegrKbIb6MRovW0L4NPTBpsC%2Bc2%2Fn7UeX%2Bac0lk3KGEwyeI%2FgF9WynckxWNIfe8m8gh43s68UyfhDj5K187Fj5764WUA%2BTlCh1AF04x9xnKwwsneSvEng%2BfACneWjyu7hJy%2FOVWsHlEm3nfMbU7WbQRDBRfkPy7syz68C4pgMYN2XaU1kgd9BRj9rwrmXZCvybbezVEOEsApniBWRtx2lD3yhJnXYREAupVlIbRcd3TNBP%2F5Frfr6pnMMfUZrR9AP1m1OPGcQ0bFaZbJBoAKdWDk%2F6pJs%3D", swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 # Las League
 # league = League(league_id=1049459, year=year, espn_s2='AEC6x9TPufDhJAV682o%2BK6c8XdanPIkD8i3F4MF%2Fgtb1A4FD9SJMNrFoDt2sVHcppQpcYUIDF7kRotFrq8u%2Bkd4W94iy%2B952I9AG4ykEF3y2YRBvm75VMpecOvj7tZiv7iZ8R2K2SEqMExArEwMg3Bnbj161G3gMS6I%2F7YOKKMPTnC1VSTWuF5JlljFfFZz5hswmCr6IMZnZCzFmy%2FnPdwymI1NZ9IOAwJVn9pnBi9FpvyzcdcyYG2NOaarBmTLqyAd3%2BEdrDEpre%2F6Cfz6c3KcwO%2FFjPBkIFDxC1szNelynxfJZCupLm%2FEFFhXdbKnBeesbbOXJg%2BDLqZU1KGdCTU0FyEKr%2BcouwUy%2BnyDCuMYUog%3D%3D', swid='{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}')
 
 # Hannahs League
-# league = League(league_id=1049459, year=year, espn_s2='AEC6x9TPufDhJAV682o%2BK6c8XdanPIkD8i3F4MF%2Fgtb1A4FD9SJMNrFoDt2sVHcppQpcYUIDF7kRotFrq8u%2Bkd4W94iy%2B952I9AG4ykEF3y2YRBvm75VMpecOvj7tZiv7iZ8R2K2SEqMExArEwMg3Bnbj161G3gMS6I%2F7YOKKMPTnC1VSTWuF5JlljFfFZz5hswmCr6IMZnZCzFmy%2FnPdwymI1NZ9IOAwJVn9pnBi9FpvyzcdcyYG2NOaarBmTLqyAd3%2BEdrDEpre%2F6Cfz6c3KcwO%2FFjPBkIFDxC1szNelynxfJZCupLm%2FEFFhXdbKnBeesbbOXJg%2BDLqZU1KGdCTU0FyEKr%2BcouwUy%2BnyDCuMYUog%3D%3D', swid='{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}')
+hannah_s2 = "AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D"
+# league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
 
 ava_s2 = "AEBL5xTPsfrhYhP04Dc%2FHGojCvZAK7pmvEtoKwm%2FDUFjM86FeGyFUfomgi6VkRTlpDC0bXAOQyOy9UfdWQm%2FAbZUPauwvbn%2Bfn9pkW4BTpHapwqDSJyXSMWoH7GJyQjI8Oq7AF4bkD8A5Vm31unAN0dn6ar5h2YdSy7USKAbm8vH%2BVmQ3yAoT8QQ23V4mCQM7ztjkA3hkEYf%2BFfyB1ASlVb%2B0286sPBoPaaESQv45qLuCUG6883kq4SXq7PUACFpAUICO7ahS%2F06pr1Gg%2BzhO79cea6jXKNJsgRYQLQmHea7Yw%3D%3D"
 matt_s2 = "AEApTMk4bKXLS%2ByFC85I7AlYVnFOTx28Qn8C5ElSPEEY3%2BV6Jn0RzRDIb1H39fmRU9ABSWxJBwDaxottGDrfteMllIgOnF6QDw%2Bv2v6ox%2FDJGV4DJav5ntyQn3oihvOstkQsXIvSGD5jFAQFTJcb6GOCe9jG0WuATob3%2BU5fi2fZdZJ%2Blpx65ty5SNBe8znFW3T52EfNFbEOrCFW13IHqmEUiO9%2BooinLTMwIhsD2Txzg7peD6bKhs%2BOQL7pqc2xE1x084MSLRZ33UZioi8aNJdJx%2FBO8BUaBy%2FB3VFUkB2S1CFUUnlY5S96e98QD9vgmLY%3D"
@@ -85,7 +89,9 @@ if zero_week.any():
 else:
     current_week = scores_df.shape[1]
 schedules_df = pd.DataFrame(schedules, index=team_names)
-# print(scores_df)
+print(current_week)
+print(settings.reg_season_count)
+# print(current_week)
 # print()
 print(schedules_df)
 # Create empty dataframe  
@@ -101,7 +107,7 @@ total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
 lpi_weekly_df = pd.DataFrame()
 
 # Iterate through each week
-for week in range(1, current_week):
+for week in range(1, current_week+1):
     # Initialize a DataFrame to store total wins for each team against all schedules for this week
     total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
 
@@ -352,6 +358,168 @@ seed_df = (
         .set_index("Team")
 )
 # print(odds_df)
+if current_week > settings.reg_season_count:
+    fileName = leagueName + " " + str(year)
+    fileName = f"leagues/{fileName}.xlsx"
+    sheet_name = "LPI By Week"
+
+    # Read the LPI data
+    lpi_df = pd.read_excel(fileName, sheet_name=sheet_name, index_col=0)  # Team names as index
+    lpi_df = lpi_df.drop(['Change From Last Week'], axis=1)
+
+    # --------------------------------------------------------------------------------------
+    # PLAYOFF RESULTS
+    # --------------------------------------------------------------------------------------
+
+    # team_owners = [team.owners for team in league.teams]
+    team_names = [team.team_name for team in league.teams]
+    team_scores = [team.scores for team in league.teams] 
+
+    schedules = []
+    for team in league.teams:
+        schedule = [opponent.team_name for opponent in team.schedule]
+        schedules.append(schedule)
+
+    # Calculate current week
+    zero_week = (scores_df == 0.0).all(axis=0)
+    if zero_week.any():
+        current_week = zero_week.idxmax() +1
+    else:
+        current_week = scores_df.shape[1]
+
+    # Store data in DataFrames 
+    scores_df = pd.DataFrame(team_scores, index=team_names)
+    schedules_df = pd.DataFrame(schedules, index=team_names)
+    # print(scores_df)
+    last_column_name = scores_df.columns[-1]
+    # print(schedules_df)
+
+    # Playoff teams and seeds
+    standings = [team.team_name for team in league.standings_weekly(settings.reg_season_count)]
+    num_playoff_teams = settings.playoff_team_count
+    playoff_teams = standings[:num_playoff_teams]  # Top teams in the playoffs
+    reg_season_count = settings.reg_season_count
+    # Initialize the results list
+    playoff_results = []
+
+    # Function to determine round name based on number of teams
+    def get_round_name(num_teams):
+        if num_teams >= 5:
+            return "Quarter Final"
+        elif num_teams >= 3:
+            return "Semi Final"
+        elif num_teams == 2:
+            return "Championship"
+        else:
+            return "Final Team"  # Special case if there's one team left (shouldn't be used in matchups)
+
+    # Iterate through playoff weeks
+    last_column_name = scores_df.columns[-1]
+    for week in range(reg_season_count, last_column_name+1):
+        round_name = get_round_name(len(playoff_teams))
+        # print(f"Processing Playoff Round {round_name} (Week {week + 1})")
+        # print(playoff_teams)
+        # print()
+        advancing_teams = []  # Teams that win in the current week
+        round_number = week - reg_season_count + 1
+        teams_already_processed = set()  # Track teams already in a matchup
+
+        # Matchups: process playoff teams
+        for team in playoff_teams:
+            # Skip if this team has already been processed in a matchup
+            if team in teams_already_processed:
+                continue
+
+            opponent = schedules_df.loc[team, week]  # Get opponent for the current week
+
+            # Skip if the team has a bye (e.g., they face themselves)
+            if opponent == team:
+                playoff_results.append({
+                    "Round": round_name,
+                    "Team 1": team,
+                    "Seed 1": standings.index(team) + 1,
+                    "Score 1": scores_df.loc[team, week],
+                    "Team 1 LPI": lpi_df.loc[team, f"Week {week + 1}"],  # Add LPI value
+                    "Team 2": "Bye",
+                    "Seed 2": "-",
+                    "Score 2": "-",
+                    "Team 2 LPI": "-",
+                    "Winner": team
+                })
+                advancing_teams.append(team)  # Auto-advance the team
+                continue
+
+            # Skip if the opponent has already been processed
+            if opponent in teams_already_processed:
+                continue
+
+            # Retrieve team and opponent scores
+            score_1 = scores_df.loc[team, week]
+            score_2 = scores_df.loc[opponent, week]
+
+            # Retrieve LPI values
+            team_1_lpi = lpi_df.loc[team, f"Week {week + 1}"]
+            team_2_lpi = lpi_df.loc[opponent, f"Week {week + 1}"]
+
+            # Determine seeds
+            seed_1 = standings.index(team) + 1
+            seed_2 = standings.index(opponent) + 1
+
+            # Determine winner
+            if score_1 > score_2:
+                winner = team
+            elif score_2 > score_1:
+                winner = opponent
+            else:
+                winner = "Tie"  # Handle tie scenario if needed
+
+            # Append results to the playoff results list
+            playoff_results.append({
+                "Round": round_name,
+                "Team 1": team,
+                "Seed 1": seed_1,
+                "Score 1": score_1,
+                "Team 1 LPI": team_1_lpi,
+                "Team 2": opponent,
+                "Seed 2": seed_2,
+                "Score 2": score_2,
+                "Team 2 LPI": team_2_lpi,
+                "Winner": winner
+            })
+
+            # Add the winner to the advancing teams list
+            advancing_teams.append(winner)
+
+            # Mark both teams as processed
+            teams_already_processed.add(team)
+            teams_already_processed.add(opponent)
+
+        # Update playoff_teams for the next round
+        playoff_teams = advancing_teams
+        round_number += 1
+
+        # Break the loop if there is only one team left (champion)
+        if len(playoff_teams) <= 1:
+            break
+
+    # Convert results to DataFrame
+    playoff_df = pd.DataFrame(playoff_results)
+
+    # Display the DataFrame
+    # print(playoff_df)
+
+    # Open the workbook
+    workbook = openpyxl.load_workbook(fileName)
+    # Check if the sheet already exists
+    if "Playoff Results" in workbook.sheetnames:
+        # Remove the sheet
+        del workbook["Playoff Results"]
+    # Save the workbook after removing the sheet
+    workbook.save(fileName)
+
+    # Add playoff_df as a new sheet to the existing Excel file
+    with pd.ExcelWriter(fileName, engine="openpyxl", mode="a") as writer:
+        playoff_df.to_excel(writer, sheet_name="Playoff Results", index=False)
 
 writer = pd.ExcelWriter(f"leagues/{fileName}.xlsx", engine='xlsxwriter')
 records_df.to_excel(writer, sheet_name='Schedule Grid')
