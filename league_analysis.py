@@ -20,7 +20,7 @@ start_time = time.time()
 combined_playoff_dfs = []
 
 # Get all Excel files in the current directory
-xlsx_files = glob.glob("*.xlsx")
+xlsx_files = glob.glob("leagues/*.xlsx")
 
 # Loop through each file
 for file in xlsx_files:
