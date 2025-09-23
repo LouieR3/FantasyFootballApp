@@ -281,13 +281,23 @@ def lifetime_record_owner(league_id, espn_s2, swid, years, owner_name_to_filter)
 
     # Helper function to update the trend correctly
     def determine_trend(trends):
+        # trends is a Series of strings like ["Louis Rodriguez W1", "Jackson Jansorn W1", ...]
         last_trend = trends.iloc[-1]
-        winner = ' '.join(last_trend.split()[:-1])  # The winner should be the first word in the last trend
-        streak = trends.str.contains(winner).sum()  # Count how many times that team appears in the trend list
+        winner = ' '.join(last_trend.split()[:-1])  # extract winner name
+        streak = 0
+
+        # walk backwards and count only consecutive wins for the last winner
+        for t in reversed(trends):
+            if t.startswith(winner):
+                streak += 1
+            else:
+                break
+
         return f"{winner} W{streak}"
 
     filtered_matchups = matchups_df[matchups_df['Team 1 Owner'] == owner_name_to_filter]
     filtered_matchups['Team Pair'] = filtered_matchups.apply(lambda row: tuple(sorted([row['Team 1 Owner'], row['Team 2 Owner']])), axis=1)
+    print(filtered_matchups[['Team 1 Owner', 'Team 2 Owner', 'Trend']])
     # Group by the team pair
     grouped_records = filtered_matchups.groupby('Team Pair').agg({
         'Record': list,  # Aggregate records as a list to calculate later
@@ -378,6 +388,7 @@ def convert_to_int_list(original_list):
 # # lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
 # owner_name = 'Louis Rodriguez'
 # grouped_records, summary, matchups = lifetime_record_owner(league_id, espn_s2, swid, years, owner_name)
-# print(summary)
+# # print(summary)
 # print(grouped_records)
-# print(grouped_records.columns)
+# print()
+# print(matchups)

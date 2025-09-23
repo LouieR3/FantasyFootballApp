@@ -35,13 +35,13 @@ league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2A
 # league = League(league_id=1339704102, year=year, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 # Game of Yards
-# year = 2019
 # league = League(league_id=1781851, year=year, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 # Brown Munde
 # league = League(league_id=367134149, year=year, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
-# Other Prahlad League
+# Turf On Grade 2.0 League
+year = 2023
 league = League(league_id=1242265374, year=year, espn_s2="AECbYb8WaMMCKHklAi740KXDsHbXHTaW5mI%2FLPUegrKbIb6MRovW0L4NPTBpsC%2Bc2%2Fn7UeX%2Bac0lk3KGEwyeI%2FgF9WynckxWNIfe8m8gh43s68UyfhDj5K187Fj5764WUA%2BTlCh1AF04x9xnKwwsneSvEng%2BfACneWjyu7hJy%2FOVWsHlEm3nfMbU7WbQRDBRfkPy7syz68C4pgMYN2XaU1kgd9BRj9rwrmXZCvybbezVEOEsApniBWRtx2lD3yhJnXYREAupVlIbRcd3TNBP%2F5Frfr6pnMMfUZrR9AP1m1OPGcQ0bFaZbJBoAKdWDk%2F6pJs%3D", swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
 
 # Las League
@@ -106,7 +106,7 @@ total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
 lpi_weekly_df = pd.DataFrame()
 
 # Iterate through each week
-for week in range(1, current_week):
+for week in range(1, current_week+1):
     # Initialize a DataFrame to store total wins for each team against all schedules for this week
     total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
 
@@ -438,11 +438,11 @@ if current_week > settings.reg_season_count:
                     "Team 1": team,
                     "Seed 1": standings.index(team) + 1,
                     "Score 1": scores_df.loc[team, week],
-                    "Team 1 LPI": lpi_df.loc[team, f"Week {week + 1}"],  # Add LPI value
+                    "LPI 1": lpi_df.loc[team, f"Week {week + 1}"],  # Add LPI value
                     "Team 2": "Bye",
                     "Seed 2": "-",
                     "Score 2": "-",
-                    "Team 2 LPI": "-",
+                    "LPI 2": "-",
                     "Winner": team
                 })
                 advancing_teams.append(team)  # Auto-advance the team
@@ -478,11 +478,11 @@ if current_week > settings.reg_season_count:
                 "Team 1": team,
                 "Seed 1": seed_1,
                 "Score 1": score_1,
-                "Team 1 LPI": team_1_lpi,
+                "LPI 1": team_1_lpi,
                 "Team 2": opponent,
                 "Seed 2": seed_2,
                 "Score 2": score_2,
-                "Team 2 LPI": team_2_lpi,
+                "LPI 2": team_2_lpi,
                 "Winner": winner
             })
 

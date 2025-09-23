@@ -3,7 +3,7 @@ import pandas as pd
 import os
 from openpyxl import load_workbook
 
-def get_all_matchups(leagues, years):    
+def get_all_matchups(leagues, year, current_week):    
     # Initialize an empty list to store all playoff data
     combined_matchups_dfs = []
 
@@ -14,56 +14,40 @@ def get_all_matchups(leagues, years):
         swid = league_config['swid']
         league_name = league_config['name']
 
-        for year in years:
-            print(f"Processing league: {league_name}, year: {year}")
+        print(f"Processing league: {league_name}, year: {year}")
 
-            # Instantiate the league object for the current year
-            try:
-                league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
-                print(league.settings)
-            except Exception as e:
-                # print(f"Error initializing league {league_name} for year {year}: {e}")
-                continue
-            
-            if year < 2025:
-                weeks = league.current_week
-            else:
-                print("Getting weeks for current season")
-                team_names = [team.team_name for team in league.teams]
-                team_scores = [team.scores for team in league.teams] 
-                scores_df = pd.DataFrame(team_scores, index=team_names)
-                zero_week = (scores_df == 0.0).all(axis=0)
-                if zero_week.any():
-                    weeks = zero_week.idxmax()
-                else:
-                    weeks = scores_df.shape[1]
-            print(weeks)
-            for week in range(1, weeks + 1):
-                try:
-                    matchups = league.box_scores(week=week)
-                except Exception as e:
-                    # print(f"Error fetching box scores for league {league_name}, year {year}, week {week}: {e}")
-                    continue
-                print(f"Fetched {len(matchups)} matchups for week {week} of {league_name} ({year})")  
-                # Prepare data for the current week's matchups
-                matchup_data = []
-                for matchup in matchups:
-                    matchup_info = {
-                        'League': league_name,
-                        'Year': year,
-                        'Week': week,
-                        'Home Team': matchup.home_team.team_name if matchup.home_team else None,
-                        'Home Score': matchup.home_score,
-                        'Home Predicted Score': matchup.home_projected,
-                        'Away Team': matchup.away_team.team_name if matchup.away_team else None,
-                        'Away Score': matchup.away_score,
-                        'Away Predicted Score': matchup.away_projected,
-                    }
-                    matchup_data.append(matchup_info)
+        # Instantiate the league object for the current year
+        try:
+            league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+        except Exception as e:
+            # print(f"Error initializing league {league_name} for year {year}: {e}")
+            continue
+        
+        try:
+            matchups = league.box_scores(week=current_week)
+        except Exception as e:
+            # print(f"Error fetching box scores for league {league_name}, year {year}, week {week}: {e}")
+            continue
+        print(f"Fetched {len(matchups)} matchups for week {current_week} of {league_name} ({year})")  
+        # Prepare data for the current week's matchups
+        matchup_data = []
+        for matchup in matchups:
+            matchup_info = {
+                'League': league_name,
+                'Year': year,
+                'Week': current_week,
+                'Home Team': matchup.home_team.team_name if matchup.home_team else None,
+                'Home Score': matchup.home_score,
+                'Home Predicted Score': matchup.home_projected,
+                'Away Team': matchup.away_team.team_name if matchup.away_team else None,
+                'Away Score': matchup.away_score,
+                'Away Predicted Score': matchup.away_projected,
+            }
+            matchup_data.append(matchup_info)
 
-                # Convert the current week's matchup data to a DataFrame
-                week_df = pd.DataFrame(matchup_data)
-                combined_matchups_dfs.append(week_df)
+        # Convert the current week's matchup data to a DataFrame
+        week_df = pd.DataFrame(matchup_data)
+        combined_matchups_dfs.append(week_df)
     # Concatenate all weekly DataFrames into a single DataFrame
     if combined_matchups_dfs:
         all_matchups_df = pd.concat(combined_matchups_dfs, ignore_index=True)
@@ -108,10 +92,30 @@ leagues = [
     {"league_id": 1259693145, "year": year, "espn_s2": elle_s2, "swid": "{B6F0817B-1DC0-4E29-B020-68B8E12B6931}", "name": "Matts League"},
 ]
 
-# years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
-years = [2025]
+year = 2025
 
-all_matchups_df = get_all_matchups(leagues, years)
+
+league_config = leagues[0]
+league_id = league_config['league_id']
+espn_s2 = league_config['espn_s2']
+swid = league_config['swid']
+league_name = league_config['name']
+
+league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+
+team_names = [team.team_name for team in league.teams]
+team_scores = [team.scores for team in league.teams] 
+# Store data in DataFrames 
+scores_df = pd.DataFrame(team_scores, index=team_names)
+# Calculate current week
+zero_week = (scores_df == 0.0).all(axis=0)
+if zero_week.any():
+    current_week = zero_week.idxmax()
+else:
+    current_week = scores_df.shape[1]
+
+all_matchups_df = get_all_matchups(leagues, year, current_week)
+
 print(all_matchups_df)
 try:
     current_matchups = pd.read_csv("all_matchups.csv")
@@ -124,13 +128,3 @@ try:
     all_matchups_df.to_csv("all_matchups.csv", index=False)
 except FileNotFoundError:
     print("No existing all_matchups.csv found, creating a new one.")
-
-# all_matchups = pd.read_csv("all_matchups.csv")
-# print(all_matchups)
-# all_matchups["Predicted Winner"] = all_matchups.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
-# all_matchups["Actual Winner"] = all_matchups.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
-# print(all_matchups)
-# all_matchups.to_csv("all_matchups.csv", index=False)
-
-# prediction_accuracy = (all_matchups["Predicted Winner"] == all_matchups["Actual Winner"]).mean()
-# print(f"Overall Prediction Accuracy: {prediction_accuracy:.2%}")

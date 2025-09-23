@@ -190,20 +190,14 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
 
     owners_df = owner_df_creation(league)
 
-    # Example team name to filter on
-    # team_name_to_filter = 'The Golden Receivers'
-    # team_name_to_filter = "Daddy's Home"
-    # team_name_to_filter = 'The Hungry Dogs'
-    # team_name_to_filter = 'Golden Receivers'
-
     # Get the owner ID corresponding to the given team name
     # print(team_name_to_filter)
     team_owner_id = get_owner_id_from_team_name(team_name_to_filter, owners_df)
     # print(team_owner_id)
 
     if team_owner_id:
-        # filtered_matchups = matchups_df[matchups_df['Team 1'] == team_name_to_filter]
-        # print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
+        filtered_matchups = matchups_df[matchups_df['Team 1'] == team_name_to_filter]
+        print(filtered_matchups[['Record', 'Points Scored', 'Trend', 'Team 1', 'Team 2']])
 
         filtered_matchups = matchups_df[matchups_df['Team 1 Owner'] == team_owner_id]
         # print(filtered_matchups[['Record', 'Points Scored', 'Average Points Difference', 'Team 1', 'Team 2']])
@@ -472,18 +466,19 @@ def convert_to_int_list(original_list):
     """
     return [int(item) for item in original_list]
 
-# league_id = 310334683
-# espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
-# swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
+league_id = 310334683
+espn_s2='AEB%2Bzu7FGxYPXt8rgNkQWTV8c4yxT2T3KNZZVkZUVKh9TOdH7iUalV08hSloqYJ5dDtxZVK6d4WC503CH3mH0UkNCPOgbTXYz44W3IJtXsplT%2BLoqNYCU8T7W1HU%2Fgh4PnasvHIkDZgTZFWkUFhcLA0eLkwH8AvYe2%2FCIlhdk7%2FdMeiM0ijsS8vhSYYB8LUhSrB0kuTXE2v85gSIrJQSbs3mPvP5p6pFr3w2OxWicVi9pe8p3eVDhSOLiPMYrPgpuL%2FLBZIGHxhKz5lzGRSL2uTA'
+swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
 
-# # Initialize the dropdown for year selection
-# year_options = ['2021', '2022', '2023', '2024', '2025']
-# # # Convert to integers
-# years = convert_to_int_list(year_options)
-# # lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
-# lifetime_record_df, year_df, all_matchups_df = lifetime_record(1118513122, espn_s2, swid, years, 'First down syndrome')
-# # lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
-# # # df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
-# print(lifetime_record_df)
+# Initialize the dropdown for year selection
+year_options = ['2021', '2022', '2023', '2024', '2025']
+# # Convert to integers
+years = convert_to_int_list(year_options)
+# lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
+lifetime_record_df, year_df, all_matchups_df = lifetime_record(1118513122, espn_s2, swid, years, 'Werewolves of London')
+# lifetime_record_df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, 'The Golden Receivers')
+# # df, year_df, all_matchups_df = lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter)
+print(lifetime_record_df)
+print()
 # print(year_df)
-# print(all_matchups_df)
+print(all_matchups_df)
