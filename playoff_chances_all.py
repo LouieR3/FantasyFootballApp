@@ -335,21 +335,21 @@ def example_usage():
     all_playoff_dfs = pd.read_csv('all_playoff_dfs.csv')  # Replace with your actual data source
     
     # Analyze a specific week
-    target_week = 14
-    aggregated_df, detailed_df = analyze_playoff_chances_by_record_at_week(
-        leagues, years, target_week, all_playoff_dfs
-    )
+    # target_week = 14
+    # aggregated_df, detailed_df = analyze_playoff_chances_by_record_at_week(
+    #     leagues, years, target_week, all_playoff_dfs
+    # )
 
     # First, run the diagnostic
     # issues = diagnose_playoff_data_issues(leagues, years, all_playoff_dfs)
     # print(f"Issues found: {issues}")
     
-    # # Analyze multiple weeks
-    # weeks_to_analyze = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    # Analyze multiple weeks
+    weeks_to_analyze = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     # weeks_to_analyze = [12, 13, 14]
-    # multi_week_results = analyze_multiple_weeks_playoff_chances(
-    #     leagues, years, weeks_to_analyze, all_playoff_dfs
-    # )
+    multi_week_results = analyze_multiple_weeks_playoff_chances(
+        leagues, years, weeks_to_analyze, all_playoff_dfs
+    )
     
     # print(f"Multi-week Results:\n{multi_week_results}")
     # # Create heatmap data
