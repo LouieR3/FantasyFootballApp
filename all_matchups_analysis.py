@@ -6,7 +6,13 @@ import seaborn as sns
 
 # Read the CSV file
 all_matchups_df = pd.read_csv('all_matchups.csv')  # Replace with your actual file path
-
+# pennoni_2023 = all_matchups_df[(all_matchups_df['League'] == "Pennoni Younglings") & (all_matchups_df['Year'] == 2023)]  # Filter out weeks greater than 15
+# print(pennoni_2023)
+# all_matchups_df = all_matchups_df[(all_matchups_df['Home Predicted Score'] > 40) & (all_matchups_df['Home Score'] != all_matchups_df['Home Predicted Score'])]  # Filter out weeks greater than 15
+all_matchups_df = all_matchups_df[all_matchups_df['Home Predicted Score'] > 40]  # Filter out weeks greater than 15
+# pennoni_2023 = pennoni_2023[(pennoni_2023['Home Predicted Score'] > 40) & (pennoni_2023['Home Score'] != pennoni_2023['Home Predicted Score'])]  # Filter out weeks greater than 15
+# print(pennoni_2023)
+# dhfg
 print("Data loaded successfully!")
 print(f"Shape: {all_matchups_df.shape}")
 print("\nFirst few rows:")
@@ -278,11 +284,11 @@ print("Positive Defense Luck = Opponents scored LESS than predicted (good luck)"
 print("Negative Defense Luck = Opponents scored MORE than predicted (bad luck)")
 print("="*50)
 
-print("\n📈 BEST POINT LUCK (Scored more than predicted):")
+print("\n📈 BIGGEST OVERPERFORMERS (Scored more than predicted):")
 print("="*50)
 print(best_point_luck.to_string(index=False))
 
-print("\n📉 WORST POINT LUCK (Scored less than predicted):")
+print("\n📉 BIGGEST UNDERPERFORMERS (Scored less than predicted):")
 print("="*50)
 print(worst_point_luck.to_string(index=False))
 

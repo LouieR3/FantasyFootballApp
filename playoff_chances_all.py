@@ -330,6 +330,7 @@ def example_usage():
     # ]
 
     years = [2019, 2020, 2021, 2022, 2023, 2024]
+    # years = [2021, 2022, 2023, 2024]
     
     # Assuming you have all_playoff_dfs DataFrame available
     all_playoff_dfs = pd.read_csv('all_playoff_dfs.csv')  # Replace with your actual data source
@@ -346,7 +347,7 @@ def example_usage():
     
     # Analyze multiple weeks
     weeks_to_analyze = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    # weeks_to_analyze = [12, 13, 14]
+    weeks_to_analyze = [1, 3, 4, 7, 14]
     multi_week_results = analyze_multiple_weeks_playoff_chances(
         leagues, years, weeks_to_analyze, all_playoff_dfs
     )
