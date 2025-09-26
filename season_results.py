@@ -35,17 +35,16 @@ leagues = [
     # {"league_id": 1049459, "year": year, "espn_s2": la_espn_s2, "swid": "{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}", "name": "Las League"},
 ]
 
-# Loop through each league configuration
-for league_config in leagues:
+def add_playoff_results(league):
     try:
-        league = League(
-            league_id=league_config["league_id"],
-            year=league_config["year"],
-            espn_s2=league_config["espn_s2"],
-            swid=league_config["swid"],
-        )
+        # league = League(
+        #     league_id=league_config["league_id"],
+        #     year=league_config["year"],
+        #     espn_s2=league_config["espn_s2"],
+        #     swid=league_config["swid"],
+        # )
         print(league.settings)
-        print(f"Processing league: {league_config['name']}")
+        print(f"Processing league: {league.settings.name}")
 
         settings = league.settings
 
@@ -230,7 +229,14 @@ for league_config in leagues:
         # --------------------------------------------------------------------------------------
     except Exception as e:
         # Handle errors, such as the league not existing
-        print(f"Error: League '{league_config['name']}' for year {league_config['year']} does not exist or could not be loaded.")
+        print(f"Error: League '{league.settings.name}' for year {year} does not exist or could not be loaded.")
         print(f"Details: {str(e)}")
         print(f"Details: {str(e)}")
-        continue  # Move to the next league
+
+# # Loop through each league configuration
+# for league_config in leagues:
+#     try:
+#         add_playoff_results(league_config)
+#     except Exception as e:
+#         print(f"Failed to process league '{league_config['name']}': {str(e)}")
+#         continue

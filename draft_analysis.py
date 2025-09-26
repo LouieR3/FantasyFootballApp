@@ -171,7 +171,6 @@ lpi_all_df = pd.concat(lpi_dataframes, ignore_index=True)
 # Merge LPI data with final_df_with_standings
 final_df_with_standings = pd.merge(final_df_with_standings, lpi_all_df, on=["Team", "League Name", "Year"], how="left")
 
-
 # Save or display as needed
 print(final_df_with_standings)
 final_df_with_standings.to_csv(os.path.join(drafts_folder, "Draft_Grades_with_Standings.csv"), index=False)

@@ -48,7 +48,7 @@ for league_config in leagues:
         table = [
             [
                 team.team_name,
-                team.points_for,
+                round(team.points_for, 2),
                 team.points_against,
                 team.wins,
                 team.losses,

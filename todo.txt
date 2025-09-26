@@ -1,18 +1,7 @@
-* Owner next to LPI and in Master List
-* See stats based on owner
-* Use LPI and future schedule to predict record and do power ranking
-* Use LPI and scores/standard deviation to predict winner next week
-* LPI normalized for the week
 * ELO rating
-
-EXPECTED RECORD BASED ON MONTE CARLO SIMULATION
-
-% Chance of making the playoffs with your record
 
 1 ADD PLACE IN YEAR BY YEAR stats
     DISPLAY PLAYOFF BRACKET ON PAGE WITH LPI NEXT TO TEAM
-
-3 FIX PLAYOFF ODDS ITS NOT LOOKING AT THE RIGHT SCHEDULE WHEN IT simulates 
 
  Draft Results:
  - button to show:
@@ -44,3 +33,30 @@ http://github.com/DesiPilla/espn-api-v3
 https://github.com/DesiPilla/espn-api-v3/tree/master/backend/fantasy_stats
 https://github.com/DesiPilla/espn-api-v3/blob/master/backend/src/doritostats/filter_utils.py
 https://github.com/cwendt94/espn-api/blob/be5e92b8573d126a7231069742aa07798b952938/espn_api/football/league.py#L321C1-L340C17
+
+Combine owners with all matchups
+Get predicted score into playoff matchups
+
+Add in previous year:
+ - ESPNWeeklUpdate
+ - Playoff Results
+ - Draft Results
+ - All matchups
+ - All Playoff matchups
+ - Draft Grade with Standings
+
+ 
+File drafts/Game of Yards! Draft Results 2019.csv does not exist. BAD
+File drafts/Game of Yards! FreeAgent Results 2019.csv does not exist. BAD
+
+File drafts/Game of Yards! Draft Results 2020.csv does not exist. BAD
+File drafts/Game of Yards! FreeAgent Results 2020.csv does not exist. BAD
+
+File drafts/Game of Yards! Draft Results 2021.csv does not exist. BAD
+File drafts/Game of Yards! FreeAgent Results 2021.csv does not exist. BAD
+-----------------------------------------------------------------------
+File drafts/Turf On Grade 2.0 Draft Results 2023.csv does not exist. BAD
+File drafts/Turf On Grade 2.0 FreeAgent Results 2023.csv does not exist. BAD
+
+File drafts/Turf On Grade 2.0 Draft Results 2024.csv does not exist. BAD
+File drafts/Turf On Grade 2.0 FreeAgent Results 2024.csv does not exist. BAD
