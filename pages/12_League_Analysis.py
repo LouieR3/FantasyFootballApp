@@ -231,7 +231,10 @@ def app():
         overall_accuracy = matchups_df['Prediction_Correct'].mean()
         print(f"\n🎯 Overall Prediction Accuracy: {overall_accuracy:.1%}")
 
-        st.write(f"ESPN was correct in predicting the winner in {overall_accuracy:.1%})")
+        total_games = len(matchups_df)
+        correct = matchups_df[matchups_df['Prediction_Correct'] == True]
+        total_correct = len(correct)
+        st.write(f"ESPN was correct in predicting the winner in {total_correct}/{total_games} games ({overall_accuracy:.1%})")
 
         st.divider()
         # print(no_byes_different_wins[["Team 1", "Seed 1", "Score 1", "LPI 1", "Record 1", "Team 2", "Seed 2", "Score 2", "LPI 2", "Record 2", "More Wins Winner"]])
