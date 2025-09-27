@@ -164,6 +164,75 @@ def app():
         print(f"Record was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
         st.write(f"Record was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
         print()
+
+        
+        all_matchups_df = pd.read_csv('all_matchups.csv')  # Replace with your actual file path
+        all_matchups_df = all_matchups_df[all_matchups_df['Home Predicted Score'] > 40]  # Filter out weeks greater than 15
+        
+        # Data preparation
+        def prepare_data(df):
+            """Prepare data for analysis"""
+            df = df.copy()
+            
+            # Create actual and predicted margin of victory
+            df['Actual_MOV'] = df['Home Score'] - df['Away Score']
+            df['Predicted_MOV'] = df['Home Predicted Score'] - df['Away Predicted Score']
+            
+            # Determine if prediction was correct
+            df['Prediction_Correct'] = (df['Predicted Winner'] == df['Actual Winner'])
+            
+            # Create long format for team-level analysis
+            home_games = df[['League', 'Year', 'Week', 'Home Team', 'Home Score', 'Home Predicted Score', 
+                            'Away Team', 'Away Score', 'Away Predicted Score', 'Predicted Winner', 
+                            'Actual Winner', 'Actual_MOV', 'Predicted_MOV', 'Prediction_Correct']].copy()
+            home_games['Team'] = home_games['Home Team']
+            home_games['Opponent'] = home_games['Away Team']
+            home_games['Points_For'] = home_games['Home Score']
+            home_games['Points_Against'] = home_games['Away Score']
+            home_games['Predicted_Points_For'] = home_games['Home Predicted Score']
+            home_games['Predicted_Points_Against'] = home_games['Away Predicted Score']
+            home_games['Won'] = (home_games['Actual Winner'] == home_games['Home Team']).astype(int)
+            home_games['Predicted_Win'] = (home_games['Predicted Winner'] == home_games['Home Team']).astype(int)
+            home_games['Home_Away'] = 'Home'
+            home_games['Team_MOV'] = home_games['Actual_MOV']
+            home_games['Team_Predicted_MOV'] = home_games['Predicted_MOV']
+            
+            away_games = df[['League', 'Year', 'Week', 'Home Team', 'Home Score', 'Home Predicted Score', 
+                            'Away Team', 'Away Score', 'Away Predicted Score', 'Predicted Winner', 
+                            'Actual Winner', 'Actual_MOV', 'Predicted_MOV', 'Prediction_Correct']].copy()
+            away_games['Team'] = away_games['Away Team']
+            away_games['Opponent'] = away_games['Home Team']
+            away_games['Points_For'] = away_games['Away Score']
+            away_games['Points_Against'] = away_games['Home Score']
+            away_games['Predicted_Points_For'] = away_games['Away Predicted Score']
+            away_games['Predicted_Points_Against'] = away_games['Home Predicted Score']
+            away_games['Won'] = (away_games['Actual Winner'] == away_games['Away Team']).astype(int)
+            away_games['Predicted_Win'] = (away_games['Predicted Winner'] == away_games['Away Team']).astype(int)
+            away_games['Home_Away'] = 'Away'
+            away_games['Team_MOV'] = -away_games['Actual_MOV']  # Flip for away team perspective
+            away_games['Team_Predicted_MOV'] = -away_games['Predicted_MOV']  # Flip for away team perspective
+            
+            # Combine home and away games
+            team_games = pd.concat([
+                home_games[['League', 'Year', 'Week', 'Team', 'Opponent', 'Points_For', 'Points_Against',
+                        'Predicted_Points_For', 'Predicted_Points_Against', 'Won', 'Predicted_Win', 
+                        'Home_Away', 'Team_MOV', 'Team_Predicted_MOV', 'Prediction_Correct']],
+                away_games[['League', 'Year', 'Week', 'Team', 'Opponent', 'Points_For', 'Points_Against',
+                        'Predicted_Points_For', 'Predicted_Points_Against', 'Won', 'Predicted_Win', 
+                        'Home_Away', 'Team_MOV', 'Team_Predicted_MOV', 'Prediction_Correct']]
+            ]).reset_index(drop=True)
+            
+            return df, team_games
+
+        # Prepare the data
+        matchups_df, team_games_df = prepare_data(all_matchups_df)
+
+        # Overall prediction accuracy
+        overall_accuracy = matchups_df['Prediction_Correct'].mean()
+        print(f"\n🎯 Overall Prediction Accuracy: {overall_accuracy:.1%}")
+
+        st.write(f"ESPN was correct in predicting the winner in {overall_accuracy:.1%})")
+
         st.divider()
         # print(no_byes_different_wins[["Team 1", "Seed 1", "Score 1", "LPI 1", "Record 1", "Team 2", "Seed 2", "Score 2", "LPI 2", "Record 2", "More Wins Winner"]])
         # print()

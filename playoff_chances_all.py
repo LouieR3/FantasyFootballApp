@@ -348,6 +348,7 @@ def example_usage():
     # Analyze multiple weeks
     weeks_to_analyze = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     weeks_to_analyze = [1, 3, 4, 7, 14]
+    weeks_to_analyze = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
     multi_week_results = analyze_multiple_weeks_playoff_chances(
         leagues, years, weeks_to_analyze, all_playoff_dfs
     )
@@ -361,6 +362,7 @@ def example_usage():
     # print("\nHEATMAP DATA (Playoff % by Record and Week):")
     # print(heatmap_df.round(1))
     
+    return multi_week_results
     return aggregated_df, detailed_df, multi_week_results, heatmap_df
 
 

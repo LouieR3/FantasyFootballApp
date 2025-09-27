@@ -61,7 +61,7 @@ print(final_df)
 
 # Optionally, save the final dataframe to a new Excel file
 output_path = os.path.join(drafts_folder, "Aggregated_Draft_Grades.csv")
-# final_df.to_csv(output_path, index=False)
+final_df.to_csv(output_path, index=False)
 
 # Path to the drafts folder
 drafts_folder = "drafts"

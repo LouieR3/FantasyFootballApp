@@ -438,6 +438,7 @@ print("="*50)
 # Overall prediction accuracy
 overall_accuracy = matchups_df['Prediction_Correct'].mean()
 print(f"\n🎯 Overall Prediction Accuracy: {overall_accuracy:.1%}")
+asfd
 
 # Teams that consistently outperform predictions (filter for multiple seasons and sufficient games)
 team_luck_multi_season = team_luck_filtered.copy()
