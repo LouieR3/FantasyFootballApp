@@ -55,7 +55,7 @@ combined_playoff_dfs = []
 # all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
 all_playoff_dfs = pd.read_csv("all_playoffs_with_predictions.csv")
 all_playoff_dfs["Predicted Winner"] = all_playoff_dfs.apply(lambda row: row["Team 1"] if row["Predicted Score 1"] > row["Predicted Score 2"] else (row["Team 2"] if row["Predicted Score 2"] > row["Predicted Score 1"] else "Tie"), axis=1)
-all_playoff_dfs["Actual Winner"] = all_playoff_dfs.apply(lambda row: row["Team 1"] if row["Score 1"] > row["Score 2"] else (row["Team 2"] if row["Score 2"] > row["Home Score"] else "Tie"), axis=1)
+all_playoff_dfs["Actual Winner"] = all_playoff_dfs.apply(lambda row: row["Team 1"] if row["Score 1"] > row["Score 2"] else (row["Team 2"] if row["Score 2"] > row["Score 1"] else "Tie"), axis=1)
 # print(all_playoff_dfs)
 all_playoff_dfs['Prediction_Correct'] = (all_playoff_dfs['Predicted Winner'] == all_playoff_dfs['Actual Winner'])
 overall_accuracy = all_playoff_dfs['Prediction_Correct'].mean()
@@ -143,6 +143,7 @@ def correct_percentages(all_playoff_dfs):
 
     # --------------------------------------------------------------------------------------------
     # Compare Record
+    print(no_byes[["Team 1", "Record 1", "Team 2", "Record 2"]])
     no_byes['Wins 1'] = no_byes['Record 1'].str.split('-').str[0].astype(int)
     no_byes['Wins 2'] = no_byes['Record 2'].str.split('-').str[0].astype(int)
 
