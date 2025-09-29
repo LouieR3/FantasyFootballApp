@@ -236,15 +236,15 @@ def app():
         total_correct = len(correct)
         st.write(f"ESPN was correct in predicting the winner in {total_correct}/{total_games} of all games ({overall_accuracy:.1%})")
 
-        playoff_predictions = pd.read_csv("all_playoffs_with_predictions.csv")
-        playoff_predictions["Predicted Winner"] = playoff_predictions.apply(lambda row: row["Team 1"] if row["Predicted Score 1"] > row["Predicted Score 2"] else (row["Team 2"] if row["Predicted Score 2"] > row["Predicted Score 1"] else "Tie"), axis=1)
-        playoff_predictions["Actual Winner"] = playoff_predictions.apply(lambda row: row["Team 1"] if row["Score 1"] > row["Score 2"] else (row["Team 2"] if row["Score 2"] > row["Score 1"] else "Tie"), axis=1)
+        # playoff_predictions = pd.read_csv("all_playoffs_with_predictions.csv")
+        # playoff_predictions["Predicted Winner"] = playoff_predictions.apply(lambda row: row["Team 1"] if row["Predicted Score 1"] > row["Predicted Score 2"] else (row["Team 2"] if row["Predicted Score 2"] > row["Predicted Score 1"] else "Tie"), axis=1)
+        # playoff_predictions["Actual Winner"] = playoff_predictions.apply(lambda row: row["Team 1"] if row["Score 1"] > row["Score 2"] else (row["Team 2"] if row["Score 2"] > row["Score 1"] else "Tie"), axis=1)
 
-        playoff_predictions['Prediction_Correct'] = (playoff_predictions['Predicted Winner'] == playoff_predictions['Actual Winner'])
-        overall_accuracy = playoff_predictions['Prediction_Correct'].mean()
-        total_games = len(playoff_predictions)
-        total_correct = playoff_predictions['Prediction_Correct'].sum()
-        st.write(f"ESPN was correct in predicting the winner in {total_correct}/{total_games} of playoff games ({overall_accuracy:.1%})")
+        # playoff_predictions['Prediction_Correct'] = (playoff_predictions['Predicted Winner'] == playoff_predictions['Actual Winner'])
+        # overall_accuracy = playoff_predictions['Prediction_Correct'].mean()
+        # total_games = len(playoff_predictions)
+        # total_correct = playoff_predictions['Prediction_Correct'].sum()
+        # st.write(f"ESPN was correct in predicting the winner in {total_correct}/{total_games} of playoff games ({overall_accuracy:.1%})")
 
         st.divider()
         # print(no_byes_different_wins[["Team 1", "Seed 1", "Score 1", "LPI 1", "Record 1", "Team 2", "Seed 2", "Score 2", "LPI 2", "Record 2", "More Wins Winner"]])
