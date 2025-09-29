@@ -19,41 +19,41 @@ def app():
     number_of_files = len(xlsx_files)
     st.subheader('In looking at ' + str(number_of_files) + ' seasons, how well does LPI predict winners? How about seeds, records, or total points? How often do top seeds win the championship? How often do lower seeds win the championship?')
     st.divider()
-    # Initialize an empty list to store all playoff_dfs
-    combined_playoff_dfs = []
+    # # Initialize an empty list to store all playoff_dfs
+    # combined_playoff_dfs = []
 
-    # Loop through each file
-    for file in xlsx_files:
-        try:
-            # Load the workbook
-            workbook = load_workbook(file, read_only=True)
+    # # Loop through each file
+    # for file in xlsx_files:
+    #     try:
+    #         # Load the workbook
+    #         workbook = load_workbook(file, read_only=True)
 
-            # Check if "Playoff Results" sheet exists
-            if "Playoff Results" not in workbook.sheetnames:
-                # print(f"Skipping {file}: 'Playoff Results' sheet not found.")
-                continue
+    #         # Check if "Playoff Results" sheet exists
+    #         if "Playoff Results" not in workbook.sheetnames:
+    #             # print(f"Skipping {file}: 'Playoff Results' sheet not found.")
+    #             continue
 
-            # Read the Playoff Results sheet into a DataFrame
-            playoff_df = pd.read_excel(file, sheet_name="Playoff Results")
-            playoff_df['File Name'] = file  # Add file name for identification
-            combined_playoff_dfs.append(playoff_df)
+    #         # Read the Playoff Results sheet into a DataFrame
+    #         playoff_df = pd.read_excel(file, sheet_name="Playoff Results")
+    #         playoff_df['File Name'] = file  # Add file name for identification
+    #         combined_playoff_dfs.append(playoff_df)
 
-            # print(f"Processed {file}: 'Playoff Results' sheet loaded.")
+    #         # print(f"Processed {file}: 'Playoff Results' sheet loaded.")
 
-        except Exception as e:
-            print(f"Error processing {file}: {e}")
+    #     except Exception as e:
+    #         print(f"Error processing {file}: {e}")
 
-    # Combine all DataFrames into one
-    if combined_playoff_dfs:
-        all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
-        # print("Combined all playoff data successfully.")
-    else:
-        print("No valid playoff data found.")
+    # # Combine all DataFrames into one
+    # if combined_playoff_dfs:
+    #     all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
+    #     # print("Combined all playoff data successfully.")
+    # else:
+    #     print("No valid playoff data found.")
 
 
-    # Combine all DataFrames into one
-    all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
-    # all_playoff_dfs = pd.read_csv("all_playoff_dfs.csv")
+    # # Combine all DataFrames into one
+    # all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
+    all_playoff_dfs = pd.read_csv("all_playoffs_with_predictions.csv")
     # print(all_playoff_dfs)
 
     # Ensure LPI columns are numeric
@@ -82,7 +82,7 @@ def app():
 
     # Identify and skip bye games
     all_playoff_dfs['Is Bye'] = all_playoff_dfs['Team 2'] == 'Bye'
-    print(all_playoff_dfs)
+    print( )
     print(all_playoff_dfs[all_playoff_dfs['Is Bye'] == False])
 
     def correct_percentages(all_playoff_dfs):
@@ -100,8 +100,8 @@ def app():
         lpi_correct = no_byes['LPI Winner'].sum()
         total_games = len(no_byes)
         lpi_accuracy = lpi_correct / total_games * 100
-        print(f"LPI was correct in predicting the winner in {lpi_correct}/{total_games} games ({lpi_accuracy:.2f}%)")
-        st.write(f"LPI was correct in predicting the winner in {lpi_correct}/{total_games} games ({lpi_accuracy:.2f}%)")
+        print(f"LPI was correct in predicting the winner in {lpi_correct}/{total_games} playoff games ({lpi_accuracy:.2f}%)")
+        st.write(f"LPI was correct in predicting the winner in {lpi_correct}/{total_games} playoff games ({lpi_accuracy:.2f}%)")
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
@@ -118,8 +118,8 @@ def app():
         total_games = len(no_byes)
         total_points_accuracy = total_points_correct / total_games * 100
 
-        print(f"Total Points was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
-        st.write(f"Total Points was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
+        print(f"Total Points was correct in predicting the winner in {total_points_correct}/{total_games} playoff games ({total_points_accuracy:.2f}%)")
+        st.write(f"Total Points was correct in predicting the winner in {total_points_correct}/{total_games} playoff games ({total_points_accuracy:.2f}%)")
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
@@ -136,8 +136,8 @@ def app():
         total_games = len(no_byes)
         total_points_accuracy = total_points_correct / total_games * 100
 
-        print(f"Seed was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
-        st.write(f"Seed was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
+        print(f"Seed was correct in predicting the winner in {total_points_correct}/{total_games} playoff games ({total_points_accuracy:.2f}%)")
+        st.write(f"Seed was correct in predicting the winner in {total_points_correct}/{total_games} playoff games ({total_points_accuracy:.2f}%)")
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
@@ -161,8 +161,8 @@ def app():
         total_games = len(no_byes_different_wins)
         total_points_accuracy = total_points_correct / total_games * 100
 
-        print(f"Record was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
-        st.write(f"Record was correct in predicting the winner in {total_points_correct}/{total_games} games ({total_points_accuracy:.2f}%)")
+        print(f"Record was correct in predicting the winner in {total_points_correct}/{total_games} playoff games ({total_points_accuracy:.2f}%)")
+        st.write(f"Record was correct in predicting the winner in {total_points_correct}/{total_games} playoff games ({total_points_accuracy:.2f}%)")
         print()
 
         
@@ -234,7 +234,17 @@ def app():
         total_games = len(matchups_df)
         correct = matchups_df[matchups_df['Prediction_Correct'] == True]
         total_correct = len(correct)
-        st.write(f"ESPN was correct in predicting the winner in {total_correct}/{total_games} games ({overall_accuracy:.1%})")
+        st.write(f"ESPN was correct in predicting the winner in {total_correct}/{total_games} of all games ({overall_accuracy:.1%})")
+
+        playoff_predictions = pd.read_csv("all_playoffs_with_predictions.csv")
+        playoff_predictions["Predicted Winner"] = playoff_predictions.apply(lambda row: row["Team 1"] if row["Predicted Score 1"] > row["Predicted Score 2"] else (row["Team 2"] if row["Predicted Score 2"] > row["Predicted Score 1"] else "Tie"), axis=1)
+        playoff_predictions["Actual Winner"] = playoff_predictions.apply(lambda row: row["Team 1"] if row["Score 1"] > row["Score 2"] else (row["Team 2"] if row["Score 2"] > row["Score 1"] else "Tie"), axis=1)
+
+        playoff_predictions['Prediction_Correct'] = (playoff_predictions['Predicted Winner'] == playoff_predictions['Actual Winner'])
+        overall_accuracy = playoff_predictions['Prediction_Correct'].mean()
+        total_games = len(playoff_predictions)
+        total_correct = playoff_predictions['Prediction_Correct'].sum()
+        st.write(f"ESPN was correct in predicting the winner in {total_correct}/{total_games} of playoff games ({overall_accuracy:.1%})")
 
         st.divider()
         # print(no_byes_different_wins[["Team 1", "Seed 1", "Score 1", "LPI 1", "Record 1", "Team 2", "Seed 2", "Score 2", "LPI 2", "Record 2", "More Wins Winner"]])

@@ -19,42 +19,47 @@ start_time = time.time()
 # Initialize an empty list to store all playoff_dfs
 combined_playoff_dfs = []
 
-# Get all Excel files in the current directory
-xlsx_files = glob.glob("leagues/*.xlsx")
+# # Get all Excel files in the current directory
+# xlsx_files = glob.glob("leagues/*.xlsx")
 
-# Loop through each file
-for file in xlsx_files:
-    try:
-        # Load the workbook
-        workbook = load_workbook(file, read_only=True)
+# # Loop through each file
+# for file in xlsx_files:
+#     try:
+#         # Load the workbook
+#         workbook = load_workbook(file, read_only=True)
 
-        # Check if "Playoff Results" sheet exists
-        if "Playoff Results" not in workbook.sheetnames:
-            print(f"Skipping {file}: 'Playoff Results' sheet not found.")
-            continue
+#         # Check if "Playoff Results" sheet exists
+#         if "Playoff Results" not in workbook.sheetnames:
+#             print(f"Skipping {file}: 'Playoff Results' sheet not found.")
+#             continue
 
-        # Read the Playoff Results sheet into a DataFrame
-        playoff_df = pd.read_excel(file, sheet_name="Playoff Results")
-        playoff_df['File Name'] = file  # Add file name for identification
-        combined_playoff_dfs.append(playoff_df)
+#         # Read the Playoff Results sheet into a DataFrame
+#         playoff_df = pd.read_excel(file, sheet_name="Playoff Results")
+#         playoff_df['File Name'] = file  # Add file name for identification
+#         combined_playoff_dfs.append(playoff_df)
 
-        # print(f"Processed {file}: 'Playoff Results' sheet loaded.")
+#         # print(f"Processed {file}: 'Playoff Results' sheet loaded.")
 
-    except Exception as e:
-        print(f"Error processing {file}: {e}")
+#     except Exception as e:
+#         print(f"Error processing {file}: {e}")
+
+# # Combine all DataFrames into one
+# if combined_playoff_dfs:
+#     all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
+#     # print("Combined all playoff data successfully.")
+# else:
+#     print("No valid playoff data found.")
+
 
 # Combine all DataFrames into one
-if combined_playoff_dfs:
-    all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
-    # print("Combined all playoff data successfully.")
-else:
-    print("No valid playoff data found.")
-
-
-# Combine all DataFrames into one
-all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
+# all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
+all_playoff_dfs = pd.read_csv("all_playoffs_with_predictions.csv")
+all_playoff_dfs["Predicted Winner"] = all_playoff_dfs.apply(lambda row: row["Team 1"] if row["Predicted Score 1"] > row["Predicted Score 2"] else (row["Team 2"] if row["Predicted Score 2"] > row["Predicted Score 1"] else "Tie"), axis=1)
+all_playoff_dfs["Actual Winner"] = all_playoff_dfs.apply(lambda row: row["Team 1"] if row["Score 1"] > row["Score 2"] else (row["Team 2"] if row["Score 2"] > row["Home Score"] else "Tie"), axis=1)
 # print(all_playoff_dfs)
-
+all_playoff_dfs['Prediction_Correct'] = (all_playoff_dfs['Predicted Winner'] == all_playoff_dfs['Actual Winner'])
+overall_accuracy = all_playoff_dfs['Prediction_Correct'].mean()
+print(f"\n🎯 Overall Prediction Accuracy: {overall_accuracy:.1%}")
 # Ensure LPI columns are numeric
 all_playoff_dfs['LPI 1'] = pd.to_numeric(all_playoff_dfs['LPI 1'], errors='coerce')
 all_playoff_dfs['LPI 2'] = pd.to_numeric(all_playoff_dfs['LPI 2'], errors='coerce')
