@@ -43,10 +43,11 @@ def calculate_team_stats(teams, scores_df, current_week, reg_season_count):
         # Only use regular season scores for statistics
         reg_season_scores = [score for score in scores_df.iloc[team_idx, :completed_reg_games] if score > 0]
         
-        # Calculate regular season record only
+        # Calculate regular season record including ties
         reg_season_outcomes = team.outcomes[:completed_reg_games]
         wins = sum(1 for outcome in reg_season_outcomes if outcome == 'W')
         losses = sum(1 for outcome in reg_season_outcomes if outcome == 'L')
+        ties = sum(1 for outcome in reg_season_outcomes if outcome == 'T')
         
         # Scoring statistics based on regular season performance
         avg_score = np.mean(reg_season_scores) if reg_season_scores else 100.0
@@ -54,14 +55,14 @@ def calculate_team_stats(teams, scores_df, current_week, reg_season_count):
         
         # Adjust std dev based on sample size (more games = more confidence)
         games_played = len(reg_season_scores)
-        confidence_factor = max(0.5, 1 - (games_played / 40))  # Gets tighter with more games
+        confidence_factor = max(0.5, 1 - (games_played / 40))
         adjusted_std = score_std * (1 + confidence_factor)
-        print(f"{team.team_name}: Avg Score={avg_score}, Std Dev={score_std}, Adjusted Std Dev={adjusted_std}, Games Played={games_played}")
-        # asdf
+        
         team_stats[team.team_name] = {
             'team_obj': team,
             'wins': wins,
             'losses': losses,
+            'ties': ties,
             'avg_score': avg_score,
             'score_std': adjusted_std,
             'games_played': games_played,
@@ -69,6 +70,7 @@ def calculate_team_stats(teams, scores_df, current_week, reg_season_count):
         }
     
     return team_stats
+
 
 def simulate_remaining_season(teams, team_stats, current_week, reg_season_count, num_playoff_teams, num_simulations=1000):
     """Run Monte Carlo simulation for remaining REGULAR SEASON games only"""
@@ -89,10 +91,11 @@ def simulate_remaining_season(teams, team_stats, current_week, reg_season_count,
             sim_records[team_name] = {
                 'wins': stats['wins'], 
                 'losses': stats['losses'],
+                'ties': stats['ties'],
                 'points_for': stats['total_points']
             }
         
-        # Only simulate remaining REGULAR SEASON games (up to reg_season_count)
+        # Only simulate remaining REGULAR SEASON games
         for week in range(current_week, min(current_week + remaining_reg_games, reg_season_count + 1)):
             week_matchups = []
             used_teams = set()
@@ -114,12 +117,15 @@ def simulate_remaining_season(teams, team_stats, current_week, reg_season_count,
                 team1_stats = team_stats[team1_name]
                 team2_stats = team_stats[team2_name]
                 
-                # Generate random scores based on normal distribution
+                # Generate random scores
                 team1_score = max(0, np.random.normal(team1_stats['avg_score'], team1_stats['score_std']))
                 team2_score = max(0, np.random.normal(team2_stats['avg_score'], team2_stats['score_std']))
                 
-                # Determine winner and update records
-                if team1_score > team2_score:
+                # Determine winner or tie (tie if within 0.5 points)
+                if abs(team1_score - team2_score) < 0.5:
+                    sim_records[team1_name]['ties'] += 1
+                    sim_records[team2_name]['ties'] += 1
+                elif team1_score > team2_score:
                     sim_records[team1_name]['wins'] += 1
                     sim_records[team2_name]['losses'] += 1
                 else:
@@ -130,40 +136,49 @@ def simulate_remaining_season(teams, team_stats, current_week, reg_season_count,
                 sim_records[team1_name]['points_for'] += team1_score
                 sim_records[team2_name]['points_for'] += team2_score
         
-        # Determine final REGULAR SEASON standings and playoff seeding
+        # Determine final REGULAR SEASON standings
         teams_with_records = []
         for team_name, record in sim_records.items():
+            # Calculate win percentage (ties count as 0.5 wins)
+            total_games = record['wins'] + record['losses'] + record['ties']
+            win_pct = (record['wins'] + 0.5 * record['ties']) / total_games if total_games > 0 else 0
+            
             teams_with_records.append({
                 'team': team_name,
                 'wins': record['wins'],
                 'losses': record['losses'],
+                'ties': record['ties'],
                 'points_for': record['points_for'],
-                'win_pct': record['wins'] / (record['wins'] + record['losses']) if (record['wins'] + record['losses']) > 0 else 0
+                'win_pct': win_pct
             })
         
-        # Sort by wins (descending), then by points_for as tiebreaker (descending)
-        teams_with_records.sort(key=lambda x: (x['wins'], x['points_for']), reverse=True)
+        # Sort by wins (descending), then by points_for as tiebreaker
+        teams_with_records.sort(key=lambda x: (x['wins'] + 0.5 * x['ties'], x['points_for']), reverse=True)
         
         # Record final standings and playoff makes
         for idx, team_data in enumerate(teams_with_records):
             team_name = team_data['team']
             seed = idx + 1
             
-            # Store final regular season record for this simulation
-            final_record = f"{team_data['wins']}-{team_data['losses']}"
+            # Store final regular season record
+            if team_data['ties'] > 0:
+                final_record = f"{team_data['wins']}-{team_data['losses']}-{team_data['ties']}"
+            else:
+                final_record = f"{team_data['wins']}-{team_data['losses']}"
             final_records[team_name].append(final_record)
             
-            # Count seed positions (overall standings)
+            # Count seed positions
             seed_counts[team_name][seed] += 1
             
-            # Count playoff makes (top N teams make playoffs based on regular season)
+            # Count playoff makes
             if seed <= num_playoff_teams:
                 playoff_makes[team_name] += 1
     
     return final_records, playoff_makes, seed_counts
 
+
 def create_summary_dataframes(team_stats, final_records, playoff_makes, seed_counts, num_simulations, num_teams, reg_season_count):
-    """Create summary dataframes with results"""
+    """Create summary dataframes with results (including ties)"""
     
     # Playoff chances and expected records
     summary_data = []
@@ -173,32 +188,51 @@ def create_summary_dataframes(team_stats, final_records, playoff_makes, seed_cou
         for record in final_records[team_name]:
             record_counts[record] += 1
         
-        most_common_record = max(record_counts.items(), key=lambda x: x[1])[0] if record_counts else f"{stats['wins']}-{stats['losses']}"
+        if stats['ties'] > 0:
+            current_record = f"{stats['wins']}-{stats['losses']}-{stats['ties']}"
+        else:
+            current_record = f"{stats['wins']}-{stats['losses']}"
+        
+        most_common_record = max(record_counts.items(), key=lambda x: x[1])[0] if record_counts else current_record
         
         # Calculate average final record
         if final_records[team_name]:
-            total_wins = sum(int(record.split('-')[0]) for record in final_records[team_name])
+            total_wins = 0
+            total_ties = 0
+            for record in final_records[team_name]:
+                parts = record.split('-')
+                total_wins += int(parts[0])
+                if len(parts) == 3:  # Has ties
+                    total_ties += int(parts[2])
+            
             avg_wins = total_wins / len(final_records[team_name])
+            avg_ties = total_ties / len(final_records[team_name])
         else:
-            # If no simulations (regular season complete), use current record
             avg_wins = stats['wins']
+            avg_ties = stats['ties']
         
-        avg_losses = reg_season_count - avg_wins
+        avg_losses = reg_season_count - avg_wins - avg_ties
         
         playoff_pct = (playoff_makes[team_name] / num_simulations) * 100
         
-        # Handle division by zero for win percentage
-        current_games = stats['wins'] + stats['losses']
-        current_win_pct = stats['wins'] / current_games if current_games > 0 else 0
+        # Calculate win percentage (ties count as 0.5)
+        current_games = stats['wins'] + stats['losses'] + stats['ties']
+        current_win_pct = (stats['wins'] + 0.5 * stats['ties']) / current_games if current_games > 0 else 0
+        
+        # Format expected final record
+        if avg_ties > 0.05:  # Show ties if average is significant
+            expected_record = f"{avg_wins:.1f}-{avg_losses:.1f}-{avg_ties:.1f}"
+        else:
+            expected_record = f"{avg_wins:.1f}-{avg_losses:.1f}"
         
         summary_data.append({
             'Team': team_name,
-            'Current_Record': f"{stats['wins']}-{stats['losses']}",
+            'Current_Record': current_record,
             'Current_Win_Pct': current_win_pct,
             'Avg_Score': stats['avg_score'],
             'Total_Points_For': stats['total_points'],
             'Playoff_Chance_Pct': playoff_pct,
-            'Expected_Final_Record': f"{avg_wins:.1f}-{avg_losses:.1f}",
+            'Expected_Final_Record': expected_record,
             'Most_Likely_Record': most_common_record
         })
     
@@ -209,7 +243,6 @@ def create_summary_dataframes(team_stats, final_records, playoff_makes, seed_cou
     for team_name in team_stats.keys():
         row = {'Team': team_name}
         
-        # Add place columns (1st Place, 2nd Place, etc.)
         for seed in range(1, num_teams + 1):
             seed_pct = (seed_counts[team_name][seed] / num_simulations) * 100
             place_suffix = get_ordinal_suffix(seed)
@@ -219,20 +252,9 @@ def create_summary_dataframes(team_stats, final_records, playoff_makes, seed_cou
     
     seed_df = pd.DataFrame(seed_data)
     
-    # Add playoff chance column (sum of top N places)
+    # Add playoff chance column
     playoff_places = [f'{i}{get_ordinal_suffix(i)} Place' for i in range(1, num_playoff_teams + 1)]
     seed_df['Chance of Making Playoffs'] = seed_df[playoff_places].sum(axis=1).round(1)
-    # summary_df = (
-    #     summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
-    #             .reset_index(drop=True)
-    #             .set_index("Team")
-    # )
-
-    # seed_df = (
-    #     seed_df.sort_values('Chance of Making Playoffs', ascending=False)
-    #         .reset_index(drop=True)
-    #         .set_index("Team")
-    # )
     
     return summary_df, seed_df
 
@@ -252,6 +274,9 @@ def main():
     year = 2025
     # Pennoni Younglings
     league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+    hannah_s2 = "AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D"
+    league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
+
     
     # League settings
     settings = league.settings
