@@ -52,6 +52,7 @@ def app():
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: yellow" if i == leagueList[8]
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: tan" if i == leagueList[9]
                             else "" for i in x], axis = 1)
-    st.dataframe(df3, height=2150)
+    df3.drop(columns=['Owner'])
+    st.dataframe(df3, height=2150, hide_index=True)
 
 app()
