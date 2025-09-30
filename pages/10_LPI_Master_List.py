@@ -40,7 +40,7 @@ def app():
         filtered_df = df1[df1['League'].str.contains(option)]
     
     filtered_df.index += 1
-    filtered_df.drop(columns=['Owner'])
+    filtered_df = filtered_df.drop(columns=['Owner'])
     df3 = filtered_df.reset_index(drop=True).style.background_gradient(subset=['Louie Power Index (LPI)']).apply(lambda x: ["background-color: purple; color: white" 
                             if i == leagueList[0]
                             else "" for i in x], axis = 1).apply(lambda x: ["background-color: skyblue" if i == leagueList[1]
