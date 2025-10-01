@@ -28,19 +28,20 @@ def app():
 
     display_schedule_comparison(file)
     
-    display_strength_of_schedule(file)
+    display_lpi(league_id, espn_s2, swid, file)
 
-    display_expected_wins(file)
     year = int(selected_year)
     display_playoff_odds(file, league_id, espn_s2, swid, year)
     display_lpi_by_week(file)
 
-    display_lpi(league_id, espn_s2, swid, file)
+    display_strength_of_schedule(file)
+
+    display_expected_wins(file)
 
     display_draft_results(draft_file)
     
 
     display_biggest_lpi_upsets(file)
 
-    # display_lifetime_record(file, league_id, espn_s2, swid, year_options)
+    display_lifetime_record(file, league_id, espn_s2, swid, year_options)
 app()

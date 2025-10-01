@@ -1,9 +1,6 @@
 import pandas as pd
 from espn_api.football import League
 from collections import defaultdict
-import time
-
-start_time = time.time()
 
 def analyze_playoff_chances_by_record_at_week(leagues, years, target_week, all_playoff_dfs):
     """
@@ -22,6 +19,7 @@ def analyze_playoff_chances_by_record_at_week(leagues, years, target_week, all_p
     """
     
     playoff_chances = []
+    anomalies = []  # Track teams with good records that missed playoffs
     
     for league_config in leagues:
         league_id = league_config['league_id']
@@ -49,7 +47,6 @@ def analyze_playoff_chances_by_record_at_week(leagues, years, target_week, all_p
             year_playoff_df = all_playoff_dfs[
                 (all_playoff_dfs['Year'] == year) & (all_playoff_dfs['League'] == league_name)
             ]
-            # print(f"Year playoff df:\n{year_playoff_df}")
 
             # Combine Team 1 and Team 2 columns to get all teams that participated in the playoffs
             playoff_teams = pd.concat([year_playoff_df['Team 1'], year_playoff_df['Team 2']])
@@ -81,7 +78,21 @@ def analyze_playoff_chances_by_record_at_week(leagues, years, target_week, all_p
                 
                 # Calculate how many of these teams made the playoffs
                 made_playoffs = [team for team in teams_with_record if team in playoff_teams]
+                missed_playoffs = [team for team in teams_with_record if team not in playoff_teams]
                 playoff_percentage = len(made_playoffs) / len(teams_with_record) * 100
+
+                # Check for anomalies - teams with good records that missed playoffs
+                wins = int(record.split('-')[0])
+                if wins >= 9 and missed_playoffs:  # 9+ wins should almost always make playoffs
+                    for team in missed_playoffs:
+                        anomalies.append({
+                            'Team': team,
+                            'League': league_name,
+                            'Year': year,
+                            'Record': record,
+                            'Week': target_week
+                        })
+                        print(f"🚨 ANOMALY: {team} went {record} in {league_name} ({year}) and MISSED playoffs!")
 
                 # Append the result to the playoff chances list
                 playoff_chances.append({
@@ -91,22 +102,37 @@ def analyze_playoff_chances_by_record_at_week(leagues, years, target_week, all_p
                     "Record": record,
                     "Total Teams": len(teams_with_record),
                     "Made Playoffs": len(made_playoffs),
+                    "Missed Playoffs": len(missed_playoffs),
                     "Playoff Percentage": playoff_percentage,
                     "Teams": ', '.join(teams_with_record),
-                    "Playoff Teams": ', '.join(made_playoffs)
+                    "Playoff Teams": ', '.join(made_playoffs),
+                    "Missed Playoff Teams": ', '.join(missed_playoffs)
                 })
 
     # Convert the playoff chances list to a DataFrame
     detailed_df = pd.DataFrame(playoff_chances)
+    anomalies_df = pd.DataFrame(anomalies)
     
     if detailed_df.empty:
         print(f"No data found for week {target_week}")
-        return pd.DataFrame(), pd.DataFrame()
+        return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
+
+    # Print anomalies summary
+    if not anomalies_df.empty:
+        print(f"\n{'='*80}")
+        print(f"ANOMALIES DETECTED - Teams with 9+ wins that missed playoffs:")
+        print(f"{'='*80}")
+        for record in sorted(anomalies_df['Record'].unique(), key=lambda x: int(x.split('-')[0]), reverse=True):
+            record_anomalies = anomalies_df[anomalies_df['Record'] == record]
+            print(f"\n{record} teams that missed playoffs ({len(record_anomalies)} total):")
+            for _, row in record_anomalies.iterrows():
+                print(f"  - {row['Team']} ({row['League']}, {row['Year']})")
 
     # Aggregate totals, made playoffs, and playoff percentage by record
     aggregated_df = detailed_df.groupby(['Record']).agg({
         'Total Teams': 'sum',
-        'Made Playoffs': 'sum'
+        'Made Playoffs': 'sum',
+        'Missed Playoffs': 'sum'
     }).reset_index()
 
     # Calculate the aggregated playoff percentage
@@ -130,159 +156,184 @@ def analyze_playoff_chances_by_record_at_week(leagues, years, target_week, all_p
     print(f"{'='*80}")
     
     print(f"\nAGGREGATED RESULTS ACROSS ALL LEAGUES/YEARS:")
-    print(aggregated_df[['Record', 'Total Teams', 'Made Playoffs', 'Playoff Percentage']].to_string(index=False, float_format='%.1f'))
+    display_cols = ['Record', 'Total Teams', 'Made Playoffs', 'Missed Playoffs', 'Playoff Percentage']
+    print(aggregated_df[display_cols].to_string(index=False, float_format='%.1f'))
     
-    return aggregated_df, detailed_df
+    return aggregated_df, detailed_df, anomalies_df
 
 
-def analyze_multiple_weeks_playoff_chances(leagues, years, weeks_to_analyze, all_playoff_dfs):
+def analyze_multiple_weeks_playoff_chances(leagues, years, weeks_to_analyze, all_playoff_dfs, output_filename='playoff_chances_by_week.xlsx'):
     """
-    Analyze playoff chances for multiple weeks at once
+    Analyze playoff chances for multiple weeks at once and save to Excel
     
     Args:
         leagues: List of league configurations
         years: List of years to analyze  
         weeks_to_analyze: List of weeks to analyze (e.g., [1, 2, 3, 4])
         all_playoff_dfs: DataFrame containing playoff data
+        output_filename: Name of the Excel file to create (default: 'playoff_chances_by_week.xlsx')
         
     Returns:
-        dict: Dictionary with week as key and (aggregated_df, detailed_df) as values
+        dict: Dictionary with week as key and (aggregated_df, detailed_df, anomalies_df) as values
     """
     
     results = {}
     
+    # Create Excel writer
+    with pd.ExcelWriter(output_filename, engine='openpyxl') as writer:
+        
+        for week in weeks_to_analyze:
+            print(f"\n{'='*80}")
+            print(f"ANALYZING WEEK {week}")
+            print(f"{'='*80}")
+            
+            aggregated_df, detailed_df, anomalies_df = analyze_playoff_chances_by_record_at_week(
+                leagues, years, week, all_playoff_dfs
+            )
+            
+            results[week] = {
+                'aggregated': aggregated_df,
+                'detailed': detailed_df,
+                'anomalies': anomalies_df
+            }
+            
+            # Write aggregated data to Excel with sheet name like "Week_1", "Week_2", etc.
+            if not aggregated_df.empty:
+                sheet_name = f'Week_{week}'
+                aggregated_df.to_excel(writer, sheet_name=sheet_name, index=False)
+                
+                # Auto-adjust column widths for better readability
+                worksheet = writer.sheets[sheet_name]
+                for column in worksheet.columns:
+                    max_length = 0
+                    column_letter = column[0].column_letter
+                    for cell in column:
+                        try:
+                            if len(str(cell.value)) > max_length:
+                                max_length = len(str(cell.value))
+                        except:
+                            pass
+                    adjusted_width = min(max_length + 2, 50)
+                    worksheet.column_dimensions[column_letter].width = adjusted_width
+        
+        # Create a summary sheet with all weeks side by side
+        print(f"\n{'='*80}")
+        print("CREATING SUMMARY SHEET")
+        print(f"{'='*80}")
+        
+        summary_data = []
+        for week in weeks_to_analyze:
+            if results[week]['aggregated'].empty:
+                continue
+            
+            week_df = results[week]['aggregated'][['Record', 'Playoff Percentage']].copy()
+            week_df.columns = ['Record', f'Week {week} %']
+            
+            if not summary_data:
+                summary_data = week_df
+            else:
+                summary_data = summary_data.merge(week_df, on='Record', how='outer')
+        
+        if not summary_data.empty:
+            # Sort by record (best to worst)
+            def sort_key(record):
+                wins, losses = map(int, record.split('-'))
+                return (-wins, losses)
+            
+            summary_data['sort_key'] = summary_data['Record'].apply(sort_key)
+            summary_data = summary_data.sort_values('sort_key').drop('sort_key', axis=1).reset_index(drop=True)
+            
+            # Write summary to first sheet
+            summary_data.to_excel(writer, sheet_name='Summary_All_Weeks', index=False)
+            
+            # Format summary sheet
+            worksheet = writer.sheets['Summary_All_Weeks']
+            for column in worksheet.columns:
+                max_length = 0
+                column_letter = column[0].column_letter
+                for cell in column:
+                    try:
+                        if len(str(cell.value)) > max_length:
+                            max_length = len(str(cell.value))
+                    except:
+                        pass
+                adjusted_width = min(max_length + 2, 20)
+                worksheet.column_dimensions[column_letter].width = adjusted_width
+        
+        # Create an anomalies sheet if there are any
+        all_anomalies = []
+        for week in weeks_to_analyze:
+            if not results[week]['anomalies'].empty:
+                all_anomalies.append(results[week]['anomalies'])
+        
+        if all_anomalies:
+            anomalies_combined = pd.concat(all_anomalies, ignore_index=True)
+            anomalies_combined = anomalies_combined.sort_values(['Week', 'Record', 'League', 'Year'])
+            anomalies_combined.to_excel(writer, sheet_name='Anomalies', index=False)
+            
+            # Format anomalies sheet
+            worksheet = writer.sheets['Anomalies']
+            for column in worksheet.columns:
+                max_length = 0
+                column_letter = column[0].column_letter
+                for cell in column:
+                    try:
+                        if len(str(cell.value)) > max_length:
+                            max_length = len(str(cell.value))
+                    except:
+                        pass
+                adjusted_width = min(max_length + 2, 30)
+                worksheet.column_dimensions[column_letter].width = adjusted_width
+    
+    print(f"\n{'='*80}")
+    print(f"✅ Excel file created: {output_filename}")
+    print(f"{'='*80}")
+    print(f"Sheets created:")
+    print(f"  - Summary_All_Weeks: Playoff percentages for all weeks side-by-side")
     for week in weeks_to_analyze:
-        print(f"\n{'='*50}")
-        print(f"ANALYZING WEEK {week}")
-        print(f"{'='*50}")
-        
-        aggregated_df, detailed_df = analyze_playoff_chances_by_record_at_week(
-            leagues, years, week, all_playoff_dfs
-        )
-        
-        results[week] = {
-            'aggregated': aggregated_df,
-            'detailed': detailed_df
-        }
+        if not results[week]['aggregated'].empty:
+            print(f"  - Week_{week}: Detailed breakdown for week {week}")
+    if all_anomalies:
+        print(f"  - Anomalies: Teams with good records that missed playoffs")
     
     return results
 
 
-def diagnose_playoff_data_issues(leagues, years, all_playoff_dfs):
+def create_multi_week_analysis(leagues, years, all_playoff_dfs, output_filename='playoff_analysis_weeks_1_14.xlsx'):
     """
-    Diagnose potential issues with playoff data
-    """
-    print("DIAGNOSING POTENTIAL PLAYOFF DATA ISSUES...")
-    print("="*60)
-    
-    issues = []
-    
-    for league_config in leagues:
-        league_name = league_config['name']
-        
-        for year in years:
-            print(f"\nChecking league: {league_name}, year: {year}")
-            # Check playoff data for this league/year
-            year_playoff_df = all_playoff_dfs[
-                (all_playoff_dfs['Year'] == year) & (all_playoff_dfs['League'] == league_name)
-            ]
-            
-            if year_playoff_df.empty:
-                # issues.append(f"❌ No playoff data found for {league_name} ({year})")
-                continue
-            
-            # Get unique playoff teams
-            playoff_teams = pd.concat([year_playoff_df['Team 1'], year_playoff_df['Team 2']])
-            playoff_teams = playoff_teams[playoff_teams != 'Bye'].unique()
-            
-            print(f"\n{league_name} ({year}):")
-            print(f"  - Playoff teams in data: {len(playoff_teams)}")
-            print(f"  - Teams: {list(playoff_teams)}")
-            
-            # Try to get league data
-            try:
-                league = League(league_id=league_config['league_id'], 
-                              year=year, 
-                              espn_s2=league_config['espn_s2'], 
-                              swid=league_config['swid'])
-                
-                print(f"  - Total teams in league: {len(league.teams)}")
-                print(f"  - Playoff team count setting: {league.settings.playoff_team_count}")
-                
-                # Check if playoff team count matches
-                expected_playoff_teams = league.settings.playoff_team_count
-                if len(playoff_teams) != expected_playoff_teams:
-                    issues.append(f"⚠️  {league_name} ({year}): Expected {expected_playoff_teams} playoff teams, found {len(playoff_teams)}")
-                
-                # Check for team name mismatches
-                league_team_names = [team.team_name for team in league.teams]
-                for playoff_team in playoff_teams:
-                    if playoff_team not in league_team_names:
-                        issues.append(f"⚠️  {league_name} ({year}): Playoff team '{playoff_team}' not found in league team names")
-                        print(f"    Available team names: {league_team_names}")
-                
-            except Exception as e:
-                issues.append(f"❌ Could not load league data for {league_name} ({year}): {e}")
-    
-    if issues:
-        print(f"\n{'='*60}")
-        print("ISSUES FOUND:")
-        print("="*60)
-        for issue in issues:
-            print(issue)
-    else:
-        print(f"\n✅ No obvious data issues detected!")
-    
-    return issues
-
-
-def create_playoff_heatmap_data(leagues, years, max_week, all_playoff_dfs):
-    """
-    Create data suitable for a heatmap showing playoff chances by record and week
+    Convenience function to analyze weeks 1-14 and create Excel file
     
     Args:
         leagues: List of league configurations
         years: List of years to analyze
-        max_week: Maximum week to analyze
         all_playoff_dfs: DataFrame containing playoff data
+        output_filename: Name of the Excel file (default: 'playoff_analysis_weeks_1_14.xlsx')
         
     Returns:
-        pd.DataFrame: DataFrame with Record as index, Week as columns, and playoff percentages as values
+        dict: Results dictionary with data for each week
     """
     
-    heatmap_data = []
+    weeks_to_analyze = list(range(1, 15))  # Weeks 1 through 14
     
-    for week in range(1, max_week + 1):
-        aggregated_df, _ = analyze_playoff_chances_by_record_at_week(
-            leagues, years, week, all_playoff_dfs
-        )
-        
-        for _, row in aggregated_df.iterrows():
-            heatmap_data.append({
-                'Week': week,
-                'Record': row['Record'],
-                'Playoff_Percentage': row['Playoff Percentage'],
-                'Total_Teams': row['Total Teams'],
-                'Made_Playoffs': row['Made Playoffs']
-            })
+    print(f"Analyzing playoff chances for weeks 1-14 across all leagues and years...")
+    print(f"This may take a few minutes...\n")
     
-    heatmap_df = pd.DataFrame(heatmap_data)
+    results = analyze_multiple_weeks_playoff_chances(
+        leagues, 
+        years, 
+        weeks_to_analyze, 
+        all_playoff_dfs,
+        output_filename
+    )
     
-    if heatmap_df.empty:
-        return pd.DataFrame()
-    
-    # Pivot to create heatmap format
-    pivot_df = heatmap_df.pivot(index='Record', columns='Week', values='Playoff_Percentage')
-    pivot_df = pivot_df.fillna(0)  # Fill missing values with 0
-    
-    return pivot_df
-
+    return results
 
 # Example usage function
 def example_usage():
     """
     Example of how to use these functions
     """
+    
     louie_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
     prahlad_s2 = "AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4"
     la_s2 = "AEC6x9TPufDhJAV682o%2BK6c8XdanPIkD8i3F4MF%2Fgtb1A4FD9SJMNrFoDt2sVHcppQpcYUIDF7kRotFrq8u%2Bkd4W94iy%2B952I9AG4ykEF3y2YRBvm75VMpecOvj7tZiv7iZ8R2K2SEqMExArEwMg3Bnbj161G3gMS6I%2F7YOKKMPTnC1VSTWuF5JlljFfFZz5hswmCr6IMZnZCzFmy%2FnPdwymI1NZ9IOAwJVn9pnBi9FpvyzcdcyYG2NOaarBmTLqyAd3%2BEdrDEpre%2F6Cfz6c3KcwO%2FFjPBkIFDxC1szNelynxfJZCupLm%2FEFFhXdbKnBeesbbOXJg%2BDLqZU1KGdCTU0FyEKr%2BcouwUy%2BnyDCuMYUog%3D%3D"
@@ -320,52 +371,25 @@ def example_usage():
         # Elles League
         {"league_id": 1259693145, "year": year, "espn_s2": elle_s2, "swid": "{B6F0817B-1DC0-4E29-B020-68B8E12B6931}", "name": "Matts League"},
     ]
-
     years = [2019, 2020, 2021, 2022, 2023, 2024]
-    # years = [2021, 2022, 2023, 2024]
     
     # Assuming you have all_playoff_dfs DataFrame available
     all_playoff_dfs = pd.read_csv('all_playoff_dfs.csv')  # Replace with your actual data source
     
-    # Analyze a specific week
-    # target_week = 14
-    # aggregated_df, detailed_df = analyze_playoff_chances_by_record_at_week(
-    #     leagues, years, target_week, all_playoff_dfs
-    # )
-
-    # First, run the diagnostic
-    # issues = diagnose_playoff_data_issues(leagues, years, all_playoff_dfs)
-    # print(f"Issues found: {issues}")
+    # Assuming you have all_playoff_dfs DataFrame available
+    # all_playoff_dfs = your_playoff_dataframe
     
     # Analyze multiple weeks
-    weeks_to_analyze = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    # weeks_to_analyze = [3, 4, 5, 6, 7]
-    # weeks_to_analyze = [1, 2, 3, 4,/ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    weeks_to_analyze = [1, 2, 3, 4, 5]
+    weeks_to_analyze = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
     multi_week_results = analyze_multiple_weeks_playoff_chances(
         leagues, years, weeks_to_analyze, all_playoff_dfs
     )
     
-    # print(f"Multi-week Results:\n{multi_week_results}")
-    # # Create heatmap data
-    # heatmap_df = create_playoff_heatmap_data(
-    #     leagues, years, max_week=8, all_playoff_dfs=all_playoff_dfs
-    # )
-    
-    # print("\nHEATMAP DATA (Playoff % by Record and Week):")
-    # print(heatmap_df.round(1))
-    
     return multi_week_results
-    return aggregated_df, detailed_df, multi_week_results, heatmap_df
 
 
 if __name__ == "__main__":
     # Run example (you would call your specific function here)
     print("Example usage - replace with your actual data and function calls")
-    aggregated_df, detailed_df, multi_week_results, heatmap_df = example_usage()
-    # print("\nScript execution completed.")
-    # print(f"Aggregated DataFrame:\n{aggregated_df}")
-    # print(f"Detailed DataFrame:\n{detailed_df}")
-    print(f"Multi-week Results:\n{multi_week_results}")
-    # print(f"Heatmap DataFrame:\n{heatmap_df}")
-    # print()
-    print("--- %s seconds ---" % (time.time() - start_time))
+    example_usage()
