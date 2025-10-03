@@ -27,6 +27,7 @@ def calculate_letter_grade(grade):
     else: return "F-"
 
 
+drafts_folder = "drafts"
 print(os.listdir(drafts_folder))
 # Iterate through all files in the drafts folder
 for file in os.listdir(drafts_folder):
