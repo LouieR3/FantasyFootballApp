@@ -166,6 +166,9 @@ def display_strength_of_schedule(file):
     # Process the DataFrame
     df = df.iloc[:, 1:]
     df.index += 1
+    df['Wins Against Schedule'] = (df['Wins Against Schedule']
+                                        .round(2)
+                                        .astype(str) + '%')
     
     # Apply gradient styling
     df_styled = df.style.background_gradient(subset=['Wins Against Schedule'])
@@ -203,6 +206,10 @@ def display_expected_wins(file):
     # Process the DataFrame
     df = df.iloc[: , 1:]
     df.index += 1
+
+    df['Expected Wins'] = (df['Expected Wins']
+                                          .round(2)
+                                          .astype(str) + '%')
     # Apply gradient styling
     df3 = df.style.background_gradient(subset=['Expected Wins'])
     

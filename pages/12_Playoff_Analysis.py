@@ -450,7 +450,10 @@ def app():
 
     # Display the DataFrame if it exists
     if not filtered_df.empty:
-        st.dataframe(filtered_df)
+        filtered_df['Playoff Percentage'] = (filtered_df['Playoff Percentage']
+                                          .round(2)
+                                          .astype(str) + '%')
+        st.dataframe(filtered_df, hide_index=True, width=700)
     else:
         st.write("No data available for the selected filters.")
     st.divider()
