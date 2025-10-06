@@ -51,12 +51,22 @@ elle_s2 = "AECfQX9GAenUR7mbrWgFnjVxXJJEz4u%2BKEZUVBlsfc%2FnRHEmQJhqDOvGAxCjq%2Bp
 
 # Avas League
 league = League(league_id=417131856, year=2025, espn_s2=ava_s2, swid='{9B611343-247D-458B-88C3-50BB33789365}')
-
 # Matts League
 # league = League(league_id=261375772, year=2024, espn_s2=matt_s2, swid='{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64}')
-
 # Elles League
 # league = League(league_id=1259693145, year=2025, espn_s2=elle_s2, swid='{B6F0817B-1DC0-4E29-B020-68B8E12B6931}')
+
+file_path = 'playoff_chances_by_week.xlsx'  # Replace with your file path
+
+# Load all sheets into a dictionary of DataFrames
+sheets_dict = pd.read_excel(file_path, sheet_name=None)  # Load all sheets
+# Rename sheets by replacing underscores with spaces
+sheets_dict = {sheet_name.replace("_", " ").title(): df for sheet_name, df in sheets_dict.items()}
+
+# Get all week sheets names
+week_sheets = list(sheets_dict.keys())
+print(sheets_dict)
+print(week_sheets)
 
 def test_league_data(league):
     print(league.settings)
@@ -74,7 +84,7 @@ def test_league_data(league):
     print(league.previousSeasons)
     # print(league.recent_activity())
 
-test_league_data(league)
+# test_league_data(league)
 
 def test_matchup_data(league):
     playoff_round_1 = league.box_scores(week=1)
@@ -118,7 +128,7 @@ def test_player_data(league):
     player_stat = league.player_info(player_name)
     player_stats = player_stat.stats
     print(player_stats)
-test_player_data(league)
+# test_player_data(league)
 
 def test_team_data(league):
     team_names = [team.team_name for team in league.teams]

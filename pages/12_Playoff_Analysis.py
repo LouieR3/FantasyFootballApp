@@ -430,9 +430,11 @@ def app():
     # Load all sheets into a dictionary of DataFrames
     sheets_dict = pd.read_excel(file_path, sheet_name=None)  # Load all sheets
 
-    # Get all week sheets names assuming they follow a naming pattern like "Week 1", "Week 2", ..., "Week 14"
-    week_sheets = [f"Week {i}" for i in range(1, 15)]
+    # Rename sheets by replacing underscores with spaces
+    sheets_dict = {sheet_name.replace("_", " ").title(): df for sheet_name, df in sheets_dict.items()}
 
+    # Get all week sheets names
+    week_sheets = list(sheets_dict.keys())
     # Select a week from the dropdown
     week_option = st.selectbox(
         "Choose a week",
