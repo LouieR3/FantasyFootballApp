@@ -366,29 +366,36 @@ if len(analysis_df) > 0:
     print("\n" + "-" * 60)
     print("Players drafted by champions/runners-up by year:")
     for year in sorted(champion_picks['Year'].unique()):
-            year_picks = champion_picks[champion_picks['Year'] == year]
-            year_player_counts = year_picks['Player'].value_counts()
-            
-            # Count total leagues for this year (from champions only)
-            total_leagues_year = champions_df[champions_df['Year'] == year]['League Name'].nunique()
-            
-            # Determine threshold based on number of leagues
-            if total_leagues_year >= 7:
-                threshold = 3
-            elif total_leagues_year >= 6:
-                threshold = 2
-            else:
-                threshold = 2
-            
-            frequent_in_year = year_player_counts[year_player_counts >= threshold]
-            
-            if len(frequent_in_year) > 0:
-                print(f"\n{year} - Players drafted by multiple 1st/2nd place teams ({total_leagues_year} leagues):")
-                for player, count in frequent_in_year.items():
-                    teams_str = ", ".join(year_picks[year_picks['Player'] == player]['Team'].unique())
-                    print(f"  {player}: {count} teams ({teams_str})")
-            else:
-                print(f"\n{year} - No players drafted by {threshold}+ 1st/2nd place teams ({total_leagues_year} leagues)")
+        year_picks = champion_picks[champion_picks['Year'] == year]
+        year_player_counts = year_picks['Player'].value_counts()
+        
+        # Count total leagues for this year (from champions only)
+        total_leagues_year = champions_df[champions_df['Year'] == year]['League Name'].nunique()
+        
+        # Determine threshold based on number of leagues
+        if total_leagues_year >= 7:
+            threshold = 3
+        elif total_leagues_year >= 6:
+            threshold = 2
+        else:
+            threshold = 2
+        
+        frequent_in_year = year_player_counts[year_player_counts >= threshold]
+        
+        if len(frequent_in_year) > 0:
+            print(f"\n{year} - Players drafted by multiple 1st/2nd place teams ({total_leagues_year} leagues):")
+            for player, count in frequent_in_year.items():
+                # Get player stats
+                player_data = year_picks[year_picks['Player'] == player]
+                avg_points = player_data['Points'].mean()
+                avg_pick = player_data['Total Pick'].mean()
+                avg_grade = player_data['Draft Grade'].mean()
+                
+                teams_str = ", ".join(player_data['Team'].unique())
+                print(f"  {player}: {count} teams ({teams_str})")
+                print(f"    Avg Points: {avg_points:.1f} | Avg Pick: {avg_pick:.1f} | Avg Grade: {avg_grade:.1f}")
+        else:
+            print(f"\n{year} - No players drafted by {threshold}+ 1st/2nd place teams ({total_leagues_year} leagues)")
 
 
 else:

@@ -422,6 +422,36 @@ def app():
     with col2:
         st.write("Undefeated Teams Playoff Chances")
         st.dataframe(undefeated_df, hide_index=True)
+
+    
+    # Load the Excel file
+    file_path = 'playoff_chances_by_week.xlsx'  # Replace with your file path
+
+    # Load all sheets into a dictionary of DataFrames
+    sheets_dict = pd.read_excel(file_path, sheet_name=None)  # Load all sheets
+
+    # Get all week sheets names assuming they follow a naming pattern like "Week 1", "Week 2", ..., "Week 14"
+    week_sheets = [f"Week {i}" for i in range(1, 15)]
+
+    # Select a week from the dropdown
+    week_option = st.selectbox(
+        "Choose a week",
+        week_sheets,
+        index=0  # default to the first week
+    )
+
+    # Display selected options
+    st.write('You selected week:', week_option)
+
+    # Assuming each week sheet contains a 'league' column to filter on
+    filtered_df = sheets_dict[week_option]
+
+    # Display the DataFrame if it exists
+    if not filtered_df.empty:
+        st.dataframe(filtered_df)
+    else:
+        st.write("No data available for the selected filters.")
+    st.divider()
     
     # Load the Draft Grades CSV file
     file_path = "drafts/Draft_Grades_with_Standings.csv"

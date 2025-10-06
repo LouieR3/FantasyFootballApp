@@ -4,16 +4,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 
-# Read standings data to add Final Place
-standings_df = pd.read_csv("drafts/Draft_Grades_with_Standings.csv")
-team_metrics_df["Year"] = team_metrics_df["Year"].astype(int)
-standings_df["Year"] = standings_df["Year"].astype(int)
-# Merge to add Standing (renamed to Final Place)
-team_metrics_df = team_metrics_df.merge(
-    standings_df[['Team', 'League Name', 'Year', 'Standing']],
-    on=['Team', 'League Name', 'Year'],
-    how='left'
-)
+# # Read standings data to add Final Place
+# standings_df = pd.read_csv("drafts/Draft_Grades_with_Standings.csv")
+# team_metrics_df["Year"] = team_metrics_df["Year"].astype(int)
+# standings_df["Year"] = standings_df["Year"].astype(int)
+# # Merge to add Standing (renamed to Final Place)
+# team_metrics_df = team_metrics_df.merge(
+#     standings_df[['Team', 'League Name', 'Year', 'Standing']],
+#     on=['Team', 'League Name', 'Year'],
+#     how='left'
+# )
 # Read the standings data
 standings_df = pd.read_csv("drafts/Draft_Grades_with_Standings.csv")
 
@@ -35,7 +35,7 @@ for file in os.listdir(drafts_folder):
         file_path = os.path.join(drafts_folder, file)
         draft_df = pd.read_csv(file_path)
         
-        print(f"\nProcessing: {file}")
+        print(f"Processing: {file}")
         
         # Extract year from filename if possible (adjust pattern as needed)
         # Assumes format like "Draft Results 2024.csv"
@@ -136,8 +136,11 @@ if len(analysis_df) > 0:
     print(standing_groups)
     
     print("\nAverage Pick Number by Final Standing:")
-    pick_by_standing = analysis_df.groupby('Standing')['Pick Number'].mean().sort_index()
-    print(pick_by_standing)
+    for year in sorted(analysis_df['Year'].unique()):
+        year_df = analysis_df[analysis_df['Year'] == year]
+        pick_by_standing = year_df.groupby('Standing')['Pick Number'].mean().sort_index()
+        print(f"\nYear {year}:")
+        print(pick_by_standing)
     
     # 5. Create visualizations
     print("\n5. CREATING VISUALIZATIONS...")
@@ -193,6 +196,10 @@ if len(analysis_df) > 0:
     # 6. Key insights
     print("\n6. KEY INSIGHTS")
     print("-" * 60)
+
+    analysis_df['First Pick Points'] = analysis_df['First Pick Points'].astype(float)
+    analysis_df['Top Two Pick Points'] = analysis_df['Top Two Pick Points'].astype(float)
+    analysis_df['Top Four Pick Points'] = analysis_df['Top Four Pick Points'].astype(float)
     
     # Best and worst first picks
     best_first = analysis_df.nlargest(3, 'First Pick Points')[['Team', 'First Pick Points', 'Standing']]
