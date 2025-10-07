@@ -72,6 +72,8 @@ for (team, league, year), group in all_drafts_df.groupby(['Team', 'League Name',
     
     # Top Four Pick Grade (average of top 4 picks)
     top_four_grade = group.iloc[:4]['Draft Grade'].mean() if len(group) >= 4 else group['Draft Grade'].mean()
+    # ✅ Number of A Grades (>= 90.0)
+    num_a_grades = (group['Draft Grade'] >= 90.0).sum()
     
     team_metrics.append({
         'Team': team,
@@ -85,7 +87,8 @@ for (team, league, year), group in all_drafts_df.groupby(['Team', 'League Name',
         'Best Pick Player': best_pick_player,
         'Best Pick Round': best_pick_round,
         'Top Pick Grade': top_pick_grade,
-        'Top Four Pick Grade': top_four_grade
+        'Top Four Pick Grade': top_four_grade,
+        'Number of A Grades': num_a_grades
     })
 
 # Create team metrics dataframe

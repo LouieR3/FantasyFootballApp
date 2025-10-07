@@ -16,6 +16,8 @@ from scipy import stats
 # )
 # Read the standings data
 standings_df = pd.read_csv("drafts/Draft_Grades_with_Standings.csv")
+team_metrics_df = pd.read_csv("Team_Draft_Metrics.csv")
+all_drafts_df = pd.read_csv("Master_Draft_Data.csv")
 
 # Initialize columns for pick data
 standings_df['Pick Number'] = None
@@ -62,6 +64,7 @@ for file in os.listdir(drafts_folder):
                 top_two_points = team_picks.iloc[:2]['Points'].sum() if len(team_picks) >= 2 else first_pick_points
                 
                 top_four_points = team_picks.iloc[:4]['Points'].sum() if len(team_picks) >= 4 else team_picks['Points'].sum()
+                num_a_grades = (team_picks['Draft Grade'] >= 90.0).sum()
                 
                 # Store data with team name and year as key
                 key = (team, year) if year else team
@@ -69,7 +72,8 @@ for file in os.listdir(drafts_folder):
                     'Pick Number': pick_number,
                     'First Pick Points': first_pick_points,
                     'Top Two Pick Points': top_two_points,
-                    'Top Four Pick Points': top_four_points
+                    'Top Four Pick Points': top_four_points,
+                    'Number of A Grades': num_a_grades
                 }
 
 # Update standings dataframe with pick data
@@ -87,6 +91,7 @@ for idx, row in standings_df.iterrows():
         standings_df.at[idx, 'First Pick Points'] = team_pick_data[key]['First Pick Points']
         standings_df.at[idx, 'Top Two Pick Points'] = team_pick_data[key]['Top Two Pick Points']
         standings_df.at[idx, 'Top Four Pick Points'] = team_pick_data[key]['Top Four Pick Points']
+        standings_df.at[idx, 'Number of A Grades'] = team_pick_data[key]['Number of A Grades']
 
 # Save the enhanced CSV
 output_file = "Draft_Grades_with_Standings_Enhanced.csv"
@@ -127,12 +132,26 @@ if len(analysis_df) > 0:
         corr = analysis_df['Top Four Pick Points'].corr(analysis_df[metric])
         print(f"Correlation with {metric}: {corr:.3f}")
     
+    # 3. Top Four Picks Analysis
+    print("\n3. NUMBER OF GRADE A PICKS")
+    print("-" * 60)
+    
+    for metric in ['Standing', 'Points For', 'LPI']:
+        corr = analysis_df['Number of A Grades'].corr(analysis_df[metric])
+        print(f"Correlation with {metric}: {corr:.3f}")
+
     # 4. Summary statistics
     print("\n4. SUMMARY STATISTICS")
     print("-" * 60)
     
     print("\nFirst Pick Points by Final Standing:")
-    standing_groups = analysis_df.groupby('Standing')['First Pick Points'].agg(['mean', 'median', 'count'])
+    standing_groups = analysis_df.groupby('Standing').agg({
+        'First Pick Points': ['mean', 'median'],
+        'Top Two Pick Points': 'mean',
+        'Top Four Pick Points': 'mean',
+        'Number of A Grades': 'mean',
+        'Pick Number': 'mean'
+    }).round(2)
     print(standing_groups)
     
     print("\nAverage Pick Number by Final Standing:")
@@ -213,9 +232,138 @@ if len(analysis_df) > 0:
     
     # Winners with top picks
     winners = analysis_df[analysis_df['Standing'] <= 3]
+    top_two = winners['Top Two Pick Points'].mean() / 2
+    top_four = winners['Top Four Pick Points'].mean() / 4
     print(f"\nTop 3 finishers' average first pick points: {winners['First Pick Points'].mean():.1f}")
-    print(f"Top 3 finishers' average top 2 pick points: {winners['Top Two Pick Points'].mean():.1f}")
-    print(f"Top 3 finishers' average top 4 pick points: {winners['Top Four Pick Points'].mean():.1f}")
+    print(f"Top 3 finishers' average top 2 pick points: {top_two:.1f}")
+    print(f"Top 3 finishers' average top 4 pick points: {top_four:.1f}")
+
+    
+    # Compare to bottom finishers
+    losers = analysis_df[analysis_df['Standing'] >= analysis_df['Standing'].max() - 2]
+    bot_two = losers['Top Two Pick Points'].mean() / 2
+    bot_four = losers['Top Four Pick Points'].mean() / 4
+    print(f"\nBottom 3 finishers' average first pick points: {losers['First Pick Points'].mean():.1f}")
+    print(f"Bottom 3 finishers' average top 2 pick points: {bot_two:.1f}")
+    print(f"Bottom 3 finishers' average top 4 pick points: {bot_four:.1f}")
+    # print(f"Bottom 3 finishers' average best pick points: {losers['Best Pick Points'].mean():.1f}")
+    bot_first_pick = losers['First Pick Points'].mean()
+    top_first_pick = winners['First Pick Points'].mean()
+    first_pick_diff = top_first_pick - bot_first_pick
+
+    top_two_diff = top_two - bot_two
+    top_four_diff = top_four - bot_four
+
+    points_for_diff = winners['Points For'].mean() - losers['Points For'].mean()
+    points_against_diff = winners['Points Against'].mean() - losers['Points Against'].mean()
+    
+    print(f"\nDifference Between Top and Bot average first pick points: {first_pick_diff:.1f}")
+    print(f"Difference Between Top and Bot average top 2 pick points: {top_two_diff:.1f}")
+    print(f"Difference Between Top and Bot average top 4 pick points: {top_four_diff:.1f}")
+    
+    # 9. Champions and Runners-Up Analysis
+    print("\n9. CHAMPIONS & RUNNERS-UP ANALYSIS")
+    print("-" * 60)
+    
+    # Get teams that finished 1st or 2nd
+    champions_df = team_metrics_df[team_metrics_df['Final Place'].isin([1, 2])].copy()
+    
+    # Analyze by year
+    for year in sorted(champions_df['Year'].unique()):
+        year_champs = champions_df[champions_df['Year'] == year]
+        
+        print(f"\n{year} Champions & Runners-Up:")
+        print("-" * 40)
+        
+        # for _, team_row in year_champs.iterrows():
+        #     print(f"\n{team_row['Team']} ({team_row['League Name']}) - Place {int(team_row['Final Place'])}")
+        #     print(f"  Pick Number: {int(team_row['Pick Number'])}")
+        
+        # Calculate median and mean pick number for 1st and 2nd place
+        pick_numbers = year_champs['Pick Number'].dropna()
+        if len(pick_numbers) > 0:
+            print(f"\nPick Number Stats for 1st & 2nd place teams in {year}:")
+            print(f"  Mean: {pick_numbers.mean():.2f}")
+            print(f"  Median: {pick_numbers.median():.1f}")
+    
+    # 10. Most Drafted Players by Champions
+    print("\n10. MOST DRAFTED PLAYERS BY CHAMPIONS & RUNNERS-UP")
+    print("-" * 60)
+    
+    # Strip whitespace from all relevant columns
+    all_drafts_df['Team'] = all_drafts_df['Team'].str.strip()
+    all_drafts_df['League Name'] = all_drafts_df['League Name'].str.strip()
+    champions_df['Team'] = champions_df['Team'].str.strip()
+    champions_df['League Name'] = champions_df['League Name'].str.strip()
+    
+    # Get all picks by teams that finished 1st or 2nd using merge
+    champion_picks = all_drafts_df.merge(
+        champions_df[['Team', 'League Name', 'Year']],
+        on=['Team', 'League Name', 'Year'],
+        how='inner'
+    )
+    
+    print(f"\nFound {len(champion_picks)} picks from {champions_df.shape[0]} champion/runner-up teams")
+    
+    # Count player occurrences
+    player_counts = champion_picks['Player'].value_counts()
+    
+    # Filter players drafted more than twice
+    frequent_players = player_counts[player_counts > 4]
+    
+    if len(frequent_players) > 0:
+        print("\nPlayers drafted more than twice by 1st/2nd place teams:")
+        for player, count in frequent_players.items():
+            print(f"  {player}: {count} times")
+            
+            # Show details for each occurrence
+            player_details = champion_picks[champion_picks['Player'] == player][
+                ['Team', 'League Name', 'Year', 'Pick', 'Position', 'Points']
+            ].sort_values('Year')
+            
+            for _, detail in player_details.iterrows():
+                print(f"    - {detail['Year']} | {detail['Team']} ({detail['League Name']}) | "
+                      f"Pick {detail['Pick']} | {detail['Position']} | {detail['Points']:.1f} pts")
+    else:
+        print("\nNo players were drafted more than twice by 1st/2nd place teams.")
+    
+    # Additional analysis: By year
+    print("\n" + "-" * 60)
+    print("Players drafted by champions/runners-up by year:")
+    
+    for year in sorted(champion_picks['Year'].unique()):
+        year_picks = champion_picks[champion_picks['Year'] == year]
+        year_player_counts = year_picks['Player'].value_counts()
+        
+        # Count total leagues for this year (from champions only)
+        total_leagues_year = champions_df[champions_df['Year'] == year]['League Name'].nunique()
+        
+        # Determine threshold based on number of leagues
+        if total_leagues_year >= 8:
+            threshold = 3
+        elif total_leagues_year >= 6:
+            threshold = 3
+        else:
+            threshold = 3
+        
+        frequent_in_year = year_player_counts[year_player_counts >= threshold]
+        
+        if len(frequent_in_year) > 0:
+            print(f"\n{year} - Players drafted by multiple 1st/2nd place teams ({total_leagues_year} leagues):")
+            for player, count in frequent_in_year.items():
+                # Get player stats
+                player_data = year_picks[year_picks['Player'] == player]
+                avg_points = player_data['Points'].mean()
+                avg_pick = player_data['Total Pick'].mean()
+                avg_grade = player_data['Draft Grade'].mean()
+                
+                teams_str = ", ".join(player_data['Team'].unique())
+                # print(f"  {player}: {count} teams ({teams_str})")
+                # print(f"    Avg Points: {avg_points:.1f} | Avg Pick: {avg_pick:.1f} | Avg Grade: {avg_grade:.1f}")
+                print(f"  {player}: {count} teams | Avg Points: {avg_points:.1f} | Avg Pick: {avg_pick:.1f} | Avg Grade: {avg_grade:.1f}")
+        else:
+            print(f"\n{year} - No players drafted by {threshold}+ 1st/2nd place teams ({total_leagues_year} leagues)")
+
 
 else:
     print("\n⚠ No matching data found between standings and draft files.")
