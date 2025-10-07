@@ -56,18 +56,6 @@ elle_s2 = "AECfQX9GAenUR7mbrWgFnjVxXJJEz4u%2BKEZUVBlsfc%2FnRHEmQJhqDOvGAxCjq%2Bp
 # Elles League
 # league = League(league_id=1259693145, year=2025, espn_s2=elle_s2, swid='{B6F0817B-1DC0-4E29-B020-68B8E12B6931}')
 
-file_path = 'playoff_chances_by_week.xlsx'  # Replace with your file path
-
-# Load all sheets into a dictionary of DataFrames
-sheets_dict = pd.read_excel(file_path, sheet_name=None)  # Load all sheets
-# Rename sheets by replacing underscores with spaces
-sheets_dict = {sheet_name.replace("_", " ").title(): df for sheet_name, df in sheets_dict.items()}
-
-# Get all week sheets names
-week_sheets = list(sheets_dict.keys())
-print(sheets_dict)
-print(week_sheets)
-
 def test_league_data(league):
     print(league.settings)
     print(league.current_week)

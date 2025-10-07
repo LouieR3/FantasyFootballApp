@@ -439,8 +439,18 @@ print("="*50)
 overall_accuracy = matchups_df['Prediction_Correct'].mean()
 print(f"\n🎯 Overall Prediction Accuracy: {overall_accuracy:.1%}")
 
+for (league, year), group in matchups_df.groupby(['League', 'Year']):
+    accuracy = group['Prediction_Correct'].mean()
+    print(f"🏈 {league} {year}: {accuracy:.1%}")
+print()
+
+# Loop through each unique year
+for year in sorted(matchups_df['Year'].unique()):
+    year_df = matchups_df[matchups_df['Year'] == year]
+    year_accuracy = year_df['Prediction_Correct'].mean()
+    print(f"📅 {year} Overall Accuracy: {year_accuracy:.1%}")
+print()
 print(matchups_df)
-asfd
 
 # Teams that consistently outperform predictions (filter for multiple seasons and sufficient games)
 team_luck_multi_season = team_luck_filtered.copy()
