@@ -280,8 +280,6 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
         
         # Read the Playoff Odds sheet
         df = pd.read_excel(file, sheet_name="Record Odds")
-        df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-        df = df.set_index("Teams")
         columns_to_drop = ['Current_Win_Pct', 'Avg_Score', 'Total_Points_For', 'Expected_Final_Record']
         df = df.drop(columns=columns_to_drop)
         df.columns = [col.replace('_', ' ') for col in df.columns]
@@ -301,7 +299,9 @@ def display_playoff_odds_by_week(file, league):
     
     # Read the Playoff Odds sheet
     df = pd.read_excel(file, sheet_name="Playoff Odds By Week")
-    df = df.set_index("Team")
+    
+    df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+    df = df.set_index("Teams")
     
     # Function to format and round the values
     def format_and_round(cell):
