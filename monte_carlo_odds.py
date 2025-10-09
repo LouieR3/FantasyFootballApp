@@ -640,5 +640,5 @@ def run_simulation_with_data(teams, scores_df, reg_season_count, num_playoff_tea
     
     return summary_df, seed_df
 
-if __name__ == "__main__":
-    summary_df, seed_df = main()
+# if __name__ == "__main__":
+#     summary_df, seed_df = main()

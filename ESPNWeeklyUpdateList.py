@@ -14,7 +14,8 @@ import openpyxl
 from monte_carlo_odds import (
     calculate_team_stats, 
     simulate_remaining_season, 
-    create_summary_dataframes
+    create_summary_dataframes,
+    add_weekly_analysis_to_main
 )
 
 start_time = time.time()
@@ -360,6 +361,11 @@ for league_config in leagues:
                 .reset_index(drop=True)
                 .set_index("Team")
         )
+
+        # Or use the integrated function for full output
+        weekly_df = add_weekly_analysis_to_main(
+            teams, scores_df, reg_season_count, num_playoff_teams, current_week
+        )
         # odds_df = oddsCalculator()
         # print(odds_df)
 
@@ -531,6 +537,7 @@ for league_config in leagues:
         schedule_rank_df.to_excel(writer, sheet_name='Wins Against Schedule')
         rank_df.to_excel(writer, sheet_name='Expected Wins')
         seed_df.to_excel(writer, sheet_name='Playoff Odds')
+        weekly_df.to_excel(writer, sheet_name='Playoff Odds By Week')
         summary_df.to_excel(writer, sheet_name='Record Odds')
         lpi_df.to_excel(writer, sheet_name='Louie Power Index')
         lpi_weekly_df.to_excel(writer, sheet_name='LPI By Week')

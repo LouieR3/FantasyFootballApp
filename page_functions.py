@@ -295,33 +295,23 @@ def display_playoff_odds_by_week(file, league):
     Parameters:
     - file (str): Path to the Excel file.
     """
-    st.header('Chance of Making Playoffs By Week')
+    st.header('Playoff Odds By Week')
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     
-    # League settings
-    settings = league.settings
-    reg_season_count = settings.reg_season_count
-    num_playoff_teams = settings.playoff_team_count
+    # Read the Playoff Odds sheet
+    df = pd.read_excel(file, sheet_name="Playoff Odds By Week")
+    df = df.set_index("Team")
     
-    # Get teams and data
-    teams = league.teams
-    team_scores = [team.scores for team in teams]
-    team_owners = [team.owners[0]['id'] for team in teams]
-    
-    # Create scores DataFrame
-    scores_df = pd.DataFrame(team_scores, index=team_owners)
-    team = teams[0]
-    
-    outcomes = team.outcomes
-    current_week = outcomes.index('U') + 1 if 'U' in outcomes else len(outcomes)
+    # Function to format and round the values
+    def format_and_round(cell):
+        if isinstance(cell, (int, float)):
+            return f"{cell:.2f}"
+        return cell
 
-    print(current_week)  # Output: 6
+    # Apply the formatting function to the entire DataFrame
+    formatted_df = df.applymap(format_and_round)
     
-    # Or use the integrated function for full output
-    weekly_df = add_weekly_analysis_to_main(
-        teams, scores_df, reg_season_count, num_playoff_teams, current_week
-    )
-
+    
     df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
@@ -335,9 +325,8 @@ def display_playoff_odds_by_week(file, league):
         height = "auto"
     else:
         height = 460 + (len(names) - 12) * 40
-
     # Display the styled DataFrame
-    st.dataframe(weekly_df, height=height)
+    st.dataframe(formatted_df, height=height)
 
 def display_lpi_by_week(file):
     """
