@@ -9,6 +9,7 @@ from pyecharts.charts import Line
 from pyecharts import options as opts
 from streamlit_echarts import st_pyecharts
 from espn_api.football import League
+from monte_carlo_odds import add_weekly_analysis_to_main
 import os
 
 def owner_df_creation(league):
@@ -286,6 +287,57 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
         st.dataframe(df, height=height, width=700)
     except:
         print("No Record Predictions Yet")
+
+def display_playoff_odds_by_week(file, league):
+    """
+    Displays the Playoff Odds table with formatting in Streamlit.
+
+    Parameters:
+    - file (str): Path to the Excel file.
+    """
+    st.header('Chance of Making Playoffs By Week')
+    st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
+    
+    # League settings
+    settings = league.settings
+    reg_season_count = settings.reg_season_count
+    num_playoff_teams = settings.playoff_team_count
+    
+    # Get teams and data
+    teams = league.teams
+    team_scores = [team.scores for team in teams]
+    team_owners = [team.owners[0]['id'] for team in teams]
+    
+    # Create scores DataFrame
+    scores_df = pd.DataFrame(team_scores, index=team_owners)
+    team = teams[0]
+    
+    outcomes = team.outcomes
+    current_week = outcomes.index('U') + 1 if 'U' in outcomes else len(outcomes)
+
+    print(current_week)  # Output: 6
+    
+    # Or use the integrated function for full output
+    weekly_df = add_weekly_analysis_to_main(
+        teams, scores_df, reg_season_count, num_playoff_teams, current_week
+    )
+
+    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    # Display the styled DataFrame
+    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+    df_names = df_names.set_index("Teams")
+    pd.options.mode.chained_assignment = None
+    names = []
+    for col in df_names.columns:
+        if col != "Teams":
+            names.append(col)
+    if len(names) <= 10:
+        height = "auto"
+    else:
+        height = 460 + (len(names) - 12) * 40
+
+    # Display the styled DataFrame
+    st.dataframe(weekly_df, height=height)
 
 def display_lpi_by_week(file):
     """
