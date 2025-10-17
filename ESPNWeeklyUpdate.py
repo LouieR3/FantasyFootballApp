@@ -64,10 +64,10 @@ dave_s2 = "AEATfV13bzJs4HpWGw5IMP0Hoh9yD7FJ%2FWPkdfAC8pOMFdD9RT8wgdt%2BoACXFYuTY
 # league = League(league_id=1259693145, year=year, espn_s2=elle_s2, swid='{B6F0817B-1DC0-4E29-B020-68B8E12B6931}')
 
 # Dave Work League
-year = 2024
+# year = 2024
 league = League(league_id= 1675186799, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
 # Dave Friend League
-# league = League(league_id= 1924463077, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
+league = League(league_id= 1924463077, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
 settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
@@ -88,7 +88,7 @@ scores_df = pd.DataFrame(team_scores, index=team_names)
 # Calculate current week
 zero_week = (scores_df == 0.0).all(axis=0)
 if zero_week.any():
-    current_week = zero_week.idxmax()
+    current_week = zero_week.idxmax() + 1
 else:
     current_week = scores_df.shape[1]
 schedules_df = pd.DataFrame(schedules, index=team_names)
