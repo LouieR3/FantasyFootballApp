@@ -67,7 +67,7 @@ dave_s2 = "AEATfV13bzJs4HpWGw5IMP0Hoh9yD7FJ%2FWPkdfAC8pOMFdD9RT8wgdt%2BoACXFYuTY
 # year = 2024
 league = League(league_id= 1675186799, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
 # Dave Friend League
-league = League(league_id= 1924463077, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
+# league = League(league_id= 1924463077, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
 settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
@@ -110,7 +110,7 @@ total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
 lpi_weekly_df = pd.DataFrame()
 
 # Iterate through each week
-for week in range(1, current_week+1):
+for week in range(1, current_week):
     # Initialize a DataFrame to store total wins for each team against all schedules for this week
     total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
 
