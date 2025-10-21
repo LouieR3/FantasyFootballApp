@@ -287,7 +287,7 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
     except:
         print("No Record Predictions Yet")
 
-def display_playoff_odds_by_week(file, league):
+def display_playoff_odds_by_week(file):
     """
     Displays the Playoff Odds table with formatting in Streamlit.
 
@@ -341,6 +341,7 @@ def display_lpi_by_week(file):
     # Read the LPI By Week sheet
     df = pd.read_excel(file, sheet_name="LPI By Week")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+    df.columns = df.columns.str.replace("_", " ")
     df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)

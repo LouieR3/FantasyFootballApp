@@ -445,7 +445,9 @@ def add_weekly_analysis_to_main(teams, scores_df, reg_season_count, num_playoff_
     print("\n" + "="*80)
     print("PLAYOFF CHANCES BY WEEK")
     print("="*80)
-    
+    if current_week > reg_season_count:
+        current_week = reg_season_count+1
+
     # Calculate weekly playoff chances
     weekly_df = calculate_playoff_chances_by_week(
         teams, scores_df, reg_season_count, num_playoff_teams, current_week, num_simulations=1000
@@ -478,9 +480,9 @@ def add_weekly_analysis_to_main(teams, scores_df, reg_season_count, num_playoff_
 def main():
     # ESPN API setup (using your provided data structure)
     espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
-    year = 2025
+    year = 2024
     # Pennoni Younglings
-    league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+    # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
     league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
     # hannah_s2 = "AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D"
     # league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
@@ -640,5 +642,5 @@ def run_simulation_with_data(teams, scores_df, reg_season_count, num_playoff_tea
     
     return summary_df, seed_df
 
-# if __name__ == "__main__":
-#     summary_df, seed_df = main()
+if __name__ == "__main__":
+    summary_df, seed_df = main()
