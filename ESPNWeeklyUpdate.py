@@ -13,7 +13,8 @@ import openpyxl
 from monte_carlo_odds import (
     calculate_team_stats, 
     simulate_remaining_season, 
-    create_summary_dataframes
+    create_summary_dataframes,
+    add_weekly_analysis_to_main
 )
 
 
@@ -65,7 +66,7 @@ dave_s2 = "AEATfV13bzJs4HpWGw5IMP0Hoh9yD7FJ%2FWPkdfAC8pOMFdD9RT8wgdt%2BoACXFYuTY
 
 # Dave Work League
 # year = 2024
-league = League(league_id= 1675186799, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
+# league = League(league_id= 1675186799, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
 # Dave Friend League
 # league = League(league_id= 1924463077, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
 settings = league.settings
@@ -359,6 +360,11 @@ seed_df = (
         .reset_index(drop=True)
         .set_index("Team")
 )
+
+# Or use the integrated function for full output
+weekly_df = add_weekly_analysis_to_main(
+    teams, scores_df, reg_season_count, num_playoff_teams, current_week
+)
 # print(odds_df)
 if current_week > settings.reg_season_count:
     fileName = leagueName + " " + str(year)
@@ -528,6 +534,7 @@ records_df.to_excel(writer, sheet_name='Schedule Grid')
 schedule_rank_df.to_excel(writer, sheet_name='Wins Against Schedule')
 rank_df.to_excel(writer, sheet_name='Expected Wins')
 seed_df.to_excel(writer, sheet_name='Playoff Odds')
+weekly_df.to_excel(writer, sheet_name='Playoff Odds By Week')
 summary_df.to_excel(writer, sheet_name='Record Odds')
 lpi_df.to_excel(writer, sheet_name='Louie Power Index')
 lpi_weekly_df.to_excel(writer, sheet_name='LPI By Week')
