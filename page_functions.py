@@ -283,6 +283,7 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
         columns_to_drop = ['Current_Win_Pct', 'Avg_Score', 'Total_Points_For', 'Expected_Final_Record']
         df = df.drop(columns=columns_to_drop)
         df.columns = [col.replace('_', ' ') for col in df.columns]
+        df = df.set_index("Team")
         st.dataframe(df, height=height, width=700)
     except:
         print("No Record Predictions Yet")
