@@ -23,7 +23,7 @@ def app():
     draft_file = f"drafts/{league_name} Draft Results {selected_year}.csv"
     
     from page_functions import display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds
-    from page_functions import display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results
+    from page_functions import display_playoff_odds_by_week, display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results
     
     display_playoff_results(file)
 
@@ -33,6 +33,7 @@ def app():
 
     year = int(selected_year)
     display_playoff_odds(file, league_id, espn_s2, swid, year)
+    display_playoff_odds_by_week(file, league)
     display_lpi_by_week(file)
     
     display_strength_of_schedule(file)

@@ -302,6 +302,7 @@ def display_playoff_odds_by_week(file):
     df = pd.read_excel(file, sheet_name="Playoff Odds By Week")
     
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+    df.columns = df.columns.str.replace("_", " ")
     df = df.set_index("Teams")
     
     # Function to format and round the values
