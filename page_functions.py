@@ -313,7 +313,6 @@ def display_playoff_odds_by_week(file):
     # Apply the formatting function to the entire DataFrame
     formatted_df = df.applymap(format_and_round)
     
-    
     df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)

@@ -56,7 +56,7 @@ leagues = [
     # Elles League
     {"league_id": 1259693145, "year": year, "espn_s2": elle_s2, "swid": "{B6F0817B-1DC0-4E29-B020-68B8E12B6931}", "name": "Operators Football League"},
     # Dave Work League
-    # {"league_id": 1675186799, "year": year, "espn_s2": dave_s2, "swid": "{AAD245A4-298A-4362-A70B-5F838E0D6F64}", "name": "OnP Fantasy"},
+    {"league_id": 1675186799, "year": year, "espn_s2": dave_s2, "swid": "{AAD245A4-298A-4362-A70B-5F838E0D6F64}", "name": "OnP Fantasy"},
     # Dave Friend League
     {"league_id": 1924463077, "year": year, "espn_s2": dave_s2, "swid": "{AAD245A4-298A-4362-A70B-5F838E0D6F64}", "name": "The Mike Daisy Sports IQ League"},
 ]
@@ -347,11 +347,11 @@ for league_config in leagues:
         num_playoff_teams = settings.playoff_team_count
         # Then use them step by step in your existing code
         team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
-        final_records, playoff_makes, seed_counts = simulate_remaining_season(
+        final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
             teams, team_stats, current_week, reg_season_count, num_playoff_teams
         )
         summary_df, seed_df = create_summary_dataframes(
-            team_stats, final_records, playoff_makes, seed_counts, 1000, len(teams), reg_season_count
+            team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, 1000, len(teams), reg_season_count
         )
         print(summary_df)
         summary_df = (

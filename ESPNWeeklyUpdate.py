@@ -341,11 +341,11 @@ teams= league.teams
 num_playoff_teams = settings.playoff_team_count
 # Then use them step by step in your existing code
 team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
-final_records, playoff_makes, seed_counts = simulate_remaining_season(
+final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
     teams, team_stats, current_week, reg_season_count, num_playoff_teams
 )
 summary_df, seed_df = create_summary_dataframes(
-    team_stats, final_records, playoff_makes, seed_counts, 1000, len(teams), reg_season_count
+    team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, 1000, len(teams), reg_season_count
 )
 print(summary_df)
 summary_df = (
