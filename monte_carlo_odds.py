@@ -180,7 +180,7 @@ def simulate_remaining_season(teams, team_stats, current_week, reg_season_count,
     
     return final_records, playoff_makes, last_place_finishes, seed_counts
 
-def create_summary_dataframes(team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_simulations, num_teams, reg_season_count):
+def create_summary_dataframes(team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, num_simulations, num_teams, reg_season_count):
     """Create summary dataframes with results (including ties)"""
     
     # Playoff chances and expected records
@@ -258,6 +258,7 @@ def create_summary_dataframes(team_stats, final_records, playoff_makes, last_pla
     seed_df = pd.DataFrame(seed_data)
     
     # Add playoff chance column
+    # num_playoff_teams = settings.playoff_team_count
     playoff_places = [f'{i}{get_ordinal_suffix(i)} Place' for i in range(1, num_playoff_teams + 1)]
     seed_df['Chance of Making Playoffs'] = seed_df[playoff_places].sum(axis=1).round(1)
     
@@ -607,8 +608,8 @@ def add_weekly_analysis_to_main(teams, scores_df, reg_season_count, num_playoff_
 #     return summary_df, seed_df
 
 # Global variables for settings
-reg_season_count = 17  # Default, will be updated from API
-num_playoff_teams = 6  # Default, will be updated from API
+# reg_season_count = 17  # Default, will be updated from API
+# num_playoff_teams = 6  # Default, will be updated from API
 
 def run_simulation_with_data(teams, scores_df, reg_season_count, num_playoff_teams, current_week=None, num_simulations=1000):
     """

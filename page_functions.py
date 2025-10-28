@@ -456,7 +456,7 @@ def display_lpi(league_id, espn_s2, swid, file):
     else:
         height = 460 + (len(names) - 12) * 40
 
-    st.dataframe(df3, height=height)
+    st.dataframe(df3, height=height, width=700)
 
 def display_draft_results(draft_file):
     try:

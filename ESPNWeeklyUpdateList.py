@@ -354,7 +354,7 @@ for league_config in leagues:
             teams, team_stats, current_week, reg_season_count, num_playoff_teams
         )
         summary_df, seed_df = create_summary_dataframes(
-            team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, 1000, len(teams), reg_season_count
+            team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
         )
         print(summary_df)
         summary_df = (
