@@ -11,7 +11,7 @@ def app():
 
     # Initialize the dropdown for year selection
     year_options = ['2019', '2020', '2021', '2022', '2023', '2024', '2025']
-    selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
+    selected_year = st.selectbox("Select Year", year_options, index=6)  # Defaults to 2024
     league = f"Game of Yards! {selected_year}"
     st.title("🧑‍🤝‍🧑 " + league)
     file = "leagues/" + league + ".xlsx"
