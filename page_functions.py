@@ -328,29 +328,16 @@ def display_playoff_odds_by_week(file):
     else:
         height = 460 + (len(names) - 12) * 40
 
+    def style_dataframe(df):
+        styler = df.style.background_gradient(
+            cmap="Blues",
+            vmin=0,
+            vmax=100,
+            subset=df.columns[1:]
+        ).format("{:.1f}", subset=df.columns[1:])
+        return styler
 
-    # Define numeric columns
-    week_columns = [col for col in df.columns if col.startswith("Week")]
-
-    # Display dataframe with gradient color scales
-    st.dataframe(
-        formatted_df,
-        use_container_width=True,
-        height=height,
-        column_config={
-            col: st.column_config.NumberColumn(
-                col,
-                format="%.1f",
-                help=f"{col} score",
-                min_value=0,
-                max_value=100,
-                step=0.1,
-                # 👇 This adds the color gradient
-                background="linear-gradient(90deg, white 0%, #1f77b4 100%)"
-            )
-            for col in week_columns
-        },
-    )
+    st.write(style_dataframe(df).to_html(), unsafe_allow_html=True)
     
     # Display the styled DataFrame
     # st.dataframe(formatted_df, height=height)
