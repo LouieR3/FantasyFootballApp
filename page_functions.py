@@ -341,7 +341,7 @@ def display_playoff_odds_by_week(file):
     ).format("{:.1f}", subset=week_columns)
 
     # Show in Streamlit (✅ works without converting to HTML)
-    st.dataframe(df_styled, use_container_width=True, height=600)
+    st.dataframe(df_styled, use_container_width=True, height=height)
     
     # Display the styled DataFrame
     # st.dataframe(formatted_df, height=height)
