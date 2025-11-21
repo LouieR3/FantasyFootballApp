@@ -463,7 +463,6 @@ def display_betting_odds(file):
         "Green indicates favorable odds, red indicates unfavorable odds."
     )
 
-
 def display_betting_odds_full_width(file):
     """
     Alternative version: Displays betting odds tables stacked vertically for better readability.
