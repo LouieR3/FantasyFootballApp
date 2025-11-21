@@ -535,7 +535,9 @@ def display_betting_odds_full_width(file):
             subset=[prob_col + '_numeric'],
             vmin=0,
             vmax=100
-        ).hide(axis="columns", subset=[prob_col + '_numeric'])
+        )
+        # Drop the numeric column BEFORE displaying
+        df_first_styled = df_first_styled.hide_columns(['_numeric'])
     else:
         df_first_styled = df_first.style
     
@@ -560,7 +562,9 @@ def display_betting_odds_full_width(file):
             subset=[prob_col + '_numeric'],
             vmin=0,
             vmax=100
-        ).hide(axis="columns", subset=[prob_col + '_numeric'])
+        )
+        # Drop the numeric column BEFORE displaying
+        df_last_styled = df_last_styled.hide_columns(['_numeric'])
     else:
         df_last_styled = df_last.style
     
