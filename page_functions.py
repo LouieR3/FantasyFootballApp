@@ -503,7 +503,7 @@ def display_betting_odds_full_width(file):
     else:
         df_playoff_styled = df_playoff.style
     
-    st.dataframe(df_playoff_styled, use_container_width=True)
+    st.dataframe(df_playoff_styled, width=650)
     
     st.markdown("---")
     
@@ -528,7 +528,7 @@ def display_betting_odds_full_width(file):
     else:
         df_first_styled = df_first.style
     
-    st.dataframe(df_first_styled, use_container_width=True)
+    st.dataframe(df_first_styled, width=650)
     
     st.markdown("---")
     
@@ -553,7 +553,7 @@ def display_betting_odds_full_width(file):
     else:
         df_last_styled = df_last.style
     
-    st.dataframe(df_last_styled, use_container_width=True)
+    st.dataframe(df_last_styled, width=650)
     
     # Add explanation at the bottom
     st.markdown("---")
