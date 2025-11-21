@@ -40,7 +40,7 @@ def app():
     if year > 2024:
         display_playoff_odds_by_week(file)
 
-        display_betting_odds(odds_file)
+        display_betting_odds_full_width(odds_file)
 
     display_lpi_by_week(file)
 
