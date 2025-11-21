@@ -23,9 +23,10 @@ def app():
     draft_file = f"drafts/{league_name} Draft Results {selected_year}.csv"
     
     file = "leagues/" + league + ".xlsx"
+    odds_file = f"odds/{league} Betting Odds.xlsx"
 
     from page_functions import display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds, display_playoff_odds_by_week
-    from page_functions import display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results
+    from page_functions import display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results, display_betting_odds
     
     display_playoff_results(file)
 
@@ -38,6 +39,8 @@ def app():
 
     if year > 2024:
         display_playoff_odds_by_week(file)
+
+        display_betting_odds(odds_file)
 
     display_lpi_by_week(file)
 

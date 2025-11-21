@@ -669,6 +669,7 @@ def display_betting_odds(seed_df, num_teams, team_stats):
     
     return betting_df, position_odds
 
+
 def retrieve_odds_dfs(seed_df, num_teams, team_stats):
     """
     Create betting odds dataframes without printing
@@ -683,17 +684,29 @@ def retrieve_odds_dfs(seed_df, num_teams, team_stats):
     """
     # Make Playoff Betting Odds
     make_playoff_odds_df = create_betting_odds_table(seed_df, team_stats)
+    # Sort by probability descending
+    make_playoff_odds_df['_prob_sort'] = make_playoff_odds_df['Playoff_Probability'].str.rstrip('%').astype(float)
+    make_playoff_odds_df = make_playoff_odds_df.sort_values('_prob_sort', ascending=False).drop('_prob_sort', axis=1)
+    make_playoff_odds_df = make_playoff_odds_df.set_index('Team')
     
     # Get position odds
     position_odds = create_position_betting_odds(seed_df, num_teams, team_stats)
     
     # First Place Betting Odds
     first_place_odds_df = position_odds.get('1st Place', pd.DataFrame())
+    if not first_place_odds_df.empty:
+        first_place_odds_df['_prob_sort'] = first_place_odds_df['Probability'].str.rstrip('%').astype(float)
+        first_place_odds_df = first_place_odds_df.sort_values('_prob_sort', ascending=False).drop('_prob_sort', axis=1)
+        first_place_odds_df = first_place_odds_df.set_index('Team')
     
     # Last Place Betting Odds
     last_place_suffix = get_ordinal_suffix(num_teams)
     last_place_col = f'{num_teams}{last_place_suffix} Place'
     last_place_odds_df = position_odds.get(last_place_col, pd.DataFrame())
+    if not last_place_odds_df.empty:
+        last_place_odds_df['_prob_sort'] = last_place_odds_df['Probability'].str.rstrip('%').astype(float)
+        last_place_odds_df = last_place_odds_df.sort_values('_prob_sort', ascending=False).drop('_prob_sort', axis=1)
+        last_place_odds_df = last_place_odds_df.set_index('Team')
     
     return make_playoff_odds_df, first_place_odds_df, last_place_odds_df
 

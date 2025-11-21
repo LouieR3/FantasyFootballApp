@@ -275,15 +275,15 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
     st.dataframe(styled_df, height=height)
 
     try:
-        st.header('Record Predictons')
-        st.write("This table shows what each team's predicted final record is based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
-        
         # Read the Playoff Odds sheet
         df = pd.read_excel(file, sheet_name="Record Odds")
         columns_to_drop = ['Current_Win_Pct', 'Avg_Score', 'Total_Points_For', 'Expected_Final_Record']
         df = df.drop(columns=columns_to_drop)
         df.columns = [col.replace('_', ' ') for col in df.columns]
         df = df.set_index("Team")
+        st.header('Record Predictons')
+        st.write("This table shows what each team's predicted final record is based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
+        
         st.dataframe(df, height=height, width=700)
     except:
         print("No Record Predictions Yet")
@@ -345,6 +345,188 @@ def display_playoff_odds_by_week(file):
     
     # Display the styled DataFrame
     # st.dataframe(formatted_df, height=height)
+
+def display_betting_odds(file):
+    """
+    Displays the three betting odds tables with formatting in Streamlit.
+
+    Parameters:
+    - file (str): Path to the Excel file containing betting odds sheets.
+    """
+    st.header('Betting Odds')
+    st.write(
+        "This section shows American betting odds for various playoff scenarios. "
+        "Odds are calculated from 1,000 Monte Carlo simulations based on each team's "
+        "scoring history (average score and standard deviation). "
+        "Negative odds indicate favorites (bet that amount to win $100), "
+        "while positive odds indicate underdogs (win that amount on $100 bet)."
+    )
+    
+    # Create three columns for the three tables
+    col1, col2, col3 = st.columns(3)
+    
+    # --- MAKE PLAYOFF ODDS ---
+    with col1:
+        st.subheader('Make Playoff Odds')
+        df_playoff = pd.read_excel(file, sheet_name="Make Playoff Odds")
+        
+        # Set Team as index if it's a column
+        if 'Team' in df_playoff.columns:
+            df_playoff = df_playoff.set_index('Team')
+        
+        # Style the dataframe
+        df_playoff_styled = df_playoff.style.background_gradient(
+            cmap="RdYlGn",
+            subset=['Playoff_Probability'] if 'Playoff_Probability' in df_playoff.columns else None,
+            vmin=0,
+            vmax=100
+        )
+        
+        st.dataframe(df_playoff_styled, use_container_width=True)
+    
+    # --- FIRST PLACE ODDS ---
+    with col2:
+        st.subheader('First Place Odds')
+        df_first = pd.read_excel(file, sheet_name="First Place Odds")
+        
+        # Set Team as index if it's a column
+        if 'Team' in df_first.columns:
+            df_first = df_first.set_index('Team')
+        
+        # Style the dataframe
+        df_first_styled = df_first.style.background_gradient(
+            cmap="RdYlGn",
+            subset=['Probability'] if 'Probability' in df_first.columns else None,
+            vmin=0,
+            vmax=100
+        )
+        
+        st.dataframe(df_first_styled, use_container_width=True)
+    
+    # --- LAST PLACE ODDS ---
+    with col3:
+        st.subheader('Last Place Odds')
+        df_last = pd.read_excel(file, sheet_name="Last Place Odds")
+        
+        # Set Team as index if it's a column
+        if 'Team' in df_last.columns:
+            df_last = df_last.set_index('Team')
+        
+        # Style the dataframe - reversed color scale (higher probability of last place = red)
+        df_last_styled = df_last.style.background_gradient(
+            cmap="RdYlGn_r",  # Reversed: red for high probability, green for low
+            subset=['Probability'] if 'Probability' in df_last.columns else None,
+            vmin=0,
+            vmax=100
+        )
+        
+        st.dataframe(df_last_styled, use_container_width=True)
+    
+    # Add explanation at the bottom
+    st.markdown("---")
+    st.caption(
+        "**Note:** Probabilities are shown as percentages with color gradients. "
+        "Green indicates favorable odds, red indicates unfavorable odds."
+    )
+
+
+def display_betting_odds_full_width(file):
+    """
+    Alternative version: Displays betting odds tables stacked vertically for better readability.
+
+    Parameters:
+    - file (str): Path to the Excel file containing betting odds sheets.
+    """
+    st.header('Betting Odds')
+    st.write(
+        "This section shows American betting odds for various playoff scenarios. "
+        "Odds are calculated from 1,000 Monte Carlo simulations based on each team's "
+        "scoring history (average score and standard deviation). "
+        "Negative odds indicate favorites (bet that amount to win $100), "
+        "while positive odds indicate underdogs (win that amount on $100 bet)."
+    )
+    
+    # --- MAKE PLAYOFF ODDS ---
+    st.subheader('Make Playoff Odds')
+    df_playoff = pd.read_excel(file, sheet_name="Make Playoff Odds")
+    
+    # Set Team as index if it's a column
+    if 'Team' in df_playoff.columns:
+        df_playoff = df_playoff.set_index('Team')
+    
+    # Remove % sign from probability column for proper gradient
+    prob_col = 'Playoff_Probability'
+    if prob_col in df_playoff.columns:
+        df_playoff_display = df_playoff.copy()
+        df_playoff_display[prob_col + '_numeric'] = df_playoff[prob_col].str.rstrip('%').astype(float)
+        
+        df_playoff_styled = df_playoff_display.style.background_gradient(
+            cmap="RdYlGn",
+            subset=[prob_col + '_numeric'],
+            vmin=0,
+            vmax=100
+        ).hide(axis="columns", subset=[prob_col + '_numeric'])
+    else:
+        df_playoff_styled = df_playoff.style
+    
+    st.dataframe(df_playoff_styled, use_container_width=True)
+    
+    st.markdown("---")
+    
+    # --- FIRST PLACE ODDS ---
+    st.subheader('First Place Odds')
+    df_first = pd.read_excel(file, sheet_name="First Place Odds")
+    
+    if 'Team' in df_first.columns:
+        df_first = df_first.set_index('Team')
+    
+    prob_col = 'Probability'
+    if prob_col in df_first.columns:
+        df_first_display = df_first.copy()
+        df_first_display[prob_col + '_numeric'] = df_first[prob_col].str.rstrip('%').astype(float)
+        
+        df_first_styled = df_first_display.style.background_gradient(
+            cmap="RdYlGn",
+            subset=[prob_col + '_numeric'],
+            vmin=0,
+            vmax=100
+        ).hide(axis="columns", subset=[prob_col + '_numeric'])
+    else:
+        df_first_styled = df_first.style
+    
+    st.dataframe(df_first_styled, use_container_width=True)
+    
+    st.markdown("---")
+    
+    # --- LAST PLACE ODDS ---
+    st.subheader('Last Place Odds')
+    df_last = pd.read_excel(file, sheet_name="Last Place Odds")
+    
+    if 'Team' in df_last.columns:
+        df_last = df_last.set_index('Team')
+    
+    prob_col = 'Probability'
+    if prob_col in df_last.columns:
+        df_last_display = df_last.copy()
+        df_last_display[prob_col + '_numeric'] = df_last[prob_col].str.rstrip('%').astype(float)
+        
+        df_last_styled = df_last_display.style.background_gradient(
+            cmap="RdYlGn_r",  # Reversed: red for high probability, green for low
+            subset=[prob_col + '_numeric'],
+            vmin=0,
+            vmax=100
+        ).hide(axis="columns", subset=[prob_col + '_numeric'])
+    else:
+        df_last_styled = df_last.style
+    
+    st.dataframe(df_last_styled, use_container_width=True)
+    
+    # Add explanation at the bottom
+    st.markdown("---")
+    st.caption(
+        "**Note:** Probabilities are shown as percentages with color gradients. "
+        "Green indicates favorable odds, red indicates unfavorable odds for last place."
+    )
 
 def display_lpi_by_week(file):
     """
