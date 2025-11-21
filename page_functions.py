@@ -362,8 +362,8 @@ def display_betting_odds(file):
         "This section shows American betting odds for various playoff scenarios. "
         "Odds are calculated from 1,000 Monte Carlo simulations based on each team's "
         "scoring history (average score and standard deviation). "
-        "Negative odds indicate favorites (bet that amount to win $100), "
-        "while positive odds indicate underdogs (win that amount on $100 bet)."
+        "Negative odds indicate favorites (bet that amount to win 100), "
+        "while positive odds indicate underdogs (win that amount on 100 bet).FALALA"
     )
     
     # Create three columns for the three tables
