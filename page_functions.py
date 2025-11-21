@@ -382,8 +382,11 @@ def display_betting_odds(file):
         prob_col = 'Playoff_Probability'
         if prob_col in df_playoff.columns:
             # Create a numeric column for gradient
+            print(df_playoff)
             df_playoff['_prob_numeric'] = df_playoff[prob_col].str.rstrip('%').astype(float)
-            
+            print("===")
+            print(df_playoff)
+
             # Apply gradient to numeric column only
             df_playoff_styled = df_playoff.style.background_gradient(
                 cmap="RdYlGn",
