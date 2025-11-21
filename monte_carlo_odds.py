@@ -271,8 +271,6 @@ def get_ordinal_suffix(n):
     else:
         suffix = {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')
     return suffix
-    
-    return summary_df, seed_df
 
 def calculate_playoff_chances_by_week(teams, scores_df, reg_season_count, num_playoff_teams, current_week, num_simulations=1000):
     """
@@ -485,6 +483,220 @@ def add_weekly_analysis_to_main(teams, scores_df, reg_season_count, num_playoff_
     return weekly_df
 
 
+def convert_probability_to_odds(probability_pct):
+    """
+    Convert probability percentage to betting odds formats
+    
+    Args:
+        probability_pct: Probability as percentage (0-100)
+    
+    Returns:
+        dict: Dictionary with American, Decimal, and Fractional odds
+    """
+    if probability_pct <= 0:
+        return {'American': '+∞', 'Decimal': '∞', 'Fractional': '∞/1', 'Implied_Prob': '0.0%'}
+    if probability_pct >= 100:
+        return {'American': '-∞', 'Decimal': '1.00', 'Fractional': '0/1', 'Implied_Prob': '100.0%'}
+    
+    prob = probability_pct / 100.0
+    
+    # Decimal odds
+    decimal_odds = 1 / prob
+    
+    # American odds
+    if prob >= 0.5:
+        american_odds = -(prob / (1 - prob)) * 100
+        american_str = f"{american_odds:.0f}"
+    else:
+        american_odds = ((1 - prob) / prob) * 100
+        american_str = f"+{american_odds:.0f}"
+    
+    # Fractional odds (simplified)
+    if prob < 0.5:
+        numerator = (1 - prob) * 100
+        denominator = prob * 100
+    else:
+        numerator = prob * 100
+        denominator = (1 - prob) * 100
+    
+    # Simplify fraction
+    from math import gcd
+    g = gcd(int(numerator), int(denominator))
+    if prob < 0.5:
+        frac_str = f"{int(numerator/g)}/{int(denominator/g)}"
+    else:
+        frac_str = f"{int(denominator/g)}/{int(numerator/g)}"
+    
+    return {
+        'American': american_str,
+        'Decimal': f"{decimal_odds:.2f}",
+        'Fractional': frac_str,
+        'Implied_Prob': f"{probability_pct:.1f}%"
+    }
+
+
+def create_betting_odds_table(seed_df, team_stats):
+    """
+    Create a betting odds table from seed probability dataframe
+    
+    Args:
+        seed_df: DataFrame with team seed probabilities and playoff chances
+        team_stats: Dictionary of team statistics including records
+    
+    Returns:
+        pd.DataFrame: DataFrame with betting odds in American format
+    """
+    betting_data = []
+    
+    for _, row in seed_df.iterrows():
+        team = row['Team']
+        playoff_prob = row['Chance of Making Playoffs']
+        
+        # Get team record
+        stats = team_stats[team]
+        if stats['ties'] > 0:
+            record = f"{stats['wins']}-{stats['losses']}-{stats['ties']}"
+        else:
+            record = f"{stats['wins']}-{stats['losses']}"
+        
+        # Convert to odds
+        odds = convert_probability_to_odds(playoff_prob)
+        
+        betting_data.append({
+            'Team': team,
+            'Record': record,
+            'Playoff_Probability': f"{playoff_prob:.1f}%",
+            'American_Odds': odds['American']
+        })
+    
+    betting_df = pd.DataFrame(betting_data)
+    return betting_df
+
+
+def create_position_betting_odds(seed_df, num_teams, team_stats):
+    """
+    Create betting odds for finishing in each position
+    
+    Args:
+        seed_df: DataFrame with team seed probabilities
+        num_teams: Total number of teams
+        team_stats: Dictionary of team statistics including records
+    
+    Returns:
+        dict: Dictionary of DataFrames, one for each position
+    """
+    from collections import defaultdict
+    
+    position_odds = defaultdict(list)
+    
+    for position in range(1, num_teams + 1):
+        place_suffix = get_ordinal_suffix(position)
+        col_name = f'{position}{place_suffix} Place'
+        
+        if col_name not in seed_df.columns:
+            continue
+        
+        for _, row in seed_df.iterrows():
+            team = row['Team']
+            prob = row[col_name]
+            odds = convert_probability_to_odds(prob)
+            
+            # Get team record
+            stats = team_stats[team]
+            if stats['ties'] > 0:
+                record = f"{stats['wins']}-{stats['losses']}-{stats['ties']}"
+            else:
+                record = f"{stats['wins']}-{stats['losses']}"
+            
+            position_odds[col_name].append({
+                'Team': team,
+                'Record': record,
+                'Probability': f"{prob:.1f}%",
+                'American_Odds': odds['American']
+            })
+    
+    # Convert to DataFrames
+    position_dfs = {}
+    for position, data in position_odds.items():
+        df = pd.DataFrame(data)
+        # Sort by probability descending
+        df = df.sort_values('Probability', ascending=False).reset_index(drop=True)
+        position_dfs[position] = df
+    
+    return position_dfs
+
+
+def display_betting_odds(seed_df, num_teams, team_stats):
+    """
+    Display betting odds in a readable format
+    
+    Args:
+        seed_df: DataFrame with seed probabilities
+        num_teams: Total number of teams
+        team_stats: Dictionary of team statistics including records
+    """
+    print("\n" + "="*80)
+    print("BETTING ODDS - TO MAKE PLAYOFFS")
+    print("="*80)
+    
+    betting_df = create_betting_odds_table(seed_df, team_stats)
+    print(betting_df.to_string(index=False))
+    
+    print("\n" + "="*80)
+    print("BETTING ODDS - TO FINISH 1ST PLACE")
+    print("="*80)
+    
+    position_odds = create_position_betting_odds(seed_df, num_teams, team_stats)
+    if '1st Place' in position_odds:
+        print(position_odds['1st Place'].to_string(index=False))
+    
+    # Get last place column name
+    last_place_suffix = get_ordinal_suffix(num_teams)
+    last_place_col = f'{num_teams}{last_place_suffix} Place'
+    
+    print("\n" + "="*80)
+    print("BETTING ODDS - TO FINISH LAST PLACE")
+    print("="*80)
+    
+    if last_place_col in position_odds:
+        print(position_odds[last_place_col].to_string(index=False))
+    
+    print("\n" + "="*80)
+    print("BETTING ODDS EXPLANATION")
+    print("="*80)
+    print("American Odds: Negative = favorite (bet that amount to win $100)")
+    print("               Positive = underdog (win that amount on $100 bet)")
+    
+    return betting_df, position_odds
+
+def retrieve_odds_dfs(seed_df, num_teams, team_stats):
+    """
+    Create betting odds dataframes without printing
+    
+    Args:
+        seed_df: DataFrame with seed probabilities
+        num_teams: Total number of teams
+        team_stats: Dictionary of team statistics including records
+    
+    Returns:
+        tuple: (make_playoff_odds_df, first_place_odds_df, last_place_odds_df)
+    """
+    # Make Playoff Betting Odds
+    make_playoff_odds_df = create_betting_odds_table(seed_df, team_stats)
+    
+    # Get position odds
+    position_odds = create_position_betting_odds(seed_df, num_teams, team_stats)
+    
+    # First Place Betting Odds
+    first_place_odds_df = position_odds.get('1st Place', pd.DataFrame())
+    
+    # Last Place Betting Odds
+    last_place_suffix = get_ordinal_suffix(num_teams)
+    last_place_col = f'{num_teams}{last_place_suffix} Place'
+    last_place_odds_df = position_odds.get(last_place_col, pd.DataFrame())
+    
+    return make_playoff_odds_df, first_place_odds_df, last_place_odds_df
+
 # def main():
 #     # ESPN API setup (using your provided data structure)
 #     espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
@@ -539,7 +751,7 @@ def add_weekly_analysis_to_main(teams, scores_df, reg_season_count, num_playoff_
     
 #     # Create summary dataframes
 #     summary_df, seed_df = create_summary_dataframes(
-#         team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, 1000, len(teams), reg_season_count
+#         team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
 #     )
     
 #     # Sort by playoff chances
@@ -584,7 +796,10 @@ def add_weekly_analysis_to_main(teams, scores_df, reg_season_count, num_playoff_
 #     )
 #     print()
 #     print(weekly_df)
-    
+
+#     num_teams = len(teams)
+
+#     display_betting_odds(seed_df, num_teams, team_stats)
 #     # Save to Excel if desired
 #     # try:
 #     #     with pd.ExcelWriter('fantasy_predictions.xlsx') as writer:
@@ -641,7 +856,7 @@ def run_simulation_with_data(teams, scores_df, reg_season_count, num_playoff_tea
     
     # Create summary dataframes
     summary_df, seed_df = create_summary_dataframes(
-        team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_simulations, len(teams), reg_season_count
+        team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, num_simulations, len(teams), reg_season_count
     )
     
     # Sort results
