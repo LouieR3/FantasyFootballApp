@@ -25,7 +25,7 @@ def app():
     file = "leagues/" + league + ".xlsx"
     odds_file = f"odds/{league} Betting Odds.xlsx"
 
-    from page_functions import display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds, display_playoff_odds_by_week
+    from page_functions import display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds, display_playoff_odds_by_week, display_betting_odds_full_width
     from page_functions import display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results, display_betting_odds
     
     display_playoff_results(file)
