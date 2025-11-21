@@ -346,6 +346,10 @@ def display_playoff_odds_by_week(file):
     # Display the styled DataFrame
     # st.dataframe(formatted_df, height=height)
 
+import streamlit as st
+import pandas as pd
+
+
 def display_betting_odds(file):
     """
     Displays the three betting odds tables with formatting in Streamlit.
@@ -374,13 +378,24 @@ def display_betting_odds(file):
         if 'Team' in df_playoff.columns:
             df_playoff = df_playoff.set_index('Team')
         
-        # Style the dataframe
-        df_playoff_styled = df_playoff.style.background_gradient(
-            cmap="RdYlGn",
-            subset=['Playoff_Probability'] if 'Playoff_Probability' in df_playoff.columns else None,
-            vmin=0,
-            vmax=100
-        )
+        # Convert probability string to numeric for gradient
+        prob_col = 'Playoff_Probability'
+        if prob_col in df_playoff.columns:
+            # Create a numeric column for gradient
+            df_playoff['_prob_numeric'] = df_playoff[prob_col].str.rstrip('%').astype(float)
+            
+            # Apply gradient to numeric column only
+            df_playoff_styled = df_playoff.style.background_gradient(
+                cmap="RdYlGn",
+                subset=['_prob_numeric'],
+                vmin=0,
+                vmax=100
+            ).format({prob_col: '{}'})  # Keep original formatting for display
+            
+            # Hide the numeric helper column
+            df_playoff_styled = df_playoff_styled.hide(axis="columns", subset=['_prob_numeric'])
+        else:
+            df_playoff_styled = df_playoff.style
         
         st.dataframe(df_playoff_styled, use_container_width=True)
     
@@ -393,13 +408,21 @@ def display_betting_odds(file):
         if 'Team' in df_first.columns:
             df_first = df_first.set_index('Team')
         
-        # Style the dataframe
-        df_first_styled = df_first.style.background_gradient(
-            cmap="RdYlGn",
-            subset=['Probability'] if 'Probability' in df_first.columns else None,
-            vmin=0,
-            vmax=100
-        )
+        # Convert probability string to numeric for gradient
+        prob_col = 'Probability'
+        if prob_col in df_first.columns:
+            df_first['_prob_numeric'] = df_first[prob_col].str.rstrip('%').astype(float)
+            
+            df_first_styled = df_first.style.background_gradient(
+                cmap="RdYlGn",
+                subset=['_prob_numeric'],
+                vmin=0,
+                vmax=100
+            ).format({prob_col: '{}'})
+            
+            df_first_styled = df_first_styled.hide(axis="columns", subset=['_prob_numeric'])
+        else:
+            df_first_styled = df_first.style
         
         st.dataframe(df_first_styled, use_container_width=True)
     
@@ -412,13 +435,21 @@ def display_betting_odds(file):
         if 'Team' in df_last.columns:
             df_last = df_last.set_index('Team')
         
-        # Style the dataframe - reversed color scale (higher probability of last place = red)
-        df_last_styled = df_last.style.background_gradient(
-            cmap="RdYlGn_r",  # Reversed: red for high probability, green for low
-            subset=['Probability'] if 'Probability' in df_last.columns else None,
-            vmin=0,
-            vmax=100
-        )
+        # Convert probability string to numeric for gradient (reversed colors)
+        prob_col = 'Probability'
+        if prob_col in df_last.columns:
+            df_last['_prob_numeric'] = df_last[prob_col].str.rstrip('%').astype(float)
+            
+            df_last_styled = df_last.style.background_gradient(
+                cmap="RdYlGn_r",  # Reversed: red for high probability, green for low
+                subset=['_prob_numeric'],
+                vmin=0,
+                vmax=100
+            ).format({prob_col: '{}'})
+            
+            df_last_styled = df_last_styled.hide(axis="columns", subset=['_prob_numeric'])
+        else:
+            df_last_styled = df_last.style
         
         st.dataframe(df_last_styled, use_container_width=True)
     
