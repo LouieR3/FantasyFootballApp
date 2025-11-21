@@ -482,26 +482,38 @@ def display_betting_odds_full_width(file):
     # --- MAKE PLAYOFF ODDS ---
     st.subheader('Make Playoff Odds')
     df_playoff = pd.read_excel(file, sheet_name="Make Playoff Odds")
-    
-    # Set Team as index if it's a column
+
+    # Set Team index
     if 'Team' in df_playoff.columns:
         df_playoff = df_playoff.set_index('Team')
-    
-    # Remove % sign from probability column for proper gradient
-    prob_col = 'Playoff_Probability'
+
+    # Copy BEFORE styling for display formatting (underscore removal)
+    df_playoff_display = df_playoff.copy()
+    df_playoff_display.columns = df_playoff_display.columns.str.replace('_', ' ')
+
+    prob_col = 'Playoff_Probability'   # original column name
+    prob_col_display = prob_col.replace('_', ' ')  # display name
+
     if prob_col in df_playoff.columns:
-        df_playoff_display = df_playoff.copy()
-        df_playoff_display[prob_col + '_numeric'] = df_playoff[prob_col].str.rstrip('%').astype(float)
         
-        df_playoff_styled = df_playoff_display.style.background_gradient(
-            cmap="RdYlGn",
-            subset=[prob_col + '_numeric'],
-            vmin=0,
-            vmax=100
-        ).hide(axis="columns", subset=[prob_col + '_numeric'])
+        # Create numeric helper but DO NOT show it
+        df_playoff_display['_numeric'] = df_playoff[prob_col].str.rstrip('%').astype(float)
+
+        # Apply gradient to the DISPLAY name column, but using _numeric for values
+        df_playoff_styled = (
+            df_playoff_display
+            .style
+            .background_gradient(
+                cmap="RdYlGn",
+                subset=[prob_col_display],
+                gmap=df_playoff_display['_numeric']  # <-- KEY FIX
+            )
+            .hide(axis="columns", subset=['_numeric'])
+        )
+
     else:
-        df_playoff_styled = df_playoff.style
-    
+        df_playoff_styled = df_playoff_display.style
+
     st.dataframe(df_playoff_styled, width=650)
     
     st.markdown("---")
