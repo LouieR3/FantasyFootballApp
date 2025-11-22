@@ -356,6 +356,19 @@ def display_betting_odds(file):
         "Negative odds indicate favorites (bet that amount to win 100), "
         "while positive odds indicate underdogs (win that amount on 100 bet)."
     )
+    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    # Display the styled DataFrame
+    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+    df_names = df_names.set_index("Teams")
+    pd.options.mode.chained_assignment = None
+    names = []
+    for col in df_names.columns:
+        if col != "Teams":
+            names.append(col)
+    if len(names) <= 10:
+        height = "auto"
+    else:
+        height = 460 + (len(names) - 12) * 40
 
     # Create 3 equal-width columns
     col1, col2, col3 = st.columns(3)
@@ -390,7 +403,7 @@ def display_betting_odds(file):
         else:
             styled = df_display.style
 
-        st.dataframe(styled, column_config={"_numeric": None})
+        st.dataframe(styled, height=height, column_config={"_numeric": None})
 
 
     # -----------------------------------------------------------
@@ -421,7 +434,7 @@ def display_betting_odds(file):
         else:
             styled = df_display.style
 
-        st.dataframe(styled, column_config={"_numeric": None})
+        st.dataframe(styled, height=height, column_config={"_numeric": None})
 
 
     # -----------------------------------------------------------
@@ -460,7 +473,7 @@ def display_betting_odds(file):
         else:
             styled = df_display.style
 
-        st.dataframe(styled, column_config={"_numeric": None})
+        st.dataframe(styled, height=height, column_config={"_numeric": None})
 
     # Bottom note
     st.markdown("---")
