@@ -539,7 +539,7 @@ def display_betting_odds_full_width(file):
             cmap="RdYlGn",
             # subset=[prob_col + '_numeric'],
             subset=[prob_col_display],
-            gmap=df_playoff_display['_numeric']  # <-- KEY FIX
+            gmap=df_playoff_display['_numeric'],  # <-- KEY FIX
             vmin=0,
             vmax=100
         )
