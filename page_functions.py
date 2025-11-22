@@ -404,7 +404,7 @@ def display_betting_odds(file):
         else:
             styled = df_display.style
 
-        st.dataframe(styled, height=height+50, column_config={"_numeric": None})
+        st.dataframe(styled, height=height, column_config={"_numeric": None})
 
 
     # -----------------------------------------------------------
