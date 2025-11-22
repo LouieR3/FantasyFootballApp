@@ -525,7 +525,11 @@ def display_betting_odds_full_width(file):
     if 'Team' in df_first.columns:
         df_first = df_first.set_index('Team')
     
+    df_first.columns = df_first.columns.str.replace('_', ' ')
+
     prob_col = 'Probability'
+    prob_col_display = prob_col.replace('_', ' ')  # display name
+
     if prob_col in df_first.columns:
         df_first_display = df_first.copy()
         df_first_display[prob_col + '_numeric'] = df_first[prob_col].str.rstrip('%').astype(float)
@@ -533,9 +537,8 @@ def display_betting_odds_full_width(file):
         
         df_first_styled = df_first_display.style.background_gradient(
             cmap="RdYlGn",
-            subset=[prob_col + '_numeric'],
-            vmin=0,
-            vmax=100
+            subset=[prob_col_display],
+            gmap=df_playoff_display['_numeric']  # <-- KEY FIX
         )
         print(df_first_display)
     else:
