@@ -514,7 +514,7 @@ def display_betting_odds_full_width(file):
     else:
         df_playoff_styled = df_playoff_display.style
 
-    st.dataframe(df_playoff_styled, width=650)
+    st.dataframe(df_playoff_styled, width=650, column_config={'_numeric': None})
     
     st.markdown("---")
     
@@ -563,8 +563,10 @@ def display_betting_odds_full_width(file):
         df_last_display[prob_col + '_numeric'] = df_last[prob_col].str.rstrip('%').astype(float)
         
         df_last_styled = df_last_display.style.background_gradient(
-            cmap="RdYlGn_r",  # Reversed: red for high probability, green for low
-            subset=[prob_col + '_numeric'],
+            cmap="RdYlGn",
+            # subset=[prob_col + '_numeric'],
+            subset=[prob_col],
+            gmap=df_last_styled[prob_col + '_numeric'],  # <-- KEY FIX
             vmin=0,
             vmax=100
         )
@@ -573,7 +575,7 @@ def display_betting_odds_full_width(file):
     else:
         df_last_styled = df_last.style
     
-    st.dataframe(df_last_styled, width=650)
+    st.dataframe(df_last_styled, width=650, column_config={prob_col + '_numeric': None})
     
     # Add explanation at the bottom
     st.markdown("---")
