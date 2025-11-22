@@ -532,7 +532,6 @@ def display_betting_odds_full_width(file):
     if prob_col in df_first.columns:
         df_first_display = df_first.copy()
         df_first_display[prob_col + '_numeric'] = df_first[prob_col].str.rstrip('%').astype(float)
-        print(df_first_display)
         
         df_first_styled = df_first_display.style.background_gradient(
             cmap="RdYlGn",
@@ -542,7 +541,6 @@ def display_betting_odds_full_width(file):
             vmin=0,
             vmax=100
         )
-        print(df_first_display)
     else:
         df_first_styled = df_first.style
     
@@ -570,8 +568,6 @@ def display_betting_odds_full_width(file):
             vmin=0,
             vmax=100
         )
-        # Drop the numeric column BEFORE displaying
-        df_last_styled = df_last_styled.hide_columns(['_numeric'])
     else:
         df_last_styled = df_last.style
     
