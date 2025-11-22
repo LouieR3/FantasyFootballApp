@@ -11,6 +11,32 @@ import math
 import numpy as np
 import random
 import os
+file = "odds/Pennoni Younglings 2025 Betting Odds.xlsx"
+df_names = pd.read_excel(file, sheet_name="Make Playoff Odds")
+# Display the styled DataFrame
+df_names = df_names.set_index("Team")
+if len(df_names) <= 10:
+    height = "auto"
+else:
+    height = 460 + (len(df_names) - 12) * 40
+print(height)
+
+file = "leagues/Pennoni Younglings 2025.xlsx"
+df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+# Display the styled DataFrame
+df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+df_names = df_names.set_index("Teams")
+pd.options.mode.chained_assignment = None
+names = []
+for col in df_names.columns:
+    if col != "Teams":
+        names.append(col)
+if len(names) <= 10:
+    height = "auto"
+else:
+    height = 460 + (len(names) - 12) * 40
+print(height)
+dfg
 
 start_time = time.time()
 

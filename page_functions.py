@@ -326,7 +326,7 @@ def display_playoff_odds_by_week(file):
     if len(names) <= 10:
         height = "auto"
     else:
-        height = 460 + (len(names) - 12) * 40
+        height = (460 + (len(names) - 12) * 40) + 40
 
 
     # Identify week columns
