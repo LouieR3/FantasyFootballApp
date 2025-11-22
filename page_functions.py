@@ -453,7 +453,9 @@ def display_betting_odds(file):
                 cmap="RdYlGn",
                 # subset=[prob_col + '_numeric'],
                 subset=[prob_col],
-                gmap=df_display['_numeric']
+                gmap=df_display['_numeric'],  # <-- KEY FIX
+                vmin=0,
+                vmax=100
             )
         else:
             styled = df_display.style
