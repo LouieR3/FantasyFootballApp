@@ -442,12 +442,20 @@ def display_betting_odds(file):
         if prob_col in df_display.columns:
             df_display["_numeric"] = df_display[prob_col].str.rstrip('%').astype(float)
 
-            styled = (
-                df_display.style.background_gradient(
-                    cmap="RdYlGn_r",
-                    subset=[prob_col],
-                    gmap=df_display["_numeric"]
-                )
+            # styled = (
+            #     df_display.style.background_gradient(
+            #         cmap="RdYlGn_r",
+            #         subset=[prob_col],
+            #         gmap=df_display["_numeric"]
+            #     )
+            # )
+            styled = df_display.style.background_gradient(
+                cmap="RdYlGn",
+                # subset=[prob_col + '_numeric'],
+                subset=[prob_col],
+                gmap=df_display[prob_col + '_numeric'],  # <-- KEY FIX
+                vmin=0,
+                vmax=100
             )
         else:
             styled = df_display.style
