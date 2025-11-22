@@ -537,7 +537,7 @@ def display_betting_odds_full_width(file):
             vmax=100
         )
         # Drop the numeric column BEFORE displaying
-        df_first_styled = df_first_styled.hide_columns(['_numeric'])
+        df_first_styled = df_first_styled.hide(subset=['_numeric'])
     else:
         df_first_styled = df_first.style
     
