@@ -346,121 +346,119 @@ def display_playoff_odds_by_week(file):
     # Display the styled DataFrame
     # st.dataframe(formatted_df, height=height)
 
-import streamlit as st
-import pandas as pd
-
-
 def display_betting_odds(file):
-    """
-    Displays the three betting odds tables with formatting in Streamlit.
 
-    Parameters:
-    - file (str): Path to the Excel file containing betting odds sheets.
-    """
     st.header('Betting Odds')
     st.write(
         "This section shows American betting odds for various playoff scenarios. "
         "Odds are calculated from 1,000 Monte Carlo simulations based on each team's "
         "scoring history (average score and standard deviation). "
         "Negative odds indicate favorites (bet that amount to win 100), "
-        "while positive odds indicate underdogs (win that amount on 100 bet).FALALA"
+        "while positive odds indicate underdogs (win that amount on 100 bet)."
     )
-    
-    # Create three columns for the three tables
-    col1, col2, col3 = st.columns(3)
-    
-    # --- MAKE PLAYOFF ODDS ---
-    with col1:
-        st.subheader('Make Playoff Odds')
-        df_playoff = pd.read_excel(file, sheet_name="Make Playoff Odds")
-        
-        # Set Team as index if it's a column
-        if 'Team' in df_playoff.columns:
-            df_playoff = df_playoff.set_index('Team')
-        
-        # Convert probability string to numeric for gradient
-        prob_col = 'Playoff_Probability'
-        if prob_col in df_playoff.columns:
-            # Create a numeric column for gradient
-            print(df_playoff)
-            df_playoff['_prob_numeric'] = df_playoff[prob_col].str.rstrip('%').astype(float)
-            print("===")
-            print(df_playoff)
 
-            # Apply gradient to numeric column only
-            df_playoff_styled = df_playoff.style.background_gradient(
-                cmap="RdYlGn",
-                subset=['_prob_numeric'],
-                vmin=0,
-                vmax=100
-            ).format({prob_col: '{}'})  # Keep original formatting for display
-            
-            # Hide the numeric helper column
-            df_playoff_styled = df_playoff_styled.hide(axis="columns", subset=['_prob_numeric'])
+    # Create 3 equal-width columns
+    col1, col2, col3 = st.columns(3)
+
+    # -----------------------------------------------------------
+    # 1) MAKE PLAYOFF ODDS
+    # -----------------------------------------------------------
+    with col1:
+        st.subheader("Make Playoffs")
+        df = pd.read_excel(file, sheet_name="Make Playoff Odds")
+
+        if 'Team' in df.columns:
+            df = df.set_index('Team')
+
+        # Format display
+        df_display = df.copy()
+        df_display.columns = df_display.columns.str.replace('_', ' ')
+
+        prob_col = "Playoff_Probability"
+        prob_col_display = prob_col.replace('_', ' ')
+
+        if prob_col in df.columns:
+            df_display['_numeric'] = df[prob_col].str.rstrip('%').astype(float)
+
+            styled = (
+                df_display.style.background_gradient(
+                    cmap="RdYlGn",
+                    subset=[prob_col_display],
+                    gmap=df_display['_numeric']
+                )
+            )
         else:
-            df_playoff_styled = df_playoff.style
-        
-        st.dataframe(df_playoff_styled)
-    
-    # --- FIRST PLACE ODDS ---
+            styled = df_display.style
+
+        st.dataframe(styled, column_config={"_numeric": None})
+
+
+    # -----------------------------------------------------------
+    # 2) FIRST PLACE ODDS
+    # -----------------------------------------------------------
     with col2:
-        st.subheader('First Place Odds')
-        df_first = pd.read_excel(file, sheet_name="First Place Odds")
-        
-        # Set Team as index if it's a column
-        if 'Team' in df_first.columns:
-            df_first = df_first.set_index('Team')
-        
-        # Convert probability string to numeric for gradient
-        prob_col = 'Probability'
-        if prob_col in df_first.columns:
-            df_first['_prob_numeric'] = df_first[prob_col].str.rstrip('%').astype(float)
-            
-            df_first_styled = df_first.style.background_gradient(
-                cmap="RdYlGn",
-                subset=['_prob_numeric'],
-                vmin=0,
-                vmax=100
-            ).format({prob_col: '{}'})
-            
-            df_first_styled = df_first_styled.hide(axis="columns", subset=['_prob_numeric'])
+        st.subheader("First Place")
+        df = pd.read_excel(file, sheet_name="First Place Odds")
+
+        if 'Team' in df.columns:
+            df = df.set_index('Team')
+
+        df_display = df.copy()
+        df_display.columns = df_display.columns.str.replace('_', ' ')
+
+        prob_col = "Probability"
+
+        if prob_col in df_display.columns:
+            df_display["_numeric"] = df_display[prob_col].str.rstrip('%').astype(float)
+
+            styled = (
+                df_display.style.background_gradient(
+                    cmap="RdYlGn",
+                    subset=[prob_col],
+                    gmap=df_display["_numeric"]
+                )
+            )
         else:
-            df_first_styled = df_first.style
-        
-        st.dataframe(df_first_styled)
-    
-    # --- LAST PLACE ODDS ---
+            styled = df_display.style
+
+        st.dataframe(styled, column_config={"_numeric": None})
+
+
+    # -----------------------------------------------------------
+    # 3) LAST PLACE ODDS
+    # -----------------------------------------------------------
     with col3:
-        st.subheader('Last Place Odds')
-        df_last = pd.read_excel(file, sheet_name="Last Place Odds")
-        
-        # Set Team as index if it's a column
-        if 'Team' in df_last.columns:
-            df_last = df_last.set_index('Team')
-        
-        # Convert probability string to numeric for gradient (reversed colors)
-        prob_col = 'Probability'
-        if prob_col in df_last.columns:
-            df_last['_prob_numeric'] = df_last[prob_col].str.rstrip('%').astype(float)
-            
-            df_last_styled = df_last.style.background_gradient(
-                cmap="RdYlGn_r",  # Reversed: red for high probability, green for low
-                subset=['_prob_numeric'],
-                vmin=0,
-                vmax=100
-            ).format({prob_col: '{}'})
-            
-            df_last_styled = df_last_styled.hide(axis="columns", subset=['_prob_numeric'])
+        st.subheader("Last Place")
+        df = pd.read_excel(file, sheet_name="Last Place Odds")
+
+        if 'Team' in df.columns:
+            df = df.set_index('Team')
+
+        df_display = df.copy()
+        df_display.columns = df_display.columns.str.replace('_', ' ')
+
+        prob_col = "Probability"
+
+        if prob_col in df_display.columns:
+            df_display["_numeric"] = df_display[prob_col].str.rstrip('%').astype(float)
+
+            styled = (
+                df_display.style.background_gradient(
+                    cmap="RdYlGn_r",
+                    subset=[prob_col],
+                    gmap=df_display["_numeric"]
+                )
+            )
         else:
-            df_last_styled = df_last.style
-        
-        st.dataframe(df_last_styled)
-    
-    # Add explanation at the bottom
+            styled = df_display.style
+
+        st.dataframe(styled, column_config={"_numeric": None})
+
+    # Bottom note
     st.markdown("---")
     st.caption(
         "**Note:** Probabilities are shown as percentages with color gradients. "
-        "Green indicates favorable odds, red indicates unfavorable odds."
+        "Green indicates favorable odds, red indicates unfavorable odds for last place."
     )
 
 def display_betting_odds_full_width(file):
