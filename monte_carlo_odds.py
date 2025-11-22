@@ -736,6 +736,7 @@ def calculate_remaining_schedule_difficulty(team_stats, schedules_df, lpi_df, cu
     for team_name, stats in team_stats.items():
         # Calculate team's own stats
         total_games = stats['wins'] + stats['losses'] + stats['ties']
+        team_record = f"{stats['wins']}-{stats['losses']}-{stats['ties']}"
         win_pct = (stats['wins'] + 0.5 * stats['ties']) / total_games if total_games > 0 else 0
         avg_points_for = stats['total_points'] / total_games if total_games > 0 else 0
         
@@ -786,7 +787,7 @@ def calculate_remaining_schedule_difficulty(team_stats, schedules_df, lpi_df, cu
             'Team': team_name,
             'Owner': owner,
             'Avg_Points_For': round(avg_points_for, 2),
-            'Win_Pct': round(win_pct, 3),
+            'Team_Record': team_record,
             'Avg_Opp_Points_For': round(avg_opp_points, 2),
             'Avg_Opp_Win_Pct': round(avg_opp_win_pct, 3),
             'Avg_Opp_LPI': round(avg_opp_lpi, 1),
