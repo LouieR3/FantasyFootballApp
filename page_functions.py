@@ -382,7 +382,7 @@ def display_remaining_schedule_difficulty(file):
     if len(names) <= 10:
         height = "auto"
     else:
-        height = 500 + (len(names) - 12) * 40
+        height = 460 + (len(names) - 12) * 40
     # Display the styled DataFrame
     st.dataframe(df_styled, height=height)
 
