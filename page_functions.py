@@ -360,7 +360,7 @@ def display_remaining_schedule_difficulty(file):
     # df['Avg LPI of Remaining Opponents'] = (df['Avg LPI of Remaining Opponents']
     #                                       .round(2))
     # # Apply gradient styling
-    # df_styled = df.style.background_gradient(subset=['Avg LPI of Remaining Opponents'])
+    df_styled = df.style.background_gradient(subset=['Avg_Opp_Points_For'])
 
     df_names = pd.read_excel(file, sheet_name="Schedule Grid")
     # Display the styled DataFrame
