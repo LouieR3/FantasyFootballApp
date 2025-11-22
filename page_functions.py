@@ -364,6 +364,8 @@ def display_betting_odds(file):
     for col in df_names.columns:
         if col != "Team":
             names.append(col)
+    print("=======")
+    print(names)
     if len(names) <= 10:
         height = "auto"
     else:
