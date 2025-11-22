@@ -450,7 +450,7 @@ def display_betting_odds(file):
             #     )
             # )
             styled = df_display.style.background_gradient(
-                cmap="RdYlGn_r",
+                cmap="RdYlGn",
                 # subset=[prob_col + '_numeric'],
                 subset=[prob_col],
                 gmap=df_display['_numeric']
