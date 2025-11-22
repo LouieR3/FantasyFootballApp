@@ -546,7 +546,7 @@ def display_betting_odds_full_width(file):
     else:
         df_first_styled = df_first.style
     
-    st.dataframe(df_first_styled, width=650)
+    st.dataframe(df_first_styled, width=650, column_config={prob_col + '_numeric': None})
     
     st.markdown("---")
     
