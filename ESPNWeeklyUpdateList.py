@@ -19,7 +19,7 @@ from monte_carlo_odds import (
     calculate_remaining_schedule_difficulty
 )
 from all_matchups import get_weeks_matchups
-from create_betting_odds import create_betting_odds
+# from create_betting_odds import create_betting_odds
 
 start_time = time.time()
 
@@ -580,6 +580,6 @@ try:
 except FileNotFoundError:
     print("No existing all_matchups.csv found, creating a new one.")
 
-create_betting_odds(leagues, year)
+# create_betting_odds(leagues, year)
 
 print("--- %s seconds ---" % (time.time() - start_time))

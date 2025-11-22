@@ -242,38 +242,31 @@ years = [2025]
 
 # all_matchups_df = get_all_matchups(leagues, years)
 # print(all_matchups_df)
-all_matchups_df = get_weeks_matchups(leagues, year)
-# Dave Friend League
-# league = League(league_id= 1924463077, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
-# league = League(league_id=558148583, year=year, espn_s2=ayush_s2, swid='{668E3A23-4B03-4D9E-9804-4C9D479F4E8F}')
-# all_matchups_df = get_years_matchups(league, year)
-print(all_matchups_df)
-try:
-    current_matchups = pd.read_csv("all_matchups.csv")
-    # print(current_matchups)
-    # current_matchups = current_matchups.drop_duplicates(
-    #     subset=["League","Year","Week","Home Team"]
-    # )
-    print(current_matchups)
-    # current_matchups.to_csv("all_matchups.csv", index=False)
-    all_matchups_df = pd.concat([current_matchups, all_matchups_df]).drop_duplicates().reset_index(drop=True)
-    print(all_matchups_df)
-    all_matchups_df["Home Predicted Score"] = all_matchups_df["Home Predicted Score"].round(2)
-    all_matchups_df["Away Predicted Score"] = all_matchups_df["Away Predicted Score"].round(2)
-    all_matchups_df["Predicted Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
-    all_matchups_df["Actual Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
-    print("Merged with existing all_matchups.csv")
-    print(all_matchups_df)
-    all_matchups_df.to_csv("all_matchups.csv", index=False)
-except FileNotFoundError:
-    print("No existing all_matchups.csv found, creating a new one.")
 
-# all_matchups = pd.read_csv("all_matchups.csv")
-# print(all_matchups)
-# all_matchups["Predicted Winner"] = all_matchups.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
-# all_matchups["Actual Winner"] = all_matchups.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
-# print(all_matchups)
-# all_matchups.to_csv("all_matchups.csv", index=False)
 
-# prediction_accuracy = (all_matchups["Predicted Winner"] == all_matchups["Actual Winner"]).mean()
-# print(f"Overall Prediction Accuracy: {prediction_accuracy:.2%}")
+# all_matchups_df = get_weeks_matchups(leagues, year)
+# # Dave Friend League
+# # league = League(league_id= 1924463077, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
+# # league = League(league_id=558148583, year=year, espn_s2=ayush_s2, swid='{668E3A23-4B03-4D9E-9804-4C9D479F4E8F}')
+# # all_matchups_df = get_years_matchups(league, year)
+# print(all_matchups_df)
+# try:
+#     current_matchups = pd.read_csv("all_matchups.csv")
+#     # print(current_matchups)
+#     # current_matchups = current_matchups.drop_duplicates(
+#     #     subset=["League","Year","Week","Home Team"]
+#     # )
+#     print(current_matchups)
+#     # current_matchups.to_csv("all_matchups.csv", index=False)
+#     all_matchups_df = pd.concat([current_matchups, all_matchups_df]).drop_duplicates().reset_index(drop=True)
+#     print(all_matchups_df)
+#     all_matchups_df["Home Predicted Score"] = all_matchups_df["Home Predicted Score"].round(2)
+#     all_matchups_df["Away Predicted Score"] = all_matchups_df["Away Predicted Score"].round(2)
+#     all_matchups_df["Predicted Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
+#     all_matchups_df["Actual Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
+#     print("Merged with existing all_matchups.csv")
+#     print(all_matchups_df)
+#     all_matchups_df.to_csv("all_matchups.csv", index=False)
+# except FileNotFoundError:
+#     print("No existing all_matchups.csv found, creating a new one.")
+
