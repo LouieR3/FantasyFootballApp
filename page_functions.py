@@ -358,9 +358,11 @@ def display_remaining_schedule_difficulty(file):
     df.index += 1
 
     # Format specific columns
-    columns_to_format = ['Avg_Points_For', 'Avg_Opp_Points_For', 'Avg_Opp_Win_Pct', 'Avg_Opp_LPI']
+    columns_to_format = ['Avg_Points_For', 'Avg_Opp_Points_For', 'Avg_Opp_LPI']
     df[columns_to_format] = df[columns_to_format].applymap(lambda x: f"{x:.1f}")  # Format to 1 decimal place
-    df['Win_Pct'] = df['Win_Pct'].apply(lambda x: f"{x:.3f}")  # Format to 3 decimal places
+    df = df.drop('Win_Pct', axis=1) 
+    # df['Win_Pct'] = df['Win_Pct'].apply(lambda x: f"{x:.3f}")  # Format to 3 decimal places
+    df['Avg_Opp_Win_Pct'] = df['Avg_Opp_Win_Pct'].apply(lambda x: f"{x:.3f}")  # Format to 3 decimal places
 
     # df['Avg LPI of Remaining Opponents'] = (df['Avg LPI of Remaining Opponents']
     #                                       .round(2))
