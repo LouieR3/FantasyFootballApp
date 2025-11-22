@@ -346,6 +346,38 @@ def display_playoff_odds_by_week(file):
     # Display the styled DataFrame
     # st.dataframe(formatted_df, height=height)
 
+def display_remaining_schedule_difficulty(file):
+    st.header('Remaining Schedule Difficulty')
+    st.write("This table shows the average Louie Power Index (LPI) of each team's remaining opponents for the rest of the season. A higher average LPI indicates a tougher remaining schedule, while a lower average LPI suggests an easier path ahead.")
+    
+    # Read the Excel sheet
+    df = pd.read_excel(file, sheet_name="Remaining Schedule Difficulty")
+    
+    # Process the DataFrame
+    df = df.iloc[:, 1:]
+    df.index += 1
+
+    # df['Avg LPI of Remaining Opponents'] = (df['Avg LPI of Remaining Opponents']
+    #                                       .round(2))
+    # # Apply gradient styling
+    # df_styled = df.style.background_gradient(subset=['Avg LPI of Remaining Opponents'])
+
+    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    # Display the styled DataFrame
+    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
+    df_names = df_names.set_index("Teams")
+    pd.options.mode.chained_assignment = None
+    names = []
+    for col in df_names.columns:
+        if col != "Teams":
+            names.append(col)
+    if len(names) <= 10:
+        height = "auto"
+    else:
+        height = 500 + (len(names) - 12) * 40
+    # Display the styled DataFrame
+    st.dataframe(df_styled, height=height)
+
 def display_betting_odds(file):
 
     st.header('Betting Odds')

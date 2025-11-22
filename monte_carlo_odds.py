@@ -710,134 +710,286 @@ def retrieve_odds_dfs(seed_df, num_teams, team_stats):
     
     return make_playoff_odds_df, first_place_odds_df, last_place_odds_df
 
-# def main():
-#     # ESPN API setup (using your provided data structure)
-#     espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
-#     year = 2025
-#     # Pennoni Younglings
-#     # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
-#     league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
-#     # hannah_s2 = "AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D"
-#     # league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
+def calculate_remaining_schedule_difficulty(team_stats, schedules_df, lpi_df, current_week, reg_season_count):
+    """
+    Calculate the difficulty of remaining schedule for each team based on opponents' stats.
+    
+    Args:
+        team_stats: Dictionary of team statistics including wins, losses, ties, total_points
+        schedules_df: DataFrame with team schedules (team names as index, weeks as columns)
+        lpi_df: DataFrame with LPI rankings (columns: Teams, Owners, Louie Power Index (LPI), Record, etc.)
+        current_week: Current week number (first unplayed week)
+        reg_season_count: Total number of regular season games
+    
+    Returns:
+        pd.DataFrame: DataFrame with remaining schedule difficulty metrics
+    """
+    
+    # Create LPI lookup dictionary
+    lpi_dict = dict(zip(lpi_df['Teams'], lpi_df['Louie Power Index (LPI)']))
+    
+    # Create owner lookup dictionary
+    owner_dict = dict(zip(lpi_df['Teams'], lpi_df['Owners']))
+    
+    schedule_data = []
+    
+    for team_name, stats in team_stats.items():
+        # Calculate team's own stats
+        total_games = stats['wins'] + stats['losses'] + stats['ties']
+        win_pct = (stats['wins'] + 0.5 * stats['ties']) / total_games if total_games > 0 else 0
+        avg_points_for = stats['total_points'] / total_games if total_games > 0 else 0
+        
+        # Get remaining opponents (from current_week to end of regular season)
+        remaining_weeks = range(current_week - 1, reg_season_count)  # -1 because schedules are 0-indexed
+        
+        if team_name in schedules_df.index:
+            team_schedule = schedules_df.loc[team_name]
+            remaining_opponents = [team_schedule[week] for week in remaining_weeks if week < len(team_schedule)]
+        else:
+            remaining_opponents = []
+        
+        # Calculate opponent averages
+        if remaining_opponents:
+            opp_points_list = []
+            opp_win_pct_list = []
+            opp_lpi_list = []
+            
+            for opponent in remaining_opponents:
+                if opponent in team_stats:
+                    opp_stats = team_stats[opponent]
+                    opp_total_games = opp_stats['wins'] + opp_stats['losses'] + opp_stats['ties']
+                    
+                    # Opponent points for
+                    opp_avg_points = opp_stats['total_points'] / opp_total_games if opp_total_games > 0 else 0
+                    opp_points_list.append(opp_avg_points)
+                    
+                    # Opponent win percentage
+                    opp_win_pct = (opp_stats['wins'] + 0.5 * opp_stats['ties']) / opp_total_games if opp_total_games > 0 else 0
+                    opp_win_pct_list.append(opp_win_pct)
+                    
+                    # Opponent LPI
+                    if opponent in lpi_dict:
+                        opp_lpi_list.append(lpi_dict[opponent])
+            
+            avg_opp_points = np.mean(opp_points_list) if opp_points_list else 0
+            avg_opp_win_pct = np.mean(opp_win_pct_list) if opp_win_pct_list else 0
+            avg_opp_lpi = np.mean(opp_lpi_list) if opp_lpi_list else 0
+        else:
+            avg_opp_points = 0
+            avg_opp_win_pct = 0
+            avg_opp_lpi = 0
+        
+        # Get owner name
+        owner = owner_dict.get(team_name, "Unknown")
+        
+        schedule_data.append({
+            'Team': team_name,
+            'Owner': owner,
+            'Avg_Points_For': round(avg_points_for, 2),
+            'Win_Pct': round(win_pct, 3),
+            'Avg_Opp_Points_For': round(avg_opp_points, 2),
+            'Avg_Opp_Win_Pct': round(avg_opp_win_pct, 3),
+            'Avg_Opp_LPI': round(avg_opp_lpi, 1),
+            'Games_Remaining': len(remaining_opponents) if remaining_opponents else 0
+        })
+    
+    # Create DataFrame
+    schedule_df = pd.DataFrame(schedule_data)
+    
+    # Sort by average opponent difficulty (combination of metrics)
+    # Higher opponent stats = harder schedule, so sort descending
+    schedule_df = schedule_df.sort_values('Avg_Opp_LPI', ascending=False).reset_index(drop=True)
+    
+    return schedule_df
 
-    
-#     # League settings
-#     settings = league.settings
-#     reg_season_count = settings.reg_season_count
-#     num_playoff_teams = settings.playoff_team_count
-    
-#     # Get teams and data
-#     teams = league.teams
-#     team_scores = [team.scores for team in teams]
-#     team_owners = [team.owners[0]['id'] for team in teams]
-    
-#     # Create scores DataFrame
-#     scores_df = pd.DataFrame(team_scores, index=team_owners)
-    
-#     # Calculate current week
-#     zero_week = (scores_df == 0.0).all(axis=0)
-#     if zero_week.any():
-#         current_week = zero_week.idxmax() +1
-#     else:
-#         current_week = scores_df.shape[1]
-    
-#     print(f"Current week: {current_week}")
-#     print(f"Regular season games: {reg_season_count}")
-#     print(f"Playoff teams: {num_playoff_teams}")
-#     print(f"Total teams: {len(teams)}")
-    
-#     # Calculate team statistics
-#     team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
-    
-#     # Determine how many regular season games remain
-#     completed_reg_games = min(current_week - 1, reg_season_count)
-#     remaining_reg_games = max(0, reg_season_count - completed_reg_games)
-    
-#     print(f"Regular season games completed: {completed_reg_games}")
-#     print(f"Regular season games remaining: {remaining_reg_games}")
-    
-#     # Run Monte Carlo simulation
-#     print("Running Monte Carlo simulation for remaining regular season...")
-#     final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
-#         teams, team_stats, current_week, reg_season_count, num_playoff_teams, num_simulations=1000
-#     )
-    
-#     # Create summary dataframes
-#     summary_df, seed_df = create_summary_dataframes(
-#         team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
-#     )
-    
-#     # Sort by playoff chances
-#     summary_df = summary_df.sort_values('Playoff_Chance_Pct', ascending=False).reset_index(drop=True)
-    
-#     # Sort seed_df by playoff chances (using the new column)
-#     seed_df = seed_df.sort_values('Chance of Making Playoffs', ascending=False).reset_index(drop=True)
-    
-#     # Display results
-#     print("\n" + "="*80)
-#     print("FANTASY FOOTBALL PLAYOFF PREDICTIONS")
-#     print("="*80)
-    
-#     print(f"\nSUMMARY - Regular Season Playoff Predictions:")
-#     print("(Based on regular season performance only)")
-#     display_cols = ['Team', 'Current_Record', 'Current_Win_Pct', 'Total_Points_For', 'Playoff_Chance_Pct', 'Last_Place_Chance_Pct', 'Expected_Final_Record', 'Most_Likely_Record']
-#     print(summary_df[display_cols].to_string(index=False, float_format='%.1f'))
-    
-#     print(f"\nSEED PROBABILITIES (All positions and playoff chances):")
-#     print("(Values represent percentage chance of finishing in each position)")
-    
-#     # Show first 8 place columns plus playoff chance column
-#     display_cols = ['Team']
-#     for i in range(1, min(9, len(teams) + 1)):
-#         place_suffix = get_ordinal_suffix(i)
-#         display_cols.append(f'{i}{place_suffix} Place')
-#     display_cols.append('Chance of Making Playoffs')
-    
-#     available_cols = [col for col in display_cols if col in seed_df.columns]
-#     print(seed_df[available_cols].to_string(index=False, float_format='%.1f'))
 
-#     # After getting your league data
-#     weekly_playoff_df = calculate_playoff_chances_by_week(
-#         teams, scores_df, reg_season_count, num_playoff_teams, current_week
-#     )
-#     print("\nWeekly Playoff Chances:")
-#     print(weekly_playoff_df)
-
-#     # Or use the integrated function for full output
-#     weekly_df = add_weekly_analysis_to_main(
-#         teams, scores_df, reg_season_count, num_playoff_teams, current_week
-#     )
-#     print()
-#     print(weekly_df)
-
-#     num_teams = len(teams)
-
-#     display_betting_odds(seed_df, num_teams, team_stats)
-#     # Save to Excel if desired
-#     # try:
-#     #     with pd.ExcelWriter('fantasy_predictions.xlsx') as writer:
-#     #         summary_df.to_excel(writer, sheet_name='Summary', index=False)
-#     #         seed_df.to_excel(writer, sheet_name='Seed_Probabilities', index=False)
-#     #     print(f"\nResults saved to 'fantasy_predictions.xlsx'")
-#     # except:
-#     #     print(f"\nCould not save Excel file - results displayed above")
-#     # summary_df = (
-#     #     summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
-#     #             .reset_index(drop=True)
-#     #             .set_index("Team")
-#     # )
-
-#     # seed_df = (
-#     #     seed_df.sort_values('Chance of Making Playoffs', ascending=False)
-#     #         .reset_index(drop=True)
-#     #         .set_index("Team")
-#     # )
+def display_remaining_schedule_difficulty(schedule_df):
+    """
+    Display the remaining schedule difficulty with formatted output.
     
-#     return summary_df, seed_df
+    Args:
+        schedule_df: DataFrame from calculate_remaining_schedule_difficulty
+    """
+    print("\n" + "="*100)
+    print("REMAINING SCHEDULE DIFFICULTY")
+    print("="*100)
+    print("\nTeam's Own Stats vs. Remaining Opponents' Average Stats")
+    print("-"*100)
+    
+    display_cols = ['Team', 'Owner', 'Avg_Points_For', 'Win_Pct', 
+                    'Avg_Opp_Points_For', 'Avg_Opp_Win_Pct', 'Avg_Opp_LPI', 'Games_Remaining']
+    
+    print(schedule_df[display_cols].to_string(index=False))
+    
+
+# Example usage function
+def analyze_remaining_schedule(team_stats, schedules_df, lpi_df, current_week, reg_season_count):
+    """
+    Convenience function to calculate and display remaining schedule difficulty.
+    
+    Args:
+        team_stats: Dictionary of team statistics
+        schedules_df: DataFrame with team schedules
+        lpi_df: DataFrame with LPI rankings
+        current_week: Current week number
+        reg_season_count: Total regular season games
+    
+    Returns:
+        pd.DataFrame: Schedule difficulty DataFrame
+    """
+    schedule_df = calculate_remaining_schedule_difficulty(
+        team_stats, schedules_df, lpi_df, current_week, reg_season_count
+    )
+    
+    display_remaining_schedule_difficulty(schedule_df)
+    
+    return schedule_df
+
+def main():
+    # ESPN API setup (using your provided data structure)
+    espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
+    year = 2025
+    # Pennoni Younglings
+    # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+    league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+    # hannah_s2 = "AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D"
+    # league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
+
+    # League settings
+    settings = league.settings
+    reg_season_count = settings.reg_season_count
+    num_playoff_teams = settings.playoff_team_count
+    
+    # Get teams and data
+    teams = league.teams
+    team_scores = [team.scores for team in teams]
+    team_owners = [team.owners[0]['id'] for team in teams]
+    team_names = [team.team_name for team in league.teams]
+    
+    # Create scores DataFrame
+    scores_df = pd.DataFrame(team_scores, index=team_owners)
+    
+    # Calculate current week
+    zero_week = (scores_df == 0.0).all(axis=0)
+    if zero_week.any():
+        current_week = zero_week.idxmax() +1
+    else:
+        current_week = scores_df.shape[1]
+    
+    print(f"Current week: {current_week}")
+    print(f"Regular season games: {reg_season_count}")
+    print(f"Playoff teams: {num_playoff_teams}")
+    print(f"Total teams: {len(teams)}")
+    
+    # Calculate team statistics
+    team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
+    
+    # Determine how many regular season games remain
+    completed_reg_games = min(current_week - 1, reg_season_count)
+    remaining_reg_games = max(0, reg_season_count - completed_reg_games)
+    
+    print(f"Regular season games completed: {completed_reg_games}")
+    print(f"Regular season games remaining: {remaining_reg_games}")
+    
+    # Run Monte Carlo simulation
+    print("Running Monte Carlo simulation for remaining regular season...")
+    final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
+        teams, team_stats, current_week, reg_season_count, num_playoff_teams, num_simulations=1000
+    )
+    
+    # Create summary dataframes
+    summary_df, seed_df = create_summary_dataframes(
+        team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
+    )
+    
+    # Sort by playoff chances
+    summary_df = summary_df.sort_values('Playoff_Chance_Pct', ascending=False).reset_index(drop=True)
+    
+    # Sort seed_df by playoff chances (using the new column)
+    seed_df = seed_df.sort_values('Chance of Making Playoffs', ascending=False).reset_index(drop=True)
+    
+    # Display results
+    print("\n" + "="*80)
+    print("FANTASY FOOTBALL PLAYOFF PREDICTIONS")
+    print("="*80)
+    
+    print(f"\nSUMMARY - Regular Season Playoff Predictions:")
+    print("(Based on regular season performance only)")
+    display_cols = ['Team', 'Current_Record', 'Current_Win_Pct', 'Total_Points_For', 'Playoff_Chance_Pct', 'Last_Place_Chance_Pct', 'Expected_Final_Record', 'Most_Likely_Record']
+    print(summary_df[display_cols].to_string(index=False, float_format='%.1f'))
+    
+    print(f"\nSEED PROBABILITIES (All positions and playoff chances):")
+    print("(Values represent percentage chance of finishing in each position)")
+    
+    # Show first 8 place columns plus playoff chance column
+    display_cols = ['Team']
+    for i in range(1, min(9, len(teams) + 1)):
+        place_suffix = get_ordinal_suffix(i)
+        display_cols.append(f'{i}{place_suffix} Place')
+    display_cols.append('Chance of Making Playoffs')
+    
+    available_cols = [col for col in display_cols if col in seed_df.columns]
+    print(seed_df[available_cols].to_string(index=False, float_format='%.1f'))
+
+    # After getting your league data
+    weekly_playoff_df = calculate_playoff_chances_by_week(
+        teams, scores_df, reg_season_count, num_playoff_teams, current_week
+    )
+    print("\nWeekly Playoff Chances:")
+    print(weekly_playoff_df)
+
+    # Or use the integrated function for full output
+    weekly_df = add_weekly_analysis_to_main(
+        teams, scores_df, reg_season_count, num_playoff_teams, current_week
+    )
+    print()
+    print(weekly_df)
+
+    num_teams = len(teams)
+
+    schedules = []
+    for team in league.teams:
+        schedule = [opponent.team_name for opponent in team.schedule]
+        schedules.append(schedule)
+    # print(current_week)
+    schedules_df = pd.DataFrame(schedules, index=team_names)
+
+    leagueName = league.settings.name
+    fileName = leagueName + " " + str(year)
+    fileName = f"leagues/{fileName}.xlsx"
+    lpi_df = pd.read_excel(fileName, sheet_name="Louie Power Index", index_col=0)  # Team names as index
+
+    analyze_remaining_schedule(team_stats, schedules_df, lpi_df, current_week, reg_season_count)
+
+    # schedule_df = calculate_remaining_schedule_difficulty(team_stats, schedules_df, lpi_df, current_week, reg_season_count)
+    # print(schedule_df)
+
+    # display_betting_odds(seed_df, num_teams, team_stats)
+    # Save to Excel if desired
+    # try:
+    #     with pd.ExcelWriter('fantasy_predictions.xlsx') as writer:
+    #         summary_df.to_excel(writer, sheet_name='Summary', index=False)
+    #         seed_df.to_excel(writer, sheet_name='Seed_Probabilities', index=False)
+    #     print(f"\nResults saved to 'fantasy_predictions.xlsx'")
+    # except:
+    #     print(f"\nCould not save Excel file - results displayed above")
+    # summary_df = (
+    #     summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
+    #             .reset_index(drop=True)
+    #             .set_index("Team")
+    # )
+
+    # seed_df = (
+    #     seed_df.sort_values('Chance of Making Playoffs', ascending=False)
+    #         .reset_index(drop=True)
+    #         .set_index("Team")
+    # )
+    
+    return summary_df, seed_df
 
 # Global variables for settings
-# reg_season_count = 17  # Default, will be updated from API
-# num_playoff_teams = 6  # Default, will be updated from API
+reg_season_count = 17  # Default, will be updated from API
+num_playoff_teams = 6  # Default, will be updated from API
 
 def run_simulation_with_data(teams, scores_df, reg_season_count, num_playoff_teams, current_week=None, num_simulations=1000):
     """
@@ -879,5 +1031,5 @@ def run_simulation_with_data(teams, scores_df, reg_season_count, num_playoff_tea
     
     return summary_df, seed_df
 
-# if __name__ == "__main__":
-#     summary_df, seed_df = main()
+if __name__ == "__main__":
+    summary_df, seed_df = main()

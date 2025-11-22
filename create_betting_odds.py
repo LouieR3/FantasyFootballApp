@@ -66,91 +66,79 @@ leagues = [
     {"league_id": 558148583, "year": year, "espn_s2": ayush_s2, "swid": "{668E3A23-4B03-4D9E-9804-4C9D479F4E8F}", "name": "Ross' Fantasy League"},
 ]
 
-# Loop through each league configuration
-for league_config in leagues:
-    try:
-        league = League(
-            league_id=league_config["league_id"],
-            year=league_config["year"],
-            espn_s2=league_config["espn_s2"],
-            swid=league_config["swid"],
-        )
-        print(f"Processing league: {league_config['name']}")
-    
-        settings = league.settings
+def create_betting_odds(leagues, year):
+    # Loop through each league configuration
+    for league_config in leagues:
+        try:
+            league = League(
+                league_id=league_config["league_id"],
+                year=league_config["year"],
+                espn_s2=league_config["espn_s2"],
+                swid=league_config["swid"],
+            )
+            print(f"Processing league: {league_config['name']}")
+        
+            settings = league.settings
 
-        leagueName = settings.name.replace(" 22/23", "")
-        fileName = leagueName + " " + str(year) + " Betting Odds"
-        file = leagueName + ".xlsx"
+            leagueName = settings.name.replace(" 22/23", "")
+            fileName = leagueName + " " + str(year) + " Betting Odds"
+            file = leagueName + ".xlsx"
 
-        # team_owners = [team.owners for team in league.teams]
-        team_names = [team.team_name for team in league.teams]
-        team_scores = [team.scores for team in league.teams] 
-        team_scores_x = [team.scores for team in league.teams] 
-        schedules = []
-        for team in league.teams:
-            schedule = [opponent.team_name for opponent in team.schedule]
-            schedules.append(schedule)
+            # team_owners = [team.owners for team in league.teams]
+            team_names = [team.team_name for team in league.teams]
+            team_scores = [team.scores for team in league.teams] 
+            team_scores_x = [team.scores for team in league.teams] 
+            schedules = []
+            for team in league.teams:
+                schedule = [opponent.team_name for opponent in team.schedule]
+                schedules.append(schedule)
 
 
-        # Store data in DataFrames 
-        scores_df = pd.DataFrame(team_scores, index=team_names)
+            # Store data in DataFrames 
+            scores_df = pd.DataFrame(team_scores, index=team_names)
 
-        # Calculate current week
-        zero_week = (scores_df == 0.0).all(axis=0)
-        if zero_week.any():
-            current_week = zero_week.idxmax() +1
-        else:
-            current_week = scores_df.shape[1]
-        # print(current_week)
-        schedules_df = pd.DataFrame(schedules, index=team_names)
-        # print(scores_df)
-        # print()
-        # print(schedules_df)
-        # Create empty dataframe  
-        records_df = pd.DataFrame(index=team_names, columns=team_names)
+            # Calculate current week
+            zero_week = (scores_df == 0.0).all(axis=0)
+            if zero_week.any():
+                current_week = zero_week.idxmax() +1
+            else:
+                current_week = scores_df.shape[1]
+            schedules_df = pd.DataFrame(schedules, index=team_names)
+            records_df = pd.DataFrame(index=team_names, columns=team_names)
 
-        # Fill diagonal with team names
-        records_df.fillna('', inplace=True) 
+            # Fill diagonal with team names
+            records_df.fillna('', inplace=True) 
 
-        teams= league.teams
-        reg_season_count = settings.reg_season_count
-        num_playoff_teams = settings.playoff_team_count
-        # Then use them step by step in your existing code
-        team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
-        final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
-            teams, team_stats, current_week, reg_season_count, num_playoff_teams
-        )
-        summary_df, seed_df = create_summary_dataframes(
-            team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
-        )
-        print(summary_df)
-        summary_df = (
-            summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
-            .reset_index(drop=True)
-            .set_index("Team")
-        )
-        print(seed_df)
+            teams= league.teams
+            reg_season_count = settings.reg_season_count
+            num_playoff_teams = settings.playoff_team_count
+            # Then use them step by step in your existing code
+            team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
+            final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
+                teams, team_stats, current_week, reg_season_count, num_playoff_teams
+            )
+            summary_df, seed_df = create_summary_dataframes(
+                team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
+            )
+            summary_df = (
+                summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
+                .reset_index(drop=True)
+                .set_index("Team")
+            )
+            num_teams = len(teams)
 
-        # print(seed_df)
+            make_playoff_odds_df, first_place_odds_df, last_place_odds_df = retrieve_odds_dfs(seed_df, num_teams, team_stats)
 
-        # sdfg
-        num_teams = len(teams)
-
-        make_playoff_odds_df, first_place_odds_df, last_place_odds_df = retrieve_odds_dfs(seed_df, num_teams, team_stats)
-        print(make_playoff_odds_df)
-        print(fileName)
-
-        writer = pd.ExcelWriter(f"odds/{fileName}.xlsx", engine='xlsxwriter')
-        make_playoff_odds_df.to_excel(writer, sheet_name='Make Playoff Odds')
-        first_place_odds_df.to_excel(writer, sheet_name='First Place Odds')
-        last_place_odds_df.to_excel(writer, sheet_name='Last Place Odds')
-        writer.close()
-        # --------------------------------------------------------------------------------------
-    except Exception as e:
-        # Handle errors, such as the league not existing
-        print(f"Error: League '{league_config['name']}' for year {league_config['year']} does not exist or could not be loaded.")
-        print(f"Details: {str(e)}")
-        continue  # Move to the next league
+            writer = pd.ExcelWriter(f"odds/{fileName}.xlsx", engine='xlsxwriter')
+            make_playoff_odds_df.to_excel(writer, sheet_name='Make Playoff Odds')
+            first_place_odds_df.to_excel(writer, sheet_name='First Place Odds')
+            last_place_odds_df.to_excel(writer, sheet_name='Last Place Odds')
+            writer.close()
+            # --------------------------------------------------------------------------------------
+        except Exception as e:
+            # Handle errors, such as the league not existing
+            print(f"Error: League '{league_config['name']}' for year {league_config['year']} does not exist or could not be loaded.")
+            print(f"Details: {str(e)}")
+            continue  # Move to the next league
 
 print("--- %s seconds ---" % (time.time() - start_time))

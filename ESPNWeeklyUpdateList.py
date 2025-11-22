@@ -15,8 +15,11 @@ from monte_carlo_odds import (
     calculate_team_stats, 
     simulate_remaining_season, 
     create_summary_dataframes,
-    add_weekly_analysis_to_main
+    add_weekly_analysis_to_main,
+    calculate_remaining_schedule_difficulty
 )
+from all_matchups import get_weeks_matchups
+from create_betting_odds import create_betting_odds
 
 start_time = time.time()
 
@@ -364,6 +367,10 @@ for league_config in leagues:
         )
         print(seed_df)
 
+        remaining_schedue_df = calculate_remaining_schedule_difficulty(
+            team_stats, schedules_df, lpi_df, current_week, reg_season_count
+        )
+
         seed_df = (
             seed_df.sort_values('Chance of Making Playoffs', ascending=False)
                 .reset_index(drop=True)
@@ -539,13 +546,14 @@ for league_config in leagues:
             # Add playoff_df as a new sheet to the existing Excel file
             with pd.ExcelWriter(fileName, engine="openpyxl", mode="a") as writer:
                 playoff_df.to_excel(writer, sheet_name="Playoff Results", index=False)
-
+            
         writer = pd.ExcelWriter(f"leagues/{fileName}.xlsx", engine='xlsxwriter')
         records_df.to_excel(writer, sheet_name='Schedule Grid')
         schedule_rank_df.to_excel(writer, sheet_name='Wins Against Schedule')
         rank_df.to_excel(writer, sheet_name='Expected Wins')
         seed_df.to_excel(writer, sheet_name='Playoff Odds')
         weekly_df.to_excel(writer, sheet_name='Playoff Odds By Week')
+        remaining_schedue_df.to_excel(writer, sheet_name='Remaining Schedule Difficulty')
         summary_df.to_excel(writer, sheet_name='Record Odds')
         lpi_df.to_excel(writer, sheet_name='Louie Power Index')
         lpi_weekly_df.to_excel(writer, sheet_name='LPI By Week')
@@ -557,5 +565,21 @@ for league_config in leagues:
         print(f"Error: League '{league_config['name']}' for year {league_config['year']} does not exist or could not be loaded.")
         print(f"Details: {str(e)}")
         continue  # Move to the next league
+
+all_matchups_df = get_weeks_matchups(leagues, year)
+try:
+    current_matchups = pd.read_csv("all_matchups.csv")
+    all_matchups_df = pd.concat([current_matchups, all_matchups_df]).drop_duplicates().reset_index(drop=True)
+    all_matchups_df["Home Predicted Score"] = all_matchups_df["Home Predicted Score"].round(2)
+    all_matchups_df["Away Predicted Score"] = all_matchups_df["Away Predicted Score"].round(2)
+    all_matchups_df["Predicted Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
+    all_matchups_df["Actual Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
+    print("Merged with existing all_matchups.csv")
+    print(all_matchups_df)
+    all_matchups_df.to_csv("all_matchups.csv", index=False)
+except FileNotFoundError:
+    print("No existing all_matchups.csv found, creating a new one.")
+
+create_betting_odds(leagues, year)
 
 print("--- %s seconds ---" % (time.time() - start_time))
