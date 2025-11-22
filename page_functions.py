@@ -356,14 +356,13 @@ def display_betting_odds(file):
         "Negative odds indicate favorites (bet that amount to win 100), "
         "while positive odds indicate underdogs (win that amount on 100 bet)."
     )
-    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    df_names = pd.read_excel(file, sheet_name="Make Playoff Odds")
     # Display the styled DataFrame
-    df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-    df_names = df_names.set_index("Teams")
+    df_names = df_names.set_index("Team")
     pd.options.mode.chained_assignment = None
     names = []
     for col in df_names.columns:
-        if col != "Teams":
+        if col != "Team":
             names.append(col)
     if len(names) <= 10:
         height = "auto"
