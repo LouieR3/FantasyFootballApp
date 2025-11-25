@@ -60,3 +60,6 @@ File drafts/Turf On Grade 2.0 FreeAgent Results 2023.csv does not exist. BAD
 
 File drafts/Turf On Grade 2.0 Draft Results 2024.csv does not exist. BAD
 File drafts/Turf On Grade 2.0 FreeAgent Results 2024.csv does not exist. BAD
+
+Simulate playoffs monte carlo style
+odds to win it all
