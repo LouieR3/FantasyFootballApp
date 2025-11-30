@@ -3,7 +3,8 @@ from espn_api.football import League
 import pandas as pd
 import time
 from operator import itemgetter
-# import xlsxwriter
+
+import xlsxwriter
 from itertools import combinations
 import itertools
 import math
@@ -11,10 +12,10 @@ import numpy as np
 import random
 import openpyxl
 from monte_carlo_odds import (
-    calculate_team_stats, 
-    simulate_remaining_season, 
+    calculate_team_stats,
+    simulate_remaining_season,
     create_summary_dataframes,
-    add_weekly_analysis_to_main
+    add_weekly_analysis_to_main,
 )
 
 
@@ -28,8 +29,13 @@ year = 2025
 # Family League
 # league = League(league_id=996930954, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
 
-# EBC League
-league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+# # EBC League
+# league = League(
+#     league_id=1118513122,
+#     year=year,
+#     espn_s2=espn_s2,
+#     swid="{4656A2AD-A939-460B-96A2-ADA939760B8B}",
+# )
 
 # Pennoni Transportation
 # league = League(league_id=1339704102, year=year, espn_s2='AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4', swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
@@ -55,6 +61,7 @@ matt_s2 = "AEApTMk4bKXLS%2ByFC85I7AlYVnFOTx28Qn8C5ElSPEEY3%2BV6Jn0RzRDIb1H39fmRU
 elle_s2 = "AECfQX9GAenUR7mbrWgFnjVxXJJEz4u%2BKEZUVBlsfc%2FnRHEmQJhqDOvGAxCjq%2BpWobEwQaiNR2L2kFAZRcIxX9y3pWjZd%2BHuV4KL0gq495A4Ve%2Fnza1Ap%2BGM5hQwgIpHqKL%2BosHEXvXVBfUxUmmX%2BG7HkNIir0lAZIX3CS68XAO6KXX5aEl%2BjUsc8pYqNAiaEiCEyLdULrUimPcog39bHlbmIuwYHXf2LsMHWUdQ1RrDGP%2BOIpKXx257vQLxnW%2FI72Eg7W%2Fg6Htwx1TpG5U9eMXEwQp0UEKHanE0YSgnTTELIw%3D%3D"
 dave_s2 = "AEATfV13bzJs4HpWGw5IMP0Hoh9yD7FJ%2FWPkdfAC8pOMFdD9RT8wgdt%2BoACXFYuTYIBcpKSl1vPlVip8kDK8mqBlSh2ulGveo35%2BZMYhANuNP%2FfZCdttmqnrzzYjA7UedbVQfVpUcNgwrTD6Xn0dkyHQyDoOqrJbGGFbDkz%2F%2B8Tlas275RhFZ4jXhdZNgddmK0qiYgZABl13Ou8Gv2zzhgk77Pbf%2FhKvWxcN20pZHpN58x%2FwUAajmiZgEl2Nt4gbojRhLGTRqGBqYQ7C%2BqCpBw5KImrN72sLGJuqi5%2BgJHgaIw%3D%3D"
 ayush_s2 = "AEAVdXHc27USh4ku3cV29OmfzPAysyGlSqIQuU0%2FX2OR2yXn4P51Fbq0rmxpRhWFjwLehTCw6uZ7a6RhnamZ2CKnsleRO0UZ9bnpbNSMC9NR%2BvLkrqEniQKURmJFcf9NnF9ee36YYaHJwKdzxzpcHJfuV8MXumVPBRhOJdLWRL4RsnxcDa0R8kztme9xMvULhkxtIeK9nZWI%2FcKD1lp%2B%2F2CqmeOAx5ddZssKEUT3l%2BORqAyEkH%2BvhicLfAzrLNsKQUpp%2FBuHavXfKvFSX%2BbE7DyBjC7XvvOjezSdMCpiHh0Ys5SdTeGXlPSN%2F4Tq%2FFZQJVs%3D"
+nolan_s2 = "AEB5llPc1zknf6Qj4ZGE3oegXJ2gL%2B2oc8AfE48cd4XnimA7zzY5ZprHZZhc57ZSyfPigsRpcYt3HnbgbF1Za1SO18eFKrjoOks5NEE3IuPFqatMhVOVkYq2Uyvhs9TSrGxOtz680D%2FXSvQD3czqx2vuDhe09DBw2kdbt%2FzLZ%2BaM4otb3ntYLIAfJgSR99wM7hYR%2BQoUWWsGqYa4uesuxgAA5c3pJgJw2254jxWy8kfRkUG0p0EAhZLOdwngGF49VTUlO37P6HCCsxYoAnwmbO9N6MPYlhit8XLyk6mkDblPOg%3D%3D"
 
 # Avas League
 # league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid='{9B611343-247D-458B-88C3-50BB33789365}')
@@ -71,8 +78,17 @@ ayush_s2 = "AEAVdXHc27USh4ku3cV29OmfzPAysyGlSqIQuU0%2FX2OR2yXn4P51Fbq0rmxpRhWFjw
 # Dave Friend League
 # league = League(league_id= 1924463077, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
 
-# Ayush League
-league = League(league_id=558148583, year=year, espn_s2=ayush_s2, swid='{668E3A23-4B03-4D9E-9804-4C9D479F4E8F}')
+# # Ayush League
+# league = League(league_id=558148583, year=year, espn_s2=ayush_s2, swid='{668E3A23-4B03-4D9E-9804-4C9D479F4E8F}')
+# settings = league.settings
+
+# Nolan League
+league = League(
+    league_id=496646254,
+    year=year,
+    espn_s2=nolan_s2,
+    swid="{7985C32E-0341-4B30-97E5-5730A4EF17FA}",
+)
 settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
@@ -81,14 +97,14 @@ file = leagueName + ".xlsx"
 
 # team_owners = [team.owners for team in league.teams]
 team_names = [team.team_name for team in league.teams]
-team_scores = [team.scores for team in league.teams] 
-team_scores_x = [team.scores for team in league.teams] 
+team_scores = [team.scores for team in league.teams]
+team_scores_x = [team.scores for team in league.teams]
 schedules = []
 for team in league.teams:
-  schedule = [opponent.team_name for opponent in team.schedule]
-  schedules.append(schedule)
+    schedule = [opponent.team_name for opponent in team.schedule]
+    schedules.append(schedule)
 
-# Store data in DataFrames 
+# Store data in DataFrames
 scores_df = pd.DataFrame(team_scores, index=team_names)
 # Calculate current week
 zero_week = (scores_df == 0.0).all(axis=0)
@@ -102,11 +118,11 @@ print(settings.reg_season_count)
 print(settings.playoff_team_count)
 print()
 # print(schedules_df)
-# Create empty dataframe  
+# Create empty dataframe
 records_df = pd.DataFrame(index=team_names, columns=team_names)
 
 # Fill diagonal with team names
-records_df.fillna('', inplace=True) 
+records_df.fillna("", inplace=True)
 
 # Initialize a DataFrame to store total wins for each team against all schedules
 total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
@@ -121,69 +137,73 @@ for week in range(1, current_week):
 
     # Iterate through teams (similar to your previous code)
     for team in team_names:
-      # Get team scores
-      team_scores = scores_df.loc[team].tolist() 
-      # Iterate through opponents
-      for opp in team_names:
-        
-        # Compare scores
-        wins = 0
-        losses = 0
-        ties = 0
-        for i in range(week):
-          # Get opponent schedule
-          opp_schedule = schedules_df.loc[opp].tolist()
-          
-          # Get opponent scores
-          opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
-          if team == opp:
-            # Get team's opponent this week
-            opp_team = schedules_df.loc[team, i]
-            
-            # Get team and opponent score
-            team_score = scores_df.loc[team, i]
-            opp_score = scores_df.loc[opp_team, i]
-
-            if team_score > opp_score:
-              wins += 1
-            elif team_score < opp_score:
-              losses += 1
-            else:
-              ties += 1
-
-          else:
-            # Check if opponent is the same 
-            if opp == schedules_df.loc[team, i]:
-              # Opponent is the same, get correct scores
-              team_score = scores_df.loc[team, i]
-              opp_score = scores_df.loc[schedules_df.loc[team, i], i]
-
-            else:  
-              # Opponent is different
-              opp_schedule = schedules_df.loc[opp].tolist()
-              opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
-              team_score = team_scores[i]
-              opp_score = opp_scores[i]
+        # Get team scores
+        team_scores = scores_df.loc[team].tolist()
+        # Iterate through opponents
+        for opp in team_names:
 
             # Compare scores
-            if team_score > opp_score:
-              wins += 1
-            elif team_score < opp_score:
-              losses += 1
-            else:
-              ties += 1
-        
-        # Record result
-        record = f"{wins}-{losses}-{ties}"
-        records_df.at[team, opp] = record 
-        # Update the total wins DataFrame for this week
-        total_wins_weekly_df.at[team, opp] = wins  # Set wins for all opponents
+            wins = 0
+            losses = 0
+            ties = 0
+            for i in range(week):
+                # Get opponent schedule
+                opp_schedule = schedules_df.loc[opp].tolist()
+
+                # Get opponent scores
+                opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
+                if team == opp:
+                    # Get team's opponent this week
+                    opp_team = schedules_df.loc[team, i]
+
+                    # Get team and opponent score
+                    team_score = scores_df.loc[team, i]
+                    opp_score = scores_df.loc[opp_team, i]
+
+                    if team_score > opp_score:
+                        wins += 1
+                    elif team_score < opp_score:
+                        losses += 1
+                    else:
+                        ties += 1
+
+                else:
+                    # Check if opponent is the same
+                    if opp == schedules_df.loc[team, i]:
+                        # Opponent is the same, get correct scores
+                        team_score = scores_df.loc[team, i]
+                        opp_score = scores_df.loc[schedules_df.loc[team, i], i]
+
+                    else:
+                        # Opponent is different
+                        opp_schedule = schedules_df.loc[opp].tolist()
+                        opp_scores = [
+                            scores_df.loc[o][i] for i, o in enumerate(opp_schedule)
+                        ]
+                        team_score = team_scores[i]
+                        opp_score = opp_scores[i]
+
+                    # Compare scores
+                    if team_score > opp_score:
+                        wins += 1
+                    elif team_score < opp_score:
+                        losses += 1
+                    else:
+                        ties += 1
+
+            # Record result
+            record = f"{wins}-{losses}-{ties}"
+            records_df.at[team, opp] = record
+            # Update the total wins DataFrame for this week
+            total_wins_weekly_df.at[team, opp] = wins  # Set wins for all opponents
 
     # Calculate LPI scores for this week
     team_wins = total_wins_weekly_df.sum(axis=1)
     schedule_wins = [sum(total_wins_weekly_df[team]) for team in team_names]
     num_teams_in_league = len(team_names)
-    lpi_scores = ((team_wins - schedule_wins) * (12 / num_teams_in_league)).round().astype(int)
+    lpi_scores = (
+        ((team_wins - schedule_wins) * (12 / num_teams_in_league)).round().astype(int)
+    )
     week_name = "Week " + str(week)
     # Add LPI scores for this week to the weekly DataFrame
     lpi_weekly_df[week_name] = lpi_scores
@@ -202,41 +222,54 @@ expected_wins = total_wins_weekly_df.mean(axis=1)
 # Calculate differences
 differences = avg_team_wins - total_wins_weekly_df.values.diagonal()
 # Create a DataFrame for ranking
-rank_df = pd.DataFrame({
-    'Team': team_names,
-    'Expected Wins': avg_team_wins,
-    'Difference': differences,
-    'Record': actual_records,
-})
+rank_df = pd.DataFrame(
+    {
+        "Team": team_names,
+        "Expected Wins": avg_team_wins,
+        "Difference": differences,
+        "Record": actual_records,
+    }
+)
 # print(rank_df)
 # Create schedule_rank_df
-schedule_rank_df = pd.DataFrame({
-    'Teams': rank_df['Team'],
-    'Wins Against Schedule': [sum(total_wins_weekly_df[team]) / len(team_names) for team in rank_df['Team']],
-    'Record': rank_df['Record']
-})
+schedule_rank_df = pd.DataFrame(
+    {
+        "Teams": rank_df["Team"],
+        "Wins Against Schedule": [
+            sum(total_wins_weekly_df[team]) / len(team_names)
+            for team in rank_df["Team"]
+        ],
+        "Record": rank_df["Record"],
+    }
+)
 # print(schedule_rank_df)
 
 
 # Function to format the change value
 def format_change(change):
     if change > 0:
-        return f'↑{change}'
+        return f"↑{change}"
     elif change < 0:
-        return f'↓{abs(change)}'
+        return f"↓{abs(change)}"
     else:
         return str(change)
+
 
 # lpi_weekly_df.insert(loc = 0, column = 'Teams', value = lpi_weekly_df.index)
 # lpi_weekly_df.reset_index(drop=True, inplace=True)
 
 if current_week > 1:
-  # Calculate the "Change from last week" column
-  lpi_weekly_df['Change From Last Week'] = lpi_weekly_df[week_name] - lpi_weekly_df['Week ' + str(week - 1)]
-  # Apply the formatting function to the "Change from last week" column
-  lpi_weekly_df['Change From Last Week'] = lpi_weekly_df['Change From Last Week'].apply(format_change)
+    # Calculate the "Change from last week" column
+    lpi_weekly_df["Change From Last Week"] = (
+        lpi_weekly_df[week_name] - lpi_weekly_df["Week " + str(week - 1)]
+    )
+    # Apply the formatting function to the "Change from last week" column
+    lpi_weekly_df["Change From Last Week"] = lpi_weekly_df[
+        "Change From Last Week"
+    ].apply(format_change)
 else:
-   lpi_weekly_df['Change From Last Week'] = 0
+    lpi_weekly_df["Change From Last Week"] = 0
+
 
 def owner_df_creation(league):
     """
@@ -255,35 +288,38 @@ def owner_df_creation(league):
     data = []
     for team, team_name in zip(team_owners, team_names):
         team = team[0]
-        data.append({
-            "Display Name": team['firstName'] + " " + team['lastName'],
-            "ID": team['id'],
-            "Team Name": team_name
-        })
+        data.append(
+            {
+                "Display Name": team["firstName"] + " " + team["lastName"],
+                "ID": team["id"],
+                "Team Name": team_name,
+            }
+        )
 
     # Create the DataFrame
     return pd.DataFrame(data)
 
+
 owner_df = owner_df_creation(league)
-team_dict = dict(zip(owner_df['Team Name'], owner_df['Display Name']))
+team_dict = dict(zip(owner_df["Team Name"], owner_df["Display Name"]))
 # Display the updated DataFrame
 print(lpi_weekly_df)
-lpi_df = lpi_weekly_df[[week_name, 'Change From Last Week']]
+lpi_df = lpi_weekly_df[[week_name, "Change From Last Week"]]
 lpi_df = lpi_df.rename(columns={week_name: "Louie Power Index (LPI)"})
-lpi_df.insert(loc = 0, column = 'Teams', value = lpi_df.index)
+lpi_df.insert(loc=0, column="Teams", value=lpi_df.index)
 
-lpi_df.insert(loc = 1, column = 'Owners', value = "")
+lpi_df.insert(loc=1, column="Owners", value="")
 # Map the records to lpi_df based on matching team names
-lpi_df['Owners'] = lpi_df['Teams'].map(team_dict)
+lpi_df["Owners"] = lpi_df["Teams"].map(team_dict)
 
 lpi_df.reset_index(drop=True, inplace=True)
-lpi_df.index = lpi_df.index + 1 
-lpi_df.insert(loc = 3, column = 'Record', value = "")
+lpi_df.index = lpi_df.index + 1
+lpi_df.insert(loc=3, column="Record", value="")
 # Create a dictionary to map team names to records from rank_df
-team_to_record = dict(zip(rank_df['Team'], rank_df['Record']))
+team_to_record = dict(zip(rank_df["Team"], rank_df["Record"]))
 
 # Map the records to lpi_df based on matching team names
-lpi_df['Record'] = lpi_df['Teams'].map(team_to_record)
+lpi_df["Record"] = lpi_df["Teams"].map(team_to_record)
 # team_dict = dict(zip(team_names, team_owners))
 
 # Apply dictionary mapping to Teams column
@@ -296,13 +332,13 @@ for week in range(1, current_week + 1):
     matchups = league.scoreboard(week)
     for matchup in matchups:
         if matchup.home_score == 0 or matchup.away_score == 0:
-          # Skip this matchup
-          continue
+            # Skip this matchup
+            continue
         home_team = matchup.home_team.team_name
         away_team = matchup.away_team.team_name
         # Get LPI for home and away teams for this week
-        home_lpi = lpi_weekly_df.at[home_team, 'Week ' + str(week)]
-        away_lpi = lpi_weekly_df.at[away_team, 'Week ' + str(week)]
+        home_lpi = lpi_weekly_df.at[home_team, "Week " + str(week)]
+        away_lpi = lpi_weekly_df.at[away_team, "Week " + str(week)]
         # Calculate LPI difference
         higher_lpi = max(home_lpi, away_lpi)
         lower_lpi = min(home_lpi, away_lpi)
@@ -311,58 +347,81 @@ for week in range(1, current_week + 1):
         winner = home_team if matchup.home_score > matchup.away_score else away_team
         # Record the matchup results and LPI differences
         matchup_result = {
-            'Week': week,
-            'Home Team': home_team,
-            'Away Team': away_team,
-            'Home LPI': home_lpi,
-            'Away LPI': away_lpi,
-            'LPI Difference': lpi_difference,
-            'Winner': winner
+            "Week": week,
+            "Home Team": home_team,
+            "Away Team": away_team,
+            "Home LPI": home_lpi,
+            "Away LPI": away_lpi,
+            "LPI Difference": lpi_difference,
+            "Winner": winner,
         }
         # Append the dictionary to the list
         matchup_results.append(matchup_result)
 # Convert the list of matchup results to a DataFrame
 matchup_results_df = pd.DataFrame(matchup_results)
 # Find the biggest upsets based on LPI difference
-biggest_upsets = matchup_results_df.nlargest(30, 'LPI Difference')
+biggest_upsets = matchup_results_df.nlargest(30, "LPI Difference")
 # Filter for rows where the LPI_Difference is negative and the AwayTeam won
-upsets_df = biggest_upsets[((biggest_upsets['Winner'] == biggest_upsets['Away Team']) & (biggest_upsets['Home LPI'] > biggest_upsets['Away LPI'])) | ((biggest_upsets['Winner'] == biggest_upsets['Home Team']) & (biggest_upsets['Away LPI'] > biggest_upsets['Home LPI']))]
+upsets_df = biggest_upsets[
+    (
+        (biggest_upsets["Winner"] == biggest_upsets["Away Team"])
+        & (biggest_upsets["Home LPI"] > biggest_upsets["Away LPI"])
+    )
+    | (
+        (biggest_upsets["Winner"] == biggest_upsets["Home Team"])
+        & (biggest_upsets["Away LPI"] > biggest_upsets["Home LPI"])
+    )
+]
 upsets_df.reset_index(drop=True, inplace=True)
 
-schedule_rank_df = schedule_rank_df.sort_values(by=['Wins Against Schedule'], ascending=[True])
+schedule_rank_df = schedule_rank_df.sort_values(
+    by=["Wins Against Schedule"], ascending=[True]
+)
 schedule_rank_df.reset_index(drop=True, inplace=True)
-schedule_rank_df.index = schedule_rank_df.index + 1 
+schedule_rank_df.index = schedule_rank_df.index + 1
 # print(schedule_rank_df)
 
 # Sort the DataFrame by total wins and difference
-rank_df = rank_df.sort_values(by=['Expected Wins', 'Difference'], ascending=[False, True])
+rank_df = rank_df.sort_values(
+    by=["Expected Wins", "Difference"], ascending=[False, True]
+)
 rank_df.reset_index(drop=True, inplace=True)
 rank_df.index = rank_df.index + 1
 
 
 reg_season_count = settings.reg_season_count
-teams= league.teams
+teams = league.teams
 num_playoff_teams = settings.playoff_team_count
 # Then use them step by step in your existing code
 team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
-final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
-    teams, team_stats, current_week, reg_season_count, num_playoff_teams
+final_records, playoff_makes, last_place_finishes, seed_counts = (
+    simulate_remaining_season(
+        teams, team_stats, current_week, reg_season_count, num_playoff_teams
+    )
 )
 summary_df, seed_df = create_summary_dataframes(
-    team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, 1000, len(teams), reg_season_count
+    team_stats,
+    final_records,
+    playoff_makes,
+    last_place_finishes,
+    seed_counts,
+    num_playoff_teams,
+    1000,
+    len(teams),
+    reg_season_count,
 )
 print(summary_df)
 summary_df = (
-    summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
-      .reset_index(drop=True)
-      .set_index("Team")
+    summary_df.sort_values("Playoff_Chance_Pct", ascending=False)
+    .reset_index(drop=True)
+    .set_index("Team")
 )
 print(seed_df)
 
 seed_df = (
-    seed_df.sort_values('Chance of Making Playoffs', ascending=False)
-        .reset_index(drop=True)
-        .set_index("Team")
+    seed_df.sort_values("Chance of Making Playoffs", ascending=False)
+    .reset_index(drop=True)
+    .set_index("Team")
 )
 
 # Or use the integrated function for full output
@@ -376,8 +435,10 @@ if current_week > settings.reg_season_count:
     sheet_name = "LPI By Week"
 
     # Read the LPI data
-    lpi_df = pd.read_excel(fileName, sheet_name=sheet_name, index_col=0)  # Team names as index
-    lpi_df = lpi_df.drop(['Change From Last Week'], axis=1)
+    lpi_df = pd.read_excel(
+        fileName, sheet_name=sheet_name, index_col=0
+    )  # Team names as index
+    lpi_df = lpi_df.drop(["Change From Last Week"], axis=1)
 
     # --------------------------------------------------------------------------------------
     # PLAYOFF RESULTS
@@ -385,7 +446,7 @@ if current_week > settings.reg_season_count:
 
     # team_owners = [team.owners for team in league.teams]
     team_names = [team.team_name for team in league.teams]
-    team_scores = [team.scores for team in league.teams] 
+    team_scores = [team.scores for team in league.teams]
 
     schedules = []
     for team in league.teams:
@@ -395,11 +456,11 @@ if current_week > settings.reg_season_count:
     # Calculate current week
     zero_week = (scores_df == 0.0).all(axis=0)
     if zero_week.any():
-        current_week = zero_week.idxmax() +1
+        current_week = zero_week.idxmax() + 1
     else:
         current_week = scores_df.shape[1]
 
-    # Store data in DataFrames 
+    # Store data in DataFrames
     scores_df = pd.DataFrame(team_scores, index=team_names)
     schedules_df = pd.DataFrame(schedules, index=team_names)
     # print(scores_df)
@@ -407,7 +468,9 @@ if current_week > settings.reg_season_count:
     # print(schedules_df)
 
     # Playoff teams and seeds
-    standings = [team.team_name for team in league.standings_weekly(settings.reg_season_count)]
+    standings = [
+        team.team_name for team in league.standings_weekly(settings.reg_season_count)
+    ]
     num_playoff_teams = settings.playoff_team_count
     playoff_teams = standings[:num_playoff_teams]  # Top teams in the playoffs
     reg_season_count = settings.reg_season_count
@@ -427,7 +490,7 @@ if current_week > settings.reg_season_count:
 
     # Iterate through playoff weeks
     last_column_name = scores_df.columns[-1]
-    for week in range(reg_season_count, last_column_name+1):
+    for week in range(reg_season_count, last_column_name + 1):
         round_name = get_round_name(len(playoff_teams))
         # print(f"Processing Playoff Round {round_name} (Week {week + 1})")
         # print(playoff_teams)
@@ -446,18 +509,20 @@ if current_week > settings.reg_season_count:
 
             # Skip if the team has a bye (e.g., they face themselves)
             if opponent == team:
-                playoff_results.append({
-                    "Round": round_name,
-                    "Team 1": team,
-                    "Seed 1": standings.index(team) + 1,
-                    "Score 1": scores_df.loc[team, week],
-                    "LPI 1": lpi_df.loc[team, f"Week {week + 1}"],  # Add LPI value
-                    "Team 2": "Bye",
-                    "Seed 2": "-",
-                    "Score 2": "-",
-                    "LPI 2": "-",
-                    "Winner": team
-                })
+                playoff_results.append(
+                    {
+                        "Round": round_name,
+                        "Team 1": team,
+                        "Seed 1": standings.index(team) + 1,
+                        "Score 1": scores_df.loc[team, week],
+                        "LPI 1": lpi_df.loc[team, f"Week {week + 1}"],  # Add LPI value
+                        "Team 2": "Bye",
+                        "Seed 2": "-",
+                        "Score 2": "-",
+                        "LPI 2": "-",
+                        "Winner": team,
+                    }
+                )
                 advancing_teams.append(team)  # Auto-advance the team
                 continue
 
@@ -486,18 +551,20 @@ if current_week > settings.reg_season_count:
                 winner = "Tie"  # Handle tie scenario if needed
 
             # Append results to the playoff results list
-            playoff_results.append({
-                "Round": round_name,
-                "Team 1": team,
-                "Seed 1": seed_1,
-                "Score 1": score_1,
-                "LPI 1": team_1_lpi,
-                "Team 2": opponent,
-                "Seed 2": seed_2,
-                "Score 2": score_2,
-                "LPI 2": team_2_lpi,
-                "Winner": winner
-            })
+            playoff_results.append(
+                {
+                    "Round": round_name,
+                    "Team 1": team,
+                    "Seed 1": seed_1,
+                    "Score 1": score_1,
+                    "LPI 1": team_1_lpi,
+                    "Team 2": opponent,
+                    "Seed 2": seed_2,
+                    "Score 2": score_2,
+                    "LPI 2": team_2_lpi,
+                    "Winner": winner,
+                }
+            )
 
             # Add the winner to the advancing teams list
             advancing_teams.append(winner)
@@ -533,16 +600,16 @@ if current_week > settings.reg_season_count:
     with pd.ExcelWriter(fileName, engine="openpyxl", mode="a") as writer:
         playoff_df.to_excel(writer, sheet_name="Playoff Results", index=False)
 
-writer = pd.ExcelWriter(f"leagues/{fileName}.xlsx", engine='xlsxwriter')
-records_df.to_excel(writer, sheet_name='Schedule Grid')
-schedule_rank_df.to_excel(writer, sheet_name='Wins Against Schedule')
-rank_df.to_excel(writer, sheet_name='Expected Wins')
-seed_df.to_excel(writer, sheet_name='Playoff Odds')
-weekly_df.to_excel(writer, sheet_name='Playoff Odds By Week')
-summary_df.to_excel(writer, sheet_name='Record Odds')
-lpi_df.to_excel(writer, sheet_name='Louie Power Index')
-lpi_weekly_df.to_excel(writer, sheet_name='LPI By Week')
-upsets_df.to_excel(writer, sheet_name='Biggest Upsets')
+writer = pd.ExcelWriter(f"leagues/{fileName}.xlsx", engine="xlsxwriter")
+records_df.to_excel(writer, sheet_name="Schedule Grid")
+schedule_rank_df.to_excel(writer, sheet_name="Wins Against Schedule")
+rank_df.to_excel(writer, sheet_name="Expected Wins")
+seed_df.to_excel(writer, sheet_name="Playoff Odds")
+weekly_df.to_excel(writer, sheet_name="Playoff Odds By Week")
+summary_df.to_excel(writer, sheet_name="Record Odds")
+lpi_df.to_excel(writer, sheet_name="Louie Power Index")
+lpi_weekly_df.to_excel(writer, sheet_name="LPI By Week")
+upsets_df.to_excel(writer, sheet_name="Biggest Upsets")
 writer.close()
 
 print("--- %s seconds ---" % (time.time() - start_time))
