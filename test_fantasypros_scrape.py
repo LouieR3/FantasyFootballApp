@@ -12,6 +12,7 @@ def fantasypros_ranks():
     # ]
     URL = "https://www.fantasypros.com/nfl/rankings/ros-ppr-qb.php"
     URL = "https://www.fantasypros.com/nfl/rankings/ros-ppr-overall.php"
+    # URL = "https://www.fantasypros.com/nfl/rankings/ppr-superflex.php"
     # for URL in URL_list:
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "

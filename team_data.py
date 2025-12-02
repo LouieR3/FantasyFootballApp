@@ -50,9 +50,6 @@ ava_s2 = "AEBL5xTPsfrhYhP04Dc%2FHGojCvZAK7pmvEtoKwm%2FDUFjM86FeGyFUfomgi6VkRTlpD
 matt_s2 = "AEApTMk4bKXLS%2ByFC85I7AlYVnFOTx28Qn8C5ElSPEEY3%2BV6Jn0RzRDIb1H39fmRU9ABSWxJBwDaxottGDrfteMllIgOnF6QDw%2Bv2v6ox%2FDJGV4DJav5ntyQn3oihvOstkQsXIvSGD5jFAQFTJcb6GOCe9jG0WuATob3%2BU5fi2fZdZJ%2Blpx65ty5SNBe8znFW3T52EfNFbEOrCFW13IHqmEUiO9%2BooinLTMwIhsD2Txzg7peD6bKhs%2BOQL7pqc2xE1x084MSLRZ33UZioi8aNJdJx%2FBO8BUaBy%2FB3VFUkB2S1CFUUnlY5S96e98QD9vgmLY%3D"
 elle_s2 = "AECfQX9GAenUR7mbrWgFnjVxXJJEz4u%2BKEZUVBlsfc%2FnRHEmQJhqDOvGAxCjq%2BpWobEwQaiNR2L2kFAZRcIxX9y3pWjZd%2BHuV4KL0gq495A4Ve%2Fnza1Ap%2BGM5hQwgIpHqKL%2BosHEXvXVBfUxUmmX%2BG7HkNIir0lAZIX3CS68XAO6KXX5aEl%2BjUsc8pYqNAiaEiCEyLdULrUimPcog39bHlbmIuwYHXf2LsMHWUdQ1RrDGP%2BOIpKXx257vQLxnW%2FI72Eg7W%2Fg6Htwx1TpG5U9eMXEwQp0UEKHanE0YSgnTTELIw%3D%3D"
 
-# Elles League
-# league = League(league_id=1259693145, year=2025, espn_s2=elle_s2, swid='{B6F0817B-1DC0-4E29-B020-68B8E12B6931}')
-
 # print(league.free_agents(position='QB'))
 # print()
 # print(league.free_agents(position='WR'))
@@ -287,7 +284,7 @@ def print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name):
 
     print("\n-----------------------------\n")
 
-# print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)
+print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)
 
 def test_team_data(league):
     team_names = [team.team_name for team in league.teams]
@@ -408,4 +405,4 @@ def find_trade_partners(league, team_name):
         print_team_with_fantasypros_ranks(league, fantasypros_rank_df, other_team.team_name)
         print(f"\n----------")
 
-find_trade_partners(league, team_name)
+# find_trade_partners(league, team_name)

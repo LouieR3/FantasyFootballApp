@@ -317,7 +317,6 @@ def calculate_playoff_chances_by_week(teams, scores_df, reg_season_count, num_pl
     
     return playoff_df
 
-
 def calculate_team_stats_for_week(teams, scores_df, through_week, reg_season_count):
     """Calculate team stats through a specific week"""
     team_stats = {}
@@ -356,7 +355,6 @@ def calculate_team_stats_for_week(teams, scores_df, through_week, reg_season_cou
         }
     
     return team_stats
-
 
 def simulate_from_week(teams, team_stats, start_week, reg_season_count, num_playoff_teams, num_simulations):
     """Simulate remaining season from a specific week forward"""
@@ -442,7 +440,6 @@ def simulate_from_week(teams, team_stats, start_week, reg_season_count, num_play
     
     return playoff_makes
 
-
 # Example usage function to integrate with existing code
 def add_weekly_analysis_to_main(teams, scores_df, reg_season_count, num_playoff_teams, current_week):
     """
@@ -481,7 +478,6 @@ def add_weekly_analysis_to_main(teams, scores_df, reg_season_count, num_playoff_
         print(change_df[change_cols].round(1).to_string())
     
     return weekly_df
-
 
 def convert_probability_to_odds(probability_pct):
     """
@@ -534,7 +530,6 @@ def convert_probability_to_odds(probability_pct):
         'Implied_Prob': f"{probability_pct:.1f}%"
     }
 
-
 def create_betting_odds_table(seed_df, team_stats):
     """
     Create a betting odds table from seed probability dataframe
@@ -571,7 +566,6 @@ def create_betting_odds_table(seed_df, team_stats):
     
     betting_df = pd.DataFrame(betting_data)
     return betting_df
-
 
 def create_position_betting_odds(seed_df, num_teams, team_stats):
     """
@@ -625,7 +619,6 @@ def create_position_betting_odds(seed_df, num_teams, team_stats):
     
     return position_dfs
 
-
 def display_betting_odds(seed_df, num_teams, team_stats):
     """
     Display betting odds in a readable format
@@ -668,7 +661,6 @@ def display_betting_odds(seed_df, num_teams, team_stats):
     print("               Positive = underdog (win that amount on $100 bet)")
     
     return betting_df, position_odds
-
 
 def retrieve_odds_dfs(seed_df, num_teams, team_stats):
     """
@@ -803,7 +795,6 @@ def calculate_remaining_schedule_difficulty(team_stats, schedules_df, lpi_df, cu
     
     return schedule_df
 
-
 def display_remaining_schedule_difficulty(schedule_df):
     """
     Display the remaining schedule difficulty with formatted output.
@@ -822,7 +813,6 @@ def display_remaining_schedule_difficulty(schedule_df):
     
     print(schedule_df[display_cols].to_string(index=False))
     
-
 # Example usage function
 def analyze_remaining_schedule(team_stats, schedules_df, lpi_df, current_week, reg_season_count):
     """
