@@ -103,7 +103,7 @@ for league_config in leagues:
             current_week = zero_week.idxmax() +1
         else:
             current_week = scores_df.shape[1]
-        # print(current_week)
+        print(current_week)
         schedules_df = pd.DataFrame(schedules, index=team_names)
         # print(scores_df)
         # print()
@@ -384,7 +384,7 @@ for league_config in leagues:
         # odds_df = oddsCalculator()
         # print(odds_df)
 
-        if current_week > settings.reg_season_count:
+        if current_week > settings.reg_season_count+6:
             fileName = leagueName + " " + str(year)
             fileName = f"leagues/{fileName}.xlsx"
             sheet_name = "LPI By Week"
@@ -566,20 +566,20 @@ for league_config in leagues:
         print(f"Details: {str(e)}")
         continue  # Move to the next league
 
-all_matchups_df = get_weeks_matchups(leagues, year)
-try:
-    current_matchups = pd.read_csv("all_matchups.csv")
-    all_matchups_df = pd.concat([current_matchups, all_matchups_df]).drop_duplicates().reset_index(drop=True)
-    all_matchups_df["Home Predicted Score"] = all_matchups_df["Home Predicted Score"].round(2)
-    all_matchups_df["Away Predicted Score"] = all_matchups_df["Away Predicted Score"].round(2)
-    all_matchups_df["Predicted Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
-    all_matchups_df["Actual Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
-    print("Merged with existing all_matchups.csv")
-    print(all_matchups_df)
-    all_matchups_df.to_csv("all_matchups.csv", index=False)
-except FileNotFoundError:
-    print("No existing all_matchups.csv found, creating a new one.")
+# all_matchups_df = get_weeks_matchups(leagues, year)
+# try:
+#     current_matchups = pd.read_csv("all_matchups.csv")
+#     all_matchups_df = pd.concat([current_matchups, all_matchups_df]).drop_duplicates().reset_index(drop=True)
+#     all_matchups_df["Home Predicted Score"] = all_matchups_df["Home Predicted Score"].round(2)
+#     all_matchups_df["Away Predicted Score"] = all_matchups_df["Away Predicted Score"].round(2)
+#     all_matchups_df["Predicted Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
+#     all_matchups_df["Actual Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
+#     print("Merged with existing all_matchups.csv")
+#     print(all_matchups_df)
+#     all_matchups_df.to_csv("all_matchups.csv", index=False)
+# except FileNotFoundError:
+#     print("No existing all_matchups.csv found, creating a new one.")
 
-create_betting_odds(leagues, year)
+# create_betting_odds(leagues, year)
 
 print("--- %s seconds ---" % (time.time() - start_time))
