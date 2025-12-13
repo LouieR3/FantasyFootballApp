@@ -836,6 +836,333 @@ def analyze_remaining_schedule(team_stats, schedules_df, lpi_df, current_week, r
     
     return schedule_df
 
+def simulate_playoffs(teams, team_stats, current_week, reg_season_count, num_playoff_teams, num_simulations=1000):
+    """
+    Simulate playoff outcomes starting from the first playoff week.
+    Only runs if current_week > reg_season_count (playoffs have started).
+    
+    Args:
+        teams: List of team objects from ESPN API
+        team_stats: Dictionary of team statistics
+        current_week: Current week number
+        reg_season_count: Number of regular season games
+        num_playoff_teams: Number of teams in playoffs
+        num_simulations: Number of Monte Carlo simulations
+    
+    Returns:
+        tuple: (final_placements, placement_counts, round_matchups) - playoff placement probabilities and matchup predictions
+    """
+    
+    # Check if we're in the playoffs
+    if current_week <= reg_season_count:
+        print(f"Current week {current_week} is still regular season. Playoffs start at week {reg_season_count + 1}.")
+        return None, None, None
+    
+    # Determine playoff teams based on regular season standings
+    playoff_teams = []
+    for team_idx, team in enumerate(teams):
+        # Get regular season record
+        reg_season_outcomes = team.outcomes[:reg_season_count]
+        wins = sum(1 for outcome in reg_season_outcomes if outcome == 'W')
+        losses = sum(1 for outcome in reg_season_outcomes if outcome == 'L')
+        ties = sum(1 for outcome in reg_season_outcomes if outcome == 'T')
+        
+        total_games = wins + losses + ties
+        win_pct = (wins + 0.5 * ties) / total_games if total_games > 0 else 0
+        
+        playoff_teams.append({
+            'team_name': team.team_name,
+            'team_obj': team,
+            'wins': wins,
+            'losses': losses,
+            'ties': ties,
+            'win_pct': win_pct,
+            'points_for': team_stats[team.team_name]['total_points']
+        })
+    
+    # Sort by wins + ties, then points to determine playoff seeding
+    playoff_teams.sort(key=lambda x: (x['wins'] + 0.5 * x['ties'], x['points_for']), reverse=True)
+    playoff_teams = playoff_teams[:num_playoff_teams]
+    
+    # Storage for simulation results
+    from collections import defaultdict
+    placement_counts = defaultdict(lambda: defaultdict(int))
+    final_placements = defaultdict(list)
+    
+    # Track matchup frequencies for each round
+    round_matchups = {
+        'round_1': defaultdict(int),  # First round (quarterfinals/semifinals depending on bracket)
+        'round_2': defaultdict(int),  # Second round (semifinals/finals)
+        'finals': defaultdict(int)     # Championship
+    }
+    
+    # Get playoff weeks (weeks after regular season)
+    playoff_start_week = reg_season_count + 1
+    total_weeks = len(teams[0].schedule)
+    playoff_weeks = list(range(playoff_start_week - 1, total_weeks))  # -1 for 0-indexing
+    
+    for sim in range(num_simulations):
+        # Initialize playoff bracket tracking
+        # Track each team's playoff record and points
+        playoff_records = {}
+        for pteam in playoff_teams:
+            playoff_records[pteam['team_name']] = {
+                'playoff_wins': 0,
+                'playoff_losses': 0,
+                'playoff_points': 0,
+                'eliminated': False,
+                'round_eliminated': None
+            }
+        
+        round_num = 0
+        
+        # Simulate each playoff week
+        for week_idx in playoff_weeks:
+            round_num += 1
+            active_teams = [name for name, rec in playoff_records.items() if not rec['eliminated']]
+            
+            if week_idx >= current_week - 1:  # Future weeks need simulation
+                # Determine matchups for this week based on playoff bracket
+                week_matchups = []
+                used_teams = set()
+                
+                for pteam in playoff_teams:
+                    team_name = pteam['team_name']
+                    if team_name in used_teams or playoff_records[team_name]['eliminated']:
+                        continue
+                    
+                    team_obj = pteam['team_obj']
+                    if week_idx < len(team_obj.schedule):
+                        opponent = team_obj.schedule[week_idx]
+                        opponent_name = opponent.team_name
+                        
+                        # Only count matchup if opponent is also in playoffs and not eliminated
+                        if opponent_name in playoff_records and not playoff_records[opponent_name]['eliminated']:
+                            if opponent_name not in used_teams:
+                                matchup_tuple = tuple(sorted([team_name, opponent_name]))
+                                week_matchups.append((team_name, opponent_name))
+                                used_teams.add(team_name)
+                                used_teams.add(opponent_name)
+                                
+                                # Track matchup frequency by round
+                                if round_num == 1:
+                                    round_matchups['round_1'][matchup_tuple] += 1
+                                elif round_num == 2:
+                                    round_matchups['round_2'][matchup_tuple] += 1
+                                elif round_num == 3 or len(active_teams) == 2:
+                                    round_matchups['finals'][matchup_tuple] += 1
+                
+                # Simulate each playoff matchup
+                for team1_name, team2_name in week_matchups:
+                    team1_stats = team_stats[team1_name]
+                    team2_stats = team_stats[team2_name]
+                    
+                    # Generate scores
+                    team1_score = max(0, np.random.normal(team1_stats['avg_score'], team1_stats['score_std']))
+                    team2_score = max(0, np.random.normal(team2_stats['avg_score'], team2_stats['score_std']))
+                    
+                    # Update playoff records
+                    if team1_score > team2_score:
+                        playoff_records[team1_name]['playoff_wins'] += 1
+                        playoff_records[team2_name]['playoff_losses'] += 1
+                        playoff_records[team2_name]['eliminated'] = True
+                        playoff_records[team2_name]['round_eliminated'] = round_num
+                    else:
+                        playoff_records[team2_name]['playoff_wins'] += 1
+                        playoff_records[team1_name]['playoff_losses'] += 1
+                        playoff_records[team1_name]['eliminated'] = True
+                        playoff_records[team1_name]['round_eliminated'] = round_num
+                    
+                    playoff_records[team1_name]['playoff_points'] += team1_score
+                    playoff_records[team2_name]['playoff_points'] += team2_score
+            
+            else:  # Past weeks - use actual results
+                for pteam in playoff_teams:
+                    team_name = pteam['team_name']
+                    team_obj = pteam['team_obj']
+                    
+                    if week_idx < len(team_obj.outcomes):
+                        outcome = team_obj.outcomes[week_idx]
+                        score = team_obj.scores[week_idx] if week_idx < len(team_obj.scores) else 0
+                        
+                        playoff_records[team_name]['playoff_points'] += score
+                        
+                        if outcome == 'W':
+                            playoff_records[team_name]['playoff_wins'] += 1
+                        elif outcome == 'L':
+                            playoff_records[team_name]['playoff_losses'] += 1
+                            playoff_records[team_name]['eliminated'] = True
+                            playoff_records[team_name]['round_eliminated'] = round_num
+        
+        # Determine final playoff placements
+        playoff_standings = []
+        for team_name, record in playoff_records.items():
+            playoff_standings.append({
+                'team': team_name,
+                'playoff_wins': record['playoff_wins'],
+                'playoff_points': record['playoff_points']
+            })
+        
+        # Sort by playoff wins (descending), then playoff points
+        playoff_standings.sort(key=lambda x: (x['playoff_wins'], x['playoff_points']), reverse=True)
+        
+        # Record placements
+        for idx, team_data in enumerate(playoff_standings):
+            placement = idx + 1
+            team_name = team_data['team']
+            placement_counts[team_name][placement] += 1
+            final_placements[team_name].append(placement)
+    
+    return final_placements, placement_counts, round_matchups, playoff_teams
+
+
+def create_playoff_summary_dataframes(playoff_teams, final_placements, placement_counts, num_simulations, num_playoff_teams):
+    """
+    Create summary dataframes for playoff simulations.
+    
+    Args:
+        playoff_teams: List of teams in playoffs with their stats
+        final_placements: Dictionary of final placement lists per team
+        placement_counts: Dictionary of placement counts per team
+        num_simulations: Number of simulations run
+        num_playoff_teams: Number of teams in playoffs
+    
+    Returns:
+        pd.DataFrame: Playoff placement probabilities
+    """
+    
+    placement_data = []
+    
+    for pteam in playoff_teams:
+        team_name = pteam['team_name']
+        row = {'Team': team_name}
+        
+        # Add probability for each playoff placement
+        for place in range(1, num_playoff_teams + 1):
+            place_pct = (placement_counts[team_name][place] / num_simulations) * 100
+            place_suffix = get_ordinal_suffix(place)
+            row[f'{place}{place_suffix} Place'] = round(place_pct, 1)
+        
+        # Add championship probability (1st place)
+        row['Championship_Probability'] = row['1st Place']
+        
+        placement_data.append(row)
+    
+    placement_df = pd.DataFrame(placement_data)
+    
+    # Sort by championship probability
+    placement_df = placement_df.sort_values('Championship_Probability', ascending=False).reset_index(drop=True)
+    
+    return placement_df
+
+
+def display_predicted_matchups(round_matchups, num_simulations):
+    """
+    Display predicted matchups for each playoff round.
+    
+    Args:
+        round_matchups: Dictionary containing matchup frequencies for each round
+        num_simulations: Total number of simulations run
+    """
+    
+    print("\n" + "="*80)
+    print("PREDICTED PLAYOFF MATCHUPS")
+    print("="*80)
+    
+    # Round 2 (Semifinals)
+    if round_matchups['round_2']:
+        print("\nSECOND ROUND (SEMIFINALS) - Most Likely Matchups:")
+        print("-" * 80)
+        
+        sorted_round2 = sorted(round_matchups['round_2'].items(), key=lambda x: x[1], reverse=True)
+        
+        for matchup, count in sorted_round2[:4]:  # Show top 4 most likely matchups
+            probability = (count / num_simulations) * 100
+            team1, team2 = matchup
+            print(f"{team1:30s} vs {team2:30s} - {probability:5.1f}%")
+    
+    # Finals
+    if round_matchups['finals']:
+        print("\n" + "="*80)
+        print("CHAMPIONSHIP (FINALS) - Most Likely Matchups:")
+        print("-" * 80)
+        
+        sorted_finals = sorted(round_matchups['finals'].items(), key=lambda x: x[1], reverse=True)
+        
+        for matchup, count in sorted_finals[:5]:  # Show top 5 most likely final matchups
+            probability = (count / num_simulations) * 100
+            team1, team2 = matchup
+            print(f"{team1:30s} vs {team2:30s} - {probability:5.1f}%")
+    
+    print("\n" + "="*80)
+
+
+def analyze_playoffs(teams, team_stats, current_week, reg_season_count, num_playoff_teams, num_simulations=1000):
+    """
+    Convenience function to run playoff simulation and display all results.
+    
+    Args:
+        teams: List of team objects from ESPN API
+        team_stats: Dictionary of team statistics
+        current_week: Current week number
+        reg_season_count: Number of regular season games
+        num_playoff_teams: Number of teams in playoffs
+        num_simulations: Number of simulations to run
+    
+    Returns:
+        tuple: (placement_df, round_matchups) - playoff results and matchup predictions
+    """
+    
+    # Run playoff simulation
+    final_placements, placement_counts, round_matchups, playoff_teams = simulate_playoffs(
+        teams, team_stats, current_week, reg_season_count, 
+        num_playoff_teams, num_simulations
+    )
+    
+    if final_placements is None:
+        return None, None
+    
+    # Determine playoff teams
+    playoff_teams = []
+    for team in teams:
+        reg_season_outcomes = team.outcomes[:reg_season_count]
+        wins = sum(1 for outcome in reg_season_outcomes if outcome == 'W')
+        losses = sum(1 for outcome in reg_season_outcomes if outcome == 'L')
+        ties = sum(1 for outcome in reg_season_outcomes if outcome == 'T')
+        
+        total_games = wins + losses + ties
+        win_pct = (wins + 0.5 * ties) / total_games if total_games > 0 else 0
+        
+        playoff_teams.append({
+            'team_name': team.team_name,
+            'team_obj': team,
+            'wins': wins,
+            'losses': losses,
+            'ties': ties,
+            'win_pct': win_pct,
+            'points_for': team_stats[team.team_name]['total_points']
+        })
+    
+    playoff_teams.sort(key=lambda x: (x['wins'] + 0.5 * x['ties'], x['points_for']), reverse=True)
+    playoff_teams = playoff_teams[:num_playoff_teams]
+    
+    # Create summary dataframe
+    placement_df = create_playoff_summary_dataframes(
+        playoff_teams, final_placements, placement_counts, 
+        num_simulations, num_playoff_teams
+    )
+    
+    # Display results
+    print("\n" + "="*80)
+    print("PLAYOFF PLACEMENT PROBABILITIES")
+    print("="*80)
+    print(placement_df.to_string(index=False))
+    
+    # Display predicted matchups
+    display_predicted_matchups(round_matchups, num_simulations)
+    
+    return placement_df, round_matchups
+
 def main():
     # ESPN API setup (using your provided data structure)
     espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
@@ -843,6 +1170,16 @@ def main():
     # Pennoni Younglings
     # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
     league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+    # Family League
+    # league = League(league_id=996930954, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+
+    # # EBC League
+    # league = League(
+    #     league_id=1118513122,
+    #     year=year,
+    #     espn_s2=espn_s2,
+    #     swid="{4656A2AD-A939-460B-96A2-ADA939760B8B}",
+    # )
     # hannah_s2 = "AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D"
     # league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
 
@@ -881,76 +1218,93 @@ def main():
     
     print(f"Regular season games completed: {completed_reg_games}")
     print(f"Regular season games remaining: {remaining_reg_games}")
-    
-    # Run Monte Carlo simulation
-    print("Running Monte Carlo simulation for remaining regular season...")
-    final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
-        teams, team_stats, current_week, reg_season_count, num_playoff_teams, num_simulations=1000
-    )
-    
-    # Create summary dataframes
-    summary_df, seed_df = create_summary_dataframes(
-        team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
-    )
-    
-    # Sort by playoff chances
-    summary_df = summary_df.sort_values('Playoff_Chance_Pct', ascending=False).reset_index(drop=True)
-    
-    # Sort seed_df by playoff chances (using the new column)
-    seed_df = seed_df.sort_values('Chance of Making Playoffs', ascending=False).reset_index(drop=True)
-    
-    # Display results
-    print("\n" + "="*80)
-    print("FANTASY FOOTBALL PLAYOFF PREDICTIONS")
-    print("="*80)
-    
-    print(f"\nSUMMARY - Regular Season Playoff Predictions:")
-    print("(Based on regular season performance only)")
-    display_cols = ['Team', 'Current_Record', 'Current_Win_Pct', 'Total_Points_For', 'Playoff_Chance_Pct', 'Last_Place_Chance_Pct', 'Expected_Final_Record', 'Most_Likely_Record']
-    print(summary_df[display_cols].to_string(index=False, float_format='%.1f'))
-    
-    print(f"\nSEED PROBABILITIES (All positions and playoff chances):")
-    print("(Values represent percentage chance of finishing in each position)")
-    
-    # Show first 8 place columns plus playoff chance column
-    display_cols = ['Team']
-    for i in range(1, min(9, len(teams) + 1)):
-        place_suffix = get_ordinal_suffix(i)
-        display_cols.append(f'{i}{place_suffix} Place')
-    display_cols.append('Chance of Making Playoffs')
-    
-    available_cols = [col for col in display_cols if col in seed_df.columns]
-    print(seed_df[available_cols].to_string(index=False, float_format='%.1f'))
 
-    # After getting your league data
-    weekly_playoff_df = calculate_playoff_chances_by_week(
-        teams, scores_df, reg_season_count, num_playoff_teams, current_week
-    )
-    print("\nWeekly Playoff Chances:")
-    print(weekly_playoff_df)
+    # After regular season is complete
+    if current_week > reg_season_count:
+        final_placements, placement_counts, round_matchups, playoff_teams = simulate_playoffs(
+            teams, team_stats, current_week, reg_season_count, 
+            num_playoff_teams, num_simulations=1000
+        )
+        
+        playoff_summary_df = create_playoff_summary_dataframes(
+            playoff_teams, final_placements, placement_counts, 
+            1000, num_playoff_teams
+        )
+        
+        print(playoff_summary_df)
+        
+        # Optionally display predicted matchups
+        display_predicted_matchups(round_matchups, 1000)
+    
+    # # Run Monte Carlo simulation
+    # print("Running Monte Carlo simulation for remaining regular season...")
+    # final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
+    #     teams, team_stats, current_week, reg_season_count, num_playoff_teams, num_simulations=1000
+    # )
+    
+    # # Create summary dataframes
+    # summary_df, seed_df = create_summary_dataframes(
+    #     team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
+    # )
+    
+    # # Sort by playoff chances
+    # summary_df = summary_df.sort_values('Playoff_Chance_Pct', ascending=False).reset_index(drop=True)
+    
+    # # Sort seed_df by playoff chances (using the new column)
+    # seed_df = seed_df.sort_values('Chance of Making Playoffs', ascending=False).reset_index(drop=True)
+    
+    # # Display results
+    # print("\n" + "="*80)
+    # print("FANTASY FOOTBALL PLAYOFF PREDICTIONS")
+    # print("="*80)
+    
+    # print(f"\nSUMMARY - Regular Season Playoff Predictions:")
+    # print("(Based on regular season performance only)")
+    # display_cols = ['Team', 'Current_Record', 'Current_Win_Pct', 'Total_Points_For', 'Playoff_Chance_Pct', 'Last_Place_Chance_Pct', 'Expected_Final_Record', 'Most_Likely_Record']
+    # print(summary_df[display_cols].to_string(index=False, float_format='%.1f'))
+    
+    # print(f"\nSEED PROBABILITIES (All positions and playoff chances):")
+    # print("(Values represent percentage chance of finishing in each position)")
+    
+    # # Show first 8 place columns plus playoff chance column
+    # display_cols = ['Team']
+    # for i in range(1, min(9, len(teams) + 1)):
+    #     place_suffix = get_ordinal_suffix(i)
+    #     display_cols.append(f'{i}{place_suffix} Place')
+    # display_cols.append('Chance of Making Playoffs')
+    
+    # available_cols = [col for col in display_cols if col in seed_df.columns]
+    # print(seed_df[available_cols].to_string(index=False, float_format='%.1f'))
 
-    # Or use the integrated function for full output
-    weekly_df = add_weekly_analysis_to_main(
-        teams, scores_df, reg_season_count, num_playoff_teams, current_week
-    )
-    print()
-    print(weekly_df)
+    # # After getting your league data
+    # weekly_playoff_df = calculate_playoff_chances_by_week(
+    #     teams, scores_df, reg_season_count, num_playoff_teams, current_week
+    # )
+    # print("\nWeekly Playoff Chances:")
+    # print(weekly_playoff_df)
 
-    num_teams = len(teams)
+    # # Or use the integrated function for full output
+    # weekly_df = add_weekly_analysis_to_main(
+    #     teams, scores_df, reg_season_count, num_playoff_teams, current_week
+    # )
+    # print()
+    # print(weekly_df)
 
-    schedules = []
-    for team in league.teams:
-        schedule = [opponent.team_name for opponent in team.schedule]
-        schedules.append(schedule)
-    # print(current_week)
-    schedules_df = pd.DataFrame(schedules, index=team_names)
+    # num_teams = len(teams)
 
-    leagueName = league.settings.name
-    fileName = leagueName + " " + str(year)
-    fileName = f"leagues/{fileName}.xlsx"
-    lpi_df = pd.read_excel(fileName, sheet_name="Louie Power Index", index_col=0)  # Team names as index
+    # schedules = []
+    # for team in league.teams:
+    #     schedule = [opponent.team_name for opponent in team.schedule]
+    #     schedules.append(schedule)
+    # # print(current_week)
+    # schedules_df = pd.DataFrame(schedules, index=team_names)
 
-    analyze_remaining_schedule(team_stats, schedules_df, lpi_df, current_week, reg_season_count)
+    # leagueName = league.settings.name
+    # fileName = leagueName + " " + str(year)
+    # fileName = f"leagues/{fileName}.xlsx"
+    # lpi_df = pd.read_excel(fileName, sheet_name="Louie Power Index", index_col=0)  # Team names as index
+
+    # analyze_remaining_schedule(team_stats, schedules_df, lpi_df, current_week, reg_season_count)
 
     # schedule_df = calculate_remaining_schedule_difficulty(team_stats, schedules_df, lpi_df, current_week, reg_season_count)
     # print(schedule_df)
