@@ -103,6 +103,7 @@ for league_config in leagues:
             current_week = zero_week.idxmax() +1
         else:
             current_week = scores_df.shape[1]
+        current_week = 18
         print(current_week)
         schedules_df = pd.DataFrame(schedules, index=team_names)
         # print(scores_df)
@@ -352,45 +353,46 @@ for league_config in leagues:
         reg_season_count = settings.reg_season_count
         num_playoff_teams = settings.playoff_team_count
         # Then use them step by step in your existing code
-        team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
-        final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
-            teams, team_stats, current_week, reg_season_count, num_playoff_teams
-        )
-        summary_df, seed_df = create_summary_dataframes(
-            team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
-        )
-        print(summary_df)
-        summary_df = (
-            summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
-            .reset_index(drop=True)
-            .set_index("Team")
-        )
-        print(seed_df)
-
-        remaining_schedue_df = calculate_remaining_schedule_difficulty(
-            team_stats, schedules_df, lpi_df, current_week, reg_season_count
-        )
-
-        seed_df = (
-            seed_df.sort_values('Chance of Making Playoffs', ascending=False)
+        if current_week <= settings.reg_season_count:
+            team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
+            final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
+                teams, team_stats, current_week, reg_season_count, num_playoff_teams
+            )
+            summary_df, seed_df = create_summary_dataframes(
+                team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
+            )
+            print(summary_df)
+            summary_df = (
+                summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
                 .reset_index(drop=True)
                 .set_index("Team")
-        )
+            )
+            print(seed_df)
 
-        # Or use the integrated function for full output
-        weekly_df = add_weekly_analysis_to_main(
-            teams, scores_df, reg_season_count, num_playoff_teams, current_week
-        )
+            remaining_schedue_df = calculate_remaining_schedule_difficulty(
+                team_stats, schedules_df, lpi_df, current_week, reg_season_count
+            )
+
+            seed_df = (
+                seed_df.sort_values('Chance of Making Playoffs', ascending=False)
+                    .reset_index(drop=True)
+                    .set_index("Team")
+            )
+
+            # Or use the integrated function for full output
+            weekly_df = add_weekly_analysis_to_main(
+                teams, scores_df, reg_season_count, num_playoff_teams, current_week
+            )
         # odds_df = oddsCalculator()
         # print(odds_df)
 
-        if current_week > settings.reg_season_count+6:
+        if current_week > settings.reg_season_count+2:
             fileName = leagueName + " " + str(year)
-            fileName = f"leagues/{fileName}.xlsx"
+            playoff_fileName = f"leagues/{fileName}.xlsx"
             sheet_name = "LPI By Week"
 
             # Read the LPI data
-            lpi_df = pd.read_excel(fileName, sheet_name=sheet_name, index_col=0)  # Team names as index
+            lpi_df = pd.read_excel(playoff_fileName, sheet_name=sheet_name, index_col=0)  # Team names as index
             lpi_df = lpi_df.drop(['Change From Last Week'], axis=1)
 
             # --------------------------------------------------------------------------------------
@@ -535,16 +537,16 @@ for league_config in leagues:
             # print(playoff_df)
 
             # Open the workbook
-            workbook = openpyxl.load_workbook(fileName)
+            workbook = openpyxl.load_workbook(playoff_fileName)
             # Check if the sheet already exists
             if "Playoff Results" in workbook.sheetnames:
                 # Remove the sheet
                 del workbook["Playoff Results"]
             # Save the workbook after removing the sheet
-            workbook.save(fileName)
+            workbook.save(playoff_fileName)
 
             # Add playoff_df as a new sheet to the existing Excel file
-            with pd.ExcelWriter(fileName, engine="openpyxl", mode="a") as writer:
+            with pd.ExcelWriter(playoff_fileName, engine="openpyxl", mode="a") as writer:
                 playoff_df.to_excel(writer, sheet_name="Playoff Results", index=False)
             
         writer = pd.ExcelWriter(f"leagues/{fileName}.xlsx", engine='xlsxwriter')
@@ -566,20 +568,20 @@ for league_config in leagues:
         print(f"Details: {str(e)}")
         continue  # Move to the next league
 
-all_matchups_df = get_weeks_matchups(leagues, year)
-try:
-    current_matchups = pd.read_csv("all_matchups.csv")
-    all_matchups_df = pd.concat([current_matchups, all_matchups_df]).drop_duplicates().reset_index(drop=True)
-    all_matchups_df["Home Predicted Score"] = all_matchups_df["Home Predicted Score"].round(2)
-    all_matchups_df["Away Predicted Score"] = all_matchups_df["Away Predicted Score"].round(2)
-    all_matchups_df["Predicted Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
-    all_matchups_df["Actual Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
-    print("Merged with existing all_matchups.csv")
-    print(all_matchups_df)
-    all_matchups_df.to_csv("all_matchups.csv", index=False)
-except FileNotFoundError:
-    print("No existing all_matchups.csv found, creating a new one.")
+# all_matchups_df = get_weeks_matchups(leagues, year)
+# try:
+#     current_matchups = pd.read_csv("all_matchups.csv")
+#     all_matchups_df = pd.concat([current_matchups, all_matchups_df]).drop_duplicates().reset_index(drop=True)
+#     all_matchups_df["Home Predicted Score"] = all_matchups_df["Home Predicted Score"].round(2)
+#     all_matchups_df["Away Predicted Score"] = all_matchups_df["Away Predicted Score"].round(2)
+#     all_matchups_df["Predicted Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
+#     all_matchups_df["Actual Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
+#     print("Merged with existing all_matchups.csv")
+#     print(all_matchups_df)
+#     all_matchups_df.to_csv("all_matchups.csv", index=False)
+# except FileNotFoundError:
+#     print("No existing all_matchups.csv found, creating a new one.")
 
-create_betting_odds(leagues, year)
+# create_betting_odds(leagues, year)
 
 print("--- %s seconds ---" % (time.time() - start_time))
