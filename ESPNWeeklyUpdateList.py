@@ -352,7 +352,7 @@ for league_config in leagues:
         # odds_df = oddsCalculator()
         # print(odds_df)
 
-        if current_week > settings.reg_season_count+2:
+        if current_week > settings.reg_season_count+7:
             fileName = leagueName + " " + str(year)
             playoff_fileName = f"leagues/{fileName}.xlsx"
             sheet_name = "LPI By Week"
@@ -519,44 +519,44 @@ for league_config in leagues:
         records_df.to_excel(writer, sheet_name='Schedule Grid')
         schedule_rank_df.to_excel(writer, sheet_name='Wins Against Schedule')
         rank_df.to_excel(writer, sheet_name='Expected Wins')
-        if current_week <= settings.reg_season_count:
-            teams= league.teams
-            reg_season_count = settings.reg_season_count
-            num_playoff_teams = settings.playoff_team_count
-            # Then use them step by step in your existing code
-            team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
-            final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
-                teams, team_stats, current_week, reg_season_count, num_playoff_teams
-            )
-            summary_df, seed_df = create_summary_dataframes(
-                team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
-            )
-            print(summary_df)
-            summary_df = (
-                summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
+        # if current_week <= settings.reg_season_count:
+        teams= league.teams
+        reg_season_count = settings.reg_season_count
+        num_playoff_teams = settings.playoff_team_count
+        # Then use them step by step in your existing code
+        team_stats = calculate_team_stats(teams, scores_df, current_week, reg_season_count)
+        final_records, playoff_makes, last_place_finishes, seed_counts = simulate_remaining_season(
+            teams, team_stats, current_week, reg_season_count, num_playoff_teams
+        )
+        summary_df, seed_df = create_summary_dataframes(
+            team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
+        )
+        print(summary_df)
+        summary_df = (
+            summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
+            .reset_index(drop=True)
+            .set_index("Team")
+        )
+        print(seed_df)
+
+        remaining_schedue_df = calculate_remaining_schedule_difficulty(
+            team_stats, schedules_df, lpi_df, current_week, reg_season_count
+        )
+
+        seed_df = (
+            seed_df.sort_values('Chance of Making Playoffs', ascending=False)
                 .reset_index(drop=True)
                 .set_index("Team")
-            )
-            print(seed_df)
+        )
 
-            remaining_schedue_df = calculate_remaining_schedule_difficulty(
-                team_stats, schedules_df, lpi_df, current_week, reg_season_count
-            )
-
-            seed_df = (
-                seed_df.sort_values('Chance of Making Playoffs', ascending=False)
-                    .reset_index(drop=True)
-                    .set_index("Team")
-            )
-
-            # Or use the integrated function for full output
-            weekly_df = add_weekly_analysis_to_main(
-                teams, scores_df, reg_season_count, num_playoff_teams, current_week
-            )
-            seed_df.to_excel(writer, sheet_name='Playoff Odds')
-            weekly_df.to_excel(writer, sheet_name='Playoff Odds By Week')
-            remaining_schedue_df.to_excel(writer, sheet_name='Remaining Schedule Difficulty')
-            summary_df.to_excel(writer, sheet_name='Record Odds')
+        # Or use the integrated function for full output
+        weekly_df = add_weekly_analysis_to_main(
+            teams, scores_df, reg_season_count, num_playoff_teams, current_week
+        )
+        seed_df.to_excel(writer, sheet_name='Playoff Odds')
+        weekly_df.to_excel(writer, sheet_name='Playoff Odds By Week')
+        remaining_schedue_df.to_excel(writer, sheet_name='Remaining Schedule Difficulty')
+        summary_df.to_excel(writer, sheet_name='Record Odds')
         lpi_df.to_excel(writer, sheet_name='Louie Power Index')
         lpi_weekly_df.to_excel(writer, sheet_name='LPI By Week')
         upsets_df.to_excel(writer, sheet_name='Biggest Upsets')
