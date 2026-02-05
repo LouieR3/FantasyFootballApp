@@ -78,18 +78,18 @@ nolan_s2 = "AEB5llPc1zknf6Qj4ZGE3oegXJ2gL%2B2oc8AfE48cd4XnimA7zzY5ZprHZZhc57ZSyf
 # Dave Friend League
 # league = League(league_id= 1924463077, year= year, espn_s2= dave_s2, swid= "{AAD245A4-298A-4362-A70B-5F838E0D6F64}")
 
-# # Ayush League
-# league = League(league_id=558148583, year=year, espn_s2=ayush_s2, swid='{668E3A23-4B03-4D9E-9804-4C9D479F4E8F}')
-# settings = league.settings
+# Ayush League
+league = League(league_id=558148583, year=year, espn_s2=ayush_s2, swid='{668E3A23-4B03-4D9E-9804-4C9D479F4E8F}')
+settings = league.settings
 
 # Nolan League
-league = League(
-    league_id=496646254,
-    year=year,
-    espn_s2=nolan_s2,
-    swid="{7985C32E-0341-4B30-97E5-5730A4EF17FA}",
-)
-settings = league.settings
+# league = League(
+#     league_id=496646254,
+#     year=year,
+#     espn_s2=nolan_s2,
+#     swid="{7985C32E-0341-4B30-97E5-5730A4EF17FA}",
+# )
+# settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
 fileName = leagueName + " " + str(year)
@@ -113,6 +113,7 @@ if zero_week.any():
 else:
     current_week = scores_df.shape[1]
 schedules_df = pd.DataFrame(schedules, index=team_names)
+current_week = current_week + 1
 print(current_week)
 print(settings.reg_season_count)
 print(settings.playoff_team_count)
