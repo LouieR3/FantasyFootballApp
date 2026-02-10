@@ -143,9 +143,9 @@ body {
 .tile__text p {
 	margin: 0;
 	font-size: clamp(13px, 1.4vw, 16px);
-	line-height: 1.55;
+	/* line-height: 1.55; */
 	color: var(--muted);
-	max-width: 46ch;
+	/* max-width: 46ch; */
 }
 
 /* Positions (examples) */
@@ -159,21 +159,39 @@ body {
 	left: 0;
 }
 
+.pos-top-right-10 {
+	top: 10%;
+	right: 0;
+}
+
 .pos-top-right {
 	top: 0;
 	right: 0;
 }
 
+/* MIDDLE */
+.pos-middle-right {
+	top: 25%;
+	right: 0;
+}
+.pos-middle-left {
+	top: 30%;
+	left: 0;
+}
+.pos-middle-left {
+	top: 30%;
+	left: 0;
+}
+
+/* BOTTOM */
 .pos-bottom-left-0 {
 	bottom: 0%;
 	left: 0%;
 }
-
 .pos-bottom-left {
 	bottom: 0%;
 	left: 10%;
 }
-
 .pos-bottom-left-10 {
 	bottom: 10%;
 	left: 10%;
@@ -182,6 +200,23 @@ body {
 .pos-bottom-right {
 	bottom: 0;
 	right: 0;
+}
+.pos-bottom-right-2 {
+	bottom: 15%;
+	right: 0;
+}
+.pos-bottom-right-3 {
+	bottom: 30%;
+	right: 0;
+}
+
+.pos-bottom-left-2 {
+	bottom: 20%;
+	left: 0;
+}
+.pos-bottom-left-3 {
+	bottom: 30%;
+	left: 0;
 }
 
 .pos-bottom-right-10 {

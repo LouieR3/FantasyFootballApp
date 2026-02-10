@@ -26,19 +26,20 @@ function initTimeline() {
 			tiles: [
 				{
 					type: "image",
-					pos: "pos-top-left-10",
-					w: "25vw",
+					pos: "pos-bottom-left",
+					w: "20vw",
 					ratio: "16 / 12",
 					src:
 						"assets/1966.jpg",
-					alt: "Kiki's Delivery Service",
+					alt: "Pennoni Associates Inc Logo",
+					title: "Pennoni Associates Inc Logo",
 					depth: 10,
 					z: 1
 				},
 				{
 					type: "text",
-					pos: "pos-top-right",
-					w: "500px",
+					pos: "pos-top-right-10",
+					w: "40vw",
 					ratio: "16 / 9",
 					heading: "1966",
 					copy:
@@ -52,11 +53,11 @@ function initTimeline() {
 				{
 					type: "text",
 					pos: "pos-bottom-right",
-					w: "500px",
+					w: "40vw",
 					ratio: "16 / 9",
 					heading: "1967",
 					copy:
-						"• Business entity changed from sole practioner to business corpora􀆟on on July 21, 1967" +
+						"• Business entity changed from sole practitioner to business corporation on July 21, 1967" +
 						"\n\n• Expanded out of Pennsylvania with first New Jersey office in Cinnaminson, Burlington County" +
 						"\n\n• First Employee - Leo Storniolo",
 					depth: 20,
@@ -64,12 +65,13 @@ function initTimeline() {
 				},
 				{
 					type: "image",
-					pos: "pos-bottom-left",
+					pos: "pos-top-left-10",
 					w: "35vw",
 					ratio: "16 / 9",
 					src:
 						"assets/1967.png",
-					alt: "Chuck Pennoni",
+					alt: "Chuck Pennoni at a desk in 1967",
+					title: "Chuck Pennoni at a desk in 1967",
 					depth: 25,
 					z: 1
 				}
@@ -77,113 +79,158 @@ function initTimeline() {
 		},
 		{
 			id: "MNT",
-			year: "1988",
+			year: "1968-71",
 			theme: "totoro",
 			tiles: [
 				{
-					type: "image",
+					type: "text",
 					pos: "pos-top-left",
-					w: "280px",
+					w: "40vw",
 					ratio: "9 / 16",
-					src: "assets/1973.png",
-					poster:
-						"assets/1973.png",
-					alt: "1973",
+					heading: "1968",
+					copy:
+						"• HQ relocated to 1920 Chestnut Street in Philadelphia, PA" +
+						"\n\n• First international project was a feasibility study on the Mediterranean coast in Spain",
 					depth: 5,
 					z: 2
 				},
 				{
-					type: "video",
-					pos: "pos-top-right",
-					w: "280px",
+					type: "text",
+					pos: "pos-middle-left",
+					w: "40vw",
 					ratio: "1 / 1",
-					src: "/mnt-01.mp4",
-					poster:
-						"https://i.pinimg.com/1200x/5a/44/ba/5a44baee0bf66e04af973ed3580e84dc.jpg",
-					alt: "My Neighbor Totoro",
+					heading: "1970",
+					copy:
+						"• HQ relocated to 1920 Chestnut Street in Philadelphia, PA" +
+						"\n\n• First international project was a feasibility study on the Mediterranean coast in Spain",
 					depth: 10,
 					z: 2
 				},
 				{
-					type: "image",
-					pos: "pos-bottom-right-10",
-					w: "280px",
-					ratio: "1 / 1",
-					src:
-						"https://i.pinimg.com/736x/73/6c/a1/736ca1530ccfd941af54feb330ba87c4.jpg",
-					alt: "My Neighbor Totoro",
-					depth: 30,
-					z: 3
-				},
-				{
 					type: "text",
-					pos: "pos-bottom-left-10",
-					w: "500px",
+					pos: "pos-bottom-left-3",
+					w: "40vw",
 					ratio: "16 / 9",
-					heading: "My Neighbor Totoro",
+					heading: "1971",
 					copy:
-						"My Neighbor Totoro is a 1988 Japanese animated fantasy film written and directed by Hayao Miyazaki and animated by Studio Ghibli for Tokuma Shoten.",
-					depth: 25,
+						"• Expanded to Bucks County with an office in Langhorne, PA",
+					depth: 20,
 					z: 4
-				}
+				},
 			]
 		},
 		{
 			id: "SPA",
-			year: "2001",
+			year: "1973-77",
 			theme: "spiritedAway",
 			tiles: [
 				{
-					type: "image",
-					pos: "pos-bottom-left",
-					w: "25vw",
+					type: "text",
+					pos: "pos-top-right",
+					w: "40vw",
 					ratio: "16 / 9",
-					src:
-						"https://i.pinimg.com/1200x/f4/11/f8/f411f81d47185322cd4ae4e7ff451c3e.jpg",
-					alt: "Spirited Away",
+					heading: "1973",
+					copy:
+						"• HQ relocated to a historic four-story brownstone at 2006 Walnut Street near Rittenhouse Square in Philadelphia, PA",
 					depth: 15,
 					z: 1
 				},
 				{
-					type: "video",
-					pos: "pos-bottom-right",
-					w: "280px",
+					type: "image",
+					pos: "pos-bottom-left-2",
+					w: "20vw",
 					ratio: "9 / 16",
-					src: "/spa-01.mp4",
+					src: "assets/1973.png",
 					poster:
-						"https://i.pinimg.com/1200x/f4/11/f8/f411f81d47185322cd4ae4e7ff451c3e.jpg",
-					alt: "Spirited Away",
+						"assets/1973.png",
+					alt: "Main office building. 2006 Walnut Street, Philadelphia, PA",
 					depth: 5,
 					z: 2
 				},
 				{
-					type: "image",
-					pos: "pos-center-center",
-					w: "400px",
-					ratio: "16 / 9",
-					src:
-						"https://i.pinimg.com/1200x/4e/da/12/4eda126a3de0561a77b98e7ed25533f2.jpg",
-					alt: "Spirited Away",
-					depth: 20,
-					z: 1
+					type: "text",
+					pos: "pos-middle-right",
+					w: "40vw",
+					ratio: "1 / 1",
+					heading: "1976",
+					copy:
+						"• A temporary office was established in Iran, following civil engineering work for the new cities of Sarcheshmeh, Lavizon, Kan, and the expansion of Ahwaz."+
+						"\n\n<b>• 49 employees</b>",
+					depth: 10,
+					z: 2
 				},
 				{
 					type: "text",
-					pos: "pos-top-quarter-left",
-					w: "450px",
-					ratio: "1 / 1",
-					heading: "Spirited Away",
+					pos: "pos-bottom-right-3",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1977",
 					copy:
-						"Spirited Away is a 2001 Japanese animated fantasy film written and directed by Hayao Miyazaki. It was produced by Toshio Suzuki, animated by Studio Ghibli, and distributed by Toho.",
-					depth: 10,
-					z: 2
+						"• Formed Computer Graphics with Yerkes, Huth and Richardson",
+					depth: 20,
+					z: 1
 				}
 			]
 		},
 		{
 			id: "HOWLS",
-			year: "2004",
+			year: "1979-86",
 			theme: "howls",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-top-left",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1979",
+					copy:
+						"• HQ relocated to renovated top floor of modern officebuilding located at 1911 Arch Street near Logan Circle, Philadelphia, PA"+
+						"\n\n• Acquired the assets of <b>George E. Schilling & Associates</b>, an engineering, surveying, and planning firm in Atlantic County, NJ with history dating back to the early 1800s, which established an Absecon, NJ office",
+					depth: 15,
+					z: 1
+				},
+				{
+					type: "image",
+					pos: "pos-top-right",
+					w: "40vw",
+					ratio: "12 / 10",
+					src: "assets/1979.png",
+					poster:
+						"assets/1979.png",
+					alt: "Main office building. 2006 Walnut Street, Philadelphia, PA",
+					title: "Main office building. 2006 Walnut Street, Philadelphia, PA",
+					depth: 5,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-middle-left",
+					w: "40vw",
+					ratio: "1 / 1",
+					heading: "1980",
+					copy:
+						"• Acquired the assets of <b>Rothbaum & Davis</b>, consulting structural engineers of Philadelphia, PA, which had an origin traced back to the early 1920s",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-left-3",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1986",
+					copy:
+						"• Acquired the assets of <b>Schulcz & Padlasky</b>, consulting and structural engineers of Delaware County, PA founded in 1952"+
+						"\n\n<b>• 152 employees</b>",
+					depth: 20,
+					z: 1
+				}
+			]
+		},
+		{
+			id: "ALT",
+			year: "2020-26",
+			theme: "alt",
 			tiles: [
 				{
 					type: "image",
@@ -320,6 +367,7 @@ function initTimeline() {
 				img.loading = "lazy";
 				img.decoding = "async";
 				img.alt = tileData.alt || "";
+				img.title = tileData.title || "";
 				img.src = tileData.src;
 				img.dataset.reveal = "media";
 
@@ -548,29 +596,38 @@ function initYearSwapAndTheme() {
 			yearLayerOpacity: 0.4
 		},
 		totoro: {
-			bg: "#e4e4e4",
-			fg: "#432f23",
-			muted: "#6d5546",
-			year: "#64441c",
-			cardBg: "#ffffffcc",
+			bg: "#dbdbdbff",
+			fg: "#264831",
+			muted: "#264831",
+			year: "#264831",
+			cardBg: "#f0f0f0",
 			cardBorder: "transparent",
 			yearLayerOpacity: 0.43
 		},
 		spiritedAway: {
-			bg: "#79b0b4",
-			fg: "#79b0b4",
+			bg: "#02b07c",
+			fg: "#02b07c",
 			muted: "#ffffff",
-			year: "#012d31",
-			cardBg: "#12151ccc",
+			year: "#222",
+			cardBg: "#222",
 			cardBorder: "transparent",
 			yearLayerOpacity: 0.33
 		},
 		howls: {
-			bg: "#edf8f4",
+			bg: "#ccebe1",
 			fg: "#1d3535",
 			muted: "#4b6868",
 			year: "#1d3535",
-			cardBg: "#ffffffcc",
+			cardBg: "#ecf5f2ff",
+			cardBorder: "transparent",
+			yearLayerOpacity: 0.42
+		},
+		alt: {
+			bg: "#2e2e2e",
+			fg: "#eee",
+			muted: "#ffffffff",
+			year: "#eee",
+			cardBg: "#414141ff",
 			cardBorder: "transparent",
 			yearLayerOpacity: 0.42
 		}

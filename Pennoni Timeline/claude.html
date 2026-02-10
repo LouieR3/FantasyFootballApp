@@ -1,0 +1,589 @@
+
+Give me the framework for a timeline website for our company Pennoni going over the 60 years of history including major dates, projects, office openings, and acquisitions
+Many years will have some images connected to them and it will be bullet points essentially for the content like this:
+
+1966
+• C.R. Pennoni began the firm as a one-person 
+structural engineering practice in West Philadelphia, 
+PA at 67th Street and Haverford Avenue
+• The first three part-time hires were engineering 
+students from Temple University
+• Headquarters (HQ) moved to Center City office at 
+17th and Cherry Streets in Philadelphia, PA to serve 
+increased client base
+• First Private Client - C&J Construction Company, 
+Philadelphia, PA
+• First Government Project - City of Philadelphia Police 
+Station at 20th and Pennsylvania Avenue as a sub to 
+Gene Dichter, Architect
+
+I want it to be a vertical timeline with a vertical side menu to jump around to dates and I want the items to fade in left and right with aos
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+as an example:
+
+<h1 class="mobileText header-text" data-aos="fade-down" data-aos-delay="100">Welcome!</h1>
+Show more
+Feb 3
+I'll create a professional timeline website framework for Pennoni's 60-year history with vertical navigation and AOS animations.
+
+
+Created a file, read a file
+I've created a complete timeline website framework for Pennoni's 60-year history. Here's what's included:
+
+Key Features:
+
+Vertical timeline with center line and alternating left/right content
+Side navigation menu with year links that auto-highlights as you scroll
+AOS animations - odd items fade-right, even items fade-left
+Responsive design - adapts beautifully to mobile devices
+Image support - single images or multiple images in grid layout
+Professional styling with Pennoni brand colors (blues)
+How to use:
+
+Replace placeholder years/content with your actual timeline data
+Add images by replacing src="path-to-your-image.jpg" with actual image paths
+Update the side navigation links to match your years
+Customize colors in the CSS if needed (search for 
+#1a4d8f and 
+#2d6ab4)
+The 1966 content you provided is already in place as an example!
+
+Pennoni timeline
+Code · HTML 
+
+
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+Pennoni timeline · HTML
+Copy
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pennoni - 60 Years of Excellence</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a4d8f 0%, #2d6ab4 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+
+        /* Side Navigation */
+        .side-nav {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+            padding: 20px 10px;
+            z-index: 1000;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .side-nav h3 {
+            font-size: 0.9rem;
+            color: #1a4d8f;
+            margin-bottom: 15px;
+            padding: 0 10px;
+            font-weight: 600;
+        }
+
+        .side-nav a {
+            display: block;
+            padding: 8px 15px;
+            margin: 5px 0;
+            color: #666;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .side-nav a:hover {
+            background: #f0f4f8;
+            border-left-color: #2d6ab4;
+            color: #1a4d8f;
+        }
+
+        .side-nav a.active {
+            background: #e8f0f8;
+            border-left-color: #1a4d8f;
+            color: #1a4d8f;
+            font-weight: 600;
+        }
+
+        /* Timeline Container */
+        .timeline-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px 0 150px;
+            position: relative;
+        }
+
+        /* Vertical Timeline Line */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #1a4d8f, #2d6ab4);
+            top: 0;
+        }
+
+        /* Timeline Item */
+        .timeline-item {
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a4d8f;
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            box-shadow: 0 0 0 8px #f5f5f5, 0 0 20px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+
+        /* Timeline Content - Alternating Left/Right */
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        /* Arrow pointing to center */
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -15px;
+            border-width: 15px 0 15px 15px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -15px;
+            border-width: 15px 15px 15px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .timeline-content h3 {
+            color: #1a4d8f;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .timeline-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-content li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .timeline-content li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2d6ab4;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        /* Timeline Images */
+        .timeline-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .timeline-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .timeline-images img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+
+            .side-nav {
+                display: none;
+            }
+
+            .timeline-container {
+                padding: 0 20px;
+            }
+
+            .timeline-container::before {
+                left: 30px;
+            }
+
+            .timeline-year {
+                left: 30px;
+                width: 60px;
+                height: 60px;
+                font-size: 1rem;
+            }
+
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 80px !important;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content::before,
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -15px;
+                border-width: 15px 15px 15px 0;
+                border-color: transparent white transparent transparent;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading State */
+        .loading {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1 data-aos="fade-down" data-aos-duration="1000">Pennoni</h1>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">60 Years of Engineering Excellence</p>
+    </div>
+
+    <!-- Side Navigation -->
+    <nav class="side-nav" id="sideNav">
+        <h3>Timeline</h3>
+        <a href="#year-1966" class="active">1966</a>
+        <a href="#year-1970">1970</a>
+        <a href="#year-1975">1975</a>
+        <a href="#year-1980">1980</a>
+        <a href="#year-1985">1985</a>
+        <a href="#year-1990">1990</a>
+        <a href="#year-1995">1995</a>
+        <a href="#year-2000">2000</a>
+        <a href="#year-2005">2005</a>
+        <a href="#year-2010">2010</a>
+        <a href="#year-2015">2015</a>
+        <a href="#year-2020">2020</a>
+        <a href="#year-2025">2025</a>
+        <!-- Add more years as needed -->
+    </nav>
+
+    <!-- Timeline Container -->
+    <div class="timeline-container">
+        
+        <!-- 1966 - Example with actual content -->
+        <div class="timeline-item" id="year-1966">
+            <div class="timeline-year">1966</div>
+            <div class="timeline-content" data-aos="fade-right" data-aos-duration="800">
+                <h3>The Beginning</h3>
+                <ul>
+                    <li>C.R. Pennoni began the firm as a one-person structural engineering practice in West Philadelphia, PA at 67th Street and Haverford Avenue</li>
+                    <li>The first three part-time hires were engineering students from Temple University</li>
+                    <li>Headquarters (HQ) moved to Center City office at 17th and Cherry Streets in Philadelphia, PA to serve increased client base</li>
+                    <li>First Private Client - C&J Construction Company, Philadelphia, PA</li>
+                    <li>First Government Project - City of Philadelphia Police Station at 20th and Pennsylvania Avenue as a sub to Gene Dichter, Architect</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 1970 - Example with image -->
+        <div class="timeline-item" id="year-1970">
+            <div class="timeline-year">1970</div>
+            <div class="timeline-content" data-aos="fade-left" data-aos-duration="800">
+                <!-- Example image - replace src with actual image path -->
+                <img src="path-to-your-image.jpg" alt="1970 Office" class="timeline-image">
+                <h3>Expansion & Growth</h3>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 1975 - Example alternating right -->
+        <div class="timeline-item" id="year-1975">
+            <div class="timeline-year">1975</div>
+            <div class="timeline-content" data-aos="fade-right" data-aos-duration="800">
+                <h3>New Offices & Projects</h3>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 1980 - Example with multiple images -->
+        <div class="timeline-item" id="year-1980">
+            <div class="timeline-year">1980</div>
+            <div class="timeline-content" data-aos="fade-left" data-aos-duration="800">
+                <h3>Major Acquisitions</h3>
+                <div class="timeline-images">
+                    <img src="path-to-image-1.jpg" alt="Project 1">
+                    <img src="path-to-image-2.jpg" alt="Project 2">
+                </div>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 1985 -->
+        <div class="timeline-item" id="year-1985">
+            <div class="timeline-year">1985</div>
+            <div class="timeline-content" data-aos="fade-right" data-aos-duration="800">
+                <h3>Key Milestones</h3>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 1990 -->
+        <div class="timeline-item" id="year-1990">
+            <div class="timeline-year">1990</div>
+            <div class="timeline-content" data-aos="fade-left" data-aos-duration="800">
+                <h3>Continued Excellence</h3>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 1995 -->
+        <div class="timeline-item" id="year-1995">
+            <div class="timeline-year">1995</div>
+            <div class="timeline-content" data-aos="fade-right" data-aos-duration="800">
+                <h3>Innovation & Technology</h3>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2000 -->
+        <div class="timeline-item" id="year-2000">
+            <div class="timeline-year">2000</div>
+            <div class="timeline-content" data-aos="fade-left" data-aos-duration="800">
+                <h3>New Millennium</h3>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2005 -->
+        <div class="timeline-item" id="year-2005">
+            <div class="timeline-year">2005</div>
+            <div class="timeline-content" data-aos="fade-right" data-aos-duration="800">
+                <h3>Strategic Growth</h3>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2010 -->
+        <div class="timeline-item" id="year-2010">
+            <div class="timeline-year">2010</div>
+            <div class="timeline-content" data-aos="fade-left" data-aos-duration="800">
+                <h3>Expansion Era</h3>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2015 -->
+        <div class="timeline-item" id="year-2015">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-content" data-aos="fade-right" data-aos-duration="800">
+                <h3>Modern Solutions</h3>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2020 -->
+        <div class="timeline-item" id="year-2020">
+            <div class="timeline-year">2020</div>
+            <div class="timeline-content" data-aos="fade-left" data-aos-duration="800">
+                <h3>Adapting & Thriving</h3>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="timeline-item" id="year-2025">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-content" data-aos="fade-right" data-aos-duration="800">
+                <h3>Looking Forward</h3>
+                <ul>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                    <li>Add your milestone here</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Active navigation highlighting
+        const navLinks = document.querySelectorAll('.side-nav a');
+        const sections = document.querySelectorAll('.timeline-item');
+
+        function updateActiveNav() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav);
+        window.addEventListener('load', updateActiveNav);
+    </script>
+</body>
+</html>
+
