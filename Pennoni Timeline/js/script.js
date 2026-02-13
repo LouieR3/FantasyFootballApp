@@ -43,10 +43,10 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1966",
 					copy:
-						"<b>• C.R. Pennoni began the firm as a one-person structural engineering practice in West Philadelphia, PA at 67th Street and Haverford Avenue.</b>" +
-						"\n\n• The first three part-time hires were engineering students from Temple University\n\n• Headquarters (HQ) moved to Center City office at 17th and Cherry Streets in Philadelphia, PA to serve increased client base" +
-						"\n\n• First Private Client - C&J Construction Company, Philadelphia, PA" +
-						"\n\n• First Government Project - City of Philadelphia Police Station at 20th and Pennsylvania Avenue as a sub to Gene Dichter, Architect",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li><b>C.R. Pennoni began the firm as a one-person structural engineering practice in West Philadelphia, PA at 67th Street and Haverford Avenue.</b></li>" +
+						"<li>The first three part-time hires were engineering students from Temple University\n\n• Headquarters (HQ) moved to Center City office at 17th and Cherry Streets in Philadelphia, PA to serve increased client base</li>" +
+						"<li>First Private Client - C&J Construction Company, Philadelphia, PA</li>" +
+						"<li>First Government Project - City of Philadelphia Police Station at 20th and Pennsylvania Avenue as a sub to Gene Dichter, Architect</li></ul>",
 					depth: 20,
 					z: 4
 				},
@@ -57,9 +57,9 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1967",
 					copy:
-						"• Business entity changed from sole practitioner to business corporation on July 21, 1967" +
-						"\n\n• Expanded out of Pennsylvania with first New Jersey office in Cinnaminson, Burlington County" +
-						"\n\n• First Employee - Leo Storniolo",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Business entity changed from sole practitioner to business corporation on July 21, 1967</li>" +
+						"<li>Expanded out of Pennsylvania with first New Jersey office in Cinnaminson, Burlington County</li>" +
+						"<li>First Employee - Leo Storniolo</li></ul>",
 					depth: 20,
 					z: 4
 				},
@@ -80,7 +80,7 @@ function initTimeline() {
 		{
 			id: "MNT",
 			year: "1968-71",
-			theme: "totoro",
+			theme: "howls",
 			tiles: [
 				{
 					type: "text",
@@ -89,8 +89,8 @@ function initTimeline() {
 					ratio: "9 / 16",
 					heading: "1968",
 					copy:
-						"• HQ relocated to 1920 Chestnut Street in Philadelphia, PA" +
-						"\n\n• First international project was a feasibility study on the Mediterranean coast in Spain",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>HQ relocated to 1920 Chestnut Street in Philadelphia, PA</li>" +
+						"<li>First international project was a feasibility study on the Mediterranean coast in Spain</li></ul>",
 					depth: 5,
 					z: 2
 				},
@@ -101,19 +101,19 @@ function initTimeline() {
 					ratio: "1 / 1",
 					heading: "1970",
 					copy:
-						"• HQ relocated to 1920 Chestnut Street in Philadelphia, PA" +
-						"\n\n• First international project was a feasibility study on the Mediterranean coast in Spain",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Leo F. O’Connor, PE joined the firm as the first Vice President</li>" +
+						"<li>First Government Client - Township of Falls Authority, Fallsington, Bucks County, PA</li></ul>",
 					depth: 10,
 					z: 2
 				},
 				{
 					type: "text",
-					pos: "pos-bottom-left-3",
+					pos: "pos-bottom-left-25",
 					w: "40vw",
 					ratio: "16 / 9",
 					heading: "1971",
 					copy:
-						"• Expanded to Bucks County with an office in Langhorne, PA",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Expanded to Bucks County with an office in Langhorne, PA</li></ul>",
 					depth: 20,
 					z: 4
 				},
@@ -121,7 +121,7 @@ function initTimeline() {
 		},
 		{
 			id: "SPA",
-			year: "1973-77",
+			year: "1972-77",
 			theme: "spiritedAway",
 			tiles: [
 				{
@@ -131,7 +131,7 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1973",
 					copy:
-						"• HQ relocated to a historic four-story brownstone at 2006 Walnut Street near Rittenhouse Square in Philadelphia, PA",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>HQ relocated to a historic four-story brownstone at 2006 Walnut Street near Rittenhouse Square in Philadelphia, PA</li></ul>",
 					depth: 15,
 					z: 1
 				},
@@ -144,6 +144,7 @@ function initTimeline() {
 					poster:
 						"assets/1973.png",
 					alt: "Main office building. 2006 Walnut Street, Philadelphia, PA",
+					title: "Main office building. 2006 Walnut Street, Philadelphia, PA",
 					depth: 5,
 					z: 2
 				},
@@ -154,8 +155,8 @@ function initTimeline() {
 					ratio: "1 / 1",
 					heading: "1976",
 					copy:
-						"• A temporary office was established in Iran, following civil engineering work for the new cities of Sarcheshmeh, Lavizon, Kan, and the expansion of Ahwaz."+
-						"\n\n<b>• 49 employees</b>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>A temporary office was established in Iran, following civil engineering work for the new cities of Sarcheshmeh, Lavizon, Kan, and the expansion of Ahwaz.</li>"+
+						"<li><b>49 employees</b></li></ul>",
 					depth: 10,
 					z: 2
 				},
@@ -166,7 +167,7 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1977",
 					copy:
-						"• Formed Computer Graphics with Yerkes, Huth and Richardson",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Formed Computer Graphics with Yerkes, Huth and Richardson</li></ul>",
 					depth: 20,
 					z: 1
 				}
@@ -174,8 +175,8 @@ function initTimeline() {
 		},
 		{
 			id: "HOWLS",
-			year: "1979-86",
-			theme: "howls",
+			year: "1978-86",
+			theme: "totoro",
 			tiles: [
 				{
 					type: "text",
@@ -184,21 +185,21 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1979",
 					copy:
-						"• HQ relocated to renovated top floor of modern officebuilding located at 1911 Arch Street near Logan Circle, Philadelphia, PA"+
-						"\n\n• Acquired the assets of <b>George E. Schilling & Associates</b>, an engineering, surveying, and planning firm in Atlantic County, NJ with history dating back to the early 1800s, which established an Absecon, NJ office",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>HQ relocated to renovated top floor of modern office building located at 1911 Arch Street near Logan Circle, Philadelphia, PA</li>"+
+						"<li>Acquired the assets of <b>George E. Schilling & Associates</b>, an engineering, surveying, and planning firm in Atlantic County, NJ with history dating back to the early 1800s, which established an Absecon, NJ office</li></ul>",
 					depth: 15,
 					z: 1
 				},
 				{
 					type: "image",
 					pos: "pos-top-right",
-					w: "40vw",
+					w: "35vw",
 					ratio: "12 / 10",
 					src: "assets/1979.png",
 					poster:
 						"assets/1979.png",
-					alt: "Main office building. 2006 Walnut Street, Philadelphia, PA",
-					title: "Main office building. 2006 Walnut Street, Philadelphia, PA",
+					alt: "Office building located at 1911 Arch Street near Logan Circle, Philadelphia, PA",
+					title: "Office building located at 1911 Arch Street near Logan Circle, Philadelphia, PA",
 					depth: 5,
 					z: 2
 				},
@@ -209,7 +210,7 @@ function initTimeline() {
 					ratio: "1 / 1",
 					heading: "1980",
 					copy:
-						"• Acquired the assets of <b>Rothbaum & Davis</b>, consulting structural engineers of Philadelphia, PA, which had an origin traced back to the early 1920s",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Rothbaum & Davis</b>, consulting structural engineers of Philadelphia, PA, which had an origin traced back to the early 1920s</li></ul>",
 					depth: 10,
 					z: 2
 				},
@@ -220,8 +221,8 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1986",
 					copy:
-						"• Acquired the assets of <b>Schulcz & Padlasky</b>, consulting and structural engineers of Delaware County, PA founded in 1952"+
-						"\n\n<b>• 152 employees</b>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Schulcz & Padlasky</b>, consulting and structural engineers of Delaware County, PA founded in 1952</li>"+
+						"<li><b>152 employees</b></li></ul>",
 					depth: 20,
 					z: 1
 				}
@@ -229,54 +230,118 @@ function initTimeline() {
 		},
 		{
 			id: "ALT",
-			year: "2020-26",
+			year: "1987-91",
 			theme: "alt",
 			tiles: [
 				{
-					type: "image",
-					pos: "pos-bottom-center-lg-10",
-					w: "15vw",
-					ratio: "9 / 16",
-					src:
-						"https://i.pinimg.com/1200x/95/45/28/95452872487f4d5756d33d6c031639b4.jpg",
-					alt: "Howl's Moving Castle",
-					depth: 30,
+					type: "text",
+					pos: "pos-top-right",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1988",
+					copy:
+						// "• HQ relocated to the newly renovated historic Middishade Building at 1600 Callowhill Street in the Franklintown area of Philadelphia, PA",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>HQ relocated to the newly renovated historic Middishade Building at 1600 Callowhill Street in the Franklintown area of Philadelphia, PA</li></ul>",
+					depth: 15,
 					z: 1
 				},
 				{
-					type: "video",
-					pos: "pos-bottom-right-10",
-					w: "20vw",
-					ratio: "1 / 1",
-					src: "/hmc-01.mp4",
+					type: "image",
+					pos: "pos-top-left",
+					w: "35vw",
+					ratio: "16 / 6",
+					src: "assets/1988.png",
 					poster:
-						"https://i.pinimg.com/1200x/95/45/28/95452872487f4d5756d33d6c031639b4.jpg",
-					alt: "Howl's Moving Castle",
-					depth: 20,
+						"assets/1988.png",
+					alt: "Main office building. 2006 Walnut Street, Philadelphia, PA",
+					title: "Main office building. 2006 Walnut Street, Philadelphia, PA",
+					depth: 5,
 					z: 2
 				},
 				{
-					type: "video",
-					pos: "pos-bottom-left-0",
-					w: "30vw",
-					ratio: "16 / 9",
-					src: "/hmc-02.mp4",
-					poster:
-						"https://i.pinimg.com/1200x/95/45/28/95452872487f4d5756d33d6c031639b4.jpg",
-					alt: "Howl's Moving Castle",
+					type: "text",
+					pos: "pos-middle-right",
+					w: "40vw",
+					ratio: "1 / 1",
+					heading: "1989",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Robert G. Werden Associates, Inc.</b>, an MEP firm organized in 1958, which established an office in Elkins Park, Jenkintown, PA</li></ul>",
+						// "\n<img src='assets/Acquisitions/PRIME-WARE.png' alt='Prime Ware logo' style='width: 100px; margin-top: 12px;'>",
 					depth: 10,
 					z: 2
 				},
 				{
 					type: "text",
-					pos: "pos-top-left",
-					w: "500px",
+					pos: "pos-bottom-right-3",
+					w: "40vw",
 					ratio: "16 / 9",
-					heading: "Howl's Moving Castle",
+					heading: "1991",
 					copy:
-						"Howl's Moving Castle is a 2004 Japanese animated fantasy film written and directed by Hayao Miyazaki, based on Diana Wynne Jones' 1986 novel.",
-					depth: 25,
-					z: 4
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Macomber Associates</b>, a bridge and highway engineering firm founded in 1955, which established an office in Camp Hill, PA</li>"+
+						"<li>Acquired the assets of <b>Mann-Talley</b>, a survey and engineering firm, which established an office in Wilmington, DE</li></ul>",
+					depth: 20,
+					z: 1
+				}
+			]
+		},
+		{
+			id: "ALT",
+			year: "1992-96",
+			theme: "howls",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-top-left",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1996",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Introduced first home page on the World Wide Web</li>"+
+						"<li>Expanded to New Hampshire with office in Concord, NH</li>"+
+						"<li>Acquired the assets of <b>E.L. Conwell & Co.</b>, an inspection and testing firm established in 1895</li>"+
+						"<li>Acquired the assets of <b>Barnes & Jarnis, Inc.</b>, a multidisciplinary consulting engineering firm established in 1953 to expand New England market with office in Boston, MA</li>"+
+						"<li>EnviroTEL Japan was incorporated and renamed as Pennoni International Inc., and Hart Crowser de Mexico was renamed Pennoni International de Mexico</li>"+
+						"<b><li>385 employees</b></li></ul>",
+					depth: 15,
+					z: 1
+				},
+				{
+					type: "image",
+					pos: "pos-bottom-left-30",
+					w: "130px",
+					ratio: "9 / 9",
+					src: "assets/Acquisitions/PRIME-WARE.png",
+					poster:
+						"assets/1988.png",
+					alt: "Logo of Prime Ware",
+					title: "Logo of Prime Ware",
+					depth: 5,
+					z: 2
+				},
+				{
+					type: "image",
+					pos: "pos-middle-right",
+					w: "40vw",
+					ratio: "1 / 1",
+					src: "assets/1997.png",
+					poster:
+						"assets/1997.png",
+					alt: "Office building located at 1911 Arch Street near Logan Circle, Philadelphia, PA",
+					title: "Office building located at 1911 Arch Street near Logan Circle, Philadelphia, PA",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-left-3",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1997",
+					copy:
+						"• Acquired the assets of <b>Schulcz & Padlasky</b>, consulting and structural engineers of Delaware County, PA founded in 1952"+
+						"\n\n<b>• 152 employees</b>",
+					depth: 20,
+					z: 1
 				}
 			]
 		}
@@ -596,11 +661,11 @@ function initYearSwapAndTheme() {
 			yearLayerOpacity: 0.4
 		},
 		totoro: {
-			bg: "#dbdbdbff",
+			bg: "#39D87D",
 			fg: "#264831",
 			muted: "#264831",
 			year: "#264831",
-			cardBg: "#f0f0f0",
+			cardBg: "#ccebe1",
 			cardBorder: "transparent",
 			yearLayerOpacity: 0.43
 		},

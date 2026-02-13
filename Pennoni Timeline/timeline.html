@@ -6,25 +6,168 @@
     <title>Pennoni 60th Timeline</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href='assets/favicon.jpg' />
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style-timeline.css">
+    <script defer src="js/scripts.js"></script>
     <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Pennoni 60th Anniversary Timeline</h1>
-    </header>
     <main>
-        <section id="timeline">
-            <h2>Timeline</h2>
-            <div class="event">
-                <h3>Event Title</h3>
-                <p>Event description goes here.</p>
+        <section class="timeline" aria-label="Company timeline">
+            <div class="container">
+                <header class="hero">
+                    <div class="heroBadge">Milestones</div>
+                    <h1>Pennoni 60th Anniversary Timeline</h1>
+                    <p>
+                        A clean, scroll-reveal timeline layout with cards, dates, and
+                        subtle interactions. Built as a reusable pattern for company
+                        journeys, product roadmaps, or personal timelines.
+                    </p>
+                </header>
+
+                <div class="timelineRail" aria-hidden="true"></div>
+
+                <!-- ITEM 1 -->
+                <article class="timelineItem reveal left">
+                    <div class="timelineDot" aria-hidden="true"></div>
+
+                    <div class="card">
+                        <div class="cardTop">
+                            <div class="imgWrap">
+                                <img
+                                    src="https://picsum.photos/seed/pulsetrail-01/1100/700"
+                                    alt=""
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="date">2018</div>
+                        </div>
+
+                        <div class="cardBody">
+                            <h2>First Launch</h2>
+                            <p>
+                                Started with a tiny landing page and a single pricing
+                                tier. The goal was simple: ship fast, listen hard, and
+                                iterate daily.
+                            </p>
+                            <ul class="meta">
+                                <li>Client #1 onboarded</li>
+                                <li>Basic analytics pipeline</li>
+                                <li>First "real" deploy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 2 -->
+                <article class="timelineItem reveal right">
+                    <div class="timelineDot" aria-hidden="true"></div>
+
+                    <div class="card">
+                        <div class="cardTop">
+                            <div class="imgWrap">
+                                <img
+                                    src="https://picsum.photos/seed/pulsetrail-02/1100/700"
+                                    alt=""
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="date">2020</div>
+                        </div>
+
+                        <div class="cardBody">
+                            <h2>Growth Sprint</h2>
+                            <p>
+                                Refined onboarding, improved performance, and
+                                standardized UI components so every new page felt
+                                consistent and premium.
+                            </p>
+                            <ul class="meta">
+                                <li>Reusable card + table system</li>
+                                <li>Design tokens introduced</li>
+                                <li>Faster page load</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 3 -->
+                <article class="timelineItem reveal left">
+                    <div class="timelineDot" aria-hidden="true"></div>
+
+                    <div class="card">
+                        <div class="cardTop">
+                            <div class="imgWrap">
+                                <img
+                                    src="https://picsum.photos/seed/pulsetrail-03/1100/700"
+                                    alt=""
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="date">2022</div>
+                        </div>
+
+                        <div class="cardBody">
+                            <h2>Major Wins</h2>
+                            <p>
+                                Added deeper dashboards, cleaner navigation patterns,
+                                and stronger UX polish. This is where the product
+                                started feeling "enterprise-ready".
+                            </p>
+                            <ul class="meta">
+                                <li>Role-based screens</li>
+                                <li>New reporting views</li>
+                                <li>UI micro-interactions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ITEM 4 -->
+                <article class="timelineItem reveal right">
+                    <div class="timelineDot" aria-hidden="true"></div>
+
+                    <div class="card">
+                        <div class="cardTop">
+                            <div class="imgWrap">
+                                <img
+                                    src="https://picsum.photos/seed/pulsetrail-04/1100/700"
+                                    alt=""
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div class="date">2024</div>
+                        </div>
+
+                        <div class="cardBody">
+                            <h2>Recent Milestones</h2>
+                            <p>
+                                Tightened edge cases, added smoother transitions, and
+                                focused on small quality-of-life details that users
+                                actually notice.
+                            </p>
+                            <ul class="meta">
+                                <li>Smarter forms + validation</li>
+                                <li>Better empty states</li>
+                                <li>Accessibility improvements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <footer class="footerNote">
+                    <span class="pulse"></span>
+                    Scroll down and back up to watch the reveal behavior again.
+                </footer>
             </div>
+
+            <button class="toTop" id="toTop" type="button" aria-label="Go to top">
+                ↑
+            </button>
         </section>
+
     </main>
     <footer>
         <p>&copy; 2023 Pennoni Associates</p>

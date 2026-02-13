@@ -196,6 +196,9 @@ body {
 	bottom: 10%;
 	left: 10%;
 }
+li {
+	margin-bottom: 0.75rem;
+}
 
 .pos-bottom-right {
 	bottom: 0;
@@ -214,9 +217,17 @@ body {
 	bottom: 20%;
 	left: 0;
 }
+.pos-bottom-left-25 {
+	bottom: 25%;
+	left: 0;
+}
 .pos-bottom-left-3 {
 	bottom: 30%;
 	left: 0;
+}
+.pos-bottom-left-30 {
+	bottom: 30%;
+	left: 10%;
 }
 
 .pos-bottom-right-10 {
