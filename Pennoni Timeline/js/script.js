@@ -773,6 +773,59 @@ function initTimeline() {
 				}
 			]
 		},
+		{
+			id: "GRAY",
+			year: "20XX",
+			theme: "alt",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-top-right",
+					w: "40vw",
+					ratio: "9 / 16",
+					heading: "2030",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Pennoni began work on landmark project: Neo-Philadelphia</li></ul>",
+					depth: 5,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-middle-right",
+					w: "40vw",
+					ratio: "1 / 1",
+					heading: "2036",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Palintir</b>, a company that develops data integration and analytics platforms enabling government agencies, militaries, and corporations to combine and analyze data from multiple sources.</li></ul>",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-right-35",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2038",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Pennoni rebrands to <b>Pennoni.AI</b>, an innovative technology rebrand to focus on AI-driven solutions for infrastructure and engineering challenges.</li></ul>",
+					depth: 20,
+					z: 4
+				},
+				{
+					type: "image",
+					pos: "pos-bottom-left-4",
+					w: "25vw",
+					ratio: "16 / 8",
+					src: "assets/pennoniAI3.png",
+					poster:
+						"assets/pennoniAI3.png",
+					alt: "Anthony Bartolomeo",
+					title: "Anthony Bartolomeo",
+					depth: 10,
+					z: 2
+				}
+			]
+		}
 	];
 
 	const fallbackSvgDataUri = (label = "Missing") => {
