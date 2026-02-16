@@ -20,7 +20,7 @@ function initTimeline() {
 	// ---- DATA ----
 	const timelineItems = [
 		{
-			id: "KIKI",
+			id: "DARKGREEN",
 			year: "1966-67",
 			theme: "kikis",
 			tiles: [
@@ -78,7 +78,7 @@ function initTimeline() {
 			]
 		},
 		{
-			id: "MNT",
+			id: "LIGHTGREEN",
 			year: "1968-71",
 			theme: "howls",
 			tiles: [
@@ -101,7 +101,7 @@ function initTimeline() {
 					ratio: "1 / 1",
 					heading: "1970",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Leo F. O’Connor, PE joined the firm as the first Vice President</li>" +
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Leo F. O'Connor, PE joined the firm as the first Vice President</li>" +
 						"<li>First Government Client - Township of Falls Authority, Fallsington, Bucks County, PA</li></ul>",
 					depth: 10,
 					z: 2
@@ -120,7 +120,7 @@ function initTimeline() {
 			]
 		},
 		{
-			id: "SPA",
+			id: "GRASS",
 			year: "1972-77",
 			theme: "spiritedAway",
 			tiles: [
@@ -174,7 +174,7 @@ function initTimeline() {
 			]
 		},
 		{
-			id: "HOWLS",
+			id: "BRIGHTGREEN",
 			year: "1978-86",
 			theme: "totoro",
 			tiles: [
@@ -229,7 +229,7 @@ function initTimeline() {
 			]
 		},
 		{
-			id: "ALT",
+			id: "GRAY",
 			year: "1987-91",
 			theme: "alt",
 			tiles: [
@@ -253,8 +253,8 @@ function initTimeline() {
 					src: "assets/1988.png",
 					poster:
 						"assets/1988.png",
-					alt: "Main office building. 2006 Walnut Street, Philadelphia, PA",
-					title: "Main office building. 2006 Walnut Street, Philadelphia, PA",
+					alt: "Historic Middishade Building at 1600 Callowhill Street in the Franklintown area of Philadelphia, PA",
+					title: "Historic Middishade Building at 1600 Callowhill Street in the Franklintown area of Philadelphia, PA",
 					depth: 5,
 					z: 2
 				},
@@ -285,13 +285,121 @@ function initTimeline() {
 			]
 		},
 		{
-			id: "ALT",
-			year: "1992-96",
-			theme: "howls",
+			id: "DARKGREEN",
+			year: "1992-94",
+			theme: "kikis",
 			tiles: [
 				{
 					type: "text",
 					pos: "pos-top-left",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1992",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>PrimeWare Associates</b> of Pennsylvania to add new computer technology</li></ul>",
+					depth: 15,
+					z: 1
+				},
+				{
+					type: "image",
+					pos: "pos-bottom-right-2",
+					w: "15vw",
+					ratio: "9 / 16",
+					src: "assets/1994.png",
+					poster:
+						"assets/1994.png",
+					alt: "Logo of Prime Ware",
+					title: "Logo of Prime Ware",
+					depth: 5,
+					z: 2
+				},
+				{
+					type: "image",
+					pos: "pos-top-right-alt",
+					w: "30vw",
+					ratio: "16 / 9",
+					src: "assets/1992.png",
+					poster:
+						"assets/1992.png",
+					alt: "Richard L. Piccoli",
+					title: "Richard L. Piccoli",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "image",
+					pos: "pos-bottom-center-lg-10",
+					w: "120px",
+					ratio: "1 / 1",
+					src: "assets/1994.jpg",
+					poster:
+						"assets/1994.jpg",
+					alt: "Employee Stock Ownership Logo",
+					title: "Employee Stock Ownership Logo",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-left-3",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1994",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li><b>Established ESOP making employees majority owners</b></li>"+
+						"<li>Acquired the assets of subsidiary, EnviroTEL, Inc., an environmental engineering firm with satellite offices in Pennsylvania, Massachusetts, and Tokyo</li>"+
+						"<li><b>Richard L. Piccoli named President when C.R. Pennoni leaves to serve pro bono as President and COO of Drexel University for the 1994-1995 academic year</b></li></ul>",
+					depth: 20,
+					z: 1
+				}
+			]
+		},
+		{
+			id: "LIGHTGREEN",
+			year: "1995-96",
+			theme: "howls",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-top-right",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1995",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Subsidiary EnviroTEL purchased <b>Hart Crowser de Mexico S.A. de C.V.</b>, an environmental engineering firm in Mexico City</li>"+
+						"<li>Expanded in Massachusetts with office in Hopkinton</li></ul>",
+					depth: 15,
+					z: 1
+				},
+				{
+					type: "image",
+					pos: "pos-bottom-left-30",
+					w: "130px",
+					ratio: "10 / 9",
+					src: "assets/1996-2.png",
+					poster:
+						"assets/1996-2.png",
+					alt: "Logo of Pennoni.com",
+					title: "Logo of Pennoni.com",
+					depth: 5,
+					z: 2
+				},
+				{
+					type: "image",
+					pos: "pos-top-left",
+					w: "40vw",
+					ratio: "16 / 3.5",
+					src: "assets/1996.png",
+					poster:
+						"assets/1996.png",
+					alt: "Pennoni Associates, Inc. logo",
+					title: "Pennoni Associates, Inc. logo",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-right-2",
 					w: "40vw",
 					ratio: "16 / 9",
 					heading: "1996",
@@ -302,49 +410,369 @@ function initTimeline() {
 						"<li>Acquired the assets of <b>Barnes & Jarnis, Inc.</b>, a multidisciplinary consulting engineering firm established in 1953 to expand New England market with office in Boston, MA</li>"+
 						"<li>EnviroTEL Japan was incorporated and renamed as Pennoni International Inc., and Hart Crowser de Mexico was renamed Pennoni International de Mexico</li>"+
 						"<b><li>385 employees</b></li></ul>",
+					depth: 20,
+					z: 1
+				}
+			]
+		},
+		{
+			id: "GRASS",
+			year: "1997-99",
+			theme: "spiritedAway",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-top-left",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1997",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Expanded international division to the Philippines</li>"+
+						"<li>HQ relocated to 3001 Market Street at One Drexel Plaza in Philadelphia, PA (former Philadelphia Evening Bulletin Building)</li>"+
+						"<li>Acquired the assets of <b>Travers Associates Inc.</b>, a consulting engineering firm in Clifton, NJ</li>"+
+						"<li>Expanded to Ohio with offices in Cleveland and Parma</li>"+
+						"<li>Patricia Querubin became the first female officer</li></ul>",
+					depth: 15,
+					z: 1
+				},
+				{
+					type: "image",
+					pos: "pos-top-right",
+					w: "35vw",
+					ratio: "16 / 8",
+					src: "assets/1997.png",
+					poster:
+						"assets/1997.png",
+					alt: "Logo of Pennoni.com",
+					title: "Logo of Pennoni.com",
+					depth: 5,
+					z: 2
+				},
+				{
+					type: "image",
+					pos: "pos-bottom-right-45",
+					w: "190px",
+					ratio: "16 / 10",
+					src: "assets/1997.jpg",
+					poster:
+						"assets/1997.jpg",
+					alt: "Employee Stock Ownership Logo",
+					title: "Employee Stock Ownership Logo",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "image",
+					pos: "pos-bottom-right-1",
+					w: "25vw",
+					ratio: "16 / 9",
+					src: "assets/1998.jpg",
+					poster:
+						"assets/1998.jpg",
+					alt: "Pennoni Associates, Inc. logo",
+					title: "Pennoni Associates, Inc. logo",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-left-4",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1998",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Pan Asia Architects & Engineers</b> headquartered in Okinawa, Japan, founded over 20 years earlier</li>"+
+						"<li><b>Anthony Bartolomeo elected as President following retirement of Richard L. Piccoli</b></li></ul>",
+					depth: 20,
+					z: 1
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-left-1",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "1999",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>SCE & Associates</b> of Pennsylvania</li>"+
+						"<li>Acquired the assets of <b>Marc Associates</b> of New Jersey</li></ul>",
+					depth: 20,
+					z: 1
+				}
+			]
+		},
+		{
+			id: "GRAY",
+			year: "2000-03",
+			theme: "alt",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-top-right",
+					w: "40vw",
+					ratio: "9 / 16",
+					heading: "2001",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Adams Associates, Inc.</b>, a structural firm in Pennsylvania</li></ul>",
+					depth: 5,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-middle-right",
+					w: "40vw",
+					ratio: "1 / 1",
+					heading: "2002",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>GWSM, Inc.</b>, a landscape architecture firm founded in 1975, which established a Pittsburgh office</li></ul>",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-right-35",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2003",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Anthony Bartolomeo promoted from President to President & CEO</li></ul>",
+					depth: 20,
+					z: 4
+				},
+				{
+					type: "image",
+					pos: "pos-bottom-left-4",
+					w: "250px",
+					ratio: "9 / 16",
+					src: "assets/2003.png",
+					poster:
+						"assets/2003.png",
+					alt: "Anthony Bartolomeo",
+					title: "Anthony Bartolomeo",
+					depth: 10,
+					z: 2
+				}
+			]
+		},
+		{
+			id: "BRIGHTGREEN",
+			year: "2004-06",
+			theme: "totoro",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-top-left",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2004",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Powers & Schram Inc.</b>, which established an office in State College, PA</li></ul>",
+					depth: 15,
+					z: 1
+				},
+				{
+					type: "image",
+					pos: "pos-top-right-alt2",
+					w: "250px",
+					ratio: "10 / 16",
+					src: "assets/2005.png",
+					poster:
+						"assets/2005.png",
+					alt: "Former Philadelphia Eagles' defensive tackle, Darwin Walker",
+					title: "Former Philadelphia Eagles' defensive tackle, Darwin Walker",
+					depth: 5,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-middle-left-2",
+					w: "40vw",
+					ratio: "1 / 1",
+					heading: "2005",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Formed strategic alliance with <b>Progressive Engineering Group LLC</b>, formed in Tennessee by former Philadelphia Eagles' defensive tackle, Darwin Walker</li>"+
+						"<li>Expanded to Maryland with Ellicott City office</li></ul>",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-left-2",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2006",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Meyer, Strong, and Jones Engineers P.C.</b>, a mechanical and electrical consulting engineering firm in New York established in 1902</li>"+
+						"<li>Acquired the assets of <b>Swanson Engineering P.C.</b>, a multidisciplinary engineering firm in northeast Philadelphia</li>"+
+						"<li>Acquired the assets of <b>G.S. Winters</b>, a consulting engineering and land surveying firm in New Jersey</li>"+
+						"<li><b>685 employees</b></li></ul>",
+					depth: 20,
+					z: 1
+				}
+			]
+		},
+		{
+			id: "DARKGREEN",
+			year: "2007-09",
+			theme: "kikis",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-top-right",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2007",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>C.R. Pennoni established the ELLIPSE Award to annually honor a community member who has improved the quality of life through infrastructure development or redevelopment</li>"+
+						"<li>Acquired the assets of <b>Professional Planning & Engineering, LLC</b> of New Jersey</li>"+
+						"<li>Established <b>Pennoni Engineering and Surveying of New York P.C.</b></li></ul>",
+					depth: 15,
+					z: 1
+				},
+				{
+					type: "image",
+					pos: "pos-top-left-10",
+					w: "18rem",
+					ratio: "12 / 16",
+					src: "assets/2007-2.png",
+					poster:
+						"assets/2007-2.png",
+					alt: "Ellipse Award logo and list of Past Winners",
+					title: "Ellipse Award logo and list of Past Winners",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "image",
+					pos: "pos-bottom-left-white",
+					w: "230px",
+					ratio: "16 / 14",
+					src: "assets/iis.png",
+					poster:
+						"assets/iis.png",
+					alt: "Logo of IIS",
+					title: "Logo of IIS",
+					depth: 5,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-middle-right-2",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2009",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>PennoniGIVES (Giving by Investing in our Volunteering Employees) program was established</li></ul>",
+					depth: 20,
+					z: 1
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-right-2",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2010",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Patton, Harris, Rust & Associates, Inc.</b>, a multidisciplinary firm in Virginia established in 1952</li>"+
+						"<li>Acquired the assets of <b>Green Stone Engineering, LLC</b>, a civil and environmental engineering firm in Delaware</li>"+
+						"<li>Instrumental in development of ICOMPASS, a web-based transportation asset management system for bridge owners</li></ul>",
+					depth: 20,
+					z: 1
+				}
+			]
+		},
+		{
+			id: "GRASS",
+			year: "2010-14",
+			theme: "spiritedAway",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-top-left-10",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2012",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>AGS, LLC</b>, an MEP engineering firm in New York</li>"+
+						"<li>Acquired the assets of <b>Green Stone Engineering, LLC</b>, a civil and environmental engineering firm in Delaware</li>"+
+						"<li>Instrumental in development of ICOMPASS, a web-based transportation asset management system for bridge owners</li></ul>",
+					depth: 15,
+					z: 1
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-left-4",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2013",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Richard Piccolo named first President Emeritus</li></ul>",
+					depth: 20,
+					z: 1
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-left-1",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2014",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>B.D. Abel Inc.</b>, an MEP consulting firm in Delaware</li>"+
+						"<li>Acquired the assets of <b>Envisors</b>, a multidisciplinary firm founded in 1975, which established Florida offices</li></ul>",
+					depth: 20,
+					z: 1
+				}
+			]
+		},
+		{
+			id: "LIGHTGREEN",
+			year: "2015-16",
+			theme: "howls",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-top-right",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2015",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>J2 Engineering, Inc.</b>, a design-build and construction management firm founded in 2001 in Florida</li>"+
+						"<li>Acquired the assets of Jones-Stuckey Ltd., a transportation design firm founded in 1965 in Ohio</li>"+
+						"<li>Expanded in Massachusetts with office in Hopkinton</li>"+
+						"<li>Expanded in Massachusetts with office in Hopkinton</li></ul>",
 					depth: 15,
 					z: 1
 				},
 				{
 					type: "image",
 					pos: "pos-bottom-left-30",
-					w: "130px",
-					ratio: "9 / 9",
-					src: "assets/Acquisitions/PRIME-WARE.png",
+					w: "20vw",
+					ratio: "16 / 9",
+					src: "assets/2016.jpg",
 					poster:
-						"assets/1988.png",
-					alt: "Logo of Prime Ware",
-					title: "Logo of Prime Ware",
+						"assets/2016.jpg",
+					alt: "Pennoni 50th anniversary logo",
+					title: "Pennoni 50th anniversary logo",
 					depth: 5,
 					z: 2
 				},
 				{
-					type: "image",
-					pos: "pos-middle-right",
-					w: "40vw",
-					ratio: "1 / 1",
-					src: "assets/1997.png",
-					poster:
-						"assets/1997.png",
-					alt: "Office building located at 1911 Arch Street near Logan Circle, Philadelphia, PA",
-					title: "Office building located at 1911 Arch Street near Logan Circle, Philadelphia, PA",
-					depth: 10,
-					z: 2
-				},
-				{
 					type: "text",
-					pos: "pos-bottom-left-3",
+					pos: "pos-bottom-right-2",
 					w: "40vw",
 					ratio: "16 / 9",
-					heading: "1997",
+					heading: "2016",
 					copy:
-						"• Acquired the assets of <b>Schulcz & Padlasky</b>, consulting and structural engineers of Delaware County, PA founded in 1952"+
-						"\n\n<b>• 152 employees</b>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Introduced first home page on the World Wide Web</li>"+
+						"<li>Expanded to New Hampshire with office in Concord, NH</li>"+
+						"<li>Acquired the assets of <b>E.L. Conwell & Co.</b>, an inspection and testing firm established in 1895</li>"+
+						"<li>Acquired the assets of <b>Barnes & Jarnis, Inc.</b>, a multidisciplinary consulting engineering firm established in 1953 to expand New England market with office in Boston, MA</li>"+
+						"<li>EnviroTEL Japan was incorporated and renamed as Pennoni International Inc., and Hart Crowser de Mexico was renamed Pennoni International de Mexico</li>"+
+						"<b><li>385 employees</b></li></ul>",
 					depth: 20,
 					z: 1
 				}
 			]
-		}
+		},
 	];
 
 	const fallbackSvgDataUri = (label = "Missing") => {

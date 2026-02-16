@@ -164,6 +164,15 @@ body {
 	right: 0;
 }
 
+.pos-top-right-alt {
+	top: 0;
+	right: 15%;
+}
+.pos-top-right-alt2 {
+	top: 25%;
+	right: 15%;
+}
+
 .pos-top-right {
 	top: 0;
 	right: 0;
@@ -174,12 +183,16 @@ body {
 	top: 25%;
 	right: 0;
 }
+.pos-middle-right-2 {
+	top: 30%;
+	right: 0;
+}
 .pos-middle-left {
 	top: 30%;
 	left: 0;
 }
-.pos-middle-left {
-	top: 30%;
+.pos-middle-left-2 {
+	top: 25%;
 	left: 0;
 }
 
@@ -191,6 +204,15 @@ body {
 .pos-bottom-left {
 	bottom: 0%;
 	left: 10%;
+}
+.pos-bottom-left-white {
+	bottom: 10%;
+	left: 10%;
+	background-color: white;
+}
+.pos-bottom-left-1 {
+	bottom: 10%;
+	left: 0;
 }
 .pos-bottom-left-10 {
 	bottom: 10%;
@@ -208,9 +230,30 @@ li {
 	bottom: 15%;
 	right: 0;
 }
+.pos-bottom-right-30 {
+	bottom: 30%;
+	right: 10%;
+}
+.pos-bottom-right-45 {
+	bottom: 45%;
+	right: 10%;
+}
+.pos-bottom-right-35 {
+	bottom: 35%;
+	right: 0;
+}
 .pos-bottom-right-3 {
 	bottom: 30%;
 	right: 0;
+}
+
+.pos-bottom-right-1 {
+	bottom: 10%;
+	right: 0;
+}
+.pos-bottom-right-10 {
+	bottom: 0;
+	right: 10%;
 }
 
 .pos-bottom-left-2 {
@@ -225,14 +268,13 @@ li {
 	bottom: 30%;
 	left: 0;
 }
+.pos-bottom-left-4 {
+	bottom: 40%;
+	left: 0;
+}
 .pos-bottom-left-30 {
 	bottom: 30%;
 	left: 10%;
-}
-
-.pos-bottom-right-10 {
-	bottom: 0;
-	right: 10%;
 }
 
 .pos-top-quarter-left {
@@ -247,7 +289,7 @@ li {
 }
 
 .pos-bottom-center-lg-10 {
-	bottom: -10%;
+	bottom: 15%;
 	left: 50%;
 	transform: translateX(-50%);
 }
