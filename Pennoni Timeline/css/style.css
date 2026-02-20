@@ -87,6 +87,29 @@ body {
 	height: 100%;
 }
 
+/* Two-column flow for text tiles */
+.text-columns {
+	display: flex;
+	gap: 5rem;
+	margin-top: 2.5rem;
+}
+.text-col {
+	flex: 1 1 0;
+	display: flex;
+ 	flex-direction: column;
+ 	gap: 5rem;
+}
+.text-col .tile {
+	position: static;
+	width: 100%;
+}
+
+/* Ensure text boxes keep visual styles but flow in document order */
+.text-col .tile .tile__box {
+	border-radius: 12px;
+	background: var(--cardBg);
+}
+
 /* Tiles */
 .tile {
 	position: absolute;
@@ -158,8 +181,12 @@ body {
 	top: 10%;
 	left: 0;
 }
+.pos-top-left-25 {
+	top: 25%;
+	left: 0;
+}
 
-.pos-top-right-10 {
+.pos-top-right-25 {
 	top: 10%;
 	right: 0;
 }
@@ -168,11 +195,19 @@ body {
 	top: 0;
 	right: 15%;
 }
+.pos-bottom-right-alt {
+	bottom: 0;
+	right: 15%;
+}
 .pos-top-right-alt2 {
 	top: 25%;
 	right: 15%;
 }
 
+.pos-top-right-10 {
+	top: 10%;
+	right: 0;
+}
 .pos-top-right {
 	top: 0;
 	right: 0;
@@ -206,7 +241,7 @@ body {
 	left: 10%;
 }
 .pos-bottom-left-white {
-	bottom: 10%;
+	bottom: 0;
 	left: 10%;
 	background-color: white;
 }
@@ -230,6 +265,10 @@ li {
 	bottom: 15%;
 	right: 0;
 }
+.pos-bottom-right-20 {
+	bottom: 20%;
+	right: 10%;
+}
 .pos-bottom-right-30 {
 	bottom: 30%;
 	right: 10%;
@@ -237,6 +276,10 @@ li {
 .pos-bottom-right-45 {
 	bottom: 45%;
 	right: 10%;
+}
+.pos-bottom-right-25 {
+	bottom: 25%;
+	right: 0;
 }
 .pos-bottom-right-35 {
 	bottom: 35%;
@@ -345,5 +388,73 @@ li {
 	.tile__text {
 		opacity: 1 !important;
 		transform: none !important;
+	}
+}
+
+/* Responsive tweaks */
+@media (max-width: 1550px) {
+	/* increase tile width and reduce title size on medium screens */
+	.tile {
+		width: var(--w, 45vw) !important;
+	}
+
+	.tile__text h3 {
+		font-size: 2rem !important;
+	}
+}
+
+@media (max-width: 1050px) {
+	/* switch to simple vertical stacking and center alignment on small screens */
+	.panel {
+		height: auto;
+		padding-bottom: 2rem;
+	}
+
+	.panel__stage {
+		position: static;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2.5rem;
+	}
+
+	.tile {
+		position: static;
+		width: 90vw;
+		transform: none !important;
+		left: auto !important;
+		top: auto !important;
+		right: auto !important;
+		bottom: auto !important;
+	}
+
+	.tile__box {
+		aspect-ratio: auto;
+		width: 100%;
+	}
+
+	.tile__text {
+		opacity: 1;
+		transform: none;
+	}
+
+	/* hide large year layer to reduce clutter */
+	.years-wrapper {
+		display: none;
+	}
+
+	/* stack the two text columns into a single vertical flow */
+	.text-columns {
+		display: block;
+		gap: 2.5rem;
+	}
+	.text-col {
+		width: 100%;
+		gap: 2.5rem;
+	}
+	.text-col .tile {
+		width: 90vw;
+		margin: 0 auto;
 	}
 }

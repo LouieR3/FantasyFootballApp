@@ -2,6 +2,58 @@
 /* Step 01 - Render Logic */
 /* ====================== */
 function initTimeline() {
+	// Inject text-column styles
+	const styleEl = document.createElement("style");
+	styleEl.textContent = `
+		.text-column {
+			--text-col-w: 40vw;
+			width: var(--text-col-w) !important;
+			aspect-ratio: unset !important;
+			height: auto !important;
+			display: flex;
+			flex-direction: column;
+			gap: 5rem;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: var(--z, 2);
+			box-shadow: none !important;
+			background: transparent !important;
+		}
+		/* Custom top position support via data-t attribute */
+		.text-column[data-t] {
+			top: var(--custom-top) !important;
+		}
+		.text-column .tile__box {
+			display: none;
+		}
+		.text-column .tile__text {
+			background: var(--cardBg, #ffffffcc);
+			border-radius: 0.5rem;
+			padding: 1.5rem 2rem;
+			display: block;
+		}
+		.text-column--left {
+			left: 0;
+		}
+		.text-column--right {
+			right: 0;
+		}
+		@media (max-width: 1000px) {
+			.text-column {
+				position: relative;
+				top: unset;
+				transform: none;
+				left: unset !important;
+				right: unset !important;
+				margin: 2rem auto;
+				gap: 2rem;
+				max-width: 90vw;
+			}
+		}
+	`;
+	document.head.appendChild(styleEl);
+
 	const lenis = new Lenis({ smooth: true });
 	lenis.on("scroll", ScrollTrigger.update);
 
@@ -40,11 +92,13 @@ function initTimeline() {
 					type: "text",
 					pos: "pos-top-right-10",
 					w: "40vw",
+                    t: "60",
 					ratio: "16 / 9",
 					heading: "1966",
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li><b>C.R. Pennoni began the firm as a one-person structural engineering practice in West Philadelphia, PA at 67th Street and Haverford Avenue.</b></li>" +
-						"<li>The first three part-time hires were engineering students from Temple University\n\n• Headquarters (HQ) moved to Center City office at 17th and Cherry Streets in Philadelphia, PA to serve increased client base</li>" +
+						"<li>The first three part-time hires were engineering students from Temple University</li>"+
+                        "<li>Headquarters (HQ) moved to Center City office at 17th and Cherry Streets in Philadelphia, PA to serve increased client base</li>" +
 						"<li>First Private Client - C&J Construction Company, Philadelphia, PA</li>" +
 						"<li>First Government Project - City of Philadelphia Police Station at 20th and Pennsylvania Avenue as a sub to Gene Dichter, Architect</li></ul>",
 					depth: 20,
@@ -128,6 +182,7 @@ function initTimeline() {
 					type: "text",
 					pos: "pos-top-right",
 					w: "40vw",
+                    t: "30",
 					ratio: "16 / 9",
 					heading: "1973",
 					copy:
@@ -137,7 +192,7 @@ function initTimeline() {
 				},
 				{
 					type: "image",
-					pos: "pos-bottom-left-2",
+					pos: "pos-bottom-left-1",
 					w: "20vw",
 					ratio: "9 / 16",
 					src: "assets/1973.png",
@@ -156,7 +211,7 @@ function initTimeline() {
 					heading: "1976",
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>A temporary office was established in Iran, following civil engineering work for the new cities of Sarcheshmeh, Lavizon, Kan, and the expansion of Ahwaz.</li>"+
-						"<li><b>49 employees</b></li></ul>",
+						"<li><b><span style='font-size: 1.25rem;'>49 employees</span></b></li></ul>",
 					depth: 10,
 					z: 2
 				},
@@ -167,7 +222,7 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1977",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Formed Computer Graphics with Yerkes, Huth and Richardson</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Formed <b>Computer Graphics</b> with Yerkes, Huth and Richardson</li></ul>",
 					depth: 20,
 					z: 1
 				}
@@ -182,6 +237,7 @@ function initTimeline() {
 					type: "text",
 					pos: "pos-top-left",
 					w: "40vw",
+                    t: "40",
 					ratio: "16 / 9",
 					heading: "1979",
 					copy:
@@ -192,7 +248,7 @@ function initTimeline() {
 				},
 				{
 					type: "image",
-					pos: "pos-top-right",
+					pos: "pos-bottom-right",
 					w: "35vw",
 					ratio: "12 / 10",
 					src: "assets/1979.png",
@@ -247,7 +303,7 @@ function initTimeline() {
 				},
 				{
 					type: "image",
-					pos: "pos-top-left",
+					pos: "pos-top-left-25",
 					w: "35vw",
 					ratio: "16 / 6",
 					src: "assets/1988.png",
@@ -386,7 +442,7 @@ function initTimeline() {
 				},
 				{
 					type: "image",
-					pos: "pos-top-left",
+					pos: "pos-top-left-10",
 					w: "40vw",
 					ratio: "16 / 3.5",
 					src: "assets/1996.png",
@@ -571,7 +627,7 @@ function initTimeline() {
 				},
 				{
 					type: "image",
-					pos: "pos-top-right-alt2",
+					pos: "pos-bottom-right-alt",
 					w: "250px",
 					ratio: "10 / 16",
 					src: "assets/2005.png",
@@ -612,13 +668,14 @@ function initTimeline() {
 		},
 		{
 			id: "DARKGREEN",
-			year: "2007-09",
+			year: "2007-10",
 			theme: "kikis",
 			tiles: [
 				{
 					type: "text",
 					pos: "pos-top-right",
 					w: "40vw",
+                    t: "30",
 					ratio: "16 / 9",
 					heading: "2007",
 					copy:
@@ -630,7 +687,7 @@ function initTimeline() {
 				},
 				{
 					type: "image",
-					pos: "pos-top-left-10",
+					pos: "pos-top-left-25",
 					w: "18rem",
 					ratio: "12 / 16",
 					src: "assets/2007-2.png",
@@ -674,7 +731,7 @@ function initTimeline() {
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Patton, Harris, Rust & Associates, Inc.</b>, a multidisciplinary firm in Virginia established in 1952</li>"+
 						"<li>Acquired the assets of <b>Green Stone Engineering, LLC</b>, a civil and environmental engineering firm in Delaware</li>"+
-						"<li>Instrumental in development of ICOMPASS, a web-based transportation asset management system for bridge owners</li></ul>",
+						"<li>Established <b>Intelligent Infrastructure Systems (IIS)</b> as a separate company, that was instrumental in the development of THMPER and RABIT</li></ul>",
 					depth: 20,
 					z: 1
 				}
@@ -682,7 +739,7 @@ function initTimeline() {
 		},
 		{
 			id: "GRASS",
-			year: "2010-14",
+			year: "2011-14",
 			theme: "spiritedAway",
 			tiles: [
 				{
@@ -736,9 +793,9 @@ function initTimeline() {
 					heading: "2015",
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>J2 Engineering, Inc.</b>, a design-build and construction management firm founded in 2001 in Florida</li>"+
-						"<li>Acquired the assets of Jones-Stuckey Ltd., a transportation design firm founded in 1965 in Ohio</li>"+
-						"<li>Expanded in Massachusetts with office in Hopkinton</li>"+
-						"<li>Expanded in Massachusetts with office in Hopkinton</li></ul>",
+						"<li>Acquired the assets of <b>Jones-Stuckey Ltd.</b>, a transportation design firm founded in 1965 in Ohio</li>"+
+						"<li>Acquired the assets of <b>Philip Post & Associates</b>, a civil engineering and land surveying firm founded in 1979, which established an office in Chapel Hill, NC</li>"+
+						"<li>Developed Pennoni OPTICS, a proprietary web-based energy management software</li></ul>",
 					depth: 15,
 					z: 1
 				},
@@ -762,11 +819,8 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "2016",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Introduced first home page on the World Wide Web</li>"+
-						"<li>Expanded to New Hampshire with office in Concord, NH</li>"+
-						"<li>Acquired the assets of <b>E.L. Conwell & Co.</b>, an inspection and testing firm established in 1895</li>"+
-						"<li>Acquired the assets of <b>Barnes & Jarnis, Inc.</b>, a multidisciplinary consulting engineering firm established in 1953 to expand New England market with office in Boston, MA</li>"+
-						"<li>EnviroTEL Japan was incorporated and renamed as Pennoni International Inc., and Hart Crowser de Mexico was renamed Pennoni International de Mexico</li>"+
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>McCarthy and Associates</b>, a structural engineering firm based in Clearwater, FL</li>"+
+						"<li>Acquired the assets of <b>RWD Consultants LLC</b>, a multidisciplinary engineering firm out of Camden, NJ</li>"+
 						"<li><b><span style='font-size: 1.25rem;'>1200+ employees</span></b></li></ul>",
 					depth: 20,
 					z: 1
@@ -775,17 +829,19 @@ function initTimeline() {
 		},
 		{
 			id: "GRAY",
-			year: "20XX",
+			year: "2017-20",
 			theme: "alt",
 			tiles: [
 				{
 					type: "text",
 					pos: "pos-top-right",
 					w: "40vw",
+                    t: "40",
 					ratio: "9 / 16",
-					heading: "2030",
+					heading: "2017",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Pennoni began work on landmark project: Neo-Philadelphia</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>10 Year anniversary of the ELLIPSE Awards</li>"+
+						"<li>HQ relocated to <b>1900 Market Street</b> in the Central Business District of Philadelphia, PA</li></ul>",
 					depth: 5,
 					z: 2
 				},
@@ -794,9 +850,12 @@ function initTimeline() {
 					pos: "pos-middle-right",
 					w: "40vw",
 					ratio: "1 / 1",
-					heading: "2036",
+					heading: "2019",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Palintir</b>, a company that develops data integration and analytics platforms enabling government agencies, militaries, and corporations to combine and analyze data from multiple sources.</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>David DeLizza named President and CEO</li>"+
+						"<li>Pennoni announces that it's ESOP is 100% employee-owned</li>"+
+						"<li>10 year anniversary of PennoniGIVES</li>"+
+						"<li>Acquired the assets of <b>Group Melvin Design, LLC</b>, a planning service company adding to their Camden, NJ office</li></ul>",
 					depth: 10,
 					z: 2
 				},
@@ -804,23 +863,183 @@ function initTimeline() {
 					type: "text",
 					pos: "pos-bottom-right-25",
 					w: "40vw",
+                    t: "20",
 					ratio: "16 / 9",
-					heading: "2038",
+					heading: "2020",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Pennoni rebrands to <b>Pennoni.AI</b>, an innovative technology rebrand to focus on AI-driven solutions for infrastructure and engineering challenges.</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Despite the global pandemic, Pennoni was able to work on major projects like the Comcast Technology Center in Philadelphia, PA and</li></ul>",
 					depth: 20,
 					z: 4
 				},
 				{
 					type: "image",
-					pos: "pos-bottom-left-4",
-					w: "25vw",
-					ratio: "16 / 8",
-					src: "assets/pennoniAI3.png",
+					pos: "pos-top-right",
+					w: "30vw",
+					ratio: "16 / 9",
+					src: "assets/2017.PNG",
 					poster:
-						"assets/pennoniAI3.png",
-					alt: "Anthony Bartolomeo",
-					title: "Anthony Bartolomeo",
+						"assets/2017.PNG",
+					alt: "1900 Market Street in the Central Business District of Philadelphia, PA",
+					title: "1900 Market Street in the Central Business District of Philadelphia, PA",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "image",
+					pos: "pos-bottom-right-20",
+					w: "15rem",
+					ratio: "12 / 16",
+					src: "assets/Dave-DeLizza.png",
+					poster:
+						"assets/Dave-DeLizza.png",
+					alt: "1900 Market Street in the Central Business District of Philadelphia, PA",
+					title: "1900 Market Street in the Central Business District of Philadelphia, PA",
+					depth: 10,
+					z: 2
+				}
+			]
+		},
+		{
+			id: "BRIGHTGREEN",
+			year: "2021-22",
+			theme: "totoro",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-bottom-right-25",
+					w: "40vw",
+                    t: "20",
+					ratio: "16 / 9",
+					heading: "2021",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Cocciardi & Associates, Inc.</b>, an Environmental, Health, and Safety (EHS) company from Mechanicsburg and Jessup, PA</li>"+
+						"<li>Acquired the assets of <b>Snyder, Secary, & Associates</b>, a civil engineering, land use planning and development consulting services company from Harrisburg and York, PA</li></ul>",
+					depth: 20,
+					z: 4
+				},
+				{
+					type: "text",
+					pos: "pos-top-right",
+					w: "40vw",
+					ratio: "9 / 16",
+					heading: "2022",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Expanded to The District of Columbia, expanding the ability to better service new and existing clients in the National Capital Region</li>"+
+						"<li>Acquired the assets of <b>Kempton Rinard</b>, a landscape architectural and civil engineering company from Tampla, FL</li>"+
+						"<li>Acquired the assets of <b>Hygenix, Inc.</b>, an environmental consulting, testing and laboratory services company from Stamford, CT</li>"+
+						"<li>Acquired the assets of <b>CH Engineering</b>, an engineering and land surveying company from Raleigh, NC</li>"+
+						"<li>Acquired the assets of <b>SMITH Engineering</b>, a land development and civil engineering company from Chantilly, VA</li>"+
+						"<li>Response and Recovery: Hurricane Ian - After one of the most damaging storms of the year — Pennoni staff mobilized in Florida to support structural assessments, environmental surveys, forensic engineering, and recovery assistance in heavily impacted areas</li></ul>",
+					depth: 5,
+					z: 2
+				},
+				{
+					type: "image",
+					pos: "pos-top-left-25",
+					w: "30vw",
+					ratio: "16 / 9",
+					src: "assets/2017.png",
+					poster:
+						"assets/2017.png",
+					alt: "1900 Market Street in the Central Business District of Philadelphia, PA",
+					title: "1900 Market Street in the Central Business District of Philadelphia, PA",
+					depth: 10,
+					z: 2
+				}
+			]
+		},
+		{
+			id: "DARKGREEN",
+			year: "2023-24",
+			theme: "kikis",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-middle-left",
+					w: "40vw",
+                    t: "30",
+					ratio: "1 / 1",
+					heading: "2023",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Expanded to Boston, MA with a new office</li>"+
+						"<li>Opened a construction materials testing laboratory in King of Prussia, PA</li>"+
+						"<li>I-95 CAP Groundbreaking at Penn's Landing</li>"+
+						"<li>Acquired the assets of <b>Andersen Engineering Associates, Inc. (AEA, Inc.)</b>, an engineering and land surveying company from Sellersville, PA</li>"+
+						"<li>Acquired the assets of <b>Van Note-Harvey Associates, Inc. (VNHA)</b>, a full-service consulting engineering, environmental, planning and land surveying organization tracing its origin back to 1894, with offices located in Princeton and Cape May, NJ</li></ul>",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-left-25",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2024",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>IRWIN Engineers, Inc.</b>, a professional consulting firm specializing in chemical and environmental engineering services from Natick, MA</li>"+
+						"<li>Acquired the assets of <b>Mills & Associates</b>, a ___ company from ___</li>"+
+						"<li>20 year anniversary of Pennoni Perspective</li></ul>",
+					depth: 20,
+					z: 4
+				},
+				{
+					type: "image",
+					pos: "pos-top-right-25",
+					w: "25vw",
+					ratio: "16 / 9",
+					src: "assets/hp-project-1.jpg",
+					poster:
+						"assets/hp-project-1.jpg",
+					alt: "Ellipse Award logo and list of Past Winners",
+					title: "Ellipse Award logo and list of Past Winners",
+					depth: 10,
+					z: 2
+				}
+			]
+		},
+		{
+			id: "GRASS",
+			year: "2025-26",
+			theme: "spiritedAway",
+			tiles: [
+				{
+					type: "text",
+					pos: "pos-middle-left",
+					w: "40vw",
+                    t: "30",
+					ratio: "1 / 1",
+					heading: "2025",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Expanded to Boston, MA with a new office</li>"+
+						"<li>Acquired the assets of <b>Midatlantic Engineering</b>, an engineering and land surveying company from Pittston Township, PA</li>"+
+						"<li>Acquired the assets of <b>MV Engineering LLC</b>, an engineering consulting firm based in Cape May Court House, NJ</li>"+
+						"<li>Acquired the assets of <b>Dagher Engineering</b>, a building systems engineering and sustainability consulting firm based in New York City, NY</li></ul>",
+					depth: 10,
+					z: 2
+				},
+				{
+					type: "text",
+					pos: "pos-bottom-left-25",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2026",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Andrew Pennoni Named President and CEO</li>"+
+						"<li>20 year anniversary of Pennoni Perspective</li>"+
+						"<li><span style='font-size: 1.25rem;'><b>1400+ Employees</b></span></li></ul>",
+					depth: 20,
+					z: 4
+				},
+				{
+					type: "image",
+					pos: "pos-top-left-25",
+					w: "18rem",
+					ratio: "12 / 16",
+					src: "assets/Andrew-Pennoni.png",
+					poster:
+						"assets/Andrew-Pennoni.png",
+					alt: "Andrew Pennoni",
+					title: "Andrew Pennoni",
 					depth: 10,
 					z: 2
 				}
@@ -880,86 +1099,84 @@ function initTimeline() {
 		}
 	};
 
-	const buildTile = (tileData) => {
+	// Build a single text card element (not a full tile wrapper)
+	const buildTextCard = (tileData) => {
+		const textEl = el("div", "tile__text");
+		textEl.dataset.reveal = "text";
+
+		const h = el("h3");
+		h.textContent = tileData.heading || "";
+
+		const p = el("p");
+		p.innerHTML = (tileData.copy || "").replace(/\n\n/g, "<br><br>");
+
+		textEl.append(h, p);
+		return textEl;
+	};
+
+	const buildMediaTile = (tileData) => {
 		const tileEl = el("div", `tile ${tileData.pos || ""}`.trim());
 
-		// store original width spec so we can adapt on resize
 		tileEl.dataset.origW = tileData.w || "30vw";
-		// initialize --w; it may be adjusted by adjustTileWidths() after mount
 		tileEl.style.setProperty("--w", tileData.w || "30vw");
 		tileEl.style.setProperty("--ratio", tileData.ratio || "16 / 9");
 		tileEl.style.setProperty("--z", String(tileData.z ?? 1));
-
 		tileEl.dataset.depth = String(tileData.depth ?? 0);
 
 		const boxEl = el("div", "tile__box");
 
-		switch (tileData.type) {
-			case "text": {
-				boxEl.classList.add("text-only__box");
+		if (tileData.type === "image") {
+			const img = el("img", "tile__media");
+			img.loading = "lazy";
+			img.decoding = "async";
+			img.alt = tileData.alt || "";
+			img.title = tileData.title || "";
+			img.src = tileData.src;
+			img.dataset.reveal = "media";
 
-				const textEl = el("div", "tile__text");
-				textEl.dataset.reveal = "text";
+			img.onerror = () => {
+				img.onerror = null;
+				img.src = fallbackSvgDataUri(tileData.alt || "Image");
+			};
 
-				const h = el("h3");
-				h.textContent = tileData.heading || "";
+			boxEl.appendChild(img);
+		} else if (tileData.type === "video") {
+			const video = el("video", "tile__media");
+			video.muted = true;
+			video.loop = true;
+			video.playsInline = true;
+			video.autoplay = true;
+			video.preload = "metadata";
+			if (tileData.poster) video.poster = tileData.poster;
+			video.dataset.reveal = "video";
 
-				const p = el("p");
-				p.innerHTML = (tileData.copy || "").replace(/\n\n/g, "<br><br>");
+			const source = el("source");
+			source.src = tileData.src;
+			source.type = tileData.src?.endsWith(".webm") ? "video/webm" : "video/mp4";
 
-				textEl.append(h, p);
-				boxEl.appendChild(textEl);
-				break;
-			}
-			case "image": {
-				const img = el("img", "tile__media");
-				img.loading = "lazy";
-				img.decoding = "async";
-				img.alt = tileData.alt || "";
-				img.title = tileData.title || "";
-				img.src = tileData.src;
-				img.dataset.reveal = "media";
-
-				img.onerror = () => {
-					img.onerror = null;
-					img.src = fallbackSvgDataUri(tileData.alt || "Image");
-				};
-
-				boxEl.appendChild(img);
-				break;
-			}
-			case "video": {
-				const video = el("video", "tile__media");
-				video.muted = true;
-				video.loop = true;
-				video.playsInline = true;
-				video.autoplay = true;
-				video.preload = "metadata";
-				if (tileData.poster) video.poster = tileData.poster;
-				video.dataset.reveal = "video";
-
-				const source = el("source");
-				source.src = tileData.src;
-				source.type = tileData.src?.endsWith(".webm") ? "video/webm" : "video/mp4";
-
-				video.appendChild(source);
-				boxEl.appendChild(video);
-				break;
-			}
+			video.appendChild(source);
+			boxEl.appendChild(video);
 		}
 
 		tileEl.appendChild(boxEl);
 		return tileEl;
 	};
 
-	// Adjust tiles that use 40vw to use 45vw on medium screens (<1350px)
+	// Adjust text column widths responsively:
+	// >1450px → 40vw, 1000–1450px → 45vw, <1000px → 90vw
 	const adjustTileWidths = () => {
-		const isMedium = window.innerWidth < 1350;
+		const w = window.innerWidth;
+		const textW = w > 1550 ? "40vw" : w > 1000 ? "45vw" : "90vw";
+
+		document.querySelectorAll('.text-column').forEach((col) => {
+			col.style.setProperty("--text-col-w", textW);
+		});
+
+		// Also adjust any standalone media tiles that use vw-based widths
 		document.querySelectorAll('.tile').forEach((t) => {
 			const orig = t.dataset.origW || '';
 			if (!orig) return;
-			if (orig.trim() === '40vw' && isMedium) t.style.setProperty('--w', '45vw');
-			else t.style.setProperty('--w', orig);
+			t.style.setProperty('--w', orig);
 		});
 	};
 
@@ -974,6 +1191,7 @@ function initTimeline() {
 
 	const mountPanels = () => {
 		const listFrag = document.createDocumentFragment();
+		let panelIndex = 0;
 
 		for (const item of timelineItems) {
 			const li = el("li");
@@ -983,11 +1201,43 @@ function initTimeline() {
 			applyThemeData(panel, item.theme);
 
 			const stage = el("div", "panel__stage");
-			for (const tileData of item.tiles) stage.appendChild(buildTile(tileData));
+
+			// Separate text tiles from media tiles
+			const textTiles = item.tiles.filter(t => t.type === "text");
+			const mediaTiles = item.tiles.filter(t => t.type !== "text");
+
+			// Alternate text column: even panels → right, odd panels → left
+			const colSide = panelIndex % 2 === 0 ? "text-column--right" : "text-column--left";
+
+			// Build unified text column if there are text tiles
+			if (textTiles.length > 0) {
+				const colEl = el("div", `tile text-column ${colSide}`);
+				colEl.dataset.depth = String(textTiles[0].depth ?? 0);
+				colEl.style.setProperty("--z", String(textTiles[0].z ?? 2));
+
+				// Check if first text tile has custom top position attribute 't'
+				if (textTiles[0].t !== undefined) {
+					colEl.dataset.t = String(textTiles[0].t);
+					colEl.style.setProperty("--custom-top", `${textTiles[0].t}%`);
+				}
+
+				for (const tileData of textTiles) {
+					const card = buildTextCard(tileData);
+					colEl.appendChild(card);
+				}
+
+				stage.appendChild(colEl);
+			}
+
+			// Build individual media tiles with their original positions
+			for (const tileData of mediaTiles) {
+				stage.appendChild(buildMediaTile(tileData));
+			}
 
 			panel.appendChild(stage);
 			li.appendChild(panel);
 			listFrag.appendChild(li);
+			panelIndex++;
 		}
 
 		panelsList.appendChild(listFrag);
@@ -1041,7 +1291,10 @@ function initRevealAndParallax() {
 	const animateReveal = (node, { kind, triggerStart, duration }) => {
 		if (reduceMotion) return showInstant(node);
 
-		const tileTrigger = node.closest(".tile") || node;
+		// For text cards inside a text-column, use the node itself as trigger
+		// so each card reveals independently as it enters the viewport
+		const isTextInColumn = kind === "text" && node.closest('.text-column');
+		const tileTrigger = isTextInColumn ? node : (node.closest(".tile") || node);
 
 		if (kind === "media") {
 			gsap.fromTo(
@@ -1096,9 +1349,12 @@ function initRevealAndParallax() {
 	document.querySelectorAll('[data-reveal="text"]').forEach((textBlock) => {
 		if (!reduceMotion) gsap.set(textBlock, { opacity: 0, y: 24 });
 
+		// For cards inside a text-column, trigger on the card itself not the column
+		const isInColumn = textBlock.closest('.text-column');
+
 		animateReveal(textBlock, {
 			kind: "text",
-			triggerStart: "top 60%",
+			triggerStart: isInColumn ? "top 75%" : "top 60%",
 			duration: 0.7
 		});
 	});
@@ -1188,10 +1444,10 @@ function initYearSwapAndTheme() {
 		},
 		howls: {
 			bg: "#ccebe1",
-			fg: "#1d3535",
-			muted: "#4b6868",
-			year: "#1d3535",
-			cardBg: "#ecf5f2ff",
+			fg: "#02b07c",
+			muted: "#ffffff",
+			year: "#222",
+			cardBg: "#222",
 			cardBorder: "transparent",
 			yearLayerOpacity: 0.42
 		},
