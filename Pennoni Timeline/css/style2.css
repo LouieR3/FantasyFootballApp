@@ -97,15 +97,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* background-image: linear-gradient(
-			rgba(163, 163, 163, 0.07) 2px,
-			transparent 2px
-		),
-		linear-gradient(90deg, rgba(163, 163, 163, 0.07) 2px, transparent 2px),
-		linear-gradient(rgba(163, 163, 163, 0.07) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(163, 163, 163, 0.07) 1px, transparent 1px); */
 	background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-
 
     position: relative;
     display: flex;
@@ -113,8 +105,23 @@ body {
     justify-content: center;
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(44, 44, 44, 0.7) 100%), url(../assets/Pennoni_HQ.jpg) center center / cover no-repeat fixed;
     overflow: hidden;
-
 	background-position: -2px -2px, -2px -20rem, -1px -1px, -1px -1px;
+}
+
+.grid-background {
+	background-size: 2.125rem 2.125rem;
+    background-image: linear-gradient(to right, #565656 0.063rem, transparent 0.063rem), linear-gradient(to bottom, #565656 0.063rem, transparent 0.063rem);
+}
+.overview-h2 {
+	font-size: 2.375rem;
+    line-height: 2.813rem;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+.overview-text {
+	font-size: 1.250rem;
+    line-height: 1.500rem;
+    font-weight: 400;
 }
 
 .kikis {
@@ -283,7 +290,8 @@ body {
 
 .tile__text h3 {
 	margin: 0;
-	font-size: 3rem;
+	font-size: 2.5rem;
+	font-weight: 600;
 	line-height: 1.1;
 	letter-spacing: -0.02em;
 }
@@ -383,7 +391,8 @@ body {
 	left: 10%;
 }
 li {
-	margin-bottom: 0.75rem;
+	margin-bottom: 0.7rem;
+	line-height: 1.25;
 }
 
 .pos-bottom-right {

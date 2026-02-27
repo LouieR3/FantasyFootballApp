@@ -138,11 +138,11 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1966",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li><b>C.R. Pennoni began the firm as a one-person structural engineering practice in West Philadelphia, PA at 67th Street and Haverford Avenue.</b></li>" +
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li><b>C.R. 'Chuck' Pennoni founded Pennoni as a one-person structural engineering firm in West Philadelphia, PA at 67th Street and Haverford Avenue.</b></li>" +
 						"<li>The first three part-time hires were engineering students from Temple University</li>"+
-                        "<li>Headquarters (HQ) moved to Center City office at 17th and Cherry Streets in Philadelphia, PA to serve increased client base</li>" +
+                        "<li>Pennoni Headquarters (HQ) moved to Center City office at 17th and Cherry Streets in Philadelphia, PA to serve increased client base</li>" +
 						"<li>First Private Client - C&J Construction Company, Philadelphia, PA</li>" +
-						"<li>First Government Project - City of Philadelphia Police Station at 20th and Pennsylvania Avenue as a sub to Gene Dichter, Architect</li></ul>",
+						"<li>First Government Project - City of Philadelphia Police Station at 20th and Pennsylvania Avenue as a sub to Gene Dichter, architect</li></ul>",
 					depth: 20,
 					z: 4
 				},
@@ -154,7 +154,7 @@ function initTimeline() {
 					heading: "1967",
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Business entity changed from sole practitioner to business corporation on July 21, 1967</li>" +
-						"<li>Expanded out of Pennsylvania with first New Jersey office in Cinnaminson, Burlington County</li>" +
+						"<li>Established first out-of-state office in Cinnaminson, Burlington County, NJ</li>" +
 						"<li>First Employee - Leo Storniolo</li></ul>",
 					depth: 20,
 					z: 4
@@ -186,7 +186,7 @@ function initTimeline() {
 					heading: "1968",
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>HQ relocated to 1920 Chestnut Street in Philadelphia, PA</li>" +
-						"<li>First international project was a feasibility study on the Mediterranean coast in Spain</li></ul>",
+						"<li>First international project - feasibility study on the Mediterranean coast in Spain</li></ul>",
 					depth: 5,
 					z: 2
 				},
@@ -197,7 +197,7 @@ function initTimeline() {
 					ratio: "1 / 1",
 					heading: "1970",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Leo F. O'Connor, PE joined the firm as the first Vice President</li>" +
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Leo F. O'Connor, PE, joined the firm as the first Vice President</li>" +
 						"<li>First Government Client - Township of Falls Authority, Fallsington, Bucks County, PA</li></ul>",
 					depth: 10,
 					z: 2
@@ -209,7 +209,7 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1971",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Expanded to Bucks County with an office in Langhorne, PA</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Expanded with an office in Langhorne, Bucks County, PA</li></ul>",
 					depth: 20,
 					z: 4
 				},
@@ -253,7 +253,7 @@ function initTimeline() {
 					heading: "1976",
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>A temporary office was established in Iran, following civil engineering work for the new cities of Sarcheshmeh, Lavizon, Kan, and the expansion of Ahwaz.</li>"+
-						"<li><b><span style='font-size: 1.25rem;'>49 employees</span></b></li></ul>",
+						"<li><b><span style='font-size: 1.25rem;'>49 full-time employees</span></b></li></ul>",
 					depth: 10,
 					z: 2
 				},
@@ -264,7 +264,7 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1977",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Formed <b>Computer Graphics</b> with Yerkes, Huth and Richardson</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Formed <b>Computer Graphics</b> with Yerkes, Huth, and Richardson</li></ul>",
 					depth: 20,
 					z: 1
 				}
@@ -283,8 +283,8 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1979",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>HQ relocated to renovated top floor of modern office building located at 1911 Arch Street near Logan Circle, Philadelphia, PA</li>"+
-						"<li>Acquired the assets of <b>George E. Schilling & Associates</b>, an engineering, surveying, and planning firm in Atlantic County, NJ with history dating back to the early 1800s, which established an Absecon, NJ office</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>HQ relocated to renovated top floor of modern office building located at 1911 Arch Street near Logan Circle in Philadelphia, PA</li>"+
+						"<li>Acquired the assets of <b>George E. Schilling & Associates</b>, an engineering, surveying, and planning firm in Atlantic County, NJ with history dating back to the early 1800s, establishing an office in Absecon, NJ</li></ul>",
 					depth: 15,
 					z: 1
 				},
@@ -308,7 +308,7 @@ function initTimeline() {
 					ratio: "1 / 1",
 					heading: "1980",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Rothbaum & Davis</b>, consulting structural engineers of Philadelphia, PA, which had an origin traced back to the early 1920s</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Rothbaum & Davis</b>, consulting structural engineers of Philadelphia, PA, with origins tracinged back to the early 1920s</li></ul>",
 					depth: 10,
 					z: 2
 				},
@@ -319,8 +319,8 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1986",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Schulcz & Padlasky</b>, consulting and structural engineers of Delaware County, PA founded in 1952</li>"+
-						"<li><b><span style='font-size: 1.25rem;'>152 employees</span></b></li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Schulcz & Padlasky</b>, consulting and structural engineers of Delaware County, PA, founded in 1952</li>"+
+						"<li><b><span style='font-size: 1.25rem;'>152 full-time employees</span></b></li></ul>",
 					depth: 20,
 					z: 1
 				}
@@ -338,7 +338,6 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1988",
 					copy:
-						// "• HQ relocated to the newly renovated historic Middishade Building at 1600 Callowhill Street in the Franklintown area of Philadelphia, PA",
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>HQ relocated to the newly renovated historic Middishade Building at 1600 Callowhill Street in the Franklintown area of Philadelphia, PA</li></ul>",
 					depth: 15,
 					z: 1
@@ -363,7 +362,7 @@ function initTimeline() {
 					ratio: "1 / 1",
 					heading: "1989",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Robert G. Werden Associates, Inc.</b>, an MEP firm organized in 1958, which established an office in Elkins Park, Jenkintown, PA</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Robert G. Werden Associates, Inc.</b>, an MEP firm organized in 1958, establishing an office in Elkins Park, Jenkintown, PA</li></ul>",
 						// "\n<img src='assets/Acquisitions/PRIME-WARE.png' alt='Prime Ware logo' style='width: 100px; margin-top: 12px;'>",
 					depth: 10,
 					z: 2
@@ -375,8 +374,8 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1991",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Macomber Associates</b>, a bridge and highway engineering firm founded in 1955, which established an office in Camp Hill, PA</li>"+
-						"<li>Acquired the assets of <b>Mann-Talley</b>, a survey and engineering firm, which established an office in Wilmington, DE</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Macomber Associates</b>, a bridge and highway engineering firm founded in 1955, establishing an office in Camp Hill, PA</li>"+
+						"<li>Acquired the assets of <b>Mann-Talley</b>, a survey and engineering firm, establishing an office in Wilmington, DE</li></ul>",
 					depth: 20,
 					z: 1
 				}
@@ -394,7 +393,7 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1992",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>PrimeWare Associates</b> of Pennsylvania to add new computer technology</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>PrimeWare Associates</b> to add new computer technology</li></ul>",
 					depth: 15,
 					z: 1
 				},
@@ -445,8 +444,8 @@ function initTimeline() {
 					heading: "1994",
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li><b>Established Employee Stock Ownership Plan (ESOP) making employees majority owners</b></li>"+
-						"<li>Acquired the assets of subsidiary, EnviroTEL, Inc., an environmental engineering firm with satellite offices in Pennsylvania, Massachusetts, and Tokyo</li>"+
-						"<li><b>Richard L. Piccoli named President when C.R. Pennoni leaves to serve pro bono as President and COO of Drexel University for the 1994-1995 academic year</b></li></ul>",
+						"<li>Acquired the assets of subsidiary, <b>EnviroTEL, Inc.</b>, an environmental engineering firm with satellite offices in Pennsylvania, Massachusetts, and Tokyo, Japan</li>"+
+						"<li><b>Richard L. Piccoli is named president when C.R. Pennoni leaves to serve pro bono as president and COO of Drexel University for the 1994-1995 academic year</b></li></ul>",
 					depth: 20,
 					z: 1
 				}
@@ -464,8 +463,9 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1995",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Subsidiary EnviroTEL purchased <b>Hart Crowser de Mexico S.A. de C.V.</b>, an environmental engineering firm in Mexico City</li>"+
-						"<li>Expanded in Massachusetts with office in Hopkinton</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Launched <i>Pennoni Perspective</i>, a quarterly publication distributed to clients featuring company news, insights, and project updates</li>"+
+						"<li>Subsidiary EnviroTEL purchased <b>Hart Crowser de Mexico S.A. de C.V.</b>, an environmental engineering firm in Mexico City, Mexico</li>"+
+						"<li>Established office in Hopkinton, MA</li></ul>",
 					depth: 15,
 					z: 1
 				},
@@ -503,11 +503,11 @@ function initTimeline() {
 					heading: "1996",
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Introduced first home page on the World Wide Web</li>"+
-						"<li>Expanded to New Hampshire with office in Concord, NH</li>"+
+						"<li>Established office in Concord, NH</li>"+
 						"<li>Acquired the assets of <b>E.L. Conwell & Co.</b>, an inspection and testing firm established in 1895</li>"+
-						"<li>Acquired the assets of <b>Barnes & Jarnis, Inc.</b>, a multidisciplinary consulting engineering firm established in 1953 to expand New England market with office in Boston, MA</li>"+
+						"<li>Acquired the assets of <b>Barnes & Jarnis, Inc.</b>, a multidisciplinary consulting engineering firm founded in 1953 to expand New England market with an office in Boston, MA</li>"+
 						"<li>EnviroTEL Japan was incorporated and renamed as Pennoni International Inc., and Hart Crowser de Mexico was renamed Pennoni International de Mexico</li>"+
-						"<li><b><span style='font-size: 1.25rem;'>385 employees</span></b></li></ul>",
+						"<li><b><span style='font-size: 1.25rem;'>385 full-time employees</span></b></li></ul>",
 					depth: 20,
 					z: 1
 				}
@@ -528,7 +528,7 @@ function initTimeline() {
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Expanded international division to the Philippines</li>"+
 						"<li>HQ relocated to 3001 Market Street at One Drexel Plaza in Philadelphia, PA (former Philadelphia Evening Bulletin Building)</li>"+
 						"<li>Acquired the assets of <b>Travers Associates Inc.</b>, a consulting engineering firm in Clifton, NJ</li>"+
-						"<li>Expanded to Ohio with offices in Cleveland and Parma</li>"+
+						"<li>Established offices in Cleveland and Parma, OH</li>"+
 						"<li>Patricia Querubin became the first female officer</li></ul>",
 					depth: 15,
 					z: 1
@@ -579,7 +579,7 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "1998",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Pan Asia Architects & Engineers</b> headquartered in Okinawa, Japan, founded over 20 years earlier</li>"+
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Pan Asia Architects & Engineers</b> headquartered in Okinawa, Japan, founded more than 20 years earlier</li>"+
 						"<li><b>Anthony Bartolomeo elected as President following retirement of Richard L. Piccoli</b></li></ul>",
 					depth: 20,
 					z: 1
@@ -621,7 +621,7 @@ function initTimeline() {
 					ratio: "1 / 1",
 					heading: "2002",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>GWSM, Inc.</b>, a landscape architecture firm founded in 1975, which established a Pittsburgh office</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>GWSM, Inc.</b>, a landscape architecture firm founded in 1975, establishing a Pittsburgh, PA office</li></ul>",
 					depth: 10,
 					z: 2
 				},
@@ -663,8 +663,7 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "2004",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Powers & Schram Inc.</b>, which established an office in State College, PA</li>"+
-						"<li>Pennoni starts quaterly publication: Pennoni Perspective</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Powers & Schram Inc.</b>, establishing an office in State College, PA</li></ul>",
 					depth: 15,
 					z: 1
 				},
@@ -688,8 +687,8 @@ function initTimeline() {
 					ratio: "1 / 1",
 					heading: "2005",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Formed strategic alliance with <b>Progressive Engineering Group LLC</b>, formed in Tennessee by former Philadelphia Eagles' defensive tackle, Darwin Walker</li>"+
-						"<li>Expanded to Maryland with Ellicott City office</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Formed strategic alliance with <b>Progressive Engineering Group LLC</b>, founded in Knoxville, TN by former Philadelphia [HM6] Eagles' defensive tackle, Darwin Walker</li>"+
+						"<li>Established office in Ellicott City, MD</li></ul>",
 					depth: 10,
 					z: 2
 				},
@@ -700,10 +699,10 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "2006",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Meyer, Strong, and Jones Engineers P.C.</b>, a mechanical and electrical consulting engineering firm in New York established in 1902</li>"+
-						"<li>Acquired the assets of <b>Swanson Engineering P.C.</b>, a multidisciplinary engineering firm in northeast Philadelphia</li>"+
-						"<li>Acquired the assets of <b>G.S. Winters</b>, a consulting engineering and land surveying firm in New Jersey</li>"+
-						"<li><b><span style='font-size: 1.25rem;'>685 employees</span></b></li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Meyer, Strong, and Jones Engineers P.C.</b>, a mechanical and electrical consulting engineering firm founded in New York, NY in 1902</li>"+
+						"<li>Acquired the assets of <b>Swanson Engineering P.C.</b>, a multidisciplinary engineering firm in northeast Philadelphia, PA</li>"+
+						"<li>Acquired the assets of <b>G.S. Winters</b>, a consulting engineering and land surveying firm in Berlin, NJ</li>"+
+						"<li><b><span style='font-size: 1.25rem;'>685 full-time employees</span></b></li></ul>",
 					depth: 20,
 					z: 1
 				}
@@ -722,8 +721,8 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "2007",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>C.R. Pennoni established the ELLIPSE Award to annually honor a community member who has improved the quality of life through infrastructure development or redevelopment</li>"+
-						"<li>Acquired the assets of <b>Professional Planning & Engineering, LLC</b> of New Jersey</li>"+
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>C.R. Pennoni introduces the ELLIPSE Award to annually honor a community member who has improved the quality of life through infrastructure development or redevelopment</li>"+
+						"<li>Acquired the assets of <b>Professional Planning & Engineering, LLC</b> of Newark, New Jersey</li>"+
 						"<li>Established <b>Pennoni Engineering and Surveying of New York P.C.</b></li></ul>",
 					depth: 15,
 					z: 1
@@ -772,19 +771,28 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "2010",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Patton, Harris, Rust & Associates, Inc.</b>, a multidisciplinary firm in Virginia established in 1952</li>"+
-						"<li>Acquired the assets of <b>Green Stone Engineering, LLC</b>, a civil and environmental engineering firm in Delaware</li>"+
-						"<li>Established <b>Intelligent Infrastructure Systems (IIS)</b> as a separate company, that was instrumental in the development of THMPER and RABIT</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Established <b>Intelligent Infrastructure Systems (IIS)</b> as a separate company, that was instrumental in the development of THMPER and RABIT</li></ul>",
 					depth: 20,
 					z: 1
 				}
 			]
 		},
 		{
-			id: "2011-14",
-			year: "2011-14",
+			id: "2011-13",
+			year: "2011-13",
 			theme: "spiritedAway",
 			tiles: [
+				{
+					type: "text",
+					pos: "pos-top-left-10",
+					w: "40vw",
+					ratio: "16 / 9",
+					heading: "2011",
+					copy:
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Patton, Harris, Rust & Associates, Inc.</b>, a multidisciplinary firm established in 1952 located in Chantilly, VA</li></ul>",
+					depth: 15,
+					z: 1
+				},
 				{
 					type: "text",
 					pos: "pos-top-left-10",
@@ -793,8 +801,8 @@ function initTimeline() {
 					heading: "2012",
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>AGS, LLC</b>, an MEP engineering firm in New York</li>"+
-						"<li>Acquired the assets of <b>Green Stone Engineering, LLC</b>, a civil and environmental engineering firm in Delaware</li>"+
-						"<li>Instrumental in development of ICOMPASS, a web-based transportation asset management system for bridge owners</li></ul>",
+						"<li>Acquired the assets of <b>Green Stone Engineering, LLC</b>, a civil and environmental engineering firm in Newark, DE</li>"+
+						"<li>Pennoni assists and is instrumental in the development of ICOMPASS, a web-based transportation asset management system for bridge owners</li></ul>",
 					depth: 15,
 					z: 1
 				},
@@ -808,7 +816,14 @@ function initTimeline() {
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Richard Piccolo named first President Emeritus</li></ul>",
 					depth: 20,
 					z: 1
-				},
+				}
+			]
+		},
+		{
+			id: "2014-16",
+			year: "2014-16",
+			theme: "howls",
+			tiles: [
 				{
 					type: "text",
 					pos: "pos-bottom-left-1",
@@ -816,18 +831,11 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "2014",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>B.D. Abel Inc.</b>, an MEP consulting firm in Delaware</li>"+
-						"<li>Acquired the assets of <b>Envisors</b>, a multidisciplinary firm founded in 1975, which established Florida offices</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>B.D. Abel Inc.</b>, an MEP consulting firm in Wilmington, DE</li>"+
+						"<li>Acquired the assets of <b>Envisors</b>, a multidisciplinary firm founded in 1975, establishing Winter Haven, FL offices</li></ul>",
 					depth: 20,
 					z: 1
-				}
-			]
-		},
-		{
-			id: "2015-16",
-			year: "2015-16",
-			theme: "howls",
-			tiles: [
+				},
 				{
 					type: "text",
 					pos: "pos-top-right",
@@ -835,9 +843,9 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "2015",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>J2 Engineering, Inc.</b>, a design-build and construction management firm founded in 2001 in Florida</li>"+
-						"<li>Acquired the assets of <b>Jones-Stuckey Ltd.</b>, a transportation design firm founded in 1965 in Ohio</li>"+
-						"<li>Acquired the assets of <b>Philip Post & Associates</b>, a civil engineering and land surveying firm founded in 1979, which established an office in Chapel Hill, NC</li>"+
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>J2 Engineering, Inc.</b>, a design-build and construction management firm founded in 2001 in Pensacola, FL</li>"+
+						"<li>Acquired the assets of <b>Jones-Stuckey Ltd.</b>, a transportation design firm founded in 1965, having office locations in Columbus and Akron, OH</li>"+
+						"<li>Acquired the assets of <b>Philip Post & Associates</b>, a civil engineering and land surveying firm founded in 1979, establishing an office in Chapel Hill, NC</li>"+
 						"<li>Developed Pennoni OPTICS, a proprietary web-based energy management software</li></ul>",
 					depth: 15,
 					z: 1
@@ -864,7 +872,7 @@ function initTimeline() {
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>McCarthy and Associates</b>, a structural engineering firm based in Clearwater, FL</li>"+
 						"<li>Acquired the assets of <b>RWD Consultants LLC</b>, a multidisciplinary engineering firm out of Camden, NJ</li>"+
-						"<li><b><span style='font-size: 1.25rem;'>1200+ employees</span></b></li></ul>",
+						"<li><b><span style='font-size: 1.25rem;'>1200+ full-time employees</span></b></li></ul>",
 					depth: 20,
 					z: 1
 				}
@@ -883,7 +891,7 @@ function initTimeline() {
 					ratio: "9 / 16",
 					heading: "2017",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>10 Year anniversary of the ELLIPSE Awards</li>"+
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>10-year anniversary of the ELLIPSE Awards</li>"+
 						"<li>HQ relocated to <b>1900 Market Street</b> in the Central Business District of Philadelphia, PA</li></ul>",
 					depth: 5,
 					z: 2
@@ -896,9 +904,9 @@ function initTimeline() {
 					heading: "2019",
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>David DeLizza named President and CEO</li>"+
-						"<li>Pennoni announces that the Employee Stock Ownership Plan is 100% employee-owned</li>"+
-						"<li>10 year anniversary of PennoniGIVES</li>"+
-						"<li>Acquired the assets of <b>Group Melvin Design, LLC</b>, a planning service company adding to their Camden, NJ office</li></ul>",
+						"<li>Pennoni announces that the ESOP is 100% employee-owned</li>"+
+						"<li>10-year anniversary of PennoniGIVES</li>"+
+						"<li>Acquired the assets of <b>Group Melvin Design, LLC</b>, a planning service company, adding to the Camden, NJ office</li></ul>",
 					depth: 10,
 					z: 2
 				},
@@ -910,7 +918,7 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "2020",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Despite the global pandemic, Pennoni was able to work on <a href='https://www.pennoni.com/insights/engineers-week-2020-project-highlights/?utm_source=chatgpt.com' target='_blank' style='color: #fff; text-decoration: underline;'>major projects</a> like the Comcast Technology Center in Philadelphia, PA and St. Luke's Blue Mountain Hospital</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Despite the global pandemic, Pennoni was able to work on <a href='https://www.pennoni.com/insights/engineers-week-2020-project-highlights/?utm_source=chatgpt.com' target='_blank' style='color: #fff; text-decoration: underline;'>major projects</a> like the Comcast Technology Center in Philadelphia, PA and St. Luke's Blue Mountain Hospital in Carbon County, PA</li></ul>",
 					depth: 20,
 					z: 4
 				},
@@ -955,8 +963,8 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "2021",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Cocciardi & Associates, Inc.</b>, an Environmental, Health, and Safety (EHS) company from Mechanicsburg and Jessup, PA</li>"+
-						"<li>Acquired the assets of <b>Snyder, Secary, & Associates</b>, a civil engineering, land use planning and development consulting services company from Harrisburg and York, PA</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>Cocciardi & Associates, Inc.</b>, an Environmental, Health, and Safety (EHS) company, establishing offices in Mechanicsburg and Jessup, PA</li>"+
+						"<li>Acquired the assets of <b>Snyder, Secary, & Associates</b>, a civil engineering, land use planning and development consulting services company in Harrisburg and York, PA</li></ul>",
 					depth: 20,
 					z: 4
 				},
@@ -967,11 +975,9 @@ function initTimeline() {
 					ratio: "9 / 16",
 					heading: "2022",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Expanded to The District of Columbia, expanding the ability to better service new and existing clients in the National Capital Region</li>"+
-						"<li>Acquired the assets of <b>Kempton Rinard</b>, a landscape architectural and civil engineering company from Tampla, FL</li>"+
-						"<li>Acquired the assets of <b>Hygenix, Inc.</b>, an environmental consulting, testing and laboratory services company from Stamford, CT</li>"+
-						"<li>Acquired the assets of <b>CH Engineering</b>, an engineering and land surveying company from Raleigh, NC</li>"+
-						"<li>Acquired the assets of <b>SMITH Engineering</b>, a land development and civil engineering company from Chantilly, VA</li>"+
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Established office in the District of Columbia, expanding the ability to better service new and existing clients in the National Capital Region of Washington, D.C.</li>"+
+						"<li>Acquired the assets of <b>Kempton Rinard</b>, a landscape architectural and civil engineering company from Tampa, FL</li>"+
+						"<li>Acquired the assets of <b>Hygenix, Inc.</b>, an environmental consulting, testing and laboratory services company, establishing an office in Stamford, CT</li>"+
 						"<li>In response to Hurricane Ian, Pennoni staff mobilized in Florida to support structural assessments, environmental surveys, forensic engineering, and recovery assistance in heavily impacted areas</li></ul>",
 					depth: 5,
 					z: 2
@@ -1004,11 +1010,11 @@ function initTimeline() {
 					ratio: "1 / 1",
 					heading: "2023",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Expanded to Boston, MA with a new office</li>"+
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Established Boston, MA office</li>"+
 						"<li>Opened a construction materials testing laboratory in King of Prussia, PA</li>"+
-						"<li>I-95 CAP Groundbreaking at Penn's Landing</li>"+
-						"<li>Acquired the assets of <b>Andersen Engineering Associates, Inc. (AEA, Inc.)</b>, an engineering and land surveying company from Sellersville, PA</li>"+
-						"<li>Acquired the assets of <b>Van Note-Harvey Associates, Inc. (VNHA)</b>, a full-service consulting engineering, environmental, planning and land surveying organization tracing its origin back to 1894, with offices located in Princeton and Cape May, NJ</li></ul>",
+						"<li>Groundbreaking at Penn's Landing for the I-95 CAP project, Pennoni's largest project to date</li>"+
+						"<li>Acquired the assets of <b>Andersen Engineering Associates, Inc. (AEA, Inc.)</b>, an engineering and land surveying company, establishing office in Sellersville, PA</li>"+
+						"<li>Acquired the assets of <b>Van Note-Harvey Associates, Inc. (VNHA)</b>, a full-service consulting engineering, environmental, planning and land surveying organization tracing founded in 1894, establishing offices in Princeton and Cape May Court House, NJ</li></ul>",
 					depth: 10,
 					z: 2
 				},
@@ -1019,9 +1025,8 @@ function initTimeline() {
 					ratio: "16 / 9",
 					heading: "2024",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>IRWIN Engineers, Inc.</b>, a professional consulting firm specializing in chemical and environmental engineering services from Natick, MA</li>"+
-						"<li>Acquired the assets of <b>Mills & Associates</b>, a civil engineering company established in November 1980 from Tampa, FL</li>"+
-						"<li>20 year anniversary of Pennoni Perspective</li></ul>",
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>IRWIN Engineers, Inc.</b>, a professional consulting firm specializing in chemical and environmental engineering services, establishing an office in Natick, MA</li>"+
+						"<li>Acquired the assets of <b>Mills & Associates</b>, a civil engineering company foundeded in November 1980 from Tampa, FL</li></ul>",
 					depth: 20,
 					z: 4
 				},
@@ -1067,10 +1072,11 @@ function initTimeline() {
 					ratio: "1 / 1",
 					heading: "2025",
 					copy:
-						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Started the Pennoni What's Possible podcast</li>"+
+						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Introduced Pennoni's What's Possible podcast – launching 4 episodes in its first year</li>"+
+						"<li>30th anniversary for the Pennoni Perspective</li>"+
 						"<li>Acquired the assets of <b>Midatlantic Engineering</b>, an engineering and land surveying company from Pittston Township, PA</li>"+
 						"<li>Acquired the assets of <b>MV Engineering LLC</b>, an engineering consulting firm based in Cape May Court House, NJ</li>"+
-						"<li>Acquired the assets of <b>Dagher Engineering</b>, a building systems engineering and sustainability consulting firm based in New York City, NY</li></ul>",
+						"<li>Acquired the assets of <b>Dagher Engineering</b>, a building systems engineering and sustainability consulting firm based in New York City, NY, establishing our Downtown New York office</li></ul>",
 					depth: 10,
 					z: 2
 				},
