@@ -6,18 +6,112 @@
     <title>Pennoni 60th Timeline</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href='assets/favicon.jpg' />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.7.2/js/all.js" crossorigin="anonymous"></script>
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script2.js"></script>
+    <script defer src="js/script.js"></script>
     <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://www.pennoni.com/wp-content/themes/PENNONI_2023/assets/css/styles.css?ver=1763488017"> -->
-    <link rel="stylesheet" href="css/footer.css">
 
+    <link rel="stylesheet" href="css/footer.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <section class="spacing-section">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/Pennoni-Logo.png" alt="Pennoni Logo" height="40" class="px-2">
+                <span class="navbar-title">Pennoni 60th Anniversary Timeline</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarYears" aria-controls="navbarYears" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarYears">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="yearsMenu">
+                    <!-- Years will be injected here -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="spacing-section2">
         <h1 class="title">Pennoni's History over 60 years</h1>
+    </section>
+    <section class="page-section pt-2 pb-5" id="profile" style="background-color: #39D87D;">
+        <div class="container">
+            <div class="text-center">
+                <div class="container">
+                    <div class="text-center">
+                        <h1 class="section-heading mb-5 mt-5" style="color: black; font-weight: 600;">Pennoni by the Numbers</h1>
+                    </div>
+                    <!-- First row: one large box -->
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-12 col-md-8">
+                            <div class="counter-box counter-box-lg text-center">
+                                <i class="fas fa-users fa-3x mb-3" style="color:#264831;"></i>
+                                <div class="counter h1 mb-2" data-count="1400">0</div>
+                                <div class="span-line my-2"></div>
+                                <p class="lead">Total Employees</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second row: three boxes -->
+                    <div class="row justify-content-center mb-3">
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="counter-box text-center">
+                                <div class="counter h1 mb-2" data-count="400">0</div>
+                                <div class="span-line my-2"></div>
+                                <p>Site/Civil Engineers, Planners, Landscape Architects, & Surveyors</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="counter-box text-center">
+                                <div class="counter h1 mb-2" data-count="70">0</div>
+                                <div class="span-line my-2"></div>
+                                <p>Structural, MEP, Foundation/Geotechnical Engineers</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="counter-box text-center">
+                                <div class="counter h1 mb-2" data-count="90">0</div>
+                                <div class="span-line my-2"></div>
+                                <p>Environmental Engineers, Scientists, & Industrial Hygienists</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third row: three boxes -->
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 col-sm-6 mb-5">
+                            <div class="counter-box text-center">
+                                <div class="counter h1 mb-2" data-count="140">0</div>
+                                <div class="span-line my-2"></div>
+                                <p>Transportation Engineers</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="counter-box text-center">
+                                <div class="counter h1 mb-2" data-count="290">0</div>
+                                <div class="span-line my-2"></div>
+                                <p>Project Managers, Construction Managers and Inspectors</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <div class="counter-box text-center">
+                                <div class="counter h1 mb-2" data-count="415">0</div>
+                                <div class="span-line my-2"></div>
+                                <p>Administrative, Design, CADD, Technicians, & Other Personnel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <main class="timeline" data-app="timeline">
@@ -98,7 +192,7 @@
             <div tabindex="0" data-modal-close="video" class="video-modal__close-button"><img src="/wp-content/themes/PENNONI_2023/assets/icons/misc/close-button.svg" alt="close button"></div>
             </div>
         </dialog>
-        </footer>
+    </footer>
 
 </body>
 </html>

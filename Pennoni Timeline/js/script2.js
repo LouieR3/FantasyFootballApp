@@ -675,7 +675,7 @@ function initTimeline() {
 					type: "text",
 					pos: "pos-top-right",
 					w: "40vw",
-                    t: "30",
+                    t: "50",
 					ratio: "16 / 9",
 					heading: "2007",
 					copy:
@@ -977,7 +977,7 @@ function initTimeline() {
 					heading: "2024",
 					copy:
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Acquired the assets of <b>IRWIN Engineers, Inc.</b>, a professional consulting firm specializing in chemical and environmental engineering services from Natick, MA</li>"+
-						"<li>Acquired the assets of <b>Mills & Associates</b>, a ___ company from ___</li>"+
+						"<li>Acquired the assets of <b>Mills & Associates</b>, a civil engineering company established in November 1980 from Tampa, FL</li>"+
 						"<li>20 year anniversary of Pennoni Perspective</li></ul>",
 					depth: 20,
 					z: 4
@@ -987,11 +987,11 @@ function initTimeline() {
 					pos: "pos-top-right-25",
 					w: "25vw",
 					ratio: "16 / 9",
-					src: "assets/hp-project-1.jpg",
+					src: "assets/I95-CAP.png",
 					poster:
-						"assets/hp-project-1.jpg",
-					alt: "Ellipse Award logo and list of Past Winners",
-					title: "Ellipse Award logo and list of Past Winners",
+						"assets/I95-CAP.png",
+					alt: "I95 CAP Groundbreaking at Penn's Landing",
+					title: "I95 CAP Groundbreaking at Penn's Landing",
 					depth: 10,
 					z: 2
 				}

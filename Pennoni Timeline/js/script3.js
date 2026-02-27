@@ -1,40 +1,3 @@
-// Counter up animation on scroll
-$(document).ready(function() {
-	// FontAwesome CDN inject if not present
-	if (!$('link[href*="font-awesome"]').length && !$('link[href*="fontawesome"]').length) {
-		$('head').append('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">');
-	}
-
-	function isScrolledIntoView(elem) {
-		var docViewTop = $(window).scrollTop();
-		var docViewBottom = docViewTop + $(window).height();
-		var elemTop = $(elem).offset().top;
-		var elemBottom = elemTop + $(elem).height();
-		return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-	}
-
-	var counted = false;
-	$(window).on('scroll load', function() {
-		var section = $('#profile');
-		if (!counted && isScrolledIntoView(section)) {
-			$('.counter').each(function() {
-				var $this = $(this);
-				var countTo = $this.attr('data-count');
-				$({ countNum: 0 }).animate({ countNum: countTo }, {
-					duration: 1800,
-					easing: 'swing',
-					step: function() {
-						$this.text(Math.floor(this.countNum));
-					},
-					complete: function() {
-						$this.text(countTo);
-					}
-				});
-			});
-			counted = true;
-		}
-	});
-});
 /* ====================== */
 /* Step 01 - Render Logic */
 /* ====================== */
@@ -49,7 +12,7 @@ function initTimeline() {
 			height: auto !important;
 			display: flex;
 			flex-direction: column;
-			gap: 5rem;
+			gap: 3rem;
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -527,8 +490,8 @@ function initTimeline() {
 					src: "assets/1996.png",
 					poster:
 						"assets/1996.png",
-					alt: "Pennoni International, Inc. logo",
-					title: "Pennoni International, Inc. logo",
+					alt: "Pennoni Associates, Inc. logo",
+					title: "Pennoni Associates, Inc. logo",
 					depth: 10,
 					z: 2
 				},
@@ -1007,6 +970,8 @@ function initTimeline() {
 						"<ul style='list-style-type: disc !important; margin-left: -1.5rem;'><li>Expanded to The District of Columbia, expanding the ability to better service new and existing clients in the National Capital Region</li>"+
 						"<li>Acquired the assets of <b>Kempton Rinard</b>, a landscape architectural and civil engineering company from Tampla, FL</li>"+
 						"<li>Acquired the assets of <b>Hygenix, Inc.</b>, an environmental consulting, testing and laboratory services company from Stamford, CT</li>"+
+						"<li>Acquired the assets of <b>CH Engineering</b>, an engineering and land surveying company from Raleigh, NC</li>"+
+						"<li>Acquired the assets of <b>SMITH Engineering</b>, a land development and civil engineering company from Chantilly, VA</li>"+
 						"<li>In response to Hurricane Ian, Pennoni staff mobilized in Florida to support structural assessments, environmental surveys, forensic engineering, and recovery assistance in heavily impacted areas</li></ul>",
 					depth: 5,
 					z: 2
@@ -1076,7 +1041,7 @@ function initTimeline() {
 				},
 				{
 					type: "image",
-					pos: "pos-bottom-right-alt",
+					pos: "pos-bottom-right-alt2",
 					w: "20vw",
 					ratio: "16 / 7.2",
 					src: "assets/Pennoni-Logo.png",
@@ -1271,13 +1236,6 @@ function initTimeline() {
 			boxEl.appendChild(video);
 		}
 
-		// Caption bubble (visible on mobile only via CSS)
-		if (tileData.title) {
-			const caption = el("span", "tile-caption");
-			caption.textContent = tileData.title;
-			boxEl.appendChild(caption);
-		}
-
 		tileEl.appendChild(boxEl);
 		return tileEl;
 	};
@@ -1286,21 +1244,18 @@ function initTimeline() {
 	// >1450px → 40vw, 1000–1450px → 45vw, <1000px → 90vw
 	const adjustTileWidths = () => {
 		const w = window.innerWidth;
-		const isMobile = w <= 1000;
-		const textW = w > 1550 ? "40vw" : w > 1000 ? "45vw" : "95vw";
+		const textW = w > 1550 ? "40vw" : w > 1000 ? "45vw" : "90vw";
 
 		document.querySelectorAll('.text-column').forEach((col) => {
 			col.style.setProperty("--text-col-w", textW);
 		});
 
-		// On mobile CSS handles tile widths; only restore on desktop
-		if (!isMobile) {
-			document.querySelectorAll('.tile:not(.text-column)').forEach((t) => {
-				const orig = t.dataset.origW || '';
-				if (!orig) return;
-				t.style.setProperty('--w', orig);
-			});
-		}
+		// Also adjust any standalone media tiles that use vw-based widths
+		document.querySelectorAll('.tile').forEach((t) => {
+			const orig = t.dataset.origW || '';
+			if (!orig) return;
+			t.style.setProperty('--w', orig);
+		});
 	};
 
 	// simple debounce for resize
@@ -1347,6 +1302,7 @@ function initTimeline() {
 					colEl.dataset.t = String(textTiles[0].t);
 					colEl.style.setProperty("--custom-top", `${textTiles[0].t}%`);
 				}
+
 				for (const tileData of textTiles) {
 					const card = buildTextCard(tileData);
 					colEl.appendChild(card);
