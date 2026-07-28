@@ -1,3 +1,6 @@
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+from credentials import CRED
 def app():
     import pandas as pd
     from operator import itemgetter
@@ -6,8 +9,8 @@ def app():
     from playoffNum import playoff_num
 
     league_id = 1924463077
-    espn_s2 = "AEATfV13bzJs4HpWGw5IMP0Hoh9yD7FJ%2FWPkdfAC8pOMFdD9RT8wgdt%2BoACXFYuTYIBcpKSl1vPlVip8kDK8mqBlSh2ulGveo35%2BZMYhANuNP%2FfZCdttmqnrzzYjA7UedbVQfVpUcNgwrTD6Xn0dkyHQyDoOqrJbGGFbDkz%2F%2B8Tlas275RhFZ4jXhdZNgddmK0qiYgZABl13Ou8Gv2zzhgk77Pbf%2FhKvWxcN20pZHpN58x%2FwUAajmiZgEl2Nt4gbojRhLGTRqGBqYQ7C%2BqCpBw5KImrN72sLGJuqi5%2BgJHgaIw%3D%3D"
-    swid='{AAD245A4-298A-4362-A70B-5F838E0D6F64}'
+    espn_s2 = CRED["dave_s2"]
+    swid=CRED["dave_swid"]
 
     # Initialize the dropdown for year selection
     year_options = ['2022', '2023', '2024', '2025']

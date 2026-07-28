@@ -16,12 +16,13 @@ This document covers: (1) current state, (2) repo organization plan, (3) a revie
 
 ### 🔴 Security issue — fix first
 
-ESPN `espn_s2` cookies and `SWID`s (yours and several friends') are **hardcoded in committed source** — `draft_data.py`, every league page in `pages/`, `ESPNWeeklyUpdate*.py`, and others — and the repo is publicly linked from the live app. These cookies grant login-level read access to the private leagues.
+ESPN `espn_s2` cookies and `SWID`s (yours and several friends') were **hardcoded in committed source** across 54 files — and the repo is publicly linked from the live app. These cookies grant login-level read access to the private leagues.
 
-1. Move all credentials to `.streamlit/secrets.toml` (read via `st.secrets`) locally and in Streamlit Cloud's secrets manager; use environment variables for the pipeline scripts.
-2. Add `.streamlit/secrets.toml` to `.gitignore`.
-3. Rotate the cookies afterward (log out/in on ESPN regenerates them) — removing them from the tip of the branch does not remove them from git history.
-4. Longer term: a single `leagues.yaml`/config module holding league IDs + credential references, so pages and pipeline scripts stop duplicating them.
+1. ✅ **Done (2026-07-28):** all credentials moved to `.streamlit/secrets.toml` (gitignored); every file now reads them through `credentials.py` (`CRED["..."]`), which falls back to Streamlit Cloud secrets and `ESPN_*` env vars.
+2. ✅ **Done:** `.streamlit/secrets.toml` added to `.gitignore`; `.streamlit/secrets.toml.example` committed as a template.
+3. ⬜ **You must do:** paste the `[espn]` block from `.streamlit/secrets.toml` into the Streamlit Cloud app's Secrets settings **before pushing**, or the deployed app will fail on the next deploy.
+4. ⬜ **You must do:** rotate the cookies (log out/in on ESPN regenerates them) — removing them from the tip of the branch does not remove them from git history.
+5. Longer term: a single league-registry config module holding league IDs + credential references, so pages and pipeline scripts stop duplicating them.
 
 ### Repo hygiene (quick wins)
 

@@ -1,3 +1,4 @@
+from credentials import CRED
 import pandas as pd
 import numpy as np
 from espn_api.football import League
@@ -73,13 +74,13 @@ def monte_carlo_simulation(league_id, year, espn_s2, swid, num_simulations=1000)
 # Example usage
 league_id = 310334683
 year = 2024
-swid = '{4656A2AD-A939-460B-96A2-ADA939760B8B}'
+swid = CRED["louie_swid"]
 
 # ESPN API setup (using your provided data structure)
-espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
+espn_s2 = CRED["louie_s2"]
 year = 2024
 # Pennoni Younglings
-league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 
 standings_df, expected_records_df = monte_carlo_simulation(league_id, year, espn_s2, swid)
 

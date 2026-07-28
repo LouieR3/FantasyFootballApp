@@ -1,3 +1,4 @@
+from credentials import CRED
 import pandas as pd
 from espn_api.football import League
 import time
@@ -7,16 +8,16 @@ head_to_head_records_by_year = {}
 
 # Define the league information for each year
 league_info = [
-    {'year': 2021, 'espn_s2': 'AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', 'league_id': '1118513122'},
-    {'year': 2022, 'espn_s2': 'AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', 'league_id': '1118513122'},
-    {'year': 2023, 'espn_s2': 'AEBxvJwo9gYK1pk%2B3S36%2FFZS5WVqYHsY3l6QKMwy538U7Q%2BbCKt237iKEykfAurrxK0T%2B4M%2FhsXk6t2oLyY%2Fle6b5DUKWvsi1ZXzyMRzW7mBevrrtS1Uhyr7KNCPzM0ccOB1Daw4Xv%2FnY9b9KiMxPCRNcosaDEkZfjR%2ByCcF2KtYqhZ90gEfrdWGG4GlVjpMw7Ve4fL7V0mHDp3NgozRqkB7cZH2dZ0fOjF%2BPMwo9hQZ3V3R9jQdvAp2f3Dx2nbDiG%2Fi9oqM9cN1U87DEjHRu7CI', 'league_id': '1118513122'}
+    {'year': 2021, 'espn_s2': CRED["legacy_s2_b"], 'league_id': '1118513122'},
+    {'year': 2022, 'espn_s2': CRED["legacy_s2_b"], 'league_id': '1118513122'},
+    {'year': 2023, 'espn_s2': CRED["legacy_s2_b"], 'league_id': '1118513122'}
 ]
 
 for league_data in league_info:
     year = league_data['year']
     espn_s2 = league_data['espn_s2']
     league_id = league_data['league_id']
-    swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}'
+    swid=CRED["louie_swid"]
 
     # Create the league instance for the specific year
     league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)

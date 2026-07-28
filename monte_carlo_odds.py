@@ -1,3 +1,4 @@
+from credentials import CRED
 import pandas as pd
 import numpy as np
 from espn_api.football import League
@@ -1177,39 +1178,39 @@ def analyze_playoffs(teams, team_stats, current_week, reg_season_count, num_play
 
 def main():
     # ESPN API setup (using your provided data structure)
-    espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
+    espn_s2 = CRED["louie_s2"]
     year = 2025
     # Pennoni Younglings
-    # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
-    league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+    # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+    league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
     # Family League
-    # league = League(league_id=996930954, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+    # league = League(league_id=996930954, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
     
-    ava_s2 = "AEBL5xTPsfrhYhP04Dc%2FHGojCvZAK7pmvEtoKwm%2FDUFjM86FeGyFUfomgi6VkRTlpDC0bXAOQyOy9UfdWQm%2FAbZUPauwvbn%2Bfn9pkW4BTpHapwqDSJyXSMWoH7GJyQjI8Oq7AF4bkD8A5Vm31unAN0dn6ar5h2YdSy7USKAbm8vH%2BVmQ3yAoT8QQ23V4mCQM7ztjkA3hkEYf%2BFfyB1ASlVb%2B0286sPBoPaaESQv45qLuCUG6883kq4SXq7PUACFpAUICO7ahS%2F06pr1Gg%2BzhO79cea6jXKNJsgRYQLQmHea7Yw%3D%3D"
-    matt_s2 = "AEApTMk4bKXLS%2ByFC85I7AlYVnFOTx28Qn8C5ElSPEEY3%2BV6Jn0RzRDIb1H39fmRU9ABSWxJBwDaxottGDrfteMllIgOnF6QDw%2Bv2v6ox%2FDJGV4DJav5ntyQn3oihvOstkQsXIvSGD5jFAQFTJcb6GOCe9jG0WuATob3%2BU5fi2fZdZJ%2Blpx65ty5SNBe8znFW3T52EfNFbEOrCFW13IHqmEUiO9%2BooinLTMwIhsD2Txzg7peD6bKhs%2BOQL7pqc2xE1x084MSLRZ33UZioi8aNJdJx%2FBO8BUaBy%2FB3VFUkB2S1CFUUnlY5S96e98QD9vgmLY%3D"
+    ava_s2 = CRED["ava_s2"]
+    matt_s2 = CRED["matt_s2"]
 
     # Avas League
-    # league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid='{9B611343-247D-458B-88C3-50BB33789365}')
+    # league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
 
     # Matts League
-    # league = League(league_id=261375772, year=year, espn_s2=matt_s2, swid='{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64}')
+    # league = League(league_id=261375772, year=year, espn_s2=matt_s2, swid=CRED["matt_swid"])
 
     # Hannahs League
-    # hannah_s2 = "AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D"
-    # league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
+    # hannah_s2 = CRED["hannah_s2"]
+    # league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
 
     # # EBC League
     # league = League(
     #     league_id=1118513122,
     #     year=year,
     #     espn_s2=espn_s2,
-    #     swid="{4656A2AD-A939-460B-96A2-ADA939760B8B}",
+    #     swid=CRED["louie_swid"],
     # )
-    # hannah_s2 = "AEBy%2FXPWgz4DEVTKf5Z1y9k7Lco6fLP6tO80b1nl5a1p9CBOLF0Z0AlBcStZsywrAAdgHUABmm7G9Cy8l2IJCjgEAm%2BT5NHVNFPgtfDPjT0ei81RfEzwugF1UTbYc%2FlFrpWqK9xL%2FQvSoCW5TV9H4su6ILsqHLnI4b0xzH24CIDIGKInjez5Ivt8r1wlufknwMWo%2FQ2QaJfm6VPlcma3GJ0As048W4ujzwi68E9CWOtPT%2FwEQpfqN3g8WkKdWYCES0VdWmQvSeHnphAk8vlieiBTsh3BBegGULXInpew87nuqA%3D%3D"
-    # league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid='{46993514-CB12-4CFA-9935-14CB122CFA5F}')
+    # hannah_s2 = CRED["hannah_s2"]
+    # league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
 
     # Las League
-    league = League(league_id=1049459, year=year, espn_s2='AEC6x9TPufDhJAV682o%2BK6c8XdanPIkD8i3F4MF%2Fgtb1A4FD9SJMNrFoDt2sVHcppQpcYUIDF7kRotFrq8u%2Bkd4W94iy%2B952I9AG4ykEF3y2YRBvm75VMpecOvj7tZiv7iZ8R2K2SEqMExArEwMg3Bnbj161G3gMS6I%2F7YOKKMPTnC1VSTWuF5JlljFfFZz5hswmCr6IMZnZCzFmy%2FnPdwymI1NZ9IOAwJVn9pnBi9FpvyzcdcyYG2NOaarBmTLqyAd3%2BEdrDEpre%2F6Cfz6c3KcwO%2FFjPBkIFDxC1szNelynxfJZCupLm%2FEFFhXdbKnBeesbbOXJg%2BDLqZU1KGdCTU0FyEKr%2BcouwUy%2BnyDCuMYUog%3D%3D', swid='{ACCE4918-2F2A-4714-B49E-576D9C1F4FBB}')
+    league = League(league_id=1049459, year=year, espn_s2=CRED["la_s2"], swid=CRED["la_swid"])
 
     # League settings
     settings = league.settings

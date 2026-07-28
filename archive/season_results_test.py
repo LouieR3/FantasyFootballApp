@@ -1,3 +1,4 @@
+from credentials import CRED
 import pandas as pd
 from espn_api.football import League
 import pandas as pd
@@ -12,13 +13,13 @@ import numpy as np
 import openpyxl
 
 start_time = time.time()
-espn_s2 = "AECL47AORj8oAbgOmiQidZQsoAJ6I8ziOrC8Jw0W2M0QwSjYsyUkzobZA0CZfGBYrKf0a%2B%2B3%2Fflv6rFCZvb3%2FWo%2FfKVU4JXm9UyLsY9uIRAF4o9TuISaQjoc13SbsqMiLyaf5kR4ZwDcNr8uUxDwamEyuec5yqs07zsvy0VrOQo6NTxylWXkwABFfNVAdyqDI%2BQoQtoetdSah0eYfMdmSIBkGnxN0R0z5080zBAuY9yCm%2Fav49lUfGA7cqGyWoIky8pE3vB%2Fng%2F49JvTerFjJfzC"
-prahlad_espn_s2 = "AEBezn%2BxS%2FYzfjDpGuZFs8LIvQEEkQ7oJZq2SXNw7DKPOeEwK8M%2FEI%2FxFTzG9i0x2PPra1W68s5V7GlzSBDGOlSLbCheVUXE43tCsUVzBG2XhMpFfbB0teCm9PVCBccCyIGZTZiFdQ4HtHqYWhGT%2BesSi7sF7iUaiOsWswptqdbqRYtE8%2FbKzEyD8w%2BT0o9YNEHI%2Fr0NyqDpuQthgYUIdosUif0InIWpTjvZqLfOmluUi9kzQe6NI1d%2B%2BPRevCwev82kulAGetgkKRVQCKqFSYs4"
+espn_s2 = CRED["louie_s2"]
+prahlad_espn_s2 = CRED["prahlad_s2"]
 
 year = 2024
 # FileName for the Excel file and sheet
-league = League(league_id=1781851, year=year, espn_s2=prahlad_espn_s2, swid='{4C1C5213-4BB5-4243-87AC-0BCB2D637264}')
-# league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid='{4656A2AD-A939-460B-96A2-ADA939760B8B}')
+league = League(league_id=1781851, year=year, espn_s2=prahlad_espn_s2, swid=CRED["prahlad_swid"])
+# league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")

@@ -66,7 +66,7 @@ The app reads from the committed files in `leagues/`, `drafts/`, and `odds/`, so
 3. After drafts (or to refresh grades): run `draft_data.py` → `drafts/`.
 4. Commit and push — Streamlit Cloud redeploys from the repo.
 
-ESPN private-league access requires `espn_s2` and `SWID` cookies. These should live in `.streamlit/secrets.toml` / environment variables — **not in source** (see [SCOPE.md](SCOPE.md) → Security).
+ESPN private-league access requires `espn_s2` and `SWID` cookies. All code reads them via `credentials.py` (`CRED["louie_s2"]`, etc.), which loads from `.streamlit/secrets.toml` (gitignored — copy `.streamlit/secrets.toml.example` and fill it in), from Streamlit Cloud's secrets settings, or from `ESPN_*` environment variables. Never put cookie values in source.
 
 ## Roadmap
 
