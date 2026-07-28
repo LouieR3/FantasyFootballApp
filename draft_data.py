@@ -131,118 +131,11 @@ def pull_draft_data(league, year):
                 column = 'Total Pick',
                 value = draft_df.index + 1)
         
-        # Extract the round from the 'Pick' column
-        draft_df['Round'] = draft_df['Pick'].str.split(' - ').str[0].astype(int)
-
-        # Compute average `Avg Points` by draft round
-        average_points_by_round = draft_df.groupby('Round')['Avg Points'].mean().to_dict()
-
-        # Add Round Value column to the DataFrame
-        draft_df['Round Value'] = draft_df.apply(
-            lambda row: row['Avg Points'] / average_points_by_round[row['Round']], axis=1
-        )
-
-        # Constants to weigh the different factors
-        W1 = 0.4  # Weight for points vs. projected points
-        W2 = 0.3  # Weight for avg points vs. projected avg points
-        W3 = 0.2  # Weight for games played
-        W4 = 0.4  # Weight for draft position (steals)
-        W5 = 0.5  # Weight for position value (new metric)
-        W6 = 0.7  # Weight for total points
-        W8 = 0.5  # Weight for avg points
-        W7 = 0.5  # Weight for round value (new metric)
-
-        # Get the maximum points scored by any player
-        max_points = draft_df['Points'].max()
-        max_avg_points = draft_df['Avg Points'].max()
-
-        # Add a column for Draft Grade
-        max_games = 14  # Maximum possible games (e.g., full NFL season)
-
-        # Get the maximum pick number
-        max_pick = draft_df['Total Pick'].max()
-
-        # Compute average points by position
-        average_points_by_position = draft_df.groupby('Position')['Points'].mean().to_dict()
-
-        # Add Position Value column to the DataFrame
-        draft_df['Position Value'] = draft_df.apply(
-            lambda row: row['Points'] / average_points_by_position[row['Position']], axis=1
-        )
-
-        # Recalculate Draft Grade
-        if year == 2024:
-            draft_df['Draft Grade'] = (
-                (draft_df['Points'] / draft_df['Projected Points']) * W1 +
-                (draft_df['Avg Points'] / draft_df['Projected Avg Points']) * W2 +
-                (draft_df['Games Played'] / max_games) * W3 +
-                (draft_df['Total Pick'] - 1) / (max_pick - 1) * W4 + 
-                (draft_df['Position Value']) * W5 +
-                (draft_df['Points'] / max_points) * W6  +
-                (draft_df['Avg Points'] / max_avg_points) * W8
-                # + (draft_df['Round Value']) * W7
-            )
-            # draft_df['Points Grade'] = (draft_df['Points'] / draft_df['Projected Points']) * W1
-            # draft_df['Avg Grade'] = (draft_df['Avg Points'] / draft_df['Projected Avg Points']) * W2
-            # draft_df['GamesPlay Grade'] = (draft_df['Games Played'] / max_games) * W3
-            # draft_df['Pick Grade'] = (draft_df['Total Pick'] - 1) / (max_pick - 1) * W4
-            # draft_df['Position Grade'] = (draft_df['Position Value']) * W5
-            # draft_df['Points MAX Grade'] = (draft_df['Points'] / max_points) * W6
-            # draft_df['Avg MAX Grade'] = (draft_df['Avg Points'] / max_avg_points) * W8
-        else:
-            W1 = 0.7  # Weight for points
-            W2 = 0.5  # Weight for avg points
-            W3 = 0.2  # Weight for games played
-            W4 = 0.4  # Weight for draft position (steals)
-            W5 = 0.5  # Weight for position value (new metric)
-            W7 = 0.5  # Weight for round value (new metric)
-            max_avg_points = draft_df['Avg Points'].max()
-            draft_df['Draft Grade'] = (
-                (draft_df['Points'] / max_points) * W1 +
-                (draft_df['Avg Points'] / max_avg_points) * W2 +
-                (draft_df['Games Played'] / max_games) * W3 +
-                ((max_pick - draft_df['Total Pick']) / max_pick) * W4 + 
-                (draft_df['Position Value']) * W5  +
-                (draft_df['Round Value']) * W7
-            )
-
-        # Sort by Draft Grade to see best values
-        draft_df = draft_df.sort_values(by='Draft Grade', ascending=False)
-        # print(draft_df.head(20))
-
-        # Get the min and max of the Draft Grade column
-        min_grade = draft_df['Draft Grade'].min()
-        max_grade = draft_df['Draft Grade'].max()
-
-        # Apply min-max scaling to convert to a 1-100 scale
-        draft_df['Draft Grade'] = 1 + ((draft_df['Draft Grade'] - min_grade) / (max_grade - min_grade)) * 99
-
-        # Apply square root transformation to Draft Grade (normalize to 1-100 first)
-        draft_df['Draft Grade'] = 10 * (draft_df['Draft Grade'] ** 0.51)
-        # Cap Draft Grade at 100 if it exceeds the maximum
-        draft_df['Draft Grade'] = draft_df['Draft Grade'].clip(upper=100)
-
-        # Define a function to map numeric grades to letter grades
-        def grade_to_letter(grade):
-            if grade >= 97: return "A+"
-            elif grade >= 93: return "A"
-            elif grade >= 90: return "A-"
-            elif grade >= 87: return "B+"
-            elif grade >= 83: return "B"
-            elif grade >= 80: return "B-"
-            elif grade >= 77: return "C+"
-            elif grade >= 73: return "C"
-            elif grade >= 70: return "C-"
-            elif grade >= 67: return "D+"
-            elif grade >= 63: return "D"
-            elif grade >= 60: return "D-"
-            else: return "F-"
-
-        # Apply the function to create a new column for letter grades
-        draft_df['Letter Grade'] = draft_df['Draft Grade'].apply(grade_to_letter)
-        draft_df = draft_df.drop(['Position Value', 'Round', 'Round Value'], axis=1)
-        # Display the DataFrame
-        draft_df['Draft Grade'] = draft_df['Draft Grade'].round(2)
+        # Grades are computed by draft_grading.regrade_all() after all pulls,
+        # pooled across every league-year so they are comparable. Placeholders here.
+        import numpy as np
+        draft_df['Draft Grade'] = np.nan
+        draft_df['Letter Grade'] = ""
 
         print(draft_df[["Total Pick", "Player", "Projected Points", "Points", "Avg Points", "Games Played", "Draft Grade", "Letter Grade"]].head(20))
         # print(draft_df[["Player", "Position", "Projected Points", "Points", "Avg Points", "Draft Grade", "Points Grade", "Avg Grade", "GamesPlay Grade", "Pick Grade", "Position Grade", "Points MAX Grade", "Avg MAX Grade", "Letter Grade"]])
@@ -321,67 +214,10 @@ def pull_draft_data(league, year):
             # Create the additions_df DataFrame
             additions_df = pd.DataFrame(additions_data)
 
-            # Add Position Value column to the DataFrame
-            additions_df['Position Value'] = additions_df.apply(
-                lambda row: row['Points'] / average_points_by_position[row['Position']], axis=1
-            )
+            # Graded by draft_grading.regrade_all() after all pulls (placeholders).
+            additions_df['Performance Grade'] = np.nan
+            additions_df['Letter Grade'] = ""
 
-            # Recalculate Draft Grade
-            if year == 2024:
-                additions_df['Performance Grade'] = (
-                    (additions_df['Points'] / draft_df['Projected Points']) * W1 +
-                    (additions_df['Avg Points'] / draft_df['Projected Avg Points']) * W2 +
-                    (additions_df['Games Played'] / max_games) * W3 +
-                    (additions_df['Position Value']) * W5+
-                    (additions_df['Points'] / max_points) * W6 
-                )
-            else:
-                W1 = 0.6  # Weight for points
-                W2 = 0.3  # Weight for avg points
-                W3 = 0.2  # Weight for games played
-                W4 = 0.2  # Weight for draft position (steals)
-                W5 = 0.5  # Weight for position value (new metric)
-                W7 = 0.5  # Weight for round value (new metric)
-                max_avg_points = draft_df['Avg Points'].max()
-                additions_df['Performance Grade'] = (
-                    (draft_df['Points'] / max_points) * W1 +
-                    (draft_df['Avg Points'] / max_avg_points) * W2 +
-                    (additions_df['Games Played'] / max_games) * W3 +
-                    (additions_df['Position Value']) * W5
-                )
-
-            # Get the min and max of the Draft Grade column
-            min_grade = additions_df['Performance Grade'].min()
-            max_grade = additions_df['Performance Grade'].max()
-
-            # Apply min-max scaling to convert to a 1-100 scale
-            additions_df['Performance Grade'] = 1 + ((additions_df['Performance Grade'] - min_grade) / (max_grade - min_grade)) * 99
-            # Apply square root transformation to Draft Grade (normalize to 1-100 first)
-            additions_df['Performance Grade'] = 10 * (additions_df['Performance Grade'] ** 0.5)
-            # Sort by Draft Grade to see best values
-            additions_df = additions_df.sort_values(by='Performance Grade', ascending=False)
-
-            # Define a function to map numeric grades to letter grades
-            def grade_to_letter(grade):
-                if grade >= 97: return "A+"
-                elif grade >= 93: return "A"
-                elif grade >= 90: return "A-"
-                elif grade >= 87: return "B+"
-                elif grade >= 83: return "B"
-                elif grade >= 80: return "B-"
-                elif grade >= 77: return "C+"
-                elif grade >= 73: return "C"
-                elif grade >= 70: return "C-"
-                elif grade >= 67: return "D+"
-                elif grade >= 63: return "D"
-                elif grade >= 60: return "D-"
-                else: return "F-"
-
-            # Apply the function to create a new column for letter grades
-            additions_df['Letter Grade'] = additions_df['Performance Grade'].apply(grade_to_letter)
-            additions_df['Performance Grade'] = additions_df['Performance Grade'].round(2)
-
-            additions_df = additions_df.drop(['Position Value'], axis=1)
             # Display the DataFrame
             print(additions_df)
             fileFreeAgent = "drafts/" +leagueName + " FreeAgent Results" + " " + str(year) + ".csv"
@@ -448,19 +284,24 @@ leagues = [
     {"league_id": 558148583, "year": year, "espn_s2": ayush_s2, "swid": CRED["ayush_swid"], "name": "Ross' Fantasy League"},
 ]
 
-# Loop through each league configuration
-for league_config in leagues:
-    try:
-        league = League(
-            league_id=league_config["league_id"],
-            year=league_config["year"],
-            espn_s2=league_config["espn_s2"],
-            swid=league_config["swid"],
-        )
-        pull_draft_data(league, year)
-    except Exception as e:
-        print(f"Failed to process league: {league_config['name']}. Error: {str(e)}")
-        continue
+if __name__ == "__main__":
+    # Pull raw draft + free agent data for every league, then regrade all
+    # seasons together so grades stay comparable across leagues and years.
+    for league_config in leagues:
+        try:
+            league = League(
+                league_id=league_config["league_id"],
+                year=league_config["year"],
+                espn_s2=league_config["espn_s2"],
+                swid=league_config["swid"],
+            )
+            pull_draft_data(league, year)
+        except Exception as e:
+            print(f"Failed to process league: {league_config['name']}. Error: {str(e)}")
+            continue
+
+    from draft_grading import regrade_all
+    regrade_all()
 
 # team = league.teams[2]
 # print(team.roster[0])

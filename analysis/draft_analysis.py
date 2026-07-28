@@ -10,62 +10,11 @@ from espn_api.football import League
 drafts_folder = "drafts"
 leagues_folder = "leagues"
 
-# Initialize an empty list to store dataframes
-dataframes = []
-
-# Function to calculate letter grade based on average draft grade
-def calculate_letter_grade(grade):
-    if grade >= 97: return "A+"
-    elif grade >= 93: return "A"
-    elif grade >= 90: return "A-"
-    elif grade >= 87: return "B+"
-    elif grade >= 83: return "B"
-    elif grade >= 80: return "B-"
-    elif grade >= 77: return "C+"
-    elif grade >= 73: return "C"
-    elif grade >= 70: return "C-"
-    elif grade >= 67: return "D+"
-    elif grade >= 63: return "D"
-    elif grade >= 60: return "D-"
-    else: return "F-"
-
-
-drafts_folder = "drafts"
-print(os.listdir(drafts_folder))
-# Iterate through all files in the drafts folder
-for file in os.listdir(drafts_folder):
-    print(file)
-    if "Draft Results" in file and file.endswith(".csv"):
-        # Read the file
-        file_path = os.path.join(drafts_folder, file)
-        df = pd.read_csv(file_path)
-
-        # Extract league name from the file name
-        league_name = file.replace(" Draft Results", "").replace(".csv", "")
-
-        # Group by Team and calculate the average Draft Grade
-        team_grades = df.groupby("Team")["Draft Grade"].mean().reset_index()
-
-        # Calculate the letter grade for each team
-        team_grades["Letter Grade"] = team_grades["Draft Grade"].apply(calculate_letter_grade)
-        
-        # Add the League Name column
-        team_grades["League Name"] = league_name
-
-        # Append the dataframe to the list
-        dataframes.append(team_grades)
-
-# Combine all dataframes into a single dataframe
-final_df = pd.concat(dataframes, ignore_index=True)
-# Sort the final dataframe by Draft Grade in descending order
-final_df = final_df.sort_values(by="Draft Grade", ascending=False)
-
-# Display the aggregated dataframe
+# Team-level grades are produced by draft_grading.regrade_all() (a capital-
+# weighted mean of the new per-pick grades). Read them instead of recomputing,
+# so this script only handles the standings/LPI merge below.
+final_df = pd.read_csv(os.path.join(drafts_folder, "Aggregated_Draft_Grades.csv"))
 print(final_df)
-
-# Optionally, save the final dataframe to a new Excel file
-output_path = os.path.join(drafts_folder, "Aggregated_Draft_Grades.csv")
-final_df.to_csv(output_path, index=False)
 
 # Path to the drafts folder
 drafts_folder = "drafts"

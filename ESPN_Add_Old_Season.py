@@ -375,8 +375,10 @@ def pull_league_data(league):
 # # Second: go back in and add playoff results
 # add_playoff_results(league, year)
 
-# # Third: create the draft results and free agent results csvs
+# # Third: create the draft results and free agent results csvs, then regrade
+# # every season together so grades stay comparable:
 # pull_draft_data(league, year)
+# from draft_grading import regrade_all; regrade_all()
 
 # # Fourth: add all matchups to csv
 # all_matchups_df = get_years_matchups(league, year)

@@ -20,8 +20,8 @@ ESPN `espn_s2` cookies and `SWID`s (yours and several friends') were **hardcoded
 
 1. ✅ **Done (2026-07-28):** all credentials moved to `.streamlit/secrets.toml` (gitignored); every file now reads them through `credentials.py` (`CRED["..."]`), which falls back to Streamlit Cloud secrets and `ESPN_*` env vars.
 2. ✅ **Done:** `.streamlit/secrets.toml` added to `.gitignore`; `.streamlit/secrets.toml.example` committed as a template.
-3. ⬜ **You must do:** paste the `[espn]` block from `.streamlit/secrets.toml` into the Streamlit Cloud app's Secrets settings **before pushing**, or the deployed app will fail on the next deploy.
-4. ⬜ **You must do:** rotate the cookies (log out/in on ESPN regenerates them) — removing them from the tip of the branch does not remove them from git history.
+3. ✅ **Done:** paste the `[espn]` block from `.streamlit/secrets.toml` into the Streamlit Cloud app's Secrets settings **before pushing**, or the deployed app will fail on the next deploy.
+4. ✅ **Done:** rotate the cookies (log out/in on ESPN regenerates them) — removing them from the tip of the branch does not remove them from git history.
 5. Longer term: a single league-registry config module holding league IDs + credential references, so pages and pipeline scripts stop duplicating them.
 
 ### Repo hygiene (quick wins)
@@ -86,7 +86,9 @@ The grade is computed in `draft_data.py` (and mirrored in `analysis/draft_analys
 
 **P7 — Smaller issues.** `max_games = 14` is hardcoded while season points accrue over 17–18 weeks; the letter scale bottoms out at "F-" with no "F"; two divergent formulas (2024 vs. else) with different weight sets makes results era-dependent; weights W1–W8 are ad hoc with no validation against any ground truth.
 
-### Recommended redesign
+### Recommended redesign — ✅ implemented 2026-07-28
+
+The redesign below now lives in `draft_grading.py` (shared by `draft_data.py` and runnable standalone: `python draft_grading.py` regrades every `drafts/` CSV and rebuilds `Master_Draft_Data.csv`, `Aggregated_Draft_Grades.csv`, and the grade columns of `Draft_Grades_with_Standings.csv`). Grade = 0.6·z(value over slot) + 0.4·z(points above replacement), standardized within season across all leagues, mapped to 75 ± 10 per z (clip 30–100). The expectation curve is keyed on the Nth-player-taken-at-a-position, so it transfers across 8–16 team drafts. Validation: all 26 top-12-pick sub-100-point busts grade F; late steals (pick ≥ 100, > 250 pts) average 85; team draft grade correlates with final standing at −0.50. Known gap: 26 `RRR On Premise` rows in `Draft_Grades_with_Standings.csv` have no standings/year (pre-existing — that league was never in the standings script's league list) and keep stale grades.
 
 1. **Grade = value over slot expectation.** You already have the dataset for this: `Master_Draft_Data.csv` spans every league-year. Fit a curve of expected season points as a function of overall pick number (log/monotone spline, optionally per position). Then a pick's grade is `(actual points − expected points at that slot)`, standardized. This single term *is* the steal/bust measure — it replaces P2's additive position term, works identically for every year (kills the 2024 fork), and needs no projection data (fixes P4).
 2. **Use points above replacement for positional value.** Instead of points ÷ positional mean (unbounded, P3), compute points above the replacement-level player at that position (replacement = the (starters × teams)-th ranked player). This is bounded-ish, league-size aware, and correctly values scarce positions.

@@ -21,7 +21,7 @@ Each league page has a year selector and renders the following sections (data pe
 | **LPI Each Week** | LPI trend line week by week |
 | **Strength of Schedule** | Schedules ranked hardest to easiest by the average record all other teams would have against them |
 | **Expected Wins** | Wins each team would expect with an average schedule, and the difference vs. their actual record |
-| **Draft Results** | Every draft pick graded 1–100 with a letter grade, based on production vs. projection, draft slot, and positional value |
+| **Draft Results** | Every draft pick graded 30–100 with a letter grade: 60% value-over-slot (production vs. what that draft slot historically returns, fit from every league-year on file) + 40% points-above-replacement at the position. Grades are standardized within each season across all leagues, so they're comparable everywhere (see `draft_grading.py`) |
 | **Biggest LPI Upsets** | Wins by teams with a large LPI deficit vs. their opponent |
 | **Lifetime Record** | All-time results for the league across seasons |
 
