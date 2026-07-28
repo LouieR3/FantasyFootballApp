@@ -88,6 +88,10 @@ The grade is computed in `draft_data.py` (and mirrored in `analysis/draft_analys
 
 ### Recommended redesign — ✅ implemented 2026-07-28
 
+**Team-level grades are standardized separately** (added same day): a capital-weighted mean of ~16 pick grades has sd 10/√16 ≈ 2.5, which squeezed every team into C-/C/C+ regardless of how they drafted. Team scores are now z-scored again across teams within the season, giving team grades their own 75 ± 10 spread (sd 9.95, range 52–100, full A+→F). Ordering and the −0.50 standings correlation are unchanged. `lifetime_record.py` / `lifetime_record_owner.py` read this via `draft_grading.team_draft_grade()` instead of averaging pick grades themselves.
+
+⬜ **Open question — draft grade vs. end-of-season roster.** The draft grade intentionally measures *draft-day decisions only*: full-season points of the players you drafted, whether or not you kept them. It says nothing about in-season roster management (waiver hits, trades, drops). A separate **Roster Grade** blending draft grade with the free-agent `Performance Grade` (weighted by share of the team's actual scoring) would measure "how well did you build this roster all year" — see §4.2.
+
 The redesign below now lives in `draft_grading.py` (shared by `draft_data.py` and runnable standalone: `python draft_grading.py` regrades every `drafts/` CSV and rebuilds `Master_Draft_Data.csv`, `Aggregated_Draft_Grades.csv`, and the grade columns of `Draft_Grades_with_Standings.csv`). Grade = 0.6·z(value over slot) + 0.4·z(points above replacement), standardized within season across all leagues, mapped to 75 ± 10 per z (clip 30–100). The expectation curve is keyed on the Nth-player-taken-at-a-position, so it transfers across 8–16 team drafts. Validation: all 26 top-12-pick sub-100-point busts grade F; late steals (pick ≥ 100, > 250 pts) average 85; team draft grade correlates with final standing at −0.50. Known gap: 26 `RRR On Premise` rows in `Draft_Grades_with_Standings.csv` have no standings/year (pre-existing — that league was never in the standings script's league list) and keep stale grades.
 
 1. **Grade = value over slot expectation.** You already have the dataset for this: `Master_Draft_Data.csv` spans every league-year. Fit a curve of expected season points as a function of overall pick number (log/monotone spline, optionally per position). Then a pick's grade is `(actual points − expected points at that slot)`, standardized. This single term *is* the steal/bust measure — it replaces P2's additive position term, works identically for every year (kills the 2024 fork), and needs no projection data (fixes P4).
@@ -121,6 +125,7 @@ Items carried over from `todo.txt` are marked ⭐.
 - **Round-by-round hit rate:** share of picks per round that returned starter-level value, per owner and league.
 - **Draft grade vs. final standing scatter** across all league-years — does drafting well predict winning? (validates §3.5).
 - **Player-level views:** most-drafted players by owner across years ("player loyalty"), points by acquisition type (drafted vs. FA vs. trade), best FA pickup of the year.
+- **Roster Grade** (distinct from Draft Grade): blend the team's draft grade with its free-agent Performance Grades, weighted by each group's share of actual points scored, so the number reflects the roster the team *finished* with rather than draft day alone. Pairs naturally with a "draft grade vs. roster grade" delta column — big positive deltas identify the best in-season managers.
 - **Post-draft roster churn:** % of drafted roster still on the team at season end.
 
 ### 4.3 Season page upgrades

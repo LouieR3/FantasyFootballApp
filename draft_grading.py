@@ -27,9 +27,13 @@ Free agents
   season's free-agent pool, mapped with the same scale.
 
 Team draft grade (aggregates)
-  Weighted mean of pick grades, weighted by the expected points of each
-  pick's slot, so early-round hits/misses move the team grade more than
-  round-15 fliers.
+  Capital-weighted mean of pick scores (weighted by the expected points of
+  each pick's slot, so early-round hits/misses matter more), then
+  RE-STANDARDIZED across teams within the season. The second step is
+  essential: averaging ~16 picks whose grades have sd 10 yields a team mean
+  with sd 10/sqrt(16) = 2.5, which would squeeze every team into C-/C/C+.
+  Team grades get their own 75 +/- 10 distribution so an A team draft and an
+  F team draft are both reachable. Ordering is unchanged by this step.
 
 Run directly to regrade every file in drafts/ and rebuild the aggregate
 CSVs:  python draft_grading.py
@@ -209,7 +213,7 @@ def grade_all(draft_frames, fa_frames):
         original = draft_frames[(league, year)].copy()
         original = original.drop(columns=["Draft Grade", "Letter Grade"], errors="ignore")
         merged = original.merge(
-            gdf[["Total Pick", "Draft Grade", "Letter Grade", "Expected"]],
+            gdf[["Total Pick", "Draft Grade", "Letter Grade", "Expected", "z"]],
             on="Total Pick",
             how="left",
         )
@@ -251,21 +255,48 @@ def grade_all(draft_frames, fa_frames):
 
 
 def team_grades(graded_drafts):
-    """Team-level grades: pick grades weighted by the slot's expected points."""
+    """Team-level grades: capital-weighted pick scores, re-standardized.
+
+    Weighting is by the slot's expected points (early picks carry more).
+    The weighted mean of ~16 pick z-scores has sd ~0.25, so it is z-scored
+    again across teams within the season before mapping to the grade scale -
+    otherwise every team collapses onto C (see module docstring).
+    """
     rows = []
     for (league, year), df in graded_drafts.items():
         weights = df["Expected"].clip(lower=1.0)
         for team, tdf in df.groupby("Team"):
             w = weights.loc[tdf.index]
-            grade = float(np.average(tdf["Draft Grade"], weights=w))
             rows.append({
                 "Team": team,
-                "Draft Grade": round(grade, 2),
-                "Letter Grade": grade_to_letter(grade),
                 "League Name": f"{league} {year}",
+                "Year": year,
+                "raw": float(np.average(tdf["z"], weights=w)),
             })
-    out = pd.DataFrame(rows).sort_values("Draft Grade", ascending=False).reset_index(drop=True)
-    return out
+    out = pd.DataFrame(rows)
+    out["z"] = _grouped_z(out, "raw", ["Year"])
+    out["Draft Grade"] = (GRADE_CENTER + GRADE_PER_Z * out["z"]).clip(GRADE_MIN, GRADE_MAX).round(2)
+    out["Letter Grade"] = out["Draft Grade"].apply(grade_to_letter)
+    out = out[["Team", "Draft Grade", "Letter Grade", "League Name"]]
+    return out.sort_values("Draft Grade", ascending=False).reset_index(drop=True)
+
+
+def team_draft_grade(league_name, year, team_name):
+    """Look up a team's standardized draft grade for one league-year.
+
+    Use this instead of averaging a team's pick grades: a mean of ~16 pick
+    grades has sd ~2.5 and collapses onto C. Returns (grade, letter) or
+    (None, None) if that team-year has no draft on file.
+    """
+    if not os.path.exists(AGGREGATED_CSV):
+        return None, None
+    df = pd.read_csv(AGGREGATED_CSV)
+    key = f"{league_name} {year}"
+    hit = df[(df["League Name"] == key) & (df["Team"].str.strip() == str(team_name).strip())]
+    if hit.empty:
+        return None, None
+    row = hit.iloc[0]
+    return float(row["Draft Grade"]), row["Letter Grade"]
 
 
 def _load_frames():
@@ -294,14 +325,14 @@ def regrade_all(verbose=True):
     graded_drafts, graded_fas = grade_all(draft_frames, fa_frames)
 
     for key, df in graded_drafts.items():
-        df.drop(columns=["Expected"]).to_csv(paths[("draft",) + key], index=False)
+        df.drop(columns=["Expected", "z"]).to_csv(paths[("draft",) + key], index=False)
     for key, df in graded_fas.items():
         df.to_csv(paths[("fa",) + key], index=False)
 
     # Master_Draft_Data.csv = all draft picks with league/year columns
     master_parts = []
     for (league, year), df in graded_drafts.items():
-        d = df.drop(columns=["Expected", "Owner ID"], errors="ignore").copy()
+        d = df.drop(columns=["Expected", "z", "Owner ID"], errors="ignore").copy()
         d["League Name"], d["Year"] = league, year
         master_parts.append(d)
     master = pd.concat(master_parts, ignore_index=True)

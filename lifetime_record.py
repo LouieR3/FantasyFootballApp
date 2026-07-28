@@ -6,6 +6,8 @@ from operator import itemgetter
 import inflect
 import os
 
+from draft_grading import team_draft_grade
+
 start_time = time.time()
 
 # Pennoni Younglings
@@ -281,14 +283,9 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
                 grouped.at[index, "Final Place"] = final_place_ordinal
 
 
-                # Filter for the specific team
-                team_draft = draft_df[draft_df["Team"].str.strip() == team_name]
-                print(team_draft)
-
-                # Group by `Draft Grade` and count
-                avg_draft_grade = team_draft["Draft Grade"].mean().round(2)
-
-                print(avg_draft_grade)
+                # Standardized team draft grade (a mean of pick grades would
+                # collapse every team onto a C - see draft_grading.py).
+                avg_draft_grade, _ = team_draft_grade(leagueName, year, team_name)
 
                 # Store the Draft Grade Count as a string for clarity
                 grouped.at[index, "Draft Grade"] = avg_draft_grade

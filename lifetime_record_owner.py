@@ -6,6 +6,8 @@ from operator import itemgetter
 import inflect
 import os
 
+from draft_grading import team_draft_grade
+
 start_time = time.time()
 
 # Pennoni Younglings
@@ -156,16 +158,10 @@ def lifetime_record_owner(league_id, espn_s2, swid, years, owner_name_to_filter)
         points_scored = sum(float(matchup['Points Scored'].split('-')[0]) for matchup in year_matchups)
         points_against = sum(float(matchup['Points Scored'].split('-')[1]) for matchup in year_matchups)
 
-        # Process draft grade
+        # Process draft grade - use the standardized team grade rather than a
+        # mean of pick grades, which would collapse every team onto a C.
         league_name = league.settings.name.replace(" 22/23", "")
-        file_draft = f"drafts/{league_name} Draft Results {year}.csv"
-
-        if os.path.exists(file_draft):
-            draft_df = pd.read_csv(file_draft)
-            team_draft = draft_df[draft_df["Team"].str.strip() == team_name]
-            avg_draft_grade = team_draft["Draft Grade"].mean().round(2) if not team_draft.empty else None
-        else:
-            avg_draft_grade = None
+        avg_draft_grade, _ = team_draft_grade(league_name, year, team_name)
 
         # Get final and regular season standings
         standings = [team.team_name.strip() for team in league.standings()]
