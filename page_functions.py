@@ -90,7 +90,7 @@ def display_playoff_results(file):
         print("No Playoffs Yet")
 
 def display_schedule_comparison(file):
-    st.header('Schedule Comparisson')
+    st.header('Schedule Comparison')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
 
     df = pd.read_excel(file, sheet_name="Schedule Grid")
@@ -281,7 +281,7 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
         df = df.drop(columns=columns_to_drop)
         df.columns = [col.replace('_', ' ') for col in df.columns]
         df = df.set_index("Team")
-        st.header('Record Predictons')
+        st.header('Record Predictions')
         st.write("This table shows what each team's predicted final record is based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
         
         st.dataframe(df, height=height, width=700)
