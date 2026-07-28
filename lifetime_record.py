@@ -7,6 +7,7 @@ import inflect
 import os
 
 from draft_grading import team_draft_grade
+from owner_overrides import resolve_owner, owner_id_for
 
 start_time = time.time()
 
@@ -74,22 +75,15 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
             return None
 
     def owner_df_creation(league):
-        team_owners = [team.owners for team in league.teams]
-        team_names  = [team.team_name for team in league.teams]
-        # print(team_names)
-
-        # Create a list of dictionaries for the DataFrame
+        # Co-owned teams resolve to their canonical owner (owner_overrides.py)
         data = []
-        count = 0
-        for team in team_owners:
-            team = team[0]
-            team_name = team_names[count].strip()
+        for team in league.teams:
+            owner = resolve_owner(league, team)
             data.append({
-                "Display Name": team['firstName'] + " " + team['lastName'],
-                "ID": team['id'],
-                "Team Name": team_name
+                "Display Name": f"{owner.get('firstName', '')} {owner.get('lastName', '')}".strip(),
+                "ID": owner.get('id'),
+                "Team Name": team.team_name.strip()
             })
-            count += 1
 
         # Create the DataFrame
         df = pd.DataFrame(data)
@@ -124,10 +118,10 @@ def lifetime_record(league_id, espn_s2, swid, years, team_name_to_filter):
         # Get teams' data
         teams = league.teams
         team_names = [team.team_name for team in teams]
-        team_owners = [team.owners[0]['id'] for team in league.teams]
+        team_owners = [owner_id_for(league, team) for team in league.teams]
 
         team_scores = [team.scores for team in teams]  # Each team's weekly scores
-        schedules = [[opponent.owners[0]['id'] for opponent in team.schedule] for team in teams]  # Use opponent owner ID
+        schedules = [[owner_id_for(league, opponent) for opponent in team.schedule] for team in teams]  # Use opponent owner ID
 
         # Track the most recent team name for each owner
         for owner, name in zip(team_owners, team_names):

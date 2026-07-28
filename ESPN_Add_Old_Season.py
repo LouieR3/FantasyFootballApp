@@ -22,6 +22,7 @@ from season_results import add_playoff_results
 from draft_data import pull_draft_data
 from all_matchups import get_years_matchups
 from all_playoffs import create_playoff_df
+from owner_overrides import resolve_owner, owner_id_for
 
 start_time = time.time()
 
@@ -242,17 +243,14 @@ def pull_league_data(league):
         Returns:
         - pd.DataFrame: A DataFrame with columns 'Display Name', 'ID', and 'Team Name'.
         """
-        team_owners = [team.owners for team in league.teams]
-        team_names = [team.team_name for team in league.teams]
-
-        # Create a list of dictionaries for the DataFrame
+        # Co-owned teams resolve to their canonical owner (owner_overrides.py)
         data = []
-        for team, team_name in zip(team_owners, team_names):
-            team = team[0]
+        for team in league.teams:
+            owner = resolve_owner(league, team)
             data.append({
-                "Display Name": team['firstName'] + " " + team['lastName'],
-                "ID": team['id'],
-                "Team Name": team_name
+                "Display Name": f"{owner.get('firstName', '')} {owner.get('lastName', '')}".strip(),
+                "ID": owner.get('id'),
+                "Team Name": team.team_name
             })
 
         # Create the DataFrame

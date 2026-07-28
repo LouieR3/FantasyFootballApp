@@ -13,25 +13,21 @@ import numpy as np
 import random
 import os
 
+from owner_overrides import resolve_owner
+
 start_time = time.time()
 
 def pull_draft_data(league, year):
     def owner_df_creation():
-        team_owners = [team.owners for team in league.teams]
-        team_names  = [team.team_name for team in league.teams]
-
-        # Create a list of dictionaries for the DataFrame
+        # Co-owned teams resolve to their canonical owner (owner_overrides.py)
         data = []
-        count = 0
-        for team in team_owners:
-            team = team[0]
-            team_name = team_names[count]
+        for team in league.teams:
+            owner = resolve_owner(league, team)
             data.append({
-                "Display Name": team['firstName'] + " " + team['lastName'],
-                "ID": team['id'],
-                "Team Name": team_name
+                "Display Name": f"{owner.get('firstName', '')} {owner.get('lastName', '')}".strip(),
+                "ID": owner.get('id'),
+                "Team Name": team.team_name
             })
-            count += 1
 
         # Create the DataFrame
         df = pd.DataFrame(data)

@@ -3,6 +3,7 @@ import pandas as pd
 from operator import itemgetter
 import glob
 from espn_api.football import League
+from owner_overrides import resolve_owner, owner_id_for
 
 files = glob.glob('*.xlsx')
 

@@ -5,6 +5,7 @@ from calcPercent import percent
 from playoffNum import playoff_num
 from espn_api.football import League
 import os
+from owner_overrides import resolve_owner, owner_id_for
 
 
 def owner_df_creation(league):

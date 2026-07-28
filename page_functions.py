@@ -10,6 +10,7 @@ from pyecharts import options as opts
 from streamlit_echarts import st_pyecharts
 from espn_api.football import League
 from monte_carlo_odds import add_weekly_analysis_to_main
+from owner_overrides import resolve_owner
 import os
 
 def owner_df_creation(league):
@@ -22,17 +23,14 @@ def owner_df_creation(league):
     Returns:
     - pd.DataFrame: A DataFrame with columns 'Display Name', 'ID', and 'Team Name'.
     """
-    team_owners = [team.owners for team in league.teams]
-    team_names = [team.team_name for team in league.teams]
-
-    # Create a list of dictionaries for the DataFrame
+    # Co-owned teams resolve to their canonical owner (see owner_overrides.py)
     data = []
-    for team, team_name in zip(team_owners, team_names):
-        team = team[0]
+    for team in league.teams:
+        owner = resolve_owner(league, team)
         data.append({
-            "Display Name": team['firstName'] + " " + team['lastName'],
-            "ID": team['id'],
-            "Team Name": team_name
+            "Display Name": f"{owner.get('firstName', '')} {owner.get('lastName', '')}".strip(),
+            "ID": owner.get('id'),
+            "Team Name": team.team_name
         })
 
     # Create the DataFrame

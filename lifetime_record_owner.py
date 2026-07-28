@@ -7,6 +7,7 @@ import inflect
 import os
 
 from draft_grading import team_draft_grade
+from owner_overrides import resolve_owner, owner_id_for
 
 start_time = time.time()
 
@@ -57,17 +58,14 @@ def lifetime_record_owner(league_id, espn_s2, swid, years, owner_name_to_filter)
         Returns:
         - pd.DataFrame: A DataFrame with columns 'Display Name', 'ID', and 'Team Name'.
         """
-        team_owners = [team.owners for team in league.teams]
-        team_names = [team.team_name for team in league.teams]
-
-        # Create a list of dictionaries for the DataFrame
+        # Co-owned teams resolve to their canonical owner (owner_overrides.py)
         data = []
-        for team, team_name in zip(team_owners, team_names):
-            team = team[0]
+        for team in league.teams:
+            owner = resolve_owner(league, team)
             data.append({
-                "Display Name": team['firstName'] + " " + team['lastName'],
-                "ID": team['id'],
-                "Team Name": team_name.strip()
+                "Display Name": f"{owner.get('firstName', '')} {owner.get('lastName', '')}".strip(),
+                "ID": owner.get('id'),
+                "Team Name": team.team_name.strip()
             })
 
         # Create the DataFrame
@@ -97,10 +95,10 @@ def lifetime_record_owner(league_id, espn_s2, swid, years, owner_name_to_filter)
         # Get teams' data
         teams = league.teams
         team_names = [team.team_name for team in teams]
-        team_owners = [team.owners[0]['id'] for team in league.teams]
+        team_owners = [owner_id_for(league, team) for team in league.teams]
 
         team_scores = [team.scores for team in teams]
-        schedules = [[opponent.owners[0]['id'] for opponent in team.schedule] for team in teams]
+        schedules = [[owner_id_for(league, opponent) for opponent in team.schedule] for team in teams]
 
         scores_df = pd.DataFrame(team_scores, index=team_owners)
         schedules_df = pd.DataFrame(schedules, index=team_owners)

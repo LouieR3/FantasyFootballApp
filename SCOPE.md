@@ -116,6 +116,7 @@ Items carried over from `todo.txt` are marked ⭐.
 - **Championship/podium tracker:** titles, finals appearances, playoff appearance rate per owner.
 - ⭐ **Cross-season Elo** (`elo.py` exists — surface it): Elo carried across seasons with decay, charted over the franchise's life.
 - **Owner-based identity** (`lifetime_record_owner.py` started this): key everything on Owner ID rather than team name so renames don't split history.
+- ✅ **Co-owner attribution** (2026-07-28): ESPN returns a list of owners per team and the code took `owners[0]`, so a co-owned season landed on whoever ESPN listed first — splitting a franchise's history across two people. `owner_overrides.py` now defines the canonical owner per co-owned team-year, and every user-facing path resolves through it. First entry: Pennoni Younglings 2024 "Philadelphia Bills Mafia" (Henry Morris + Robbie Wilston) → **Robbie Wilston**, so Henry's history is 2022–2023 and Robbie's is 2024–2025. Add future cases to `PREFERRED_CO_OWNER`.
 
 ### 4.2 Draft & player analytics
 

@@ -31,6 +31,9 @@ Each league page has a year selector and renders the following sections (data pe
 FantasyFootballApp/
 ├── streamlit-app.py          # App entry point / home page
 ├── page_functions.py         # Shared display_* functions used by every league page
+├── credentials.py            # ESPN cookie/SWID loader (secrets, never in source)
+├── draft_grading.py          # Draft + free agent grading engine; regrades all seasons
+├── owner_overrides.py        # Canonical owner for co-owned team-seasons
 ├── pages/                    # One Streamlit page per league (+ LPI master list, upsets, playoff analysis)
 ├── leagues/                  # Per-league, per-year season data (Excel) consumed by the app
 ├── drafts/                   # Per-league, per-year draft + free agent results (CSV)
