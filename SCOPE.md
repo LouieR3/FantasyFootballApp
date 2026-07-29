@@ -24,45 +24,49 @@ ESPN `espn_s2` cookies and `SWID`s (yours and several friends') were **hardcoded
 4. ✅ **Done:** rotate the cookies (log out/in on ESPN regenerates them) — removing them from the tip of the branch does not remove them from git history.
 5. Longer term: a single league-registry config module holding league IDs + credential references, so pages and pipeline scripts stop duplicating them.
 
-### Repo hygiene (quick wins)
+### Repo hygiene — ✅ done
 
-- Deleted "Pennoni Timeline" assets are sitting staged — unrelated to this project; commit that cleanup separately.
-- Root-level scratch files (`test.py`, `test.csv`, `results.txt`, `test_other_guys_stuff.py`, `test_read_playoffs.py` (empty), `draft_analysis.png`, `player.json`) should move to an `archive/` or `scratch/` folder or be deleted.
-- `elo_claude.py` vs `elo.py`, `headToHead.py` vs `headToHead2.py`, `playoff_odds.py` vs `playoff_odds_gemini.py`, `season_results.py` vs `season_results_test.py`, `monte_carlo_odds.py` vs `monte_carlo_odds_test.py` — pick the winner of each pair, archive the other.
-- `todo.txt` is superseded by this document (its items are folded into §4).
+- Scratch files and superseded duplicates (`test.py`, `elo_claude.py`, `headToHead2.py`, `playoff_odds_gemini.py`, `season_results_test.py`, `monte_carlo_odds_test.py`, `espn.py`, `weekTest.py`, `intro.py`, `league_history.py`, `results.txt`, `player.json`, ...) moved to `archive/` with a README explaining each. `league.py` turned out to be a vendored copy of espn_api's own module — archived too.
+- `todo.txt` superseded by this document (items folded into §4).
 
 ---
 
-## 2. Repo organization plan
+## 2. Repo organization — ✅ done 2026-07-28
 
-Target structure (migrate in stages — file moves break the relative paths like `"drafts/..."` used throughout, and Streamlit requires the `pages/` directory at the root):
+Actual structure (see README for the annotated version). `streamlit-app.py` kept its name so the Streamlit Cloud entrypoint setting still resolves; `pages/` stays at the root because Streamlit requires it.
 
 ```
 FantasyFootballApp/
-├── Home.py                     # renamed streamlit-app.py (update Streamlit Cloud entrypoint)
-├── pages/                      # league pages (stay here — Streamlit requirement)
-├── src/
-│   ├── config.py               # league registry: IDs, years, names, secrets lookup
-│   ├── espn/                   # data pulls: weekly update, old-season backfill, draft pull
-│   ├── metrics/                # lpi, elo, strength_of_schedule, expected_wins,
-│   │                           # monte_carlo_odds, betting_odds, draft_grades
-│   └── ui/                     # page_functions.py split into modules
-│                               # (results.py, odds.py, lpi.py, draft.py, lifetime.py)
-├── scripts/                    # runnable pipeline entry points + one-off backfills
-├── data/
-│   ├── leagues/  drafts/  odds/    # (or a single app.db / parquet store — see §5)
-├── analysis/                   # offline studies (keep)
-├── archive/                    # dead experiments, superseded scripts
-└── docs/                       # SCOPE.md, notes
+├── streamlit-app.py            # Streamlit entrypoint
+├── pages/                      # league pages (Streamlit requirement)
+├── paths.py                    # repo-anchored data locations — ALL file I/O
+├── credentials.py              # ESPN secrets loader
+├── ffapp/
+│   ├── ui/         page_functions, lifetime_record_owner, calcPercent, playoffNum
+│   ├── metrics/    monte_carlo_odds, draft_grading, create_betting_odds, owner_overrides
+│   └── espn/       draft_data, all_matchups, all_playoffs, season_results
+├── pipeline/       ESPNWeeklyUpdateList, ESPNWeeklyUpdate, ESPN_Add_Old_Season,
+│                   regrade_drafts, add_current_week_results, playoff_chances, ...
+├── experiments/    one-off explorations (lpi, elo, printOwners, strengthOfSchedule, ...)
+├── analysis/       offline studies
+├── archive/        dead code; nothing imports it
+└── data/           leagues/  drafts/  odds/  + cross-league aggregate CSVs
 ```
 
-Migration order (each step is safe and shippable on its own):
+Two structural wins beyond the file moves:
 
-1. Secrets out of source (§1) — no file moves needed.
-2. Create `archive/`, move scratch/duplicate scripts. Nothing imports them.
-3. Extract a `src/config.py` league registry; point pages and pipeline at it.
-4. Split `page_functions.py` (~15 functions, 36 KB) into `src/ui/` modules.
-5. Move data folders under `data/` last, alongside the storage migration in §5, so paths change once.
+- **`paths.py`** — every data read/write resolves against the repo root instead of the
+  current directory. Previously a script run from anywhere but the repo root would
+  crash or silently write files to the wrong place; now `python pipeline/anything.py`
+  works from any directory. Verified by running the grading pipeline from `C:\Windows\Temp`.
+- **Depth-independent bootstrap** — scripts outside the root walk up to find `paths.py`
+  and put the repo root on `sys.path`, so they run as plain scripts (no `-m` needed).
+
+Still open from the original plan:
+
+1. A league-registry config module (league IDs + credential references are still duplicated across pipeline scripts and `pages/`). This is the single biggest remaining duplication.
+2. Splitting `page_functions.py` (~36 KB, 15 functions) into per-section modules under `ffapp/ui/`.
+3. `experiments/` deserves a triage pass — several of those scripts are probably dead rather than merely exploratory.
 
 ---
 

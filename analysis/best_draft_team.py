@@ -1,8 +1,14 @@
+import os as _os, sys as _sys
+_d = _os.path.dirname(_os.path.abspath(__file__))
+while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
+    _d = _os.path.dirname(_d)
+_sys.path.insert(0, _d)
 import pandas as pd
 import numpy as np
+from paths import DATA_DIR
 
 # Read the data
-all_drafts_df = pd.read_csv("Master_Draft_Data.csv")
+all_drafts_df = pd.read_csv(f"{DATA_DIR}/Master_Draft_Data.csv")
 
 # Filter for Pennoni Younglings league
 pennoni_df = all_drafts_df[all_drafts_df['League Name'] == 'EBC League'].copy()

@@ -1,9 +1,13 @@
-import sys as _sys, os as _os
-_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+import os as _os, sys as _sys
+_d = _os.path.dirname(_os.path.abspath(__file__))
+while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
+    _d = _os.path.dirname(_d)
+_sys.path.insert(0, _d)
 from credentials import CRED
 import pandas as pd
 from espn_api.football import League
 from collections import defaultdict
+from paths import DATA_DIR
 
 def analyze_playoff_chances_by_record_at_week(leagues, years, target_week, all_playoff_dfs):
     """
@@ -165,7 +169,7 @@ def analyze_playoff_chances_by_record_at_week(leagues, years, target_week, all_p
     return aggregated_df, detailed_df, anomalies_df
 
 
-def analyze_multiple_weeks_playoff_chances(leagues, years, weeks_to_analyze, all_playoff_dfs, output_filename='playoff_chances_by_week.xlsx'):
+def analyze_multiple_weeks_playoff_chances(leagues, years, weeks_to_analyze, all_playoff_dfs, output_filename=f'{DATA_DIR}/playoff_chances_by_week.xlsx'):
     """
     Analyze playoff chances for multiple weeks at once and save to Excel
     
@@ -174,7 +178,7 @@ def analyze_multiple_weeks_playoff_chances(leagues, years, weeks_to_analyze, all
         years: List of years to analyze  
         weeks_to_analyze: List of weeks to analyze (e.g., [1, 2, 3, 4])
         all_playoff_dfs: DataFrame containing playoff data
-        output_filename: Name of the Excel file to create (default: 'playoff_chances_by_week.xlsx')
+        output_filename: Name of the Excel file to create (default: f'{DATA_DIR}/playoff_chances_by_week.xlsx')
         
     Returns:
         dict: Dictionary with week as key and (aggregated_df, detailed_df, anomalies_df) as values
@@ -377,7 +381,7 @@ def example_usage():
     years = [2019, 2020, 2021, 2022, 2023, 2024]
     
     # Assuming you have all_playoff_dfs DataFrame available
-    all_playoff_dfs = pd.read_csv('all_playoff_dfs.csv')  # Replace with your actual data source
+    all_playoff_dfs = pd.read_csv(f'{DATA_DIR}/all_playoff_dfs.csv')  # Replace with your actual data source
     
     # Assuming you have all_playoff_dfs DataFrame available
     # all_playoff_dfs = your_playoff_dataframe

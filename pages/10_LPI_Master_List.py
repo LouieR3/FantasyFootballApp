@@ -1,3 +1,9 @@
+import os as _os, sys as _sys
+_d = _os.path.dirname(_os.path.abspath(__file__))
+while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
+    _d = _os.path.dirname(_d)
+_sys.path.insert(0, _d)
+from paths import LEAGUES_DIR
 def app():
     import pandas as pd
     from operator import itemgetter
@@ -6,12 +12,12 @@ def app():
 
     pd.options.mode.chained_assignment = None
     st.header('Master List of LPI')
-    files = glob.glob('leagues/*.xlsx')
+    files = glob.glob(f'{LEAGUES_DIR}/*.xlsx')
 
     appended_data = []
     leagueList = []
     for file in files:
-        leagueName = file.split("leagues/")[1].split(".xlsx")[0]
+        leagueName = file.split(f"{LEAGUES_DIR}/")[1].split(".xlsx")[0]
         leagueList.append(leagueName)
         df = pd.read_excel(file, sheet_name="Louie Power Index")
         df["League"] = leagueName

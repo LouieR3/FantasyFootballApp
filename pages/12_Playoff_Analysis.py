@@ -1,3 +1,9 @@
+import os as _os, sys as _sys
+_d = _os.path.dirname(_os.path.abspath(__file__))
+while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
+    _d = _os.path.dirname(_d)
+_sys.path.insert(0, _d)
+from paths import DATA_DIR, DRAFTS_DIR, LEAGUES_DIR
 def app():
     import pandas as pd
     from operator import itemgetter
@@ -15,7 +21,7 @@ def app():
     pd.options.mode.chained_assignment = None
     st.header('League Analysis Across All Leagues')
     # Get all Excel files in the current directory
-    xlsx_files = glob.glob("leagues/*.xlsx")
+    xlsx_files = glob.glob(f"{LEAGUES_DIR}/*.xlsx")
     number_of_files = len(xlsx_files)
     st.subheader('In looking at ' + str(number_of_files) + ' seasons, how well does LPI predict winners? How about seeds, records, or total points? How often do top seeds win the championship? How often do lower seeds win the championship?')
     st.divider()
@@ -53,7 +59,7 @@ def app():
 
     # # Combine all DataFrames into one
     # all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
-    all_playoff_dfs = pd.read_csv("all_playoffs_with_predictions.csv")
+    all_playoff_dfs = pd.read_csv(f"{DATA_DIR}/all_playoffs_with_predictions.csv")
     # print(all_playoff_dfs)
 
     # Ensure LPI columns are numeric
@@ -166,7 +172,7 @@ def app():
         print()
 
         
-        all_matchups_df = pd.read_csv('all_matchups.csv')  # Replace with your actual file path
+        all_matchups_df = pd.read_csv(f'{DATA_DIR}/all_matchups.csv')  # Replace with your actual file path
         all_matchups_df = all_matchups_df[all_matchups_df['Home Predicted Score'] > 40]  # Filter out weeks greater than 15
         
         # Data preparation
@@ -236,7 +242,7 @@ def app():
         total_correct = len(correct)
         st.write(f"ESPN was correct in predicting the winner in {total_correct}/{total_games} of all games ({overall_accuracy:.1%})")
 
-        playoff_predictions = pd.read_csv("all_playoffs_with_predictions.csv")
+        playoff_predictions = pd.read_csv(f"{DATA_DIR}/all_playoffs_with_predictions.csv")
         playoff_predictions["Predicted Winner"] = playoff_predictions.apply(lambda row: row["Team 1"] if row["Predicted Score 1"] > row["Predicted Score 2"] else (row["Team 2"] if row["Predicted Score 2"] > row["Predicted Score 1"] else "Tie"), axis=1)
         playoff_predictions["Actual Winner"] = playoff_predictions.apply(lambda row: row["Team 1"] if row["Score 1"] > row["Score 2"] else (row["Team 2"] if row["Score 2"] > row["Score 1"] else "Tie"), axis=1)
 
@@ -404,9 +410,9 @@ def app():
 
     
     # Load the Draft Grades CSV file
-    winless_file_path = "playoff_chances_winless.csv"
+    winless_file_path = f"{DATA_DIR}/playoff_chances_winless.csv"
     winless_df = pd.read_csv(winless_file_path)
-    undefeated_file_path = "playoff_chances_undefeated.csv"
+    undefeated_file_path = f"{DATA_DIR}/playoff_chances_undefeated.csv"
     undefeated_df = pd.read_csv(undefeated_file_path)
 
     # Rename column and round to 2 decimals
@@ -425,7 +431,7 @@ def app():
 
     
     # Load the Excel file
-    file_path = 'playoff_chances_by_week.xlsx'  # Replace with your file path
+    file_path = f'{DATA_DIR}/playoff_chances_by_week.xlsx'  # Replace with your file path
 
     # Load all sheets into a dictionary of DataFrames
     sheets_dict = pd.read_excel(file_path, sheet_name=None)  # Load all sheets
@@ -459,12 +465,12 @@ def app():
     st.divider()
     
     # Load the Draft Grades CSV file
-    file_path = "drafts/Draft_Grades_with_Standings.csv"
+    file_path = f"{DRAFTS_DIR}/Draft_Grades_with_Standings.csv"
     df = pd.read_csv(file_path)
     scatter_plot(df)
 
 
-    # all_playoff_dfs.to_csv("all_playoffs.csv", index=False)
+    # all_playoff_dfs.to_csv(f"{DATA_DIR}/all_playoffs.csv", index=False)
     def wins_by_seed():
         # --------------------------------------------------------------------------------------------
         # Calculate win counts for each seed
@@ -671,7 +677,7 @@ def app():
         winner_df.reset_index(drop=True, inplace=True)
 
         # Print the Winner DataFrame
-        winner_df["League"] = winner_df["File Name"].str.replace('.xlsx', '', regex=False).str.replace('leagues/', '', regex=False)
+        winner_df["League"] = winner_df["File Name"].str.replace('.xlsx', '', regex=False).str.replace(f'{LEAGUES_DIR}/', '', regex=False)
         winner_df = winner_df[["Team", "Seed", "Total Points", "LPI", "Record", "League"]]
         print(winner_df)
         st.divider()
@@ -680,7 +686,7 @@ def app():
 
         
         # Load the Draft Grades CSV file
-        file_path = "drafts/Draft_Grades_with_Standings.csv"
+        file_path = f"{DRAFTS_DIR}/Draft_Grades_with_Standings.csv"
         df = pd.read_csv(file_path)
         # Query the DataFrame for rows where Standing = 1
         df_standing_1 = df[df['Standing'] == 1]

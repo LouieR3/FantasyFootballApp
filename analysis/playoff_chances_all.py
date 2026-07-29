@@ -1,10 +1,14 @@
-import sys as _sys, os as _os
-_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+import os as _os, sys as _sys
+_d = _os.path.dirname(_os.path.abspath(__file__))
+while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
+    _d = _os.path.dirname(_d)
+_sys.path.insert(0, _d)
 from credentials import CRED
 import pandas as pd
 from espn_api.football import League
 from collections import defaultdict
 import time
+from paths import DATA_DIR
 
 start_time = time.time()
 
@@ -328,7 +332,7 @@ def example_usage():
     # years = [2021, 2022, 2023, 2024]
     
     # Assuming you have all_playoff_dfs DataFrame available
-    all_playoff_dfs = pd.read_csv('all_playoff_dfs.csv')  # Replace with your actual data source
+    all_playoff_dfs = pd.read_csv(f'{DATA_DIR}/all_playoff_dfs.csv')  # Replace with your actual data source
     
     # Analyze a specific week
     # target_week = 14

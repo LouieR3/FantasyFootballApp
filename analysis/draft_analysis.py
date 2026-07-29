@@ -1,6 +1,10 @@
-import sys as _sys, os as _os
-_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+import os as _os, sys as _sys
+_d = _os.path.dirname(_os.path.abspath(__file__))
+while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
+    _d = _os.path.dirname(_d)
+_sys.path.insert(0, _d)
 from credentials import CRED
+from paths import DRAFTS_DIR, LEAGUES_DIR
 import pandas as pd
 import os
 import glob

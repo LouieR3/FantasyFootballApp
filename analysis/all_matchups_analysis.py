@@ -1,11 +1,17 @@
+import os as _os, sys as _sys
+_d = _os.path.dirname(_os.path.abspath(__file__))
+while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
+    _d = _os.path.dirname(_d)
+_sys.path.insert(0, _d)
 import pandas as pd
 import numpy as np
 from collections import defaultdict
 import matplotlib.pyplot as plt
 import seaborn as sns
+from paths import DATA_DIR
 
 # Read the CSV file
-all_matchups_df = pd.read_csv('all_matchups.csv')  # Replace with your actual file path
+all_matchups_df = pd.read_csv(f'{DATA_DIR}/all_matchups.csv')  # Replace with your actual file path
 # pennoni_2023 = all_matchups_df[(all_matchups_df['League'] == "Pennoni Younglings") & (all_matchups_df['Year'] == 2023)]  # Filter out weeks greater than 15
 # print(pennoni_2023)
 # all_matchups_df = all_matchups_df[(all_matchups_df['Home Predicted Score'] > 40) & (all_matchups_df['Home Score'] != all_matchups_df['Home Predicted Score'])]  # Filter out weeks greater than 15

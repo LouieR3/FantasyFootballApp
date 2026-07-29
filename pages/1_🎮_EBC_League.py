@@ -1,12 +1,16 @@
-import sys as _sys, os as _os
-_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+import os as _os, sys as _sys
+_d = _os.path.dirname(_os.path.abspath(__file__))
+while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
+    _d = _os.path.dirname(_d)
+_sys.path.insert(0, _d)
 from credentials import CRED
+from paths import DRAFTS_DIR, LEAGUES_DIR, ODDS_DIR
 def app():
     import pandas as pd
     from operator import itemgetter
     import streamlit as st
-    from calcPercent import percent
-    from playoffNum import playoff_num
+    from ffapp.ui.calcPercent import percent
+    from ffapp.ui.playoffNum import playoff_num
     from st_aggrid import AgGrid
 
     league_id = 1118513122
@@ -23,13 +27,13 @@ def app():
     league = f"EBC League {selected_year}"
     # Extract the league name without the year
     league_name = " ".join(league.split()[:-1])  # Removes the year from the league string
-    draft_file = f"drafts/{league_name} Draft Results {selected_year}.csv"
+    draft_file = f"{DRAFTS_DIR}/{league_name} Draft Results {selected_year}.csv"
     
-    file = "leagues/" + league + ".xlsx"
-    odds_file = f"odds/{league} Betting Odds.xlsx"
+    file = f"{LEAGUES_DIR}/" + league + ".xlsx"
+    odds_file = f"{ODDS_DIR}/{league} Betting Odds.xlsx"
 
-    from page_functions import display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds, display_remaining_schedule_difficulty, display_playoff_odds_by_week, display_betting_odds_full_width
-    from page_functions import display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results, display_betting_odds
+    from ffapp.ui.page_functions import display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds, display_remaining_schedule_difficulty, display_playoff_odds_by_week, display_betting_odds_full_width
+    from ffapp.ui.page_functions import display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results, display_betting_odds
     
     display_playoff_results(file)
 

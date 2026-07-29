@@ -1,11 +1,17 @@
+import os as _os, sys as _sys
+_d = _os.path.dirname(_os.path.abspath(__file__))
+while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
+    _d = _os.path.dirname(_d)
+_sys.path.insert(0, _d)
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
+from paths import DATA_DIR, DRAFTS_DIR
 
 # # Read standings data to add Final Place
-# standings_df = pd.read_csv("drafts/Draft_Grades_with_Standings.csv")
+# standings_df = pd.read_csv(f"{DRAFTS_DIR}/Draft_Grades_with_Standings.csv")
 # team_metrics_df["Year"] = team_metrics_df["Year"].astype(int)
 # standings_df["Year"] = standings_df["Year"].astype(int)
 # # Merge to add Standing (renamed to Final Place)
@@ -15,9 +21,9 @@ from scipy import stats
 #     how='left'
 # )
 # Read the standings data
-standings_df = pd.read_csv("drafts/Draft_Grades_with_Standings.csv")
-team_metrics_df = pd.read_csv("Team_Draft_Metrics.csv")
-all_drafts_df = pd.read_csv("Master_Draft_Data.csv")
+standings_df = pd.read_csv(f"{DRAFTS_DIR}/Draft_Grades_with_Standings.csv")
+team_metrics_df = pd.read_csv(f"{DATA_DIR}/Team_Draft_Metrics.csv")
+all_drafts_df = pd.read_csv(f"{DATA_DIR}/Master_Draft_Data.csv")
 
 # Initialize columns for pick data
 standings_df['Pick Number'] = None
@@ -26,7 +32,7 @@ standings_df['Top Two Pick Points'] = None
 standings_df['Top Four Pick Points'] = None
 
 # Set up drafts folder
-drafts_folder = "drafts"
+drafts_folder = DRAFTS_DIR
 
 # Dictionary to store team data by team name and year
 team_pick_data = {}
@@ -94,7 +100,7 @@ for idx, row in standings_df.iterrows():
         standings_df.at[idx, 'Number of A Grades'] = team_pick_data[key]['Number of A Grades']
 
 # Save the enhanced CSV
-output_file = "Draft_Grades_with_Standings_Enhanced.csv"
+output_file = f"{DATA_DIR}/Draft_Grades_with_Standings_Enhanced.csv"
 standings_df.to_csv(output_file, index=False)
 print(f"\n✓ Enhanced CSV saved to: {output_file}")
 

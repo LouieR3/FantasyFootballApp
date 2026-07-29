@@ -1,11 +1,17 @@
+import os as _os, sys as _sys
+_d = _os.path.dirname(_os.path.abspath(__file__))
+while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
+    _d = _os.path.dirname(_d)
+_sys.path.insert(0, _d)
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
+from paths import DATA_DIR, DRAFTS_DIR
 
 # Set up drafts folder
-drafts_folder = "drafts"
+drafts_folder = DRAFTS_DIR
 
 # Initialize an empty list to store dataframes
 dataframes = []
@@ -30,7 +36,7 @@ for file in os.listdir(drafts_folder):
 all_drafts_df = pd.concat(dataframes, ignore_index=True)
 
 # Save the master draft data
-all_drafts_df.to_csv("Master_Draft_Data.csv", index=False)
+all_drafts_df.to_csv(f"{DATA_DIR}/Master_Draft_Data.csv", index=False)
 print(f"✓ Master draft data saved to: Master_Draft_Data.csv")
 print(f"  Total picks: {len(all_drafts_df)}")
 print(f"  Leagues: {all_drafts_df['League Name'].nunique()}")
@@ -96,7 +102,7 @@ team_metrics_df = pd.DataFrame(team_metrics)
 
 
 # Read standings data to add Final Place
-standings_df = pd.read_csv("drafts/Draft_Grades_with_Standings.csv")
+standings_df = pd.read_csv(f"{DRAFTS_DIR}/Draft_Grades_with_Standings.csv")
 team_metrics_df["Year"] = team_metrics_df["Year"].astype(int)
 standings_df["Year"] = standings_df["Year"].astype(int)
 # Merge to add Standing (renamed to Final Place)
@@ -118,7 +124,7 @@ cols = ['Team', 'League Name', 'Year', 'Final Place'] + [col for col in team_met
 team_metrics_df = team_metrics_df[cols]
 
 # Save team metrics
-team_metrics_df.to_csv("Team_Draft_Metrics.csv", index=False)
+team_metrics_df.to_csv(f"{DATA_DIR}/Team_Draft_Metrics.csv", index=False)
 print(f"\n✓ Team draft metrics saved to: Team_Draft_Metrics.csv")
 
 # Display sample
@@ -131,7 +137,7 @@ print("MERGING WITH STANDINGS DATA")
 print("="*60)
 
 # Read the standings data
-standings_df = pd.read_csv("drafts/Draft_Grades_with_Standings.csv")
+standings_df = pd.read_csv(f"{DRAFTS_DIR}/Draft_Grades_with_Standings.csv")
 
 team_metrics_df["Year"] = team_metrics_df["Year"].astype(int)
 standings_df["Year"] = standings_df["Year"].astype(int)
@@ -143,7 +149,7 @@ merged_df = standings_df.merge(
 )
 
 # Save the enhanced standings
-merged_df.to_csv("Draft_Grades_with_Standings_Enhanced.csv", index=False)
+merged_df.to_csv(f"{DATA_DIR}/Draft_Grades_with_Standings_Enhanced.csv", index=False)
 print(f"✓ Enhanced standings saved to: Draft_Grades_with_Standings_Enhanced.csv")
 
 # ===== ANALYSIS =====

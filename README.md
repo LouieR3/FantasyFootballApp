@@ -21,7 +21,7 @@ Each league page has a year selector and renders the following sections (data pe
 | **LPI Each Week** | LPI trend line week by week |
 | **Strength of Schedule** | Schedules ranked hardest to easiest by the average record all other teams would have against them |
 | **Expected Wins** | Wins each team would expect with an average schedule, and the difference vs. their actual record |
-| **Draft Results** | Every draft pick graded 30–100 with a letter grade: 60% value-over-slot (production vs. what that draft slot historically returns, fit from every league-year on file) + 40% points-above-replacement at the position. Grades are standardized within each season across all leagues, so they're comparable everywhere (see `draft_grading.py`) |
+| **Draft Results** | Every draft pick graded 30–100 with a letter grade: 60% value-over-slot (production vs. what that draft slot historically returns, fit from every league-year on file) + 40% points-above-replacement at the position. Grades are standardized within each season across all leagues, so they're comparable everywhere (see `ffapp/metrics/draft_grading.py`) |
 | **Biggest LPI Upsets** | Wins by teams with a large LPI deficit vs. their opponent |
 | **Lifetime Record** | All-time results for the league across seasons |
 
@@ -29,29 +29,36 @@ Each league page has a year selector and renders the following sections (data pe
 
 ```
 FantasyFootballApp/
-├── streamlit-app.py          # App entry point / home page
-├── page_functions.py         # Shared display_* functions used by every league page
-├── credentials.py            # ESPN cookie/SWID loader (secrets, never in source)
-├── draft_grading.py          # Draft + free agent grading engine; regrades all seasons
-├── owner_overrides.py        # Canonical owner for co-owned team-seasons
+├── streamlit-app.py          # App entry point / home page (Streamlit Cloud entrypoint)
 ├── pages/                    # One Streamlit page per league (+ LPI master list, upsets, playoff analysis)
-├── leagues/                  # Per-league, per-year season data (Excel) consumed by the app
-├── drafts/                   # Per-league, per-year draft + free agent results (CSV)
-├── odds/                     # Per-league betting odds (Excel)
-├── analysis/                 # Offline analysis scripts (draft grading studies, playoff chances)
+├── paths.py                  # Repo-anchored data locations — all file I/O goes through this
+├── credentials.py            # ESPN cookie/SWID loader (secrets, never in source)
 │
-│   # Data pipeline (run locally to refresh data, then commit):
-├── ESPNWeeklyUpdate.py       # Weekly pull: standings, matchups, LPI inputs → leagues/*.xlsx
-├── ESPNWeeklyUpdateList.py   # Same, looped over all configured leagues
-├── ESPN_Add_Old_Season.py    # Backfill a past season
-├── draft_data.py             # Pull draft + free agent results and compute draft grades → drafts/*.csv
-├── monte_carlo_odds.py       # Playoff odds simulation engine
-├── create_betting_odds.py    # Weekly matchup betting lines → odds/*.xlsx
-├── all_matchups.py           # Build all_matchups.csv (every H2H matchup, all leagues/years)
-├── all_playoffs.py           # Build playoff results dataset
-├── lifetime_record.py        # Lifetime records per team/owner
-└── ...                       # Metric modules (lpi.py, elo.py, strengthOfSchedule.py, playoff_chances.py, etc.)
+├── ffapp/                    # the library
+│   ├── ui/                   # what the pages call
+│   │   ├── page_functions.py     # every display_* section on a league page
+│   │   ├── lifetime_record_owner.py
+│   │   ├── calcPercent.py  playoffNum.py
+│   ├── metrics/              # computation
+│   │   ├── monte_carlo_odds.py   # playoff odds / record prediction simulations
+│   │   ├── draft_grading.py      # draft + free agent grading engine
+│   │   ├── create_betting_odds.py
+│   │   └── owner_overrides.py    # canonical owner for co-owned team-seasons
+│   └── espn/                 # pulling + shaping ESPN data
+│       ├── draft_data.py  all_matchups.py  all_playoffs.py  season_results.py
+│
+├── pipeline/                 # runnable entry points (see below)
+├── experiments/              # one-off explorations and manual tests (lpi, elo, printOwners, ...)
+├── analysis/                 # offline studies (draft grading research, playoff chances)
+├── archive/                  # dead code kept for reference; nothing imports it
+└── data/
+    ├── leagues/              # one xlsx per league-year — the app's main source
+    ├── drafts/               # draft + free agent results csv per league-year
+    ├── odds/                 # betting odds xlsx per league-year
+    └── *.csv                 # cross-league aggregates (all_matchups, Master_Draft_Data, ...)
 ```
+
+Anything under `pipeline/`, `experiments/`, or `analysis/` finds the repo root on its own, so you can run it from any directory and it will read and write into `data/` correctly.
 
 ## Running locally
 
@@ -60,14 +67,32 @@ pip install -r requirements.txt
 streamlit run streamlit-app.py
 ```
 
-The app reads from the committed files in `leagues/`, `drafts/`, and `odds/`, so it runs without ESPN credentials.
+The app reads the committed files under `data/`, so it runs without ESPN credentials.
 
-## Refreshing data (weekly, during the season)
+## Pipeline (run locally to refresh data, then commit)
 
-1. Run `ESPNWeeklyUpdateList.py` to pull the latest week for all leagues into `leagues/`.
-2. Run `create_betting_odds.py` to regenerate `odds/`.
-3. After drafts (or to refresh grades): run `draft_data.py` → `drafts/`.
-4. Commit and push — Streamlit Cloud redeploys from the repo.
+| Script | What it does |
+|---|---|
+| `pipeline/ESPNWeeklyUpdateList.py` | **The main weekly run.** Loops every configured league: standings, matchups, LPI, playoff odds, betting odds → `data/leagues/`, `data/odds/` |
+| `pipeline/ESPNWeeklyUpdate.py` | Same work for **one** league — edit the uncommented `league = League(...)` block near the top to pick it |
+| `pipeline/ESPN_Add_Old_Season.py` | Backfill a **past** season for a league (weekly data, playoff results, drafts, matchups) |
+| `pipeline/regrade_drafts.py` | Recompute all draft/free-agent grades across every season (needed after any grading change) |
+| `pipeline/add_current_week_results.py` | Append the current week into `data/all_matchups.csv` |
+| `pipeline/playoff_chances.py`, `pipeline/playoff_add_predicted.py` | Playoff-odds datasets used by the Playoff Analysis page |
+
+Typical in-season week:
+
+```bash
+python pipeline/ESPNWeeklyUpdateList.py
+```
+
+After a draft, or any time grading changes:
+
+```bash
+python pipeline/regrade_drafts.py
+```
+
+Then commit and push — Streamlit Cloud redeploys from the repo.
 
 ESPN private-league access requires `espn_s2` and `SWID` cookies. All code reads them via `credentials.py` (`CRED["louie_s2"]`, etc.), which loads from `.streamlit/secrets.toml` (gitignored — copy `.streamlit/secrets.toml.example` and fill it in), from Streamlit Cloud's secrets settings, or from `ESPN_*` environment variables. Never put cookie values in source.
 
