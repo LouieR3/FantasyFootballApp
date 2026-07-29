@@ -16,6 +16,7 @@ from streamlit_echarts import st_pyecharts
 from espn_api.football import League
 from ffapp.metrics.monte_carlo_odds import add_weekly_analysis_to_main
 from ffapp.metrics.owner_overrides import resolve_owner
+from ffapp.ui.data_loader import load_sheet, load_csv, load_owner_df, get_league, sheet_names
 import os
 
 def owner_df_creation(league):
@@ -43,7 +44,7 @@ def owner_df_creation(league):
 
 def display_playoff_results(file):
     try:
-        df = pd.read_excel(file, sheet_name="Playoff Results")
+        df = load_sheet(file, "Playoff Results")
         st.header('Playoff Results')
 
         # Increment index to start at 1
@@ -96,7 +97,7 @@ def display_schedule_comparison(file):
     st.header('Schedule Comparison')
     st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
 
-    df = pd.read_excel(file, sheet_name="Schedule Grid")
+    df = load_sheet(file, "Schedule Grid")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     
     df = df.set_index("Teams")
@@ -165,7 +166,7 @@ def display_strength_of_schedule(file):
     st.write("This ranks each team's schedule from hardest to easiest based on the average number of wins all other teams would have against that schedule. The Avg Wins Against Schedule column shows the hypothetical average record every team would have with that schedule over the season. Lower averages indicate a tougher slate of opponents.")
     
     # Read the Excel sheet
-    df = pd.read_excel(file, sheet_name="Wins Against Schedule")
+    df = load_sheet(file, "Wins Against Schedule")
     
     # Process the DataFrame
     df = df.iloc[:, 1:]
@@ -175,7 +176,7 @@ def display_strength_of_schedule(file):
     
     # Apply gradient styling
     df_styled = df.style.background_gradient(subset=['Wins Against Schedule'])
-    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    df_names = load_sheet(file, "Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
@@ -204,7 +205,7 @@ def display_expected_wins(file):
     st.write('The Expected Wins column shows how many wins each fantasy football team could expect with an average schedule.')
     st.write('Teams with a higher Expected Win value than their actual wins have overcome tough schedules. Teams with lower Expected Wins have benefitted from weaker schedules.')
     # Read the Excel sheet
-    df = pd.read_excel(file, sheet_name="Expected Wins")
+    df = load_sheet(file, "Expected Wins")
     
     # Process the DataFrame
     df = df.iloc[: , 1:]
@@ -215,7 +216,7 @@ def display_expected_wins(file):
     # Apply gradient styling
     df3 = df.style.background_gradient(subset=['Expected Wins'])
     
-    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    df_names = load_sheet(file, "Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
@@ -242,7 +243,7 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     
     # Read the Playoff Odds sheet
-    df = pd.read_excel(file, sheet_name="Playoff Odds")
+    df = load_sheet(file, "Playoff Odds")
     df = df.set_index("Team")
     
     # Function to format and round the values
@@ -261,7 +262,7 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
     # Style the DataFrame
     styled_df = formatted_df.style.set_properties(**{'background-color': 'lightgray'}, subset=slice_)
     
-    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    df_names = load_sheet(file, "Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
@@ -279,7 +280,7 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
 
     try:
         # Read the Playoff Odds sheet
-        df = pd.read_excel(file, sheet_name="Record Odds")
+        df = load_sheet(file, "Record Odds")
         columns_to_drop = ['Current_Win_Pct', 'Avg_Score', 'Total_Points_For', 'Expected_Final_Record']
         df = df.drop(columns=columns_to_drop)
         df.columns = [col.replace('_', ' ') for col in df.columns]
@@ -302,7 +303,7 @@ def display_playoff_odds_by_week(file):
     st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
     
     # Read the Playoff Odds sheet
-    df = pd.read_excel(file, sheet_name="Playoff Odds By Week")
+    df = load_sheet(file, "Playoff Odds By Week")
     
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df.columns = df.columns.str.replace("_", " ")
@@ -317,7 +318,7 @@ def display_playoff_odds_by_week(file):
     # Apply the formatting function to the entire DataFrame
     formatted_df = df.applymap(format_and_round)
     
-    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    df_names = load_sheet(file, "Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
@@ -354,7 +355,7 @@ def display_remaining_schedule_difficulty(file):
     st.write("This table shows the average Louie Power Index (LPI) of each team's remaining opponents for the rest of the season. A higher average LPI indicates a tougher remaining schedule, while a lower average LPI suggests an easier path ahead.")
     
     # Read the Excel sheet
-    df = pd.read_excel(file, sheet_name="Remaining Schedule Difficulty")
+    df = load_sheet(file, "Remaining Schedule Difficulty")
     
     # Process the DataFrame
     df = df.iloc[:, 1:]
@@ -373,7 +374,7 @@ def display_remaining_schedule_difficulty(file):
     # # Apply gradient styling
     df_styled = df.style.background_gradient(subset=['Avg Opp Points For'])
 
-    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    df_names = load_sheet(file, "Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
@@ -399,7 +400,7 @@ def display_betting_odds(file):
         "Negative odds indicate favorites (bet that amount to win 100), "
         "while positive odds indicate underdogs (win that amount on 100 bet)."
     )
-    df_names = pd.read_excel(file, sheet_name="Make Playoff Odds")
+    df_names = load_sheet(file, "Make Playoff Odds")
     # Display the styled DataFrame
     df_names = df_names.set_index("Team")
     if len(df_names) <= 10:
@@ -417,7 +418,7 @@ def display_betting_odds(file):
     # -----------------------------------------------------------
     with col1:
         st.subheader("Make Playoffs")
-        df = pd.read_excel(file, sheet_name="Make Playoff Odds")
+        df = load_sheet(file, "Make Playoff Odds")
 
         if 'Team' in df.columns:
             df = df.set_index('Team')
@@ -450,7 +451,7 @@ def display_betting_odds(file):
     # -----------------------------------------------------------
     with col2:
         st.subheader("First Place")
-        df = pd.read_excel(file, sheet_name="First Place Odds")
+        df = load_sheet(file, "First Place Odds")
 
         if 'Team' in df.columns:
             df = df.set_index('Team')
@@ -481,7 +482,7 @@ def display_betting_odds(file):
     # -----------------------------------------------------------
     with col3:
         st.subheader("Last Place")
-        df = pd.read_excel(file, sheet_name="Last Place Odds")
+        df = load_sheet(file, "Last Place Odds")
 
         if 'Team' in df.columns:
             df = df.set_index('Team')
@@ -539,7 +540,7 @@ def display_betting_odds_full_width(file):
     
     # --- MAKE PLAYOFF ODDS ---
     st.subheader('Make Playoff Odds')
-    df_playoff = pd.read_excel(file, sheet_name="Make Playoff Odds")
+    df_playoff = load_sheet(file, "Make Playoff Odds")
 
     # Set Team index
     if 'Team' in df_playoff.columns:
@@ -578,7 +579,7 @@ def display_betting_odds_full_width(file):
     
     # --- FIRST PLACE ODDS ---
     st.subheader('First Place Odds')
-    df_first = pd.read_excel(file, sheet_name="First Place Odds")
+    df_first = load_sheet(file, "First Place Odds")
     
     if 'Team' in df_first.columns:
         df_first = df_first.set_index('Team')
@@ -608,7 +609,7 @@ def display_betting_odds_full_width(file):
     
     # --- LAST PLACE ODDS ---
     st.subheader('Last Place Odds')
-    df_last = pd.read_excel(file, sheet_name="Last Place Odds")
+    df_last = load_sheet(file, "Last Place Odds")
     
     if 'Team' in df_last.columns:
         df_last = df_last.set_index('Team')
@@ -648,10 +649,10 @@ def display_lpi_by_week(file):
     st.header('Louie Power Index Each Week')
     
     # Read the LPI By Week sheet
-    df = pd.read_excel(file, sheet_name="LPI By Week")
+    df = load_sheet(file, "LPI By Week")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df.columns = df.columns.str.replace("_", " ")
-    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    df_names = load_sheet(file, "Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
@@ -718,7 +719,7 @@ def display_lpi(league_id, espn_s2, swid, file):
     st.header('The Louie Power Index (LPI)')
     # st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
     st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline. Positive scores indicate winning against tough schedules. Negative scores mean losing with an easy schedule. Higher scores are better. Scores near zero are neutral.')
-    df = pd.read_excel(file, sheet_name="Louie Power Index")
+    df = load_sheet(file, "Louie Power Index")
     
     df = df.iloc[: , 1:]
     df.index += 1
@@ -749,7 +750,7 @@ def display_lpi(league_id, espn_s2, swid, file):
     df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
     # owner_names = owner_df["Display Name"].tolist()
 
-    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    df_names = load_sheet(file, "Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
@@ -767,7 +768,7 @@ def display_lpi(league_id, espn_s2, swid, file):
 
 def display_draft_results(draft_file):
     try:
-        df = pd.read_csv(draft_file)
+        df = load_csv(draft_file)
         st.header('Draft Results')
         df = df.drop(columns=['Owner ID'])
         # Increment index to start at 1
@@ -779,7 +780,7 @@ def display_draft_results(draft_file):
 def display_biggest_lpi_upsets(file):
     st.header('Biggest LPI Upsets')
     # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
-    df = pd.read_excel(file, sheet_name="Biggest Upsets")
+    df = load_sheet(file, "Biggest Upsets")
     df = df.iloc[: , 1:]
     df.index += 1
     df3 = df.style.background_gradient(subset=['LPI Difference'])
@@ -795,8 +796,7 @@ def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     year_str = name_no_ext.split()[-1]
     year = int(year_str)
 
-    league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
-    owner_df = owner_df_creation(league)
+    owner_df = load_owner_df(league_id, year, espn_s2, swid)
     names = owner_df["Display Name"].tolist()
     # print(names)
 
@@ -822,7 +822,7 @@ def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     lifetime_record_df, year_df, all_matchups_df = lifetime_record_owner(league_id, espn_s2, swid, years, selected_team)
     
     df4 = lifetime_record_df.style.background_gradient(subset=['Win Percentage'])
-    df_names = pd.read_excel(file, sheet_name="Schedule Grid")
+    df_names = load_sheet(file, "Schedule Grid")
     # Display the styled DataFrame
     df_names.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
     df_names = df_names.set_index("Teams")
@@ -843,7 +843,7 @@ def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
 
 # st.header('Upset Factor of Previous Week')
 # st.write('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')
-# df = pd.read_excel(file, sheet_name="Louie Power Index")
+# df = load_sheet(file, "Louie Power Index")
 # df = df.iloc[: , 1:]
 # df.index += 1
 # df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])

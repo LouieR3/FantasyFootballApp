@@ -36,6 +36,7 @@ FantasyFootballApp/
 │
 ├── ffapp/                    # the library
 │   ├── ui/                   # what the pages call
+│   │   ├── data_loader.py        # cached file/ESPN access — all app reads go through this
 │   │   ├── page_functions.py     # every display_* section on a league page
 │   │   ├── lifetime_record_owner.py
 │   │   ├── calcPercent.py  playoffNum.py
@@ -68,6 +69,21 @@ streamlit run streamlit-app.py
 ```
 
 The app reads the committed files under `data/`, so it runs without ESPN credentials.
+
+### Data access in the app
+
+All app-side reads go through `ffapp/ui/data_loader.py`, which caches them. Streamlit re-runs a page's whole script on every widget interaction, so uncached reads repeat on every dropdown change — a league page used to re-parse the same workbook 20 times per render (the Schedule Grid sheet alone 10 times) and rebuild an ESPN `League` object per season.
+
+Use these instead of `pd.read_excel` / `pd.read_csv` / `League(...)` anywhere in the app path:
+
+| Instead of | Use |
+|---|---|
+| `pd.read_excel(f, sheet_name="X")` | `load_sheet(f, "X")` |
+| `pd.read_excel(f, sheet_name=None)` | `load_all_sheets(f)` |
+| `pd.read_csv(f)` | `load_csv(f)` |
+| `League(league_id=..., year=...)` | `get_league(league_id, year, espn_s2, swid)` |
+
+Cache keys include each file's modification time, so re-running the pipeline invalidates them automatically — no app restart needed. Loaders return copies, so page code can mutate results freely.
 
 ## Pipeline (run locally to refresh data, then commit)
 

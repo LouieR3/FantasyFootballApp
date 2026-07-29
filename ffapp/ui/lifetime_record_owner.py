@@ -13,6 +13,7 @@ import os
 
 from ffapp.metrics.draft_grading import team_draft_grade
 from ffapp.metrics.owner_overrides import resolve_owner, owner_id_for
+from ffapp.ui.data_loader import _cache_data, get_league
 
 start_time = time.time()
 
@@ -26,6 +27,19 @@ swid=CRED["louie_swid"]
 p = inflect.engine()
 
 def lifetime_record_owner(league_id, espn_s2, swid, years, owner_name_to_filter):
+    """Cached entry point - see _lifetime_record_owner for the actual work.
+
+    This walks every season of the league and hits the ESPN API once per year,
+    which made it the most expensive thing on a league page (and Streamlit
+    re-ran it on every widget interaction). Results are cached per
+    (league, years, owner); `years` becomes a tuple so it can be a cache key.
+    """
+    return _lifetime_record_owner(league_id, tuple(years), owner_name_to_filter,
+                                  espn_s2, swid)
+
+
+@_cache_data()
+def _lifetime_record_owner(league_id, years, owner_name_to_filter, _espn_s2, _swid):
     """
     Calculates the lifetime record for a given owner across all seasons they appear in the league.
 
@@ -82,7 +96,7 @@ def lifetime_record_owner(league_id, espn_s2, swid, years, owner_name_to_filter)
 
     for year in years:
         print(f"Processing year: {year}")
-        league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+        league = get_league(league_id, year, _espn_s2, _swid)
         owners_df = owner_df_creation(league)
         # print(f"Owners DataFrame for year {year}:\n{owners_df}")
 

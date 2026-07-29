@@ -136,8 +136,6 @@ Items carried over from `todo.txt` are marked ⭐.
 ### 4.3 Season page upgrades
 
 - ⭐ **Playoff bracket visual** with each team's LPI next to their name.
-- ⭐ **Final place added to year-by-year stats.**
-- ⭐ **LPI change vs. last week** (arrow/delta column) on the LPI table.
 - **Luck index:** actual record vs. all-play record (you already compute the all-play grid for Schedule Comparison — surface the gap as a single "luck" number).
 - **Weekly margin chart:** per-team margin of victory/defeat by week.
 - **Points distribution:** box/violin per team to show consistency vs. boom-bust (feeds intuition for the Monte Carlo odds).
@@ -157,9 +155,41 @@ Items carried over from `todo.txt` are marked ⭐.
 
 ## 5. Data hosting: analysis & recommendation
 
-### Today
+### ✅ Phase 1 done 2026-07-28 — caching (measured, and it was the real bottleneck)
 
-CSV + Excel files committed to git; the app reads them with pandas/openpyxl on every page load. Manual local script runs push updates.
+Benchmarked before choosing a storage format, which changed the conclusion: the data is only **3.0 MB** total, so size was never the problem. The problem was that **nothing was cached** and Streamlit re-runs the whole page script on every widget interaction.
+
+Measured, per league page render: 20 separate `read_excel` calls (Schedule Grid parsed **10 times**) = **~350–480 ms**, plus one live ESPN `League` construction per season in the Lifetime Record loop (6 network round trips for a 5-year league) — all repeated on every dropdown change.
+
+Format comparison for one page render — note parquet was measurably *worse* here (tables too small; per-file overhead dominates, and files got **bigger**: 89 KB vs 17 KB per league-year):
+
+| | time | vs. before |
+|---|---|---|
+| before: 20 × `read_excel` | 450 ms | 1× |
+| parquet, 20 reads | 88 ms | 5× |
+| sqlite, 20 queries | 25 ms | 18× |
+| **cached (what we did)** | **~4 ms** | **~80×** |
+
+`ffapp/ui/data_loader.py` now serves all app reads. Results:
+
+| | before | after |
+|---|---|---|
+| League page, first load | ~350 ms | ~9 ms |
+| League page, every later interaction | ~350 ms | **~4 ms (~80×)** |
+| LPI Master List (42 files), first load | ~1.2–1.5 s | ~1.2 s (break-even) |
+| LPI Master List, later | ~1.2–1.5 s | ~50 ms (**~40×**) |
+| Biggest Upsets after Master List | ~2.6 s | ~60 ms (**~41×**) |
+
+Design choices worth remembering:
+
+- Caches a `pd.ExcelFile` and parses **individual sheets on demand**, rather than `read_excel(sheet_name=None)`. The pages that pull one sheet from all 42 league files would otherwise parse ~11 sheets per file to use one — measured 2.6× faster on that pattern, identical for a league page. ~20 MB for all 42 workbooks.
+- Workbook **bytes are read into memory** so no OS file handle stays cached — a held handle stopped the pipeline from rewriting those same xlsx files on Windows (found by test, fixed).
+- Cache keys include file mtime, so a pipeline run invalidates them with no restart. Credential args are underscore-prefixed so Streamlit never hashes them into a key.
+- Loaders return copies — page code mutates results in place (renames columns, shifts the index).
+
+### Today (storage, unchanged)
+
+CSV + Excel files committed to git. Manual local script runs push updates.
 
 **Pain points:** Excel reads are slow (openpyxl) and uncached; filenames are the schema (league name + year string, emoji included — `The Girl's Room 💞🏈 2025.xlsx`), so joins across datasets are string-matching exercises; binary `.xlsx` diffs bloat git history; a weekly refresh requires you at your machine; no data validation ever runs; aggregate files (`Master_Draft_Data.csv`, `all_matchups.csv`) duplicate what's in the per-league files and drift.
 
@@ -174,9 +204,13 @@ CSV + Excel files committed to git; the app reads them with pandas/openpyxl on e
 
 ### Recommendation (phased)
 
-1. **Phase 1 — SQLite + caching (do this first).** Write a one-time importer that loads `leagues/`, `drafts/`, `odds/`, and the aggregate CSVs into `data/app.db` with proper tables (`seasons`, `teams`, `owners`, `matchups`, `draft_picks`, `weekly_odds`, ...). Add a `src/db.py` loader used by `page_functions.py`, wrapped in `@st.cache_data`. Keep writing the CSV/Excel alongside during one season as a safety net. This fixes speed, schema, and name-matching in one move with no new infrastructure.
-2. **Phase 2 — GitHub Actions weekly refresh.** Tuesday-morning cron: pull ESPN → rebuild `app.db` → commit. Credentials from Actions secrets (depends on §1 security work).
-3. **Phase 3 (optional) — Supabase/Neon** only if you want same-day updates without deploys or an in-app "refresh now" button. The schema from Phase 1 ports directly; SQLite may well be the permanent answer for this data size (~a few MB/season).
+1. ✅ **Phase 1 — caching. Done** (see above). This was the whole performance problem; storage format was a red herring.
+2. ⬜ **Phase 2 — SQLite, when the lifetime features get built. For query power, not speed.** Prototyped: the full corpus builds in **2.8 s → 14,381 rows, 2.0 MB, 13 tables**, and a cross-league aggregate query runs in **0.6 ms**. Today the same question means opening all 42 workbooks and string-matching league names out of filenames. Every §4.1 item (all-time records book, rivalry views, franchise trends) is one SQL query with it and a 42-file loop without it.
+   - Build it as a **cached artifact, gitignored** (`@st.cache_resource`, ~3 s once per container), keeping the CSV/Excel files as the committed source of truth. A 2 MB binary rewritten weekly would bloat git — `.git` is already 70 MB from xlsx churn.
+   - Two schema problems to fix during the migration, both found while prototyping: **mixed-type columns** (`Playoff Results.Seed 2`, `Score 2`, `LPI 2`, `Total Points 2` each hold both numbers and strings — parquet refused them outright), and **`Schedule Grid` is a team×team matrix**, so unioning it across leagues produced a 299-column table. It needs reshaping to long form (`team`, `opponent_schedule`, `record`), which would also simplify Schedule Comparison and the luck index.
+3. ⬜ **Phase 3 — GitHub Actions weekly refresh.** Tuesday cron: pull ESPN → commit updated data. Credentials from Actions secrets.
+4. ❌ **Skip parquet** — measurably wrong at this scale: slower than SQLite (88 vs 25 ms) and *larger* files (89 vs 17 KB per league-year).
+5. ❌ **Skip hosted Postgres** (Supabase/Neon) for now. At 3 MB with one writer it adds a network hop, an outage dependency, and more secrets to manage for no gain. Revisit only for same-day updates without a redeploy.
 
 ---
 
@@ -186,8 +220,8 @@ CSV + Excel files committed to git; the app reads them with pandas/openpyxl on e
 |---|---|---|
 | 1 | Secrets out of source + rotate cookies | §1 |
 | 2 | Fix free-agent grade bug; pick one draft formula | §3 P1–P2 |
-| 3 | SQLite migration + `st.cache_data` | §5 Phase 1 |
+| 3 | ✅ Caching in `data_loader.py` (~80x on page interactions) | §5 Phase 1 |
 | 4 | Draft grade redesign (value-over-slot + PAR) | §3 |
 | 5 | Lifetime/owner career features (unlocked by 3 & 4) | §4.1 |
-| 6 | GitHub Actions weekly refresh | §5 Phase 2 |
+| 6 | SQLite for cross-league queries, then GitHub Actions refresh | §5 Phase 2–3 |
 | 7 | Season-page upgrades & draft analytics backlog | §4.2–4.3 |

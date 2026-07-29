@@ -1,7 +1,14 @@
+import os as _os, sys as _sys
+_d = _os.path.dirname(_os.path.abspath(__file__))
+while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
+    _d = _os.path.dirname(_d)
+_sys.path.insert(0, _d)
+
+
 def percent(file):
-    import pandas as pd
-    from espn_api.football import League
     import os
+
+    from ffapp.ui.data_loader import load_sheet
 
     # Split the filename and extension
     name, extension = os.path.splitext(file)
@@ -15,7 +22,7 @@ def percent(file):
     print(result)
     # print(parts)
     # print(year)
-    df = pd.read_excel(file, sheet_name="Louie Power Index")
+    df = load_sheet(file, "Louie Power Index")
     record_split = df['Record'].iloc[0].split('-')
 
     # Convert to ints

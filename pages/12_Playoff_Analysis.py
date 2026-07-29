@@ -4,6 +4,7 @@ while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'path
     _d = _os.path.dirname(_d)
 _sys.path.insert(0, _d)
 from paths import DATA_DIR, DRAFTS_DIR, LEAGUES_DIR
+from ffapp.ui.data_loader import load_sheet, load_csv, load_all_sheets
 def app():
     import pandas as pd
     from operator import itemgetter
@@ -40,7 +41,7 @@ def app():
     #             continue
 
     #         # Read the Playoff Results sheet into a DataFrame
-    #         playoff_df = pd.read_excel(file, sheet_name="Playoff Results")
+    #         playoff_df = load_sheet(file, "Playoff Results")
     #         playoff_df['File Name'] = file  # Add file name for identification
     #         combined_playoff_dfs.append(playoff_df)
 
@@ -59,7 +60,7 @@ def app():
 
     # # Combine all DataFrames into one
     # all_playoff_dfs = pd.concat(combined_playoff_dfs, ignore_index=True)
-    all_playoff_dfs = pd.read_csv(f"{DATA_DIR}/all_playoffs_with_predictions.csv")
+    all_playoff_dfs = load_csv(f"{DATA_DIR}/all_playoffs_with_predictions.csv")
     # print(all_playoff_dfs)
 
     # Ensure LPI columns are numeric
@@ -172,7 +173,7 @@ def app():
         print()
 
         
-        all_matchups_df = pd.read_csv(f'{DATA_DIR}/all_matchups.csv')  # Replace with your actual file path
+        all_matchups_df = load_csv(f'{DATA_DIR}/all_matchups.csv')  # Replace with your actual file path
         all_matchups_df = all_matchups_df[all_matchups_df['Home Predicted Score'] > 40]  # Filter out weeks greater than 15
         
         # Data preparation
@@ -242,7 +243,7 @@ def app():
         total_correct = len(correct)
         st.write(f"ESPN was correct in predicting the winner in {total_correct}/{total_games} of all games ({overall_accuracy:.1%})")
 
-        playoff_predictions = pd.read_csv(f"{DATA_DIR}/all_playoffs_with_predictions.csv")
+        playoff_predictions = load_csv(f"{DATA_DIR}/all_playoffs_with_predictions.csv")
         playoff_predictions["Predicted Winner"] = playoff_predictions.apply(lambda row: row["Team 1"] if row["Predicted Score 1"] > row["Predicted Score 2"] else (row["Team 2"] if row["Predicted Score 2"] > row["Predicted Score 1"] else "Tie"), axis=1)
         playoff_predictions["Actual Winner"] = playoff_predictions.apply(lambda row: row["Team 1"] if row["Score 1"] > row["Score 2"] else (row["Team 2"] if row["Score 2"] > row["Score 1"] else "Tie"), axis=1)
 
@@ -411,9 +412,9 @@ def app():
     
     # Load the Draft Grades CSV file
     winless_file_path = f"{DATA_DIR}/playoff_chances_winless.csv"
-    winless_df = pd.read_csv(winless_file_path)
+    winless_df = load_csv(winless_file_path)
     undefeated_file_path = f"{DATA_DIR}/playoff_chances_undefeated.csv"
-    undefeated_df = pd.read_csv(undefeated_file_path)
+    undefeated_df = load_csv(undefeated_file_path)
 
     # Rename column and round to 2 decimals
     for df in [winless_df, undefeated_df]:
@@ -434,7 +435,7 @@ def app():
     file_path = f'{DATA_DIR}/playoff_chances_by_week.xlsx'  # Replace with your file path
 
     # Load all sheets into a dictionary of DataFrames
-    sheets_dict = pd.read_excel(file_path, sheet_name=None)  # Load all sheets
+    sheets_dict = load_all_sheets(file_path)  # Load all sheets
 
     # Rename sheets by replacing underscores with spaces
     sheets_dict = {sheet_name.replace("_", " ").title(): df for sheet_name, df in sheets_dict.items()}
@@ -466,7 +467,7 @@ def app():
     
     # Load the Draft Grades CSV file
     file_path = f"{DRAFTS_DIR}/Draft_Grades_with_Standings.csv"
-    df = pd.read_csv(file_path)
+    df = load_csv(file_path)
     scatter_plot(df)
 
 
@@ -687,7 +688,7 @@ def app():
         
         # Load the Draft Grades CSV file
         file_path = f"{DRAFTS_DIR}/Draft_Grades_with_Standings.csv"
-        df = pd.read_csv(file_path)
+        df = load_csv(file_path)
         # Query the DataFrame for rows where Standing = 1
         df_standing_1 = df[df['Standing'] == 1]
 

@@ -4,6 +4,7 @@ while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'path
     _d = _os.path.dirname(_d)
 _sys.path.insert(0, _d)
 from paths import LEAGUES_DIR
+from ffapp.ui.data_loader import load_sheet, load_csv, load_all_sheets
 def app():
     import pandas as pd
     from operator import itemgetter
@@ -19,7 +20,7 @@ def app():
     for file in files:
         leagueName = file.split(f"{LEAGUES_DIR}/")[1].split(".xlsx")[0]
         leagueList.append(leagueName)
-        df = pd.read_excel(file, sheet_name="Biggest Upsets")
+        df = load_sheet(file, "Biggest Upsets")
         df["League"] = leagueName
         appended_data.append(df)
 
