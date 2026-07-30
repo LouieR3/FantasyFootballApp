@@ -826,9 +826,13 @@ def app():
             "Total Games": record_game_counts.astype(int)
         })
 
-        # Add a new column for win percentage
-        record_summary_df["Win Percentage"] = (
-            record_summary_df.index.map(lambda r: int(r.split('-')[0]) / (int(r.split('-')[0]) + int(r.split('-')[1])))
+        # Add a new column for win percentage.
+        # Index.map returns an Index, which has no .round() - wrap in a Series.
+        record_summary_df["Win Percentage"] = pd.Series(
+            record_summary_df.index.map(
+                lambda r: int(r.split('-')[0]) / (int(r.split('-')[0]) + int(r.split('-')[1]))
+            ),
+            index=record_summary_df.index,
         ).round(3)
 
         # Filter records that total to 14 games

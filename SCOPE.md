@@ -77,6 +77,18 @@ Still open from the original plan:
 - **Corrected a factual error:** Schedule Comparison said to read "right to left". The grid is `records_df.at[team, opp]` — row = your team, column = the opponent whose schedule you borrow — so it reads **left to right** across your row.
 - Layout: `width=2000` (wider than any viewport) → `use_container_width`; `st.markdown("---")` → `st.divider()`; 8 pages' title emoji now matches their sidebar icon.
 
+### Page smoke test
+
+`python tools/smoke_pages.py` executes every page in `pages/` plus `streamlit-app.py` with
+streamlit, the `display_*` layer, espn_api and the chart libraries stubbed, so each page's
+own logic (year selection, path building, ordering) runs for real. It exists because
+`py_compile` passes on code that still blows up at runtime: an `UnboundLocalError` shipped
+to production when a year-selector block landed *below* the `st.title()` that used
+`selected_year`. Run it before pushing page changes.
+
+It also caught a pre-existing crash in Playoff Analysis: `Index.map(...).round(3)` -
+`Index` has no `.round()`, so that section failed on any pandas version.
+
 ### Page configuration bugs found during the sweep
 
 - **Year selectors were broken or absent.** Six leagues advertised four seasons but only have 2025 data, so any other year 404'd; the workaround had been to comment the selector out and pin the year. Years now come from `available_years()`, which reads what's on disk — working selector on every page, only real options, new seasons appear automatically, no annual edits.
