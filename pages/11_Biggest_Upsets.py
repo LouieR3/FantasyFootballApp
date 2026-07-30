@@ -3,56 +3,87 @@ _d = _os.path.dirname(_os.path.abspath(__file__))
 while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
     _d = _os.path.dirname(_d)
 _sys.path.insert(0, _d)
+import glob
+import os
+
+import pandas as pd
+import streamlit as st
+
 from paths import LEAGUES_DIR
-from ffapp.ui.data_loader import load_sheet, load_csv, load_all_sheets
+from ffapp import league_registry as registry
+from ffapp.ui.data_loader import load_sheet, sheet_names
+from ffapp.ui.league_colors import league_color_key, style_league_column
+
+
+@st.cache_data(show_spinner=False)
+def build_upsets(dir_key):
+    """Every league-season's biggest upsets in one frame."""
+    rows = []
+    for path in sorted(glob.glob(os.path.join(LEAGUES_DIR, '*.xlsx'))):
+        # basename, not a split on the directory string - the old version split
+        # on f"{LEAGUES_DIR}/", which never matches Windows path separators.
+        name_with_year = os.path.splitext(os.path.basename(path))[0]
+        league, year = registry.split_league_year(name_with_year)
+        if 'Biggest Upsets' not in sheet_names(path):
+            continue
+        df = load_sheet(path, 'Biggest Upsets')
+        df = df.drop(columns=[c for c in df.columns if str(c).startswith('Unnamed')],
+                     errors='ignore')
+        df['League'] = league
+        df['Year'] = year
+        rows.append(df)
+
+    if not rows:
+        return pd.DataFrame()
+    out = pd.concat(rows, ignore_index=True)
+    return out.sort_values('LPI Difference', ascending=False).reset_index(drop=True)
+
+
 def app():
-    import pandas as pd
-    from operator import itemgetter
-    import glob
-    import streamlit as st
-
     pd.options.mode.chained_assignment = None
+
     st.header('Biggest Upsets By LPI')
-    files = glob.glob(f'{LEAGUES_DIR}/*.xlsx')
-
-    appended_data = []
-    leagueList = []
-    for file in files:
-        leagueName = file.split(f"{LEAGUES_DIR}/")[1].split(".xlsx")[0]
-        leagueList.append(leagueName)
-        df = load_sheet(file, "Biggest Upsets")
-        df["League"] = leagueName
-        appended_data.append(df)
-
-    dfFINAL = pd.concat(appended_data)
-    dfFINAL = dfFINAL.iloc[: , 1:]
-    dfFINAL.index += 1
-    df1 = dfFINAL.sort_values(by=['LPI Difference'], ascending=False)
-
-    option = st.selectbox(
-        "Choose a year",
-        ("All", "2025", "2024", "2023", "2022", "2021", "2020"),
-        placeholder="Select year...",
+    st.write(
+        'The most unlikely results across every league and season — games won by '
+        'the team with the worse Louie Power Index. Bigger LPI Difference means a '
+        'bigger upset. Leagues are colour-coded; the key gives whose league each is.'
     )
-    st.write('You selected:', option)
 
-    if option == "All":
-        filtered_df = df1
-    else:
-        filtered_df = df1[df1['League'].str.contains(option)]
-    filtered_df.index += 1
-    df3 = filtered_df.reset_index(drop=True).style.background_gradient(subset=['LPI Difference']).apply(lambda x: ["background-color: purple; color: white" 
-                            if i == leagueList[0]
-                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: skyblue" if i == leagueList[1]
-                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: goldenrod" if i == leagueList[2]
-                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: gray; color: white" if i == leagueList[3]
-                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: green; color: white" if i == leagueList[4]
-                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: maroon; color: white" if i == leagueList[5]
-                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: red; color: white" if i == leagueList[6]
-                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: blue; color: white" if i == leagueList[7]
-                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: yellow" if i == leagueList[8]
-                            else "" for i in x], axis = 1).apply(lambda x: ["background-color: tan" if i == leagueList[9]
-                            else "" for i in x], axis = 1)
-    st.dataframe(df3, height=2150, hide_index=True)
+    master = build_upsets(os.path.getmtime(LEAGUES_DIR))
+    if master.empty:
+        st.error('No league data found.')
+        return
+
+    years = sorted(master['Year'].unique(), reverse=True)
+    leagues = sorted(master['League'].unique())
+
+    c1, c2, c3 = st.columns([1, 2, 2])
+    with c1:
+        year_pick = st.selectbox('Season', ['All'] + years)
+    with c2:
+        league_pick = st.multiselect('Leagues', leagues, default=[],
+                                     format_func=registry.label,
+                                     placeholder='All leagues')
+    with c3:
+        top_n = st.slider('Show top N', 10, max(len(master), 10),
+                          min(100, len(master)), step=10)
+
+    view = master
+    if year_pick != 'All':
+        view = view[view['Year'] == year_pick]
+    if league_pick:
+        view = view[view['League'].isin(league_pick)]
+
+    st.caption(f'{len(view)} of {len(master)} upsets'
+               + ('' if len(view) <= top_n else f' — showing the top {top_n}'))
+    view = view.head(top_n).reset_index(drop=True)
+
+    league_color_key(sorted(set(view['League'])))
+
+    styled = style_league_column(
+        view.style.background_gradient(subset=['LPI Difference'], cmap='YlOrRd'))
+    height = min(35 * (len(view) + 1) + 3, 900)
+    st.dataframe(styled, height=height, hide_index=True, use_container_width=True)
+
 
 app()

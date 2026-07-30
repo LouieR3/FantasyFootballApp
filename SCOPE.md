@@ -82,13 +82,15 @@ Still open from the original plan:
 - **Year selectors were broken or absent.** Six leagues advertised four seasons but only have 2025 data, so any other year 404'd; the workaround had been to comment the selector out and pin the year. Years now come from `available_years()`, which reads what's on disk — working selector on every page, only real options, new seasons appear automatically, no annual edits.
 - **Five pages pointed at the wrong ESPN league** (copy-pasted from Las League, `league_id`/credentials never updated). This is why `display_lifetime_record` — the one section needing a correct `league_id` — was commented out on several pages.
 
-  | Page | was | now |
-  |---|---|---|
-  | The Girl's Room | 1049459 / `la_s2` | 1399036372 / `hannah_s2` |
-  | Matts League | 1049459 / `la_s2` | 261375772 / `matt_s2` |
-  | Turf On Grade | 1118513122 (EBC's id) | 1242265374 / `turf_s2` |
-  | Avas League | 1049459 / `la_s2`, showed Operators Football League | 417131856 / `ava_s2`, Philly Extra Special |
-  | Elles League | showed Philly Extra Special | 1259693145 / `elle_s2`, Operators Football League |
+  | Page            | was                                                                     | now                                                |
+  | --------------- | ----------------------------------------------------------------------- | -------------------------------------------------- |
+  | The Girl's Room | 1049459 /`la_s2`                                                      | 1399036372 /`hannah_s2`                          |
+  | Matts League    | 1049459 /`la_s2`                                                      | 261375772 /`matt_s2`                             |
+  | Turf On Grade   | 1118513122 (EBC's id)                                                   | 1242265374 /`turf_s2`                            |
+  | Avas League     | 1049459 /`la_s2` (Las League's id!), showed Operators Football League | 1259693145 /`elle_s2`, Operators Football League |
+  | Elles League    | 1259693145 /`elle_s2`, showed Philly Extra Special                    | 417131856 /`ava_s2`, Philly Extra Special        |
+
+  Both Avas/Elles pages were internally inconsistent — each displayed one league while holding a different league's id. Louie confirmed **Operators Football League is Ava's league**, so Avas League keeps that league and gets the matching id; Elles League keeps Philly Extra Special. Credential keys stay paired with the id known to read each league even though the key *names* no longer match the association (see §2c).
 
   Lifetime Record re-enabled on the Avas/Elles pages. ⬜ **Still commented out on 6 pages** (Family League, Turf On Grade, Dave Redbull, Dave Friend, Matts, The Girl's Room, Dukes) — their league IDs are now correct, so they can probably be switched back on, but that needs a live run to confirm rather than being enabled blind.
 - ⬜ A **league registry** (§2 item 1) would have prevented this entire class of bug and is now clearly the highest-value remaining cleanup.
@@ -101,24 +103,60 @@ The weekly scripts needed hand-editing at season boundaries. Root cause: week de
 
 `current_week` now means *the next week to be played*, so `range(1, current_week)` is exactly the completed weeks. One definition, one assignment per script.
 
-| # | Bug | Symptom |
-|---|---|---|
-| 1 | `current_week = 19` hard-coded in `ESPNWeeklyUpdateList.py`, overriding detection | every league treated as an 18-week season |
-| 2 | `ESPNWeeklyUpdate.py` added `+ 1` after detecting the week | computed LPI for an unplayed week mid-season |
-| 3 | `else: current_week = scores_df.shape[1]` (off by one) | **the final week never got an LPI column** once the season completed |
-| 4 | `if current_week > 1` then read `'Week ' + str(week-1)` | **KeyError 'Week 0' after week 1** — the first-week crash |
-| 5 | Playoff block gated on `current_week > reg_season_count` | fired before the first playoff game finished, then asked "LPI By Week" for columns it didn't have → KeyError at playoff start |
-| 6 | Playoff loop ran `range(reg_season_count, last_column_name+1)` | walked *unplayed* trailing weeks, inventing 0-0 matchups |
-| 7 | `lpi_week_df` read from the **previous run's** workbook | a league's first run has no file to read |
-| 8 | `ESPNWeeklyUpdate.py`: `fileName` reassigned to a full path inside the playoff branch, then re-wrapped at the final write | wrote to `data/leagues/data/leagues/<name>.xlsx.xlsx` — **the workbook write crashed as soon as playoffs began** |
-| 9 | `ESPNWeeklyUpdate.py`: `lpi_df` (Louie Power Index) reassigned to LPI-By-Week data | **"Louie Power Index" sheet silently corrupted during playoffs** |
-| 10 | Playoff Results appended via openpyxl, then `pd.ExcelWriter(..., 'xlsxwriter')` recreated the workbook without it | **the sheet was destroyed on every run** |
-| 11 | A *second* `current_week` calculation inside the playoff block reassigned it | Monte Carlo ran with a different week than the rest of the script |
-| 12 | `ESPNWeeklyUpdate.py` never computed Remaining Schedule Difficulty, but truncates the workbook | running the single-league script **deleted** that sheet, breaking its page section |
+| #  | Bug                                                                                                                           | Symptom                                                                                                                        |
+| -- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| 1  | `current_week = 19` hard-coded in `ESPNWeeklyUpdateList.py`, overriding detection                                         | every league treated as an 18-week season                                                                                      |
+| 2  | `ESPNWeeklyUpdate.py` added `+ 1` after detecting the week                                                                | computed LPI for an unplayed week mid-season                                                                                   |
+| 3  | `else: current_week = scores_df.shape[1]` (off by one)                                                                      | **the final week never got an LPI column** once the season completed                                                     |
+| 4  | `if current_week > 1` then read `'Week ' + str(week-1)`                                                                   | **KeyError 'Week 0' after week 1** — the first-week crash                                                               |
+| 5  | Playoff block gated on`current_week > reg_season_count`                                                                     | fired before the first playoff game finished, then asked "LPI By Week" for columns it didn't have → KeyError at playoff start |
+| 6  | Playoff loop ran`range(reg_season_count, last_column_name+1)`                                                               | walked*unplayed* trailing weeks, inventing 0-0 matchups                                                                      |
+| 7  | `lpi_week_df` read from the **previous run's** workbook                                                               | a league's first run has no file to read                                                                                       |
+| 8  | `ESPNWeeklyUpdate.py`: `fileName` reassigned to a full path inside the playoff branch, then re-wrapped at the final write | wrote to`data/leagues/data/leagues/<name>.xlsx.xlsx` — **the workbook write crashed as soon as playoffs began**       |
+| 9  | `ESPNWeeklyUpdate.py`: `lpi_df` (Louie Power Index) reassigned to LPI-By-Week data                                        | **"Louie Power Index" sheet silently corrupted during playoffs**                                                         |
+| 10 | Playoff Results appended via openpyxl, then`pd.ExcelWriter(..., 'xlsxwriter')` recreated the workbook without it            | **the sheet was destroyed on every run**                                                                                 |
+| 11 | A*second* `current_week` calculation inside the playoff block reassigned it                                               | Monte Carlo ran with a different week than the rest of the script                                                              |
+| 12 | `ESPNWeeklyUpdate.py` never computed Remaining Schedule Difficulty, but truncates the workbook                              | running the single-league script**deleted** that sheet, breaking its page section                                        |
 
 Byes and varying bracket sizes were already handled correctly (`opponent == team` → bye; round names derived from remaining team count) and were left alone.
 
 ⚠️ Not executed: these scripts need `espn_api` and live ESPN access, which the dev environment here lacks. Every change is a targeted edit verified by compile + static checks, and `week_utils` is unit-tested, but **the first real run of each script should be watched**.
+
+---
+
+## 2c. League registry — ✅ added 2026-07-28
+
+`ffapp/league_registry.py` is now the single place that knows what each league is, whose it is, and how to reach it. Pages, the pipeline and the colour-coded cross-league pages should all read from here instead of repeating league IDs and credential keys — that duplication is what put five pages on the wrong ESPN league (§2a).
+
+**Association is the important column:** nobody refers to these by their ESPN names. "Operators Football League" is *Ava's league*; that's the only handle that means anything. It drives the colour key on the LPI Master List and Biggest Upsets pages, and the league dropdowns are labelled with it.
+
+| Association (whose league)                    | ESPN league name                | Seasons on file | League ID  | Credential key     | Page                                       |
+| --------------------------------------------- | ------------------------------- | --------------- | ---------- | ------------------ | ------------------------------------------ |
+| **Louie - Pennoni coworkers**           | Pennoni Younglings              | 2022–2025 (4)  | 310334683  | `louie_s2_pages` | `1_🏈_Pennoni_Younglings.py`             |
+| **Louie - family**                      | Family Fantasy                  | 2022–2025 (4)  | 996930954  | `louie_s2_pages` | `1_👪_Family_League.py`                  |
+| **Louie - EBC friends**                 | EBC League                      | 2021–2025 (5)  | 1118513122 | `louie_s2_pages` | `1_🎮_EBC_League.py`                     |
+| **Prahlad - Pennoni Transportation**    | 0755 Fantasy Football           | 2022–2025 (4)  | 1339704102 | `prahlad_s2`     | `1_🛠️_Pennoni_Transportation.py`       |
+| **Prahlad - friends**                   | Game of Yards!                  | 2019–2025 (7)  | 1781851    | `prahlad_s2`     | `3_🧑‍🤝‍🧑_Prahlad_Friends_League.py` |
+| **Prahlad - Brown Munde**               | Brown Munde                     | 2023–2025 (3)  | 367134149  | `prahlad_s2`     | `3_🧑‍🤝‍🧑_Brown_Munde.py`            |
+| **Prahlad - Turf On Grade**             | Turf On Grade 2.0               | 2023–2024 (2)  | 1242265374 | `turf_s2`        | `4_🧑‍🤝‍🧑_Turf_On_Grade.py`          |
+| **Las league**                          | THE BEST OF THE BEST            | 2022–2025 (4)  | 1049459    | `la_s2`          | `5_🍝_Las_League.py`                     |
+| **Hannah**                              | The Girl's Room 💞🏈            | 2025            | 1399036372 | `hannah_s2`      | `5_💅_The_Girls_Room.py`                 |
+| **Ava**                                 | Operators Football League       | 2025            | 1259693145 | `elle_s2`        | `5_👱🏻‍♀️_Avas_League.py`            |
+| **Elle**                                | Philly Extra Special            | 2025            | 417131856  | `ava_s2`         | `5_🦝_Elles_League.py`                   |
+| **Dave - work (OnP)**                   | OnP Fantasy                     | 2025            | 1675186799 | `dave_s2`        | `5_🍹_Dave_Redbull_League.py`            |
+| **Dave - friends**                      | The Mike Daisy Sports IQ League | 2025            | 1924463077 | `dave_s2`        | `5_🎮_Dave_Friend_League.py`             |
+| **Jackson (Dukes)**                     | Ross' Fantasy League            | 2025            | 558148583  | `ayush_s2`       | `6_👑_Dukes_League.py`                   |
+| **Matt**                                | BP- Loudoun 2025                | 2025            | 261375772  | `matt_s2`        | `5_👷🏻‍♀️_Matts-League.py`           |
+| **Dave - older On Premise league ⚠️** | RRR On Premise                  | 2024            | —         | —                 | *(no page)*                              |
+| **unknown ⚠️**                        | Board Fantasy Football          | 2025            | —         | —                 | *(no page)*                              |
+
+⚠️ = association inferred rather than stated by Louie; worth confirming.
+
+Notes:
+
+- **Credential keys are historical labels and do not always match the association.** `elle_s2` reads Ava's league and `ava_s2` reads Philly Extra Special. The key names came from the variable names in the pre-secrets code; what matters is that each `league_id` stays paired with the cookie known to read it. Renaming the keys is safe but must be done in `.streamlit/secrets.toml`, Streamlit Cloud secrets and the registry together.
+- **`Board Fantasy Football` and `RRR On Premise `** have data on disk but no page and no known owner — candidates for either a page or archiving. Note the trailing space in `RRR On Premise `, which is load-bearing for the filename match.
+- Next step: have `pages/` and `pipeline/` import from the registry rather than hard-coding IDs. The pages still declare their own `league_id`/credentials; wiring them through the registry is the remaining half of this fix.
 
 ---
 
@@ -215,22 +253,22 @@ Measured, per league page render: 20 separate `read_excel` calls (Schedule Grid 
 
 Format comparison for one page render — note parquet was measurably *worse* here (tables too small; per-file overhead dominates, and files got **bigger**: 89 KB vs 17 KB per league-year):
 
-| | time | vs. before |
-|---|---|---|
-| before: 20 × `read_excel` | 450 ms | 1× |
-| parquet, 20 reads | 88 ms | 5× |
-| sqlite, 20 queries | 25 ms | 18× |
+|                                | time            | vs. before      |
+| ------------------------------ | --------------- | --------------- |
+| before: 20 ×`read_excel`    | 450 ms          | 1×             |
+| parquet, 20 reads              | 88 ms           | 5×             |
+| sqlite, 20 queries             | 25 ms           | 18×            |
 | **cached (what we did)** | **~4 ms** | **~80×** |
 
 `ffapp/ui/data_loader.py` now serves all app reads. Results:
 
-| | before | after |
-|---|---|---|
-| League page, first load | ~350 ms | ~9 ms |
-| League page, every later interaction | ~350 ms | **~4 ms (~80×)** |
-| LPI Master List (42 files), first load | ~1.2–1.5 s | ~1.2 s (break-even) |
-| LPI Master List, later | ~1.2–1.5 s | ~50 ms (**~40×**) |
-| Biggest Upsets after Master List | ~2.6 s | ~60 ms (**~41×**) |
+|                                        | before      | after                   |
+| -------------------------------------- | ----------- | ----------------------- |
+| League page, first load                | ~350 ms     | ~9 ms                   |
+| League page, every later interaction   | ~350 ms     | **~4 ms (~80×)** |
+| LPI Master List (42 files), first load | ~1.2–1.5 s | ~1.2 s (break-even)     |
+| LPI Master List, later                 | ~1.2–1.5 s | ~50 ms (**~40×**)     |
+| Biggest Upsets after Master List       | ~2.6 s      | ~60 ms (**~41×**)     |
 
 Design choices worth remembering:
 
@@ -247,12 +285,12 @@ CSV + Excel files committed to git. Manual local script runs push updates.
 
 ### Options
 
-| Option | Effort | What it buys | What it doesn't |
-|---|---|---|---|
-| **A. SQLite (or DuckDB) file in repo** | Low | One `app.db` replaces ~150 files; real schema + keys (league_id, owner_id, year, week); fast queries; joins for free; still zero-infrastructure on Streamlit Cloud | Still commit-to-deploy; concurrent writes N/A (fine here) |
-| **B. Parquet files in repo** | Low | 10–50× faster reads than xlsx, typed columns, small diffs | Still file-per-dataset; no joins/constraints |
-| **C. Hosted Postgres (Supabase / Neon free tier) + `st.connection`** | Medium | Data updates without git commits; app always current; enables on-demand refresh button in the app | External dependency; free-tier limits; secrets management required (needed anyway) |
-| **D. GitHub Actions weekly cron** running the pipeline and committing outputs | Low–Medium | Kills the manual weekly run regardless of storage choice; ESPN cookies live in Actions secrets | Cookies expire (~1 year) and need occasional refresh |
+| Option                                                                              | Effort      | What it buys                                                                                                                                                        | What it doesn't                                                                    |
+| ----------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **A. SQLite (or DuckDB) file in repo**                                        | Low         | One`app.db` replaces ~150 files; real schema + keys (league_id, owner_id, year, week); fast queries; joins for free; still zero-infrastructure on Streamlit Cloud | Still commit-to-deploy; concurrent writes N/A (fine here)                          |
+| **B. Parquet files in repo**                                                  | Low         | 10–50× faster reads than xlsx, typed columns, small diffs                                                                                                         | Still file-per-dataset; no joins/constraints                                       |
+| **C. Hosted Postgres (Supabase / Neon free tier) + `st.connection`**        | Medium      | Data updates without git commits; app always current; enables on-demand refresh button in the app                                                                   | External dependency; free-tier limits; secrets management required (needed anyway) |
+| **D. GitHub Actions weekly cron** running the pipeline and committing outputs | Low–Medium | Kills the manual weekly run regardless of storage choice; ESPN cookies live in Actions secrets                                                                      | Cookies expire (~1 year) and need occasional refresh                               |
 
 ### Recommendation (phased)
 
@@ -268,12 +306,12 @@ CSV + Excel files committed to git. Manual local script runs push updates.
 
 ## 6. Suggested sequencing
 
-| Priority | Work | Sections |
-|---|---|---|
-| 1 | ✅ Secrets out of source + rotate cookies | §1 |
-| 2 | ✅ Fix free-agent grade bug; pick one draft formula | §3 P1–P2 |
-| 3 | ✅ Caching in `data_loader.py` (~80x on page interactions) | §5 Phase 1 |
-| 4 | Draft grade redesign (value-over-slot + PAR) | §3 |
-| 5 | Lifetime/owner career features (unlocked by 3 & 4) | §4.1 |
-| 6 | SQLite for cross-league queries, then GitHub Actions refresh | §5 Phase 2–3 |
-| 7 | Season-page upgrades & draft analytics backlog | §4.2–4.3 |
+| Priority | Work                                                         | Sections       |
+| -------- | ------------------------------------------------------------ | -------------- |
+| 1        | ✅ Secrets out of source + rotate cookies                    | §1            |
+| 2        | ✅ Fix free-agent grade bug; pick one draft formula          | §3 P1–P2     |
+| 3        | ✅ Caching in`data_loader.py` (~80x on page interactions)  | §5 Phase 1    |
+| 4        | Draft grade redesign (value-over-slot + PAR)                 | §3            |
+| 5        | Lifetime/owner career features (unlocked by 3 & 4)           | §4.1          |
+| 6        | SQLite for cross-league queries, then GitHub Actions refresh | §5 Phase 2–3 |
+| 7        | Season-page upgrades & draft analytics backlog               | §4.2–4.3     |

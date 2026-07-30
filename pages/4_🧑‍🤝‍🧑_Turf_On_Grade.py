@@ -19,7 +19,6 @@ def app():
     swid = CRED["prahlad_swid"]
 
     # selected_year = '2024'
-    # league = f"Game of Yards! {selected_year}"
     # Seasons with data on file - no hard-coded list to keep in sync
     year_options = available_years("Game of Yards!")
     if not year_options:

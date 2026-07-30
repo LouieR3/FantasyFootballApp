@@ -14,13 +14,13 @@ def app():
     from ffapp.ui.calcPercent import percent
     from ffapp.ui.playoffNum import playoff_num
 
-    league_id = 417131856
-    espn_s2 = CRED["ava_s2"]
-    swid = CRED["ava_swid"]
+    league_id = 1259693145
+    espn_s2 = CRED["elle_s2"]
+    swid = CRED["elle_swid"]
     # Seasons with data on file - no hard-coded list to keep in sync
-    year_options = available_years("Philly Extra Special")
+    year_options = available_years("Operators Football League")
     if not year_options:
-        st.error("No season data found for Philly Extra Special.")
+        st.error("No season data found for Operators Football League.")
         return
     selected_year = st.selectbox(
         "Select Year", year_options, index=len(year_options) - 1
@@ -28,7 +28,7 @@ def app():
 
 
     
-    league = f"Philly Extra Special {selected_year}"
+    league = f"Operators Football League {selected_year}"
     file = f"{LEAGUES_DIR}/" + league + ".xlsx"
     st.title("👱🏻‍♀️ " + league)
     # Extract the league name without the year
