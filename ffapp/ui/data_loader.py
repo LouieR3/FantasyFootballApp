@@ -41,6 +41,7 @@ import os
 import pandas as pd
 
 from ffapp.metrics.owner_overrides import resolve_owner
+from paths import LEAGUES_DIR
 
 try:
     import streamlit as st
@@ -113,6 +114,34 @@ def _read_csv(path, mtime, **kwargs):
 def load_csv(path, **kwargs):
     """A CSV as a DataFrame (cached, returns a copy)."""
     return _read_csv(path, _file_key(path), **kwargs).copy()
+
+
+@_cache_data()
+def _years_for(league_name, dir_mtime):
+    import re
+    pattern = re.compile(r'^' + re.escape(league_name) + r' (\d{4})\.xlsx$')
+    years = []
+    try:
+        entries = os.listdir(LEAGUES_DIR)
+    except OSError:
+        return []
+    for name in entries:
+        m = pattern.match(name)
+        if m:
+            years.append(m.group(1))
+    return sorted(years)
+
+
+def available_years(league_name):
+    """Seasons this league actually has data for, oldest first.
+
+    Pages used to hard-code a year list, which drifted out of sync with the
+    files: six leagues advertised four seasons while only 2025 existed, so
+    picking any other year broke the page (the workaround was to comment the
+    selector out and pin the year). Deriving it means new seasons appear on
+    their own and only real options are offered.
+    """
+    return _years_for(league_name, _file_key(LEAGUES_DIR))
 
 
 @_cache_resource()

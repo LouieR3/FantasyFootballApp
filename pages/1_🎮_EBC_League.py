@@ -4,7 +4,9 @@ while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'path
     _d = _os.path.dirname(_d)
 _sys.path.insert(0, _d)
 from credentials import CRED
+import streamlit as st
 from paths import DRAFTS_DIR, LEAGUES_DIR, ODDS_DIR
+from ffapp.ui.data_loader import available_years
 def app():
     import pandas as pd
     from operator import itemgetter
@@ -17,13 +19,18 @@ def app():
     espn_s2=CRED["louie_s2_pages"]
     swid=CRED["louie_swid"]
 
-    # Initialize the dropdown for year selection
-    year_options = ['2021', '2022', '2023', '2024', '2025']
     
-    selected_year = st.selectbox("Select Year", year_options, index=4)  # Defaults to 2024
     st.title(f'🎮 EBC League {selected_year}')
     
     # Create the league string based on the selected year
+    # Seasons with data on file - no hard-coded list to keep in sync
+    year_options = available_years("EBC League")
+    if not year_options:
+        st.error("No season data found for EBC League.")
+        return
+    selected_year = st.selectbox(
+        "Select Year", year_options, index=len(year_options) - 1
+    )
     league = f"EBC League {selected_year}"
     # Extract the league name without the year
     league_name = " ".join(league.split()[:-1])  # Removes the year from the league string

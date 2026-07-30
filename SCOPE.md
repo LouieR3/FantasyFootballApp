@@ -70,6 +70,58 @@ Still open from the original plan:
 
 ---
 
+## 2a. Streamlit display sweep — ✅ done 2026-07-28
+
+- Home page rewritten: all 14 sections documented (it covered 5), dead commented blocks and unused imports removed, the italicized *NEW* dropped from Playoff Odds, typos fixed.
+- Added the missing section descriptions for **Playoff Results**, **Draft Results** and **Biggest LPI Upsets** (the last had the LPI blurb pasted in by mistake, commented out). **Playoff Odds By Week** had a verbatim copy of the Playoff Odds text.
+- **Corrected a factual error:** Schedule Comparison said to read "right to left". The grid is `records_df.at[team, opp]` — row = your team, column = the opponent whose schedule you borrow — so it reads **left to right** across your row.
+- Layout: `width=2000` (wider than any viewport) → `use_container_width`; `st.markdown("---")` → `st.divider()`; 8 pages' title emoji now matches their sidebar icon.
+
+### Page configuration bugs found during the sweep
+
+- **Year selectors were broken or absent.** Six leagues advertised four seasons but only have 2025 data, so any other year 404'd; the workaround had been to comment the selector out and pin the year. Years now come from `available_years()`, which reads what's on disk — working selector on every page, only real options, new seasons appear automatically, no annual edits.
+- **Five pages pointed at the wrong ESPN league** (copy-pasted from Las League, `league_id`/credentials never updated). This is why `display_lifetime_record` — the one section needing a correct `league_id` — was commented out on several pages.
+
+  | Page | was | now |
+  |---|---|---|
+  | The Girl's Room | 1049459 / `la_s2` | 1399036372 / `hannah_s2` |
+  | Matts League | 1049459 / `la_s2` | 261375772 / `matt_s2` |
+  | Turf On Grade | 1118513122 (EBC's id) | 1242265374 / `turf_s2` |
+  | Avas League | 1049459 / `la_s2`, showed Operators Football League | 417131856 / `ava_s2`, Philly Extra Special |
+  | Elles League | showed Philly Extra Special | 1259693145 / `elle_s2`, Operators Football League |
+
+  Lifetime Record re-enabled on the Avas/Elles pages. ⬜ **Still commented out on 6 pages** (Family League, Turf On Grade, Dave Redbull, Dave Friend, Matts, The Girl's Room, Dukes) — their league IDs are now correct, so they can probably be switched back on, but that needs a live run to confirm rather than being enabled blind.
+- ⬜ A **league registry** (§2 item 1) would have prevented this entire class of bug and is now clearly the highest-value remaining cleanup.
+
+---
+
+## 2b. Weekly-update season-boundary bugs — ✅ fixed 2026-07-28
+
+The weekly scripts needed hand-editing at season boundaries. Root cause: week detection was duplicated inline in both scripts with *different* semantics, and neither was right at the edges. Logic now lives in `ffapp/espn/week_utils.py` with 12 unit-tested boundary cases (preseason, week 1, mid-season, last regular week, each playoff week, full season, and `reg_season_count` of 12/13/14/15 for leagues whose playoffs start earlier or later).
+
+`current_week` now means *the next week to be played*, so `range(1, current_week)` is exactly the completed weeks. One definition, one assignment per script.
+
+| # | Bug | Symptom |
+|---|---|---|
+| 1 | `current_week = 19` hard-coded in `ESPNWeeklyUpdateList.py`, overriding detection | every league treated as an 18-week season |
+| 2 | `ESPNWeeklyUpdate.py` added `+ 1` after detecting the week | computed LPI for an unplayed week mid-season |
+| 3 | `else: current_week = scores_df.shape[1]` (off by one) | **the final week never got an LPI column** once the season completed |
+| 4 | `if current_week > 1` then read `'Week ' + str(week-1)` | **KeyError 'Week 0' after week 1** — the first-week crash |
+| 5 | Playoff block gated on `current_week > reg_season_count` | fired before the first playoff game finished, then asked "LPI By Week" for columns it didn't have → KeyError at playoff start |
+| 6 | Playoff loop ran `range(reg_season_count, last_column_name+1)` | walked *unplayed* trailing weeks, inventing 0-0 matchups |
+| 7 | `lpi_week_df` read from the **previous run's** workbook | a league's first run has no file to read |
+| 8 | `ESPNWeeklyUpdate.py`: `fileName` reassigned to a full path inside the playoff branch, then re-wrapped at the final write | wrote to `data/leagues/data/leagues/<name>.xlsx.xlsx` — **the workbook write crashed as soon as playoffs began** |
+| 9 | `ESPNWeeklyUpdate.py`: `lpi_df` (Louie Power Index) reassigned to LPI-By-Week data | **"Louie Power Index" sheet silently corrupted during playoffs** |
+| 10 | Playoff Results appended via openpyxl, then `pd.ExcelWriter(..., 'xlsxwriter')` recreated the workbook without it | **the sheet was destroyed on every run** |
+| 11 | A *second* `current_week` calculation inside the playoff block reassigned it | Monte Carlo ran with a different week than the rest of the script |
+| 12 | `ESPNWeeklyUpdate.py` never computed Remaining Schedule Difficulty, but truncates the workbook | running the single-league script **deleted** that sheet, breaking its page section |
+
+Byes and varying bracket sizes were already handled correctly (`opponent == team` → bye; round names derived from remaining team count) and were left alone.
+
+⚠️ Not executed: these scripts need `espn_api` and live ESPN access, which the dev environment here lacks. Every change is a targeted edit verified by compile + static checks, and `week_utils` is unit-tested, but **the first real run of each script should be watched**.
+
+---
+
 ## 3. Draft grade review
 
 The grade is computed in `draft_data.py` (and mirrored in `analysis/draft_analysis*.py`). Current design: a weighted sum of ratios → min-max scaled to 1–100 within the league-year → `10 * grade^0.51` transform → clip at 100 → letter grade.
@@ -218,8 +270,8 @@ CSV + Excel files committed to git. Manual local script runs push updates.
 
 | Priority | Work | Sections |
 |---|---|---|
-| 1 | Secrets out of source + rotate cookies | §1 |
-| 2 | Fix free-agent grade bug; pick one draft formula | §3 P1–P2 |
+| 1 | ✅ Secrets out of source + rotate cookies | §1 |
+| 2 | ✅ Fix free-agent grade bug; pick one draft formula | §3 P1–P2 |
 | 3 | ✅ Caching in `data_loader.py` (~80x on page interactions) | §5 Phase 1 |
 | 4 | Draft grade redesign (value-over-slot + PAR) | §3 |
 | 5 | Lifetime/owner career features (unlocked by 3 & 4) | §4.1 |

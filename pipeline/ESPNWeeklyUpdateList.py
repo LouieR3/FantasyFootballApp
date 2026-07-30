@@ -27,6 +27,7 @@ from ffapp.metrics.monte_carlo_odds import (
 from ffapp.espn.all_matchups import get_weeks_matchups
 from ffapp.metrics.create_betting_odds import create_betting_odds
 from ffapp.metrics.owner_overrides import resolve_owner, owner_id_for
+from ffapp.espn import week_utils
 from paths import DATA_DIR, LEAGUES_DIR
 
 start_time = time.time()
@@ -105,14 +106,13 @@ for league_config in leagues:
         # Store data in DataFrames 
         scores_df = pd.DataFrame(team_scores, index=team_names)
 
-        # Calculate current week
-        zero_week = (scores_df == 0.0).all(axis=0)
-        if zero_week.any():
-            current_week = zero_week.idxmax() +1
-        else:
-            current_week = scores_df.shape[1]
-        current_week = 19
-        print(current_week)
+        # Weeks played, derived from the scores (ffapp/espn/week_utils.py).
+        # current_week is the next week to play, so range(1, current_week)
+        # walks exactly the completed weeks - including the final one, which
+        # the old `scores_df.shape[1]` fallback silently dropped. Replaces a
+        # hard-coded `current_week = 19`.
+        current_week = week_utils.current_week(scores_df)
+        print(f"{leagueName}: {current_week - 1} weeks played, current week {current_week}")
         schedules_df = pd.DataFrame(schedules, index=team_names)
         # print(scores_df)
         # print()
@@ -246,7 +246,9 @@ for league_config in leagues:
         # lpi_weekly_df.insert(loc = 0, column = 'Teams', value = lpi_weekly_df.index)
         # lpi_weekly_df.reset_index(drop=True, inplace=True)
 
-        if current_week > 1:
+        # Needs two completed weeks to diff. With one week played the old
+        # `> 1` test still ran and looked up a non-existent 'Week 0'.
+        if current_week > 2:
             # Calculate the "Change from last week" column
             lpi_weekly_df['Change From Last Week'] = lpi_weekly_df[week_name] - lpi_weekly_df['Week ' + str(week - 1)]
             # Apply the formatting function to the "Change from last week" column
@@ -357,14 +359,19 @@ for league_config in leagues:
         # odds_df = oddsCalculator()
         # print(odds_df)
 
-        if current_week > settings.reg_season_count:
-            fileName = leagueName + " " + str(year)
-            playoff_fileName = f"{LEAGUES_DIR}/{fileName}.xlsx"
-            sheet_name = "LPI By Week"
+        playoff_df = None   # set below once playoff rounds have been played
 
-            # Read the LPI data
-            lpi_week_df = pd.read_excel(playoff_fileName, sheet_name=sheet_name, index_col=0)  # Team names as index
-            lpi_week_df = lpi_week_df.drop(['Change From Last Week'], axis=1)
+        # Only report playoff rounds that have actually been played. The old
+        # `current_week > reg_season_count` test fired before the first playoff
+        # game finished, then asked the LPI sheet for weeks it had no columns for.
+        playoff_week_indices = week_utils.completed_playoff_week_indices(
+            scores_df, settings.reg_season_count
+        )
+        if playoff_week_indices:
+            # Use the LPI table computed in this run rather than re-reading the
+            # previous run's workbook: that file does not exist on a league's
+            # first run, and a stale copy is missing the weeks being reported.
+            lpi_week_df = lpi_weekly_df.drop(columns=['Change From Last Week'], errors='ignore')
 
             # --------------------------------------------------------------------------------------
             # PLAYOFF RESULTS
@@ -379,14 +386,12 @@ for league_config in leagues:
                 schedule = [opponent.team_name for opponent in team.schedule]
                 schedules.append(schedule)
 
-            # Calculate current week
-            zero_week = (scores_df == 0.0).all(axis=0)
-            if zero_week.any():
-                current_week = zero_week.idxmax() +1
-            else:
-                current_week = scores_df.shape[1]
+            # (Removed a second, buggy current_week calculation here. It
+            # reassigned current_week with the old `shape[1]` fallback, so during
+            # the playoffs the Monte Carlo calls further down ran with a
+            # different week than the rest of the script.)
 
-            # Store data in DataFrames 
+            # Store data in DataFrames
             scores_df = pd.DataFrame(team_scores, index=team_names)
             schedules_df = pd.DataFrame(schedules, index=team_names)
             # print(scores_df)
@@ -414,7 +419,7 @@ for league_config in leagues:
 
             # Iterate through playoff weeks
             last_column_name = scores_df.columns[-1]
-            for week in range(reg_season_count, last_column_name+1):
+            for week in playoff_week_indices:
                 round_name = get_round_name(len(playoff_teams))
                 # print(f"Processing Playoff Round {round_name} (Week {week + 1})")
                 # print(playoff_teams)
@@ -507,18 +512,9 @@ for league_config in leagues:
             # Display the DataFrame
             # print(playoff_df)
 
-            # Open the workbook
-            workbook = openpyxl.load_workbook(playoff_fileName)
-            # Check if the sheet already exists
-            if "Playoff Results" in workbook.sheetnames:
-                # Remove the sheet
-                del workbook["Playoff Results"]
-            # Save the workbook after removing the sheet
-            workbook.save(playoff_fileName)
-
-            # Add playoff_df as a new sheet to the existing Excel file
-            with pd.ExcelWriter(playoff_fileName, engine="openpyxl", mode="a") as writer:
-                playoff_df.to_excel(writer, sheet_name="Playoff Results", index=False)
+            # Written with the rest of the sheets below. Appending here used to
+            # be pointless: the xlsxwriter call that follows recreates the
+            # workbook from scratch and wiped this sheet every run.
             
         writer = pd.ExcelWriter(f"{LEAGUES_DIR}/{fileName}.xlsx", engine='xlsxwriter')
         records_df.to_excel(writer, sheet_name='Schedule Grid')
@@ -565,6 +561,8 @@ for league_config in leagues:
         lpi_df.to_excel(writer, sheet_name='Louie Power Index')
         lpi_weekly_df.to_excel(writer, sheet_name='LPI By Week')
         upsets_df.to_excel(writer, sheet_name='Biggest Upsets')
+        if playoff_df is not None:
+            playoff_df.to_excel(writer, sheet_name='Playoff Results', index=False)
         writer.close()
         # --------------------------------------------------------------------------------------
     except Exception as e:

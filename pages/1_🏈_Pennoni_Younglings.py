@@ -4,7 +4,9 @@ while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'path
     _d = _os.path.dirname(_d)
 _sys.path.insert(0, _d)
 from credentials import CRED
+import streamlit as st
 from paths import DRAFTS_DIR, LEAGUES_DIR, ODDS_DIR
+from ffapp.ui.data_loader import available_years
 def app():
     import pandas as pd
     from operator import itemgetter
@@ -15,10 +17,15 @@ def app():
     league_id = 310334683
     espn_s2=CRED["louie_s2_pages"]
     swid=CRED["louie_swid"]
+    # Seasons with data on file - no hard-coded list to keep in sync
+    year_options = available_years("Pennoni Younglings")
+    if not year_options:
+        st.error("No season data found for Pennoni Younglings.")
+        return
+    selected_year = st.selectbox(
+        "Select Year", year_options, index=len(year_options) - 1
+    )
     
-    # Initialize the dropdown for year selection
-    year_options = ['2022', '2023', '2024', '2025']
-    selected_year = st.selectbox("Select Year", year_options, index=3)  # Defaults to 2024
     league = f"Pennoni Younglings {selected_year}"    
     # league = "EBCLeague"
     # league = "FamilyLeague"

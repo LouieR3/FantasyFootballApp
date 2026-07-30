@@ -4,7 +4,9 @@ while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'path
     _d = _os.path.dirname(_d)
 _sys.path.insert(0, _d)
 from credentials import CRED
+import streamlit as st
 from paths import DRAFTS_DIR, LEAGUES_DIR, ODDS_DIR
+from ffapp.ui.data_loader import available_years
 def app():
     import pandas as pd
     from operator import itemgetter
@@ -12,15 +14,20 @@ def app():
     from ffapp.ui.calcPercent import percent
     from ffapp.ui.playoffNum import playoff_num
 
-    league_id = 1118513122
-    espn_s2=CRED["turf_s2"]
-    swid=CRED["prahlad_swid"]
+    league_id = 1242265374
+    espn_s2 = CRED["turf_s2"]
+    swid = CRED["prahlad_swid"]
 
-    # Initialize the dropdown for year selection
-    year_options = ['2023', '2024']
-    selected_year = st.selectbox("Select Year", year_options, index=1)  # Defaults to 2024
     # selected_year = '2024'
     # league = f"Game of Yards! {selected_year}"
+    # Seasons with data on file - no hard-coded list to keep in sync
+    year_options = available_years("Game of Yards!")
+    if not year_options:
+        st.error("No season data found for Game of Yards!.")
+        return
+    selected_year = st.selectbox(
+        "Select Year", year_options, index=len(year_options) - 1
+    )
     league = f"Turf On Grade 2.0 {selected_year}"
     st.title("🧑‍🤝‍🧑 " + league)
     file = f"{LEAGUES_DIR}/" + league + ".xlsx"

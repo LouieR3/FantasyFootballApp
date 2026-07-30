@@ -46,6 +46,7 @@ def display_playoff_results(file):
     try:
         df = load_sheet(file, "Playoff Results")
         st.header('Playoff Results')
+        st.write("Every postseason matchup for this season. The winner of each game is shown in gold.")
 
         # Increment index to start at 1
         df.index += 1
@@ -95,7 +96,8 @@ def display_playoff_results(file):
 
 def display_schedule_comparison(file):
     st.header('Schedule Comparison')
-    st.write('What your record would be (right to left) against everyone elses schedule. Top to bottom shows what each teams record would be with your schedule')
+    st.write("Read across your row to see what your record would be with each other team's schedule. "
+             "Read down your column to see what every other team's record would be with your schedule.")
 
     df = load_sheet(file, "Schedule Grid")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
@@ -124,7 +126,7 @@ def display_schedule_comparison(file):
     games_played = sum(int(x) for x in first_record.split('-'))
     
     if games_played < 4:
-        st.dataframe(df, height=height, width=2000)
+        st.dataframe(df, height=height, use_container_width=True)
         return
     # df2 = df.style.apply(lambda x: ["background-color: white" if (int(x.split(" ")[0].split('-')[0]) >= top25 and int(x.split(" ")[0].split('-')[0]) < top10) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: gold" if (int(x.split(" ")[0].split('-')[0]) >= top10 and int(x.split(" ")[0].split('-')[0]) < count) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: goldenrod" if (int(x.split(" ")[0].split('-')[0]) == count) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot25 and int(x.split(" ")[0].split('-')[0]) > bot10) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot10 and int(x.split(" ")[0].split('-')[0]) > 0) else "" for x in x], axis=1, subset=names).apply(lambda x: ["background-color: maroon; color: white" if (int(x.split(" ")[0].split('-')[0]) == 0) else "" for x in x], axis=1, subset=names)
     # df2 = df.style.apply(lambda x: ["background-color: khaki" 
@@ -152,7 +154,7 @@ def display_schedule_comparison(file):
                             else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: tomato; color: white" if (int(x.split(" ")[0].split('-')[0]) <= bot10 and int(x.split(" ")[0].split('-')[0]) > 0) 
                             else "" for x in x], axis = 1, subset=names).apply(lambda x: ["background-color: red; color: white" if (int(x.split(" ")[0].split('-')[0]) == 0) 
                             else "" for x in x], axis = 1, subset=names)
-    st.dataframe(df2, height=height, width=2000)
+    st.dataframe(df2, height=height, use_container_width=True)
 
 def display_strength_of_schedule(file):
     """
@@ -300,7 +302,9 @@ def display_playoff_odds_by_week(file):
     - file (str): Path to the Excel file.
     """
     st.header('Playoff Odds By Week')
-    st.write("This chart shows what each team's odds are of getting each place in the league based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
+    st.write("How each team's playoff odds have moved week to week, so you can see whose season is "
+             "trending up or down. Each week's number is what the simulations gave that team using "
+             "only the games played up to that point.")
     
     # Read the Playoff Odds sheet
     df = load_sheet(file, "Playoff Odds By Week")
@@ -516,7 +520,7 @@ def display_betting_odds(file):
         st.dataframe(styled, height=height, column_config={"_numeric": None})
 
     # Bottom note
-    st.markdown("---")
+    st.divider()
     st.caption(
         "**Note:** Probabilities are shown as percentages with color gradients. "
         "Green indicates favorable odds, red indicates unfavorable odds for last place."
@@ -575,7 +579,7 @@ def display_betting_odds_full_width(file):
 
     st.dataframe(df_playoff_styled, width=650, column_config={'_numeric': None})
     
-    st.markdown("---")
+    st.divider()
     
     # --- FIRST PLACE ODDS ---
     st.subheader('First Place Odds')
@@ -605,7 +609,7 @@ def display_betting_odds_full_width(file):
     
     st.dataframe(df_first_styled, width=650, column_config={prob_col + '_numeric': None})
     
-    st.markdown("---")
+    st.divider()
     
     # --- LAST PLACE ODDS ---
     st.subheader('Last Place Odds')
@@ -633,7 +637,7 @@ def display_betting_odds_full_width(file):
     st.dataframe(df_last_styled, width=650, column_config={prob_col + '_numeric': None})
     
     # Add explanation at the bottom
-    st.markdown("---")
+    st.divider()
     st.caption(
         "**Note:** Probabilities are shown as percentages with color gradients. "
         "Green indicates favorable odds, red indicates unfavorable odds for last place."
@@ -767,19 +771,27 @@ def display_lpi(league_id, espn_s2, swid, file):
     st.dataframe(df3, height=height, width=700)
 
 def display_draft_results(draft_file):
-    try:
-        df = load_csv(draft_file)
-        st.header('Draft Results')
-        df = df.drop(columns=['Owner ID'])
-        # Increment index to start at 1
-        df.index += 1
-        AgGrid(df)
-    except:
-        print("No Draft Results Yet")
+    if not os.path.exists(draft_file):
+        return  # no draft data collected for this league-season
+
+    df = load_csv(draft_file)
+    st.header('Draft Results')
+    st.write(
+        "Every pick graded 30-100. The grade is 60% **value over slot** (how the player produced "
+        "versus what that draft slot historically returns, fit from every league-season on file) "
+        "and 40% **points above replacement** at their position. Grades are standardized within "
+        "each season across all leagues, so a 90 means the same thing in any league or year. "
+        "Sort by Draft Grade to find the steals, or by Total Pick to walk the draft in order."
+    )
+    df = df.drop(columns=['Owner ID'], errors='ignore')
+    # Increment index to start at 1
+    df.index += 1
+    AgGrid(df)
 
 def display_biggest_lpi_upsets(file):
     st.header('Biggest LPI Upsets')
-    # st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline.')
+    st.write("The season's most unlikely results: games won by the team with the worse Louie Power "
+             "Index. The larger the LPI Difference, the bigger the upset.")
     df = load_sheet(file, "Biggest Upsets")
     df = df.iloc[: , 1:]
     df.index += 1
