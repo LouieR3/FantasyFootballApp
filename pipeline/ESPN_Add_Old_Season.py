@@ -382,7 +382,10 @@ def pull_league_data(league):
 # # Third: create the draft results and free agent results csvs, then regrade
 # # every season together so grades stay comparable:
 # pull_draft_data(league, year)
-# from draft_grading import regrade_all; regrade_all()
+# REQUIRED after any pull_draft_data: the pull writes raw stats with blank grades,
+# and grades are pooled across every league-season, so they must all be recomputed:
+# from ffapp.metrics.draft_grading import regrade_all; regrade_all()
+# (or just run: python pipeline/regrade_drafts.py)
 
 # # Fourth: add all matchups to csv
 # all_matchups_df = get_years_matchups(league, year)

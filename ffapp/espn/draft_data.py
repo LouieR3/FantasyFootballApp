@@ -157,6 +157,29 @@ def pull_draft_data(league, year):
         # --------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------
+        # FINAL ROSTER CSV
+        # Who each team actually finished the season with. The free agent file
+        # only lists players nobody drafted, so on its own it cannot say how much
+        # of a team's own draft survived - that needs the roster itself. Powers
+        # the draft-retention view in ffapp/metrics/draft_analysis.py.
+        # --------------------------------------------------------------------------------------
+        def finalRosterResults():
+            rows = []
+            for team in league.teams:
+                for player in team.roster:
+                    rows.append({
+                        "Team": team.team_name,
+                        "Player": player.name,
+                        "Position": player.position,
+                    })
+            roster_df = pd.DataFrame(rows)
+            roster_df["Owner ID"] = roster_df["Team"].map(owner_mapping)
+            fileRoster = f"{DRAFTS_DIR}/" + leagueName + " Final Roster" + " " + str(year) + ".csv"
+            roster_df.to_csv(fileRoster, index=False)
+            print(f"final rosters: {len(roster_df)} players across {roster_df['Team'].nunique()} teams")
+        finalRosterResults()
+
+        # --------------------------------------------------------------------------------------
         # FREE AGENT RESULTS CSV
         # --------------------------------------------------------------------------------------
         def freeAgentResults():

@@ -178,7 +178,9 @@ The grade is computed in `draft_data.py` (and mirrored in `analysis/draft_analys
 
 ### Problems found
 
-**P1 — Free agent grades are computed from the wrong rows (bug).** In `freeAgentResults()`, the non-2024 branch grades `additions_df` using `draft_df['Points'] / max_points` and `draft_df['Avg Points'] / max_avg_points` (draft_data.py:346–347) — drafted players' stats, not the free agents'. Worse, `draft_df` was previously sorted by grade, so pandas index alignment pairs each free agent with an essentially random drafted player. The 2024 branch has the same alignment problem dividing `additions_df['Points']` by `draft_df['Projected Points']` (lines 331–332): mismatched indexes produce NaN/garbage. **Free agent grades for non-2024 years are effectively noise.**
+**P1 — Free agent grades are computed from the wrong rows (bug).** In `freeAgentResults()`, the non-2024 branch grades `additions_df` using `draft_df['Points'] / max_points` and `draft_df['Avg Points'] / max_avg_points` (draft_data.py:346–347) — drafted players' stats, not the free agents'. Worse, `draft_df` was previously sorted by grade, so pandas index alignment pairs each free agent with an essentially random drafted player. The 2024 branch has the same alignment problem dividing `additions_df['Points']` by `draft_df['Projected Points']` (lines 331–332): mismatched indexes produce NaN/garbage.
+
+**Corrected severity (measured after the fact):** an earlier draft of this document called those grades "effectively noise" — that was too strong. Two of the four terms (`Games Played`, `Position Value`) *were* computed from the free agent's own row, so the old grades still correlated with the free agent's actual points at **+0.65** on average within a league-year. The redesign raises that to **+0.77**. So the bug degraded the grades rather than randomising them.
 
 **P2 — The draft-position term flips sign between year branches.** The 2024 formula rewards *later* picks: `(Total Pick − 1)/(max_pick − 1) × 0.4` (line 178). The other-years formula rewards *earlier* picks: `(max_pick − Total Pick)/max_pick × 0.4` (line 203). They can't both be right. More fundamentally, an additive position term measures nothing about steals — a last-round bust gets the same +0.4 credit as a last-round league-winner. "Steal-ness" is an interaction: performance *relative to what that slot usually returns* (see fix below).
 
@@ -191,6 +193,29 @@ The grade is computed in `draft_data.py` (and mirrored in `analysis/draft_analys
 **P6 — The `^0.51` curve + clip pins the top.** After min-max, the max is 100, and `10 × 100^0.51 ≈ 105` → clipped to 100. Several players pin at exactly 100, and the curve compresses differences among good picks (the region you care most about).
 
 **P7 — Smaller issues.** `max_games = 14` is hardcoded while season points accrue over 17–18 weeks; the letter scale bottoms out at "F-" with no "F"; two divergent formulas (2024 vs. else) with different weight sets makes results era-dependent; weights W1–W8 are ad hoc with no validation against any ground truth.
+
+### Status: can this be checked off?
+
+**Yes for the grading itself** — verified against the current data on 2026-07-28:
+
+| Check | Result |
+|---|---|
+| Draft picks graded | 6,772 / 6,772 rows, 0 NaN, all within 30–100 |
+| Free agents graded | 1,710 / 1,710 rows, 0 NaN, all within 30–100 |
+| Letter grades match their numeric grade | 0 mismatches across all 75 files |
+| Grade spread (picks / FAs) | sd 9.93 / 10.00 — full range in use, no pinning |
+| Team grades | 429 team-seasons, sd 9.95, range 51.7–100, full A+→F |
+| Predictive validity | team grade vs final standing **r = −0.51**, vs points-for **r = +0.53** |
+| FA grade vs that FA's own points | **+0.77** mean within league-year (was +0.65) |
+| P1–P7 from above | all addressed; one formula for every season |
+
+⬜ **Three things remain open** (none of them block using the grades):
+
+1. **Free agent grades use full-season points, not points after acquisition.** A player picked up in week 12 is credited with everything they scored from week 1. Fixing this needs transaction dates, which the current pull doesn't collect (`league.recent_activity()` would provide them). This is the most substantive remaining inaccuracy.
+2. **26 `RRR On Premise` rows in `Draft_Grades_with_Standings.csv` keep stale grades.** They have no Year or Standing, so the regrade can't match them. That league has no page and no known league_id in the registry — needs its id/credentials, or those rows should be dropped.
+3. **Availability no longer factors in.** The old formula gave credit for Games Played; the new one is purely points-based (value over slot + points above replacement). A 10-game monster now grades above a 17-game merely-good player. That's defensible but it is a behaviour change worth being aware of.
+
+One operational note: `pull_draft_data()` writes raw stats with **blank** grades on purpose, because grades are pooled across all league-seasons. Any pull must be followed by `python pipeline/regrade_drafts.py`, or the new season's CSVs will have empty grade columns.
 
 ### Recommended redesign — ✅ implemented 2026-07-28
 
@@ -206,6 +231,35 @@ The redesign below now lives in `draft_grading.py` (shared by `draft_data.py` an
 4. **Fix the free agent frame (P1)** — compute every component from `additions_df` with `reset_index(drop=True)` applied after any sort, before arithmetic that pairs frames. Consider grading FA pickups as points-above-replacement accrued *after acquisition date* rather than full-season points.
 5. **Team draft grade:** weight pick grades by draft capital (early picks matter more) rather than a simple mean, and validate the formula: regress team draft grade against final standings / points-for across `Draft_Grades_with_Standings_Enhanced.csv` history and tune until the correlation is meaningful. That file exists precisely to make this testable.
 6. Derive `max_games` from the league's actual season length instead of hardcoding 14.
+
+---
+
+## 3b. Post-season draft analysis — ✅ built 2026-07-28
+
+New page `pages/13_🔎_Draft_Analysis.py` over `ffapp/metrics/draft_analysis.py`. Pick a league and season and get a full draft post-mortem, in seven tabs.
+
+**The core idea — accuracy vs luck.** Each pick is measured against **Expected** (what that draft slot historically returns, from the position-rank curve fit across all 39 league-seasons), then split:
+
+| | |
+|---|---|
+| `ACCURACY` | Projected − Expected — you took a player the market already rated above the slot. Your decision. |
+| `LUCK` | Actual − Projected — breakouts, injuries, situation. Not your decision. |
+| `VALUE` | Actual − Expected = ACCURACY + LUCK |
+
+Verified exact (`max residual 0.000000000`) across all 39 league-seasons.
+
+Two measurement problems found and fixed while building it:
+
+- **Raw accuracy/luck were badly biased.** ESPN projections assume a full healthy season, so they sit **~46 points per pick** above the median outcomes the slot curve is fit on. Uncentred, *every* manager looked highly accurate and desperately unlucky. Both are now centred on the league-season mean, so 0 = average drafter. Centring is a constant shift, so the identity survives.
+- **It is called "accuracy", not "skill", on purpose.** Measured over 102 consecutive-season owner pairs: accuracy repeats year over year at **r = +0.08** — indistinguishable from zero at that sample size (luck +0.03, total value +0.24). The metric describes how a draft was *built* relative to the market; it is not evidence of durable talent. The UI says so too.
+
+**Tabs:** Owner scorecard (value, accuracy/luck, hit rate, accuracy-vs-luck scatter) · Steals & busts · By round (best pick of each round, how each round performed league-wide) · By position (value by owner × position, position-taken-each-round tendencies) · Best available (hindsight points left on the board per pick and per owner) · Best lineup (optimal starting lineup from a manager's own picks, bench points forgone) · Retention.
+
+**Data gaps, handled explicitly rather than fudged:**
+
+1. **2023 has no projections** (~16% coverage), so the accuracy/luck split is hidden for those 8 league-seasons with a visible warning. Value Over Slot is still exact.
+2. **Draft retention needed data that did not exist.** The free-agent file only lists players *nobody* drafted, so it cannot say how much of a manager's own draft survived. `draft_data.py` now writes `data/drafts/<league> Final Roster <year>.csv`; the tab fills in from the next pull onward. Past seasons cannot be reconstructed — ESPN only exposes current rosters.
+3. ⬜ **"Best possible record from simulation" was not built.** Simulating a counterfactual roster's record needs *weekly* player scores; only season totals and averages are stored. Adding weekly player scores to the pull would unlock it, along with start/sit analysis ("points left on your bench each week"). That is the natural next step.
 
 ---
 
@@ -226,14 +280,14 @@ Items carried over from `todo.txt` are marked ⭐.
 
 ### 4.2 Draft & player analytics
 
-- ⭐ **"Best possible team" button** — optimal lineup from that year's draft pool given the league's roster slots.
-- ⭐ **Best pick of each round**; ⭐ **biggest steals / biggest busts** (falls straight out of the value-over-slot grade in §3).
-- **Draft position tendencies per owner:** positional mix by round across years (e.g., "always takes a QB by round 3").
+- ✅ **"Best possible team"** — optimal lineup from a manager's own picks (§3b, Best lineup tab).
+- ✅ **Best pick of each round**, **biggest steals / busts** — §3b.
+- ✅ **Draft position tendencies per owner** — §3b, By position tab (single season; across-years view still open).
 - **Round-by-round hit rate:** share of picks per round that returned starter-level value, per owner and league.
 - **Draft grade vs. final standing scatter** across all league-years — does drafting well predict winning? (validates §3.5).
 - **Player-level views:** most-drafted players by owner across years ("player loyalty"), points by acquisition type (drafted vs. FA vs. trade), best FA pickup of the year.
 - **Roster Grade** (distinct from Draft Grade): blend the team's draft grade with its free-agent Performance Grades, weighted by each group's share of actual points scored, so the number reflects the roster the team *finished* with rather than draft day alone. Pairs naturally with a "draft grade vs. roster grade" delta column — big positive deltas identify the best in-season managers.
-- **Post-draft roster churn:** % of drafted roster still on the team at season end.
+- 🟡 **Post-draft roster churn** — built in §3b; waiting on the new Final Roster capture to have data.
 
 ### 4.3 Season page upgrades
 
