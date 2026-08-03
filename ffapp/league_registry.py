@@ -89,7 +89,20 @@ LEAGUES = [
          page=None, color="#dbdb8d", confirmed=False),
 ]
 
+# Older names ESPN used for the same league. `all_matchups.csv` carries whatever
+# the league was called when each week was pulled, so 2025 has 18 games filed
+# under "Family League" and 87 under "Family Fantasy" - the same league. Without
+# canonicalising, that franchise's lifetime history splits in two.
+ALIASES = {
+    'Family League': 'Family Fantasy',
+}
+
 BY_NAME = {lg["espn_name"]: lg for lg in LEAGUES}
+
+
+def canonical(espn_name):
+    """Fold a historical league name onto the name used on disk today."""
+    return ALIASES.get(str(espn_name).strip(), str(espn_name).strip())
 
 # Anything not in the registry still needs a colour when charted.
 FALLBACK_COLOR = "#cccccc"

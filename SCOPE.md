@@ -290,19 +290,54 @@ Simplification stated rather than hidden: every *other* manager's picks stay as 
 
 ---
 
+## 3c. Lifetime league history — ✅ built 2026-07-28
+
+New page `pages/14_🏛️_Lifetime_League_History.py` over `ffapp/metrics/lifetime.py`. Appears only for the **8 leagues with 2+ seasons** on file. Computed entirely from data already on disk — no ESPN round trip.
+
+### The identity layer is the whole trick
+
+Team names change constantly, so a name is not a manager. Three sources get stitched:
+
+1. **Draft files carry `Owner ID`** for all 39 league-seasons — the stable key.
+2. **`all_matchups.csv` carries only team names**, and stores whatever the team was called *when that week was pulled*. Two separate failure modes fixed:
+   - names in the matchups but not the draft → matched by elimination when exactly one is unclaimed on each side;
+   - a team renamed **mid-season** appears under *both* names, so set arithmetic finds nothing. Those merge when the two names play in non-overlapping weeks, never play each other, and their game counts add to one season. (Pennoni Younglings 2025: "Daddy's Home" 3 games + "Daddy's Finally Home" 14 = 17.)
+3. **LPI sheets** supply human owner names (155 resolved); falls back to the most recent team name.
+
+Result: **100% owner resolution on all 8 leagues** (was 92% before the rename passes). Anything still unmatched is listed in a warning on the page rather than silently dropped.
+
+> **League names drift too.** 2025 has 18 games filed under "Family League" and 87 under "Family Fantasy" — the same league, renamed mid-season. Without folding them together that franchise's history splits in two. `league_registry.ALIASES` + `canonical()` handle it; add future renames there.
+
+Regular season vs playoffs comes from the **playoff bracket data**, keyed on (year, team, score), not a week cutoff — leagues start their postseason in different weeks, so a cutoff would be wrong per league.
+
+### Tabs
+
+- **All-time** — standings by win %, with reg-season and playoff records split out, points for/against, best week.
+- **Careers** — season by season per manager (record, playoff record, PF/PA, finish, draft grade) plus franchise trend lines for points or wins.
+- **Head to head** — full owner×owner win matrix, plus a rivalry picker showing every meeting, record, average margin and playoff meetings.
+- **Playoffs** — playoff W/L, win %, **titles**, finals appearances, average playoff score. Plus **clutch or choke**: playoff scoring against that manager's *own* regular-season average, so it measures showing up when it counts rather than just being good. Managers under two playoff games are excluded — one bad game is not a pattern.
+- **Record book** — highest/lowest score, most lopsided win, narrowest win, most points in a loss, fewest in a win, highest/lowest playoff score, most lopsided playoff win, most over/under projection. Plus best and worst seasons.
+- **Streaks & feats** — longest winning and losing runs, carrying across season boundaries.
+
+Verified across all 8 leagues: margins cancel to zero, W count equals L count, all-time wins reconcile to the game log, the head-to-head matrix sums to total wins with a zero diagonal, and every career owner appears in the all-time table. 12s for all 8 leagues; cached per league in the app.
+
+⬜ Still open: cross-season Elo (`experiments/elo.py` exists but is not wired in), and championship/podium tracking beyond titles and finals (needs final standings for every season, which `Draft_Grades_with_Standings.csv` only partly covers).
+
+---
+
 ## 4. Feature backlog
 
 Items carried over from `todo.txt` are marked ⭐.
 
 ### 4.1 Lifetime / multi-year (for leagues with 2+ seasons)
 
-- ⭐ **Owner career table:** Year, W, L, Points For, Points Against, Final Place, Draft Grade — one row per season, including playoff matchups in the totals.
-- **Franchise trend charts:** wins, PF/PA, and season-end LPI by year (line charts); draft grade by year.
-- **All-time records book:** highest single-week score, biggest blowout, closest game, longest win/loss streaks, best/worst season, most points in a loss / fewest in a win — all derivable from `all_matchups.csv`.
-- **Head-to-head rivalry view:** pick two owners → lifetime record, average margin, playoff meetings, notable games.
-- **Championship/podium tracker:** titles, finals appearances, playoff appearance rate per owner.
+- ✅ **Owner career table** — §3c, Careers tab.
+- 🟡 **Franchise trend charts** — points and wins by year done in §3c; season-end LPI and draft grade by year still open.
+- ✅ **All-time records book** — §3c, Record book + Streaks tabs.
+- ✅ **Head-to-head rivalry view** — §3c, Head to head tab.
+- 🟡 **Championship/podium tracker** — titles, finals and playoff appearances done in §3c; podium (2nd/3rd) still needs full final standings.
 - ⭐ **Cross-season Elo** (`elo.py` exists — surface it): Elo carried across seasons with decay, charted over the franchise's life.
-- **Owner-based identity** (`lifetime_record_owner.py` started this): key everything on Owner ID rather than team name so renames don't split history.
+- ✅ **Owner-based identity** — solved offline in §3c (100% resolution incl. mid-season renames), no ESPN call needed.
 - ✅ **Co-owner attribution** (2026-07-28): ESPN returns a list of owners per team and the code took `owners[0]`, so a co-owned season landed on whoever ESPN listed first — splitting a franchise's history across two people. `owner_overrides.py` now defines the canonical owner per co-owned team-year, and every user-facing path resolves through it. First entry: Pennoni Younglings 2024 "Philadelphia Bills Mafia" (Henry Morris + Robbie Wilston) → **Robbie Wilston**, so Henry's history is 2022–2023 and Robbie's is 2024–2025. Add future cases to `PREFERRED_CO_OWNER`.
 
 ### 4.2 Draft & player analytics
