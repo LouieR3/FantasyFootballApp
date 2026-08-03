@@ -19,6 +19,7 @@ import random
 import os
 
 from ffapp.metrics.owner_overrides import resolve_owner
+from ffapp.espn import league_settings
 from paths import DRAFTS_DIR
 
 start_time = time.time()
@@ -152,6 +153,11 @@ def pull_draft_data(league, year):
 
         # Add Owner ID column to draft_df
         draft_df["Owner ID"] = draft_df["Team"].map(owner_mapping)
+
+        # Record this league-season's lineup settings (starting slots, flex,
+        # bench size). Needed to know what a legal lineup is - see
+        # ffapp/metrics/draft_analysis.py's best-possible-lineup work.
+        league_settings.save_settings(leagueName, year, settings)
 
         draft_df.to_csv(fileDraft, index=False)
         # --------------------------------------------------------------------------------------

@@ -43,7 +43,10 @@ import os
 import numpy as np
 import pandas as pd
 
+from functools import lru_cache
+
 from paths import MASTER_DRAFT_DATA, draft_file, free_agent_file
+from ffapp.espn import league_settings
 from ffapp.metrics.draft_grading import build_expectation_curves
 
 # A conventional ESPN starting lineup. League settings vary, so this is an
@@ -279,3 +282,156 @@ def roster_retention(league_name, year):
             'Acquired Elsewhere': len(g) - kept,
         })
     return pd.DataFrame(rows).sort_values('Retention %', ascending=False).reset_index(drop=True)
+
+
+# ==========================================================================
+# What was the best lineup you could actually have drafted?
+# ==========================================================================
+# Full hindsight ("best 9 in the draft, order ignored") gives every manager the
+# identical number, so it ranks nobody. This instead holds each manager to their
+# own draft slots: at pick 9 you may have anyone who really went 9th or later.
+# A late-round star like a 4th-round WR who finished 7th in points was reachable
+# by everyone, and that is the point - it shows who actually reached.
+#
+# Exactness: only starters score, so this is "choose players to fill the lineup,
+# each assigned to one of your pick slots, maximising points". A player with
+# actual pick a is reachable at your slot p iff a >= p, so the reachable sets are
+# nested as p grows. That means an optimal assignment never needs to cross - if
+# x is cheaper (earlier) than y, giving x the earlier slot is always feasible -
+# so walking players in actual-pick order and slots in order is optimal, not
+# greedy. That turns it into a DP over (player, slot, slots filled).
+#
+# One simplification, stated rather than hidden: every *other* manager's picks
+# stay as they really were. Taking a player somebody else drafted later does not
+# ripple through their draft.
+
+# Fallback when a league-season has no captured ESPN settings (pre-capture
+# seasons). Standard ESPN: QB1 RB2 WR2 TE1 FLEX1 D/ST1 K1.
+FALLBACK_SLOT_GROUPS = [(('D/ST',), 1), (('K',), 1), (('QB',), 1), (('RB',), 2),
+                        (('TE',), 1), (('WR',), 2), (('RB', 'WR', 'TE'), 1)]
+# A lineup needs at most 3 of any one position, but availability matters - the
+# best RBs may all be gone by your slots - so keep a deep buffer. Verified to
+# give answers identical to a 40-deep pool on 8 league-seasons while cutting the
+# solve time roughly in half.
+MAX_PER_POSITION = 25
+
+
+def league_slot_groups(league_name, year):
+    """(slot_groups, source) for a league-season - real ESPN settings if captured."""
+    stored = league_settings.get_settings(league_name, year)
+    if stored and stored.get('roster'):
+        groups = league_settings.parse_slot_groups(stored['roster'])
+        if groups:
+            return groups, 'espn'
+    return FALLBACK_SLOT_GROUPS, 'assumed'
+
+
+def _reachable_pool(df, slots):
+    """Players a manager could have taken at some slot of theirs, trimmed."""
+    pool = df[df['Total Pick'] >= slots[0]].copy()
+    pool = pool.sort_values('Points', ascending=False).groupby('Position').head(MAX_PER_POSITION)
+    return pool.sort_values('Total Pick').reset_index(drop=True)
+
+
+def best_possible_at_own_slots(df, team, slot_groups):
+    """Exact best startable lineup this team could have drafted at its own slots.
+
+    Returns (total_points, chosen_rows_DataFrame).
+    """
+    slots = sorted(df[df['Team'] == team]['Total Pick'].tolist())
+    if not slots:
+        return 0.0, df.iloc[0:0]
+    pool = _reachable_pool(df, slots)
+    picks = tuple(pool['Total Pick'].tolist())
+    pts = tuple(pool['Points'].fillna(0.0).tolist())
+    pos = tuple(pool['Position'].tolist())
+    caps = tuple(n for _, n in slot_groups)
+    allowed = tuple(frozenset(a) for a, _ in slot_groups)
+    n, k, ng = len(pool), len(slots), len(slot_groups)
+    slots_t = tuple(slots)
+
+    @lru_cache(maxsize=None)
+    def best(j, i, filled):
+        # every point is non-negative, so there is no reason to stop early;
+        # running out of players or slots simply ends the lineup where it is
+        if j >= n or i >= k:
+            return 0.0
+        out = best(j + 1, i, filled)             # pass on this player
+        alt = best(j, i + 1, filled)             # spend this slot on a bench player
+        if alt > out:
+            out = alt
+        if picks[j] >= slots_t[i]:               # still on the board at this slot
+            p = pos[j]
+            for g in range(ng):
+                if filled[g] < caps[g] and p in allowed[g]:
+                    nf = list(filled); nf[g] += 1
+                    cand = pts[j] + best(j + 1, i + 1, tuple(nf))
+                    if cand > out:
+                        out = cand
+        return out
+
+    start = (0,) * ng
+    total = best(0, 0, start)
+
+    # walk the memo table back out to recover which players were chosen
+    chosen, j, i, filled = [], 0, 0, start
+    while j < n and i < k:
+        target = best(j, i, filled)
+        if abs(best(j + 1, i, filled) - target) < 1e-9:
+            j += 1
+            continue
+        if abs(best(j, i + 1, filled) - target) < 1e-9:
+            i += 1
+            continue
+        moved = False
+        if picks[j] >= slots_t[i]:
+            for g in range(ng):
+                if filled[g] < caps[g] and pos[j] in allowed[g]:
+                    nf = list(filled); nf[g] += 1
+                    if abs(pts[j] + best(j + 1, i + 1, tuple(nf)) - target) < 1e-9:
+                        chosen.append((pool.index[j], '/'.join(sorted(allowed[g]))
+                                       if len(allowed[g]) > 1 else pos[j], slots_t[i]))
+                        filled = tuple(nf); j += 1; i += 1; moved = True
+                        break
+        if not moved:
+            j += 1
+    best.cache_clear()
+
+    if not chosen:
+        return total, pool.iloc[0:0]
+    idx = [c[0] for c in chosen]
+    out = pool.loc[idx].copy()
+    out['Slot'] = [c[1] for c in chosen]
+    out['Your Pick Used'] = [c[2] for c in chosen]
+    return total, out.sort_values('Points', ascending=False)
+
+
+def redraft_efficiency(df, slot_groups):
+    """League table: actual best lineup vs the ceiling reachable at own slots."""
+    rows = []
+    for team in sorted(df['Team'].unique()):
+        ceiling, _ = best_possible_at_own_slots(df, team, slot_groups)
+        actual = _optimal_lineup_groups(df[df['Team'] == team], slot_groups)
+        act_pts = float(actual['Points'].sum())
+        rows.append({
+            'Team': team,
+            'Actual Best Lineup': round(act_pts, 1),
+            'Could Have Drafted': round(ceiling, 1),
+            'Missed By': round(ceiling - act_pts, 1),
+            'Efficiency %': round(act_pts / ceiling * 100, 1) if ceiling else 0.0,
+            'First Pick': int(df[df['Team'] == team]['Total Pick'].min()),
+        })
+    return pd.DataFrame(rows).sort_values('Efficiency %', ascending=False).reset_index(drop=True)
+
+
+def _optimal_lineup_groups(players, slot_groups):
+    """Best legal lineup from a fixed set of players, honouring flex slots."""
+    pool = players.sort_values('Points', ascending=False)
+    used, chosen = set(), []
+    # single-position slots first so a flex is not filled by someone a strict
+    # slot needed; slot_groups is already ordered that way
+    for allowed, count in slot_groups:
+        picks = pool[(pool['Position'].isin(allowed)) & (~pool.index.isin(used))].head(count)
+        used.update(picks.index)
+        chosen.append(picks)
+    return pd.concat(chosen) if chosen else players.iloc[0:0]

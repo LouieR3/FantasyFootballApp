@@ -33,6 +33,19 @@ def season_analysis(league, year, dir_key):
     return df, meta
 
 
+@st.cache_data(show_spinner='Solving the best draft each manager could have had...')
+def redraft_table(league, year, dir_key):
+    """Cached: the exact solve takes a couple of seconds per league-season."""
+    df, _ = da.load_season(league, year)
+    slot_groups, _ = da.league_slot_groups(league, year)
+    return da.redraft_efficiency(df, slot_groups)
+
+
+def league_settings_describe(slot_groups):
+    from ffapp.espn.league_settings import describe
+    return describe(slot_groups)
+
+
 def app():
     st.header('🔎 Post-Season Draft Analysis')
     st.write(
@@ -168,23 +181,47 @@ drafter in this league.
 
     # ------------------------------------------------------------- 6. best lineup
     with tabs[5]:
-        st.markdown('##### Best possible lineup from your own picks')
+        slot_groups, source = da.league_slot_groups(league, year)
+        st.markdown('##### What was the best lineup you could actually have drafted?')
         st.caption(
-            'The highest-scoring legal starting lineup each manager could have fielded '
-            f'from the players they drafted, by full-season points. Slots assumed: '
-            f'{", ".join(f"{n}×{p}" for p, n in da.DEFAULT_SLOTS)}.'
+            'Each manager is held to **their own draft slots**: at pick 9 you may have '
+            'anyone who really went 9th or later. So a 4th-round breakout was reachable '
+            'by everyone — this shows who reached. Exact, not a guess: solved as an '
+            'optimisation over your picks, not a greedy walk.'
         )
-        team = st.selectbox('Team', sorted(df['Team'].unique()), key='bl')
-        lineup = da.best_lineup(df, team)
-        left, right = st.columns([2, 1])
-        with left:
-            st.dataframe(lineup[['Player', 'Position', 'Pick', 'Points', 'Expected', 'Value']],
+        if source == 'espn':
+            st.caption(f'Lineup from ESPN settings: **{league_settings_describe(slot_groups)}**')
+        else:
+            st.warning(
+                f'No ESPN lineup settings captured for this season, assuming '
+                f'**{league_settings_describe(slot_groups)}**. The weekly pull now records '
+                'real settings, so this corrects itself from the next run.'
+            )
+
+        eff = redraft_table(league, year, os.path.getmtime(DRAFTS_DIR))
+        st.dataframe(
+            eff.style.background_gradient(subset=['Efficiency %'], cmap='RdYlGn')
+               .background_gradient(subset=['Missed By'], cmap='Reds'),
+            hide_index=True, use_container_width=True)
+        st.caption(
+            'The ceiling barely moves between managers (~2% spread) — in hindsight your '
+            'draft slot hardly limits what was *reachable*. **Efficiency %** is the real '
+            'measure: how much of your own reachable ceiling you actually captured.'
+        )
+
+        st.divider()
+        team = st.selectbox('Show the lineup this team could have had', sorted(df['Team'].unique()), key='bl')
+        ceiling, could = da.best_possible_at_own_slots(df, team, slot_groups)
+        actual = da._optimal_lineup_groups(df[df['Team'] == team], slot_groups)
+        a, b = st.columns(2)
+        with a:
+            st.markdown(f'**Could have drafted** — {ceiling:,.1f} pts')
+            st.dataframe(could[['Slot', 'Player', 'Position', 'Pick', 'Your Pick Used', 'Points']],
                          hide_index=True, use_container_width=True)
-        with right:
-            drafted_total = df[df['Team'] == team]['Points'].sum()
-            st.metric('Best lineup points', f"{lineup['Points'].sum():,.1f}")
-            st.metric('All drafted players', f"{drafted_total:,.1f}")
-            st.metric('Left on the bench', f"{drafted_total - lineup['Points'].sum():,.1f}")
+        with b:
+            st.markdown(f'**Actually drafted (best lineup)** — {actual["Points"].sum():,.1f} pts')
+            st.dataframe(actual[['Player', 'Position', 'Pick', 'Points']],
+                         hide_index=True, use_container_width=True)
 
     # --------------------------------------------------------------- 7. retention
     with tabs[6]:

@@ -28,6 +28,7 @@ from ffapp.espn.all_matchups import get_weeks_matchups
 from ffapp.metrics.create_betting_odds import create_betting_odds
 from ffapp.metrics.owner_overrides import resolve_owner, owner_id_for
 from ffapp.espn import week_utils
+from ffapp.espn import league_settings
 from paths import DATA_DIR, LEAGUES_DIR
 
 start_time = time.time()
@@ -90,6 +91,7 @@ for league_config in leagues:
         settings = league.settings
 
         leagueName = settings.name.replace(" 22/23", "")
+        league_settings.save_settings(leagueName, year, settings)
         fileName = leagueName + " "+str(year)
         file = leagueName + ".xlsx"
 

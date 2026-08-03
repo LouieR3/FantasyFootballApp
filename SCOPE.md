@@ -253,13 +253,31 @@ Two measurement problems found and fixed while building it:
 - **Raw accuracy/luck were badly biased.** ESPN projections assume a full healthy season, so they sit **~46 points per pick** above the median outcomes the slot curve is fit on. Uncentred, *every* manager looked highly accurate and desperately unlucky. Both are now centred on the league-season mean, so 0 = average drafter. Centring is a constant shift, so the identity survives.
 - **It is called "accuracy", not "skill", on purpose.** Measured over 102 consecutive-season owner pairs: accuracy repeats year over year at **r = +0.08** — indistinguishable from zero at that sample size (luck +0.03, total value +0.24). The metric describes how a draft was *built* relative to the market; it is not evidence of durable talent. The UI says so too.
 
+### Best lineup you could have drafted — slot-constrained, exact
+
+Headline of the Best lineup tab. Each manager is held to **their own draft slots**: at pick 9 you may have anyone who really went 9th or later. A 4th-round breakout was reachable by everyone, so the question becomes who reached.
+
+Why not full hindsight ("best 9 in the draft, order ignored")? Tried it: for Pennoni Younglings 2025 it yields one lineup worth 2860.9 and hands **every** manager that identical number. It ranks nobody. Kept only as an all-star-of-the-draft curiosity.
+
+**Exact, not greedy.** Only starters score, so this is "pick players to fill the lineup, each assigned to one of your own pick slots, maximise points". A player drafted at overall pick `a` is reachable at your slot `p` iff `a >= p`, so reachable sets nest as `p` grows — meaning an optimal assignment never needs to cross, and walking players in actual-pick order against slots in order is provably optimal. That reduces to a DP over (player, slot, slots filled). Cross-checked against brute force on a reduced pool: **837.32 both**. ~2.7 s per league-season, cached.
+
+Verified across 429 team-seasons: every chosen player was reachable at the slot used, no player or slot reused, slot caps respected, positions legal for their slot, reconstructed lineup total equals the DP optimum, and the ceiling never falls below what the manager actually achieved.
+
+**Result: the ceiling is nearly flat** (2516–2574 across 12 managers, ~2% spread) — in hindsight, draft position barely limits what was *reachable*. So the leaderboard is **Efficiency %** — how much of your own reachable ceiling you captured — which spreads properly: 57.7% to 77.5%.
+
+Simplification stated rather than hidden: every *other* manager's picks stay as they really were, so taking a player somebody else drafted later does not ripple through their draft.
+
+**League lineup settings are now captured.** `ffapp/espn/league_settings.py` stores `league.settings.roster` per league-season in `data/league_settings.json`; the draft pull and both weekly scripts write it. Bench/IR are dropped, flex slots (`RB/WR/TE`, `OP` superflex) expand to the positions they accept. Until a season is captured the UI says the lineup is **assumed** rather than pretending otherwise.
+
+> A bug worth remembering: the first version of the roster parser split every slot name containing `/`, which turned **`D/ST`** into a flex accepting "D" or "ST" — neither a real position — so the defence slot could never be filled and every lineup silently lost ~187 points. Caught because a hardcoded fallback and the parsed roster disagreed on the same league (2566.7 vs 2379.7) despite identical slot composition. Positions whose own name contains a slash are now special-cased, and a flex is only accepted when every part is a recognised position.
+
 **Tabs:** Owner scorecard (value, accuracy/luck, hit rate, accuracy-vs-luck scatter) · Steals & busts · By round (best pick of each round, how each round performed league-wide) · By position (value by owner × position, position-taken-each-round tendencies) · Best available (hindsight points left on the board per pick and per owner) · Best lineup (optimal starting lineup from a manager's own picks, bench points forgone) · Retention.
 
 **Data gaps, handled explicitly rather than fudged:**
 
 1. **2023 has no projections** (~16% coverage), so the accuracy/luck split is hidden for those 8 league-seasons with a visible warning. Value Over Slot is still exact.
 2. **Draft retention needed data that did not exist.** The free-agent file only lists players *nobody* drafted, so it cannot say how much of a manager's own draft survived. `draft_data.py` now writes `data/drafts/<league> Final Roster <year>.csv`; the tab fills in from the next pull onward. Past seasons cannot be reconstructed — ESPN only exposes current rosters.
-3. ⬜ **"Best possible record from simulation" was not built.** Simulating a counterfactual roster's record needs *weekly* player scores; only season totals and averages are stored. Adding weekly player scores to the pull would unlock it, along with start/sit analysis ("points left on your bench each week"). That is the natural next step.
+3. ⬜ **"Best possible *record* from simulation" still not built.** Simulating a counterfactual roster's record needs *weekly* player scores; only season totals and averages are stored. Adding weekly player scores to the pull would unlock it, along with start/sit analysis ("points left on your bench each week"). That is the natural next step.
 
 ---
 

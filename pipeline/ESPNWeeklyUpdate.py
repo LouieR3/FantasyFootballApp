@@ -26,6 +26,7 @@ from ffapp.metrics.monte_carlo_odds import (
 )
 from ffapp.metrics.owner_overrides import resolve_owner, owner_id_for
 from ffapp.espn import week_utils
+from ffapp.espn import league_settings
 from paths import LEAGUES_DIR
 
 
@@ -102,6 +103,7 @@ settings = league.settings
 # settings = league.settings
 
 leagueName = settings.name.replace(" 22/23", "")
+league_settings.save_settings(leagueName, year, settings)
 fileName = leagueName + " " + str(year)
 file = leagueName + ".xlsx"
 
