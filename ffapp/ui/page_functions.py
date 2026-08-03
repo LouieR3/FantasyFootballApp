@@ -17,6 +17,11 @@ from espn_api.football import League
 from ffapp.metrics.monte_carlo_odds import add_weekly_analysis_to_main
 from ffapp.metrics.owner_overrides import resolve_owner
 from ffapp.ui.data_loader import load_sheet, load_csv, load_owner_df, get_league, sheet_names
+from ffapp.ui.tables import apply_display_defaults, table_height
+
+# pandas renders styled floats at 6 decimals by default (1954.300000); one
+# decimal suits points, percentages and LPI. Explicit .format() calls still win.
+apply_display_defaults()
 import os
 
 def owner_df_creation(league):
@@ -116,10 +121,7 @@ def display_schedule_comparison(file):
     top10 = percentList[3]
     bot10 = percentList[4]
 
-    if len(names) <= 10:
-        height = "auto"
-    else:
-        height = 460 + (len(names) - 12) * 40
+    height = table_height(len(names))
     
     # Check number of games played from the first value in df
     first_record = df.iloc[0, 0]  # e.g., "0-1-0"
@@ -187,10 +189,7 @@ def display_strength_of_schedule(file):
     for col in df_names.columns:
         if col != "Teams":
             names.append(col)
-    if len(names) <= 10:
-        height = "auto"
-    else:
-        height = 460 + (len(names) - 12) * 40
+    height = table_height(len(names))
         
     # Display the styled DataFrame
     st.dataframe(df_styled, height=height)
@@ -227,10 +226,7 @@ def display_expected_wins(file):
     for col in df_names.columns:
         if col != "Teams":
             names.append(col)
-    if len(names) <= 10:
-        height = "auto"
-    else:
-        height = 460 + (len(names) - 12) * 40
+    height = table_height(len(names))
     # Display the styled DataFrame
     st.dataframe(df3, height=height)
 
@@ -273,10 +269,7 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
     for col in df_names.columns:
         if col != "Teams":
             names.append(col)
-    if len(names) <= 10:
-        height = "auto"
-    else:
-        height = 460 + (len(names) - 12) * 40
+    height = table_height(len(names))
     # Display the styled DataFrame
     st.dataframe(styled_df, height=height)
 
@@ -331,10 +324,7 @@ def display_playoff_odds_by_week(file):
     for col in df_names.columns:
         if col != "Teams":
             names.append(col)
-    if len(names) <= 10:
-        height = "auto"
-    else:
-        height = (460 + (len(names) - 12) * 40) + 40
+    height = table_height(len(names) + 1)
 
 
     # Identify week columns
@@ -387,10 +377,7 @@ def display_remaining_schedule_difficulty(file):
     for col in df_names.columns:
         if col != "Teams":
             names.append(col)
-    if len(names) <= 10:
-        height = "auto"
-    else:
-        height = 460 + (len(names) - 12) * 40
+    height = table_height(len(names))
     # Display the styled DataFrame
     st.dataframe(df_styled, height=height)
 
@@ -407,10 +394,7 @@ def display_betting_odds(file):
     df_names = load_sheet(file, "Make Playoff Odds")
     # Display the styled DataFrame
     df_names = df_names.set_index("Team")
-    if len(df_names) <= 10:
-        height = "auto"
-    else:
-        height = 460 + (len(df_names) - 12) * 40
+    height = table_height(len(df_names))
 
     # print(height)
 
@@ -665,10 +649,7 @@ def display_lpi_by_week(file):
     for col in df_names.columns:
         if col != "Teams":
             names.append(col)
-    if len(names) <= 10:
-        height = "auto"
-    else:
-        height = 460 + (len(names) - 12) * 40
+    height = table_height(len(names))
     # Display the DataFrame
     st.dataframe(df, height=height, hide_index=True)
 
@@ -763,10 +744,7 @@ def display_lpi(league_id, espn_s2, swid, file):
     for col in df_names.columns:
         if col != "Teams":
             names.append(col)
-    if len(names) <= 10:
-        height = "auto"
-    else:
-        height = 460 + (len(names) - 12) * 40
+    height = table_height(len(names))
 
     st.dataframe(df3, height=height, width=700)
 
@@ -797,7 +775,7 @@ def display_biggest_lpi_upsets(file):
     df.index += 1
     df3 = df.style.background_gradient(subset=['LPI Difference'])
     
-    st.dataframe(df3, height="auto")
+    st.dataframe(df3, height=table_height(len(df)), use_container_width=True)
 
 def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     # Extract year from file name, e.g., '0755 Fantasy Football 2022.xlsx'
@@ -843,10 +821,7 @@ def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     for col in df_names.columns:
         if col != "Teams":
             names.append(col)
-    if len(names) <= 10:
-        height = "auto"
-    else:
-        height = 460 + (len(names) - 12) * 40
+    height = table_height(len(names))
     st.dataframe(df4, height=height, hide_index=True)
 
     # df5 = year_df.style.background_gradient(subset=['Win Percentage'])

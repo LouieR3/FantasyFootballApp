@@ -13,6 +13,7 @@ from paths import LEAGUES_DIR
 from ffapp import league_registry as registry
 from ffapp.ui.data_loader import load_sheet, sheet_names
 from ffapp.ui.league_colors import league_color_key, style_league_column
+from ffapp.ui.tables import apply_display_defaults, show_table
 
 
 @st.cache_data(show_spinner=False)
@@ -40,6 +41,7 @@ def build_upsets(dir_key):
 
 
 def app():
+    apply_display_defaults()
     pd.options.mode.chained_assignment = None
 
     st.header('Biggest Upsets By LPI')
@@ -82,8 +84,7 @@ def app():
 
     styled = style_league_column(
         view.style.background_gradient(subset=['LPI Difference'], cmap='YlOrRd'))
-    height = min(35 * (len(view) + 1) + 3, 900)
-    st.dataframe(styled, height=height, hide_index=True, use_container_width=True)
+    show_table(styled, max_rows=25)
 
 
 app()

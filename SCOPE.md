@@ -253,6 +253,15 @@ Two measurement problems found and fixed while building it:
 - **Raw accuracy/luck were badly biased.** ESPN projections assume a full healthy season, so they sit **~46 points per pick** above the median outcomes the slot curve is fit on. Uncentred, *every* manager looked highly accurate and desperately unlucky. Both are now centred on the league-season mean, so 0 = average drafter. Centring is a constant shift, so the identity survives.
 - **It is called "accuracy", not "skill", on purpose.** Measured over 102 consecutive-season owner pairs: accuracy repeats year over year at **r = +0.08** — indistinguishable from zero at that sample size (luck +0.03, total value +0.24). The metric describes how a draft was *built* relative to the market; it is not evidence of durable talent. The UI says so too.
 
+### Table display: decimals and heights — ✅ 2026-07-28
+
+`ffapp/ui/tables.py` centralises two display fixes that were affecting every styled table in the app.
+
+- **Decimals.** pandas' `styler.format.precision` defaults to **6**, so any styled table rendered 1954.3 as `1954.300000`. Fixed with a Styler format (not a cast to string — strings would break the colour gradients and column sorting). `apply_display_defaults()` sets precision to 1 for the session; explicit `.format()` calls still win, and `show_table(..., formats={'LPI': '{:.0f}'})` handles per-column overrides. Verified: **0 cells with 4+ decimals** across all 12 tables on the Draft Analysis page and 6 sampled league-page sections.
+- **Heights.** `table_height(n_rows)` returns `35·rows + 35 header + 3` so nothing scrolls. This replaces `460 + (len(names) - 12) * 40`, which was pasted 9 times and only right at 12 teams (it also fell back to `height="auto"` for ≤10). The new formula reproduces it — 458px vs 460px at 12 teams, confirming 35px rows — and now handles every league size: 8→318, 10→388, 12→458, 14→528, 16→598. Long tables (every pick in a draft) pass `max_rows` to cap the height and scroll past that point.
+
+One ordering gotcha worth remembering: a later `Styler.format()` overrides an earlier one, so a general precision applied *after* a per-column format silently clobbers it. `show_table` applies general precision first, then `formats`, and callers must pass column overrides through the parameter rather than pre-formatting.
+
 ### Best lineup you could have drafted — slot-constrained, exact
 
 Headline of the Best lineup tab. Each manager is held to **their own draft slots**: at pick 9 you may have anyone who really went 9th or later. A 4th-round breakout was reachable by everyone, so the question becomes who reached.

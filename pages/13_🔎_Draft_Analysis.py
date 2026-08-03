@@ -14,6 +14,7 @@ from paths import DRAFTS_DIR
 from ffapp import league_registry as registry
 from ffapp.metrics import draft_analysis as da
 from ffapp.ui.data_loader import load_csv
+from ffapp.ui.tables import apply_display_defaults, show_table, table_height
 
 
 @st.cache_data(show_spinner=False)
@@ -47,6 +48,8 @@ def league_settings_describe(slot_groups):
 
 
 def app():
+    apply_display_defaults()
+
     st.header('🔎 Post-Season Draft Analysis')
     st.write(
         'A full post-mortem of one league\'s draft: who actually drafted well, who '
@@ -118,8 +121,7 @@ drafter in this league.
         grad = ['Value Over Slot', 'Draft Grade', 'Hit Rate']
         if meta['has_skill_luck']:
             grad += ['Accuracy vs Avg', 'Luck vs Avg']
-        st.dataframe(summary.style.background_gradient(subset=grad, cmap='RdYlGn'),
-                     hide_index=True, use_container_width=True)
+        show_table(summary.style.background_gradient(subset=grad, cmap='RdYlGn'))
 
         if meta['has_skill_luck']:
             st.markdown('##### Draft accuracy vs luck')
@@ -135,22 +137,22 @@ drafter in this league.
         a, b = st.columns(2)
         with a:
             st.markdown('##### 💎 Biggest steals')
-            st.dataframe(steals.style.background_gradient(subset=['Value'], cmap='Greens'),
-                         hide_index=True, use_container_width=True)
+            show_table(steals.style.background_gradient(subset=['Value'], cmap='Greens'),
+                       max_rows=20)
         with b:
             st.markdown('##### 💀 Biggest busts')
-            st.dataframe(busts.style.background_gradient(subset=['Value'], cmap='Reds_r'),
-                         hide_index=True, use_container_width=True)
+            show_table(busts.style.background_gradient(subset=['Value'], cmap='Reds_r'),
+                       max_rows=20)
 
     # ---------------------------------------------------------------- 3. by round
     with tabs[2]:
         st.markdown('##### Best pick of each round')
-        st.dataframe(da.best_pick_per_round(df), hide_index=True, use_container_width=True)
+        show_table(da.best_pick_per_round(df), formats={'Round': '{:.0f}', 'Total Pick': '{:.0f}'})
         st.markdown('##### How each round performed')
         st.caption('Avg Value below zero means that round generally disappointed across the league.')
         ra = da.round_accuracy(df)
-        st.dataframe(ra.style.background_gradient(subset=['Avg Value', 'Hit Rate'], cmap='RdYlGn'),
-                     hide_index=True, use_container_width=True)
+        show_table(ra.style.background_gradient(subset=['Avg Value', 'Hit Rate'], cmap='RdYlGn'),
+                   formats={'Round': '{:.0f}', 'Picks': '{:.0f}'})
         st.bar_chart(ra.set_index('Round')['Avg Value'])
 
     # ------------------------------------------------------------- 4. by position
@@ -158,10 +160,9 @@ drafter in this league.
         st.markdown('##### Value gained by position')
         st.caption('Where each manager actually won or lost the draft.')
         vbp = da.value_by_position(df)
-        st.dataframe(vbp.style.background_gradient(cmap='RdYlGn', axis=None),
-                     use_container_width=True)
+        show_table(vbp.style.background_gradient(cmap='RdYlGn', axis=None), hide_index=False)
         st.markdown('##### Draft tendencies — position taken each round')
-        st.dataframe(da.position_by_round(df), use_container_width=True)
+        show_table(da.position_by_round(df), hide_index=False)
 
     # --------------------------------------------------------- 5. best available
     with tabs[4]:
@@ -172,12 +173,12 @@ drafter in this league.
             'board fell", not as a grade.'
         )
         ba = da.best_available(df)
-        st.dataframe(da.left_on_board_by_owner(ba)
-                     .style.background_gradient(subset=['Total Left On Board'], cmap='Reds'),
-                     hide_index=True, use_container_width=True)
+        show_table(da.left_on_board_by_owner(ba)
+                   .style.background_gradient(subset=['Total Left On Board'], cmap='Reds'),
+                   formats={'Picks': '{:.0f}'})
         with st.expander('Every pick vs the best available'):
-            st.dataframe(ba.style.background_gradient(subset=['Left On Board'], cmap='Reds'),
-                         hide_index=True, use_container_width=True)
+            show_table(ba.style.background_gradient(subset=['Left On Board'], cmap='Reds'),
+                       max_rows=20, formats={'Total Pick': '{:.0f}'})
 
     # ------------------------------------------------------------- 6. best lineup
     with tabs[5]:
@@ -199,10 +200,9 @@ drafter in this league.
             )
 
         eff = redraft_table(league, year, os.path.getmtime(DRAFTS_DIR))
-        st.dataframe(
-            eff.style.background_gradient(subset=['Efficiency %'], cmap='RdYlGn')
-               .background_gradient(subset=['Missed By'], cmap='Reds'),
-            hide_index=True, use_container_width=True)
+        show_table(eff.style.background_gradient(subset=['Efficiency %'], cmap='RdYlGn')
+                      .background_gradient(subset=['Missed By'], cmap='Reds'),
+                   formats={'First Pick': '{:.0f}'})
         st.caption(
             'The ceiling barely moves between managers (~2% spread) — in hindsight your '
             'draft slot hardly limits what was *reachable*. **Efficiency %** is the real '
@@ -216,12 +216,11 @@ drafter in this league.
         a, b = st.columns(2)
         with a:
             st.markdown(f'**Could have drafted** — {ceiling:,.1f} pts')
-            st.dataframe(could[['Slot', 'Player', 'Position', 'Pick', 'Your Pick Used', 'Points']],
-                         hide_index=True, use_container_width=True)
+            show_table(could[['Slot', 'Player', 'Position', 'Pick', 'Your Pick Used', 'Points']],
+                       formats={'Your Pick Used': '{:.0f}'})
         with b:
             st.markdown(f'**Actually drafted (best lineup)** — {actual["Points"].sum():,.1f} pts')
-            st.dataframe(actual[['Player', 'Position', 'Pick', 'Points']],
-                         hide_index=True, use_container_width=True)
+            show_table(actual[['Player', 'Position', 'Pick', 'Points']])
 
     # --------------------------------------------------------------- 7. retention
     with tabs[6]:
@@ -236,8 +235,9 @@ drafter in this league.
             )
         else:
             st.caption('Share of a manager\'s own draft picks still on their roster at season end.')
-            st.dataframe(ret.style.background_gradient(subset=['Retention %'], cmap='RdYlGn'),
-                         hide_index=True, use_container_width=True)
+            show_table(ret.style.background_gradient(subset=['Retention %'], cmap='RdYlGn'),
+                       formats={'Roster Size': '{:.0f}', 'Own Draft Picks Kept': '{:.0f}',
+                                'Of Picks Made': '{:.0f}', 'Acquired Elsewhere': '{:.0f}'})
 
 
 app()
