@@ -89,17 +89,17 @@ play in — so a manager's career pools across leagues.
 
     # ------------------------------------------------------- best & worst ever
     with tabs[0]:
-        a, b = st.columns(2)
-        with a:
-            st.markdown(f'##### 🐐 Best team-seasons ever — by {metric}')
-            show_table(hof.best_team_seasons(ts, n, metric)
-                       .style.background_gradient(subset=[metric], cmap='Greens'),
-                       max_rows=30, formats=INT_FMT)
-        with b:
-            st.markdown(f'##### 💩 Worst team-seasons ever — by {metric}')
-            show_table(hof.worst_team_seasons(ts, n, metric)
-                       .style.background_gradient(subset=[metric], cmap='Reds_r'),
-                       max_rows=30, formats=INT_FMT)
+        # a, b = st.columns(2)
+        # with a:
+        st.markdown(f'##### 🐐 Best team-seasons ever — by {metric}')
+        show_table(hof.best_team_seasons(ts, n, metric)
+                    .style.background_gradient(subset=[metric], cmap='Greens'),
+                    max_rows=30, formats=INT_FMT)
+        # with b:
+        st.markdown(f'##### 💩 Worst team-seasons ever — by {metric}')
+        show_table(hof.worst_team_seasons(ts, n, metric)
+                    .style.background_gradient(subset=[metric], cmap='Reds_r'),
+                    max_rows=30, formats=INT_FMT)
         st.markdown('##### 😤 Best season that never won a title')
         show_table(hof.best_non_champions(ts, n, metric)
                    .style.background_gradient(subset=[metric], cmap='Greens'),
@@ -119,19 +119,19 @@ play in — so a manager's career pools across leagues.
                    .style.background_gradient(subset=[metric], cmap='Reds_r'),
                    max_rows=30, formats=INT_FMT)
 
-        a, b = st.columns(2)
-        with a:
-            st.markdown('##### 🥈 Worst teams to reach the final')
-            st.caption('Includes eventual champions — reaching the final is the filter.')
-            show_table(hof.worst_finalists(ts, n, metric)
-                       .style.background_gradient(subset=[metric], cmap='Reds_r'),
-                       max_rows=30, formats=INT_FMT)
-        with b:
-            st.markdown('##### 👑 Worst champions')
-            st.caption('Hottest at the right moment, and nothing more.')
-            show_table(hof.worst_champions(ts, n, metric)
-                       .style.background_gradient(subset=[metric], cmap='Reds_r'),
-                       max_rows=30, formats=INT_FMT)
+        # a, b = st.columns(2)
+        # with a:
+        st.markdown('##### 🥈 Worst teams to reach the final')
+        st.caption('Includes eventual champions — reaching the final is the filter.')
+        show_table(hof.worst_finalists(ts, n, metric)
+                    .style.background_gradient(subset=[metric], cmap='Reds_r'),
+                    max_rows=30, formats=INT_FMT)
+        # with b:
+        st.markdown('##### 👑 Worst champions')
+        st.caption('Hottest at the right moment, and nothing more.')
+        show_table(hof.worst_champions(ts, n, metric)
+                    .style.background_gradient(subset=[metric], cmap='Reds_r'),
+                    max_rows=30, formats=INT_FMT)
 
     # ------------------------------------------------------------------- luck
     with tabs[2]:
@@ -176,15 +176,15 @@ play in — so a manager's career pools across leagues.
     with tabs[4]:
         st.caption('Consecutive seasons by the same manager in the same league.')
         rise, fall = hof.biggest_swings(ts, n)
-        a, b = st.columns(2)
-        with a:
-            st.markdown('##### 📈 Biggest turnarounds')
-            show_table(rise.style.background_gradient(subset=['Win % Change'], cmap='Greens'),
-                       max_rows=30)
-        with b:
-            st.markdown('##### 📉 Biggest collapses')
-            show_table(fall.style.background_gradient(subset=['Win % Change'], cmap='Reds_r'),
-                       max_rows=30)
+        # a, b = st.columns(2)
+        # with a:
+        st.markdown('##### 📈 Biggest turnarounds')
+        show_table(rise.style.background_gradient(subset=['Win % Change'], cmap='Greens'),
+                    max_rows=30)
+        # with b:
+        st.markdown('##### 📉 Biggest collapses')
+        show_table(fall.style.background_gradient(subset=['Win % Change'], cmap='Reds_r'),
+                    max_rows=30)
 
 
 app()
