@@ -122,10 +122,10 @@ play in — so a manager's career pools across leagues.
         a, b = st.columns(2)
         with a:
             st.markdown('##### 🥈 Worst teams to reach the final')
+            st.caption('Includes eventual champions — reaching the final is the filter.')
             show_table(hof.worst_finalists(ts, n, metric)
                        .style.background_gradient(subset=[metric], cmap='Reds_r'),
                        max_rows=30, formats=INT_FMT)
-            st.caption('Includes eventual champions — reaching the final is the filter.')
         with b:
             st.markdown('##### 👑 Worst champions')
             st.caption('Hottest at the right moment, and nothing more.')
@@ -137,17 +137,17 @@ play in — so a manager's career pools across leagues.
     with tabs[2]:
         st.caption('Wins above or below what their scoring deserved '
                    '(actual wins − Expected Wins).')
-        a, b = st.columns(2)
-        with a:
-            st.markdown('##### 🍀 Luckiest seasons')
-            show_table(hof.luckiest(ts, n)
-                       .style.background_gradient(subset=['Luck'], cmap='Greens'),
-                       max_rows=30, formats=INT_FMT)
-        with b:
-            st.markdown('##### 🌧️ Unluckiest seasons')
-            show_table(hof.unluckiest(ts, n)
-                       .style.background_gradient(subset=['Luck'], cmap='Reds_r'),
-                       max_rows=30, formats=INT_FMT)
+        # a, b = st.columns(2)
+        # with a:
+        st.markdown('##### 🍀 Luckiest seasons')
+        show_table(hof.luckiest(ts, n)
+                    .style.background_gradient(subset=['Luck'], cmap='Greens'),
+                    max_rows=30, formats=INT_FMT)
+        # with b:
+        st.markdown('##### 🌧️ Unluckiest seasons')
+        show_table(hof.unluckiest(ts, n)
+                    .style.background_gradient(subset=['Luck'], cmap='Reds_r'),
+                    max_rows=30, formats=INT_FMT)
 
     # --------------------------------------------------------------- managers
     with tabs[3]:
