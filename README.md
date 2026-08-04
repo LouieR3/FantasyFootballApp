@@ -112,6 +112,28 @@ Then commit and push — Streamlit Cloud redeploys from the repo.
 
 ESPN private-league access requires `espn_s2` and `SWID` cookies. All code reads them via `credentials.py` (`CRED["louie_s2"]`, etc.), which loads from `.streamlit/secrets.toml` (gitignored — copy `.streamlit/secrets.toml.example` and fill it in), from Streamlit Cloud's secrets settings, or from `ESPN_*` environment variables. Never put cookie values in source.
 
+## Deploying to Streamlit Cloud
+
+Push, and Cloud picks up the commit. One gotcha worth knowing:
+
+> **If a deploy adds a new function to an existing module, reboot the app.**
+> Streamlit re-executes the *page* script on every rerun but keeps already-imported
+> modules in `sys.modules`. So new page code can run against an old copy of, say,
+> `ffapp/league_registry.py`, and you get `ImportError: cannot import name ...` or
+> `AttributeError: module ... has no attribute ...` even though the code on GitHub is
+> correct. **Manage app → Reboot app** restarts the process and clears it. A rerun or
+> "Clear cache" will not.
+>
+> Brand-new modules are fine — only additions to modules that were already imported
+> are affected.
+
+Before pushing page changes, run the page smoke test — it executes every page with
+streamlit stubbed and catches runtime errors that `py_compile` cannot:
+
+```bash
+python tools/smoke_pages.py
+```
+
 ## Roadmap
 
 The full scope, feature backlog, draft-grade methodology review, and data-hosting migration plan live in **[SCOPE.md](SCOPE.md)**. Highlights:

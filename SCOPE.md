@@ -294,6 +294,12 @@ Simplification stated rather than hidden: every *other* manager's picks stay as 
 
 New page `pages/14_🏛️_Lifetime_League_History.py` over `ffapp/metrics/lifetime.py`. Appears only for the **8 leagues with 2+ seasons** on file. Computed entirely from data already on disk — no ESPN round trip.
 
+### Streamlit Cloud stale-module trap (bitten twice)
+
+Streamlit re-executes the page script on every rerun but keeps already-imported modules in `sys.modules`. A deploy that **adds a symbol to an existing module** can therefore run new page code against the old module, producing `ImportError: cannot import name 'available_years'` or `AttributeError: module 'ffapp.league_registry' has no attribute 'canonical'` while the committed code is perfectly correct. **Manage app → Reboot app** is the fix; a rerun or cache clear is not. New modules are unaffected.
+
+`ffapp/metrics/lifetime.py` now guards for this explicitly and raises a message naming the fix, so the next occurrence is self-diagnosing rather than a puzzle. Documented in the README's deploy section.
+
 ### The identity layer is the whole trick
 
 Team names change constantly, so a name is not a manager. Three sources get stitched:

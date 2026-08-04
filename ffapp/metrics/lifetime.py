@@ -40,6 +40,17 @@ from paths import (ALL_MATCHUPS, ALL_PLAYOFF_DFS, DRAFTS_DIR, LEAGUES_DIR,
                    DRAFT_GRADES_WITH_STANDINGS)
 from ffapp import league_registry as registry
 
+# Streamlit keeps already-imported modules in sys.modules across reruns and only
+# re-executes the page script, so after a deploy that ADDS a symbol to an existing
+# module the running process can still hold the old version. That surfaces as a
+# baffling AttributeError deep in a call stack; this turns it into an instruction.
+if not hasattr(registry, 'canonical'):
+    raise RuntimeError(
+        "ffapp.league_registry is loaded from an older deploy (no `canonical`). "
+        "Streamlit reuses already-imported modules across reruns, so a deploy that "
+        "adds a function needs a full process restart: Manage app -> Reboot app."
+    )
+
 DRAFT_RE = re.compile(r'^(.+?) Draft Results (\d{4})\.csv$')
 
 
