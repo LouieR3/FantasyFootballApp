@@ -105,6 +105,14 @@ a week cutoff, since leagues start their postseason in different weeks.
         view = careers[careers['Owner'].isin(pick)] if pick else careers
         show_table(view, max_rows=25,
                    formats={'Year': '{:.0f}', 'Finish': '{:.0f}'})
+        blank_finish = sorted(careers.loc[careers['Finish'].isna(), 'Year'].unique())
+        if blank_finish:
+            st.caption(
+                'Draft Grade is always current. **Finish** is blank for '
+                f"{', '.join(str(int(y)) for y in blank_finish)} because the final "
+                'standing comes from a live ESPN pull — run `analysis/draft_analysis.py` '
+                'to fill it in.'
+            )
 
         st.markdown('##### Franchise trends')
         trends = lt.franchise_trends(tg)

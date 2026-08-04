@@ -4,13 +4,15 @@ while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'path
     _d = _os.path.dirname(_d)
 _sys.path.insert(0, _d)
 from credentials import CRED
-from espn_api.football import League
 import pandas as pd
 import os
 from openpyxl import load_workbook
 from paths import DATA_DIR, LEAGUES_DIR
 
 def create_playoff_df(leagues, years, csv_path=f"{DATA_DIR}/all_playoff_dfs.csv"):
+    # imported here, not at module scope, so rebuild_from_workbooks() below
+    # stays usable without espn_api or credentials
+    from espn_api.football import League
     # Initialize an empty list to store all playoff data
     combined_playoff_dfs = []
 
@@ -127,3 +129,54 @@ def create_playoff_df(leagues, years, csv_path=f"{DATA_DIR}/all_playoff_dfs.csv"
 # years = [2019, 2020, 2021, 2022, 2023, 2024]
 # # years = [2023]
 # create_playoff_df(leagues, years)
+
+def rebuild_from_workbooks(csv_path=None):
+    """Rebuild the playoff aggregate purely from the league workbooks.
+
+    `create_playoff_df` above instantiates an ESPN League for every league-year
+    before reading the workbook - and then never uses it - so refreshing this
+    aggregate needed live credentials it does not actually depend on. The
+    workbooks are written by the weekly update and are the real source of truth,
+    so this reads them directly and can run any time, offline.
+
+    Rebuilds rather than appends: the old append-and-dedupe path left the file
+    permanently stale for any season whose workbook changed after its first pull
+    (which is why 2025 playoff results were missing everywhere while sitting
+    right there in the workbooks).
+    """
+    import glob
+    import re
+    csv_path = csv_path or f"{DATA_DIR}/all_playoff_dfs.csv"
+    frames = []
+    for path in sorted(glob.glob(f"{LEAGUES_DIR}/*.xlsx")):
+        base = os.path.splitext(os.path.basename(path))[0]
+        m = re.match(r'^(.+) (\d{4})$', base)
+        if not m:
+            continue
+        league_name, year = m.group(1), int(m.group(2))
+        try:
+            workbook = load_workbook(path, read_only=True)
+            if "Playoff Results" not in workbook.sheetnames:
+                workbook.close()
+                continue
+            workbook.close()
+            df = pd.read_excel(path, sheet_name="Playoff Results")
+        except Exception as e:
+            print(f"  skipped {base}: {e}")
+            continue
+        if df.empty:
+            continue
+        df = df.loc[:, ~df.columns.astype(str).str.startswith('Unnamed')]
+        df['Year'] = year
+        df['League'] = league_name
+        df['File Name'] = path
+        frames.append(df)
+
+    if not frames:
+        print("no playoff sheets found")
+        return pd.DataFrame()
+    out = pd.concat(frames, ignore_index=True)
+    out.to_csv(csv_path, index=False)
+    print(f"rebuilt {csv_path}: {len(out)} rows, "
+          f"{out['League'].nunique()} leagues, years {sorted(out['Year'].unique())}")
+    return out

@@ -36,8 +36,8 @@ import re
 import numpy as np
 import pandas as pd
 
-from paths import (ALL_MATCHUPS, ALL_PLAYOFF_DFS, DRAFTS_DIR, LEAGUES_DIR,
-                   DRAFT_GRADES_WITH_STANDINGS)
+from paths import (AGGREGATED_DRAFT_GRADES, ALL_MATCHUPS, ALL_PLAYOFF_DFS,
+                   DRAFTS_DIR, DRAFT_GRADES_WITH_STANDINGS, LEAGUES_DIR)
 from ffapp import league_registry as registry
 
 # Streamlit keeps already-imported modules in sys.modules across reruns and only
@@ -290,6 +290,23 @@ def all_time_table(tg):
 def owner_careers(tg, league):
     """Season-by-season career table, with finish and draft grade where known."""
     league = registry.canonical(league)
+
+    # Draft grades come from Aggregated_Draft_Grades.csv, which `regrade_drafts`
+    # rewrites in full every run and therefore always covers the latest season.
+    # Draft_Grades_with_Standings.csv is only used for the final Finish, because
+    # that needs a live ESPN standings pull and so lags a season behind - reading
+    # grades from it was why the newest year showed no draft grades at all.
+    grades = {}
+    if os.path.exists(AGGREGATED_DRAFT_GRADES):
+        ag = pd.read_csv(AGGREGATED_DRAFT_GRADES)
+        parts = ag['League Name'].str.rsplit(' ', n=1)
+        ag['_league'] = parts.str[0].map(registry.canonical)
+        ag['_year'] = pd.to_numeric(parts.str[1], errors='coerce')
+        ag = ag[ag['_league'] == league]
+        grades = {(int(y), str(t).strip()): g
+                  for y, t, g in zip(ag['_year'], ag['Team'], ag['Draft Grade'])
+                  if pd.notna(y)}
+
     standings = pd.DataFrame()
     if os.path.exists(DRAFT_GRADES_WITH_STANDINGS):
         standings = pd.read_csv(DRAFT_GRADES_WITH_STANDINGS)
@@ -302,13 +319,13 @@ def owner_careers(tg, league):
         rw, rl, _ = _wlt(reg)
         pw, pl, _ = _wlt(po)
         team = g.sort_values('Week')['Team'].iloc[-1]
-        finish = grade = np.nan
+        grade = grades.get((int(year), team), np.nan)
+        finish = np.nan
         if len(standings):
             hit = standings[(standings['Year'] == year) &
                             (standings['Team'].astype(str).str.strip() == team)]
             if len(hit):
                 finish = hit.iloc[0].get('Standing', np.nan)
-                grade = hit.iloc[0].get('Draft Grade', np.nan)
         rows.append({
             'Owner': _owner_label(g, oid),
             'Year': year, 'Team': team,

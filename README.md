@@ -93,6 +93,7 @@ Cache keys include each file's modification time, so re-running the pipeline inv
 | `pipeline/ESPNWeeklyUpdate.py` | Same work for **one** league — edit the uncommented `league = League(...)` block near the top to pick it |
 | `pipeline/ESPN_Add_Old_Season.py` | Backfill a **past** season for a league (weekly data, playoff results, drafts, matchups) |
 | `pipeline/regrade_drafts.py` | Recompute all draft/free-agent grades across every season (needed after any grading change) |
+| `pipeline/rebuild_aggregates.py` | Rebuild the cross-league playoff CSVs from the workbooks — **run weekly**, offline; without it the cross-league pages silently omit the newest season |
 | `pipeline/add_current_week_results.py` | Append the current week into `data/all_matchups.csv` |
 | `pipeline/playoff_chances.py`, `pipeline/playoff_add_predicted.py` | Playoff-odds datasets used by the Playoff Analysis page |
 
@@ -100,6 +101,12 @@ Typical in-season week:
 
 ```bash
 python pipeline/ESPNWeeklyUpdateList.py
+```
+
+Then refresh the cross-league aggregates (offline, no credentials):
+
+```bash
+python pipeline/rebuild_aggregates.py
 ```
 
 After a draft, or any time grading changes:

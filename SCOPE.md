@@ -294,6 +294,28 @@ Simplification stated rather than hidden: every *other* manager's picks stay as 
 
 New page `pages/14_🏛️_Lifetime_League_History.py` over `ffapp/metrics/lifetime.py`. Appears only for the **8 leagues with 2+ seasons** on file. Computed entirely from data already on disk — no ESPN round trip.
 
+### 🔴 Stale aggregate CSVs hid the newest season — ✅ fixed 2026-07-28
+
+Symptom: no 2025 playoff results and no 2025 draft grades on the cross-league pages, even though the workbooks clearly had both.
+
+Cause: those pages read one-off **aggregate** CSVs that were never rebuilt.
+
+| File | Was | Now |
+|---|---|---|
+| `data/all_playoff_dfs.csv` | 160 rows, **stopped at 2024**, last written 2025-09-30 | 264 rows, 2019–2025 |
+| `data/all_playoffs_with_predictions.csv` | 128 rows, stopped at 2024 | 212 rows, incl. 77 for 2025 and 11 championship games |
+| `data/drafts/Draft_Grades_with_Standings.csv` | stops at 2024 (needs live ESPN standings) | unchanged — grades now read from `Aggregated_Draft_Grades.csv` instead |
+
+Three separate problems behind it:
+
+1. **`create_playoff_df` appended and de-duplicated** rather than rebuilding, so any season whose workbook changed after its first pull stayed frozen. 13 workbooks held finished 2025 brackets that never made it in.
+2. **It required a live ESPN `League` object it never used** — instantiated only to print settings — so refreshing the aggregate needed credentials it had no real dependency on. Same in `playoff_add_predicted.py`, which imported `espn_api` and never called it. Both imports are now lazy/removed, and `rebuild_from_workbooks()` regenerates from the workbooks offline.
+3. **Draft grades were read from the standings file**, which lags because `Standing` requires `league.standings()`. Grades live in `Aggregated_Draft_Grades.csv`, which `regrade_drafts` rewrites in full every run. `lifetime.owner_careers` now takes grades from there and only `Finish` from the standings file — so grades are current and the page says explicitly which years lack a finish and how to fill it.
+
+**`python pipeline/rebuild_aggregates.py`** now does the playoff rebuild plus predictions, offline. Add it to the weekly routine after the update script.
+
+Rebuilding also exposed a latent crash in Playoff Analysis: the oldest Playoff Results sheets predate the `Record` columns, and two places did `Record.str.split('-')[0].astype(int)` → `ValueError: cannot convert float NaN to integer`. The old aggregate happened to exclude those workbooks, so it had never fired. Both spots now drop record-less games from that comparison only and say so.
+
 ### Streamlit Cloud stale-module trap (bitten twice)
 
 Streamlit re-executes the page script on every rerun but keeps already-imported modules in `sys.modules`. A deploy that **adds a symbol to an existing module** can therefore run new page code against the old module, producing `ImportError: cannot import name 'available_years'` or `AttributeError: module 'ffapp.league_registry' has no attribute 'canonical'` while the committed code is perfectly correct. **Manage app → Reboot app** is the fix; a rerun or cache clear is not. New modules are unaffected.

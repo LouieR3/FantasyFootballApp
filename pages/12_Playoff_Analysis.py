@@ -148,9 +148,17 @@ def app():
         # --------------------------------------------------------------------------------------------
 
         # --------------------------------------------------------------------------------------------
-        # Compare Record
-        no_byes['Wins 1'] = no_byes['Record 1'].str.split('-').str[0].astype(int)
-        no_byes['Wins 2'] = no_byes['Record 2'].str.split('-').str[0].astype(int)
+        # Compare Record. The oldest workbooks' Playoff Results sheets predate the
+        # Record columns, so those games have no record to compare - drop them here
+        # rather than crashing on int(NaN), and keep them for every other view.
+        with_record = no_byes.dropna(subset=['Record 1', 'Record 2']).copy()
+        missing_record = len(no_byes) - len(with_record)
+        if missing_record:
+            st.caption(f'{missing_record} early playoff game(s) have no win-loss record '
+                       'recorded and are left out of this comparison only.')
+        no_byes = with_record
+        no_byes['Wins 1'] = no_byes['Record 1'].astype(str).str.split('-').str[0].astype(int)
+        no_byes['Wins 2'] = no_byes['Record 2'].astype(str).str.split('-').str[0].astype(int)
 
         # Create a sub-DataFrame excluding cases where the wins are the same
         no_byes_different_wins = no_byes[no_byes['Wins 1'] != no_byes['Wins 2']]
@@ -790,10 +798,12 @@ def app():
         # all_playoff_dfs = all_playoff_dfs[(all_playoff_dfs['Record 1'] == "6-8-0") | (all_playoff_dfs['Record 2'] == "6-8-0")]
         # print(all_playoff_dfs[["Team 1", "Seed 1", "Score 1", "LPI 1", "Record 1", "Team 2", "Seed 2", "Score 2", "LPI 2", "Record 2", "Winner"]])
         # afsd
-        all_playoff_dfs['Wins 1'] = all_playoff_dfs['Record 1'].str.split('-').str[0].astype(int)
-        all_playoff_dfs['Wins 2'] = all_playoff_dfs['Record 2'].str.split('-').str[0].astype(int)
-        all_playoff_dfs['Losses 1'] = all_playoff_dfs['Record 1'].str.split('-').str[1].astype(int)
-        all_playoff_dfs['Losses 2'] = all_playoff_dfs['Record 2'].str.split('-').str[1].astype(int)
+        # the oldest Playoff Results sheets predate the Record columns
+        all_playoff_dfs = all_playoff_dfs.dropna(subset=['Record 1', 'Record 2']).copy()
+        for side in ('1', '2'):
+            parts = all_playoff_dfs[f'Record {side}'].astype(str).str.split('-')
+            all_playoff_dfs[f'Wins {side}'] = parts.str[0].astype(int)
+            all_playoff_dfs[f'Losses {side}'] = parts.str[1].astype(int)
         # print(all_playoff_dfs)
         # --------------------------------------------------------------------------------------------
         # --------------------------------------------------------------------------------------------

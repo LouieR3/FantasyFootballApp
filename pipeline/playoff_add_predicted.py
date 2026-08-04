@@ -3,7 +3,8 @@ _d = _os.path.dirname(_os.path.abspath(__file__))
 while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
     _d = _os.path.dirname(_d)
 _sys.path.insert(0, _d)
-from espn_api.football import League
+# (espn_api import removed: this step only reshapes CSVs, so it must not
+#  require live credentials to run)
 import pandas as pd
 import os
 from openpyxl import load_workbook
