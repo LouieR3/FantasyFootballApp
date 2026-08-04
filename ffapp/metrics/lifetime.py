@@ -32,6 +32,7 @@ _sys.path.insert(0, _d)
 import glob
 import os
 import re
+from functools import lru_cache
 
 import numpy as np
 import pandas as pd
@@ -55,8 +56,13 @@ DRAFT_RE = re.compile(r'^(.+?) Draft Results (\d{4})\.csv$')
 
 
 # --------------------------------------------------------------- identity layer
+@lru_cache(maxsize=1)
 def owner_crosswalk():
-    """(league, year, team) -> owner id, from the draft files."""
+    """(league, year, team) -> owner id, from the draft files.
+
+    Memoised: called once per league while building cross-league views. Callers
+    filter rather than mutate the result.
+    """
     rows = []
     for path in glob.glob(os.path.join(DRAFTS_DIR, '* Draft Results *.csv')):
         m = DRAFT_RE.match(os.path.basename(path))
@@ -73,6 +79,7 @@ def owner_crosswalk():
     return pd.DataFrame(rows).drop_duplicates()
 
 
+@lru_cache(maxsize=1)
 def owner_display_names():
     """owner id -> a human name, harvested from the Louie Power Index sheets.
 
@@ -169,13 +176,19 @@ def unresolved_teams(league):
 
 
 # ------------------------------------------------------------------ base tables
-def _raw_matchups():
+@lru_cache(maxsize=1)
+def _raw_matchups_cached():
     am = pd.read_csv(ALL_MATCHUPS)
     am = am.dropna(subset=['Home Team', 'Away Team']).copy()
     am['League'] = am['League'].map(registry.canonical)
     for c in ('Home Team', 'Away Team'):
         am[c] = am[c].astype(str).str.strip()
     return am
+
+
+def _raw_matchups():
+    """A copy, so callers can filter and add columns freely."""
+    return _raw_matchups_cached().copy()
 
 
 def multi_season_leagues(min_seasons=2):

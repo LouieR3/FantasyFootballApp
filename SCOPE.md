@@ -353,6 +353,36 @@ Verified across all 8 leagues: margins cancel to zero, W count equals L count, a
 
 ---
 
+## 3d. All-Time Hall of Fame — ✅ built 2026-07-28
+
+New page `pages/15_🏆_All_Time_Hall_of_Fame.py` over `ffapp/metrics/hall_of_fame.py`. **403 team-seasons across 14 leagues, 2019–2025, 34 championships** — every team-season ever, ranked for bragging rights.
+
+### Cross-league comparability was the design problem
+
+Leagues differ in size, scoring and season length, so raw points are meaningless between them. Rankings default to **PPG z** — points per game z-scored *within its own league-season*, so `+2.0` means "two standard deviations better than that league that year" and travels across leagues and eras. `Win %` and `LPI` are also league-relative (LPI is already scaled by league size). Raw points are displayed but never used to rank. A metric selector offers all four.
+
+**Luck** = actual wins − Expected Wins, pulled from the Expected Wins sheet (present in all 42 workbooks).
+
+Manager views pool across leagues, because ESPN owner IDs are account SWIDs — the same person carries the same ID everywhere. 19 owner IDs appear in 2+ leagues.
+
+### The lists
+
+Best / worst team-seasons ever · best season that never won a title · best teams to miss the playoffs · worst teams to make them · worst teams to reach a final · **worst champions** · luckiest and unluckiest seasons · **best managers without a ring** · heartbreak index (most playoff trips, no title) · dynasties · iron men (most seasons) · biggest turnarounds and collapses year over year.
+
+Sample findings: Harshit Aggarwal's 2024 Game of Yards at **+2.36 PPG z** is the best season on record; a 0-14 Furnace Party season sits near the bottom; Lawrence Rosello went **12-5 in 2022 with −0.98 PPG z and +5.4 luck** — simultaneously the luckiest season and the worst playoff team by scoring; Prahlad Singh is the iron man at 18 seasons across 4 leagues with 3 titles; Utkarsh Gupta leads the heartbreak index with 7 playoff trips and no ring.
+
+### Verified
+
+All four metrics exercised across all seven team views plus the manager views. Invariants asserted: PPG z centres on 0 per league-season, at most one champion per league-season, finalists come in 0 or 2, every champion is also a finalist, every finalist made the playoffs, manager titles sum to the championship count (34), and manager seasons sum to the team-season count (403).
+
+Build time went **40s → 4s** by memoising `owner_crosswalk` / `owner_display_names` / the raw matchup read in `lifetime.py` — without it, `owner_display_names` re-read all 42 workbooks once per league (588 Excel reads).
+
+⬜ **`BP- Loudoun 2025` (Matt's league) is excluded** — it has 202 team-games but no draft file, so its teams cannot be tied to a manager. It is commented out in `draft_data.py`'s league list; uncomment it, run the draft pull, and it joins automatically. The page says so rather than silently omitting it.
+
+> Data note: two Game of Yards workbooks spell a playoff round **"Quater Final"**. Normalised on read; the typo is baked into those files, not current code.
+
+---
+
 ## 4. Feature backlog
 
 Items carried over from `todo.txt` are marked ⭐.
