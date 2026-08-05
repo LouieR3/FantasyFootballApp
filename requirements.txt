@@ -1,22 +1,31 @@
 # Pinned deliberately. This file used to be completely unpinned, so every
 # Streamlit Cloud rebuild re-resolved the whole tree to the newest releases -
-# meaning a breaking release in any transitive dependency could take the live app
-# down with no code change on our side. That is exactly how the app "worked
-# yesterday" and then failed with:
+# meaning a breaking release anywhere could take the live app down with no code
+# change on our side.
 #
-#   TypeError: GZipResponder.__init__() missing 1 required keyword-only argument:
-#   'thread_minimum_size'
+# ---------------------------------------------------------------------------
+# The starlette pin below is load-bearing. Do not remove it without testing.
+# ---------------------------------------------------------------------------
+# Symptom it fixes:
+#   TypeError: GZipResponder.__init__() missing 1 required keyword-only
+#   argument: 'thread_minimum_size'
 #
-# GZipResponder is a Starlette internal. Nothing in this repo touches gzip,
-# Starlette, uvicorn or middleware - it arrives transitively and a new upstream
-# release changed its signature.
+# Traced by diffing starlette releases: `thread_minimum_size` became a REQUIRED
+# keyword-only argument on GZipResponder.__init__ in starlette 1.4.0. Every
+# version up to and including 1.3.1 is clean.
 #
-# Upper bounds keep the next breaking major out while still allowing patches. To
-# reproduce a known-good set exactly, read the resolved versions from the last
-# successful Streamlit Cloud build log ("Installing dependencies") and pin to those.
+# Streamlit is what breaks: it subclasses starlette's GZipResponder in
+# streamlit/web/server/starlette/starlette_gzip_middleware.py and constructs it
+# without that argument. Streamlit 1.61.0 declares `starlette<2,>=0.46.0`, and
+# that upper bound is too loose - pip happily installs 1.4.0 and the server dies
+# on the first gzip-accepting request. Nothing in this repo touches gzip or
+# starlette; it arrives via streamlit itself.
+#
+# Revisit once Streamlit ships a release compatible with starlette >= 1.4.
 
 # --- core app ---
 streamlit>=1.40,<2
+starlette>=0.46,<1.4        # see the note above - anything >= 1.4 breaks streamlit's gzip middleware
 pandas>=2.0,<3
 numpy>=1.24,<3
 openpyxl>=3.1,<4
@@ -33,12 +42,10 @@ tabulate>=0.9,<1            # pretty-printing in the pipeline scripts
 
 # --- streamlit components used by the pages ---
 streamlit-aggrid>=1.0
-# Left unconstrained only because their release histories are obscure and a wrong
-# ceiling would break the install outright. They are the FIRST place to look if a
-# deploy breaks again with no code change: small third-party Streamlit components
-# are the likeliest source of a transitive Starlette/FastAPI dependency. Pin both
-# from the last good build log if that happens. (page_functions imports one symbol
-# from each - worth consolidating onto a single charting component some day.)
+# Left unconstrained because their release histories are obscure and a wrong ceiling
+# would break the install outright. Checked: neither depends on starlette, fastapi or
+# uvicorn, so neither was involved in the gzip failure above. (page_functions imports
+# one symbol from each - worth consolidating onto a single charting component.)
 streamlit-echarts
 streamlit-echarts5
 pyecharts>=2.0,<3           # imported directly by page_functions; previously relied on

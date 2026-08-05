@@ -143,21 +143,29 @@ python tools/smoke_pages.py
 
 ### If the app breaks with no code change
 
-Symptom: the live app fails after a deploy (or even without one) with an error from
-deep inside a library you have never imported — for example
-`TypeError: GZipResponder.__init__() missing 1 required keyword-only argument`.
-`GZipResponder` is a Starlette internal; nothing in this repo touches Starlette.
+`requirements.txt` is pinned with upper bounds so a new major release upstream cannot
+silently take the app down. **One pin is load-bearing** and is documented in the file
+itself:
 
-That is a **dependency break, not a code break**. `requirements.txt` is now pinned
-with upper bounds so a new major release upstream cannot silently take the app down.
-If it happens again:
+> **`starlette>=0.46,<1.4`** — starlette 1.4.0 made `thread_minimum_size` a *required*
+> keyword-only argument on `GZipResponder.__init__`. Streamlit subclasses that class in
+> `streamlit/web/server/starlette/starlette_gzip_middleware.py` and constructs it
+> without the argument, and Streamlit's own bound (`starlette<2,>=0.46.0`) is too loose
+> to exclude it. Result:
+> `TypeError: GZipResponder.__init__() missing 1 required keyword-only argument:
+> 'thread_minimum_size'` on every gzip-accepting request. Every starlette up to 1.3.1
+> is clean. Revisit once Streamlit supports starlette ≥ 1.4.
 
-1. Open the last **successful** Streamlit Cloud build log and copy the resolved
-   versions from the "Installing dependencies" step.
-2. Pin the suspects to those versions. `streamlit-echarts` and `streamlit-echarts5`
-   are the two left unconstrained and are the likeliest culprits — small third-party
-   components are where an unexpected Starlette/FastAPI dependency comes from.
-3. Redeploy, then **Reboot app**.
+If something similar happens again:
+
+1. Compare the resolved versions in the last **successful** Streamlit Cloud build log
+   ("Installing dependencies") against the current build — the diff is usually one
+   package.
+2. To pin down a signature break exactly, download the suspect at several versions
+   with `pip download <pkg>==<ver> --no-deps` and diff the function named in the
+   traceback. That is how the starlette boundary above was found — guessing from the
+   dependency list pointed at the wrong packages entirely.
+3. Pin below the breaking version, redeploy, then **Reboot app**.
 
 ## Roadmap
 
