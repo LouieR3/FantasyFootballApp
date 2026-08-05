@@ -169,7 +169,11 @@ def rebuild_from_workbooks(csv_path=None):
         df = df.loc[:, ~df.columns.astype(str).str.startswith('Unnamed')]
         df['Year'] = year
         df['League'] = league_name
-        df['File Name'] = path
+        # Basename only, never the absolute path. LEAGUES_DIR is absolute, so
+        # writing `path` here baked a machine-specific path - complete with the
+        # local username - into a committed CSV in a public repo, and broke every
+        # consumer that stripped a directory prefix off this column.
+        df['File Name'] = os.path.basename(path)
         frames.append(df)
 
     if not frames:

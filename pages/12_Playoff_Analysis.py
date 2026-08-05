@@ -677,7 +677,13 @@ def app():
                 "LPI": row["LPI 1"] if row["Winner"] == row["Team 1"] else row["LPI 2"],
                 "Record": row["Record 1"] if row["Winner"] == row["Team 1"] else row["Record 2"],
                 "Score": row["Score 1"] if row["Winner"] == row["Team 1"] else row["Score 2"],
-                "File Name": row["File Name"],
+                # Use the League/Year columns rather than parsing the file path.
+                # This used to strip a prefix off "File Name", which broke twice:
+                # the path became absolute (and Windows-separated, so a
+                # forward-slash prefix could never match) and the League column
+                # was sitting right there the whole time.
+                "League": row["League"],
+                "Year": row["Year"],
             }),
             axis=1
         )
@@ -685,9 +691,10 @@ def app():
         # Reset the index for the new DataFrame
         winner_df.reset_index(drop=True, inplace=True)
 
-        # Print the Winner DataFrame
-        winner_df["League"] = winner_df["File Name"].str.replace('.xlsx', '', regex=False).str.replace(f'{LEAGUES_DIR}/', '', regex=False)
-        winner_df = winner_df[["Team", "Seed", "Total Points", "LPI", "Record", "League"]]
+        winner_df["Season"] = (winner_df["League"].astype(str) + " "
+                               + winner_df["Year"].astype(int).astype(str))
+        winner_df = winner_df[["Team", "Seed", "Total Points", "LPI", "Record",
+                               "League", "Year", "Season"]]
         print(winner_df)
         st.divider()
         st.write("All Champions:")

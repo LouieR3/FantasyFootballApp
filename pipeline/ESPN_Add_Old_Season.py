@@ -507,7 +507,12 @@ def missing_info_checker():
                         # free_agent_df = pd.read_csv(free_agent_file_path)
                         # print(free_agent_df.head())
 
-                    league_playoffs_df = all_playoffs_df[all_playoffs_df['File Name'] == file_path]
+                    # match on League/Year rather than the file path: 'File Name'
+                    # is a basename now, so comparing it to a full path silently
+                    # matched nothing
+                    league_playoffs_df = all_playoffs_df[
+                        (all_playoffs_df['League'] == league_name)
+                        & (all_playoffs_df['Year'] == year)]
                     # print("Filtered Playofs Matchups DataFrame: " + str(len(league_playoffs_df)))
                     # print(league_playoffs_df.head())
 

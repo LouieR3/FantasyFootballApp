@@ -64,7 +64,9 @@ def winless_record_chances(leagues, years):
                     playoff_df = pd.read_excel(file_path, sheet_name="Playoff Results")
                     playoff_df['Year'] = year  # Add year for identification
                     playoff_df['League'] = league_name  # Add league name for identification
-                    playoff_df['File Name'] = file_path  # Add file name for identification
+                    # basename only - an absolute path here would be machine-specific
+                    # and would break consumers that match on this column
+                    playoff_df['File Name'] = os.path.basename(file_path)
                     combined_playoff_dfs.append(playoff_df)
 
                     print(f"Processed {file_path}: 'Playoff Results' sheet loaded.")
@@ -210,7 +212,9 @@ def undefeated_record_chances(leagues, years):
                     playoff_df = pd.read_excel(file_path, sheet_name="Playoff Results")
                     playoff_df['Year'] = year  # Add year for identification
                     playoff_df['League'] = league_name  # Add league name for identification
-                    playoff_df['File Name'] = file_path  # Add file name for identification
+                    # basename only - an absolute path here would be machine-specific
+                    # and would break consumers that match on this column
+                    playoff_df['File Name'] = os.path.basename(file_path)
                     combined_playoff_dfs.append(playoff_df)
 
                     print(f"Processed {file_path}: 'Playoff Results' sheet loaded.")
@@ -346,7 +350,9 @@ def all_record_chances(leagues, years):
                     playoff_df = pd.read_excel(file_path, sheet_name="Playoff Results")
                     playoff_df['Year'] = year  # Add year for identification
                     playoff_df['League'] = league_name  # Add league name for identification
-                    playoff_df['File Name'] = file_path  # Add file name for identification
+                    # basename only - an absolute path here would be machine-specific
+                    # and would break consumers that match on this column
+                    playoff_df['File Name'] = os.path.basename(file_path)
                     combined_playoff_dfs.append(playoff_df)
 
                     print(f"Processed {file_path}: 'Playoff Results' sheet loaded.")
