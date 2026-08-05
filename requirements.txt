@@ -1,21 +1,56 @@
-matplotlib
-bs4
-numpy
-# pydeck
-pandas
-unidecode
-lxml
-requests
-espn_api
-streamlit
-openpyxl
-jinja2
-# glob
-st_pages>=0.4.3
-# streamlit_option_menu
-inflect
-streamlit-aggrid
+# Pinned deliberately. This file used to be completely unpinned, so every
+# Streamlit Cloud rebuild re-resolved the whole tree to the newest releases -
+# meaning a breaking release in any transitive dependency could take the live app
+# down with no code change on our side. That is exactly how the app "worked
+# yesterday" and then failed with:
+#
+#   TypeError: GZipResponder.__init__() missing 1 required keyword-only argument:
+#   'thread_minimum_size'
+#
+# GZipResponder is a Starlette internal. Nothing in this repo touches gzip,
+# Starlette, uvicorn or middleware - it arrives transitively and a new upstream
+# release changed its signature.
+#
+# Upper bounds keep the next breaking major out while still allowing patches. To
+# reproduce a known-good set exactly, read the resolved versions from the last
+# successful Streamlit Cloud build log ("Installing dependencies") and pin to those.
+
+# --- core app ---
+streamlit>=1.40,<2
+pandas>=2.0,<3
+numpy>=1.24,<3
+openpyxl>=3.1,<4
+XlsxWriter>=3.1,<4          # pd.ExcelWriter(engine='xlsxwriter') in the weekly scripts
+jinja2>=3.1,<4              # required by pandas Styler (.background_gradient), not imported directly
+
+# --- ESPN + parsing ---
+espn_api>=0.44
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
+lxml>=5.0,<6                # bs4 / pandas html parsing backend
+inflect>=7.0,<8
+tabulate>=0.9,<1            # pretty-printing in the pipeline scripts
+
+# --- streamlit components used by the pages ---
+streamlit-aggrid>=1.0
+# Left unconstrained only because their release histories are obscure and a wrong
+# ceiling would break the install outright. They are the FIRST place to look if a
+# deploy breaks again with no code change: small third-party Streamlit components
+# are the likeliest source of a transitive Starlette/FastAPI dependency. Pin both
+# from the last good build log if that happens. (page_functions imports one symbol
+# from each - worth consolidating onto a single charting component some day.)
+streamlit-echarts
 streamlit-echarts5
-streamlit_echarts
-plost
-vega_datasets
+pyecharts>=2.0,<3           # imported directly by page_functions; previously relied on
+                            # streamlit-echarts pulling it in transitively
+plost>=0.1
+vega_datasets>=0.9
+
+# --- offline analysis scripts only (analysis/), not needed to serve the app ---
+matplotlib>=3.7,<4
+seaborn>=0.13,<1
+scipy>=1.11,<2              # scipy.stats in analysis/all_draft_files.py and draft_analysis_extra.py
+
+# Removed as unused: `unidecode` and `st_pages` were installed but imported nowhere
+# in live code (the st_pages usage in streamlit-app.py is commented out). Fewer
+# packages means fewer upstream releases that can break a deploy.
