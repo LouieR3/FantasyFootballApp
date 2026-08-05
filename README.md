@@ -141,6 +141,24 @@ streamlit stubbed and catches runtime errors that `py_compile` cannot:
 python tools/smoke_pages.py
 ```
 
+### If the app breaks with no code change
+
+Symptom: the live app fails after a deploy (or even without one) with an error from
+deep inside a library you have never imported — for example
+`TypeError: GZipResponder.__init__() missing 1 required keyword-only argument`.
+`GZipResponder` is a Starlette internal; nothing in this repo touches Starlette.
+
+That is a **dependency break, not a code break**. `requirements.txt` is now pinned
+with upper bounds so a new major release upstream cannot silently take the app down.
+If it happens again:
+
+1. Open the last **successful** Streamlit Cloud build log and copy the resolved
+   versions from the "Installing dependencies" step.
+2. Pin the suspects to those versions. `streamlit-echarts` and `streamlit-echarts5`
+   are the two left unconstrained and are the likeliest culprits — small third-party
+   components are where an unexpected Starlette/FastAPI dependency comes from.
+3. Redeploy, then **Reboot app**.
+
 ## Roadmap
 
 The full scope, feature backlog, draft-grade methodology review, and data-hosting migration plan live in **[SCOPE.md](SCOPE.md)**. Highlights:
