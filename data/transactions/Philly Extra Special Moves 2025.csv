@@ -1,0 +1,331 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Philly Extra Special,2025,2,ADD,Bills D/ST,D/ST,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,2,ADD,Kenneth Gainwell,RB,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,2,ADD,Quentin Johnston,WR,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,2,ADD,Rams D/ST,D/ST,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,2,ADD,Bhayshul Tuten,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,2,ADD,Trey Benson,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,2,ADD,49ers D/ST,D/ST,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,2,ADD,Tyler Loop,K,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,2,DROP,Seahawks D/ST,D/ST,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,2,DROP,Tank Bigsby,RB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,2,DROP,Colston Loveland,TE,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,2,DROP,Bengals D/ST,D/ST,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,2,DROP,Matt Gay,K,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,2,DROP,Jerome Ford,RB,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,2,DROP,Steelers D/ST,D/ST,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,3,ADD,Juwan Johnson,TE,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,3,ADD,Seahawks D/ST,D/ST,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,3,ADD,Rachaad White,RB,(FA),Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,3,ADD,Hollywood Brown,WR,(FA),Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,3,ADD,Packers D/ST,D/ST,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,3,ADD,Falcons D/ST,D/ST,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,3,ADD,Matt Prater,K,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,3,ADD,Troy Franklin,WR,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,3,TEAM->TEAM,Ravens D/ST,D/ST,Steenage Mutant Ninja Turtles,The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,3,ADD,Jordan Love,QB,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,3,ADD,Buccaneers D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,3,ADD,Wan'Dale Robinson,WR,(FA),Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,3,ADD,Jared Goff,QB,(FA),Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,3,ADD,Drake Maye,QB,(FA),yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,3,TEAM->TEAM,RJ Harvey,RB,Matthew Dorchak,yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,3,ADD,Daniel Jones,QB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,3,ADD,Bengals D/ST,D/ST,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,3,ADD,Zach Ertz,TE,(FA),Kevin Nichols The Third,{E95CA752-6CD0-4670-853B-0AA8A2FDF295},0,snapshot
+Philly Extra Special,2025,3,DROP,Austin Ekeler,RB,Leafy Water,(FA),{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,3,DROP,Bills D/ST,D/ST,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,3,DROP,Cardinals D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,3,DROP,Brock Purdy,QB,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,3,DROP,Jake Bates,K,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,3,DROP,Dylan Sampson,RB,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,3,DROP,Rams D/ST,D/ST,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,3,DROP,Tyjae Spears,RB,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,3,DROP,Stefon Diggs,WR,Matthew Golden's Goose,(FA),{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,3,DROP,49ers D/ST,D/ST,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,3,DROP,Mark Andrews,TE,Kevin Nichols The Third,(FA),{E95CA752-6CD0-4670-853B-0AA8A2FDF295},0,snapshot
+Philly Extra Special,2025,4,ADD,Stefon Diggs,WR,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,4,ADD,Tre Tucker,WR,(FA),Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,4,ADD,Geno Smith,QB,(FA),Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,4,ADD,Steelers D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,4,ADD,Hunter Henry,TE,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,4,ADD,Chargers D/ST,D/ST,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,4,DROP,Falcons D/ST,D/ST,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,4,DROP,Buccaneers D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,4,DROP,Keon Coleman,WR,Matthew Golden's Goose,(FA),{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,4,DROP,Jared Goff,QB,Matthew Golden's Goose,(FA),{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,4,DROP,James Conner,RB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,4,DROP,Bengals D/ST,D/ST,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,5,ADD,Mark Andrews,TE,(FA),Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,5,TRADE,Ja'Marr Chase,WR,The Real Kevin Nichols,Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,5,TRADE,Stefon Diggs,WR,The Real Kevin Nichols,Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,5,TRADE,Nick Chubb,RB,The Real Kevin Nichols,Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,5,ADD,Woody Marks,RB,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,5,ADD,Spencer Shrader,K,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,5,TRADE,James Cook III,RB,Leafy Water,The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,5,TRADE,Rachaad White,RB,Leafy Water,The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,5,ADD,Brenton Strange,TE,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,5,TEAM->TEAM,Matt Prater,K,The Real Kevin Nichols,i just wasted $20,{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,5,ADD,Colts D/ST,D/ST,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,5,ADD,Elic Ayomanor,WR,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,5,ADD,Browns D/ST,D/ST,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,5,ADD,Emari Demercado,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,5,ADD,Rico Dowdle,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,5,ADD,Cardinals D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,5,ADD,Michael Carter,RB,(FA),yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,5,ADD,Keon Coleman,WR,(FA),yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,5,DROP,David Njoku,TE,Leafy Water,(FA),{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,5,DROP,Hollywood Brown,WR,Leafy Water,(FA),{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,5,DROP,Jordan Love,QB,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,5,DROP,Geno Smith,QB,Matthew Golden's Goose,(FA),{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,5,DROP,J.J. McCarthy,QB,i just wasted $20,(FA),{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,5,DROP,Packers D/ST,D/ST,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,5,DROP,Steelers D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,5,DROP,Malik Nabers,WR,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,5,DROP,Josh Downs,WR,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,5,DROP,Chargers D/ST,D/ST,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,5,DROP,Tyrone Tracy Jr.,RB,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,5,DROP,Jayden Higgins,WR,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,6,ADD,Steelers D/ST,D/ST,(FA),i just wasted $20,{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,6,ADD,Patriots D/ST,D/ST,(FA),Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,6,ADD,Hassan Haskins,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,6,ADD,Jordan Love,QB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,6,ADD,Raiders D/ST,D/ST,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,6,ADD,Matt Gay,K,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,6,ADD,Jason Myers,K,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,6,ADD,Matthew Stafford,QB,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,6,ADD,Mason Taylor,TE,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,6,ADD,Packers D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,6,DROP,Wan'Dale Robinson,WR,Matthew Golden's Goose,(FA),{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,6,DROP,Spencer Shrader,K,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,6,DROP,Brenton Strange,TE,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,6,DROP,Chris Boswell,K,i just wasted $20,(FA),{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,6,DROP,Kyler Murray,QB,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,6,DROP,Ka'imi Fairbairn,K,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,6,DROP,Juwan Johnson,TE,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,6,DROP,Daniel Jones,QB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,6,DROP,Emari Demercado,RB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,6,DROP,Cardinals D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,7,TEAM->TEAM,Hunter Henry,TE,Matthew Dorchak,Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,7,ADD,Daniel Jones,QB,(FA),i just wasted $20,{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,7,ADD,Chris Boswell,K,(FA),i just wasted $20,{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,7,ADD,Michael Badgley,K,(FA),i just wasted $20,{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,7,ADD,Kendrick Bourne,WR,(FA),i just wasted $20,{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,7,ADD,Kimani Vidal,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,7,ADD,Josh Downs,WR,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,7,ADD,Tyjae Spears,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,7,ADD,Jake Bates,K,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,7,ADD,Wan'Dale Robinson,WR,(FA),Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,7,TEAM->TEAM,Jerry Jeudy,WR,i just wasted $20,yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,7,ADD,Chiefs D/ST,D/ST,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,7,ADD,Panthers D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,7,ADD,Jared Goff,QB,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,7,ADD,Harold Fannin Jr.,TE,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,7,TEAM->TEAM,Packers D/ST,D/ST,Dr@ft King$,Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,7,DROP,Mark Andrews,TE,Leafy Water,(FA),{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,7,DROP,Ricky Pearsall,WR,i just wasted $20,(FA),{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,7,DROP,Texans D/ST,D/ST,i just wasted $20,(FA),{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,7,DROP,Matt Prater,K,i just wasted $20,(FA),{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,7,DROP,Bhayshul Tuten,RB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,7,DROP,Tyler Loop,K,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,7,DROP,Hassan Haskins,RB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,7,DROP,Raiders D/ST,D/ST,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,7,DROP,Keon Coleman,WR,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,7,DROP,Chris Godwin Jr.,WR,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,7,DROP,Matthew Stafford,QB,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,7,DROP,Mason Taylor,TE,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,7,DROP,Colts D/ST,D/ST,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,8,ADD,Oronde Gadsden,TE,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,8,ADD,Matt Prater,K,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,8,ADD,Tyler Allgeier,RB,(FA),yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,8,ADD,Falcons D/ST,D/ST,(FA),yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,8,ADD,Chargers D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,8,ADD,Cairo Santos,K,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,8,ADD,Romeo Doubs,WR,(FA),i just wasted $20,{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,8,ADD,Mark Andrews,TE,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,8,ADD,Jaxson Dart,QB,(FA),Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,8,ADD,Texans D/ST,D/ST,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,8,ADD,Will Reichard,K,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,8,TEAM->TEAM,Jordan Love,QB,Matthew Dorchak,Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,8,ADD,Colts D/ST,D/ST,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,8,DROP,Michael Badgley,K,i just wasted $20,(FA),{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,8,DROP,Jake Bates,K,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,8,DROP,Vikings D/ST,D/ST,Matthew Golden's Goose,(FA),{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,8,DROP,Joe Burrow,QB,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,8,DROP,Michael Carter,RB,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,8,DROP,Chiefs D/ST,D/ST,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,8,DROP,Cam Little,K,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,8,DROP,Panthers D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,8,DROP,TreVeyon Henderson,RB,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,8,DROP,Jason Myers,K,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,8,DROP,Jared Goff,QB,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,8,DROP,Kaleb Johnson,RB,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,9,TRADE,Jaylen Warren,RB,Kevin Nichols The Third,yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,9,ADD,Michael Badgley,K,(FA),yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,9,ADD,Kayshon Boutte,WR,(FA),yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,9,TEAM->TEAM,Tony Pollard,RB,Dr@ft King$,yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,9,ADD,Rams D/ST,D/ST,(FA),Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,9,ADD,Kyle Monangai,RB,(FA),Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,9,TEAM->TEAM,Seahawks D/ST,D/ST,Steenage Mutant Ninja Turtles,Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,9,ADD,Joe Flacco,QB,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,9,TRADE,RJ Harvey,RB,yay football woo,Kevin Nichols The Third,{E95CA752-6CD0-4670-853B-0AA8A2FDF295},0,snapshot
+Philly Extra Special,2025,9,TRADE,Ladd McConkey,WR,yay football woo,Kevin Nichols The Third,{E95CA752-6CD0-4670-853B-0AA8A2FDF295},0,snapshot
+Philly Extra Special,2025,9,ADD,Jake Bates,K,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,9,ADD,TreVeyon Henderson,RB,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,9,ADD,Jaguars D/ST,D/ST,(FA),i just wasted $20,{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,9,ADD,Bam Knight,RB,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,9,ADD,Christian Watson,WR,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,9,ADD,Juwan Johnson,TE,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,9,TEAM->TEAM,Aaron Jones Sr.,RB,The Real Kevin Nichols,Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,9,ADD,Tyrone Tracy Jr.,RB,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,9,DROP,Jayden Reed,WR,Leafy Water,(FA),{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,9,DROP,Eagles D/ST,D/ST,Leafy Water,(FA),{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,9,DROP,Elic Ayomanor,WR,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,9,DROP,Tyler Allgeier,RB,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,9,DROP,Falcons D/ST,D/ST,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,9,DROP,Mike Evans,WR,Kevin Nichols The Third,(FA),{E95CA752-6CD0-4670-853B-0AA8A2FDF295},0,snapshot
+Philly Extra Special,2025,9,DROP,Kendrick Bourne,WR,i just wasted $20,(FA),{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,9,DROP,Tyreek Hill,WR,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,9,DROP,Chase McLaughlin,K,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,9,DROP,Cam Skattebo,RB,Matthew Golden's Goose,(FA),{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,9,DROP,T.J. Hockenson,TE,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,9,DROP,Jordan Mason,RB,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,9,DROP,Colts D/ST,D/ST,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,10,ADD,Theo Johnson,TE,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,10,ADD,Bills D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,10,ADD,Colts D/ST,D/ST,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,10,ADD,Matthew Stafford,QB,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,10,ADD,Cade Otton,TE,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,10,ADD,Tyler Loop,K,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,10,ADD,Wil Lutz,K,(FA),Kevin Nichols The Third,{E95CA752-6CD0-4670-853B-0AA8A2FDF295},0,snapshot
+Philly Extra Special,2025,10,ADD,Jason Myers,K,(FA),Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,10,DROP,Calvin Ridley,WR,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,10,DROP,Tucker Kraft,TE,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,10,DROP,Chargers D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,10,DROP,Packers D/ST,D/ST,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,10,DROP,Jordan Love,QB,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,10,DROP,Juwan Johnson,TE,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,10,DROP,Harrison Butker,K,Matthew Golden's Goose,(FA),{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,10,DROP,Matt Gay,K,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,11,ADD,Packers D/ST,D/ST,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,11,ADD,Cowboys D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,11,ADD,Kareem Hunt,RB,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,11,ADD,C.J. Stroud,QB,(FA),yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,11,ADD,Chargers D/ST,D/ST,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,11,TEAM->TEAM,Tre Tucker,WR,Matthew Golden's Goose,Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,11,ADD,Aaron Rodgers,QB,(FA),Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,11,DROP,Bills D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,11,DROP,Colts D/ST,D/ST,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,11,DROP,Michael Badgley,K,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,11,DROP,Bam Knight,RB,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,11,DROP,Travis Hunter,WR,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,11,DROP,Browns D/ST,D/ST,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,12,ADD,Andy Borregales,K,(FA),Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,12,ADD,Michael Wilson,WR,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,12,ADD,Joe Burrow,QB,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,12,ADD,Alec Pierce,WR,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,12,ADD,Jacoby Brissett,QB,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,12,ADD,Sean Tucker,RB,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,12,ADD,Jordan Love,QB,(FA),Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,12,ADD,Browns D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,12,ADD,Ricky Pearsall,WR,(FA),yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,12,ADD,Juwan Johnson,TE,(FA),yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,12,ADD,Jared Goff,QB,(FA),yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,12,TEAM->TEAM,RJ Harvey,RB,Kevin Nichols The Third,yay football woo,{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,12,ADD,Brenton Strange,TE,(FA),Kevin Nichols The Third,{E95CA752-6CD0-4670-853B-0AA8A2FDF295},0,snapshot
+Philly Extra Special,2025,12,ADD,Raiders D/ST,D/ST,(FA),Kevin Nichols The Third,{E95CA752-6CD0-4670-853B-0AA8A2FDF295},0,snapshot
+Philly Extra Special,2025,12,ADD,Emanuel Wilson,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,12,ADD,Brock Purdy,QB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,12,ADD,Ka'imi Fairbairn,K,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,12,DROP,Nick Chubb,RB,Leafy Water,(FA),{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,12,DROP,Kyle Monangai,RB,Leafy Water,(FA),{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,12,DROP,Cowboys D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,12,DROP,J.K. Dobbins,RB,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,12,DROP,Christian Watson,WR,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,12,DROP,Evan Engram,TE,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,12,DROP,Jerry Jeudy,WR,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,12,DROP,Kayshon Boutte,WR,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,12,DROP,C.J. Stroud,QB,yay football woo,(FA),{B6F0817B-1DC0-4E29-B020-68B8E12B6931},0,snapshot
+Philly Extra Special,2025,12,DROP,Jacory Croskey-Merritt,RB,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,12,DROP,Rachaad White,RB,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,12,DROP,Tyjae Spears,RB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,12,DROP,Matt Prater,K,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,12,DROP,Chargers D/ST,D/ST,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,12,DROP,Aaron Rodgers,QB,Matthew Golden's Goose,(FA),{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,12,DROP,Wil Lutz,K,Kevin Nichols The Third,(FA),{E95CA752-6CD0-4670-853B-0AA8A2FDF295},0,snapshot
+Philly Extra Special,2025,12,DROP,Cooper Kupp,WR,i just wasted $20,(FA),{3BBCE971-7F4C-4D6F-AC1B-79EFC1DACB23},0,snapshot
+Philly Extra Special,2025,13,ADD,Devin Neal,RB,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,13,ADD,Chargers D/ST,D/ST,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,13,ADD,49ers D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,13,DROP,Cade Otton,TE,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,13,DROP,Packers D/ST,D/ST,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,13,DROP,Browns D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,13,DROP,Brian Thomas Jr.,WR,Kevin Nichols The Third,(FA),{E95CA752-6CD0-4670-853B-0AA8A2FDF295},0,snapshot
+Philly Extra Special,2025,14,ADD,Titans D/ST,D/ST,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,14,ADD,Chase McLaughlin,K,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,14,ADD,Browns D/ST,D/ST,(FA),Matthew Golden's Goose,{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,14,ADD,Chris Rodriguez Jr.,RB,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,14,ADD,Adonai Mitchell,WR,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,14,ADD,Buccaneers D/ST,D/ST,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,14,ADD,Wil Lutz,K,(FA),Steenage Mutant Ninja Turtles,{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,14,ADD,Kyle Monangai,RB,(FA),Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,14,ADD,Dalton Schultz,TE,(FA),Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,14,ADD,Christian Watson,WR,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,14,ADD,Devaughn Vele,WR,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,14,ADD,Bam Knight,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,14,TEAM->TEAM,Michael Wilson,WR,Steenage Mutant Ninja Turtles,Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,14,ADD,Commanders D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,14,ADD,Colts D/ST,D/ST,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,14,ADD,C.J. Stroud,QB,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,14,DROP,Ravens D/ST,D/ST,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,14,DROP,Tyler Loop,K,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,14,DROP,Sean Tucker,RB,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,14,DROP,Andy Borregales,K,Leafy Water,(FA),{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,14,DROP,Quentin Johnston,WR,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,14,DROP,Will Reichard,K,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,14,DROP,Kareem Hunt,RB,Steenage Mutant Ninja Turtles,(FA),{F52EDAFE-42E8-4DD6-9DB5-61536C3C6528},0,snapshot
+Philly Extra Special,2025,14,DROP,Matthew Golden,WR,Matthew Golden's Goose,(FA),{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,14,DROP,Jordan Love,QB,Matthew Golden's Goose,(FA),{432EA93E-0C1B-4AD7-AEA9-3E0C1B8AD7D1},0,snapshot
+Philly Extra Special,2025,14,DROP,Justin Fields,QB,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,14,DROP,Chargers D/ST,D/ST,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,14,DROP,49ers D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,14,DROP,Josh Downs,WR,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,14,DROP,Oronde Gadsden,TE,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,14,DROP,Tre Tucker,WR,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,14,DROP,Emanuel Wilson,RB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,15,ADD,Devin Singletary,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,15,ADD,Bears D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,15,ADD,Shedeur Sanders,QB,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,15,ADD,Eagles D/ST,D/ST,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,15,ADD,Trevor Lawrence,QB,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,15,ADD,Mike Evans,WR,(FA),The Real Kevin Nichols,{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,15,DROP,Alec Pierce,WR,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,15,DROP,Titans D/ST,D/ST,The Real Kevin Nichols,(FA),{DFBF45BA-746C-4337-BF45-BA746C73373F},0,snapshot
+Philly Extra Special,2025,15,DROP,Trey Benson,RB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,15,DROP,Joe Flacco,QB,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,15,DROP,Commanders D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,16,ADD,Jordan Love,QB,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,16,ADD,Vikings D/ST,D/ST,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,16,ADD,Chiefs D/ST,D/ST,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,16,ADD,Michael Carter,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,16,ADD,Brian Thomas Jr.,WR,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,16,ADD,Bills D/ST,D/ST,(FA),Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,16,ADD,Saints D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,16,DROP,Patrick Mahomes,QB,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,16,DROP,Joe Mixon,RB,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,16,DROP,Devaughn Vele,WR,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,16,DROP,Bam Knight,RB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,16,DROP,Devin Singletary,RB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,16,DROP,Bears D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,16,DROP,Rams D/ST,D/ST,Leafy Water,(FA),{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,17,ADD,Rams D/ST,D/ST,(FA),Leafy Water,{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,17,ADD,Dylan Sampson,RB,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,17,ADD,Chimere Dike,WR,(FA),Matthew Dorchak,{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,17,ADD,Cowboys D/ST,D/ST,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,17,ADD,Sam Darnold,QB,(FA),Pickens Brown Hubbard @ Mahomes,{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,17,ADD,Giants D/ST,D/ST,(FA),Dr@ft King$,{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot
+Philly Extra Special,2025,17,DROP,Isiah Pacheco,RB,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,17,DROP,Colts D/ST,D/ST,Pickens Brown Hubbard @ Mahomes,(FA),{1E294587-F125-49A7-AD9D-7567C0C3DEE1},0,snapshot
+Philly Extra Special,2025,17,DROP,Kimani Vidal,RB,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,17,DROP,Chiefs D/ST,D/ST,Matthew Dorchak,(FA),{A6404CB9-25F0-4B29-804C-B925F0CB2975},0,snapshot
+Philly Extra Special,2025,17,DROP,Bills D/ST,D/ST,Leafy Water,(FA),{E74CE5E4-052E-4573-8BBD-CEFBC6AFEF21},0,snapshot
+Philly Extra Special,2025,17,DROP,Saints D/ST,D/ST,Dr@ft King$,(FA),{3389AE65-1498-46A0-8119-84AC1B8D92A9},0,snapshot

@@ -52,16 +52,16 @@ Game of Yards!,2024,3,DROP,Tua Tagovailoa,QB,Pain Inflictors,(FA),{4802A561-2D04
 Game of Yards!,2024,3,DROP,Eagles D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
 Game of Yards!,2024,3,DROP,Jaleel McLaughlin,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
 Game of Yards!,2024,3,DROP,Younghoe Koo,K,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
-Game of Yards!,2024,4,TRADE,Zack Moss,RB,Wakanda Forever,Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
-Game of Yards!,2024,4,TRADE,George Pickens,WR,Wakanda Forever,Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,4,TRADE,Zack Moss,RB,Wakanda Forever,Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2024,4,TRADE,George Pickens,WR,Wakanda Forever,Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
 Game of Yards!,2024,4,ADD,Geno Smith,QB,Wakanda Forever,Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
 Game of Yards!,2024,4,ADD,Mike Gesicki,TE,Team HebAchi,Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
 Game of Yards!,2024,4,ADD,Colts D/ST,D/ST,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
 Game of Yards!,2024,4,ADD,Sam Darnold,QB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
 Game of Yards!,2024,4,ADD,Rome Odunze,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
 Game of Yards!,2024,4,ADD,Dolphins D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
-Game of Yards!,2024,4,TRADE,Chris Olave,WR,Groot-o-Matic,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
-Game of Yards!,2024,4,TRADE,Tyjae Spears,RB,Groot-o-Matic,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,4,TRADE,Chris Olave,WR,Groot-o-Matic,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2024,4,TRADE,Tyjae Spears,RB,Groot-o-Matic,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
 Game of Yards!,2024,4,ADD,Jakobi Meyers,WR,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
 Game of Yards!,2024,4,ADD,Cole Kmet,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
 Game of Yards!,2024,4,ADD,Zach Ertz,TE,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
@@ -237,12 +237,12 @@ Game of Yards!,2024,9,DROP,JuJu Smith-Schuster,WR,BB,(FA),{5E7FB20B-E820-4BAD-BF
 Game of Yards!,2024,9,DROP,Isaiah Likely,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
 Game of Yards!,2024,9,DROP,Zach Charbonnet,RB,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
 Game of Yards!,2024,9,DROP,Packers D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
-Game of Yards!,2024,10,TRADE,Alexander Mattison,RB,Pain Inflictors,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
-Game of Yards!,2024,10,TRADE,CeeDee Lamb,WR,Pain Inflictors,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,10,TRADE,Alexander Mattison,RB,Pain Inflictors,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2024,10,TRADE,CeeDee Lamb,WR,Pain Inflictors,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
 Game of Yards!,2024,10,ADD,Roschon Johnson,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
 Game of Yards!,2024,10,ADD,Mike Gesicki,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
-Game of Yards!,2024,10,TRADE,Tank Dell,WR,Team HebAchi,Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
-Game of Yards!,2024,10,TRADE,Chase Brown,RB,Team HebAchi,Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,10,TRADE,Tank Dell,WR,Team HebAchi,Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2024,10,TRADE,Chase Brown,RB,Team HebAchi,Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
 Game of Yards!,2024,10,ADD,Sam Darnold,QB,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
 Game of Yards!,2024,10,ADD,Cameron Dicker,K,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
 Game of Yards!,2024,10,DROP,Zack Moss,RB,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
