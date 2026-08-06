@@ -1,4 +1,11 @@
 __pycache__/
 *.pyc
 .streamlit/secrets.toml
+
+# Gzipped CSVs are ignored by default, but the weekly roster snapshots are real
+# committed data, not build output - the app reads them straight from the repo on
+# Streamlit Cloud. Without this exception the Transaction Analysis page deploys
+# empty: the Moves files push fine, but they carry no points, so every view that
+# scores anything comes back with nothing.
 *.csv.gz
+!data/transactions/*.csv.gz
