@@ -40,7 +40,23 @@ def app():
 
     available = seasons(os.path.getmtime(TRANSACTIONS_DIR))
     if not available:
-        st.error('No transaction data yet. Run `python pipeline/backfill_transactions.py`.')
+        # Distinguish "never pulled" from "pulled, but the roster snapshots did
+        # not get deployed". The second looks identical from here and is easy to
+        # hit: the Moves files are plain .csv and push fine, while the snapshots
+        # are .csv.gz and a blanket `*.csv.gz` gitignore rule silently drops
+        # exactly the half that carries the points.
+        import glob
+        orphan_moves = glob.glob(os.path.join(TRANSACTIONS_DIR, '* Moves *.csv'))
+        if orphan_moves:
+            st.error(
+                f'Found {len(orphan_moves)} move logs but **no weekly roster '
+                'snapshots**, so nothing can be scored.\n\n'
+                'The snapshots are `data/transactions/*.csv.gz`. If this is the '
+                'deployed app, check they are not caught by a `*.csv.gz` rule in '
+                '`.gitignore` — they are committed data, not build output.'
+            )
+        else:
+            st.error('No transaction data yet. Run `python pipeline/backfill_transactions.py`.')
         return
 
     leagues = sorted({lg for lg, _ in available})
