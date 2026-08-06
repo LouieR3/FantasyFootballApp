@@ -8,10 +8,11 @@ import os
 import pandas as pd
 import streamlit as st
 
-from paths import ALL_MATCHUPS, ALL_PLAYOFF_DFS
+from paths import ALL_MATCHUPS, ALL_PLAYOFF_DFS, TRANSACTIONS_DIR
 from ffapp import league_registry as registry
 from ffapp.metrics import hall_of_fame as hof
 from ffapp.metrics import lifetime as lt
+from ffapp.metrics import transaction_hall_of_fame as thof
 from ffapp.ui.tables import apply_display_defaults, show_table
 
 METRICS = {
@@ -25,9 +26,30 @@ MGR_FMT = {'Seasons': '{:.0f}', 'Leagues': '{:.0f}', 'W': '{:.0f}', 'L': '{:.0f}
            'Playoff Apps': '{:.0f}', 'Finals': '{:.0f}', 'Titles': '{:.0f}'}
 
 
+TXN_INT = {'Week': '{:.0f}', 'Weeks Started': '{:.0f}', 'Moves': '{:.0f}',
+           'Adds': '{:.0f}', 'Weeks Started After': '{:.0f}'}
+TXN_MGR_FMT = {'Seasons': '{:.0f}', 'Leagues': '{:.0f}', 'Total Moves': '{:.0f}'}
+
+
 @st.cache_data(show_spinner='Building every team-season ever...')
 def all_team_seasons(matchup_key, playoff_key):
     return hof.team_seasons()
+
+
+def transactions_key():
+    """Cache key that changes when the transaction data does."""
+    return os.path.getmtime(TRANSACTIONS_DIR) if os.path.isdir(TRANSACTIONS_DIR) else 0
+
+
+@st.cache_data(show_spinner='Scoring every transaction ever made...')
+def transaction_data(dir_key):
+    """All-time transaction frames. Empty ones if the backfill never ran."""
+    if not dir_key:
+        empty = pd.DataFrame()
+        return empty, empty, empty, empty
+    txn = thof.transaction_seasons()
+    adds, drops, trades = thof.all_moves()
+    return txn, adds, drops, trades
 
 
 def app():
@@ -85,7 +107,8 @@ play in — so a manager's career pools across leagues.
     n = st.slider('How many in each list', 5, 30, 10)
 
     tabs = st.tabs(['Best & worst ever', 'Playoff oddities', 'Luck',
-                    'Managers', 'Rises & collapses'])
+                    'Managers', 'Rises & collapses', 'Trades', 'Wire & drops',
+                    'Transaction feats'])
 
     # ------------------------------------------------------- best & worst ever
     with tabs[0]:
@@ -185,6 +208,145 @@ play in — so a manager's career pools across leagues.
         st.markdown('##### 📉 Biggest collapses')
         show_table(fall.style.background_gradient(subset=['Win % Change'], cmap='Reds_r'),
                     max_rows=30)
+
+    # =====================================================================
+    # Transaction feats. Separate data source (data/transactions/) from the
+    # rest of this page, so each tab degrades on its own if it was never
+    # backfilled rather than taking the whole page down.
+    # =====================================================================
+    txn, adds, drops, trades = transaction_data(transactions_key())
+
+    def _needs_backfill():
+        st.info(
+            'No transaction data yet. Run `python pipeline/backfill_transactions.py` '
+            'to build weekly roster snapshots back to 2019.'
+        )
+
+    # ------------------------------------------------------------------ trades
+    with tabs[5]:
+        if trades.empty:
+            _needs_backfill() if txn.empty else st.info(
+                'No confirmed trades on record. A trade is only identifiable from '
+                'weekly snapshots when both sides move in the same week.'
+            )
+        else:
+            st.caption(
+                f'{len(trades)} confirmed trades. Gain = rest-of-season SPAR from the '
+                'players each side received. Both sides of a trade sit in the same '
+                'league-season, so these margins are directly comparable — no '
+                'normalising needed.'
+            )
+            st.markdown('##### ⚖️ Most lopsided trades')
+            show_table(thof.most_lopsided_trades(trades, n)
+                       .style.background_gradient(subset=['Margin'], cmap='Reds'),
+                       formats=TXN_INT, max_rows=30)
+
+            st.markdown('##### 💰 Biggest trades — most value moved')
+            show_table(thof.biggest_trades(trades, n)
+                       .style.background_gradient(subset=['Total Value'], cmap='Purples'),
+                       formats=TXN_INT, max_rows=30)
+
+            st.markdown('##### 🤝 Most mutually beneficial')
+            mutual = thof.most_mutual_trades(trades, n)
+            if mutual.empty:
+                st.info('No trade yet where both sides came out ahead.')
+            else:
+                st.caption('Ranked by what the **weaker** side got — that is what '
+                           '"everyone won" means. Ranking on the total would just '
+                           'resurface blockbusters where one team got fleeced.')
+                show_table(mutual.style.background_gradient(subset=['Weaker Side'],
+                                                            cmap='Greens'),
+                           formats=TXN_INT, max_rows=30)
+
+    # ----------------------------------------------------------- wire & drops
+    with tabs[6]:
+        if adds.empty and drops.empty:
+            _needs_backfill()
+        else:
+            st.caption(
+                'These two lists rank on **raw SPAR**, because the headline of a '
+                'best-ever pickup is the raw number. It is the one place scoring '
+                'settings still bias the ranking — a PPR league will be '
+                'over-represented among big receiver and back pickups.'
+            )
+            st.markdown('##### 💎 Best pickups off the wire')
+            with_trades = st.checkbox('Include players acquired by trade', value=False,
+                                      key='hof_add_trades')
+            best = thof.best_adds(adds, n, exclude_trades=not with_trades)
+            if best.empty:
+                st.info('No scored acquisitions.')
+            else:
+                show_table(best.style.background_gradient(subset=['SPAR'], cmap='Greens'),
+                           formats=TXN_INT, max_rows=30)
+
+            st.markdown('##### 🗑️ Worst drops — what they did for somebody else')
+            worst = thof.worst_drops(drops, n)
+            if worst.empty:
+                st.info('No dropped player was picked up and started elsewhere.')
+            else:
+                show_table(worst.style.background_gradient(subset=['SPAR After'],
+                                                           cmap='Reds'),
+                           formats=TXN_INT, max_rows=30)
+
+    # ------------------------------------------------------ transaction feats
+    with tabs[7]:
+        if txn.empty:
+            _needs_backfill()
+        else:
+            st.caption(
+                f'{len(txn)} team-seasons of transaction data. These rank on **SPAR z** '
+                '— SPAR z-scored within its own league-season — so a high-scoring '
+                'league cannot own every list, the same way PPG z works above.'
+            )
+            st.warning(
+                'None of this predicts winning. Total SPAR tracks the raw *number* of '
+                'moves at **r = +0.69** and regular-season wins at **r = +0.01**. '
+                'A team that drafted well has little to gain from the wire and scores '
+                'low here for a good reason. These are feats, not a manager ranking.'
+            )
+
+            st.markdown('##### 🔥 Most value from the wire in one season')
+            show_table(thof.most_spar_seasons(txn, n)
+                       .style.background_gradient(subset=['SPAR z'], cmap='RdYlGn'),
+                       formats=TXN_INT, max_rows=30)
+
+            st.markdown(f'##### 🎯 Best value per add '
+                        f'(min {thof.MIN_ADDS_FOR_RATE} adds)')
+            st.caption('The efficient operators rather than the busiest — one lucky '
+                       'pickup over two adds is noise, not skill.')
+            show_table(thof.best_spar_per_add(txn, n)
+                       .style.background_gradient(subset=['SPAR per Add'], cmap='RdYlGn'),
+                       formats=TXN_INT, max_rows=30)
+
+            a, b = st.columns(2)
+            with a:
+                st.markdown('##### 🅰️ Best transaction grades')
+                show_table(thof.best_transaction_grades(txn, n)
+                           .style.background_gradient(subset=['Transaction Grade'],
+                                                      cmap='Greens'),
+                           formats=TXN_INT, max_rows=30)
+            with b:
+                st.markdown('##### 🇫 Worst transaction grades')
+                show_table(thof.worst_transaction_grades(txn, n)
+                           .style.background_gradient(subset=['Transaction Grade'],
+                                                      cmap='Reds_r'),
+                           formats=TXN_INT, max_rows=30)
+
+            st.markdown('##### 🧠 Best managers by average transaction grade')
+            st.caption(
+                f'Career record pooled across every league an owner plays in '
+                f'(min {thof.MIN_SEASONS_FOR_MANAGER_VIEWS} seasons). Ranked on average '
+                'grade, which is already league-relative.'
+            )
+            mgr = thof.manager_transaction_records(txn)
+            if mgr.empty:
+                st.info('Not enough multi-season owners yet.')
+            else:
+                show_table(mgr.style.background_gradient(subset=['Avg Grade'],
+                                                         cmap='RdYlGn')
+                              .background_gradient(subset=['Total Drop Regret'],
+                                                   cmap='Reds'),
+                           formats=TXN_MGR_FMT, max_rows=30)
 
 
 app()

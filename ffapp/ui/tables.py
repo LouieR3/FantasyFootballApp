@@ -51,6 +51,20 @@ def table_height(n_rows, max_rows=None):
     return HEADER_PX + ROW_PX * max(rows, 1) + PAD_PX
 
 
+def hide_constant(df, columns):
+    """Drop any of ``columns`` that carry the same value in every row.
+
+    For provenance-style columns that only earn their space when they actually
+    discriminate. ``Source`` on the transaction tables is the motivating case:
+    it is 'snapshot' for all but one league-season on file today, so it reads as
+    a wall of identical text - but it becomes the most important column in the
+    table from 2026, once ESPN's live feed starts confirming move types.
+    """
+    drop = [c for c in columns
+            if c in df.columns and df[c].nunique(dropna=False) <= 1]
+    return df.drop(columns=drop) if drop else df
+
+
 def show_table(data, precision=DEFAULT_PRECISION, formats=None, max_rows=None,
                hide_index=True, use_container_width=True, **kwargs):
     """st.dataframe with tidy decimals and a no-scroll height.

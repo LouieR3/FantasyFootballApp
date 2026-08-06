@@ -10,10 +10,17 @@ Verified working for every season back to 2019 despite the library docstring
 warning it is current-season only.
 
 **The activity feed** (``league.recent_activity()``) is the labelling layer. It
-gives the exact transaction type and the FAAB bid, but ESPN only serves it for
-the *current* season: every past year returns HTTP 404 ("This Communication Group
-does not exist") on both the ``/seasons/{year}/`` and ``/leagueHistory/``
-endpoints. So it enriches the current season and is simply absent for backfill.
+gives the exact transaction type and the FAAB bid, but it is only reliably
+available for the season in progress. Completed seasons almost always return
+HTTP 404 ("This Communication Group does not exist") on both the
+``/seasons/{year}/`` and ``/leagueHistory/`` endpoints.
+
+Retention past that is real but erratic, so it cannot be planned around: of the
+38 league-seasons backfilled here exactly one - Game of Yards! 2024 - still
+served its log (379 genuine messages, December 2024 dates), while EBC League 2024
+did not. Repeat calls for the same league-year have also disagreed. Treat any
+historical availability as a bonus; **the only dependable capture is in-season**,
+which is why both weekly-update scripts call ``build_season`` every run.
 
 What that costs on a backfilled season:
 
@@ -204,8 +211,8 @@ def pull_activity(league, league_name, year, page_size=25, max_pages=200):
 def _activity_note(exc):
     name = type(exc).__name__
     if 'InvalidLeague' in name or '404' in str(exc):
-        return ('activity feed unavailable (ESPN serves it for the current season '
-                'only) - moves reconstructed from weekly rosters')
+        return ('activity feed unavailable (ESPN retains it for the season in '
+                'progress) - moves reconstructed from weekly rosters')
     return f'activity feed unavailable ({name}: {exc})'
 
 

@@ -12,7 +12,7 @@ from paths import TRANSACTIONS_DIR
 from ffapp import league_registry as registry
 from ffapp.espn import transactions as tx
 from ffapp.metrics import transaction_analysis as ta
-from ffapp.ui.tables import apply_display_defaults, show_table
+from ffapp.ui.tables import apply_display_defaults, hide_constant, show_table
 
 
 @st.cache_data(show_spinner=False)
@@ -105,7 +105,7 @@ the worst rostered player, so SPAR is mildly conservative.
 else's lineup*. Points scored while unrostered are ignored — nobody captured them.
 
 > **This grades transactions, not managers — and it does not predict winning.**
-> Measured over 413 team-seasons across 37 league-seasons: total SPAR tracks the
+> Measured over 423 team-seasons across 38 league-seasons: total SPAR tracks the
 > sheer *number* of moves at **r = +0.69**, and tracks regular-season wins at
 > **r = +0.01**. Volume-adjusting does not rescue it — SPAR per Add versus wins
 > is **r = −0.06**. For contrast the draft grade reaches r = −0.51 against final
@@ -150,6 +150,9 @@ else's lineup*. Points scored while unrostered are ignored — nobody captured t
         if hits.empty:
             st.info('No scored acquisitions for this season.')
         else:
+            # Source only earns its column when it actually discriminates - see
+            # hide_constant. Today that is one league-season out of 38.
+            hits = hide_constant(hits, ['Source'])
             show_table(hits.style.background_gradient(subset=['SPAR'], cmap='Greens'),
                        formats={'Week': '{:.0f}', 'Weeks Started': '{:.0f}'},
                        max_rows=25)
@@ -176,9 +179,9 @@ else's lineup*. Points scored while unrostered are ignored — nobody captured t
                 'legs landed a week apart.'
             )
         else:
+            view = hide_constant(trades.drop(columns=['League', 'Year']), ['Source'])
             show_table(
-                trades.drop(columns=['League', 'Year']).style.background_gradient(
-                    subset=['Margin'], cmap='Oranges'),
+                view.style.background_gradient(subset=['Margin'], cmap='Oranges'),
                 formats={'Week': '{:.0f}'},
             )
             st.caption('Gain = rest-of-season SPAR from the players each side received.')
@@ -188,8 +191,11 @@ else's lineup*. Points scored while unrostered are ignored — nobody captured t
         kinds = sorted(moves['Type'].unique()) if len(moves) else []
         picked = st.multiselect('Type', kinds, default=kinds)
         view = moves[moves['Type'].isin(picked)] if picked else moves
-        show_table(view.drop(columns=['League', 'Year', 'Owner ID']),
-                   formats={'Week': '{:.0f}', 'FAAB Bid': '{:.0f}'},
+        view = view.drop(columns=['League', 'Year', 'Owner ID'])
+        # FAAB is all-zero without the live feed, and Source is all-'snapshot'
+        # in the same case; both come alive together from 2026.
+        view = hide_constant(view, ['Source', 'FAAB Bid'])
+        show_table(view, formats={'Week': '{:.0f}', 'FAAB Bid': '{:.0f}'},
                    max_rows=20)
 
     # -------------------------------------------------------- 6. weekly rosters

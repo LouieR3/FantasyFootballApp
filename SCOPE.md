@@ -387,16 +387,16 @@ Build time went **40s → 4s** by memoising `owner_crosswalk` / `owner_display_n
 
 New page `pages/16_🔄_Transaction_Analysis.py` over `ffapp/espn/transactions.py` (pull + reconstruct) and `ffapp/metrics/transaction_analysis.py` (scoring). Grades the season *after* the draft: the waiver wire and the trade market.
 
-### The finding that shaped the design: the transaction log is forward-only
+### The finding that shaped the design: the transaction log is effectively forward-only
 
-`league.recent_activity()` gives exact move types and FAAB bids, but **ESPN only serves it for the current season**. Probed directly across both endpoint shapes the library uses:
+`league.recent_activity()` gives exact move types and FAAB bids, but it is only **reliably** available for the season in progress. Probed directly across both endpoint shapes the library uses:
 
 | Season | `/seasons/{year}/…/communication/` | `/leagueHistory/…` |
 |---|---|---|
 | 2021–2025 | **404** "This Communication Group does not exist" | 404 |
 | 2026 | **200** (0 topics — season not started) | 404 |
 
-There is no workaround. That data is gone for 2019–2025.
+Retention past the current season is real but erratic and cannot be planned around: of 38 backfilled league-seasons exactly **one** — Game of Yards! 2024 — still served its log (379 genuine messages, December 2024 dates), while EBC League 2024 did not, and repeat calls for the same league-year have disagreed. Treat historical availability as a bonus. **The only dependable capture is in-season**, which is why both weekly scripts call `build_season` every run.
 
 **But `box_scores(week=N)` works for every season back to 2019**, despite the library docstring claiming it is current-season only. Each call returns every team's full roster — bench included — with lineup slot and points. So weekly snapshots are the substrate and the activity feed is only a labelling layer.
 
@@ -422,23 +422,23 @@ The pull originally ended at `current_week - 1`, which reads as obviously correc
 
 ### ⚠️ Measured: this grades transactions, not managers
 
-`tools/check_transactions.py` runs 33 correctness assertions against synthetic rosters with hand-computed answers, then measures the metric itself. Over **413 team-seasons from 37 league-seasons**:
+`tools/check_transactions.py` runs 33 correctness assertions against synthetic rosters with hand-computed answers, then measures the metric itself. Over **423 team-seasons from 38 league-seasons**:
 
 | | |
 |---|---|
 | corr(Moves, SPAR) | **+0.69** — SPAR substantially tracks sheer activity |
-| corr(SPAR, Wins) | **+0.01** (n=351) — nothing |
+| corr(SPAR, Wins) | **+0.01** (n=361) — nothing |
 | corr(SPAR per Add, Wins) | **−0.06** — volume-adjusting does not rescue it |
 | corr(Moves, Wins) | +0.09 |
 | YoY SPAR, same team | +0.27 (n=153) — mostly persistence of *being active* |
 
 Compare the draft grade at **r = −0.51** against final standing. The reason is baseline, not a bug: a team that drafted well has little to gain from the wire and scores low for a good reason, while a team patching a broken draft can post a huge SPAR and still lose. So the column is named **Transaction Grade**, and the module docstring and the page both state these numbers — the same treatment the draft page's ACCURACY got after its persistence measured r = +0.08.
 
-> An earlier draft of this section quoted r = +0.66 / −0.06 / +0.12 from a 12-league-season sample. The full backfill moved `SPAR per Add` vs wins from +0.12 to −0.04, which flips the claim that volume-adjusting helps. Numbers above are the full-sample ones.
+> An earlier draft of this section quoted r = +0.66 / −0.06 / **+0.12** from a 12-league-season sample. On the full backfill `SPAR per Add` vs wins is **−0.06**, which flips the claim that volume-adjusting helps. Numbers above are the full-sample ones.
 
 ⬜ **To make this predict wins** you need the counterfactual the snapshots cannot supply alone: what the team *would* have started standing pat. That is a lineup simulation over the drafted roster — reuse the slot-constrained DP in `draft_analysis.py` — and is a follow-on, not a fix.
 
-### Data — 37 league-seasons, 12 leagues, 2.9 MB
+### Data — 38 league-seasons, 12 leagues, 2.9 MB
 
 `data/transactions/<League> Weekly Rosters <Year>.csv.gz` (gzipped: 24 MB → 2 MB across a full backfill, 11.5×; pandas infers the codec) and `<League> Moves <Year>.csv` (plain, small, worth diffing). Backfill with `python pipeline/backfill_transactions.py --skip-existing` — ~17 requests per league-season; 2019 is a hard floor.
 
@@ -463,6 +463,42 @@ Compare the draft grade at **r = −0.51** against final standing. The reason is
 **An emoji killed an entire league.** `The Girl's Room 💞🏈` raised `UnicodeEncodeError` on the cp1252 Windows console. Because `build_season` prints its header *before* fetching anything, the exception fired ahead of the first request and the league was recorded as failed with no data — not a logging nuisance but total data loss for that league. Fixed with an encode-safe `transactions.say()` rather than reconfiguring global stdout, which a library has no business doing. Any script printing ESPN league names is exposed to this.
 
 Beyond this page, the weekly snapshots are the missing input for **best-possible-record simulation** and **start/sit analysis** — both previously blocked on not having weekly player scores.
+
+---
+
+## 3f. Transaction feats on the Hall of Fame — ✅ built 2026-08-06
+
+`ffapp/metrics/transaction_hall_of_fame.py`, surfaced as three new tabs on `pages/15_🏆_All_Time_Hall_of_Fame.py`. Kept in its own module rather than bolted onto `hall_of_fame.py` because it reads a different data source and must degrade independently — a league that was never backfilled should empty those three tabs, not the whole page.
+
+**Trades** — most lopsided · biggest (most value moved) · most mutually beneficial. The mutual list ranks on what the **weaker** side got, not the total; ranking on the total just resurfaces blockbusters where one team was fleeced.
+
+**Wire & drops** — best pickups off the waiver wire · worst drops (what the player did for whoever claimed them). Trades are excluded from "best adds" by default: left in, they take every slot, because a trade returns an established star and a waiver claim almost never does.
+
+**Transaction feats** — most SPAR in a season · best SPAR per add (min 5 adds) · best and worst single-season Transaction Grades · best managers by career average grade, pooled across leagues on SWID.
+
+### Three different normalisations, deliberately
+
+| Ranking | Basis | Why |
+|---|---|---|
+| Team-season, manager | **SPAR z** (within league-season) | where a league advantage would compound over a career |
+| Trades | **raw margin** | both sides sit in the same league-season — already comparable |
+| Individual adds/drops | **raw SPAR** | the headline of "best pickup ever" *is* the raw number |
+
+⚠️ The third case is the one place a scoring-settings bias survives — a PPR league is over-represented among big receiver and back pickups. Stated on the page rather than quietly normalised away.
+
+### Performance
+
+A full cross-league build recomputed `stints()` six times per league-season (impacts, drops, trades, plus twice inside `owner_summary`). All five scoring functions now accept a pre-computed stints frame: **46.7s → 18.7s**.
+
+`transaction_seasons()` and `all_moves()` are deliberately **not** `lru_cache`d. The page caches them with `st.cache_data` keyed on the transactions directory mtime; a process-level cache underneath would keep serving last week's numbers after a weekly run — the same stale-state trap that bit `lifetime.py` twice.
+
+### Weekly update → historical pages, asserted
+
+`tools/check_weekly_flow.py` drives a fake two-team league through the exact call the weekly scripts make and asserts the whole chain with no ESPN access: files land where `paths.py` says → `available_seasons()` discovers them → the Transaction Analysis page scores them → the Hall of Fame picks them up → a re-run is idempotent → and the league name the weekly scripts derive matches both the backfill's name and the discovery regex. That last one matters because the name is set in three separate files and nothing else enforces agreement.
+
+### Is `Source` needed?
+
+Yes in the data, mostly not on screen. It varies — 194 of 7,242 acquisitions carry `activity` — but only **1 of 38** league-seasons is mixed, and all 84 trades are `snapshot`. So a constant "snapshot" column was pure noise on nearly every view while being the most important column in the table from 2026, once the live feed starts confirming move types. `tables.hide_constant()` now drops `Source` (and `FAAB Bid`, all-zero for the same reason) when it carries one value, and keeps it the moment it discriminates.
 
 ---
 

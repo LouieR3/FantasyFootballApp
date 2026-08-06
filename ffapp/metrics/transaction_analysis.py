@@ -27,10 +27,10 @@ separately, by what the player went on to do for *someone else*.
 A season's moves are graded on the same 30-100 scale as the draft grade, z-scored
 within league-season so the two are directly comparable and can be read together.
 
-**What this grade is not.** Measured over 413 team-seasons from 37 backfilled
+**What this grade is not.** Measured over 423 team-seasons from 38 backfilled
 league-seasons (``tools/check_transactions.py``), total SPAR correlates with the
 raw number of moves at **r = +0.69** and with regular-season wins at **r = +0.01**
-(n = 351). Volume-adjusting does not rescue it: ``SPAR per Add`` versus wins is
+(n = 361). Volume-adjusting does not rescue it: ``SPAR per Add`` versus wins is
 **r = -0.06**. Nothing here predicts winning.
 
 So this grades how much value a manager extracted *through transactions* - not
@@ -153,11 +153,16 @@ def stints(rosters):
 # per-move impact
 # ---------------------------------------------------------------------------
 
-def move_impacts(rosters, moves):
+def move_impacts(rosters, moves, st=None):
     """Every acquisition scored by what it went on to produce.
 
     Joined to the stint that begins in the acquiring week, so a player acquired
     twice is credited separately for each spell.
+
+    ``st`` accepts a pre-computed ``stints()`` frame. Without it a full
+    cross-league build recomputes stints six times per league-season - once each
+    for impacts, drops and trades, twice more inside owner_summary - which is
+    most of a 47-second page load.
     """
     empty = pd.DataFrame(columns=['League', 'Year', 'Week', 'Type', 'Player',
                                   'Position', 'Team', 'Owner ID', 'From Team',
@@ -167,7 +172,7 @@ def move_impacts(rosters, moves):
     if rosters.empty or moves.empty:
         return empty
 
-    st = stints(rosters)
+    st = stints(rosters) if st is None else st
     # zip over columns rather than itertuples: itertuples mangles names with
     # spaces ('Start Week' -> _5), which has bitten this codebase twice already
     by_start = {}
@@ -200,7 +205,7 @@ def move_impacts(rosters, moves):
     return out.sort_values('SPAR', ascending=False, ignore_index=True)
 
 
-def drop_costs(rosters, moves):
+def drop_costs(rosters, moves, st=None):
     """What each dropped player went on to score - for whoever picked them up.
 
     Points the player scored *in someone else's lineup* after the drop. That is
@@ -214,7 +219,7 @@ def drop_costs(rosters, moves):
     if rosters.empty or moves.empty:
         return empty
 
-    st = stints(rosters)
+    st = stints(rosters) if st is None else st
     drops = moves[moves['Type'] == tx.DROP]
     rows = []
     for (league, year, week, player, pos, frm, owner) in zip(
@@ -236,7 +241,7 @@ def drop_costs(rosters, moves):
     return out.sort_values('SPAR After', ascending=False, ignore_index=True)
 
 
-def trades(rosters, moves):
+def trades(rosters, moves, st=None):
     """Both sides of each confirmed trade, with the rest-of-season margin."""
     empty = pd.DataFrame(columns=['League', 'Year', 'Week', 'Team A', 'Team B',
                                   'A Received', 'B Received', 'A Gain', 'B Gain',
@@ -244,7 +249,7 @@ def trades(rosters, moves):
     if rosters.empty or moves.empty:
         return empty
 
-    impacts = move_impacts(rosters, moves)
+    impacts = move_impacts(rosters, moves, st)
     traded = moves[moves['Type'] == tx.TRADE]
     if traded.empty:
         return empty
@@ -282,7 +287,7 @@ def trades(rosters, moves):
 # owner-level summary
 # ---------------------------------------------------------------------------
 
-def owner_summary(rosters, moves):
+def owner_summary(rosters, moves, st=None):
     """One row per team: activity, value gained, and a 30-100 grade."""
     cols = ['Team', 'Owner ID', 'Moves', 'Adds', 'Drops', 'Trade Adds',
             'FAAB Spent', 'Points Started', 'SPAR', 'SPAR per Add',
@@ -291,8 +296,9 @@ def owner_summary(rosters, moves):
     if rosters.empty:
         return pd.DataFrame(columns=cols)
 
-    impacts = move_impacts(rosters, moves)
-    regret = drop_costs(rosters, moves)
+    st = stints(rosters) if st is None else st
+    impacts = move_impacts(rosters, moves, st)
+    regret = drop_costs(rosters, moves, st)
     teams = sorted(rosters['Team'].unique())
     owner_of = dict(zip(rosters['Team'], rosters['Owner ID']))
 
@@ -346,13 +352,15 @@ def _grade(df, column):
 def load_and_score(league_name, year):
     """Everything for one league-season, read off disk. Returns a dict of frames."""
     rosters, moves = tx.load_season(league_name, year)
+    st = stints(rosters)                 # computed once, shared by all five views
     return {
         'rosters': rosters,
         'moves': moves,
-        'impacts': move_impacts(rosters, moves),
-        'drops': drop_costs(rosters, moves),
-        'trades': trades(rosters, moves),
-        'owners': owner_summary(rosters, moves),
+        'stints': st,
+        'impacts': move_impacts(rosters, moves, st),
+        'drops': drop_costs(rosters, moves, st),
+        'trades': trades(rosters, moves, st),
+        'owners': owner_summary(rosters, moves, st),
         'replacement': replacement_table(rosters),
     }
 
