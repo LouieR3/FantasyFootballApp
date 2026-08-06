@@ -25,6 +25,16 @@ Each league page has a year selector and renders the following sections (data pe
 | **Biggest LPI Upsets** | Wins by teams with a large LPI deficit vs. their opponent |
 | **Lifetime Record** | All-time results for the league across seasons |
 
+## Cross-league pages
+
+| Page | What it shows |
+|---|---|
+| **Playoff Analysis** | Every playoff bracket on file, all champions, seed-vs-outcome history |
+| **Post-Season Draft Analysis** | One league-season's draft post-mortem: value over slot split into accuracy vs luck, steals and busts, value left on the board, and the best draft each manager could have had at their own pick slots (exact, slot-constrained) |
+| **Lifetime League History** | Multi-year leagues: all-time table, head-to-head, playoff records, streaks, records book |
+| **All-Time Hall of Fame** | Every team-season across every league, ranked by league-relative metrics — best and worst ever, worst champions, best manager without a ring |
+| **Transaction Analysis** | Every add, drop and trade scored by started points above replacement: best pickups, drops that hurt, trade winners, and a manager scorecard (see `ffapp/metrics/transaction_analysis.py`) |
+
 ## Repo layout
 
 ```
@@ -43,10 +53,15 @@ FantasyFootballApp/
 │   ├── metrics/              # computation
 │   │   ├── monte_carlo_odds.py   # playoff odds / record prediction simulations
 │   │   ├── draft_grading.py      # draft + free agent grading engine
+│   │   ├── draft_analysis.py     # post-season draft post-mortem
+│   │   ├── transaction_analysis.py  # scoring adds/drops/trades (SPAR)
+│   │   ├── lifetime.py  hall_of_fame.py
 │   │   ├── create_betting_odds.py
 │   │   └── owner_overrides.py    # canonical owner for co-owned team-seasons
 │   └── espn/                 # pulling + shaping ESPN data
 │       ├── draft_data.py  all_matchups.py  all_playoffs.py  season_results.py
+│       ├── transactions.py       # weekly roster snapshots + activity feed
+│       ├── week_utils.py  league_settings.py
 │
 ├── pipeline/                 # runnable entry points (see below)
 ├── experiments/              # one-off explorations and manual tests (lpi, elo, printOwners, ...)
@@ -56,6 +71,7 @@ FantasyFootballApp/
     ├── leagues/              # one xlsx per league-year — the app's main source
     ├── drafts/               # draft + free agent results csv per league-year
     ├── odds/                 # betting odds xlsx per league-year
+    ├── transactions/         # weekly roster snapshots + reconstructed moves per league-year
     └── *.csv                 # cross-league aggregates (all_matchups, Master_Draft_Data, ...)
 ```
 
@@ -96,6 +112,7 @@ Cache keys include each file's modification time, so re-running the pipeline inv
 | `pipeline/rebuild_aggregates.py` | Rebuild the cross-league playoff CSVs from the workbooks — **run weekly**, offline; without it the cross-league pages silently omit the newest season |
 | `pipeline/add_current_week_results.py` | Append the current week into `data/all_matchups.csv` |
 | `pipeline/playoff_chances.py`, `pipeline/playoff_add_predicted.py` | Playoff-odds datasets used by the Playoff Analysis page |
+| `pipeline/backfill_transactions.py` | Weekly roster snapshots + add/drop/trade log for past seasons (~14 requests per league-season; 2019 is a hard floor) |
 
 Typical in-season week:
 
@@ -114,6 +131,12 @@ After a draft, or any time grading changes:
 ```bash
 python pipeline/regrade_drafts.py
 ```
+
+> ⚠️ **Transactions must be captured in-season.** `ESPNWeeklyUpdateList.py` now pulls them
+> as part of the weekly run. ESPN serves its transaction log for the **current season only**
+> and returns 404 for every completed one, so a season that is never run in-season can have
+> its weekly roster snapshots backfilled but never its real move types or FAAB bids.
+> To backfill snapshots for past seasons: `python pipeline/backfill_transactions.py --skip-existing`
 
 Then commit and push — Streamlit Cloud redeploys from the repo.
 

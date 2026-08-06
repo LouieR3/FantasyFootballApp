@@ -29,6 +29,7 @@ from ffapp.metrics.create_betting_odds import create_betting_odds
 from ffapp.metrics.owner_overrides import resolve_owner, owner_id_for
 from ffapp.espn import week_utils
 from ffapp.espn import league_settings
+from ffapp.espn import transactions
 from paths import DATA_DIR, LEAGUES_DIR
 
 start_time = time.time()
@@ -566,6 +567,21 @@ for league_config in leagues:
         if playoff_df is not None:
             playoff_df.to_excel(writer, sheet_name='Playoff Results', index=False)
         writer.close()
+        # --------------------------------------------------------------------------------------
+
+        # --------------------------------------------------------------------------------------
+        # TRANSACTIONS
+        # Weekly roster snapshots plus the season's add/drop/trade log. Must run
+        # in-season: ESPN serves the transaction feed for the current season only
+        # and 404s it forever after, so a week missed here can never be recovered
+        # with its real labels (the snapshots themselves stay backfillable).
+        # Isolated in its own try - a transaction failure must not lose the
+        # workbook that was just written above.
+        # --------------------------------------------------------------------------------------
+        try:
+            transactions.build_season(league, leagueName, year)
+        except Exception as e:
+            print(f"  transactions skipped for {leagueName}: {type(e).__name__}: {e}")
         # --------------------------------------------------------------------------------------
     except Exception as e:
         # Handle errors, such as the league not existing

@@ -1,0 +1,249 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+EBC League,2021,2,ADD,Le'Veon Bell,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,2,DROP,Raheem Mostert,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,3,ADD,Marquise Brown,WR,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,3,ADD,Panthers D/ST,D/ST,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,3,ADD,Derek Carr,QB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,3,ADD,Mike Williams,WR,(FA),Pitman OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,3,DROP,Chase Claypool,WR,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,3,DROP,Matthew Stafford,QB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,3,DROP,Jerry Jeudy,WR,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,3,DROP,Michael Gallup,WR,Pitman OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,3,DROP,Baker Mayfield,QB,Pitman OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,4,ADD,Chuba Hubbard,RB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,4,ADD,Matthew Stafford,QB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,4,ADD,Bengals D/ST,D/ST,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,4,ADD,Melvin Gordon III,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,4,ADD,Tyler Bass,K,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,4,ADD,Titans D/ST,D/ST,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,4,DROP,Jason Myers,K,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,4,DROP,Kenyan Drake,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,4,DROP,Le'Veon Bell,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,4,DROP,Panthers D/ST,D/ST,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,4,DROP,Derek Carr,QB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,4,DROP,Leonard Fournette,RB,Pitman OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,5,ADD,Patriots D/ST,D/ST,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,5,ADD,Cordarrelle Patterson,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,5,TEAM->TEAM,D'Andre Swift,RB,South East  Anbu ,Pure Mature,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,5,ADD,Chris Evans,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,5,ADD,Nyheim Hines,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,5,ADD,Trevor Lawrence,QB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,5,ADD,Nelson Agholor,WR,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,5,ADD,Zach Ertz,TE,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,5,TEAM->TEAM,Chase Edmonds,RB,South East  Anbu ,Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2021,5,TEAM->TEAM,James Robinson,RB,South East  Anbu ,Pitman OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,5,ADD,Dawson Knox,TE,(FA),Pitman OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,5,ADD,Leonard Fournette,RB,(FA),Pitman OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,5,ADD,Raiders D/ST,D/ST,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,5,ADD,Mike Gesicki,TE,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,5,TEAM->TEAM,Kareem Hunt,RB,South East  Anbu ,Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,5,ADD,Marvin Jones Jr.,WR,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,5,ADD,Dalton Schultz,TE,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,5,DROP,Gus Edwards,RB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,5,DROP,Myles Gaskin,RB,Pure Mature,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,5,DROP,Damien Harris,RB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,5,DROP,Chuba Hubbard,RB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,5,DROP,Bengals D/ST,D/ST,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,5,DROP,Melvin Gordon III,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,5,DROP,Titans D/ST,D/ST,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,5,DROP,Sony Michel,RB,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2021,5,DROP,JuJu Smith-Schuster,WR,Pitman OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,5,DROP,Javonte Williams,RB,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,5,DROP,DJ Chark Jr.,WR,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,6,ADD,Antonio Brown,WR,(FA),Pitman OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,6,ADD,Nick Folk,K,(FA),Pitman OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,6,ADD,Sam Darnold,QB,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,6,ADD,Taylor Heinicke,QB,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,6,ADD,Chase Claypool,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,6,ADD,Hunter Henry,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,6,ADD,Devontae Booker,RB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,6,ADD,Zack Moss,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,6,ADD,Cole Kmet,TE,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,6,ADD,Carson Wentz,QB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,6,TEAM->TEAM,Marquise Brown,WR,Sorry 🤷🏽‍♂️,Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,6,DROP,Patriots D/ST,D/ST,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,6,DROP,Nyheim Hines,RB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,6,DROP,Trevor Lawrence,QB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,6,DROP,Zach Ertz,TE,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,6,DROP,Brandon Aiyuk,WR,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,6,DROP,Evan Engram,TE,Pitman OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,6,DROP,Brandin Cooks,WR,Pitman OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,6,DROP,DeVante Parker,WR,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,7,ADD,Chuba Hubbard,RB,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,7,ADD,Tony Pollard,RB,(FA),Pure Mature,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,7,ADD,Elijah Mitchell,RB,(FA),Pure Mature,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,7,ADD,Tyler Higbee,TE,(FA),Pitman OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,7,ADD,Patriots D/ST,D/ST,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,7,TEAM->TEAM,Tee Higgins,WR,Hungry Dogs,Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,7,ADD,Cardinals D/ST,D/ST,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,7,ADD,Daniel Carlson,K,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,7,ADD,Melvin Gordon III,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,7,TEAM->TEAM,Odell Beckham Jr.,WR,Abyss Diamond Eyes,South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,7,ADD,Hunter Renfrow,WR,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,7,ADD,Brandin Cooks,WR,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,7,ADD,Matt Prater,K,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,7,ADD,Darrel Williams,RB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,7,ADD,Sterling Shepard,WR,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2021,7,DROP,Chris Carson,RB,Pure Mature,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,7,DROP,William Fuller V,WR,Pure Mature,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,7,DROP,Laviska Shenault Jr.,WR,Pure Mature,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,7,DROP,Robert Tonyan,TE,Pitman OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,7,DROP,Tyler Boyd,WR,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,7,DROP,Taylor Heinicke,QB,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,7,DROP,Steelers D/ST,D/ST,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,7,DROP,Raiders D/ST,D/ST,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,7,DROP,Devontae Booker,RB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,7,DROP,Kenny Golladay,WR,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,7,DROP,Chris Evans,RB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,7,DROP,Zack Moss,RB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,7,DROP,Logan Thomas,TE,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,7,DROP,Jalen Reagor,WR,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2021,8,TEAM->TEAM,Joe Burrow,QB,South East  Anbu ,Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,8,TEAM->TEAM,Chuba Hubbard,RB,Seigaku FC,Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,8,TEAM->TEAM,Brandin Cooks,WR,Hungry Dogs,Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,8,ADD,Bengals D/ST,D/ST,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,8,ADD,Cowboys D/ST,D/ST,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,8,ADD,Greg Joseph,K,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,8,TEAM->TEAM,Justin Jefferson,WR,South East  Anbu ,Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,8,ADD,Sony Michel,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,ADD,Kenneth Gainwell,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,ADD,Jalen Reagor,WR,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,ADD,Evan Engram,TE,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,ADD,Baker Mayfield,QB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,ADD,Phillip Lindsay,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,ADD,Josh Gordon,WR,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,ADD,Tim Tebow,TE,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,ADD,Jake Elliott,K,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,ADD,Michael Thomas,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,8,TEAM->TEAM,Jonathan Taylor,RB,South East  Anbu ,Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,8,TEAM->TEAM,Amari Cooper,WR,South East  Anbu ,Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,8,ADD,Damien Harris,RB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,8,DROP,Ravens D/ST,D/ST,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,8,DROP,Marvin Jones Jr.,WR,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,8,DROP,Clyde Edwards-Helaire,RB,Pure Mature,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,8,DROP,David Montgomery,RB,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,8,DROP,Mike Davis,RB,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,8,DROP,Vikings D/ST,D/ST,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,8,DROP,Sam Darnold,QB,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,8,DROP,Hunter Henry,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,8,DROP,Daniel Carlson,K,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,8,DROP,Saquon Barkley,RB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,DROP,Darren Waller,TE,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,DROP,Tyler Lockett,WR,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,DROP,Brandon McManus,K,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,DROP,Melvin Gordon III,RB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,8,DROP,Matt Prater,K,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,9,ADD,Saquon Barkley,RB,(FA),Pure Mature,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,9,ADD,Boston Scott,RB,(FA),Pure Mature,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,9,ADD,Michael Carter,RB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,9,ADD,Melvin Gordon III,RB,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2021,9,ADD,Jerry Jeudy,WR,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,9,ADD,Myles Gaskin,RB,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,9,ADD,Jared Cook,TE,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,9,ADD,Darren Waller,TE,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,9,ADD,Van Jefferson,WR,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,9,ADD,Adrian Peterson,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,9,ADD,Michael Pittman Jr.,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,9,DROP,Tony Pollard,RB,Pure Mature,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,9,DROP,Commanders D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2021,9,DROP,Allen Robinson II,WR,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,9,DROP,Chuba Hubbard,RB,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,9,DROP,Bengals D/ST,D/ST,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,9,DROP,Greg Joseph,K,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,9,DROP,Odell Beckham Jr.,WR,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,9,DROP,Phillip Lindsay,RB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,9,DROP,Michael Thomas,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,9,DROP,Darrel Williams,RB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,10,ADD,Derek Carr,QB,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,10,ADD,Greg Joseph,K,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,10,ADD,D'Ernest Johnson,RB,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,10,ADD,Zach Ertz,TE,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,10,ADD,Tyler Lockett,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,10,ADD,Daniel Carlson,K,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,10,DROP,Michael Carter,RB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,10,DROP,Russell Wilson,QB,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,10,DROP,Graham Gano,K,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,10,DROP,Jared Cook,TE,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,10,DROP,Cole Kmet,TE,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,10,DROP,Chase Claypool,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,11,ADD,Michael Carter,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,11,ADD,Browns D/ST,D/ST,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,11,ADD,Cole Beasley,WR,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,11,ADD,AJ Dillon,RB,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,11,ADD,Dolphins D/ST,D/ST,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,11,ADD,David Montgomery,RB,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2021,11,ADD,James Conner,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,11,ADD,Jaylen Waddle,WR,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,11,DROP,Khalil Herbert,RB,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,11,DROP,Sony Michel,RB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,11,DROP,Kenneth Gainwell,RB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,11,DROP,Tim Tebow,TE,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,11,DROP,Sterling Shepard,WR,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2021,11,DROP,Julio Jones,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,11,DROP,Dalton Schultz,TE,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,11,DROP,Greg Zuerlein,K,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,11,DROP,Damien Harris,RB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,12,ADD,Brandon McManus,K,(FA),Pure Mature,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2021,12,ADD,Eagles D/ST,D/ST,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,12,ADD,Odell Beckham Jr.,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,12,ADD,Damien Harris,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,12,ADD,Javonte Williams,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,12,TEAM->TEAM,Tyler Lockett,WR,Abyss Diamond Eyes,Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,12,DROP,Adrian Peterson,RB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,12,DROP,Michael Carter,RB,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,12,DROP,Dallas Goedert,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,12,DROP,Robert Woods,WR,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,13,ADD,Brandon Aiyuk,WR,(FA),Pitman OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,13,TRADE,Matthew Stafford,QB,Hungry Dogs,Pitman OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,13,ADD,Dalton Schultz,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,13,ADD,Alexander Mattison,RB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,13,TRADE,Kyler Murray,QB,Pitman OBJYN,Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,13,ADD,Jamaal Williams,RB,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,13,DROP,Miles Sanders,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,13,DROP,Younghoe Koo,K,Pitman OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,13,DROP,Tyler Higbee,TE,Pitman OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,13,DROP,Tyler Lockett,WR,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,13,DROP,Christian McCaffrey,RB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,14,ADD,Darnell Mooney,WR,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,14,ADD,Clyde Edwards-Helaire,RB,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,14,ADD,Tyler Lockett,WR,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,14,ADD,Saints D/ST,D/ST,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,14,TEAM->TEAM,Kyler Murray,QB,Hungry Dogs,Pitman OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,14,ADD,Mason Crosby,K,(FA),Pitman OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,14,ADD,Tony Pollard,RB,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,14,ADD,Graham Gano,K,(FA),South East  Anbu ,{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,14,ADD,Elijah Moore,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,14,ADD,Russell Wilson,QB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,14,DROP,Nick Folk,K,Pitman OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2021,14,DROP,Eagles D/ST,D/ST,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,14,DROP,Patriots D/ST,D/ST,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,14,DROP,D'Ernest Johnson,RB,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,14,DROP,AJ Dillon,RB,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,14,DROP,Jalen Reagor,WR,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,14,DROP,Josh Gordon,WR,South East  Anbu ,(FA),{7C989087-DC3A-4135-A9F9-563E420927D1},0,snapshot
+EBC League,2021,14,DROP,Calvin Ridley,WR,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,14,DROP,Jamaal Williams,RB,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,15,ADD,Nick Folk,K,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,15,ADD,D'Onta Foreman,RB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,15,ADD,DeVante Parker,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,15,ADD,Chase Claypool,WR,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2021,15,ADD,Dallas Goedert,TE,(FA),Sorry 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,15,DROP,Derek Carr,QB,Sorry 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2021,15,DROP,Elijah Moore,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2021,15,DROP,Jonnu Smith,TE,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2021,15,DROP,Daniel Carlson,K,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,15,DROP,Alexander Mattison,RB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,16,ADD,Eagles D/ST,D/ST,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,16,ADD,Miles Sanders,RB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,16,ADD,Alexander Mattison,RB,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,16,DROP,Chris Godwin,WR,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,16,DROP,Dolphins D/ST,D/ST,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,16,DROP,Darnell Mooney,WR,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,17,ADD,Patriots D/ST,D/ST,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,17,ADD,Ronald Jones II,RB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,17,ADD,Ben DiNucci,QB,(FA),Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,17,ADD,Amon-Ra St. Brown,WR,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2021,17,DROP,Rams D/ST,D/ST,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,17,DROP,D'Onta Foreman,RB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,17,DROP,Miles Sanders,RB,Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2021,17,DROP,Alexander Mattison,RB,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot

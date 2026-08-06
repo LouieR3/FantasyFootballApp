@@ -1,0 +1,477 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Pennoni Younglings,2022,2,ADD,Browns D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,2,ADD,Brandon McManus,K,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,2,ADD,Graham Gano,K,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,2,ADD,Rams D/ST,D/ST,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,2,ADD,Logan Thomas,TE,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,2,ADD,Jeff Wilson Jr.,RB,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,2,ADD,Ryan Succop,K,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,2,ADD,Curtis Samuel,WR,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,2,ADD,Taysom Hill,TE,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,2,ADD,Albert Okwuegbunam,TE,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,2,ADD,Seahawks D/ST,D/ST,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,2,ADD,Kenyan Drake,RB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,2,ADD,Tyler Boyd,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,2,DROP,Rodrigo Blankenship,K,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,2,DROP,Irv Smith Jr.,TE,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,2,DROP,Jalen Tolbert,WR,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,2,DROP,Patriots D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,2,DROP,Skyy Moore,WR,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,2,DROP,Harrison Butker,K,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,2,DROP,Marvin Jones Jr.,WR,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,2,DROP,Greg Joseph,K,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,2,DROP,Mike Davis,RB,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,2,DROP,Kenneth Gainwell,RB,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,2,DROP,Khalil Herbert,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,2,DROP,Cardinals D/ST,D/ST,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,2,DROP,Zamir White,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,3,TEAM->TEAM,George Kittle,TE,Philadelphia British Army,19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,3,ADD,Jared Goff,QB,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,3,TEAM->TEAM,Packers D/ST,D/ST,Team Cogs,PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,3,ADD,Evan Engram,TE,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,3,ADD,Corey Davis,WR,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,3,ADD,Chiefs D/ST,D/ST,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,3,ADD,Falcons D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,3,ADD,Jerick McKinnon,RB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,3,ADD,Gerald Everett,TE,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,3,ADD,Bears D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,3,ADD,Marcus Mariota,QB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,3,ADD,Jimmy Garoppolo,QB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,3,DROP,Browns D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,3,DROP,Trey Lance,QB,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,3,DROP,Robert Woods,WR,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,3,DROP,Russell Gage,WR,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,3,DROP,Colts D/ST,D/ST,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,3,DROP,Isaiah Spiller,RB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,3,DROP,Matt Ryan,QB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,3,DROP,Bengals D/ST,D/ST,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,3,DROP,Kenneth Walker III,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,4,TEAM->TEAM,Chiefs D/ST,D/ST,Rizzo's Crash Test Dummy,19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,4,ADD,Tyler Conklin,TE,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,4,ADD,Colts D/ST,D/ST,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,4,ADD,Zach Wilson,QB,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,4,ADD,Devin Duvernay,WR,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,4,ADD,Khalil Herbert,RB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,4,ADD,Romeo Doubs,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,4,ADD,Giants D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,4,ADD,Jaylen Warren,RB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,4,ADD,Geno Smith,QB,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,4,ADD,Craig Reynolds,RB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,4,ADD,Zay Jones,WR,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,4,ADD,Mack Hollins,WR,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,4,DROP,Hunter Henry,TE,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,4,DROP,Mo Alie-Cox,TE,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,4,DROP,Evan Engram,TE,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,4,DROP,Corey Davis,WR,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,4,DROP,Julio Jones,WR,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,4,DROP,Falcons D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,4,DROP,George Pickens,WR,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,4,DROP,Isaiah McKenzie,WR,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,4,DROP,Jerick McKinnon,RB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,4,DROP,Kenyan Drake,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,4,DROP,Jarvis Landry,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,5,ADD,Mike Boone,RB,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,5,ADD,Vikings D/ST,D/ST,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,5,TEAM->TEAM,Rams D/ST,D/ST,Philadelphia British Army,Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,5,ADD,Greg Joseph,K,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,5,ADD,Will Dissly,TE,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,5,ADD,Jaguars D/ST,D/ST,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,5,ADD,Isaiah McKenzie,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,5,TEAM->TEAM,Kirk Cousins,QB,Book of MoreMoms,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,5,TRADE,Gerald Everett,TE,Girth Brooks,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,5,TRADE,Chase Edmonds,RB,Girth Brooks,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,5,ADD,Robert Woods,WR,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,5,ADD,Caleb Huntley,RB,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,5,TRADE,Khalil Herbert,RB,I'd_Tap_ That,Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,ADD,George Pickens,WR,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,ADD,Corey Davis,WR,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,ADD,Robert Tonyan,TE,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,ADD,Cooper Rush,QB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,ADD,Dolphins D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,ADD,Daniel Jones,QB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,ADD,Rachaad White,RB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,DROP,Rondale Moore,WR,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,5,DROP,Colts D/ST,D/ST,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,5,DROP,Zach Wilson,QB,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,5,DROP,Noah Fant,TE,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,5,DROP,Javonte Williams,RB,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,5,DROP,Jimmy Garoppolo,QB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,5,DROP,Justin Fields,QB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,5,DROP,Tyler Boyd,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,5,DROP,Albert Okwuegbunam,TE,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,5,DROP,Matthew Stafford,QB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,DROP,Cole Kmet,TE,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,DROP,Bears D/ST,D/ST,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,DROP,Marcus Mariota,QB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,DROP,Craig Reynolds,RB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,DROP,Zay Jones,WR,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,5,DROP,Mack Hollins,WR,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,6,ADD,Commanders D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,6,ADD,Tyler Boyd,WR,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,6,ADD,Bengals D/ST,D/ST,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,6,ADD,Keaontay Ingram,RB,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,6,ADD,Deon Jackson,RB,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,6,ADD,Josh Reynolds,WR,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,6,ADD,Irv Smith Jr.,TE,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,6,TEAM->TEAM,Mike Boone,RB,Rizzo's Crash Test Dummy,Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,6,TEAM->TEAM,Alexander Mattison,RB,Rizzo's Crash Test Dummy,Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,6,ADD,Kenneth Walker III,RB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,6,ADD,Panthers D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,6,ADD,Hayden Hurst,TE,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,6,ADD,Jason Myers,K,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,6,ADD,Noah Fant,TE,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,6,ADD,Brett Maher,K,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,6,ADD,Evan Engram,TE,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,6,ADD,Matthew Stafford,QB,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,6,ADD,Tevin Coleman,RB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,6,ADD,Patriots D/ST,D/ST,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,6,ADD,Eno Benjamin,RB,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,6,ADD,Harrison Butker,K,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,6,ADD,Rondale Moore,WR,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,6,TEAM->TEAM,Darrell Henderson Jr.,RB,The Golden Receivers,Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,6,ADD,Jimmy Garoppolo,QB,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,6,TEAM->TEAM,Rachaad White,RB,Girth Brooks,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,6,DROP,Jake Elliott,K,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,6,DROP,Vikings D/ST,D/ST,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,6,DROP,Greg Joseph,K,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,6,DROP,DJ Chark,WR,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,6,DROP,Chiefs D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,6,DROP,Mark Ingram II,RB,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,6,DROP,Tyler Conklin,TE,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,6,DROP,Kenny Golladay,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,6,DROP,Chargers D/ST,D/ST,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,6,DROP,Mike Gesicki,TE,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,6,DROP,Seahawks D/ST,D/ST,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,6,DROP,Rashaad Penny,RB,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,6,DROP,Treylon Burks,WR,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,6,DROP,Carson Wentz,QB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,6,DROP,Joshua Palmer,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,6,DROP,Robert Tonyan,TE,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,6,DROP,Dolphins D/ST,D/ST,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,7,TRADE,Melvin Gordon III,RB,The Golden Receivers,Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,7,ADD,Chris Boswell,K,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,7,TEAM->TEAM,Eno Benjamin,RB,Rizzo's Crash Test Dummy,Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,7,ADD,Mike Gesicki,TE,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,7,ADD,Zay Jones,WR,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,7,ADD,Robert Tonyan,TE,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,7,ADD,Jets D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,7,ADD,Matt Ryan,QB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,7,ADD,Raiders D/ST,D/ST,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,7,ADD,Daniel Bellinger,TE,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,7,TEAM->TEAM,Panthers D/ST,D/ST,Girth Brooks,Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,7,TEAM->TEAM,Deon Jackson,RB,Team Corner Office,Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,7,ADD,D'Onta Foreman,RB,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,7,ADD,Kenyan Drake,RB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,7,ADD,Latavius Murray,RB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,7,ADD,Alec Pierce,WR,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,7,ADD,Dolphins D/ST,D/ST,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,7,TRADE,Christian Kirk,WR,Team Corner Office,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,7,ADD,Wil Lutz,K,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,7,TEAM->TEAM,Michael Gallup,WR,19th St Halal Cart,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,7,ADD,Marcus Mariota,QB,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,7,ADD,Isiah Pacheco,RB,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,7,DROP,Hunter Renfrow,WR,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,7,DROP,Keaontay Ingram,RB,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,7,DROP,Nyheim Hines,RB,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,7,DROP,Irv Smith Jr.,TE,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,7,DROP,Corey Davis,WR,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,7,DROP,Cooper Rush,QB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,7,DROP,Austin Hooper,TE,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,7,DROP,Tyler Allgeier,RB,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,7,DROP,Giants D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,7,DROP,Jaylen Warren,RB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,7,DROP,Matthew Stafford,QB,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,7,DROP,Ryan Tannehill,QB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,7,DROP,Tevin Coleman,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,7,DROP,Rams D/ST,D/ST,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,7,DROP,Allen Robinson II,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,7,DROP,Elijah Moore,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,8,ADD,Vikings D/ST,D/ST,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,8,ADD,Cade York,K,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,8,ADD,Kenny Pickett,QB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,8,ADD,Andy Dalton,QB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,8,ADD,Tyler Allgeier,RB,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,8,ADD,Falcons D/ST,D/ST,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,8,ADD,Hunter Renfrow,WR,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,8,TRADE,Dalvin Cook,RB,I'd_Tap_ That,PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,8,TEAM->TEAM,Hayden Hurst,TE,Girth Brooks,PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,8,ADD,Gus Edwards,RB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,8,ADD,Sam Ehlinger,QB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,8,ADD,Greg Dulcich,TE,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,8,ADD,Colts D/ST,D/ST,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,8,ADD,Greg Zuerlein,K,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,8,ADD,Mecole Hardman,WR,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,8,ADD,Justin Fields,QB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,8,ADD,Parris Campbell,WR,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,8,ADD,Chuba Hubbard,RB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,8,ADD,Taylor Heinicke,QB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,8,TRADE,Alvin Kamara,RB,PAI Athletic Director,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,8,ADD,Mark Ingram II,RB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,8,ADD,Wan'Dale Robinson,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,8,TEAM->TEAM,Robert Tonyan,TE,Girth Brooks,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,8,DROP,Matt Gay,K,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,8,DROP,Nico Collins,WR,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,8,DROP,Matt Ryan,QB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,8,DROP,Matt Prater,K,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,8,DROP,Mac Jones,QB,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,8,DROP,Raiders D/ST,D/ST,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,8,DROP,Daniel Bellinger,TE,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,8,DROP,Panthers D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,8,DROP,Deon Jackson,RB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,8,DROP,Steelers D/ST,D/ST,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,8,DROP,Jeff Wilson Jr.,RB,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,8,DROP,Robbie Anderson,WR,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,8,DROP,Chase Edmonds,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,8,DROP,Kenyan Drake,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,8,DROP,Breece Hall,RB,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,8,DROP,Harrison Butker,K,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,8,DROP,Isaiah McKenzie,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,8,DROP,Wil Lutz,K,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,8,DROP,Marcus Mariota,QB,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,9,ADD,Michael Badgley,K,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,9,ADD,Cairo Santos,K,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,9,ADD,Marcus Mariota,QB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,9,ADD,Panthers D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,9,TRADE,Robert Tonyan,TE,The Golden Receivers,Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,9,ADD,Deon Jackson,RB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,9,ADD,Joshua Palmer,WR,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,9,ADD,Harrison Butker,K,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,9,ADD,Isaiah Likely,TE,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,9,TRADE,Kirk Cousins,QB,The Golden Receivers,Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,9,TRADE,Romeo Doubs,WR,The Golden Receivers,Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,9,TEAM->TEAM,Jets D/ST,D/ST,Girth Brooks,Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,9,ADD,Kenyan Drake,RB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,9,ADD,Nyheim Hines,RB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,9,ADD,Seahawks D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,9,ADD,Jeff Wilson Jr.,RB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,9,ADD,Chase McLaughlin,K,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,9,ADD,Allen Robinson II,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,9,ADD,Chiefs D/ST,D/ST,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,9,TRADE,Gus Edwards,RB,Girth Brooks,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,9,TRADE,Russell Wilson,QB,Rizzo's Crash Test Dummy,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,9,TRADE,Rondale Moore,WR,Rizzo's Crash Test Dummy,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,9,TRADE,Curtis Samuel,WR,Rizzo's Crash Test Dummy,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,9,ADD,Jason Sanders,K,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,9,DROP,Vikings D/ST,D/ST,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,9,DROP,Chris Boswell,K,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,9,DROP,Kenny Pickett,QB,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,9,DROP,Falcons D/ST,D/ST,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,9,DROP,Daniel Jones,QB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,9,DROP,Sam Ehlinger,QB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,9,DROP,Alec Pierce,WR,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,9,DROP,Dolphins D/ST,D/ST,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,9,DROP,Greg Zuerlein,K,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,9,DROP,Brett Maher,K,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,9,DROP,Commanders D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,9,DROP,Mark Ingram II,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,9,DROP,Logan Thomas,TE,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,9,DROP,Josh Reynolds,WR,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,9,DROP,Michael Thomas,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,9,DROP,Michael Gallup,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,9,DROP,Wan'Dale Robinson,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,10,TEAM->TEAM,Darrell Henderson Jr.,RB,Rizzo's Crash Test Dummy,Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,10,ADD,Cade Otton,TE,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,10,ADD,Wan'Dale Robinson,WR,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,10,ADD,Kyren Williams,RB,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,10,ADD,Steelers D/ST,D/ST,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,10,ADD,Riley Patterson,K,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,10,ADD,Odell Beckham Jr.,WR,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,10,ADD,Giants D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,10,ADD,Robbie Gould,K,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,10,TEAM->TEAM,Russell Wilson,QB,The Golden Receivers,Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,10,ADD,Jaylen Warren,RB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,10,ADD,Titans D/ST,D/ST,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,10,ADD,Jacoby Brissett,QB,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,10,TEAM->TEAM,Khalil Herbert,RB,Girth Brooks,Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,10,ADD,Cardinals D/ST,D/ST,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,10,ADD,Ka'imi Fairbairn,K,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,10,ADD,Michael Gallup,WR,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,10,ADD,Terrace Marshall Jr.,WR,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2022,10,ADD,Daniel Jones,QB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,10,ADD,Deshaun Watson,QB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,10,DROP,J.D. McKissic,RB,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,10,DROP,Caleb Huntley,RB,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,10,DROP,Marcus Mariota,QB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,10,DROP,Panthers D/ST,D/ST,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,10,DROP,Robert Tonyan,TE,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,10,DROP,Deon Jackson,RB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,10,DROP,Colts D/ST,D/ST,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,10,DROP,Isaiah Likely,TE,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,10,DROP,Romeo Doubs,WR,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,10,DROP,Marquez Valdes-Scantling,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,10,DROP,Nyheim Hines,RB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,10,DROP,DeVante Parker,WR,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,10,DROP,Taylor Heinicke,QB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,10,DROP,Aaron Rodgers,QB,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,10,DROP,Devin Duvernay,WR,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,10,DROP,Jaguars D/ST,D/ST,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,10,DROP,Chiefs D/ST,D/ST,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,10,DROP,Brandon McManus,K,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,11,ADD,Aaron Rodgers,QB,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,11,ADD,Jerick McKinnon,RB,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,11,TEAM->TEAM,Robbie Gould,K,Girth Brooks,Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,11,ADD,Marquez Valdes-Scantling,WR,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,11,TEAM->TEAM,Gerald Everett,TE,I'd_Tap_ That,Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,11,ADD,Christian Watson,WR,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,11,ADD,Donovan Peoples-Jones,WR,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,11,ADD,Cole Kmet,TE,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,11,ADD,Commanders D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,11,ADD,Marcus Mariota,QB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,11,TRADE,Daniel Jones,QB,The Golden Receivers,Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,11,TEAM->TEAM,Kyler Murray,QB,Came and Wentz,Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,11,ADD,Foster Moreau,TE,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,11,ADD,Devin Duvernay,WR,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,11,ADD,Taylor Heinicke,QB,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,11,ADD,James Cook,RB,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,11,ADD,Rams D/ST,D/ST,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,11,ADD,Brett Maher,K,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,11,ADD,Darius Slayton,WR,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,11,ADD,Robert Tonyan,TE,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,11,ADD,Trestan Ebner,RB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,11,TRADE,Brandin Cooks,WR,Girth Brooks,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,11,ADD,Greg Joseph,K,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,11,DROP,Zach Ertz,TE,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,11,DROP,Trevor Lawrence,QB,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,11,DROP,Eno Benjamin,RB,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,11,DROP,Cade York,K,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,11,DROP,Michael Badgley,K,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,11,DROP,Cade Otton,TE,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,11,DROP,Wan'Dale Robinson,WR,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,11,DROP,Riley Patterson,K,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,11,DROP,Giants D/ST,D/ST,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,11,DROP,Russell Wilson,QB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,11,DROP,Will Dissly,TE,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,11,DROP,Rashod Bateman,WR,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,11,DROP,Rex Burkhead,RB,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,11,DROP,Jason Sanders,K,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,11,DROP,Chuba Hubbard,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,11,DROP,Ka'imi Fairbairn,K,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,12,ADD,Juwan Johnson,TE,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,12,ADD,Chiefs D/ST,D/ST,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2022,12,ADD,Justin Watson,WR,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,12,ADD,Colts D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,12,ADD,Mack Hollins,WR,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,12,ADD,Demarcus Robinson,WR,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,12,ADD,Samaje Perine,RB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,12,ADD,Corey Davis,WR,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,12,ADD,Austin Hooper,TE,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,12,ADD,Dolphins D/ST,D/ST,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,12,DROP,Bengals D/ST,D/ST,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,12,DROP,Kyle Pitts,TE,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,12,DROP,Jaylen Warren,RB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,12,DROP,Commanders D/ST,D/ST,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,12,DROP,Devin Duvernay,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,12,DROP,Taylor Heinicke,QB,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,12,DROP,Rams D/ST,D/ST,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,12,DROP,Clyde Edwards-Helaire,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,12,DROP,Robert Tonyan,TE,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,12,DROP,Trestan Ebner,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,12,DROP,Greg Joseph,K,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,13,ADD,Tyler Conklin,TE,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,13,ADD,JaMycal Hasty,RB,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,13,ADD,Ty Johnson,RB,(FA),Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,13,TEAM->TEAM,Corey Davis,WR,I'd_Tap_ That,Team Corner Office,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,13,ADD,Adam Trautman,TE,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,13,ADD,Jelani Woods,TE,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,13,ADD,Browns D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,13,ADD,Mike White,QB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,13,TRADE,Dameon Pierce,RB,Rizzo's Crash Test Dummy,PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,13,TRADE,Brandon Aiyuk,WR,Rizzo's Crash Test Dummy,PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,13,ADD,Zonovan Knight,RB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,13,ADD,Daniel Bellinger,TE,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,13,ADD,Jaylen Warren,RB,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,13,TRADE,Alvin Kamara,RB,I'd_Tap_ That,Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,13,ADD,Trevor Lawrence,QB,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,13,TRADE,Aaron Jones,RB,PAI Athletic Director,Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,13,TRADE,Cordarrelle Patterson,RB,Rizzo's Crash Test Dummy,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,13,TRADE,Christian Watson,WR,Rizzo's Crash Test Dummy,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,13,ADD,Treylon Burks,WR,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,13,TEAM->TEAM,Kyren Williams,RB,Rizzo's Crash Test Dummy,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,13,DROP,Melvin Gordon III,RB,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,13,DROP,Darrell Henderson Jr.,RB,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,13,DROP,Juwan Johnson,TE,Team Corner Office,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2022,13,DROP,Jacoby Brissett,QB,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,13,DROP,Marcus Mariota,QB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,13,DROP,Colts D/ST,D/ST,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,13,DROP,Dallas Goedert,TE,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,13,DROP,Elijah Mitchell,RB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,13,DROP,Demarcus Robinson,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,13,DROP,Dolphins D/ST,D/ST,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,13,DROP,Allen Robinson II,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,14,TEAM->TEAM,Daniel Bellinger,TE,Team Cogs,Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,14,ADD,Tyler Huntley,QB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,14,ADD,Tony Jones Jr.,RB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,14,ADD,Dolphins D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,14,ADD,Kenneth Gainwell,RB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,14,ADD,Raiders D/ST,D/ST,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,14,ADD,Dallas Goedert,TE,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,14,TEAM->TEAM,Daniel Jones,QB,Girth Brooks,Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,14,ADD,Travis Homer,RB,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,14,ADD,Chuba Hubbard,RB,(FA),Rizzo's Crash Test Dummy,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,14,ADD,Michael Badgley,K,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,14,ADD,Nico Collins,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,14,ADD,DJ Chark,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,14,TEAM->TEAM,Cole Kmet,TE,Girth Brooks,Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,14,DROP,Tyler Conklin,TE,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2022,14,DROP,Adam Trautman,TE,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,14,DROP,Jelani Woods,TE,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,14,DROP,Justin Watson,WR,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,14,DROP,Browns D/ST,D/ST,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,14,DROP,Hayden Hurst,TE,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,14,DROP,Kenyan Drake,RB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,14,DROP,Jimmy Garoppolo,QB,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,14,DROP,Jaylen Warren,RB,Rizzo's Crash Test Dummy,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2022,14,DROP,Chase Claypool,WR,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,14,DROP,Brandin Cooks,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,14,DROP,Kyren Williams,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,15,ADD,Chris Moore,WR,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,15,ADD,Josh Reynolds,WR,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,15,ADD,Chigoziem Okonkwo,TE,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,15,ADD,Elijah Moore,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,15,ADD,Bengals D/ST,D/ST,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,15,ADD,Panthers D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,15,TEAM->TEAM,Daniel Jones,QB,Team Cogs,Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,15,DROP,Buccaneers D/ST,D/ST,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,15,DROP,Tyler Huntley,QB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,15,DROP,Dolphins D/ST,D/ST,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,15,DROP,Tyler Higbee,TE,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,15,DROP,Michael Badgley,K,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,15,DROP,Rondale Moore,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,16,ADD,Jaguars D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,16,ADD,K.J. Osborn,WR,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,16,ADD,Gardner Minshew,QB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,16,ADD,Zack Moss,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,16,ADD,Marquise Goodwin,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,16,ADD,Brock Purdy,QB,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,16,ADD,Juwan Johnson,TE,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,16,ADD,Deon Jackson,RB,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,16,ADD,Browns D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,16,ADD,Tyler Higbee,TE,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,16,DROP,Josh Reynolds,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,16,DROP,Chigoziem Okonkwo,TE,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,16,DROP,Seahawks D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2022,16,DROP,Damien Harris,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,16,DROP,Deshaun Watson,QB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,16,DROP,Elijah Moore,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,16,DROP,Austin Hooper,TE,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2022,16,DROP,Greg Dulcich,TE,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,16,DROP,Tony Jones Jr.,RB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,16,DROP,Kenneth Gainwell,RB,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,16,DROP,Panthers D/ST,D/ST,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,17,ADD,Brandin Cooks,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,17,ADD,Calvin Ridley,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,17,ADD,Hassan Haskins,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,17,ADD,Julius Chestnut,RB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,17,ADD,Teddy Bridgewater,QB,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,17,ADD,Giants D/ST,D/ST,(FA),PAI Athletic Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,17,ADD,Dolphins D/ST,D/ST,(FA),Girth Brooks,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,17,DROP,Kareem Hunt,RB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,17,DROP,Chris Moore,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2022,17,DROP,Curtis Samuel,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,17,DROP,Nico Collins,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,17,DROP,Marquise Goodwin,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2022,17,DROP,Tua Tagovailoa,QB,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2022,17,DROP,Browns D/ST,D/ST,Girth Brooks,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2022,17,DROP,James Robinson,RB,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,17,DROP,Derek Carr,QB,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2022,17,DROP,Raiders D/ST,D/ST,PAI Athletic Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot

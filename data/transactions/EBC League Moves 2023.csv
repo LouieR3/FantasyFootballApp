@@ -1,0 +1,233 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+EBC League,2023,2,ADD,Jamaal Williams,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,2,ADD,Dalton Kincaid,TE,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,2,ADD,Giants D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,2,ADD,Kenneth Gainwell,RB,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,2,ADD,Zay Jones,WR,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,2,ADD,Puka Nacua,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,2,ADD,Jakobi Meyers,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,2,ADD,Tyler Allgeier,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,2,ADD,Raheem Mostert,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,2,ADD,Joshua Kelley,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,2,DROP,Odell Beckham Jr.,WR,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,2,DROP,AJ Dillon,RB,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,2,DROP,J.K. Dobbins,RB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,2,DROP,Chigoziem Okonkwo,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,2,DROP,Cam Akers,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,2,DROP,Brian Robinson Jr.,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,2,DROP,Dalton Schultz,TE,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,2,DROP,Skyy Moore,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,3,ADD,Kirk Cousins,QB,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,3,ADD,Kareem Hunt,RB,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,3,ADD,Chiefs D/ST,D/ST,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,3,ADD,Kyren Williams,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,3,ADD,Brian Robinson Jr.,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,3,ADD,Gus Edwards,RB,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,3,TEAM->TEAM,Miles Sanders,RB,Inter Miami CF,THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,3,ADD,Zack Moss,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,3,ADD,Zach Ertz,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,3,ADD,Hunter Henry,TE,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,3,ADD,Nico Collins,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,3,ADD,Jerome Ford,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,3,ADD,Cam Akers,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,3,ADD,Browns D/ST,D/ST,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,3,DROP,Bengals D/ST,D/ST,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,3,DROP,Jamaal Williams,RB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,3,DROP,Giants D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,3,DROP,Kenneth Gainwell,RB,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,3,DROP,Nick Chubb,RB,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,3,DROP,Ezekiel Elliott,RB,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,3,DROP,Tyler Higbee,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,3,DROP,Treylon Burks,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,3,DROP,Brandin Cooks,WR,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,3,DROP,Christian Watson,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,3,DROP,Broncos D/ST,D/ST,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,3,DROP,Tyler Allgeier,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,4,ADD,Brock Purdy,QB,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,4,ADD,Tank Dell,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,4,ADD,Sam LaPorta,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,4,ADD,De'Von Achane,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,4,ADD,Adam Thielen,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,4,ADD,Christian Watson,WR,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,4,ADD,Jake Moody,K,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,4,DROP,Jaxon Smith-Njigba,WR,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,4,DROP,Dalvin Cook,RB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,4,DROP,Khalil Herbert,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,4,DROP,Zach Ertz,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,4,DROP,Evan McPherson,K,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,4,DROP,Jerry Jeudy,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,4,DROP,Joshua Kelley,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,5,ADD,Ravens D/ST,D/ST,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,5,ADD,Jake Ferguson,TE,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,5,ADD,Dolphins D/ST,D/ST,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,5,DROP,Pat Freiermuth,TE,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,5,DROP,Chiefs D/ST,D/ST,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,5,DROP,Cam Akers,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,5,DROP,Browns D/ST,D/ST,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,5,DROP,Drake London,WR,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,5,DROP,Kareem Hunt,RB,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,6,ADD,Logan Thomas,TE,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,6,ADD,Jared Goff,QB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,6,TRADE,Jonathan Taylor,RB,Wut happened uh 🤷🏽‍♂️,Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,6,ADD,Romeo Doubs,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,6,ADD,Zach Ertz,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,6,ADD,Brett Maher,K,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,6,ADD,Jeff Wilson Jr.,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,6,TRADE,George Kittle,TE,Abyss Diamond Eyes,Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,6,TEAM->TEAM,Justin Tucker,K,Inter Miami CF,Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,6,TRADE,Brandon Aiyuk,WR,Riley  Read option,Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,6,ADD,K.J. Osborn,WR,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,6,TRADE,Joe Mixon,RB,Wut happened uh 🤷🏽‍♂️,Riley  Read option,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2023,6,DROP,Tank Dell,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,6,DROP,Gus Edwards,RB,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,6,DROP,Daniel Jones,QB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,6,DROP,Dalton Kincaid,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,6,DROP,Graham Gano,K,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,7,TRADE,George Pickens,WR,THE POOL,Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,7,ADD,Seahawks D/ST,D/ST,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,7,ADD,Jordan Love,QB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,7,ADD,Julio Jones,WR,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,7,ADD,Chuba Hubbard,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,7,ADD,Browns D/ST,D/ST,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,7,TEAM->TEAM,Dak Prescott,QB,Pleasant Valley Panthers,Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,7,ADD,Drake London,WR,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,7,ADD,C.J. Stroud,QB,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,7,TRADE,Zack Moss,RB,Abyss Diamond Eyes,THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,7,ADD,Jerry Jeudy,WR,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,7,DROP,Anthony Richardson,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,7,DROP,Zach Ertz,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,7,DROP,Deshaun Watson,QB,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,7,DROP,Jeff Wilson Jr.,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,7,DROP,Trevor Lawrence,QB,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,7,DROP,Jahan Dotson,WR,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,7,DROP,Dolphins D/ST,D/ST,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,7,DROP,Hunter Henry,TE,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,8,TEAM->TEAM,Jared Goff,QB,The Hungry Dogs,THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,8,ADD,Trevor Lawrence,QB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,8,ADD,Kyler Murray,QB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,8,ADD,Josh Downs,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,8,ADD,Dalton Schultz,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,8,ADD,Nick Folk,K,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,8,TRADE,Tony Pollard,RB,Pleasant Valley Panthers,Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,8,TEAM->TEAM,Seahawks D/ST,D/ST,Abyss Diamond Eyes,Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,8,ADD,Kareem Hunt,RB,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,8,TRADE,Nico Collins,WR,Inter Miami CF,Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,8,TRADE,Raheem Mostert,RB,Inter Miami CF,Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,8,DROP,Romeo Doubs,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,8,DROP,Jordan Love,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,8,DROP,Brett Maher,K,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,8,DROP,Chuba Hubbard,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,8,DROP,49ers D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,8,DROP,Javonte Williams,RB,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,8,DROP,Drake London,WR,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,8,DROP,Geno Smith,QB,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,9,ADD,Javonte Williams,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,9,ADD,Darrell Henderson Jr.,RB,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,9,ADD,Sam Howell,QB,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,9,ADD,Jahan Dotson,WR,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,9,ADD,Dalton Kincaid,TE,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,9,ADD,Chuba Hubbard,RB,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,9,ADD,Baker Mayfield,QB,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,9,ADD,Evan McPherson,K,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,9,TEAM->TEAM,Evan Engram,TE,THE POOL,Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,9,ADD,Matt Gay,K,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,9,ADD,Falcons D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,9,ADD,Gus Edwards,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,9,ADD,Dustin Hopkins,K,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,9,ADD,Drake London,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,9,DROP,Jets D/ST,D/ST,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,9,DROP,Miles Sanders,RB,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,9,DROP,K.J. Osborn,WR,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,9,DROP,Jerry Jeudy,WR,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,9,DROP,Daniel Carlson,K,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,9,DROP,Zay Jones,WR,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,9,DROP,Kirk Cousins,QB,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,9,DROP,Nick Folk,K,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,9,DROP,Kyle Pitts,TE,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,9,DROP,Jake Moody,K,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,9,DROP,Seahawks D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,10,ADD,Colts D/ST,D/ST,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,10,ADD,Martavis Bryant,WR,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,10,ADD,DeMario Douglas,WR,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,10,ADD,Tank Dell,WR,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,10,ADD,Jets D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,10,ADD,Cameron Dicker,K,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,10,ADD,Jaylen Warren,RB,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,10,ADD,Raiders D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,10,DROP,Eagles D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,10,DROP,Christian Watson,WR,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,10,DROP,Darrell Henderson Jr.,RB,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,10,DROP,Kareem Hunt,RB,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,10,DROP,Falcons D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,10,DROP,Josh Downs,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,11,ADD,Noah Brown,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,11,ADD,Joshua Dobbs,QB,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,11,TEAM->TEAM,Cameron Dicker,K,Abyss Diamond Eyes,THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,11,ADD,Brandon Aubrey,K,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,11,ADD,Commanders D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,11,ADD,Trey McBride,TE,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,11,ADD,49ers D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,11,TEAM->TEAM,Jared Goff,QB,THE POOL,The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,11,ADD,Dolphins D/ST,D/ST,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,11,ADD,Tyjae Spears,RB,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,11,DROP,Colts D/ST,D/ST,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,11,DROP,Dallas Goedert,TE,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,11,DROP,Saints D/ST,D/ST,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,11,DROP,Julio Jones,WR,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,11,DROP,Jahan Dotson,WR,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,11,DROP,Logan Thomas,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,11,DROP,Trevor Lawrence,QB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,11,DROP,Jets D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,11,DROP,Dameon Pierce,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,11,DROP,Drake London,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,11,DROP,Matt Gay,K,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,11,DROP,Raiders D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,12,TRADE,Brian Robinson Jr.,RB,The Hungry Dogs,THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,12,ADD,Zach Charbonnet,RB,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,12,TRADE,Dalton Kincaid,TE,THE POOL,The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,12,ADD,Jets D/ST,D/ST,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,12,ADD,Taysom Hill,TE,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,12,ADD,Trevor Lawrence,QB,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,12,ADD,Patriots D/ST,D/ST,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,12,ADD,Chiefs D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,12,DROP,Jakobi Meyers,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,12,DROP,Ravens D/ST,D/ST,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,12,DROP,Younghoe Koo,K,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,12,DROP,Commanders D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2023,12,DROP,Joe Burrow,QB,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,13,ADD,Devin Singletary,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,13,ADD,Brandon McManus,K,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,13,ADD,Rashee Rice,WR,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,13,TEAM->TEAM,Chuba Hubbard,RB,THE POOL,Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,13,ADD,Jake Moody,K,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,13,ADD,Jaguars D/ST,D/ST,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,13,DROP,Noah Brown,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,13,DROP,Tyler Bass,K,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,13,DROP,Martavis Bryant,WR,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,13,DROP,Tyjae Spears,RB,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,13,DROP,Alexander Mattison,RB,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,13,DROP,Joshua Dobbs,QB,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2023,14,ADD,Tyjae Spears,RB,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,14,ADD,Christian Watson,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,14,ADD,Clyde Edwards-Helaire,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,14,ADD,Noah Brown,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,14,ADD,Jakobi Meyers,WR,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,14,ADD,Tyler Bass,K,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,14,ADD,Drake London,WR,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,14,DROP,Devin Singletary,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,14,DROP,Tank Dell,WR,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,14,DROP,Brandon McManus,K,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2023,14,DROP,Taysom Hill,TE,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,14,DROP,Jaguars D/ST,D/ST,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,15,ADD,Ezekiel Elliott,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,15,ADD,Devin Singletary,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,15,ADD,Russell Wilson,QB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2023,15,DROP,Patriots D/ST,D/ST,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2023,15,DROP,Dalton Schultz,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,15,DROP,Clyde Edwards-Helaire,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2023,16,ADD,Ty Chandler,RB,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,16,ADD,Joshua Palmer,WR,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,16,ADD,Cairo Santos,K,(FA),THE POOL,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,16,DROP,DeMario Douglas,WR,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,16,DROP,Cameron Dicker,K,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2023,16,DROP,Zach Charbonnet,RB,THE POOL,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot

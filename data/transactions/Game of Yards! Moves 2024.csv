@@ -1,0 +1,388 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Game of Yards!,2024,2,ADD,Jameson Williams,WR,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,2,ADD,Demarcus Robinson,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,2,ADD,Baker Mayfield,QB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,2,ADD,Juwan Johnson,TE,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,2,ADD,Colby Parkinson,TE,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,2,ADD,Rashid Shaheed,WR,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,2,ADD,Chase Brown,RB,Pain Inflictors,Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,2,ADD,Zach Charbonnet,RB,The Chase is on,Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,2,ADD,Chargers D/ST,D/ST,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,2,ADD,Jeff Wilson Jr.,RB,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,2,ADD,Isaiah Likely,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,2,ADD,Alexander Mattison,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,2,DROP,Hollywood Brown,WR,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,2,DROP,Bryce Young,QB,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,2,DROP,T.J. Hockenson,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,2,DROP,Blake Corum,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,2,DROP,Cade Otton,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,2,DROP,Mike Williams,WR,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,2,DROP,Joshua Palmer,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,2,DROP,Evan McPherson,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,2,DROP,Bengals D/ST,D/ST,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,3,ADD,Blake Grupe,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,3,ADD,Geno Smith,QB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,3,ADD,Alec Pierce,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,3,ADD,Kareem Hunt,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,3,ADD,Raiders D/ST,D/ST,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,3,ADD,Mike Gesicki,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,3,ADD,Quentin Johnston,WR,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,3,ADD,D'Onta Foreman,RB,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,3,ADD,Khalil Shakir,WR,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,3,ADD,Cade Otton,TE,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,3,ADD,Jauan Jennings,WR,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,3,ADD,Hunter Henry,TE,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,3,ADD,Cam Akers,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,3,ADD,Carson Steele,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,3,ADD,Derek Carr,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,3,ADD,Bills D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,3,ADD,Chris Boswell,K,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,3,DROP,Cameron Dicker,K,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,3,DROP,Taysom Hill,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,3,DROP,Keon Coleman,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,3,DROP,Dolphins D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,3,DROP,Trevor Lawrence,QB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,3,DROP,Rome Odunze,WR,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,3,DROP,Juwan Johnson,TE,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,3,DROP,DeAndre Hopkins,WR,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,3,DROP,Tyler Conklin,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,3,DROP,Chase Brown,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,3,DROP,Jeff Wilson Jr.,RB,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,3,DROP,Tua Tagovailoa,QB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,3,DROP,Eagles D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,3,DROP,Jaleel McLaughlin,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,3,DROP,Younghoe Koo,K,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,4,TRADE,Zack Moss,RB,Wakanda Forever,Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,4,TRADE,George Pickens,WR,Wakanda Forever,Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,4,ADD,Geno Smith,QB,Wakanda Forever,Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,4,ADD,Mike Gesicki,TE,Team HebAchi,Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,4,ADD,Colts D/ST,D/ST,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,4,ADD,Sam Darnold,QB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,4,ADD,Rome Odunze,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,4,ADD,Dolphins D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,4,TRADE,Chris Olave,WR,Groot-o-Matic,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,4,TRADE,Tyjae Spears,RB,Groot-o-Matic,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,4,ADD,Jakobi Meyers,WR,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,4,ADD,Cole Kmet,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,4,ADD,Zach Ertz,TE,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,4,ADD,Braelon Allen,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,4,ADD,Darnell Mooney,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,4,ADD,Clyde Edwards-Helaire,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,4,ADD,Eagles D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,4,DROP,Alec Pierce,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,4,DROP,Kareem Hunt,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,4,DROP,Ravens D/ST,D/ST,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,4,DROP,Caleb Williams,QB,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,4,DROP,Dalton Schultz,TE,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,4,DROP,Cade Otton,TE,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,4,DROP,Zamir White,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,4,DROP,Xavier Worthy,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,4,DROP,Isaiah Likely,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,4,DROP,Bills D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,5,ADD,Broncos D/ST,D/ST,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,5,ADD,Austin Seibert,K,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,5,ADD,Wan'Dale Robinson,WR,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,5,ADD,Younghoe Koo,K,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,5,ADD,Xavier Worthy,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,5,ADD,Tucker Kraft,TE,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,5,ADD,Evan McPherson,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,5,ADD,Giants D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,5,ADD,Commanders D/ST,D/ST,(FA),Team CTE,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,activity
+Game of Yards!,2024,5,ADD,Chase Brown,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,5,ADD,Chase McLaughlin,K,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,5,ADD,Darnell Mooney,WR,Pain Inflictors,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,5,ADD,Isaiah Likely,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,5,ADD,Kareem Hunt,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,5,ADD,Dontayvion Wicks,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,5,ADD,Seahawks D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,5,ADD,Tyler Conklin,TE,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,5,ADD,Trey Sermon,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,5,ADD,T.J. Hockenson,TE,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,5,DROP,Gus Edwards,RB,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,5,DROP,Jake Bates,K,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,5,DROP,Quentin Johnston,WR,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,5,DROP,Blake Grupe,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,5,DROP,Rome Odunze,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,5,DROP,Dolphins D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,5,DROP,Tyjae Spears,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,5,DROP,Greg Zuerlein,K,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,5,DROP,Jakobi Meyers,WR,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,5,DROP,Ezekiel Elliott,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,5,DROP,Jake Elliott,K,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,5,DROP,Demarcus Robinson,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,5,DROP,Cole Kmet,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,5,DROP,Jaguars D/ST,D/ST,Team CTE,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,activity
+Game of Yards!,2024,5,DROP,Carson Steele,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,5,DROP,Eagles D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,5,DROP,Raheem Mostert,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,5,DROP,Zach Charbonnet,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,5,DROP,Hunter Henry,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,6,ADD,Will Reichard,K,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,6,ADD,Tyler Allgeier,RB,(FA),Team CTE,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,activity
+Game of Yards!,2024,6,ADD,Tyjae Spears,RB,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,6,ADD,Tank Bigsby,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,6,ADD,Tua Tagovailoa,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,6,ADD,Packers D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,6,ADD,Tyrone Tracy Jr.,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,6,ADD,Christian Watson,WR,Team CTE,Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,6,ADD,Alec Pierce,WR,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,6,ADD,Dalton Schultz,TE,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,6,ADD,Jake Bates,K,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,6,ADD,Raheem Mostert,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,6,ADD,Josh Downs,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,6,ADD,Texans D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,6,ADD,Jakobi Meyers,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,6,ADD,JuJu Smith-Schuster,WR,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,6,ADD,Jalen Tolbert,WR,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,6,ADD,Roschon Johnson,RB,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,6,DROP,Jaylen Warren,RB,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,6,DROP,Jauan Jennings,WR,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,6,DROP,Ladd McConkey,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,6,DROP,Sam Darnold,QB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,6,DROP,Giants D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,6,DROP,Derek Carr,QB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,6,DROP,Braelon Allen,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,6,DROP,Clyde Edwards-Helaire,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,6,DROP,Dontayvion Wicks,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,6,DROP,Seahawks D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,6,DROP,Rashee Rice,WR,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,6,DROP,Keenan Allen,WR,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,6,DROP,D'Onta Foreman,RB,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,6,DROP,Jared Goff,QB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,6,DROP,Colby Parkinson,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,6,DROP,Tyler Conklin,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,6,DROP,Cam Akers,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,7,ADD,Christian Watson,WR,Pain Inflictors,Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,7,ADD,DeMario Douglas,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,7,ADD,Eagles D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,7,ADD,Tyler Goodson,RB,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,7,ADD,Zach Charbonnet,RB,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,7,ADD,D'Ernest Johnson,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,7,ADD,Gabe Davis,WR,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,7,ADD,Bub Means,WR,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,7,ADD,Cade Otton,TE,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,7,ADD,Bills D/ST,D/ST,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,7,ADD,Ladd McConkey,WR,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,7,ADD,Bengals D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,7,DROP,Calvin Ridley,WR,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,7,DROP,Aaron Rodgers,QB,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,7,DROP,Tyjae Spears,RB,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,7,DROP,Packers D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,7,DROP,Mike Gesicki,TE,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,7,DROP,Jerome Ford,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,7,DROP,Rashid Shaheed,WR,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,7,DROP,Alec Pierce,WR,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,7,DROP,Texans D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,7,DROP,Khalil Shakir,WR,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,7,DROP,Roschon Johnson,RB,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,8,ADD,Jauan Jennings,WR,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,8,ADD,Ray Davis,RB,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,8,ADD,Ricky Pearsall,WR,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,8,ADD,Jaylen Warren,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,8,ADD,Jalen McMillan,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,8,ADD,Chiefs D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,8,ADD,Khalil Shakir,WR,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,8,ADD,Justice Hill,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,8,ADD,Tucker Kraft,TE,Wakanda Forever,Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,8,ADD,Xavier Worthy,WR,Wakanda Forever,Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,8,ADD,Braelon Allen,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,8,ADD,Tyler Lockett,WR,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,8,ADD,Bo Nix,QB,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,8,ADD,Romeo Doubs,WR,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,8,ADD,Aaron Rodgers,QB,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,8,ADD,Ravens D/ST,D/ST,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,8,ADD,Tyrone Tracy Jr.,RB,Pain Inflictors,The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,8,ADD,Hunter Henry,TE,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,8,ADD,Calvin Ridley,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,8,ADD,Packers D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,8,ADD,DeAndre Hopkins,WR,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,8,DROP,Brandon Aiyuk,WR,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,8,DROP,Antonio Gibson,RB,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,8,DROP,Christian Kirk,WR,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,8,DROP,Kirk Cousins,QB,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,8,DROP,Christian Watson,WR,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,8,DROP,DeMario Douglas,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,8,DROP,Eagles D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,8,DROP,Colts D/ST,D/ST,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,8,DROP,Tyler Goodson,RB,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,8,DROP,Dalton Schultz,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,8,DROP,D'Ernest Johnson,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,8,DROP,Gabe Davis,WR,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,8,DROP,Bub Means,WR,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,8,DROP,Trey Sermon,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,8,DROP,Falcons D/ST,D/ST,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,8,DROP,Matthew Stafford,QB,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,8,DROP,Jalen Tolbert,WR,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,8,DROP,Bengals D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,8,DROP,Chris Godwin,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,9,ADD,Kirk Cousins,QB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,9,ADD,Bengals D/ST,D/ST,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,9,ADD,Texans D/ST,D/ST,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,9,ADD,Gabe Davis,WR,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,9,ADD,Eagles D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,9,ADD,Cedric Tillman,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,9,ADD,Will Reichard,K,Groot-o-Matic,Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,9,ADD,Keon Coleman,WR,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,9,ADD,Dalton Schultz,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,9,ADD,Xavier Legette,WR,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,9,ADD,Taysom Hill,TE,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,9,DROP,Raiders D/ST,D/ST,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,9,DROP,Ricky Pearsall,WR,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,9,DROP,Tua Tagovailoa,QB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,9,DROP,Jalen McMillan,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,9,DROP,Chiefs D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,9,DROP,Jake Bates,K,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,9,DROP,Justice Hill,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,9,DROP,JuJu Smith-Schuster,WR,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,9,DROP,Isaiah Likely,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,9,DROP,Zach Charbonnet,RB,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,9,DROP,Packers D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,10,TRADE,Alexander Mattison,RB,Pain Inflictors,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,10,TRADE,CeeDee Lamb,WR,Pain Inflictors,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,10,ADD,Roschon Johnson,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,10,ADD,Mike Gesicki,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,10,TRADE,Tank Dell,WR,Team HebAchi,Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,10,TRADE,Chase Brown,RB,Team HebAchi,Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,10,ADD,Sam Darnold,QB,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,10,ADD,Cameron Dicker,K,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,10,DROP,Zack Moss,RB,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,10,DROP,Gabe Davis,WR,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,10,DROP,Will Reichard,K,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,10,DROP,Anthony Richardson,QB,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,10,DROP,Jaylen Wright,RB,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,10,DROP,Austin Seibert,K,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,11,ADD,Jason Sanders,K,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,11,ADD,Dolphins D/ST,D/ST,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,11,ADD,Cam Akers,RB,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,11,ADD,Jerry Jeudy,WR,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,11,ADD,Giants D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,11,ADD,Seahawks D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,11,ADD,Tyler Bass,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,11,ADD,Jake Bates,K,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,11,ADD,Gus Edwards,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,11,ADD,Russell Wilson,QB,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,11,ADD,Brock Wright,TE,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,11,ADD,Vikings D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,11,ADD,Jared Goff,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,11,ADD,Audric Estime,RB,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,11,DROP,Zach Ertz,TE,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,11,DROP,Ty Chandler,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,11,DROP,Harrison Butker,K,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,11,DROP,Xavier Worthy,WR,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,11,DROP,Kirk Cousins,QB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,11,DROP,Jets D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,11,DROP,Evan McPherson,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,11,DROP,Roschon Johnson,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,11,DROP,Tank Bigsby,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,11,DROP,Mike Gesicki,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,11,DROP,Sam Darnold,QB,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,11,DROP,Devin Singletary,RB,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,12,ADD,Jonnu Smith,TE,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,12,ADD,Sam Darnold,QB,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,12,ADD,Ameer Abdullah,RB,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,12,ADD,Zamir White,RB,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,12,ADD,Cardinals D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,12,ADD,Austin Seibert,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,12,ADD,Zach Ertz,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,12,ADD,Quentin Johnston,WR,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,12,ADD,Christian Watson,WR,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,12,ADD,Wil Lutz,K,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,12,ADD,Tua Tagovailoa,QB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,12,ADD,Trey Benson,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,12,ADD,Roschon Johnson,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,12,DROP,Jason Sanders,K,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,12,DROP,Pat Freiermuth,TE,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,12,DROP,Ray Davis,RB,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,12,DROP,Dolphins D/ST,D/ST,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,12,DROP,Diontae Johnson,WR,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,12,DROP,Seahawks D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,12,DROP,Tyler Bass,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,12,DROP,Braelon Allen,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,12,DROP,Brock Wright,TE,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,12,DROP,Jared Goff,QB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,12,DROP,Younghoe Koo,K,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,12,DROP,Xavier Legette,WR,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,13,ADD,Anthony Richardson,QB,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,13,ADD,Buccaneers D/ST,D/ST,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,13,ADD,Braelon Allen,RB,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,13,ADD,Xavier Worthy,WR,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,13,ADD,Justice Hill,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,13,ADD,Chiefs D/ST,D/ST,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,13,ADD,Matthew Stafford,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,13,DROP,Zamir White,RB,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,13,DROP,Jonathon Brooks,RB,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,13,DROP,Geno Smith,QB,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,13,DROP,DeAndre Hopkins,WR,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,13,DROP,Quentin Johnston,WR,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,13,DROP,Tyler Lockett,WR,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,13,DROP,Bengals D/ST,D/ST,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,13,DROP,Trey Benson,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,13,DROP,Roschon Johnson,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,14,ADD,Isaac Guerendo,RB,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,14,ADD,Jason Sanders,K,(FA),The Chase is on,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,14,ADD,Keenan Allen,WR,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,14,ADD,Tyler Bass,K,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,14,ADD,Jake Elliott,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,14,ADD,Seahawks D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,14,ADD,Nick Westbrook-Ikhine,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,14,ADD,Adam Thielen,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,14,ADD,Elijah Moore,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,14,ADD,Geno Smith,QB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,14,ADD,Travis Homer,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,14,ADD,Zach Charbonnet,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,14,ADD,Will Levis,QB,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,14,ADD,Nick Folk,K,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,14,DROP,Ameer Abdullah,RB,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,14,DROP,Chris Olave,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,14,DROP,Giants D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,14,DROP,Austin Seibert,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2024,14,DROP,Taysom Hill,TE,The Chase is on,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Game of Yards!,2024,14,DROP,Dalton Schultz,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,14,DROP,Wil Lutz,K,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,14,DROP,Austin Ekeler,RB,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,14,DROP,Jordan Mason,RB,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,14,DROP,Justice Hill,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,14,DROP,Chiefs D/ST,D/ST,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,14,DROP,Tank Dell,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,14,DROP,Vikings D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,15,ADD,Sincere McCormick,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,15,ADD,Bengals D/ST,D/ST,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,15,ADD,Tank Bigsby,RB,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,15,ADD,Jared Goff,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,15,ADD,Patrick Taylor Jr.,RB,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,15,ADD,DeAndre Hopkins,WR,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,15,ADD,Dalton Schultz,TE,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,15,DROP,Dallas Goedert,TE,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,15,DROP,Wan'Dale Robinson,WR,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,15,DROP,Audric Estime,RB,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2024,15,DROP,Elijah Moore,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,15,DROP,Alexander Mattison,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,15,DROP,Travis Homer,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,15,DROP,Raheem Mostert,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
+Game of Yards!,2024,15,DROP,Keon Coleman,WR,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,15,DROP,Will Levis,QB,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,16,ADD,Pat Freiermuth,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,16,ADD,Tyjae Spears,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,16,ADD,Alexander Mattison,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,16,ADD,Kendre Miller,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,16,ADD,Packers D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,16,ADD,Jerome Ford,RB,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,16,DROP,Browns D/ST,D/ST,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,16,DROP,Sincere McCormick,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,16,DROP,Kareem Hunt,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,16,DROP,Matthew Stafford,QB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
+Game of Yards!,2024,16,DROP,Nick Folk,K,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,17,ADD,Colts D/ST,D/ST,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,17,ADD,Wil Lutz,K,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,17,ADD,Kimani Vidal,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,17,ADD,Mason Rudolph,QB,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,17,ADD,Bryce Young,QB,(FA),Cooper Troopers,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,17,ADD,Chig Okonkwo,TE,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2024,17,DROP,Alvin Kamara,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,17,DROP,Kenneth Walker III,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,17,DROP,Najee Harris,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,17,DROP,Geno Smith,QB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,17,DROP,Pat Freiermuth,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2024,17,DROP,Cam Akers,RB,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2024,17,DROP,Anthony Richardson,QB,Cooper Troopers,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2024,17,DROP,Christian Watson,WR,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity

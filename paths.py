@@ -8,10 +8,11 @@ silently wrote files to the wrong place (or crashed).
 Layout::
 
     data/
-      leagues/   one xlsx per league-year (the app's main source)
-      drafts/    draft + free agent results csv per league-year
-      odds/      betting odds xlsx per league-year
-      *.csv      cross-league aggregates (all_matchups, Master_Draft_Data, ...)
+      leagues/       one xlsx per league-year (the app's main source)
+      drafts/        draft + free agent results csv per league-year
+      odds/          betting odds xlsx per league-year
+      transactions/  weekly roster snapshots + reconstructed moves per league-year
+      *.csv          cross-league aggregates (all_matchups, Master_Draft_Data, ...)
 
 Usage::
 
@@ -26,6 +27,7 @@ DATA_DIR = os.path.join(REPO_ROOT, "data")
 LEAGUES_DIR = os.path.join(DATA_DIR, "leagues")
 DRAFTS_DIR = os.path.join(DATA_DIR, "drafts")
 ODDS_DIR = os.path.join(DATA_DIR, "odds")
+TRANSACTIONS_DIR = os.path.join(DATA_DIR, "transactions")
 
 # Cross-league aggregate files that used to sit at the repo root.
 MASTER_DRAFT_DATA = os.path.join(DATA_DIR, "Master_Draft_Data.csv")
@@ -59,6 +61,23 @@ def odds_file(league_name, year):
     return os.path.join(ODDS_DIR, f"{league_name} {year} Betting Odds.xlsx")
 
 
+def weekly_roster_file(league_name, year):
+    """data/transactions/<league> Weekly Rosters <year>.csv.gz
+
+    Gzipped because this is the one bulk dataset here: ~3k player-week rows per
+    league-season, which is 24 MB of CSV across a full backfill versus 2 MB
+    compressed (11.5x). pandas infers the codec from the extension, so nothing
+    else changes. The Moves files stay plain CSV - they are small and are the
+    ones worth reading by hand or diffing on GitHub.
+    """
+    return os.path.join(TRANSACTIONS_DIR, f"{league_name} Weekly Rosters {year}.csv.gz")
+
+
+def moves_file(league_name, year):
+    """data/transactions/<league> Moves <year>.csv"""
+    return os.path.join(TRANSACTIONS_DIR, f"{league_name} Moves {year}.csv")
+
+
 def data_file(name):
     """Any other file under data/."""
     return os.path.join(DATA_DIR, name)
@@ -66,5 +85,5 @@ def data_file(name):
 
 def ensure_dirs():
     """Create the data directories if they don't exist yet."""
-    for d in (DATA_DIR, LEAGUES_DIR, DRAFTS_DIR, ODDS_DIR):
+    for d in (DATA_DIR, LEAGUES_DIR, DRAFTS_DIR, ODDS_DIR, TRANSACTIONS_DIR):
         os.makedirs(d, exist_ok=True)

@@ -1,0 +1,369 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+OnP Fantasy,2025,2,ADD,Kayshon Boutte,WR,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,2,ADD,Hollywood Brown,WR,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,2,ADD,Dylan Sampson,RB,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,2,ADD,Colts D/ST,D/ST,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,2,ADD,Cam Little,K,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,2,TEAM->TEAM,Dalton Kincaid,TE,Kill Bills ,Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,2,ADD,49ers D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,2,ADD,Quentin Johnston,WR,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,2,ADD,Rams D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,2,ADD,Bhayshul Tuten,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,2,ADD,Harold Fannin Jr.,TE,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,2,DROP,Bills D/ST,D/ST,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,2,DROP,Younghoe Koo,K,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,2,DROP,Tank Bigsby,RB,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,2,DROP,Tua Tagovailoa,QB,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,2,DROP,Seahawks D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,2,DROP,Darnell Mooney,WR,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,2,DROP,Jaydon Blue,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,2,DROP,Braelon Allen,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,2,DROP,Commanders D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,3,TEAM->TEAM,Colts D/ST,D/ST,Red Bulls On Parade,Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,3,TEAM->TEAM,Chase McLaughlin,K, Johnny  Dramas ,The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,3,TEAM->TEAM,Vikings D/ST,D/ST,Cowtown Cowboys,The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,3,ADD,Jonnu Smith,TE,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,3,ADD,Bengals D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,3,ADD,Daniel Jones,QB,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,3,ADD,Seahawks D/ST,D/ST,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,3,ADD,Spencer Shrader,K,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,3,ADD,Jaguars D/ST,D/ST,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,3,ADD,Trey Benson,RB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,3,TRADE,David Montgomery,RB,Frisco Full Can Field Goals 🏈, Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,3,ADD,Russell Wilson,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,3,ADD,Troy Franklin,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,3,ADD,Matt Prater,K,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,3,ADD,Packers D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,3,ADD,Bills D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,3,ADD,Michael Penix Jr.,QB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,3,ADD,Juwan Johnson,TE,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,3,ADD,Commanders D/ST,D/ST,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,3,ADD,Aaron Rodgers,QB,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,3,TRADE,Isiah Pacheco,RB, Johnny  Dramas ,Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,3,TRADE,Quinshon Judkins,RB, Johnny  Dramas ,Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,3,TRADE,Dak Prescott,QB, Johnny  Dramas ,Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,3,DROP,Broncos D/ST,D/ST,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,3,DROP,Wil Lutz,K,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,3,DROP,Cam Little,K,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,3,DROP,J.J. McCarthy,QB,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,3,DROP,Colston Loveland,TE,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,3,DROP,49ers D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,3,DROP,Xavier Legette,WR,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,3,DROP,Ollie Gordon II,RB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,3,DROP,Cardinals D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,3,DROP,Austin Ekeler,RB,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,3,DROP,Jaxson Dart,QB,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,3,DROP,Cade Otton,TE,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,3,DROP,Rams D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,3,DROP,Joe Burrow,QB,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,3,DROP,Adam Thielen,WR,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,4,ADD,Dalton Schultz,TE,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,4,ADD,Chargers D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,4,ADD,Tre Tucker,WR,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,4,ADD,Wan'Dale Robinson,WR,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,4,ADD,Broncos D/ST,D/ST,(FA),The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,4,ADD,Geno Smith,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,4,TEAM->TEAM,Vikings D/ST,D/ST,The Bill Croskey Show, Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,4,ADD,Jaxson Dart,QB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,4,ADD,Woody Marks,RB,(FA),I'm Sorry Mrs. Jackson,{71372B03-57FD-4FCB-AA0B-69957655412D},0,snapshot
+OnP Fantasy,2025,4,DROP,Kayshon Boutte,WR,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,4,DROP,Jonnu Smith,TE,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,4,DROP,Bengals D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,4,DROP,Hollywood Brown,WR,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,4,DROP,Buccaneers D/ST,D/ST, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,4,DROP,Russell Wilson,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,4,DROP,Harold Fannin Jr.,TE,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,4,DROP,Michael Penix Jr.,QB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,5,ADD,Giants D/ST,D/ST,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,5,ADD,Elic Ayomanor,WR,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,5,ADD,Darius Slayton,WR,(FA),Cans in My Hands,{72229BCA-0BDD-40B0-82E9-ACB1D4104500},0,snapshot
+OnP Fantasy,2025,5,ADD,Emari Demercado,RB,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,5,ADD,Cardinals D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,5,ADD,Sam Darnold,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,5,ADD,Kenneth Gainwell,RB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,5,ADD,Darren Waller,TE,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,5,ADD,Kendre Miller,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,5,TEAM->TEAM,Steelers D/ST,D/ST,Claytons Team of Experts,Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,5,ADD,Rico Dowdle,RB,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,5,ADD,Justice Hill,RB,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,5,ADD,Tua Tagovailoa,QB,(FA),I'm Sorry Mrs. Jackson,{71372B03-57FD-4FCB-AA0B-69957655412D},0,snapshot
+OnP Fantasy,2025,5,ADD,Rams D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,5,ADD,Michael Carter,RB,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,5,ADD,Nick Folk,K,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,5,DROP,James Conner,RB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,5,DROP,Chargers D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,5,DROP,Ravens D/ST,D/ST,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,5,DROP,Jaguars D/ST,D/ST,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,5,DROP,David Njoku,TE,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,5,DROP,Kyle Pitts Sr.,TE, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,5,DROP,Trey Benson,RB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,5,DROP,Geno Smith,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,5,DROP,Bhayshul Tuten,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,5,DROP,Bills D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,5,DROP,Malik Nabers,WR,I'm Sorry Mrs. Jackson,(FA),{71372B03-57FD-4FCB-AA0B-69957655412D},0,snapshot
+OnP Fantasy,2025,5,DROP,Brock Purdy,QB,I'm Sorry Mrs. Jackson,(FA),{71372B03-57FD-4FCB-AA0B-69957655412D},0,snapshot
+OnP Fantasy,2025,5,DROP,Juwan Johnson,TE,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,5,DROP,Tyler Bass,K,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,5,DROP,Jerome Ford,RB,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,5,DROP,Packers D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,6,ADD,Kyle Pitts Sr.,TE,(FA),Cans in My Hands,{72229BCA-0BDD-40B0-82E9-ACB1D4104500},0,snapshot
+OnP Fantasy,2025,6,ADD,Patriots D/ST,D/ST,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,6,ADD,Jason Myers,K,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,6,ADD,Packers D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,6,ADD,Wil Lutz,K,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,6,ADD,Romeo Doubs,WR,(FA),I'm Sorry Mrs. Jackson,{71372B03-57FD-4FCB-AA0B-69957655412D},0,snapshot
+OnP Fantasy,2025,6,ADD,Colston Loveland,TE,(FA),I'm Sorry Mrs. Jackson,{71372B03-57FD-4FCB-AA0B-69957655412D},0,snapshot
+OnP Fantasy,2025,6,ADD,David Njoku,TE,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,6,ADD,Titans D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,6,ADD,Hassan Haskins,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,6,ADD,Jaguars D/ST,D/ST,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,6,ADD,Bills D/ST,D/ST,(FA),Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,6,DROP,Giants D/ST,D/ST,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,6,DROP,Darius Slayton,WR,Cans in My Hands,(FA),{72229BCA-0BDD-40B0-82E9-ACB1D4104500},0,snapshot
+OnP Fantasy,2025,6,DROP,Dalton Schultz,TE,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,6,DROP,Cardinals D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,6,DROP,Spencer Shrader,K,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,6,DROP,Tre Tucker,WR,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,6,DROP,Texans D/ST,D/ST,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,6,DROP,Vikings D/ST,D/ST, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,6,DROP,Jayden Reed,WR,I'm Sorry Mrs. Jackson,(FA),{71372B03-57FD-4FCB-AA0B-69957655412D},0,snapshot
+OnP Fantasy,2025,6,DROP,Rams D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,7,ADD,Ryan Fitzgerald,K,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,7,ADD,Tez Johnson,WR,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,7,ADD,Mason Taylor,TE,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,7,ADD,Panthers D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,7,ADD,Dalton Schultz,TE,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,7,ADD,Falcons D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,7,ADD,Matt Gay,K,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,7,ADD,Kimani Vidal,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,7,ADD,Harold Fannin Jr.,TE,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,7,ADD,Tyler Allgeier,RB,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,7,ADD,Chiefs D/ST,D/ST,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,7,ADD,Rams D/ST,D/ST,(FA),Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,7,DROP,Joe Mixon,RB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,7,DROP,Matt Prater,K, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,7,DROP,Dylan Sampson,RB,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,7,DROP,Dalton Kincaid,TE,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,7,DROP,Wan'Dale Robinson,WR,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,7,DROP,Aaron Rodgers,QB,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,7,DROP,Packers D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,7,DROP,Tyler Loop,K,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,7,DROP,Emari Demercado,RB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,7,DROP,Titans D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,7,DROP,Calvin Ridley,WR,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,7,DROP,Hassan Haskins,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,7,DROP,Tyrone Tracy Jr.,RB,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,7,DROP,Jaguars D/ST,D/ST,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,7,DROP,Tyreek Hill,WR,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,8,ADD,Cade Otton,TE,(FA),The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,8,ADD,Aaron Rodgers,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,8,ADD,Oronde Gadsden,TE,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,8,ADD,Jaylin Noel,WR,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,8,ADD,Joe Flacco,QB,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,8,ADD,Chargers D/ST,D/ST,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,8,ADD,Michael Badgley,K,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,8,ADD,Matt Prater,K,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,8,ADD,Wan'Dale Robinson,WR,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,8,ADD,Bengals D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,8,ADD,Kyle Monangai,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,8,ADD,Buccaneers D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,8,ADD,Dalton Kincaid,TE,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,8,ADD,Brandon Aiyuk,WR,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,8,ADD,Kayshon Boutte,WR,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,8,ADD,Tyjae Spears,RB,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,8,ADD,Texans D/ST,D/ST,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,8,ADD,Eddy Pineiro,K,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,8,ADD,Darnell Mooney,WR,(FA),Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,8,DROP,Sam Darnold,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,8,DROP,Mike Evans,WR,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,8,DROP,Kaleb Johnson,RB,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,8,DROP,Jason Myers,K,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,8,DROP,Commanders D/ST,D/ST,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,8,DROP,Justice Hill,RB,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,8,DROP,Mason Taylor,TE,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,8,DROP,Trevor Lawrence,QB,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,8,DROP,Nick Folk,K,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,8,DROP,Panthers D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,8,DROP,Matt Gay,K,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,8,DROP,Justin Fields,QB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,8,DROP,Kendre Miller,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,8,DROP,Steelers D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,8,DROP,Harold Fannin Jr.,TE,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,8,DROP,Jakobi Meyers,WR,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,9,ADD,Cairo Santos,K,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,9,TEAM->TEAM,Alvin Kamara,RB,Frisco Full Can Field Goals 🏈, Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,9,ADD,Tyrone Tracy Jr.,RB,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,9,ADD,Jaguars D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,9,ADD,49ers D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,9,TEAM->TEAM,Texans D/ST,D/ST,Red Bulls On Parade,"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,9,ADD,Andy Borregales,K,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,9,TEAM->TEAM,Kyle Monangai,RB,Kill Bills ,"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,9,ADD,Raiders D/ST,D/ST,(FA),Cans in My Hands,{72229BCA-0BDD-40B0-82E9-ACB1D4104500},0,snapshot
+OnP Fantasy,2025,9,ADD,Packers D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,9,ADD,Bam Knight,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,9,ADD,Jason Myers,K,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,9,ADD,Jakobi Meyers,WR,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,9,ADD,Harold Fannin Jr.,TE,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,9,ADD,Kareem Hunt,RB,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,9,ADD,Brashard Smith,RB,(FA),Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,9,ADD,Malik Washington,WR,(FA),Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,9,ADD,Chimere Dike,WR,(FA),Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,9,ADD,Justice Hill,RB,(FA),Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,9,ADD,Tyler Loop,K,(FA),The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,9,DROP,Cade Otton,TE,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,9,DROP,Kenneth Gainwell,RB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,9,DROP,Ryan Fitzgerald,K, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,9,DROP,Cam Skattebo,RB,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,9,DROP,Falcons D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,9,DROP,Bengals D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,9,DROP,Elic Ayomanor,WR,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,9,DROP,Tyler Allgeier,RB,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,9,DROP,Chiefs D/ST,D/ST,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,9,DROP,Evan Engram,TE,Cans in My Hands,(FA),{72229BCA-0BDD-40B0-82E9-ACB1D4104500},0,snapshot
+OnP Fantasy,2025,9,DROP,Harrison Butker,K,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,9,DROP,Buccaneers D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,9,DROP,Dalton Kincaid,TE,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,9,DROP,Brandon Aiyuk,WR,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,9,DROP,Isiah Pacheco,RB,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,9,DROP,Bills D/ST,D/ST,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,9,DROP,Darnell Mooney,WR,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,10,ADD,Ravens D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,10,ADD,Devin Singletary,RB,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,10,ADD,Kenneth Gainwell,RB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,10,ADD,Dalton Kincaid,TE,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,10,ADD,J.J. McCarthy,QB,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,10,TRADE,Bam Knight,RB,Kill Bills ,Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,10,ADD,Bills D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,10,ADD,Trey Benson,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,10,ADD,Browns D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,10,TRADE,Jake Bates,K,Claytons Team of Experts,Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,10,ADD,Alec Pierce,WR,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,10,ADD,Luke Musgrave,TE,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,10,ADD,Will Reichard,K,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,10,DROP,Keon Coleman,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,10,DROP,Hunter Henry,TE,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,10,DROP,Ka'imi Fairbairn,K,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,10,DROP,Jaylin Noel,WR,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,10,DROP,Jayden Daniels,QB,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,10,DROP,Kyler Murray,QB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,10,DROP,Jaguars D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,10,DROP,49ers D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,10,DROP,Tucker Kraft,TE,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,10,DROP,Packers D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,10,DROP,Jason Myers,K,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,11,ADD,Tre Tucker,WR,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,11,ADD,Sean Tucker,RB,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,11,TEAM->TEAM,Eddy Pineiro,K,Red Bulls On Parade,Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,11,ADD,Theo Johnson,TE,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,11,ADD,Bears D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,11,ADD,Jacoby Brissett,QB,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,11,ADD,Jason Myers,K,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,11,ADD,Packers D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,11,ADD,Brock Purdy,QB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,11,ADD,Calvin Ridley,WR,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,11,ADD,Falcons D/ST,D/ST,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,11,ADD,Hunter Henry,TE,(FA),Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,11,ADD,Emari Demercado,RB,(FA),Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,11,DROP,Jake Elliott,K,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,11,DROP,Nick Chubb,RB,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,11,DROP,Michael Carter,RB,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,11,DROP,Bills D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,11,DROP,Kayshon Boutte,WR,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,11,DROP,Harold Fannin Jr.,TE,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,11,DROP,Browns D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,11,DROP,Jakobi Meyers,WR,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,11,DROP,Wil Lutz,K,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,11,DROP,Sam LaPorta,TE,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,11,DROP,Brashard Smith,RB,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,12,ADD,Emanuel Wilson,RB,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,12,ADD,Cardinals D/ST,D/ST,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,12,ADD,Kayshon Boutte,WR,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,12,ADD,Joe Burrow,QB,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,12,ADD,Browns D/ST,D/ST,(FA),The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,12,TEAM->TEAM,Jordan Mason,RB,Frisco Full Can Field Goals 🏈,The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,12,ADD,Cade Otton,TE,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,12,ADD,Ka'imi Fairbairn,K,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,12,ADD,Michael Wilson,WR,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,12,ADD,Christian Watson,WR,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,12,TEAM->TEAM,Tyjae Spears,RB,Red Bulls On Parade,Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,12,TEAM->TEAM,Jake Bates,K,Kill Bills ,Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,12,ADD,Jaguars D/ST,D/ST,(FA),Frisco Full Can Field Goals 🏈,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,12,ADD,Bills D/ST,D/ST,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,12,DROP,Chuba Hubbard,RB,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,12,DROP,Eddy Pineiro,K,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,12,DROP,Tyler Loop,K,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,12,DROP,Calvin Ridley,WR,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,12,DROP,Luke Musgrave,TE,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,12,DROP,Rams D/ST,D/ST,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,12,DROP,Emari Demercado,RB,Frisco Full Can Field Goals 🏈,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+OnP Fantasy,2025,12,DROP,Travis Hunter,WR,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,13,ADD,Isiah Pacheco,RB,(FA),The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,13,TEAM->TEAM,Zach Charbonnet,RB,Kill Bills ,The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,13,TEAM->TEAM,Brock Purdy,QB,Kill Bills ,Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,13,ADD,Dolphins D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,13,ADD,Rams D/ST,D/ST,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,13,ADD,49ers D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,13,ADD,Devin Neal,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,13,ADD,Sam Darnold,QB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,13,DROP,J.J. McCarthy,QB,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,13,DROP,Bam Knight,RB,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,13,DROP,Bears D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,13,DROP,Jacory Croskey-Merritt,RB,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,13,DROP,Jordan Mason,RB,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,13,DROP,Alec Pierce,WR,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,13,DROP,Packers D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,13,DROP,Bills D/ST,D/ST,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,14,TEAM->TEAM,Browns D/ST,D/ST,The Bill Croskey Show, Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,14,ADD,Jayden Daniels,QB,(FA),The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,14,ADD,Brandon McManus,K,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,14,ADD,Trevor Lawrence,QB,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,14,ADD,Luther Burden III,WR,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,14,ADD,Buccaneers D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,14,ADD,Wil Lutz,K,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,14,ADD,Alec Pierce,WR,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,14,ADD,Commanders D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,14,ADD,Harrison Mevis,K,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,14,TEAM->TEAM,Ravens D/ST,D/ST,Dennis The Menace ,Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,14,ADD,Mike Evans,WR,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,14,ADD,Chuba Hubbard,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,14,DROP,Daniel Jones,QB,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,14,DROP,Darren Waller,TE, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,14,DROP,Patriots D/ST,D/ST, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+OnP Fantasy,2025,14,DROP,Joe Flacco,QB,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,14,DROP,Cardinals D/ST,D/ST,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+OnP Fantasy,2025,14,DROP,Cooper Kupp,WR,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,14,DROP,Chris Boswell,K,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,14,DROP,Dolphins D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,14,DROP,Sean Tucker,RB,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+OnP Fantasy,2025,14,DROP,Trey Benson,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,14,DROP,49ers D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,14,DROP,Devin Neal,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+OnP Fantasy,2025,15,ADD,Harold Fannin Jr.,TE,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,15,ADD,Cowboys D/ST,D/ST,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,15,ADD,Bears D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,15,ADD,Devin Neal,RB,(FA),The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,15,ADD,Steelers D/ST,D/ST,(FA),The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,15,ADD,49ers D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,15,ADD,Juwan Johnson,TE,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,15,ADD,Jakobi Meyers,WR,(FA),Red Bulls On Parade,{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,15,DROP,J.K. Dobbins,RB,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,15,DROP,Isiah Pacheco,RB,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,15,DROP,Falcons D/ST,D/ST,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,15,DROP,Cade Otton,TE,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,15,DROP,Luther Burden III,WR,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,15,DROP,Buccaneers D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,15,DROP,Commanders D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+OnP Fantasy,2025,15,DROP,Zach Ertz,TE,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,15,DROP,Tez Johnson,WR,Red Bulls On Parade,(FA),{D6421CA2-74FC-4D39-821C-A274FC9D39FE},0,snapshot
+OnP Fantasy,2025,16,ADD,Saints D/ST,D/ST,(FA),Cowtown Cowboys,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,16,ADD,Bills D/ST,D/ST,(FA),The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,16,ADD,Michael Carter,RB,(FA),The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,16,ADD,Patriots D/ST,D/ST,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,16,ADD,Chris Boswell,K,(FA),U Lost to a Red Bull Rookie,{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,16,DROP,Cowboys D/ST,D/ST,Cowtown Cowboys,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+OnP Fantasy,2025,16,DROP,Devin Neal,RB,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,16,DROP,Steelers D/ST,D/ST,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,16,DROP,Wil Lutz,K,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,16,DROP,49ers D/ST,D/ST,U Lost to a Red Bull Rookie,(FA),{DC54E68B-78AB-440A-9F0D-63BD7172C682},0,snapshot
+OnP Fantasy,2025,17,ADD,Eddy Pineiro,K,(FA),The Bill Croskey Show,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+OnP Fantasy,2025,17,DROP,Chase McLaughlin,K,The Bill Croskey Show,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot

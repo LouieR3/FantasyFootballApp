@@ -1,0 +1,391 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+RRR On Premise ,2022,2,ADD,Browns D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,2,TEAM->TEAM,Brandon Aiyuk,WR, Johnny  Dramas ,Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,2,ADD,Curtis Samuel,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,2,ADD,Rex Burkhead,RB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,2,ADD,Sterling Shepard,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,2,ADD,Cade York,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,2,ADD,Devin Duvernay,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,2,ADD,Zay Jones,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,2,ADD,Broncos D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,2,ADD,Jeff Wilson Jr.,RB,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,2,DROP,Khalil Herbert,RB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,2,DROP,Titans D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,2,DROP,Commanders D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,2,DROP,Van Jefferson,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,2,DROP,Mike Davis,RB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,2,DROP,Harrison Butker,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,2,DROP,Alec Pierce,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,2,DROP,Isaiah McKenzie,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,2,DROP,Jalen Tolbert,WR,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,3,ADD,Carson Wentz,QB,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,3,ADD,Cowboys D/ST,D/ST,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,3,ADD,Gerald Everett,TE,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,3,ADD,Falcons D/ST,D/ST,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,3,ADD,Jared Goff,QB,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,3,ADD,Austin Seibert,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,3,ADD,Breshad Perriman,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,3,ADD,Richie James,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,3,ADD,Nelson Agholor,WR,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,3,DROP,Dak Prescott,QB,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,3,DROP,Ravens D/ST,D/ST,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,3,DROP,Albert Okwuegbunam,TE,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,3,DROP,Romeo Doubs,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,3,DROP,Cade York,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,3,DROP,Zay Jones,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,3,DROP,Colts D/ST,D/ST,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,3,DROP,David Njoku,TE,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,3,DROP,Mike Gesicki,TE,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,4,TEAM->TEAM,Rashaad Penny,RB,Hurts So Good,Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,4,ADD,Eddy Pineiro,K,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,4,ADD,Colts D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,4,ADD,Marcus Mariota,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,4,ADD,Cole Beasley,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,4,ADD,Ryan Succop,K,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,4,ADD,Jacoby Brissett,QB,(FA),Oklahoma Go Sports!,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2022,4,ADD,Zach Wilson,QB,(FA),Oklahoma Go Sports!,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2022,4,ADD,David Njoku,TE,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,4,ADD,Khalil Herbert,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,4,ADD,Romeo Doubs,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,4,ADD,Younghoe Koo,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,4,ADD,Tyler Conklin,TE,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,4,ADD,Zay Jones,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,4,DROP,Mecole Hardman,WR,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,4,DROP,A.J. Green,WR,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,4,DROP,Browns D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,4,DROP,George Pickens,WR,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,4,DROP,Kirk Cousins,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,4,DROP,Sterling Shepard,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,4,DROP,Kenneth Gainwell,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,4,DROP,Austin Seibert,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,4,DROP,Breshad Perriman,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,4,DROP,Richie James,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,4,DROP,Greg Joseph,K,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,4,DROP,Trey Lance,QB,Oklahoma Go Sports!,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2022,5,TEAM->TEAM,Younghoe Koo,K,Hurts So Good,Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,5,ADD,Rachaad White,RB,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,5,ADD,Jaguars D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,5,ADD,Titans D/ST,D/ST,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,5,ADD,Greg Joseph,K,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,5,ADD,Mack Hollins,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,5,TEAM->TEAM,Tyler Conklin,TE,Hurts So Good,Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,5,ADD,Tyler Allgeier,RB,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,5,ADD,Vikings D/ST,D/ST,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,5,ADD,Mike Boone,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,5,ADD,Corey Davis,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,5,ADD,Riley Patterson,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,5,ADD,Damien Williams,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,5,ADD,Latavius Murray,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,5,ADD,Brian Robinson Jr.,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,5,DROP,Matt Prater,K,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,5,DROP,Eddy Pineiro,K,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,5,DROP,Colts D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,5,DROP,Steelers D/ST,D/ST,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,5,DROP,Jake Elliott,K,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,5,DROP,Cole Beasley,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,5,DROP,Mark Ingram II,RB,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,5,DROP,Falcons D/ST,D/ST,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,5,DROP,Javonte Williams,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,5,DROP,Devin Duvernay,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,5,DROP,Zay Jones,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,6,ADD,Geno Smith,QB,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,6,ADD,George Pickens,WR,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,6,ADD,Kirk Cousins,QB,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,6,ADD,Commanders D/ST,D/ST,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,6,ADD,Harrison Butker,K,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,6,ADD,Josh Reynolds,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,6,ADD,Will Dissly,TE,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,6,TEAM->TEAM,Corey Davis,WR,Hurts So Good, Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,6,ADD,Eno Benjamin,RB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,6,ADD,Panthers D/ST,D/ST,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,6,ADD,Jerick McKinnon,RB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,6,ADD,Evan Engram,TE,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,6,ADD,Browns D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,6,ADD,Phillip Lindsay,RB,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,6,ADD,Isaiah McKenzie,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,6,ADD,Alec Pierce,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,6,ADD,Jason Myers,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,6,ADD,Ravens D/ST,D/ST,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,6,ADD,Deon Jackson,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,6,ADD,Taysom Hill,TE,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,6,ADD,Robert Tonyan,TE,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,6,ADD,Dak Prescott,QB,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,6,ADD,Devin Duvernay,WR,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,6,DROP,Matthew Stafford,QB,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,6,DROP,Jarvis Landry,WR,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,6,DROP,Carson Wentz,QB,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,6,DROP,Rashaad Penny,RB,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,6,DROP,Brandon Aiyuk,WR,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,6,DROP,James Cook,RB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,6,DROP,Justin Fields,QB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,6,DROP,Rashod Bateman,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,6,DROP,Hunter Henry,TE, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,6,DROP,Baker Mayfield,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,6,DROP,Bengals D/ST,D/ST,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,6,DROP,Nelson Agholor,WR,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,6,DROP,Pat Freiermuth,TE,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,6,DROP,Nyheim Hines,RB,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,6,DROP,Broncos D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,6,DROP,Robert Woods,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,6,DROP,Khalil Herbert,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,6,DROP,Riley Patterson,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,6,DROP,Latavius Murray,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,7,ADD,Jets D/ST,D/ST,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,7,ADD,Chris Boswell,K,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,7,ADD,Raiders D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,7,ADD,Jason Sanders,K,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,7,ADD,Matt Ryan,QB,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,7,ADD,Colts D/ST,D/ST,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,7,ADD,Brett Maher,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,7,ADD,Kenyan Drake,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,7,ADD,Isiah Pacheco,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,7,ADD,Chuba Hubbard,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,7,ADD,Broncos D/ST,D/ST,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,7,ADD,Bengals D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,7,ADD,Taylor Bertolet,K,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,7,ADD,Pat Freiermuth,TE,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,7,TEAM->TEAM,Jaguars D/ST,D/ST,Dennis The Menace ,Oklahoma Go Sports!,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2022,7,ADD,Patriots D/ST,D/ST,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,7,ADD,Brandon Aiyuk,WR,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,7,DROP,Jahan Dotson,WR,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,7,DROP,Younghoe Koo,K,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,7,DROP,Commanders D/ST,D/ST,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,7,DROP,Rex Burkhead,RB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,7,DROP,Greg Joseph,K,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,7,DROP,Matt Gay,K,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,7,DROP,Browns D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,7,DROP,Russell Wilson,QB,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,7,DROP,Julio Jones,WR,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,7,DROP,Mike Boone,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,7,DROP,Isaiah McKenzie,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,7,DROP,Jason Myers,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,7,DROP,Deon Jackson,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,7,DROP,Vikings D/ST,D/ST,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,7,DROP,Kenny Golladay,WR,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,7,DROP,Tyler Conklin,TE,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,7,DROP,Zach Wilson,QB,Oklahoma Go Sports!,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2022,8,ADD,Rashod Bateman,WR,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,8,ADD,Jake Elliott,K,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,8,ADD,Greg Dulcich,TE,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,8,TEAM->TEAM,Kirk Cousins,QB,Funky Town Waffle Stomps,Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,8,TEAM->TEAM,49ers D/ST,D/ST, Johnny  Dramas ,Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,8,ADD,Wan'Dale Robinson,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,8,ADD,Julio Jones,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,8,ADD,Greg Zuerlein,K,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,8,TEAM->TEAM,Jared Goff,QB,Mr. Rodgers'  Neighborhood ,Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,8,ADD,D'Onta Foreman,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,ADD,Gus Edwards,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,ADD,Van Jefferson,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,ADD,Jahan Dotson,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,ADD,Mecole Hardman,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,ADD,Isaiah McKenzie,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,ADD,Daniel Jones,QB,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,8,ADD,Mike Gesicki,TE,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,8,ADD,Jason Myers,K,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,8,ADD,Cardinals D/ST,D/ST,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,8,ADD,Andy Dalton,QB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,8,ADD,Latavius Murray,RB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,8,ADD,Greg Joseph,K,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,8,DROP,Nick Folk,K, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,8,DROP,Corey Davis,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,8,DROP,DJ Chark,WR,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,8,DROP,Panthers D/ST,D/ST,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,8,DROP,Chris Boswell,K,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,8,DROP,Rams D/ST,D/ST,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,8,DROP,Brandon McManus,K,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,8,DROP,Matt Ryan,QB,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,8,DROP,Colts D/ST,D/ST,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,8,DROP,Derek Carr,QB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,DROP,Romeo Doubs,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,DROP,Alec Pierce,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,DROP,Ravens D/ST,D/ST,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,DROP,Kenyan Drake,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,DROP,Isiah Pacheco,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,8,DROP,Taylor Bertolet,K,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,8,DROP,Breece Hall,RB,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,8,DROP,Patriots D/ST,D/ST,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,9,ADD,Seahawks D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,9,ADD,Romeo Doubs,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,9,ADD,Nick Folk,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,9,ADD,Michael Badgley,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,9,ADD,Parris Campbell,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,9,ADD,Odell Beckham Jr.,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,9,ADD,Ravens D/ST,D/ST,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,9,ADD,Kenyan Drake,RB,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,9,ADD,Justin Fields,QB,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,9,ADD,Deon Jackson,RB,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,9,ADD,Chiefs D/ST,D/ST,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,9,ADD,Tyler Conklin,TE,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,9,ADD,Caleb Huntley,RB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,9,ADD,Colts D/ST,D/ST,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,9,ADD,Khalil Herbert,RB,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,9,ADD,Patriots D/ST,D/ST,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,9,ADD,Younghoe Koo,K,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,9,ADD,Kalif Raymond,WR,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,9,ADD,Zay Jones,WR,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,9,DROP,Dalton Schultz,TE,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,9,DROP,Marquez Valdes-Scantling,WR,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,9,DROP,Darrell Henderson Jr.,RB,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,9,DROP,Jake Elliott,K,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,9,DROP,Greg Dulcich,TE,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,9,DROP,Raiders D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,9,DROP,Hunter Renfrow,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,9,DROP,Brett Maher,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,9,DROP,Van Jefferson,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,9,DROP,Jahan Dotson,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,9,DROP,Isaiah McKenzie,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,9,DROP,J.D. McKissic,RB,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,9,DROP,Broncos D/ST,D/ST,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,9,DROP,Daniel Jones,QB,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,9,DROP,Rachaad White,RB,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,9,DROP,Jason Myers,K,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,9,DROP,Irv Smith Jr.,TE,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,9,DROP,Jerick McKinnon,RB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,9,DROP,Andy Dalton,QB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,10,ADD,Rams D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,10,ADD,Cairo Santos,K,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,10,ADD,Broncos D/ST,D/ST,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,10,ADD,Dalton Schultz,TE,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,10,ADD,Daniel Jones,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,10,ADD,Darrell Henderson Jr.,RB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,10,ADD,Giants D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,10,TEAM->TEAM,Odell Beckham Jr.,WR,Hurts So Good,Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,10,TEAM->TEAM,Aaron Rodgers,QB,Mr. Rodgers'  Neighborhood ,Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,10,ADD,Terrace Marshall Jr.,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,10,ADD,Brett Maher,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,10,TEAM->TEAM,Kalif Raymond,WR,Victorious  Secret,Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,10,ADD,Foster Moreau,TE,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,10,ADD,Jason Myers,K,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,10,ADD,Raiders D/ST,D/ST,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,10,ADD,Greg Dulcich,TE,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,10,DROP,Marcus Mariota,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,10,DROP,Josh Reynolds,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,10,DROP,Will Dissly,TE, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,10,DROP,Julio Jones,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,10,DROP,Phillip Lindsay,RB,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,10,DROP,Seahawks D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,10,DROP,Bengals D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,10,DROP,Romeo Doubs,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,10,DROP,Michael Badgley,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,10,DROP,Parris Campbell,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,10,DROP,Evan McPherson,K,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,10,DROP,Taysom Hill,TE,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,11,ADD,Christian Watson,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,11,ADD,Marcus Mariota,QB,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,11,ADD,Commanders D/ST,D/ST,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,11,ADD,Jaylen Warren,RB,(FA),Funky Town Waffle Stomps,{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,11,ADD,Parris Campbell,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,11,ADD,Darius Slayton,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,11,ADD,Jerick McKinnon,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,11,ADD,Trey McBride,TE,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,11,ADD,Marquez Valdes-Scantling,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,11,ADD,Donovan Peoples-Jones,WR,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,11,ADD,Juwan Johnson,TE,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,11,ADD,Evan McPherson,K,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,11,ADD,Isiah Pacheco,RB,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,11,TEAM->TEAM,Joshua Palmer,WR,Mr. Rodgers'  Neighborhood ,Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,11,ADD,Bengals D/ST,D/ST,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,11,TEAM->TEAM,Brett Maher,K,Hurts So Good,Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,11,DROP,Greg Zuerlein,K, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,11,DROP,Chase Edmonds,RB,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,11,DROP,Mike Gesicki,TE,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,11,DROP,Chiefs D/ST,D/ST,Funky Town Waffle Stomps,(FA),{2D55E6BC-7D33-4BD7-9406-CB412DDA6B48},0,snapshot
+RRR On Premise ,2022,11,DROP,Zach Ertz,TE,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,11,DROP,Damien Williams,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,11,DROP,Terrace Marshall Jr.,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,11,DROP,Kalif Raymond,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,11,DROP,Jason Myers,K,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,11,DROP,Khalil Herbert,RB,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,11,DROP,Zay Jones,WR,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,11,DROP,Treylon Burks,WR,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,11,DROP,Ryan Succop,K,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,11,DROP,Cardinals D/ST,D/ST,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,12,ADD,Samaje Perine,RB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,12,ADD,Rachaad White,RB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,12,ADD,Demarcus Robinson,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,12,ADD,Joey Slye,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,12,ADD,Kyren Williams,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,12,ADD,Deshaun Watson,QB,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,12,ADD,Derek Carr,QB,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,12,ADD,Chiefs D/ST,D/ST,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,12,ADD,Treylon Burks,WR,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,12,DROP,Wan'Dale Robinson,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,12,DROP,Darrell Henderson Jr.,RB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,12,DROP,Chuba Hubbard,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,12,DROP,Nick Folk,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,12,DROP,Marquez Valdes-Scantling,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,12,DROP,Eno Benjamin,RB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,12,DROP,Caleb Huntley,RB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,12,DROP,Tyler Allgeier,RB,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,12,DROP,Raiders D/ST,D/ST,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,12,DROP,Buccaneers D/ST,D/ST,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,12,DROP,Michael Thomas,WR,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,13,ADD,Vikings D/ST,D/ST,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,13,ADD,Seahawks D/ST,D/ST,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,13,ADD,Jason Myers,K,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,13,ADD,Zonovan Knight,RB,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,13,ADD,Jimmy Garoppolo,QB,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,13,ADD,Zay Jones,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,13,ADD,DJ Chark,WR,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,13,ADD,Cameron Dicker,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,13,ADD,Van Jefferson,WR,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,13,ADD,Browns D/ST,D/ST,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,13,DROP,Broncos D/ST,D/ST, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,13,DROP,Trey McBride,TE,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,13,DROP,Demarcus Robinson,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,13,DROP,Joey Slye,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,13,DROP,Melvin Gordon III,RB,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,13,DROP,Kirk Cousins,QB,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,13,DROP,Patriots D/ST,D/ST,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,13,DROP,Younghoe Koo,K,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,13,DROP,Derek Carr,QB,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,13,DROP,Bengals D/ST,D/ST,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,14,ADD,Marquez Valdes-Scantling,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,14,ADD,Greg Zuerlein,K,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,14,ADD,Kirk Cousins,QB,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,14,ADD,Patriots D/ST,D/ST,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,14,ADD,Raiders D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,14,ADD,Michael Badgley,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,14,ADD,Steelers D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,14,ADD,James Cook,RB,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,14,ADD,Derek Carr,QB,(FA),Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,14,ADD,Cardinals D/ST,D/ST,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,14,DROP,Colts D/ST,D/ST,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2022,14,DROP,Cairo Santos,K, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,14,DROP,Seahawks D/ST,D/ST,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,14,DROP,Jimmy Garoppolo,QB,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,14,DROP,Giants D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2022,14,DROP,Cameron Dicker,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,14,DROP,Rams D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2022,14,DROP,Kenyan Drake,RB,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,14,DROP,Juwan Johnson,TE,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,15,TEAM->TEAM,Patriots D/ST,D/ST,Victorious  Secret,Mr. Rodgers'  Neighborhood ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,15,ADD,Younghoe Koo,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,15,ADD,Tyler Allgeier,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,15,ADD,Taysom Hill,TE,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,15,ADD,Chuba Hubbard,RB,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,15,ADD,Broncos D/ST,D/ST,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,15,ADD,Nick Folk,K,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,15,ADD,Tyler Huntley,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,15,DROP,Kyler Murray,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2022,15,DROP,Jason Myers,K,Victorious  Secret,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,15,DROP,Foster Moreau,TE,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,15,DROP,Kyren Williams,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,15,DROP,Michael Badgley,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,15,DROP,Derek Carr,QB,Mr. Rodgers'  Neighborhood ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2022,15,DROP,Browns D/ST,D/ST,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,16,ADD,Brock Purdy,QB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,16,ADD,Juwan Johnson,TE,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,16,ADD,Zach Wilson,QB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,16,ADD,Cameron Dicker,K,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,16,ADD,Joshua Kelley,RB,(FA),Hurts So Good,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,16,ADD,Dare Ogunbowale,RB,(FA),Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,16,TEAM->TEAM,Broncos D/ST,D/ST,Victorious  Secret,Ready For Hockey Season ,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2022,16,ADD,Zack Moss,RB,(FA),Victorious  Secret,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2022,16,DROP,Cooper Kupp,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,16,DROP,Gus Edwards,RB,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,16,DROP,Parris Campbell,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,16,DROP,DJ Chark,WR,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,16,DROP,Younghoe Koo,K,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,16,DROP,Taysom Hill,TE,Hurts So Good,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2022,16,DROP,Devin Duvernay,WR,Ready For Hockey Season ,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot

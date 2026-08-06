@@ -1,0 +1,342 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+0755 Fantasy Football,2022,2,ADD,Curtis Samuel,WR,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Ryan Succop,K,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Rams D/ST,D/ST,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Derek Carr,QB,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Taysom Hill,TE,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Broncos D/ST,D/ST,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Tyler Higbee,TE,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Graham Gano,K,(FA),PHL Mike,{C9BB5EBF-5B95-444A-A2BC-43CEA8B6DC9E},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Darrell Henderson Jr.,RB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Julio Jones,WR,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Khalil Herbert,RB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Gerald Everett,TE,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Browns D/ST,D/ST,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Robbie Anderson,WR,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Rex Burkhead,RB,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,2,ADD,Jeff Wilson Jr.,RB,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Titans D/ST,D/ST,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Justin Fields,QB,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Harrison Butker,K,PHL Mike,(FA),{C9BB5EBF-5B95-444A-A2BC-43CEA8B6DC9E},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Kirk Cousins,QB,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Nick Folk,K,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Austin Hooper,TE,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Matthew Stafford,QB,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Saints D/ST,D/ST,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Alexander Mattison,RB,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,2,DROP,David Njoku,TE,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Robert Tonyan,TE,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,2,DROP,James Cook,RB,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Mike Gesicki,TE,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Kenneth Walker III,RB,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,2,DROP,Kadarius Toney,WR,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,3,ADD,Tua Tagovailoa,QB,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,3,ADD,Saints D/ST,D/ST,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,3,TRADE,Brandon Aiyuk,WR,Office Director,Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,3,ADD,Carson Wentz,QB,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,3,ADD,Logan Thomas,TE,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,3,TRADE,Allen Lazard,WR,Prahlad's  Life Coach,Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,3,ADD,Jared Goff,QB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,3,ADD,Matthew Stafford,QB,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,3,ADD,Nelson Agholor,WR,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,3,ADD,Ka'imi Fairbairn,K,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,3,ADD,Chiefs D/ST,D/ST,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,3,DROP,Dolphins D/ST,D/ST,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,3,DROP,Trey Lance,QB,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,3,DROP,Rams D/ST,D/ST,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,3,DROP,Marquez Valdes-Scantling,WR,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,3,DROP,Ryan Tannehill,QB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,3,DROP,Browns D/ST,D/ST,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,3,DROP,Matt Gay,K,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,3,DROP,DJ Chark,WR,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,4,ADD,Eddy Pineiro,K,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,4,ADD,Alexander Mattison,RB,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,4,ADD,Tyler Conklin,TE,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,4,ADD,Harrison Butker,K,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,4,ADD,Younghoe Koo,K,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,4,ADD,Vikings D/ST,D/ST,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,4,ADD,Trevor Lawrence,QB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,4,ADD,Rams D/ST,D/ST,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,4,DROP,Carson Wentz,QB,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,4,DROP,Logan Thomas,TE,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,4,DROP,Darnell Mooney,WR,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,4,DROP,Ka'imi Fairbairn,K,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,4,DROP,Julio Jones,WR,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,4,DROP,Chiefs D/ST,D/ST,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,4,DROP,Tyler Bass,K,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,4,DROP,Albert Okwuegbunam,TE,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,5,ADD,Mike Boone,RB,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,5,ADD,Patriots D/ST,D/ST,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,5,ADD,Greg Joseph,K,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,5,ADD,Brett Maher,K,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,5,ADD,Corey Davis,WR,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,5,ADD,David Njoku,TE,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,5,ADD,Jaguars D/ST,D/ST,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,5,ADD,Riley Patterson,K,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,5,DROP,Colts D/ST,D/ST,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,5,DROP,Matthew Stafford,QB,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,5,DROP,Eddy Pineiro,K,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,5,DROP,Alexander Mattison,RB,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,5,DROP,Marvin Jones Jr.,WR,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,5,DROP,Matt Prater,K,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,6,ADD,Geno Smith,QB,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,6,ADD,George Pickens,WR,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,6,ADD,Tyler Bass,K,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,6,ADD,Josh Reynolds,WR,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,6,ADD,Kenneth Walker III,RB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,6,ADD,Rondale Moore,WR,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,6,ADD,Jason Myers,K,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,6,TEAM->TEAM,Chase Edmonds,RB,Prahlad's  Life Coach,Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,6,ADD,Isaiah McKenzie,WR,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,6,ADD,Eno Benjamin,RB,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,6,ADD,Panthers D/ST,D/ST,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,6,TEAM->TEAM,Darrell Henderson Jr.,RB,Brady Gaga,Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,6,ADD,Kirk Cousins,QB,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,6,DROP,Brandon Aiyuk,WR,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,6,DROP,Greg Joseph,K,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,6,DROP,Rashaad Penny,RB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,6,DROP,Nelson Agholor,WR,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,6,DROP,Jahan Dotson,WR,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,6,DROP,Tyler Conklin,TE,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,6,DROP,Elijah Moore,WR,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,6,DROP,Nyheim Hines,RB,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,6,DROP,Broncos D/ST,D/ST,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,7,ADD,Jets D/ST,D/ST,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,7,ADD,Isiah Pacheco,RB,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,7,ADD,Alec Pierce,WR,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,7,ADD,Nick Folk,K,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,7,ADD,Broncos D/ST,D/ST,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,7,ADD,Dolphins D/ST,D/ST,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,7,ADD,Brandon Aiyuk,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,7,ADD,Robert Tonyan,TE,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,7,ADD,Kenyan Drake,RB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,7,TEAM->TEAM,Noah Fant,TE,MOTHER MAY I,Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,7,ADD,D'Onta Foreman,RB,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,7,DROP,Jake Elliott,K,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,7,DROP,George Pickens,WR,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,7,DROP,Tyler Bass,K,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,7,DROP,Steelers D/ST,D/ST,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,7,DROP,Younghoe Koo,K,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,7,DROP,Vikings D/ST,D/ST,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,7,DROP,Rams D/ST,D/ST,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,7,DROP,Dawson Knox,TE,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,7,DROP,Jason Myers,K,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,7,DROP,Chase Edmonds,RB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,7,DROP,Antonio Gibson,RB,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,7,DROP,Hunter Henry,TE,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Justin Fields,QB,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Tyler Boyd,WR,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Gus Edwards,RB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Colts D/ST,D/ST,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Latavius Murray,RB,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Daniel Jones,QB,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Jason Myers,K,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Kyren Williams,RB,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Kadarius Toney,WR,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Antonio Gibson,RB,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Greg Dulcich,TE,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Andy Dalton,QB,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Mike Gesicki,TE,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,8,ADD,Falcons D/ST,D/ST,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Cam Akers,RB,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Breece Hall,RB,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Jeff Wilson Jr.,RB,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Jets D/ST,D/ST,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Russell Wilson,QB,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Alec Pierce,WR,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Kyle Pitts,TE,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,8,DROP,J.K. Dobbins,RB,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Rex Burkhead,RB,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Gerald Everett,TE,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Dolphins D/ST,D/ST,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Panthers D/ST,D/ST,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Chargers D/ST,D/ST,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,8,DROP,Jaguars D/ST,D/ST,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Gerald Everett,TE,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Deon Jackson,RB,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Evan Engram,TE,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,9,TEAM->TEAM,Jason Myers,K,Hot Sauce 'n' Bananas,Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Vikings D/ST,D/ST,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Joshua Palmer,WR,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Dolphins D/ST,D/ST,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Hayden Hurst,TE,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Kyle Pitts,TE,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Chiefs D/ST,D/ST,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Younghoe Koo,K,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Devin Duvernay,WR,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Chuba Hubbard,RB,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Romeo Doubs,WR,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,9,ADD,Caleb Huntley,RB,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Michael Thomas,WR,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Saints D/ST,D/ST,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Brandon McManus,K,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Gus Edwards,RB,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Daniel Jones,QB,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Javonte Williams,RB,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Noah Fant,TE,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Robbie Anderson,WR,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Broncos D/ST,D/ST,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Mike Gesicki,TE,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Falcons D/ST,D/ST,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Zach Wilson,QB,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Rashod Bateman,WR,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Isaiah McKenzie,WR,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,9,DROP,Michael Gallup,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,10,ADD,Jeff Wilson Jr.,RB,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,10,ADD,Titans D/ST,D/ST,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,10,ADD,Tyler Bass,K,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,10,ADD,Saints D/ST,D/ST,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,10,ADD,Cairo Santos,K,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,10,TEAM->TEAM,David Njoku,TE,Hot Sauce 'n' Bananas,The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,10,ADD,Dawson Knox,TE,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,10,TEAM->TEAM,Patriots D/ST,D/ST,Prahlad's  Life Coach,Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,10,ADD,Darnell Mooney,WR,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,10,ADD,Robbie Gould,K,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,10,TEAM->TEAM,Raheem Mostert,RB,Prahlad's  Life Coach,MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,10,ADD,Jimmy Garoppolo,QB,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,10,DROP,Deon Jackson,RB,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,10,DROP,Evan Engram,TE,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,10,DROP,Chiefs D/ST,D/ST,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,10,DROP,Andy Dalton,QB,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,10,DROP,Taysom Hill,TE,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,10,DROP,Romeo Doubs,WR,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,10,DROP,Caleb Huntley,RB,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Greg Joseph,K,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,11,TEAM->TEAM,Kadarius Toney,WR,Team Just here 4 fun,Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Jets D/ST,D/ST,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Parris Campbell,WR,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,11,TEAM->TEAM,Younghoe Koo,K,MPT Phase1A,Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Tyler Conklin,TE,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Jerick McKinnon,RB,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,11,TEAM->TEAM,Kyle Pitts,TE,Office Director,The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Cardinals D/ST,D/ST,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,11,ADD,George Pickens,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Gus Edwards,RB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Rachaad White,RB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Daniel Jones,QB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,11,TRADE,Josh Jacobs,RB,MOTHER MAY I,Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,11,TEAM->TEAM,Tyler Bass,K,Prahlad's  Life Coach,Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,11,TRADE,Christian Kirk,WR,Brady Gaga,MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,11,TRADE,Miles Sanders,RB,Brady Gaga,MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Jaylen Warren,RB,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Michael Gallup,WR,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,11,TEAM->TEAM,David Njoku,TE,The Big Hurts,MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Donovan Peoples-Jones,WR,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Marcus Mariota,QB,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,11,ADD,Juwan Johnson,TE,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Titans D/ST,D/ST,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Vikings D/ST,D/ST,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Bengals D/ST,D/ST,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Trevor Lawrence,QB,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Colts D/ST,D/ST,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Jared Goff,QB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Robert Tonyan,TE,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Chase Claypool,WR,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Mike Boone,RB,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Robbie Gould,K,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Zach Ertz,TE,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Greg Dulcich,TE,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,11,DROP,Jimmy Garoppolo,QB,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,12,ADD,Christian Watson,WR,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,12,ADD,Samaje Perine,RB,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,12,ADD,Austin Hooper,TE,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,12,ADD,Jimmy Garoppolo,QB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,12,ADD,Chiefs D/ST,D/ST,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,12,ADD,Cam Akers,RB,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,12,ADD,Marlon Mack,RB,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,12,ADD,Robert Tonyan,TE,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,12,ADD,Darius Slayton,WR,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,12,ADD,Deshaun Watson,QB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Saints D/ST,D/ST,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Greg Joseph,K,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Kadarius Toney,WR,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Tyler Boyd,WR,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Jerry Jeudy,WR,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Tyler Allgeier,RB,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Kyle Pitts,TE,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Cardinals D/ST,D/ST,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Gus Edwards,RB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Daniel Jones,QB,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Jaylen Warren,RB,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,12,DROP,Josh Reynolds,WR,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,13,ADD,Mike White,QB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,13,ADD,Jaylen Warren,RB,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,13,ADD,Commanders D/ST,D/ST,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,13,ADD,Gus Edwards,RB,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,13,ADD,Steelers D/ST,D/ST,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,13,ADD,Foster Moreau,TE,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,13,ADD,Zonovan Knight,RB,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,13,ADD,Mike Boone,RB,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,13,ADD,Zay Jones,WR,(FA),Hot Sauce 'n' Bananas,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,13,ADD,Treylon Burks,WR,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,13,ADD,Seahawks D/ST,D/ST,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Curtis Samuel,WR,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Gerald Everett,TE,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Chuba Hubbard,RB,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Jimmy Garoppolo,QB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Chiefs D/ST,D/ST,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Darrell Henderson Jr.,RB,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Robert Tonyan,TE,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Devin Duvernay,WR,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Allen Robinson II,WR,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Darnell Mooney,WR,Hot Sauce 'n' Bananas,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Elijah Mitchell,RB,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,13,DROP,Rondale Moore,WR,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,14,ADD,James Cook,RB,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,14,ADD,Chiefs D/ST,D/ST,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,14,ADD,Chuba Hubbard,RB,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,14,ADD,Broncos D/ST,D/ST,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,14,ADD,Jared Goff,QB,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,14,TEAM->TEAM,Kareem Hunt,RB,MPT Phase1A,Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,14,ADD,Jerry Jeudy,WR,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,14,ADD,Trevor Lawrence,QB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,14,ADD,Travis Homer,RB,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,14,ADD,Gerald Everett,TE,(FA),Team Just here 4 fun,{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,14,DROP,Kenyan Drake,RB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,14,DROP,Parris Campbell,WR,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,14,DROP,Jaylen Warren,RB,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,14,DROP,Commanders D/ST,D/ST,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,14,DROP,Cairo Santos,K,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,14,DROP,Marlon Mack,RB,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2022,14,DROP,Brandin Cooks,WR,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,14,DROP,Eno Benjamin,RB,Team Just here 4 fun,(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2022,14,DROP,Tyler Bass,K,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,15,ADD,Taysom Hill,TE,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,15,ADD,Commanders D/ST,D/ST,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,15,ADD,Evan Engram,TE,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,15,ADD,Daniel Jones,QB,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,15,ADD,Tyler Bass,K,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,15,ADD,J.K. Dobbins,RB,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,15,ADD,Brock Purdy,QB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,15,DROP,James Cook,RB,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,15,DROP,Corey Davis,WR,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,15,DROP,Marcus Mariota,QB,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,15,DROP,Foster Moreau,TE,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,15,DROP,Mike White,QB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2022,15,DROP,Dawson Knox,TE,The Big Hurts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,15,DROP,Seahawks D/ST,D/ST,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,16,ADD,Zack Moss,RB,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,16,ADD,Rams D/ST,D/ST,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,16,ADD,Titans D/ST,D/ST,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,16,ADD,Raiders D/ST,D/ST,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,16,ADD,Chase McLaughlin,K,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,16,DROP,Commanders D/ST,D/ST,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2022,16,DROP,David Njoku,TE,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,16,DROP,Tyler Bass,K,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,16,DROP,James Robinson,RB,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,16,DROP,Steelers D/ST,D/ST,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,17,ADD,Giants D/ST,D/ST,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,17,ADD,Tyler Allgeier,RB,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,17,ADD,Mike White,QB,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,17,ADD,Teddy Bridgewater,QB,(FA),Office Director,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,17,ADD,Carson Wentz,QB,(FA),The Big Hurts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2022,17,ADD,Curtis Samuel,WR,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,17,ADD,Eddy Pineiro,K,(FA),MPT Phase1A,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,17,ADD,Gardner Minshew,QB,(FA),Prahlad's  Life Coach,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2022,17,DROP,JuJu Smith-Schuster,WR,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,17,DROP,Derek Carr,QB,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,17,DROP,Zack Moss,RB,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,17,DROP,Rams D/ST,D/ST,Office Director,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2022,17,DROP,Raiders D/ST,D/ST,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,17,DROP,Chase McLaughlin,K,MPT Phase1A,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2022,17,DROP,Jonathan Taylor,RB,Prahlad's  Life Coach,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot

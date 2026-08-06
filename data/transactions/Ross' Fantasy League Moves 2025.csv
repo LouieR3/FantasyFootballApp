@@ -1,0 +1,379 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Ross' Fantasy League,2025,2,ADD,JuJu Smith-Schuster,WR,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,2,ADD,Brian Robinson Jr.,RB,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,2,ADD,Quentin Johnston,WR,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,2,ADD,Matt Prater,K,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,2,TEAM->TEAM,Cardinals D/ST,D/ST,Balls@ck Gafoor,Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,2,ADD,Daniel Jones,QB,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,2,ADD,Hunter Henry,TE,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,2,ADD,Rams D/ST,D/ST,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,2,ADD,Kayshon Boutte,WR,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,2,DROP,Bryce Young,QB,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,2,DROP,Cam Ward,QB,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,2,DROP,Jaydon Blue,RB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,2,DROP,Braelon Allen,RB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,2,DROP,Tyler Bass,K,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,2,DROP,Pat Bryant,WR,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,2,DROP,Joshua Palmer,WR,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,2,DROP,Younghoe Koo,K,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,3,ADD,Juwan Johnson,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,3,ADD,Harold Fannin Jr.,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,3,ADD,Troy Franklin,WR,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,3,ADD,Jake Browning,QB,(FA),BetterThanDeanAtSF6,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,3,ADD,Packers D/ST,D/ST,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,3,ADD,Mac Jones,QB,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,3,ADD,Falcons D/ST,D/ST,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,3,ADD,Elic Ayomanor,WR,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,3,ADD,Russell Wilson,QB,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,3,ADD,Jaguars D/ST,D/ST,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,3,DROP,Colston Loveland,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,3,DROP,Mason Taylor,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,3,DROP,Steelers D/ST,D/ST,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,3,DROP,Josh Downs,WR,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,3,DROP,Hunter Henry,TE,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,3,DROP,Rams D/ST,D/ST,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,4,ADD,Woody Marks,RB,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,4,ADD,Tre Tucker,WR,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,4,ADD,Hunter Henry,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,4,ADD,Tyquan Thornton,WR,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,4,ADD,Kenneth Gainwell,RB,(FA),dFIBulators,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,4,ADD,Spencer Shrader,K,(FA),dFIBulators,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,4,TRADE,Dalton Kincaid,TE,Chase Ball. Touchdown!,dFIBulators,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,4,TRADE,Chase Brown,RB,Chase Ball. Touchdown!,dFIBulators,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,4,ADD,Chargers D/ST,D/ST,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,4,TRADE,Trey Benson,RB,dFIBulators,Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,4,TRADE,Mark Andrews,TE,dFIBulators,Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,4,TRADE,Tony Pollard,RB,BetterThanDeanAtSF6,Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,4,ADD,Sterling Shepard,WR,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,4,TRADE,DeVonta Smith,WR,Chase Ball. Touchdown!,BetterThanDeanAtSF6,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,4,ADD,Jaxson Dart,QB,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,4,ADD,Carson Wentz,QB,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,4,DROP,Najee Harris,RB,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,4,DROP,Austin Ekeler,RB,dFIBulators,(FA),{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,4,DROP,Harrison Butker,K,dFIBulators,(FA),{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,4,DROP,Dylan Sampson,RB,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,4,DROP,Harold Fannin Jr.,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,4,DROP,James Conner,RB,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,4,DROP,Mac Jones,QB,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,4,DROP,Jayden Reed,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,4,DROP,Falcons D/ST,D/ST,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,4,DROP,Kayshon Boutte,WR,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,4,DROP,Russell Wilson,QB,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,5,ADD,Browns D/ST,D/ST,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,5,ADD,Mac Jones,QB,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,5,ADD,Bryce Young,QB,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,5,TEAM->TEAM,Nick Chubb,RB,Chase Ball. Touchdown!,Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,5,ADD,Rico Dowdle,RB,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,5,ADD,Emari Demercado,RB,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,5,ADD,Brenton Strange,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,5,ADD,Jason Myers,K,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,5,ADD,Kendre Miller,RB,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,5,ADD,Rams D/ST,D/ST,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,5,ADD,Darius Slayton,WR,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,5,ADD,Blake Corum,RB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,5,DROP,DeMario Douglas,WR,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,5,DROP,Brian Robinson Jr.,RB,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,5,DROP,Darnell Mooney,WR,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,5,DROP,Chris Boswell,K,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,5,DROP,Aaron Rodgers,QB,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,5,DROP,Tre Tucker,WR,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,5,DROP,Packers D/ST,D/ST,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,5,DROP,Ravens D/ST,D/ST,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,5,DROP,Sterling Shepard,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,5,DROP,Tyreek Hill,WR,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Steelers D/ST,D/ST,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Packers D/ST,D/ST,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Eddy Pineiro,K,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Jalen Coker,WR,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Mason Taylor,TE,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Hassan Haskins,RB,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Michael Carter,RB,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,6,TEAM->TEAM,Mark Andrews,TE,Chase Ball. Touchdown!,Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Darren Waller,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Joshua Karty,K,(FA),dFIBulators,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Tre Tucker,WR,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Sterling Shepard,WR,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,6,ADD,Kendrick Bourne,WR,(FA),BetterThanDeanAtSF6,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Tyquan Thornton,WR,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Bryce Young,QB,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Brenton Strange,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Tyler Loop,K,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Chargers D/ST,D/ST,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Rams D/ST,D/ST,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Darius Slayton,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Spencer Shrader,K,dFIBulators,(FA),{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Joe Burrow,QB,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Malik Nabers,WR,BetterThanDeanAtSF6,(FA),{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Cardinals D/ST,D/ST,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,6,DROP,Blake Corum,RB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Harold Fannin Jr.,TE,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,7,TEAM->TEAM,Woody Marks,RB,Ross' Sauces,Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,7,TEAM->TEAM,Cooper Kupp,WR,Dookey Dukes,Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,7,TEAM->TEAM,Kyle Pitts Sr.,TE,Yvng Killas,Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Joe Flacco,QB,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Falcons D/ST,D/ST,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Kimani Vidal,RB,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Michael Mayer,TE,(FA),Dookey Dukes,{5FC7AD9B-3FD7-48D7-8422-6FC9710A28D4},0,snapshot
+Ross' Fantasy League,2025,7,TRADE,Travis Hunter,WR,Yvng Killas,Dookey Dukes,{5FC7AD9B-3FD7-48D7-8422-6FC9710A28D4},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Josh Downs,WR,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Rams D/ST,D/ST,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Aaron Rodgers,QB,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Joe Burrow,QB,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Bam Knight,RB,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,TEAM->TEAM,Mason Taylor,TE,Chase Ball. Touchdown!,Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Chris Boswell,K,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,7,TRADE,Rashid Shaheed,WR,Dookey Dukes,Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,7,ADD,Jacoby Brissett,QB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,7,TEAM->TEAM,Carson Wentz,QB,Balls@ck Gafoor,Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Keon Coleman,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Hassan Haskins,RB,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Rashod Bateman,WR,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Jaguars D/ST,D/ST,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Tyrone Tracy Jr.,RB,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Bills D/ST,D/ST,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Juwan Johnson,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Troy Franklin,WR,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Hunter Henry,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Emari Demercado,RB,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Matt Prater,K,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,7,DROP,Sterling Shepard,WR,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Spencer Rattler,QB,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Kirk Cousins,QB,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,8,TEAM->TEAM,Elic Ayomanor,WR,Balls@ck Gafoor,Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Keon Coleman,WR,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,8,TEAM->TEAM,Josh Downs,WR,Club Penguins,Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,8,TRADE,Quentin Johnston,WR,Yvng Killas,Dookey Dukes,{5FC7AD9B-3FD7-48D7-8422-6FC9710A28D4},0,snapshot
+Ross' Fantasy League,2025,8,TEAM->TEAM,Stefon Diggs,WR,Club Penguins,Dookey Dukes,{5FC7AD9B-3FD7-48D7-8422-6FC9710A28D4},0,snapshot
+Ross' Fantasy League,2025,8,TEAM->TEAM,Bam Knight,RB,Club Penguins,Dookey Dukes,{5FC7AD9B-3FD7-48D7-8422-6FC9710A28D4},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Tez Johnson,WR,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,8,TRADE,Kenneth Gainwell,RB,dFIBulators,Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,8,TRADE,Matthew Golden,WR,dFIBulators,Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,8,TRADE,Jaxon Smith-Njigba,WR,Dookey Dukes,Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,8,TRADE,Cam Skattebo,RB,Dookey Dukes,Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Juwan Johnson,TE,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,8,TRADE,Justin Fields,QB,Club Penguins,Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,8,TEAM->TEAM,Jerry Jeudy,WR,TUFF,Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Kyle Monangai,RB,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Michael Badgley,K,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Marcus Mariota,QB,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Cade Otton,TE,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Harrison Butker,K,(FA),BetterThanDeanAtSF6,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Oronde Gadsden,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Alec Pierce,WR,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Nick Folk,K,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Troy Franklin,WR,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Jayden Reed,WR,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,TRADE,Saquon Barkley,RB,Yvng Killas,Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Kayshon Boutte,WR,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Chiefs D/ST,D/ST,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Dalton Schultz,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,ADD,Darnell Mooney,WR,(FA),dFIBulators,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,8,TRADE,Tony Pollard,RB,Chase Ball. Touchdown!,dFIBulators,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Mike Evans,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Kendre Miller,RB,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Michael Penix Jr.,QB,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,8,DROP,JuJu Smith-Schuster,WR,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Steelers D/ST,D/ST,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Hollywood Brown,WR,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Cam Little,K,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Mac Jones,QB,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Michael Carter,RB,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Jason Sanders,K,Dookey Dukes,(FA),{5FC7AD9B-3FD7-48D7-8422-6FC9710A28D4},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Jason Myers,K,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Darren Waller,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Rams D/ST,D/ST,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Joe Burrow,QB,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Mason Taylor,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Tua Tagovailoa,QB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Jauan Jennings,WR,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Jake Bates,K,BetterThanDeanAtSF6,(FA),{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,8,DROP,Jake Browning,QB,BetterThanDeanAtSF6,(FA),{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Michael Penix Jr.,QB,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Brandon McManus,K,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Bears D/ST,D/ST,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Jauan Jennings,WR,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Tua Tagovailoa,QB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Jaguars D/ST,D/ST,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Tyrone Tracy Jr.,RB,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Chargers D/ST,D/ST,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Christian Watson,WR,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Chimere Dike,WR,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Rams D/ST,D/ST,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,9,ADD,Ka'imi Fairbairn,K,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Kirk Cousins,QB,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Elic Ayomanor,WR,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Falcons D/ST,D/ST,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Eagles D/ST,D/ST,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Carson Wentz,QB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Cam Skattebo,RB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Jerry Jeudy,WR,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Marcus Mariota,QB,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Cade Otton,TE,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Nick Folk,K,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Jayden Reed,WR,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Chiefs D/ST,D/ST,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,9,DROP,Dalton Schultz,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,10,TEAM->TEAM,Keon Coleman,WR,Balls@ck Gafoor,Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,10,TEAM->TEAM,Mark Andrews,TE,Balls@ck Gafoor,Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Bills D/ST,D/ST,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Hunter Henry,TE,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Andy Borregales,K,(FA),BetterThanDeanAtSF6,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Tyler Shough,QB,(FA),BetterThanDeanAtSF6,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Jerry Jeudy,WR,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Jason Myers,K,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,10,TEAM->TEAM,Jaguars D/ST,D/ST,Yvng Killas,Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Darius Slayton,WR,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Joe Burrow,QB,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Parker Washington,WR,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Will Reichard,K,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Marcus Mariota,QB,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,10,ADD,Cade Otton,TE,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,10,DROP,T.J. Hockenson,TE,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,10,DROP,Spencer Rattler,QB,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,10,DROP,Bears D/ST,D/ST,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,10,DROP,Jalen Coker,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,10,DROP,Matthew Golden,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,10,DROP,Kyler Murray,QB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,10,DROP,Harrison Butker,K,BetterThanDeanAtSF6,(FA),{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,10,DROP,Tucker Kraft,TE,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,10,DROP,Chargers D/ST,D/ST,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,10,DROP,Christian Watson,WR,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,10,DROP,Chimere Dike,WR,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,11,ADD,Davis Mills,QB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,11,ADD,Theo Johnson,TE,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,11,TRADE,Aaron Rodgers,QB,Club Penguins,dFIBulators,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,11,TRADE,Rico Dowdle,RB,Club Penguins,dFIBulators,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,11,ADD,Jake Bates,K,(FA),dFIBulators,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,11,ADD,T.J. Hockenson,TE,(FA),dFIBulators,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,11,ADD,Falcons D/ST,D/ST,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,11,ADD,Matthew Golden,WR,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,11,ADD,Dalton Schultz,TE,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,11,ADD,Calvin Austin III,WR,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,11,TRADE,Chase Brown,RB,dFIBulators,Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,11,TRADE,Sam Darnold,QB,dFIBulators,Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,11,ADD,Chargers D/ST,D/ST,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,11,TEAM->TEAM,Jason Myers,K,Balls@ck Gafoor,Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,11,ADD,Cam Little,K,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,11,DROP,Juwan Johnson,TE,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,11,DROP,Jaguars D/ST,D/ST,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,11,DROP,Joshua Karty,K,dFIBulators,(FA),{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+Ross' Fantasy League,2025,11,DROP,Jacory Croskey-Merritt,RB,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,11,DROP,Cooper Kupp,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,11,DROP,Rams D/ST,D/ST,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,11,DROP,Will Reichard,K,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,11,DROP,Michael Badgley,K,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Kirk Cousins,QB,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Eagles D/ST,D/ST,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Jaguars D/ST,D/ST,(FA),BetterThanDeanAtSF6,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Emanuel Wilson,RB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Mason Rudolph,QB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Juwan Johnson,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Ravens D/ST,D/ST,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Sean Tucker,RB,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Andrei Iosivas,WR,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Christian Watson,WR,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Bryce Young,QB,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,12,TEAM->TEAM,Broncos D/ST,D/ST,BetterThanDeanAtSF6,Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Michael Wilson,WR,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Jayden Reed,WR,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Tyler Loop,K,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Chimere Dike,WR,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,12,ADD,Adonai Mitchell,WR,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Justin Fields,QB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Davis Mills,QB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Vikings D/ST,D/ST,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Michael Penix Jr.,QB,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Joe Flacco,QB,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Matthew Golden,WR,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Eddy Pineiro,K,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Harold Fannin Jr.,TE,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Tez Johnson,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Dalton Schultz,TE,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Calvin Austin III,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Calvin Ridley,WR,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Parker Washington,WR,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Chargers D/ST,D/ST,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Jason Myers,K,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,12,DROP,Marcus Mariota,QB,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,13,TRADE,Kayshon Boutte,WR,Club Penguins,Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,13,TRADE,Sam Darnold,QB,Club Penguins,Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,13,ADD,Cam Ward,QB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,13,ADD,Devin Neal,RB,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,13,TRADE,Chris Olave,WR,Ross' Sauces,Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,13,TRADE,Joe Burrow,QB,Chase Ball. Touchdown!,Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,13,TEAM->TEAM,Falcons D/ST,D/ST,Balls@ck Gafoor,Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,13,ADD,Rams D/ST,D/ST,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,13,ADD,Jason Myers,K,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,13,ADD,Parker Washington,WR,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,13,ADD,49ers D/ST,D/ST,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,13,TRADE,Chase Brown,RB,Club Penguins,Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,13,ADD,Chargers D/ST,D/ST,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,13,DROP,Kirk Cousins,QB,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,13,DROP,Mason Rudolph,QB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,13,DROP,Ravens D/ST,D/ST,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,13,DROP,Andrei Iosivas,WR,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,13,DROP,Brandon Aubrey,K,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,13,DROP,Bryce Young,QB,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,13,DROP,Packers D/ST,D/ST,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,13,DROP,Adonai Mitchell,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Matt Prater,K,(FA),BetterThanDeanAtSF6,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Harold Fannin Jr.,TE,(FA),BetterThanDeanAtSF6,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,14,ADD,John Metchie III,WR,(FA),BetterThanDeanAtSF6,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Buccaneers D/ST,D/ST,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Brandon Aubrey,K,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Mike Evans,WR,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Chris Rodriguez Jr.,RB,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Brenton Strange,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Dolphins D/ST,D/ST,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,14,TEAM->TEAM,Rams D/ST,D/ST,Balls@ck Gafoor,Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Adonai Mitchell,WR,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Tyrod Taylor,QB,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Isaac TeSlaa,WR,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,14,ADD,Dalton Schultz,TE,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,14,TEAM->TEAM,Josh Downs,WR,Balls@ck Gafoor,Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,14,DROP,David Njoku,TE,BetterThanDeanAtSF6,(FA),{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Kendrick Bourne,WR,BetterThanDeanAtSF6,(FA),{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Andy Borregales,K,BetterThanDeanAtSF6,(FA),{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Rashid Shaheed,WR,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Theo Johnson,TE,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Oronde Gadsden,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Sean Tucker,RB,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Falcons D/ST,D/ST,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Tyrone Tracy Jr.,RB,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Parker Washington,WR,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Trey Benson,RB,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Darius Slayton,WR,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Tyler Loop,K,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,14,DROP,Chargers D/ST,D/ST,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,15,ADD,Tyrone Tracy Jr.,RB,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,15,ADD,Blake Corum,RB,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,15,ADD,Bears D/ST,D/ST,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,15,ADD,Isaiah Likely,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,15,ADD,Bryce Young,QB,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,15,ADD,Marcus Mariota,QB,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,15,ADD,Colston Loveland,TE,(FA),TUFF,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,15,DROP,Buccaneers D/ST,D/ST,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,15,DROP,Brenton Strange,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,15,DROP,Dolphins D/ST,D/ST,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,15,DROP,Rams D/ST,D/ST,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,15,DROP,Tyrod Taylor,QB,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,15,DROP,Isaac TeSlaa,WR,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,15,DROP,Zach Ertz,TE,TUFF,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2025,16,ADD,Jalen Coker,WR,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,16,ADD,Saints D/ST,D/ST,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,16,ADD,Colby Parkinson,TE,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,16,ADD,Michael Carter,RB,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,16,ADD,Darren Waller,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,16,ADD,Vikings D/ST,D/ST,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,16,ADD,Oronde Gadsden,TE,(FA),Club Penguins,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,16,ADD,Rashid Shaheed,WR,(FA),Balls@ck Gafoor,{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,16,DROP,49ers D/ST,D/ST,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,16,DROP,Chris Rodriguez Jr.,RB,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2025,16,DROP,Keon Coleman,WR,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,16,DROP,Kayshon Boutte,WR,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2025,16,DROP,Juwan Johnson,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,16,DROP,Devin Neal,RB,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,16,DROP,Bears D/ST,D/ST,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,16,DROP,Isaiah Likely,TE,Club Penguins,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2025,16,DROP,Brandon Aiyuk,WR,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot
+Ross' Fantasy League,2025,16,DROP,Marcus Mariota,QB,Balls@ck Gafoor,(FA),{ED03B9B7-0400-49D3-9ED6-622F04F546F8},0,snapshot

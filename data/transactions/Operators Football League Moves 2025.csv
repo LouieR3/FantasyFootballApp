@@ -1,0 +1,269 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Operators Football League,2025,2,ADD,Aaron Rodgers,QB,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,2,ADD,Kyle Pitts Sr.,TE,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,2,ADD,Zach Ertz,TE,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,2,ADD,Hollywood Brown,WR,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,2,ADD,Rams D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,2,DROP,Cam Ward,QB,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,2,DROP,Tyrone Tracy Jr.,RB,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,2,DROP,Seahawks D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,2,DROP,Pat Freiermuth,TE,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,3,ADD,Elic Ayomanor,WR,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,3,ADD,Seahawks D/ST,D/ST,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,3,ADD,Jake Browning,QB,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,3,ADD,Matthew Stafford,QB,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,3,ADD,Spencer Shrader,K,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,3,ADD,Jared Goff,QB,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,3,ADD,Daniel Jones,QB,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,3,ADD,Wan'Dale Robinson,WR,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,3,ADD,Juwan Johnson,TE,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,3,ADD,Quentin Johnston,WR,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,3,ADD,Buccaneers D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,3,DROP,Ollie Gordon II,RB,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,3,DROP,Jets D/ST,D/ST,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,3,DROP,Harrison Butker,K,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,3,DROP,Trevor Lawrence,QB,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,3,DROP,Aaron Rodgers,QB,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,3,DROP,Austin Ekeler,RB,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,3,DROP,Tank Bigsby,RB,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,3,DROP,C.J. Stroud,QB,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,3,DROP,Josh Downs,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,3,DROP,Rams D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,4,TRADE,Jake Browning,QB,Ler of the Rings,Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,4,TRADE,Travis Etienne Jr.,RB,Ler of the Rings,Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,4,TRADE,Elic Ayomanor,WR,Natural rack,Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,4,TRADE,Kyler Murray,QB,Natural rack,Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,4,ADD,Tre Tucker,WR,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,4,ADD,Chargers D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,4,ADD,Matt Prater,K,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,4,ADD,Bhayshul Tuten,RB,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,4,ADD,Troy Franklin,WR,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,4,DROP,Jayden Reed,WR,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,4,DROP,Cam Little,K,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,4,DROP,Kyle Pitts Sr.,TE,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,4,DROP,Buccaneers D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,5,ADD,Emari Demercado,RB,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,5,ADD,Jason Myers,K,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,5,ADD,Kenneth Gainwell,RB,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,5,ADD,Bills D/ST,D/ST,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,5,ADD,Jaxson Dart,QB,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,5,ADD,Cardinals D/ST,D/ST,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,5,ADD,C.J. Stroud,QB,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,5,ADD,Michael Carter,RB,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,5,ADD,Justice Hill,RB,(FA),Hall Pass,{9417088B-0880-4F8A-A127-759BF41D4603},0,snapshot
+Operators Football League,2025,5,ADD,Browns D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,5,ADD,Woody Marks,RB,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,5,ADD,Colts D/ST,D/ST,(FA),Jockstrap jubilee ,{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2025,5,TEAM->TEAM,Elic Ayomanor,WR,Ler of the Rings,Jockstrap jubilee ,{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2025,5,ADD,Rico Dowdle,RB,(FA),Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,5,ADD,Rams D/ST,D/ST,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,5,DROP,Tyreek Hill,WR,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,5,DROP,Packers D/ST,D/ST,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,5,DROP,Jake Browning,QB,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,5,DROP,Chris Boswell,K,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,5,DROP,Zach Ertz,TE,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,5,DROP,Jayden Higgins,WR,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,5,DROP,Ravens D/ST,D/ST,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,5,DROP,Jaylen Wright,RB,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,5,DROP,Chargers D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,5,DROP,Kaleb Johnson,RB,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,5,DROP,Malik Nabers,WR,Jockstrap jubilee ,(FA),{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2025,5,DROP,Steelers D/ST,D/ST,Jockstrap jubilee ,(FA),{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2025,5,DROP,49ers D/ST,D/ST,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,6,ADD,Patriots D/ST,D/ST,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,6,ADD,Trevor Lawrence,QB,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,6,ADD,Chris Boswell,K,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,6,ADD,Kimani Vidal,RB,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,6,ADD,Mason Taylor,TE,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,6,TEAM->TEAM,Rams D/ST,D/ST,Mhoney Hurts So Good,Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,6,ADD,Packers D/ST,D/ST,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,6,ADD,Hunter Henry,TE,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,6,ADD,Steelers D/ST,D/ST,(FA),Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,6,ADD,Joshua Karty,K,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,6,DROP,RJ Harvey,RB,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,6,DROP,Lions D/ST,D/ST,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,6,DROP,Emari Demercado,RB,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,6,DROP,Jason Myers,K,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,6,DROP,Bills D/ST,D/ST,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,6,DROP,Isiah Pacheco,RB,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,6,DROP,Vikings D/ST,D/ST,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,6,DROP,Juwan Johnson,TE,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,7,ADD,Chiefs D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,7,ADD,Romeo Doubs,WR,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,7,ADD,Michael Badgley,K,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,7,ADD,Zach Ertz,TE,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,7,ADD,Emanuel Wilson,RB,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,7,ADD,Harrison Butker,K,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,7,ADD,Isiah Pacheco,RB,(FA),Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,7,ADD,Darren Waller,TE,(FA),Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,7,DROP,Adam Thielen,WR,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,7,DROP,Tyler Loop,K,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,7,DROP,Browns D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,7,DROP,Matthew Golden,WR,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,7,DROP,Mason Taylor,TE,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,7,DROP,Matt Prater,K,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,7,DROP,Evan Engram,TE,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,7,DROP,Brian Robinson Jr.,RB,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,7,DROP,Spencer Shrader,K,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,8,ADD,Oronde Gadsden,TE,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,8,ADD,Kyle Monangai,RB,(FA),Jockstrap jubilee ,{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2025,8,ADD,Falcons D/ST,D/ST,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,8,ADD,RJ Harvey,RB,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,8,TEAM->TEAM,Troy Franklin,WR,Mhoney Hurts So Good,Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,8,ADD,Kyle Pitts Sr.,TE,(FA),Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,8,TEAM->TEAM,Packers D/ST,D/ST,Mhoney Hurts So Good,Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,8,ADD,Tyler Loop,K,(FA),Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,8,ADD,Jets D/ST,D/ST,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,8,ADD,Aaron Rodgers,QB,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,8,ADD,Nick Folk,K,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,8,ADD,Texans D/ST,D/ST,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,8,ADD,Joe Flacco,QB,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,8,ADD,Matthew Golden,WR,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,8,ADD,Buccaneers D/ST,D/ST,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,8,DROP,Hollywood Brown,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,8,DROP,Tre Tucker,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,8,DROP,Cardinals D/ST,D/ST,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,8,DROP,C.J. Stroud,QB,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,8,DROP,James Conner,RB,Jockstrap jubilee ,(FA),{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2025,8,DROP,Rams D/ST,D/ST,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,8,DROP,Emanuel Wilson,RB,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,8,DROP,Bhayshul Tuten,RB,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,8,DROP,Jake Bates,K,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,8,DROP,Steelers D/ST,D/ST,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,8,DROP,Darren Waller,TE,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,8,DROP,Cooper Kupp,WR,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,8,DROP,Joshua Karty,K,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,9,ADD,Bam Knight,RB,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,9,ADD,Jake Bates,K,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,9,ADD,Jaguars D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,9,ADD,Ka'imi Fairbairn,K,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,9,ADD,Tyrone Tracy Jr.,RB,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,9,ADD,Lions D/ST,D/ST,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,9,ADD,Eddy Pineiro,K,(FA),Hall Pass,{9417088B-0880-4F8A-A127-759BF41D4603},0,snapshot
+Operators Football League,2025,9,ADD,Rams D/ST,D/ST,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,9,DROP,Jake Elliott,K,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,9,DROP,Chiefs D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,9,DROP,RJ Harvey,RB,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,9,DROP,Trevor Lawrence,QB,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,9,DROP,Jets D/ST,D/ST,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,9,DROP,Nick Folk,K,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,9,DROP,Buccaneers D/ST,D/ST,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,9,DROP,Justice Hill,RB,Hall Pass,(FA),{9417088B-0880-4F8A-A127-759BF41D4603},0,snapshot
+Operators Football League,2025,10,ADD,Jason Myers,K,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,10,ADD,Bills D/ST,D/ST,(FA),Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,10,ADD,Jake Elliott,K,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,10,ADD,Matt Prater,K,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,10,ADD,Devin Singletary,RB,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,10,ADD,Browns D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,10,ADD,RJ Harvey,RB,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,10,ADD,Theo Johnson,TE,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,10,DROP,Harrison Butker,K,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,10,DROP,Brandon Aubrey,K,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,10,DROP,Jayden Daniels,QB,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,10,DROP,Jaguars D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,10,DROP,Ka'imi Fairbairn,K,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,10,DROP,Michael Carter,RB,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,10,DROP,Zach Ertz,TE,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,11,ADD,Zach Ertz,TE,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,11,ADD,Dalton Schultz,TE,(FA),Hall Pass,{9417088B-0880-4F8A-A127-759BF41D4603},0,snapshot
+Operators Football League,2025,11,ADD,Ravens D/ST,D/ST,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,11,ADD,Kareem Hunt,RB,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,11,ADD,Brandon Aubrey,K,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,11,ADD,Jameis Winston,QB,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,11,TEAM->TEAM,Falcons D/ST,D/ST,Mhoney Hurts So Good,Jockstrap jubilee ,{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2025,11,ADD,Chargers D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,11,ADD,Harold Fannin Jr.,TE,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,11,ADD,Harrison Butker,K,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,11,DROP,Kyler Murray,QB,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,11,DROP,Bo Nix,QB,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,11,DROP,Bam Knight,RB,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,11,DROP,Matt Prater,K,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,11,DROP,Tucker Kraft,TE,Hall Pass,(FA),{9417088B-0880-4F8A-A127-759BF41D4603},0,snapshot
+Operators Football League,2025,11,DROP,Travis Hunter,WR,Jockstrap jubilee ,(FA),{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2025,11,DROP,Browns D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,11,DROP,Michael Badgley,K,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,12,TEAM->TEAM,Rams D/ST,D/ST,Sacks in the City,Hall Pass,{9417088B-0880-4F8A-A127-759BF41D4603},0,snapshot
+Operators Football League,2025,12,ADD,Blake Corum,RB,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,12,ADD,Browns D/ST,D/ST,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,12,ADD,Emanuel Wilson,RB,(FA),Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,12,ADD,Michael Wilson,WR,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,12,ADD,Raiders D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,12,ADD,Juwan Johnson,TE,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,12,ADD,Alec Pierce,WR,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,12,ADD,Harrison Mevis,K,(FA),Jockstrap jubilee ,{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2025,12,DROP,Calvin Ridley,WR,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,12,DROP,Eddy Pineiro,K,Hall Pass,(FA),{9417088B-0880-4F8A-A127-759BF41D4603},0,snapshot
+Operators Football League,2025,12,DROP,Jameis Winston,QB,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,12,DROP,Cameron Dicker,K,Jockstrap jubilee ,(FA),{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2025,12,DROP,RJ Harvey,RB,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,12,DROP,Brian Thomas Jr.,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,12,DROP,Chargers D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,12,DROP,Harold Fannin Jr.,TE,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,13,ADD,Chargers D/ST,D/ST,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,13,ADD,Cameron Dicker,K,(FA),Ler of the Rings,{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,13,ADD,Jaguars D/ST,D/ST,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,13,ADD,RJ Harvey,RB,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,13,ADD,Brian Thomas Jr.,WR,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,13,ADD,49ers D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,13,TEAM->TEAM,Oronde Gadsden,TE,Natural rack,Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,13,ADD,Chiefs D/ST,D/ST,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,13,DROP,Jake Elliott,K,Ler of the Rings,(FA),{16EDDDAE-9081-4D42-ADDD-AE90817D4247},0,snapshot
+Operators Football League,2025,13,DROP,Blake Corum,RB,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,13,DROP,Browns D/ST,D/ST,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,13,DROP,Lions D/ST,D/ST,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,13,DROP,Devin Singletary,RB,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,13,DROP,Justin Fields,QB,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,13,DROP,Raiders D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,13,DROP,Juwan Johnson,TE,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,13,DROP,Alec Pierce,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,14,ADD,Marcus Mariota,QB,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,14,ADD,Dolphins D/ST,D/ST,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,14,ADD,Adonai Mitchell,WR,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,14,ADD,Buccaneers D/ST,D/ST,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,14,ADD,Bam Knight,RB,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,14,ADD,Browns D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,14,ADD,Christian Watson,WR,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,14,ADD,Devin Neal,RB,(FA),Hall Pass,{9417088B-0880-4F8A-A127-759BF41D4603},0,snapshot
+Operators Football League,2025,14,ADD,Juwan Johnson,TE,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,14,ADD,Alec Pierce,WR,(FA),Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,14,TEAM->TEAM,Rams D/ST,D/ST,Hall Pass,Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,14,DROP,Jaxson Dart,QB,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,14,DROP,Patriots D/ST,D/ST,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,14,DROP,Ricky Pearsall,WR,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,14,DROP,Chargers D/ST,D/ST,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,14,DROP,Theo Johnson,TE,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2025,14,DROP,Packers D/ST,D/ST,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,14,DROP,Troy Franklin,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,14,DROP,49ers D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,14,DROP,Rhamondre Stevenson,RB,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,15,ADD,Jaxson Dart,QB,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,15,ADD,49ers D/ST,D/ST,(FA),Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,15,ADD,Cowboys D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,15,ADD,Harold Fannin Jr.,TE,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,15,ADD,Trevor Lawrence,QB,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,15,ADD,Steelers D/ST,D/ST,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,15,ADD,Jaylen Wright,RB,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,15,DROP,Marcus Mariota,QB,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,15,DROP,Buccaneers D/ST,D/ST,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,15,DROP,Quentin Johnston,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,15,DROP,Oronde Gadsden,TE,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,15,DROP,Browns D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,15,DROP,Rams D/ST,D/ST,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
+Operators Football League,2025,16,ADD,Patriots D/ST,D/ST,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,16,ADD,Jacoby Brissett,QB,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,16,ADD,Lions D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,16,ADD,Saints D/ST,D/ST,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,16,ADD,Vikings D/ST,D/ST,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,16,DROP,Dolphins D/ST,D/ST,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
+Operators Football League,2025,16,DROP,Patrick Mahomes,QB,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,16,DROP,Cowboys D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2025,16,DROP,Ravens D/ST,D/ST,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,16,DROP,Steelers D/ST,D/ST,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,17,ADD,Dylan Sampson,RB,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,17,ADD,Steelers D/ST,D/ST,(FA),Mhoney Hurts So Good,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,17,ADD,Darnell Washington,TE,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,17,ADD,Buccaneers D/ST,D/ST,(FA),Sacks in the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,17,DROP,Quinshon Judkins,RB,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,17,DROP,Chiefs D/ST,D/ST,Mhoney Hurts So Good,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2025,17,DROP,Jaylen Wright,RB,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2025,17,DROP,Vikings D/ST,D/ST,Sacks in the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot

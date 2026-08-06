@@ -1,0 +1,302 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+0755 Fantasy Football,2025,2,ADD,Quentin Johnston,WR,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,2,ADD,Rams D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,2,ADD,Hollywood Brown,WR,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,2,ADD,Zach Ertz,TE,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,2,ADD,Jordan Love,QB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,2,ADD,Kayshon Boutte,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,2,ADD,Juwan Johnson,TE,(FA),Mr Steinfeld's Stars,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,2,ADD,Dylan Sampson,RB,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,2,ADD,Cedric Tillman,WR,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,2,ADD,Justin Fields,QB,(FA),All my homies hate Dallas,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,2,DROP,Wan'Dale Robinson,WR,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,2,DROP,Tank Bigsby,RB,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,2,DROP,Patriots D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,2,DROP,Marvin Mims Jr.,WR,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,2,DROP,Woody Marks,RB,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,2,DROP,Matthew Stafford,QB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,2,DROP,Caleb Williams,QB,All my homies hate Dallas,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,2,DROP,Jayden Higgins,WR,Mr Steinfeld's Stars,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,3,ADD,Caleb Williams,QB,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,3,ADD,Kenneth Gainwell,RB,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,3,ADD,Packers D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,3,ADD,Romeo Doubs,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,3,ADD,Colts D/ST,D/ST,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,3,ADD,Troy Franklin,WR,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,3,ADD,Bengals D/ST,D/ST,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,3,ADD,Daniel Jones,QB,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,3,DROP,Kaleb Johnson,RB,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,3,DROP,Rams D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,3,DROP,Austin Ekeler,RB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,3,DROP,Aaron Jones Sr.,RB,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,3,DROP,Dylan Sampson,RB,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,3,DROP,Cedric Tillman,WR,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,3,DROP,J.J. McCarthy,QB,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,4,ADD,Spencer Shrader,K,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,4,ADD,Wan'Dale Robinson,WR,(FA),Mr Steinfeld's Stars,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,4,ADD,Hunter Henry,TE,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,4,ADD,Tre Tucker,WR,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,4,ADD,Chargers D/ST,D/ST,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,4,DROP,Jake Bates,K,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,4,DROP,Kayshon Boutte,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,4,DROP,Ollie Gordon II,RB,Mr Steinfeld's Stars,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,4,DROP,Bengals D/ST,D/ST,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Jake Bates,K,(FA),Mr Steinfeld's Stars,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Mason Taylor,TE,(FA),Mr Steinfeld's Stars,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Woody Marks,RB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Matthew Stafford,QB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Darren Waller,TE,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Darius Slayton,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Matt Prater,K,(FA),All my homies hate Dallas,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Rachaad White,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Cardinals D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Emari Demercado,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Bills D/ST,D/ST,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,5,TEAM->TEAM,Isiah Pacheco,RB,Scrappy Dub,I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Brenton Strange,TE,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Jaguars D/ST,D/ST,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,5,ADD,Rico Dowdle,RB,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,5,DROP,Evan Engram,TE,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,5,DROP,Adam Thielen,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,5,DROP,Romeo Doubs,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,5,DROP,Chris Boswell,K,Mr Steinfeld's Stars,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,5,DROP,Cairo Santos,K,All my homies hate Dallas,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,5,DROP,Tyreek Hill,WR,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,5,DROP,Braelon Allen,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,5,DROP,Packers D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,5,DROP,Ravens D/ST,D/ST,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,5,DROP,James Conner,RB,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,5,DROP,Troy Franklin,WR,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,5,DROP,Chargers D/ST,D/ST,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Browns D/ST,D/ST,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Hassan Haskins,RB,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Patriots D/ST,D/ST,(FA),Mr Steinfeld's Stars,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Theo Johnson,TE,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Bam Knight,RB,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Sterling Shepard,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Eddy Pineiro,K,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Romeo Doubs,WR,(FA),Division iPad,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Jason Myers,K,(FA),Division iPad,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Michael Carter,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Packers D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,6,ADD,Wil Lutz,K,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Juwan Johnson,TE,Mr Steinfeld's Stars,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Kyler Murray,QB,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Spencer Shrader,K,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Matthew Stafford,QB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Malik Nabers,WR,Division iPad,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Brock Purdy,QB,Division iPad,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Jerome Ford,RB,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Jake Elliott,K,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Cardinals D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Emari Demercado,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Bhayshul Tuten,RB,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,6,DROP,Brenton Strange,TE,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,7,TEAM->TEAM,Woody Marks,RB,Chicken Fried Chicken Meal,"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Emanuel Wilson,RB,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Chiefs D/ST,D/ST,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Harold Fannin Jr.,TE,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Michael Badgley,K,(FA),All my homies hate Dallas,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Michael Mayer,TE,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,7,ADD,C.J. Stroud,QB,(FA),Mr Steinfeld's Stars,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Cade Otton,TE,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Kimani Vidal,RB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Kayshon Boutte,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Rams D/ST,D/ST,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Matthew Stafford,QB,(FA),Division iPad,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Chris Boswell,K,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Bears D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,7,ADD,Tyjae Spears,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Darnell Mooney,WR,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Browns D/ST,D/ST,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Matt Prater,K,All my homies hate Dallas,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Tyrone Tracy Jr.,RB,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Hassan Haskins,RB,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Jauan Jennings,WR,Mr Steinfeld's Stars,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Theo Johnson,TE,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,7,DROP,49ers D/ST,D/ST,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Darius Slayton,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Tyler Bass,K,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Colston Loveland,TE,Division iPad,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Ka'imi Fairbairn,K,Division iPad,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Michael Carter,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Packers D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,7,DROP,Wil Lutz,K,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Kyle Monangai,RB,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Oronde Gadsden,TE,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Wil Lutz,K,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Buccaneers D/ST,D/ST,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Falcons D/ST,D/ST,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Nick Folk,K,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Darnell Mooney,WR,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Jake Elliott,K,(FA),Mr Steinfeld's Stars,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Dalton Schultz,TE,(FA),Mr Steinfeld's Stars,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Jaxson Dart,QB,(FA),Division iPad,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Browns D/ST,D/ST,(FA),Division iPad,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Ka'imi Fairbairn,K,(FA),Division iPad,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,8,ADD,49ers D/ST,D/ST,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,8,ADD,Evan Engram,TE,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Emanuel Wilson,RB,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Vikings D/ST,D/ST,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Michael Mayer,TE,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Mason Taylor,TE,Mr Steinfeld's Stars,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,8,DROP,C.J. Stroud,QB,Mr Steinfeld's Stars,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Cam Little,K,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Darren Waller,TE,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Sterling Shepard,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Matt Gay,K,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Hollywood Brown,WR,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Seahawks D/ST,D/ST,Division iPad,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Jason Myers,K,Division iPad,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,8,DROP,Tyjae Spears,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,9,ADD,Joe Flacco,QB,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,9,ADD,Seahawks D/ST,D/ST,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,9,ADD,Cairo Santos,K,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,9,ADD,Kareem Hunt,RB,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,9,ADD,Matt Prater,K,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,9,ADD,Tyrone Tracy Jr.,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,9,ADD,Packers D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,9,TEAM->TEAM,Jaguars D/ST,D/ST,Scrappy Dub,All my homies hate Dallas,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,9,ADD,Vikings D/ST,D/ST,(FA),Division iPad,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,9,ADD,Aaron Jones Sr.,RB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,9,DROP,Cam Skattebo,RB,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,9,DROP,Cade Otton,TE,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,9,DROP,Hunter Henry,TE,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,9,DROP,Jerry Jeudy,WR,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,9,DROP,Falcons D/ST,D/ST,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,9,DROP,Justin Fields,QB,All my homies hate Dallas,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,9,DROP,Bears D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,9,DROP,Darnell Mooney,WR,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,9,DROP,Browns D/ST,D/ST,Division iPad,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+0755 Fantasy Football,2025,9,DROP,49ers D/ST,D/ST,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,10,ADD,Browns D/ST,D/ST,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,10,ADD,Ravens D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,10,ADD,Jauan Jennings,WR,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,10,ADD,J.J. McCarthy,QB,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,10,TEAM->TEAM,Matt Prater,K,"Michael, The Baker",I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,10,ADD,Alec Pierce,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,10,ADD,Hunter Henry,TE,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,10,ADD,Troy Franklin,WR,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,10,ADD,Marcus Mariota,QB,(FA),All my homies hate Dallas,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,10,ADD,Darius Slayton,WR,(FA),All my homies hate Dallas,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,10,DROP,Chiefs D/ST,D/ST,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,10,DROP,Trey Benson,RB,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,10,DROP,Bills D/ST,D/ST,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,10,DROP,Tucker Kraft,TE,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,10,DROP,Ricky Pearsall,WR,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,10,DROP,Packers D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,10,DROP,Tyler Allgeier,RB,All my homies hate Dallas,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,10,DROP,Jaguars D/ST,D/ST,All my homies hate Dallas,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,10,DROP,Jake Elliott,K,Mr Steinfeld's Stars,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,10,DROP,Cooper Kupp,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,11,ADD,Tyler Loop,K,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,11,ADD,Cowboys D/ST,D/ST,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,11,ADD,Chargers D/ST,D/ST,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,11,ADD,Jerry Jeudy,WR,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,11,ADD,Jake Elliott,K,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,11,ADD,Packers D/ST,D/ST,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,11,ADD,Aaron Rodgers,QB,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,11,TEAM->TEAM,Chris Boswell,K,3rd World Immigrant,All my homies hate Dallas,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,11,ADD,Calvin Austin III,WR,(FA),All my homies hate Dallas,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,11,DROP,Browns D/ST,D/ST,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,11,DROP,Cairo Santos,K,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,11,DROP,Rashod Bateman,WR,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,11,DROP,Wil Lutz,K,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,11,DROP,Matt Prater,K,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,11,DROP,Buccaneers D/ST,D/ST,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,11,DROP,Michael Badgley,K,All my homies hate Dallas,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Harrison Mevis,K,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Raiders D/ST,D/ST,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Sean Tucker,RB,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Juwan Johnson,TE,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Jason Myers,K,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Trey Benson,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Darnell Mooney,WR,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Michael Wilson,WR,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Emanuel Wilson,RB,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Ricky Pearsall,WR,(FA),All my homies hate Dallas,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Browns D/ST,D/ST,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Brock Purdy,QB,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,12,ADD,Tyjae Spears,RB,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Calvin Ridley,WR,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Jordan Mason,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Rachaad White,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Cameron Dicker,K,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Quentin Johnston,WR,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Cowboys D/ST,D/ST,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Chargers D/ST,D/ST,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Joe Flacco,QB,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Nick Chubb,RB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Eddy Pineiro,K,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2025,12,DROP,J.J. McCarthy,QB,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Aaron Rodgers,QB,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,12,DROP,Garrett Wilson,WR,All my homies hate Dallas,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,13,ADD,Christian Watson,WR,(FA),All my homies hate Dallas,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,13,ADD,Tank Bigsby,RB,(FA),All my homies hate Dallas,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,13,ADD,Cameron Dicker,K,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,13,ADD,Jaguars D/ST,D/ST,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,13,ADD,Trevor Lawrence,QB,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,13,ADD,Devin Neal,RB,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,13,DROP,Nick Folk,K,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,13,DROP,Marcus Mariota,QB,All my homies hate Dallas,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,13,DROP,Calvin Austin III,WR,All my homies hate Dallas,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2025,13,DROP,Browns D/ST,D/ST,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,13,DROP,Brock Purdy,QB,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,13,DROP,Bam Knight,RB,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,14,ADD,Commanders D/ST,D/ST,(FA),AJ's Awesome Team,{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,14,ADD,Brenton Strange,TE,(FA),Mr Steinfeld's Stars,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,14,ADD,AJ Barner,TE,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,14,ADD,Buccaneers D/ST,D/ST,(FA),"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,14,ADD,Adonai Mitchell,WR,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,14,ADD,Browns D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,14,ADD,Chris Rodriguez Jr.,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,14,ADD,Luther Burden III,WR,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,14,ADD,Cam Little,K,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,14,ADD,Colston Loveland,TE,(FA),Griddy Little Liars,{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,14,ADD,Bam Knight,RB,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,14,DROP,Caleb Williams,QB,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,14,DROP,Raiders D/ST,D/ST,AJ's Awesome Team,(FA),{353273A6-6607-4A68-ADDE-CC045C217594},0,snapshot
+0755 Fantasy Football,2025,14,DROP,David Njoku,TE,Mr Steinfeld's Stars,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2025,14,DROP,Brandon Aiyuk,WR,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,14,DROP,Ravens D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,14,DROP,Darnell Mooney,WR,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,14,DROP,Emanuel Wilson,RB,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,14,DROP,Rashid Shaheed,WR,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,14,DROP,Tyjae Spears,RB,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,14,DROP,Jake Elliott,K,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,14,DROP,Jaguars D/ST,D/ST,Griddy Little Liars,(FA),{F8041501-6351-4CA9-A6EA-E7101A0AB6C6},0,snapshot
+0755 Fantasy Football,2025,14,DROP,Tre Tucker,WR,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,15,TEAM->TEAM,Bo Nix,QB,3rd World Immigrant,"Michael, The Baker",{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,15,ADD,Jaguars D/ST,D/ST,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,15,ADD,49ers D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,15,ADD,Brock Purdy,QB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,15,ADD,Devin Singletary,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,15,ADD,Jaylen Wright,RB,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,15,DROP,Daniel Jones,QB,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,15,DROP,Oronde Gadsden,TE,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,15,DROP,Trey Benson,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,15,DROP,Browns D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,15,DROP,Chris Rodriguez Jr.,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,15,DROP,Luther Burden III,WR,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,15,DROP,Zach Ertz,TE,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,16,ADD,Saints D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,16,ADD,Eddy Pineiro,K,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,16,ADD,Michael Carter,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,16,ADD,Bills D/ST,D/ST,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,16,ADD,Colby Parkinson,TE,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,16,ADD,Emanuel Wilson,RB,(FA),Scrappy Dub,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,16,ADD,J.J. McCarthy,QB,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,16,DROP,Jayden Daniels,QB,"Michael, The Baker",(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2025,16,DROP,Tyler Loop,K,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,16,DROP,49ers D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,16,DROP,Brock Purdy,QB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,16,DROP,Devin Singletary,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,16,DROP,Joe Mixon,RB,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,16,DROP,Bam Knight,RB,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,16,DROP,Jaylen Wright,RB,Scrappy Dub,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2025,17,ADD,Giants D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,17,ADD,Andy Borregales,K,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2025,17,ADD,Tyler Shough,QB,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,17,ADD,Darren Waller,TE,(FA),I'm Batman,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,17,DROP,Devin Neal,RB,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2025,17,DROP,J.J. McCarthy,QB,I'm Batman,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot

@@ -1,0 +1,430 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Pennoni Younglings,2023,2,ADD,Kyren Williams,RB,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,2,ADD,Jameson Williams,WR,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,2,ADD,Giants D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,2,ADD,Baker Mayfield,QB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,2,ADD,Puka Nacua,WR,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,2,ADD,Broncos D/ST,D/ST,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,2,ADD,Zack Moss,RB,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,2,ADD,Rashid Shaheed,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,2,ADD,Tutu Atwell,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,2,ADD,Colts D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,2,TEAM->TEAM,Jerick McKinnon,RB,PAI India Division Manager,Pennoni Adjacent,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,2,ADD,Marquez Valdes-Scantling,WR,(FA),Pennoni Adjacent,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,2,ADD,Luke Musgrave,TE,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,2,ADD,Hayden Hurst,TE,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,2,ADD,Joshua Kelley,RB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,2,ADD,Hunter Henry,TE,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,2,ADD,Kendrick Bourne,WR,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,2,ADD,Buccaneers D/ST,D/ST,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,2,ADD,Romeo Doubs,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,2,ADD,Gus Edwards,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,2,DROP,Skyy Moore,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,2,DROP,De'Von Achane,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,2,DROP,Commanders D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,2,DROP,Isaiah Likely,TE,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,2,DROP,Matthew Stafford,QB,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,2,DROP,Panthers D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,2,DROP,Bengals D/ST,D/ST,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,2,DROP,Russell Wilson,QB,Pennoni Adjacent,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,2,DROP,Aaron Rodgers,QB,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,2,DROP,Kadarius Toney,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,2,DROP,Damien Harris,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,2,DROP,J.K. Dobbins,RB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,2,DROP,Dolphins D/ST,D/ST,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,2,DROP,Tyler Conklin,TE,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,2,DROP,Allen Lazard,WR,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,2,DROP,Chigoziem Okonkwo,TE,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,2,DROP,Greg Dulcich,TE,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,3,ADD,Matthew Stafford,QB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,3,ADD,Jordan Love,QB,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,3,ADD,Jaguars D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,3,ADD,Chiefs D/ST,D/ST,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,3,ADD,Kadarius Toney,WR,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,3,ADD,Russell Wilson,QB,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,3,ADD,Robert Woods,WR,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,3,ADD,Josh Reynolds,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,3,ADD,Kendre Miller,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,3,ADD,Tank Dell,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,3,ADD,C.J. Stroud,QB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,3,ADD,Jake Moody,K,(FA),Pennoni Adjacent,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,3,TEAM->TEAM,Adam Thielen,WR,PAI India Division Manager,Pennoni Adjacent,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,3,ADD,Justice Hill,RB,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,3,ADD,Skyy Moore,WR,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,3,ADD,Jerome Ford,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,3,ADD,Jayden Reed,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,3,ADD,Kareem Hunt,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,3,DROP,Rondale Moore,WR,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,3,DROP,Giants D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,3,DROP,Baker Mayfield,QB,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,3,DROP,Kenny Pickett,QB,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,3,DROP,Broncos D/ST,D/ST,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,3,DROP,Jamaal Williams,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,3,DROP,Samaje Perine,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,3,DROP,Colts D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,3,DROP,Graham Gano,K,Pennoni Adjacent,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,3,DROP,Van Jefferson,WR,Pennoni Adjacent,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,3,DROP,Tyler Boyd,WR,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,3,DROP,Rashod Bateman,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,3,DROP,Deon Jackson,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,3,DROP,Nick Chubb,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,3,DROP,Antonio Gibson,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,3,DROP,Romeo Doubs,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,4,TRADE,Jahmyr Gibbs,RB,I'd_Tap_ That,PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,4,TRADE,Khalil Herbert,RB,I'd_Tap_ That,PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,4,ADD,Joshua Palmer,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,4,ADD,Bengals D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,4,ADD,Jimmy Garoppolo,QB,(FA),Pennoni Adjacent,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,4,TRADE,Tyler Allgeier,RB,PAI India Division Manager,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,4,TRADE,Zack Moss,RB,PAI India Division Manager,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,4,ADD,De'Von Achane,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,4,ADD,Taysom Hill,TE,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,4,ADD,Donald Parham Jr.,TE,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,4,ADD,Matt Breida,RB,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,4,ADD,Romeo Doubs,WR,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,4,DROP,Kadarius Toney,WR,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,4,DROP,Jets D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,4,DROP,Rashid Shaheed,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,4,DROP,Treylon Burks,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,4,DROP,Marquez Valdes-Scantling,WR,Pennoni Adjacent,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,4,DROP,Parris Campbell,WR,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,4,DROP,Derek Carr,QB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,4,DROP,Kareem Hunt,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,5,ADD,Tyler Boyd,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,5,ADD,Jaleel McLaughlin,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,5,ADD,Jets D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,5,TRADE,Jerome Ford,RB,The Golden Receivers,Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,5,ADD,Lions D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,5,ADD,Jason Sanders,K,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,5,ADD,Commanders D/ST,D/ST,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,5,ADD,Rashee Rice,WR,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,5,ADD,Texans D/ST,D/ST,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,5,ADD,Baker Mayfield,QB,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,5,ADD,Matt Prater,K,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,5,ADD,Allen Lazard,WR,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,5,TRADE,Tutu Atwell,WR,Prahlad's Ghost,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,5,TRADE,Javonte Williams,RB,Prahlad's Ghost,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,5,TEAM->TEAM,Chiefs D/ST,D/ST,PAI India Division Manager,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,5,ADD,Dolphins D/ST,D/ST,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,5,ADD,Brandon Aubrey,K,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,5,ADD,Joshua Dobbs,QB,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,5,ADD,Colts D/ST,D/ST,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,5,DROP,Jaguars D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,5,DROP,Cameron Dicker,K,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,5,DROP,Josh Reynolds,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,5,DROP,Kendre Miller,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,5,DROP,Bengals D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,5,DROP,Quentin Johnston,WR,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,5,DROP,Packers D/ST,D/ST,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,5,DROP,Jonathan Mingo,WR,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,5,DROP,Mike Gesicki,TE,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,5,DROP,Skyy Moore,WR,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,5,DROP,AJ Dillon,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,5,DROP,Taysom Hill,TE,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,5,DROP,Matt Breida,RB,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,5,DROP,Geno Smith,QB,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,5,DROP,Tank Bigsby,RB,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,6,ADD,Josh Reynolds,WR,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,6,ADD,Ka'imi Fairbairn,K,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,6,ADD,Noah Fant,TE,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,6,ADD,Tyjae Spears,RB,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,6,ADD,D'Onta Foreman,RB,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,6,ADD,Jonnu Smith,TE,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,6,ADD,Falcons D/ST,D/ST,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,6,ADD,Vikings D/ST,D/ST,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,6,ADD,Curtis Samuel,WR,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,6,ADD,Tyler Conklin,TE,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,6,ADD,Salvon Ahmed,RB,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,6,ADD,Emari Demercado,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,6,ADD,Josh Downs,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,6,ADD,Raiders D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,6,ADD,Chuba Hubbard,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,6,ADD,Logan Thomas,TE,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,6,ADD,Geno Smith,QB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,6,DROP,Tyler Boyd,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,6,DROP,Jets D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,6,DROP,Jordan Love,QB,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,6,DROP,Pat Freiermuth,TE,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,6,DROP,JuJu Smith-Schuster,WR,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,6,DROP,Evan McPherson,K,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,6,DROP,Jason Myers,K,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,6,DROP,Hunter Renfrow,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,6,DROP,Dalton Kincaid,TE,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,6,DROP,Jayden Reed,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,6,DROP,Daniel Jones,QB,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,6,DROP,Michael Gallup,WR,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,6,DROP,Joshua Kelley,RB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,6,DROP,Donald Parham Jr.,TE,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,6,DROP,Hayden Hurst,TE,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,6,DROP,Colts D/ST,D/ST,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,7,ADD,Daniel Jones,QB,(FA),Pennoni Adjacent,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,7,ADD,Sam Howell,QB,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,7,ADD,Anders Carlson,K,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,7,ADD,Jordan Mason,RB,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,7,TEAM->TEAM,Baker Mayfield,QB,Philadelphia British Army,Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,7,ADD,Pat Freiermuth,TE,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,7,TEAM->TEAM,David Njoku,TE,The Golden Receivers,Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,7,ADD,Packers D/ST,D/ST,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,7,ADD,Jaguars D/ST,D/ST,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,7,ADD,AJ Dillon,RB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,7,ADD,Kadarius Toney,WR,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,7,ADD,Kareem Hunt,RB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,7,ADD,Giants D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,7,ADD,Craig Reynolds,RB,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,7,ADD,Jordan Love,QB,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,7,ADD,Zach Evans,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,7,TEAM->TEAM,Tyjae Spears,RB,Book of MoreMoms,Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,7,ADD,Taysom Hill,TE,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,7,ADD,Seahawks D/ST,D/ST,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,7,DROP,Jimmy Garoppolo,QB,Pennoni Adjacent,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,7,DROP,Robert Woods,WR,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,7,DROP,Josh Reynolds,WR,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,7,DROP,Dolphins D/ST,D/ST,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,7,DROP,Rashaad Penny,RB,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,7,DROP,Falcons D/ST,D/ST,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,7,DROP,Chase Claypool,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,7,DROP,Vikings D/ST,D/ST,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,7,DROP,Dalvin Cook,RB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,7,DROP,Patriots D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,7,DROP,Anthony Richardson,QB,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,7,DROP,Salvon Ahmed,RB,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,7,DROP,Miles Sanders,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,7,DROP,Emari Demercado,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,8,TEAM->TEAM,Seahawks D/ST,D/ST,The Golden Receivers,Pennoni Adjacent,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,8,ADD,Derek Carr,QB,(FA),Pennoni Adjacent,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,8,ADD,Robert Woods,WR,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,8,ADD,Emari Demercado,RB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,8,ADD,Miles Sanders,RB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,8,ADD,Kyler Murray,QB,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,8,ADD,Cameron Dicker,K,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,8,ADD,Dolphins D/ST,D/ST,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,8,ADD,Darrell Henderson Jr.,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,8,ADD,Pierre Strong Jr.,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,8,ADD,Jets D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,8,ADD,Dustin Hopkins,K,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,8,ADD,Michael Mayer,TE,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,8,ADD,Bengals D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,8,ADD,Josh Reynolds,WR,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,8,TEAM->TEAM,Jordan Love,QB,PAI India Division Manager,Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,8,ADD,Dalton Kincaid,TE,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,8,ADD,Rashid Shaheed,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,8,DROP,Brandin Cooks,WR,Pennoni Adjacent,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,8,DROP,Jerick McKinnon,RB,Pennoni Adjacent,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,8,DROP,Sam Howell,QB,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,8,DROP,Devin Singletary,RB,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,8,DROP,Kadarius Toney,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,8,DROP,Daniel Carlson,K,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,8,DROP,Tyler Conklin,TE,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,8,DROP,Giants D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,8,DROP,Jason Sanders,K,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,8,DROP,Commanders D/ST,D/ST,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,8,DROP,Jaleel McLaughlin,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,8,DROP,Raiders D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,8,DROP,Zach Evans,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,8,DROP,Elijah Moore,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,9,ADD,Evan McPherson,K,(FA),Pennoni Adjacent,{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,9,ADD,Trey McBride,TE,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,9,ADD,Royce Freeman,RB,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,9,ADD,Patriots D/ST,D/ST,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,9,ADD,Giants D/ST,D/ST,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,9,ADD,Falcons D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,9,ADD,Devin Singletary,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,9,ADD,Michael Wilson,WR,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,9,ADD,Raiders D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,9,ADD,Will Levis,QB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,9,TRADE,Javonte Williams,RB,The Golden Receivers,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,9,TRADE,Gus Edwards,RB,The Golden Receivers,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,9,TRADE,Trevor Lawrence,QB,The Golden Receivers,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,9,ADD,Gardner Minshew,QB,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,9,ADD,Brandin Cooks,WR,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,9,ADD,Sam Howell,QB,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,9,TEAM->TEAM,Rashee Rice,WR,Philadelphia British Army,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,9,TRADE,Jalen Hurts,QB,I'd_Tap_ That,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,9,TRADE,Tyler Allgeier,RB,I'd_Tap_ That,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,9,TEAM->TEAM,Roschon Johnson,RB,Prahlad's Ghost,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,9,ADD,Blake Grupe,K,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,9,ADD,Chargers D/ST,D/ST,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,9,DROP,Eagles D/ST,D/ST,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,9,DROP,Packers D/ST,D/ST,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,9,DROP,Daniel Jones,QB,Pennoni Adjacent,(FA),{4FB9792B-D0E9-407C-A000-A60B0F30DB08},0,snapshot
+Pennoni Younglings,2023,9,DROP,Robert Woods,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,9,DROP,Miles Sanders,RB,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,9,DROP,Khalil Herbert,RB,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,9,DROP,Craig Reynolds,RB,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,9,DROP,Jaguars D/ST,D/ST,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,9,DROP,Pierre Strong Jr.,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,9,DROP,Kirk Cousins,QB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,9,DROP,Curtis Samuel,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,9,DROP,Bengals D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,9,DROP,Kendrick Bourne,WR,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,9,DROP,Buccaneers D/ST,D/ST,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,9,DROP,Tutu Atwell,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,10,ADD,Eagles D/ST,D/ST,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,10,ADD,Packers D/ST,D/ST,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,10,ADD,Khalil Herbert,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,10,ADD,Keaton Mitchell,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,10,ADD,Nick Folk,K,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,10,ADD,Taylor Heinicke,QB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,10,TEAM->TEAM,Brandon Aubrey,K,Team Cogs,19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,10,ADD,Bears D/ST,D/ST,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,10,TEAM->TEAM,Devin Singletary,RB,Prahlad's Ghost,Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,10,ADD,Tyler Boyd,WR,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,10,TRADE,Tyler Allgeier,RB,The Golden Receivers,Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,10,TRADE,Taysom Hill,TE,The Golden Receivers,Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,10,ADD,Cade Otton,TE,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,10,ADD,DeMario Douglas,WR,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,10,ADD,Noah Brown,WR,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,10,ADD,Curtis Samuel,WR,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,10,ADD,Vikings D/ST,D/ST,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,10,ADD,Colts D/ST,D/ST,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,10,ADD,Chris Boswell,K,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,10,TRADE,Zay Flowers,WR,Bli Erinker,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,10,TRADE,Dameon Pierce,RB,Bli Erinker,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,10,DROP,Dolphins D/ST,D/ST,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,10,DROP,Royce Freeman,RB,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,10,DROP,Patriots D/ST,D/ST,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,10,DROP,Justice Hill,RB,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,10,DROP,Romeo Doubs,WR,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,10,DROP,Giants D/ST,D/ST,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,10,DROP,Joshua Palmer,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,10,DROP,Darrell Henderson Jr.,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,10,DROP,Falcons D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,10,DROP,Marvin Mims Jr.,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,10,DROP,Josh Reynolds,WR,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,10,DROP,Gardner Minshew,QB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,10,DROP,Ka'imi Fairbairn,K,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,10,DROP,Noah Fant,TE,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,10,DROP,Jordan Love,QB,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,10,DROP,Blake Grupe,K,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,10,DROP,Chargers D/ST,D/ST,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,11,ADD,Dolphins D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,11,TRADE,Jake Ferguson,TE,PAI India Division Manager,Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,11,TRADE,Jordan Addison,WR,PAI India Division Manager,Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,11,TRADE,Cowboys D/ST,D/ST,Bli Erinker,Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,11,ADD,Matt Ammendola,K,(FA),Book of MoreMoms,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,11,ADD,Riley Patterson,K,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,11,TRADE,Jets D/ST,D/ST,Prahlad's Ghost,Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,11,ADD,Romeo Doubs,WR,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,11,ADD,Tyler Conklin,TE,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,11,ADD,Jordan Love,QB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,11,ADD,Commanders D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,11,ADD,Antonio Gibson,RB,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,11,ADD,Chigoziem Okonkwo,TE,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,11,ADD,Darrell Henderson Jr.,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,11,ADD,Jaguars D/ST,D/ST,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,11,TRADE,Drake London,WR,Prahlad's Ghost,PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,11,DROP,Packers D/ST,D/ST,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,11,DROP,Nick Folk,K,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,11,DROP,Taylor Heinicke,QB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,11,DROP,DJ Chark Jr.,WR,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,11,DROP,Bears D/ST,D/ST,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,11,DROP,Deshaun Watson,QB,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,11,DROP,Jordan Mason,RB,Philadelphia British Army,(FA),{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,11,DROP,Raiders D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,11,DROP,Will Levis,QB,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,11,DROP,Zack Moss,RB,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,11,DROP,Emari Demercado,RB,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,11,DROP,Roschon Johnson,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,12,ADD,Giants D/ST,D/ST,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,12,ADD,Cairo Santos,K,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,12,ADD,Patriots D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,12,ADD,Jayden Reed,WR,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,12,ADD,Isaiah Likely,TE,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,12,ADD,Elijah Moore,WR,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,12,ADD,Tanner Hudson,TE,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,12,ADD,Titans D/ST,D/ST,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,12,ADD,Ty Chandler,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,12,DROP,Matt Ammendola,K,Book of MoreMoms,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Pennoni Younglings,2023,12,DROP,Elijah Mitchell,RB,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,12,DROP,Younghoe Koo,K,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,12,DROP,Riley Patterson,K,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,12,DROP,Zay Jones,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,12,DROP,Michael Wilson,WR,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,12,DROP,Commanders D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,12,DROP,Michael Thomas,WR,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,12,DROP,Chigoziem Okonkwo,TE,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,12,DROP,Dameon Pierce,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,12,DROP,Darrell Henderson Jr.,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,13,TRADE,Trey McBride,TE,PAI Alcoholics Anonymous ,Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,13,ADD,Samaje Perine,RB,(FA),Philadelphia British Army,{65213399-AD95-4113-B087-DAB0440DEF10},0,snapshot
+Pennoni Younglings,2023,13,ADD,Chargers D/ST,D/ST,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,13,TRADE,Romeo Doubs,WR,Philadelphia British Army,PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,13,ADD,Nick Folk,K,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,13,ADD,Buccaneers D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,13,TEAM->TEAM,Tyler Conklin,TE,Philadelphia British Army,Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,13,ADD,Zack Moss,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,13,ADD,Wil Lutz,K,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,13,ADD,Kenny Pickett,QB,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,13,ADD,Falcons D/ST,D/ST,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,13,ADD,Jason Myers,K,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,13,ADD,Dameon Pierce,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,13,DROP,Harrison Butker,K,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,13,DROP,Cairo Santos,K,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,13,DROP,Allen Lazard,WR,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,13,DROP,Michael Mayer,TE,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,13,DROP,Patriots D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,13,DROP,Isaiah Likely,TE,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,13,DROP,Elijah Moore,WR,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,13,DROP,Tyler Bass,K,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,13,DROP,Rashid Shaheed,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,13,DROP,Ty Chandler,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,13,DROP,Mark Andrews,TE,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,14,ADD,Elijah Moore,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,14,ADD,Clyde Edwards-Helaire,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,14,ADD,Tyler Bass,K,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,14,ADD,Roschon Johnson,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,14,ADD,Ty Chandler,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,14,ADD,Packers D/ST,D/ST,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,14,ADD,Zay Jones,WR,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,14,ADD,Harrison Butker,K,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,14,ADD,Jake Browning,QB,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,14,TEAM->TEAM,Falcons D/ST,D/ST,The Golden Receivers,19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,14,ADD,Isaiah Likely,TE,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,14,TEAM->TEAM,Josh Downs,WR,Prahlad's Ghost,I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,14,DROP,Luke Musgrave,TE,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,14,DROP,Giants D/ST,D/ST,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,14,DROP,Nick Folk,K,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,14,DROP,Tyler Conklin,TE,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,14,DROP,Khalil Herbert,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2023,14,DROP,Wil Lutz,K,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,14,DROP,Kenny Pickett,QB,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,14,DROP,Jason Myers,K,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,15,ADD,Raiders D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,15,ADD,Zamir White,RB,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,15,TEAM->TEAM,DeMario Douglas,WR,Team Cogs,PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,15,ADD,Will Levis,QB,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,15,ADD,Rashid Shaheed,WR,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,15,ADD,Chris Rodriguez Jr.,RB,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,15,ADD,Rams D/ST,D/ST,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,15,ADD,Jerick McKinnon,RB,(FA),PAI India Division Manager,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,15,DROP,Justin Herbert,QB,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,15,DROP,Vikings D/ST,D/ST,Came and Wentz,(FA),{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,15,DROP,Titans D/ST,D/ST,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,15,DROP,Romeo Doubs,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2023,15,DROP,Joshua Dobbs,QB,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,15,DROP,Tyler Allgeier,RB,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,15,DROP,Zay Jones,WR,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,15,DROP,Buccaneers D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,16,ADD,Broncos D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,16,ADD,Cairo Santos,K,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,16,ADD,Bears D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,16,ADD,Joshua Palmer,WR,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,16,ADD,Commanders D/ST,D/ST,(FA),Came and Wentz,{C184521A-CEAF-42DB-8452-1ACEAFE2DBB7},0,snapshot
+Pennoni Younglings,2023,16,DROP,Raiders D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,16,DROP,Tanner Hudson,TE,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,16,DROP,Josh Downs,WR,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,16,DROP,Harrison Butker,K,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,16,DROP,Dameon Pierce,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2023,16,DROP,Lions D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2023,16,DROP,Rams D/ST,D/ST,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,17,ADD,Rams D/ST,D/ST,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,17,ADD,Durham Smythe,TE,(FA),Bli Erinker,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,17,ADD,Ka'imi Fairbairn,K,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,17,ADD,Raiders D/ST,D/ST,(FA),Team Cogs,{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,17,ADD,DJ Chark Jr.,WR,(FA),I'd_Tap_ That,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2023,17,DROP,Dustin Hopkins,K,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,17,DROP,Broncos D/ST,D/ST,Team Cogs,(FA),{91828F94-1966-4B65-828F-9419663B65D8},0,snapshot
+Pennoni Younglings,2023,17,DROP,Packers D/ST,D/ST,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,17,DROP,Chris Rodriguez Jr.,RB,Bli Erinker,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2023,17,DROP,Jerick McKinnon,RB,PAI India Division Manager,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2023,17,DROP,Joshua Palmer,WR,I'd_Tap_ That,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot

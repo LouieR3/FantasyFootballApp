@@ -1,0 +1,329 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+RRR On Premise ,2021,2,ADD,Elijah Mitchell,RB,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,2,ADD,Van Jefferson,WR,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,2,ADD,Cardinals D/ST,D/ST,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,2,ADD,Nelson Agholor,WR,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,2,TEAM->TEAM,AJ Dillon,RB,Reagor Bombs,I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,2,ADD,Kenneth Gainwell,RB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,2,ADD,Jameis Winston,QB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,2,ADD,Bengals D/ST,D/ST,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,2,ADD,Zach Pascal,WR,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,2,ADD,Seahawks D/ST,D/ST,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,2,DROP,Packers D/ST,D/ST,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,2,DROP,DeSean Jackson,WR,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,2,DROP,Eric Ebron,TE,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,2,DROP,Tre'Quan Smith,WR,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,2,DROP,Dolphins D/ST,D/ST,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,2,DROP,Quez Watkins,WR,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,2,DROP,Devonta Freeman,RB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,2,DROP,Dyami Brown,WR,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,TRADE,Justin Herbert,QB,Reagor Bombs,Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,3,TRADE,Zach Pascal,WR,Reagor Bombs,Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,3,ADD,Sam Darnold,QB,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,3,ADD,Peyton Barber,RB,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,3,ADD,Teddy Bridgewater,QB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,ADD,Matt Prater,K,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,ADD,Raiders D/ST,D/ST,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,ADD,Quintez Cephus,WR,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,ADD,Jared Goff,QB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,TRADE,Tee Higgins,WR,Dennis The Menace ,Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,TEAM->TEAM,Justin Fields,QB,Titan Up,Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,ADD,K.J. Osborn,WR,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,ADD,Cordarrelle Patterson,RB,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,3,ADD,Jack Doyle,TE,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,3,ADD,Titans D/ST,D/ST,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,3,ADD,Sammy Watkins,WR,(FA),Kenny The Tick Salcido,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,3,ADD,Panthers D/ST,D/ST,(FA),Team Behel,{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,3,DROP,Le'Veon Bell,RB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,3,DROP,Vikings D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,3,DROP,Gerald Everett,TE,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,3,DROP,Mac Jones,QB,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,3,DROP,Tony Jones Jr.,RB,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,3,DROP,Amon-Ra St. Brown,WR,Kenny The Tick Salcido,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,3,DROP,Trey Lance,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,DROP,Tyler Bass,K,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,DROP,Jameis Winston,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,DROP,Bengals D/ST,D/ST,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,DROP,Seahawks D/ST,D/ST,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,3,DROP,Chris Conley,WR,Team Behel,(FA),{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,4,ADD,Chuba Hubbard,RB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,ADD,Hunter Renfrow,WR,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,ADD,Taylor Heinicke,QB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,ADD,Tyler Conklin,TE,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,ADD,Cowboys D/ST,D/ST,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,ADD,Evan McPherson,K,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,ADD,Zach Ertz,TE,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,ADD,Christian Kirk,WR,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,ADD,Josh Gordon,WR,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,ADD,Bengals D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,4,ADD,Dalton Schultz,TE,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,4,DROP,Tua Tagovailoa,QB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,4,DROP,Dallas Goedert,TE,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,DROP,Kenneth Gainwell,RB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,DROP,Teddy Bridgewater,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,DROP,Matt Prater,K,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,DROP,Raiders D/ST,D/ST,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,DROP,Quintez Cephus,WR,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,DROP,Jared Goff,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,DROP,Justin Fields,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,DROP,K.J. Osborn,WR,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,4,DROP,Jack Doyle,TE,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,5,ADD,Tyler Bass,K,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,5,ADD,Kenneth Gainwell,RB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,5,ADD,Khalil Herbert,RB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,5,ADD,Packers D/ST,D/ST,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,5,ADD,Samaje Perine,RB,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,5,ADD,Cameron Brate,TE,(FA),Kenny The Tick Salcido,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,5,ADD,Alex Collins,RB,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,5,TEAM->TEAM,Chuba Hubbard,RB,Reagor Bombs,Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,5,ADD,Dawson Knox,TE,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,5,ADD,Brandon Bolden,RB,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,5,DROP,Taylor Heinicke,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,5,DROP,Evan McPherson,K,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,5,DROP,Christian Kirk,WR,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,5,DROP,Panthers D/ST,D/ST,Team Behel,(FA),{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,5,DROP,Rashaad Penny,RB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,5,DROP,Bengals D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,5,DROP,Rhamondre Stevenson,RB, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,5,DROP,Ben Roethlisberger,QB,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,5,DROP,James White,RB,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,6,ADD,Rhamondre Stevenson,RB,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,6,ADD,Vikings D/ST,D/ST,(FA),Kenny The Tick Salcido,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,6,ADD,Kadarius Toney,WR,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,6,ADD,Devonta Freeman,RB,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,6,TEAM->TEAM,Colts D/ST,D/ST,Reagor Bombs,Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,6,ADD,Christian Kirk,WR,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,6,ADD,Nick Folk,K,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,6,ADD,Chris Boswell,K,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,6,ADD,Bengals D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,6,ADD,Taylor Heinicke,QB,(FA),Team Flaherty,{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,6,DROP,Tyler Conklin,TE,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,6,DROP,JuJu Smith-Schuster,WR, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,6,DROP,Robert Tonyan,TE,Kenny The Tick Salcido,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,6,DROP,Anthony Miller,WR,Team Flaherty,(FA),{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,6,DROP,Commanders D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,6,DROP,Brandon Aiyuk,WR,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,6,DROP,Raheem Mostert,RB,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,6,DROP,Titans D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,7,ADD,Dallas Goedert,TE,(FA),Kenny The Tick Salcido,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,7,ADD,Jameis Winston,QB,(FA),Team Behel,{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,7,ADD,Carson Wentz,QB,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,7,ADD,Mo Alie-Cox,TE,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,7,ADD,Randy Bullock,K,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,7,ADD,Panthers D/ST,D/ST,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,7,ADD,Brian Johnson,K,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,7,ADD,Tua Tagovailoa,QB,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,7,ADD,Ricky Seals-Jones,TE,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,7,ADD,Raiders D/ST,D/ST,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,7,ADD,Deshaun Watson,QB,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,7,ADD,Teddy Bridgewater,QB,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,7,ADD,Amon-Ra St. Brown,WR,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,7,ADD,Matt Prater,K,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,7,ADD,D'Ernest Johnson,RB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,7,ADD,Royce Freeman,RB,(FA),Team Flaherty,{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,7,TEAM->TEAM,Kenneth Gainwell,RB,Reagor Bombs,Team Flaherty,{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,7,DROP,Browns D/ST,D/ST, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,7,DROP,Tristan Vizcaino,K, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,7,DROP,Cameron Brate,TE,Kenny The Tick Salcido,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,7,DROP,Dawson Knox,TE,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,7,DROP,Brandon Bolden,RB,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,7,DROP,Kadarius Toney,WR,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,7,DROP,Baker Mayfield,QB,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,7,DROP,Austin Hooper,TE,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,7,DROP,Colts D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,7,DROP,Josh Gordon,WR,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,7,DROP,Nick Folk,K,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,7,DROP,Zach Pascal,WR,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,7,DROP,Chris Boswell,K,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,7,DROP,Tyrell Williams,WR,Oklahoma Go Sports!,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2021,7,DROP,Parris Campbell,WR,Team Flaherty,(FA),{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,8,ADD,Bears D/ST,D/ST,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,8,ADD,Nick Folk,K,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,8,TEAM->TEAM,Teddy Bridgewater,QB,Dennis The Menace ,Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,8,ADD,Robert Tonyan,TE,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,8,ADD,Kadarius Toney,WR,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,8,ADD,Mac Jones,QB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,8,ADD,Rashaad Penny,RB,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,8,ADD,Tyler Conklin,TE,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,8,ADD,Greg Joseph,K,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,8,TEAM->TEAM,Mark Ingram II,RB,I've Got  A Thielen,Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,8,ADD,Ty Johnson,RB,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,8,ADD,C.J. Uzomah,TE,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,8,ADD,Marquez Valdes-Scantling,WR,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,8,ADD,Dante Pettis,WR,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,8,ADD,T.Y. Hilton,WR,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,8,ADD,Brandon Bolden,RB,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,8,TEAM->TEAM,Cole Beasley,WR, Johnny  Dramas ,Kenny The Tick Salcido,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,8,DROP,Sammy Watkins,WR,Kenny The Tick Salcido,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,8,DROP,Randall Cobb,WR, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,8,DROP,Gabriel Davis,WR, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,8,DROP,Rhamondre Stevenson,RB, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,8,DROP,Daniel Carlson,K,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,8,DROP,Ricky Seals-Jones,TE,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,8,DROP,Gus Edwards,RB,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,8,DROP,Malcolm Brown,RB,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,8,DROP,Tevin Coleman,RB,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,8,DROP,Nico Collins,WR,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,8,DROP,Amon-Ra St. Brown,WR,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,8,DROP,Peyton Barber,RB,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,8,DROP,Matt Prater,K,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,9,ADD,Jeremy McNichols,RB,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,9,ADD,Colts D/ST,D/ST,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,9,ADD,Chris Boswell,K,(FA),Team Flaherty,{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,9,ADD,Boston Scott,RB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,9,ADD,Jordan Love,QB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,9,ADD,Tyrod Taylor,QB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,9,ADD,Evan McPherson,K,(FA),Kenny The Tick Salcido,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,9,ADD,Dan Arnold,TE,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,9,ADD,Adrian Peterson,RB,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,9,ADD,Tajae Sharpe,WR,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,9,TEAM->TEAM,D'Ernest Johnson,RB,Reagor Bombs,Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,9,DROP,William Fuller V,WR,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,9,DROP,Bears D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,9,DROP,Trey Sermon,RB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,9,DROP,Deshaun Watson,QB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,9,DROP,Taylor Heinicke,QB,Team Flaherty,(FA),{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,9,DROP,Packers D/ST,D/ST,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,9,DROP,Mac Jones,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,9,DROP,Dante Pettis,WR, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,9,DROP,Brandon Bolden,RB, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,9,DROP,Ryan Succop,K,Kenny The Tick Salcido,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,9,DROP,Mo Alie-Cox,TE,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,10,ADD,Pat Freiermuth,TE,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,10,ADD,Taylor Heinicke,QB,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,10,ADD,Rashod Bateman,WR,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,10,ADD,Jimmy Garoppolo,QB,(FA),Team Flaherty,{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,10,ADD,Jordan Howard,RB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,10,ADD,Dawson Knox,TE,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,10,ADD,Baker Mayfield,QB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,10,ADD,Donovan Peoples-Jones,WR,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,10,ADD,Daniel Carlson,K,(FA),Kenny The Tick Salcido,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,10,TEAM->TEAM,Boston Scott,RB,Reagor Bombs,Kenny The Tick Salcido,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,10,ADD,Jamal Agnew,WR,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,10,ADD,Kalif Raymond,WR,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,10,ADD,Tyler Johnson,WR,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,10,ADD,Brandon Aiyuk,WR,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,10,ADD,Titans D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,10,DROP,Raiders D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,10,DROP,Sam Darnold,QB,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,10,DROP,Robert Tonyan,TE,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,10,DROP,Jason Myers,K,Team Flaherty,(FA),{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,10,DROP,Khalil Herbert,RB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,10,DROP,Jordan Love,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,10,DROP,Tyrod Taylor,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,10,DROP,Vikings D/ST,D/ST,Kenny The Tick Salcido,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,10,DROP,Evan McPherson,K,Kenny The Tick Salcido,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,10,DROP,Calvin Ridley,WR,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,10,DROP,Ryan Fitzpatrick,QB,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,10,DROP,Greg Joseph,K,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,10,DROP,C.J. Uzomah,TE, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,10,DROP,Marquez Valdes-Scantling,WR, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,10,DROP,Tajae Sharpe,WR, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,11,ADD,Browns D/ST,D/ST,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,11,ADD,Adam Trautman,TE,(FA),Team Behel,{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,11,ADD,Commanders D/ST,D/ST,(FA),Kenny The Tick Salcido,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,11,ADD,D'Onta Foreman,RB,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,11,ADD,Dolphins D/ST,D/ST,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,11,ADD,Justin Fields,QB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,11,TEAM->TEAM,Taylor Heinicke,QB,I've Got  A Thielen,Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,11,ADD,Raiders D/ST,D/ST,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,11,ADD,Jeff Wilson Jr.,RB,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,11,ADD,Rhamondre Stevenson,RB,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,11,ADD,Greg Joseph,K,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,11,ADD,Trevor Siemian,QB,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,11,ADD,Cam Newton,QB,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,11,ADD,Ryan Succop,K,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,11,ADD,Zane Gonzalez,K,(FA),"Lights, Kamara, Action",{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2021,11,DROP,Devontae Booker,RB,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,11,DROP,Terrace Marshall Jr.,WR,Team Behel,(FA),{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,11,DROP,Jordan Howard,RB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,11,DROP,Baker Mayfield,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,11,DROP,Donovan Peoples-Jones,WR,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,11,DROP,Michael Thomas,WR,Kenny The Tick Salcido,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,11,DROP,Broncos D/ST,D/ST,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,11,DROP,Ronald Jones II,RB,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,11,DROP,Samaje Perine,RB, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,11,DROP,Brian Johnson,K, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,11,DROP,T.Y. Hilton,WR, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,11,DROP,Logan Thomas,TE,"Lights, Kamara, Action",(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2021,12,ADD,Bears D/ST,D/ST,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,12,ADD,Jaguars D/ST,D/ST,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,12,ADD,Ben Roethlisberger,QB,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,12,ADD,Dontrell Hilliard,RB,(FA),Kenny The Tick Salcido,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,12,ADD,Texans D/ST,D/ST,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,12,ADD,Eagles D/ST,D/ST,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,12,ADD,Austin Hooper,TE,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,12,ADD,Falcons D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,12,ADD,Tre'Quan Smith,WR,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,12,ADD,Kendrick Bourne,WR,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,12,DROP,Tua Tagovailoa,QB,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,12,DROP,Colts D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,12,DROP,Browns D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,12,DROP,Boston Scott,RB,Kenny The Tick Salcido,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,12,DROP,Randy Bullock,K,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,12,DROP,Justin Fields,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,12,DROP,D'Ernest Johnson,RB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,12,DROP,Titans D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2021,12,DROP,Matt Ryan,QB, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,12,DROP,Adrian Peterson,RB, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,13,ADD,Colts D/ST,D/ST,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,13,ADD,Rex Burkhead,RB,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,13,ADD,DeSean Jackson,WR,(FA),Oversized Pumpkins,{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,13,ADD,Boston Scott,RB,(FA),Team Flaherty,{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,13,ADD,Logan Thomas,TE,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,13,ADD,Matt Breida,RB,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,13,ADD,Tyrod Taylor,QB,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,13,ADD,Chiefs D/ST,D/ST,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,13,ADD,Brian Johnson,K,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,13,ADD,Tua Tagovailoa,QB,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,13,ADD,Vikings D/ST,D/ST,(FA), Johnny  Dramas ,{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,13,ADD,Tevin Coleman,RB,(FA),Team Behel,{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,13,ADD,DeeJay Dallas,RB,(FA),Team Behel,{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,13,ADD,Foster Moreau,TE,(FA),Team Behel,{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,13,ADD,Zay Jones,WR,(FA),Team Behel,{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,13,DROP,Jaguars D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,13,DROP,Christian McCaffrey,RB,Team Behel,(FA),{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,13,DROP,Henry Ruggs III,WR,Team Behel,(FA),{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,13,DROP,Jameis Winston,QB,Team Behel,(FA),{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,13,DROP,Adam Trautman,TE,Team Behel,(FA),{59EB215C-D5A2-4E2A-B66E-E96ABD1A9B82},0,snapshot
+RRR On Premise ,2021,13,DROP,Royce Freeman,RB,Team Flaherty,(FA),{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,13,DROP,Dan Arnold,TE,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,13,DROP,Texans D/ST,D/ST,Oversized Pumpkins,(FA),{83937314-A1CA-41FD-A242-C9B5B534B295},0,snapshot
+RRR On Premise ,2021,13,DROP,Rashaad Penny,RB,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,13,DROP,Tyler Conklin,TE,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,13,DROP,Jamal Agnew,WR,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,13,DROP,Kalif Raymond,WR,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,13,DROP,Jeff Wilson Jr.,RB,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,13,DROP,Tyler Johnson,WR, Johnny  Dramas ,(FA),{80A1B4AF-9D17-4408-BDA1-9667BD326651},0,snapshot
+RRR On Premise ,2021,13,DROP,Nelson Agholor,WR,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,13,DROP,Ryan Succop,K,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,14,ADD,Seahawks D/ST,D/ST,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,14,ADD,Matt Prater,K,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,14,ADD,Ricky Seals-Jones,TE,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,14,ADD,Jeff Wilson Jr.,RB,(FA),Gato’s Mom Breezy,{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,14,DROP,Bears D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,14,DROP,Colts D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,14,DROP,Jimmy Garoppolo,QB,Team Flaherty,(FA),{A319B00D-609E-486D-99B0-0D609EE86D5F},0,snapshot
+RRR On Premise ,2021,14,DROP,Logan Thomas,TE,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,14,DROP,Mark Ingram II,RB,Gato’s Mom Breezy,(FA),{7F18EDA9-DAE0-410A-9EC4-FE2F20716D07},0,snapshot
+RRR On Premise ,2021,14,DROP,A.J. Green,WR,Kenny The Tick Salcido,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2021,15,ADD,Jaguars D/ST,D/ST,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,15,ADD,Rashaad Penny,RB,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,15,ADD,Ameer Abdullah,RB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,15,ADD,Jordan Howard,RB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,15,DROP,Jeremy McNichols,RB,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,15,DROP,Seahawks D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,15,DROP,Jarvis Landry,WR,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,15,DROP,Taylor Heinicke,QB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,16,ADD,Chargers D/ST,D/ST,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,16,ADD,Jimmy Garoppolo,QB,(FA),Titan Up,{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,16,ADD,Tyler Huntley,QB,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,16,ADD,Jarvis Landry,WR,(FA),I've Got  A Thielen,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,16,ADD,Ronald Jones II,RB,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,16,ADD,Amon-Ra St. Brown,WR,(FA),Reagor Bombs,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2021,16,DROP,Teddy Bridgewater,QB,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,16,DROP,Jaguars D/ST,D/ST,Titan Up,(FA),{2B6C7E1E-0755-48FB-89CE-4CFFA3D5DC1A},0,snapshot
+RRR On Premise ,2021,16,DROP,DeAndre Hopkins,WR,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,16,DROP,Trevor Lawrence,QB,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,16,DROP,Matt Breida,RB,I've Got  A Thielen,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2021,16,DROP,Ameer Abdullah,RB,Reagor Bombs,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot

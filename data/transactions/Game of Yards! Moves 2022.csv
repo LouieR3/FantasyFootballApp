@@ -1,0 +1,377 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Game of Yards!,2022,2,ADD,Jeff Wilson Jr.,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,2,ADD,Gerald Everett,TE,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,2,ADD,Dontrell Hilliard,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,2,ADD,Mark Ingram II,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,2,ADD,Broncos D/ST,D/ST,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,2,ADD,Taysom Hill,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,2,ADD,Robbie Anderson,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,2,ADD,Rex Burkhead,RB,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,2,TEAM->TEAM,Mike Williams,WR,Pain Inflictors,Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,2,ADD,Curtis Samuel,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,2,ADD,Rachaad White,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,2,ADD,Bengals D/ST,D/ST,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,2,ADD,Nyheim Hines,RB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,2,ADD,Ryan Succop,K,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,2,ADD,Jahan Dotson,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,2,ADD,Will Dissly,TE,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,2,ADD,Carson Wentz,QB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,2,ADD,Marlon Mack,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,2,ADD,Khalil Herbert,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,2,ADD,Cade York,K,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,2,DROP,Noah Fant,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,2,DROP,Irv Smith Jr.,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,2,DROP,Mike Davis,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,2,DROP,Damien Williams,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,2,DROP,Austin Hooper,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,2,DROP,D'Onta Foreman,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,2,DROP,Evan McPherson,K,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,2,DROP,George Pickens,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,2,DROP,David Njoku,TE,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,2,DROP,Alexander Mattison,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,2,DROP,Ryan Tannehill,QB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,2,DROP,Elijah Moore,WR,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,2,DROP,Nick Folk,K,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,2,DROP,James Cook,RB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,2,DROP,Evan Engram,TE,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,3,ADD,Evan Engram,TE,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,3,ADD,Texans D/ST,D/ST,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,3,ADD,Jakobi Meyers,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,3,ADD,Irv Smith Jr.,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,3,ADD,Darrel Williams,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,3,ADD,Breshad Perriman,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,3,ADD,Logan Thomas,TE,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,3,ADD,Jared Goff,QB,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,3,ADD,Jimmy Garoppolo,QB,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,3,ADD,Panthers D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,3,ADD,Russell Gage,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,3,ADD,Younghoe Koo,K,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,3,DROP,Kadarius Toney,WR,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,3,DROP,Titans D/ST,D/ST,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,3,DROP,Robbie Anderson,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,3,DROP,Commanders D/ST,D/ST,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,3,DROP,Rachaad White,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,3,DROP,Mike Gesicki,TE,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,3,DROP,DeVante Parker,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,3,DROP,Trey Lance,QB,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,3,DROP,Albert Okwuegbunam,TE,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,3,DROP,Robert Tonyan,TE,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,3,DROP,Colts D/ST,D/ST,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,4,ADD,Tyler Conklin,TE,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,4,ADD,Jaguars D/ST,D/ST,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,4,ADD,David Njoku,TE,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,4,ADD,Zach Wilson,QB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,4,ADD,Jamaal Williams,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,4,ADD,Noah Brown,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,4,ADD,Tyler Allgeier,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,4,ADD,Alexander Mattison,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,4,ADD,Brett Maher,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,4,ADD,Michael Gallup,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,4,TEAM->TEAM,Hunter Henry,TE,The Chase Is On,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,4,ADD,Colts D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,4,ADD,Mack Hollins,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,4,ADD,Chris Olave,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,4,ADD,Evan McPherson,K,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,4,ADD,Chuba Hubbard,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,4,DROP,Cole Kmet,TE,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,4,DROP,Dontrell Hilliard,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,4,DROP,Mark Ingram II,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,4,DROP,Rex Burkhead,RB,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,4,DROP,Texans D/ST,D/ST,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,4,DROP,Kenneth Gainwell,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,4,DROP,Justin Fields,QB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,4,DROP,Julio Jones,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,4,DROP,Greg Joseph,K,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,4,DROP,Darrel Williams,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,4,DROP,Breshad Perriman,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,4,DROP,Dustin Hopkins,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,4,DROP,Panthers D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,4,DROP,Russell Gage,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,4,DROP,Darnell Mooney,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,4,DROP,Marlon Mack,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,5,ADD,Mark Ingram II,RB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,5,ADD,Mike Boone,RB,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,5,ADD,Greg Joseph,K,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,5,ADD,Vikings D/ST,D/ST,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,5,ADD,John Bates,TE,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,5,ADD,Latavius Murray,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,5,ADD,Josh Reynolds,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,5,ADD,Robert Tonyan,TE,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,5,ADD,Romeo Doubs,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,5,ADD,Corey Davis,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,5,DROP,J.D. McKissic,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,5,DROP,Javonte Williams,RB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,5,DROP,Logan Thomas,TE,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,5,DROP,Jimmy Garoppolo,QB,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,5,DROP,Carson Wentz,QB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,5,DROP,Noah Brown,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,5,DROP,Taysom Hill,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,5,DROP,Hunter Henry,TE,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,5,DROP,Chuba Hubbard,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,6,ADD,Hayden Hurst,TE,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,6,ADD,Commanders D/ST,D/ST,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,6,ADD,Geno Smith,QB,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,6,ADD,Panthers D/ST,D/ST,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,6,ADD,Logan Thomas,TE,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,6,TEAM->TEAM,Evan Engram,TE,Bhambhwani Pawan Dilip,2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,6,ADD,Rondale Moore,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,6,ADD,Isaiah McKenzie,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,6,ADD,Daniel Bellinger,TE,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,6,ADD,Eno Benjamin,RB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,6,TEAM->TEAM,Russell Wilson,QB,Pain Inflictors,The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,6,ADD,Phillip Lindsay,RB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,6,ADD,Taysom Hill,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,6,ADD,Carson Wentz,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,6,ADD,Devin Duvernay,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,6,ADD,Deon Jackson,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,6,TEAM->TEAM,Vikings D/ST,D/ST,2 Many Cooks,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,6,DROP,Zach Wilson,QB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,6,DROP,Mark Ingram II,RB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,6,DROP,Browns D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,6,DROP,Greg Joseph,K,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,6,DROP,Jameis Winston,QB,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,6,DROP,John Bates,TE,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,6,DROP,Hunter Renfrow,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,6,DROP,Jahan Dotson,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,6,DROP,Colts D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,6,DROP,Mack Hollins,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,6,DROP,Tyler Boyd,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,6,DROP,Dolphins D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,6,DROP,Corey Davis,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,7,ADD,Wan'Dale Robinson,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,7,ADD,Jets D/ST,D/ST,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,7,TEAM->TEAM,Michael Gallup,WR,Wakanda Forever,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,7,ADD,Cardinals D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,7,ADD,Odell Beckham Jr.,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,7,ADD,Kenyan Drake,RB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,7,ADD,Jimmy Garoppolo,QB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,7,ADD,Chuba Hubbard,RB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,7,ADD,Matt Ryan,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,7,ADD,D'Onta Foreman,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,7,ADD,Isiah Pacheco,RB,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,7,ADD,Chris Boswell,K,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,7,ADD,Dolphins D/ST,D/ST,(FA),Team CTE,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,7,ADD,Wil Lutz,K,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,7,ADD,Marquez Valdes-Scantling,WR,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,7,DROP,Tyler Conklin,TE,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,7,DROP,Commanders D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,7,DROP,Isaiah McKenzie,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,7,DROP,Nyheim Hines,RB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,7,DROP,Phillip Lindsay,RB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,7,DROP,Jaguars D/ST,D/ST,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,7,DROP,Mike Boone,RB,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,7,DROP,Devin Duvernay,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,7,DROP,Trevor Lawrence,QB,Team CTE,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,7,DROP,Saints D/ST,D/ST,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,7,DROP,Tyler Bass,K,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,7,DROP,Robert Tonyan,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,8,ADD,Hunter Henry,TE,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,8,ADD,Falcons D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,8,ADD,George Pickens,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,8,ADD,Bears D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,8,ADD,Jason Myers,K,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,8,ADD,Daniel Jones,QB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,8,ADD,Trevor Lawrence,QB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,8,TEAM->TEAM,Latavius Murray,RB,THE BIGMADBLUE,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,8,ADD,Tyler Boyd,WR,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,8,ADD,Gus Edwards,RB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,8,ADD,Mike Gesicki,TE,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,8,ADD,Kyren Williams,RB,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,8,ADD,Titans D/ST,D/ST,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,8,ADD,Greg Zuerlein,K,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,8,ADD,D'Ernest Johnson,RB,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,8,DROP,Daniel Bellinger,TE,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,8,DROP,Robert Woods,WR,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,8,DROP,Logan Thomas,TE,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,8,DROP,Romeo Doubs,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,8,DROP,Cardinals D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,8,DROP,Kenyan Drake,RB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,8,DROP,Jimmy Garoppolo,QB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,8,DROP,Rashod Bateman,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,8,DROP,Evan McPherson,K,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,8,DROP,Matt Ryan,QB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,8,DROP,Breece Hall,RB,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,8,DROP,Jake Elliott,K,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,8,DROP,Irv Smith Jr.,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,8,DROP,Deon Jackson,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,9,ADD,Colts D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,9,ADD,Caleb Huntley,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,9,ADD,Darnell Mooney,WR,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,9,ADD,Deon Jackson,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,9,ADD,Marcus Mariota,QB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,9,ADD,Romeo Doubs,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,9,ADD,Nick Folk,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,9,TEAM->TEAM,Trevor Lawrence,QB,Team HebAchi,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,9,ADD,Justin Fields,QB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,9,ADD,Devin Duvernay,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,9,TRADE,Tyler Boyd,WR,2 Many Cooks,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,9,TRADE,Dameon Pierce,RB,2 Many Cooks,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,9,ADD,Tyler Conklin,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,9,ADD,Robert Tonyan,TE,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,9,ADD,Chiefs D/ST,D/ST,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,9,TRADE,Alexander Mattison,RB,Team HebAchi,2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,9,TRADE,Justin Jefferson,WR,Team HebAchi,2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,9,TEAM->TEAM,Packers D/ST,D/ST,Stiff Armed and Dangerous,2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,9,ADD,Isaiah Likely,TE,(FA),Team CTE,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,9,ADD,Joshua Palmer,WR,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,9,ADD,Kenyan Drake,RB,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,9,ADD,Seahawks D/ST,D/ST,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,9,ADD,Evan McPherson,K,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,9,DROP,Matthew Stafford,QB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,9,DROP,Jeff Wilson Jr.,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,9,DROP,Michael Gallup,WR,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,9,DROP,Derek Carr,QB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,9,DROP,Brett Maher,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,9,DROP,Hunter Henry,TE,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,9,DROP,Falcons D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,9,DROP,Bears D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,9,DROP,Daniel Jones,QB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,9,DROP,Chris Boswell,K,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,9,DROP,Steelers D/ST,D/ST,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,9,DROP,Panthers D/ST,D/ST,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,9,DROP,Russell Wilson,QB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,9,DROP,Brandon McManus,K,Team CTE,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,9,DROP,Greg Zuerlein,K,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,9,DROP,D'Ernest Johnson,RB,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,10,TEAM->TEAM,Trevor Lawrence,QB,Wakanda Forever,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,10,ADD,Jerick McKinnon,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,10,ADD,Saints D/ST,D/ST,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,10,ADD,Derek Carr,QB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,10,ADD,Greg Dulcich,TE,(FA),Team CTE,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,10,ADD,Matthew Wright,K,(FA),Team CTE,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,10,ADD,Mecole Hardman,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,10,ADD,Brett Maher,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,10,ADD,Deshaun Watson,QB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,10,ADD,Jimmy Garoppolo,QB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,10,ADD,Jeff Wilson Jr.,RB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,10,ADD,Cairo Santos,K,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,10,ADD,Daniel Jones,QB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,10,DROP,Caleb Huntley,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,10,DROP,Marcus Mariota,QB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,10,DROP,Devin Duvernay,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,10,DROP,Will Dissly,TE,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,10,DROP,Robert Tonyan,TE,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,10,DROP,Chargers D/ST,D/ST,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,10,DROP,Marquez Valdes-Scantling,WR,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,10,DROP,Chiefs D/ST,D/ST,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,10,DROP,Matt Prater,K,Team CTE,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,10,DROP,Cam Akers,RB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,10,DROP,Eno Benjamin,RB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,10,DROP,Mike Gesicki,TE,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,11,ADD,Rachaad White,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,11,ADD,Van Jefferson,WR,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,11,TEAM->TEAM,Brett Maher,K,Wakanda Forever,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,11,ADD,Robbie Gould,K,(FA),Team CTE,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,11,TEAM->TEAM,Kenyan Drake,RB,Stiff Armed and Dangerous,Team CTE,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,11,ADD,Cole Kmet,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,11,TEAM->TEAM,Cairo Santos,K,The Chase Is On,Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,11,ADD,Trey McBride,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,11,ADD,Kadarius Toney,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,11,ADD,Tyler Bass,K,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,11,ADD,Mike Gesicki,TE,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,11,TEAM->TEAM,Joshua Palmer,WR,The Chase Is On,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,11,ADD,Marquez Valdes-Scantling,WR,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,11,ADD,Commanders D/ST,D/ST,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,11,ADD,Greg Joseph,K,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,11,DROP,Deon Jackson,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,11,DROP,Derek Carr,QB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,11,DROP,Melvin Gordon III,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,11,DROP,Taysom Hill,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,11,DROP,Carson Wentz,QB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,11,DROP,Colts D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,11,DROP,Chase Edmonds,RB,Team CTE,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,11,DROP,Dolphins D/ST,D/ST,Team CTE,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,11,DROP,Matthew Wright,K,Team CTE,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,11,DROP,Mecole Hardman,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,11,DROP,Evan McPherson,K,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,11,DROP,Cade York,K,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,12,ADD,Chiefs D/ST,D/ST,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,12,ADD,Noah Fant,TE,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,12,ADD,Austin Hooper,TE,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,12,ADD,Samaje Perine,RB,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,12,ADD,Juwan Johnson,TE,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,12,ADD,Christian Watson,WR,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,12,ADD,Colts D/ST,D/ST,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,12,ADD,Treylon Burks,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,12,TEAM->TEAM,Seahawks D/ST,D/ST,Stiff Armed and Dangerous,Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,12,ADD,Darius Slayton,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,12,ADD,Cam Akers,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,12,ADD,Panthers D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,12,DROP,Darrell Henderson Jr.,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,12,DROP,Cairo Santos,K,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,12,DROP,Kadarius Toney,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,12,DROP,Romeo Doubs,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,12,DROP,Marquez Valdes-Scantling,WR,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,12,DROP,Tyler Allgeier,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,12,DROP,Josh Reynolds,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,12,DROP,Greg Joseph,K,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,13,ADD,Foster Moreau,TE,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,13,ADD,Mack Hollins,WR,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,13,ADD,Zonovan Knight,RB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,13,ADD,Derek Carr,QB,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,13,ADD,Logan Thomas,TE,(FA),The Chase Is On,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,13,ADD,Browns D/ST,D/ST,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,13,ADD,Zay Jones,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,13,DROP,Darnell Mooney,WR,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2022,13,DROP,Zach Ertz,TE,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,13,DROP,James Robinson,RB,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,13,DROP,Saints D/ST,D/ST,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,13,DROP,Austin Hooper,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,13,DROP,Drake London,WR,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,13,DROP,Chuba Hubbard,RB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,13,DROP,Colts D/ST,D/ST,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,13,DROP,Curtis Samuel,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,14,ADD,Taysom Hill,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,14,ADD,Drake London,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,14,ADD,Chuba Hubbard,RB,(FA),Team CTE,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,14,ADD,Brandon McManus,K,(FA),Team CTE,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,14,ADD,Travis Homer,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,14,ADD,Evan McPherson,K,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,14,ADD,Raiders D/ST,D/ST,(FA),2 Many Cooks,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,14,ADD,Michael Gallup,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,14,ADD,Colts D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,14,ADD,Curtis Samuel,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,14,ADD,Greg Zuerlein,K,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,14,ADD,Steelers D/ST,D/ST,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,14,DROP,Robbie Gould,K,Team CTE,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,14,DROP,Logan Thomas,TE,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,14,DROP,Samaje Perine,RB,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,14,DROP,Juwan Johnson,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2022,14,DROP,Elijah Mitchell,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,14,DROP,Wan'Dale Robinson,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,14,DROP,Jimmy Garoppolo,QB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2022,14,DROP,George Pickens,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,14,DROP,Trey McBride,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,14,DROP,Rams D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,14,DROP,Odell Beckham Jr.,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,14,DROP,Mike Gesicki,TE,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,15,ADD,Chigoziem Okonkwo,TE,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,15,ADD,Saints D/ST,D/ST,(FA),Team CTE,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,15,DROP,Kenyan Drake,RB,Team CTE,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2022,15,DROP,Foster Moreau,TE,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,15,DROP,Derek Carr,QB,The Chase Is On,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2022,16,ADD,Jaguars D/ST,D/ST,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,16,ADD,Rams D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,16,ADD,Donovan Peoples-Jones,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,16,ADD,Zack Moss,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,16,ADD,Brock Purdy,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,16,ADD,Gardner Minshew,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,16,ADD,Marlon Mack,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,16,DROP,Kyren Williams,RB,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,16,DROP,Panthers D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,16,DROP,Michael Gallup,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2022,16,DROP,D'Onta Foreman,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,16,DROP,Cole Kmet,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,16,DROP,Seahawks D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2022,17,ADD,Tyler Allgeier,RB,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,17,ADD,James Cook,RB,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,17,ADD,Cole Kmet,TE,(FA),Stiff Armed and Dangerous,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,17,ADD,Chargers D/ST,D/ST,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,17,ADD,Giants D/ST,D/ST,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,17,DROP,Titans D/ST,D/ST,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,17,DROP,Noah Fant,TE,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,17,DROP,Chigoziem Okonkwo,TE,Stiff Armed and Dangerous,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2022,17,DROP,Broncos D/ST,D/ST,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,17,DROP,Marlon Mack,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2022,17,DROP,Alexander Mattison,RB,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2022,17,DROP,Raiders D/ST,D/ST,2 Many Cooks,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot

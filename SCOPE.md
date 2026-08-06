@@ -383,6 +383,87 @@ Build time went **40s → 4s** by memoising `owner_crosswalk` / `owner_display_n
 
 ---
 
+## 3e. Transaction analysis — ✅ built 2026-08-06
+
+New page `pages/16_🔄_Transaction_Analysis.py` over `ffapp/espn/transactions.py` (pull + reconstruct) and `ffapp/metrics/transaction_analysis.py` (scoring). Grades the season *after* the draft: the waiver wire and the trade market.
+
+### The finding that shaped the design: the transaction log is forward-only
+
+`league.recent_activity()` gives exact move types and FAAB bids, but **ESPN only serves it for the current season**. Probed directly across both endpoint shapes the library uses:
+
+| Season | `/seasons/{year}/…/communication/` | `/leagueHistory/…` |
+|---|---|---|
+| 2021–2025 | **404** "This Communication Group does not exist" | 404 |
+| 2026 | **200** (0 topics — season not started) | 404 |
+
+There is no workaround. That data is gone for 2019–2025.
+
+**But `box_scores(week=N)` works for every season back to 2019**, despite the library docstring claiming it is current-season only. Each call returns every team's full roster — bench included — with lineup slot and points. So weekly snapshots are the substrate and the activity feed is only a labelling layer.
+
+What a backfilled season loses: FAAB bids (permanently), churn inside one week (added Tuesday, dropped Friday), and the trade/waiver distinction when a move has no same-week return leg. Every move carries a `Source` column (`activity` vs `snapshot`) so the UI never implies more certainty than it has.
+
+⚠️ **Consequence: the current season must be captured in-season.** Both weekly-update scripts now call `transactions.build_season()` after writing the workbook. A week missed there can still have its *snapshots* backfilled, but never its real labels.
+
+### Trade detection needs same-pair matching
+
+The obvious heuristic — "a team both gained and lost a player this week" — labelled **37 trades in a season that had 2**, because any team active on the waiver wire trips it. Correct version requires a genuine two-way swap between the *same pair* in the same week. Pennoni Younglings 2024 then yields 222 adds, 223 drops, 4 traded players (2 trades), and 34 `TEAM->TEAM` moves left honestly ambiguous.
+
+### Scoring: started points above replacement (SPAR)
+
+- **Started, not rostered** — points only count in weeks the player occupied a lineup slot. Raw rostered points reward hoarding a bench.
+- **Above replacement** — an add is worth what it beat. Replacement = the 25th percentile of points among everyone rostered at that position that week, approximating the fringe player then available free. It must be estimated from rostered players because ESPN keeps no weekly scores for unowned players, which makes SPAR mildly conservative.
+- **Drops scored separately** by what the player went on to start *for someone else*; points scored while unrostered are ignored.
+
+Adds are deliberately **not** paired against the specific player dropped for them: at weekly granularity a team making three moves at once gives nine possible pairings and no way to choose. Replacement level sidesteps the pairing problem.
+
+### Bug caught in build: the championship week was being dropped
+
+The pull originally ended at `current_week - 1`, which reads as obviously correct and is not. On a **finished** season ESPN parks `current_week` at the final scoring period, so 2024 — which has scores in all 17 weeks — stopped at 16, losing the championship week and 191 player-weeks per league. Same family as the twelve season-boundary bugs in §2b, and the fix is to use the module written for it: `week_utils.completed_weeks()`, which counts weeks where *anyone* scored. Pinned by a regression test that asserts `completed_weeks > current_week - 1` on a finished season.
+
+### ⚠️ Measured: this grades transactions, not managers
+
+`tools/check_transactions.py` runs 33 correctness assertions against synthetic rosters with hand-computed answers, then measures the metric itself. Over **413 team-seasons from 37 league-seasons**:
+
+| | |
+|---|---|
+| corr(Moves, SPAR) | **+0.69** — SPAR substantially tracks sheer activity |
+| corr(SPAR, Wins) | **+0.01** (n=351) — nothing |
+| corr(SPAR per Add, Wins) | **−0.06** — volume-adjusting does not rescue it |
+| corr(Moves, Wins) | +0.09 |
+| YoY SPAR, same team | +0.27 (n=153) — mostly persistence of *being active* |
+
+Compare the draft grade at **r = −0.51** against final standing. The reason is baseline, not a bug: a team that drafted well has little to gain from the wire and scores low for a good reason, while a team patching a broken draft can post a huge SPAR and still lose. So the column is named **Transaction Grade**, and the module docstring and the page both state these numbers — the same treatment the draft page's ACCURACY got after its persistence measured r = +0.08.
+
+> An earlier draft of this section quoted r = +0.66 / −0.06 / +0.12 from a 12-league-season sample. The full backfill moved `SPAR per Add` vs wins from +0.12 to −0.04, which flips the claim that volume-adjusting helps. Numbers above are the full-sample ones.
+
+⬜ **To make this predict wins** you need the counterfactual the snapshots cannot supply alone: what the team *would* have started standing pat. That is a lineup simulation over the drafted roster — reuse the slot-constrained DP in `draft_analysis.py` — and is a follow-on, not a fix.
+
+### Data — 37 league-seasons, 12 leagues, 2.9 MB
+
+`data/transactions/<League> Weekly Rosters <Year>.csv.gz` (gzipped: 24 MB → 2 MB across a full backfill, 11.5×; pandas infers the codec) and `<League> Moves <Year>.csv` (plain, small, worth diffing). Backfill with `python pipeline/backfill_transactions.py --skip-existing` — ~17 requests per league-season; 2019 is a hard floor.
+
+| League | Seasons |
+|---|---|
+| Game of Yards! | 2019–2025 |
+| EBC League | 2021–2025 |
+| 0755 Fantasy Football, Pennoni Younglings, THE BEST OF THE BEST | 2022–2025 |
+| RRR On Premise *(Ava's, renamed Philly Extra Special in 2025)* | 2021–2024 |
+| Brown Munde | 2023–2025 |
+| Family Fantasy | 2024–2025 |
+| OnP Fantasy, Operators Football League, Ross' Fantasy League, The Girl's Room | 2025 |
+
+⬜ **4 real gaps — credentials, not missing leagues.** `THE BEST OF THE BEST` 2019–2021 and `The Girl's Room` 2024 return `ESPNAccessDenied`: the stored cookie cannot read them. The backfill script now separates these from `ESPNInvalidLeague` (league genuinely did not exist), because lumping them together hid the distinction entirely.
+
+### Two crashes found in the build
+
+**The championship week was silently dropped** — see above.
+
+**An emoji killed an entire league.** `The Girl's Room 💞🏈` raised `UnicodeEncodeError` on the cp1252 Windows console. Because `build_season` prints its header *before* fetching anything, the exception fired ahead of the first request and the league was recorded as failed with no data — not a logging nuisance but total data loss for that league. Fixed with an encode-safe `transactions.say()` rather than reconfiguring global stdout, which a library has no business doing. Any script printing ESPN league names is exposed to this.
+
+Beyond this page, the weekly snapshots are the missing input for **best-possible-record simulation** and **start/sit analysis** — both previously blocked on not having weekly player scores.
+
+---
+
 ## 4. Feature backlog
 
 Items carried over from `todo.txt` are marked ⭐.

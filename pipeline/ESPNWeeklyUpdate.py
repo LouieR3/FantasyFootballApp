@@ -27,6 +27,7 @@ from ffapp.metrics.monte_carlo_odds import (
 from ffapp.metrics.owner_overrides import resolve_owner, owner_id_for
 from ffapp.espn import week_utils
 from ffapp.espn import league_settings
+from ffapp.espn import transactions
 from paths import LEAGUES_DIR
 
 
@@ -619,5 +620,15 @@ upsets_df.to_excel(writer, sheet_name="Biggest Upsets")
 if playoff_df is not None:
     playoff_df.to_excel(writer, sheet_name="Playoff Results", index=False)
 writer.close()
+
+# Weekly roster snapshots plus this season's add/drop/trade log. Must run
+# in-season: ESPN serves the transaction feed for the current season only and
+# 404s it forever after, so a week missed here can never be recovered with its
+# real labels (the snapshots themselves stay backfillable). Isolated so a
+# transaction failure cannot lose the workbook written just above.
+try:
+    transactions.build_season(league, leagueName, year)
+except Exception as e:
+    print(f"  transactions skipped for {leagueName}: {type(e).__name__}: {e}")
 
 print("--- %s seconds ---" % (time.time() - start_time))

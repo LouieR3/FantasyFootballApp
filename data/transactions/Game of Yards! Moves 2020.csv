@@ -1,0 +1,575 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Game of Yards!,2020,2,TRADE,Ezekiel Elliott,RB,Team Vellapanti,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,2,TRADE,Wil Lutz,K,Team Vellapanti,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,2,ADD,Benny Snell Jr.,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,2,ADD,Devonta Freeman,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,2,ADD,Nyheim Hines,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,2,ADD,Josh Lambo,K,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,2,TRADE,Alvin Kamara,RB,Bhambhwani Pawan Dilip,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,2,TRADE,Harrison Butker,K,Bhambhwani Pawan Dilip,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,2,ADD,David Njoku,TE,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,2,ADD,Greg Olsen,TE,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,2,TEAM->TEAM,Eric Ebron,TE,Team BIGMADBLUE,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,2,ADD,Peyton Barber,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,2,ADD,Jordan Reed,TE,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,2,TEAM->TEAM,Bears D/ST,D/ST,Team BIGMADBLUE,Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,2,ADD,Washington D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,2,ADD,Robby Anderson,WR,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,2,ADD,Logan Thomas,TE,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,2,ADD,Adrian Peterson,RB,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,2,ADD,Seahawks D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,2,ADD,Chargers D/ST,D/ST,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,2,ADD,James Robinson,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,2,ADD,Mason Crosby,K,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,2,ADD,Parris Campbell,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,2,ADD,Malcolm Brown,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,2,ADD,Jamison Crowder,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,2,DROP,Tevin Coleman,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,2,DROP,Kerryon Johnson,RB,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,2,DROP,Tyler Boyd,WR,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,2,DROP,Darren Fells,TE,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,2,DROP,Marlon Mack,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,2,DROP,Jordan Howard,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,2,DROP,Golden Tate,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,2,DROP,Zane Gonzalez,K,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,2,DROP,Jimmy Graham,TE,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,2,DROP,Ian Thomas,TE,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,2,DROP,Chris Thompson,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,2,DROP,Matt Breida,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,2,DROP,Jack Doyle,TE,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,2,DROP,Sony Michel,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,2,DROP,Jalen Reagor,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,2,DROP,Gerald Everett,TE,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,3,ADD,Tyler Boyd,WR,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,3,ADD,Jimmy Graham,TE,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,3,ADD,Russell Gage,WR,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,3,TEAM->TEAM,Leonard Fournette,RB,Multiple Scoregasm,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,3,ADD,Browns D/ST,D/ST,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,3,ADD,Darrell Henderson Jr.,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,3,ADD,Marquez Valdes-Scantling,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,3,ADD,Rams D/ST,D/ST,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,3,ADD,Daniel Carlson,K,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,3,ADD,Jerick McKinnon,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,3,ADD,Myles Gaskin,RB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,3,TEAM->TEAM,Sammy Watkins,WR,Team BIGMADBLUE,Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,3,ADD,Mo Alie-Cox,TE,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,3,ADD,Dion Lewis,RB,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,3,ADD,Gardner Minshew II,QB,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,3,ADD,CeeDee Lamb,WR,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,3,ADD,Drew Sample,TE,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,3,ADD,Justin Herbert,QB,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,3,ADD,N'Keal Harry,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,3,ADD,Dalton Schultz,TE,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,3,ADD,Rodrigo Blankenship,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,3,ADD,Jerry Jeudy,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,3,ADD,John Brown,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,3,ADD,Cardinals D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,3,ADD,Laviska Shenault Jr.,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,3,ADD,Mike Davis,RB,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,3,DROP,Broncos D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,3,DROP,Alshon Jeffery,WR,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,3,DROP,Benny Snell Jr.,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,3,DROP,Chiefs D/ST,D/ST,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,3,DROP,Kendrick Bourne,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,3,DROP,Nyheim Hines,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,3,DROP,Josh Lambo,K,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,3,DROP,Courtland Sutton,WR,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,3,DROP,Sterling Shepard,WR,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,3,DROP,Greg Olsen,TE,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,3,DROP,Eric Ebron,TE,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,3,DROP,Peyton Barber,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,3,DROP,Daniel Jones,QB,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,3,DROP,Logan Thomas,TE,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,3,DROP,Adrian Peterson,RB,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,3,DROP,Seahawks D/ST,D/ST,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,3,DROP,Mecole Hardman,WR,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,3,DROP,Christian Kirk,WR,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,3,DROP,Henry Ruggs III,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,3,DROP,Eagles D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,3,DROP,Brandin Cooks,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,3,DROP,Chris Herndon,TE,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,3,DROP,Ka'imi Fairbairn,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,4,ADD,Broncos D/ST,D/ST,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,4,ADD,Ryan Fitzpatrick,QB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,4,TEAM->TEAM,Malcolm Brown,RB,Wakanda Forever,Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,4,ADD,Rex Burkhead,RB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,4,ADD,Texans D/ST,D/ST,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,4,TEAM->TEAM,Latavius Murray,RB,Team BIGMADBLUE,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,4,ADD,Damien Harris,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,4,ADD,Sterling Shepard,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,4,ADD,Hunter Renfrow,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,4,ADD,Tevin Coleman,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,4,TEAM->TEAM,Joshua Kelley,RB,Muqaddar Ka Sikandar,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,4,ADD,Stephen Gostkowski,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,4,ADD,Greg Olsen,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,4,ADD,Eric Ebron,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,4,ADD,Brian Hill,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,4,ADD,Alshon Jeffery,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,4,ADD,Justin Jefferson,WR,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,4,ADD,Randy Bullock,K,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,4,TRADE,DK Metcalf,WR,Team BIGMADBLUE,Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,4,ADD,Frank Gore,RB,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,4,TRADE,Gardner Minshew II,QB,Team BIGMADBLUE,Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,4,ADD,Adrian Peterson,RB,(FA),Team Amijaz,{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,4,ADD,Chiefs D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,4,ADD,Ka'imi Fairbairn,K,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,4,ADD,Seahawks D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,4,TRADE,Todd Gurley II,RB,Multiple Scoregasm,Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,4,TRADE,Aaron Rodgers,QB,Multiple Scoregasm,Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,4,ADD,Jeff Wilson Jr.,RB,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,4,ADD,Greg Ward,WR,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,4,DROP,Tony Pollard,RB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,4,DROP,Browns D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,4,DROP,DeSean Jackson,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,4,DROP,Daniel Carlson,K,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,4,DROP,Carson Wentz,QB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,4,DROP,Jamaal Williams,RB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,4,DROP,Washington D/ST,D/ST,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,4,DROP,Dion Lewis,RB,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,4,DROP,Drew Sample,TE,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,4,DROP,Justin Herbert,QB,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,4,DROP,N'Keal Harry,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,4,DROP,Jerry Jeudy,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,4,DROP,Preston Williams,WR,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,4,DROP,Darius Slayton,WR,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,4,DROP,Jets D/ST,D/ST,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,5,ADD,Eagles D/ST,D/ST,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,5,ADD,Justin Jackson,RB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,5,TRADE,DeVante Parker,WR,Muqaddar Ka Sikandar,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,5,TEAM->TEAM,Seahawks D/ST,D/ST,Team BIGMADBLUE,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,5,ADD,Sony Michel,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,5,ADD,Cowboys D/ST,D/ST,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,5,ADD,Jimmy Garoppolo,QB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,5,ADD,Allen Lazard,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,5,ADD,Tim Patrick,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,5,ADD,D'Ernest Johnson,RB,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,5,ADD,Chase Edmonds,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,5,ADD,Daniel Carlson,K,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,5,ADD,Justin Herbert,QB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,5,ADD,Brandon Aiyuk,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,5,TRADE,Jarvis Landry,WR,Bhambhwani Pawan Dilip,Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,5,ADD,Zane Gonzalez,K,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,5,ADD,Robert Tonyan,TE,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,5,DROP,Broncos D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,5,DROP,Ryan Fitzpatrick,QB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,5,DROP,Malcolm Brown,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,5,DROP,Vikings D/ST,D/ST,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,5,DROP,Rex Burkhead,RB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,5,DROP,Texans D/ST,D/ST,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,5,DROP,Sterling Shepard,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,5,DROP,Hunter Renfrow,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,5,DROP,Matt Prater,K,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,5,DROP,Joe Burrow,QB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,5,DROP,Brian Hill,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,5,DROP,Marquez Valdes-Scantling,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,5,DROP,Boston Scott,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,6,ADD,Chase Claypool,WR,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,6,ADD,Ryan Fitzpatrick,QB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,6,TRADE,Chris Godwin,WR,Team TitBit,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,6,TRADE,Kyler Murray,QB,Team TitBit,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,6,ADD,Andy Dalton,QB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,6,TEAM->TEAM,T.Y. Hilton,WR,Fresh Prince  Of Hel-Aire,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,6,ADD,La'Mical Perine,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,6,ADD,Dolphins D/ST,D/ST,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,6,TRADE,Melvin Gordon III,RB,Wakanda Forever,Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,6,TRADE,Matt Ryan,QB,Wakanda Forever,Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,6,TRADE,Michael Gallup,WR,Wakanda Forever,Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,6,ADD,Trey Burton,TE,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,6,ADD,Brandin Cooks,WR,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,6,ADD,Cameron Brate,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,6,TRADE,Drew Brees,QB,Team Vellapanti,Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,6,TRADE,Jimmy Graham,TE,Team Vellapanti,Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,6,ADD,Washington D/ST,D/ST,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,6,TEAM->TEAM,Phillip Lindsay,RB,Team TitBit,Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,6,ADD,Nick Foles,QB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,6,ADD,Henry Ruggs III,WR,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,6,ADD,Giants D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,6,TRADE,Kenyan Drake,RB,Muqaddar Ka Sikandar,Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,6,TRADE,Bears D/ST,D/ST,Fresh Prince  Of Hel-Aire,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,6,TRADE,Kirk Cousins,QB,Fresh Prince  Of Hel-Aire,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,6,ADD,Jerry Jeudy,WR,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,6,ADD,Joey Slye,K,(FA),Team Amijaz,{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,6,ADD,Darren Fells,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,6,ADD,Jason Sanders,K,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,6,TRADE,Mark Ingram II,RB,Team BIGMADBLUE,Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,6,DROP,Chargers D/ST,D/ST,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,6,DROP,Mo Alie-Cox,TE,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,6,DROP,Dak Prescott,QB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,6,DROP,Seahawks D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,6,DROP,Cowboys D/ST,D/ST,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,6,DROP,Jimmy Garoppolo,QB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,6,DROP,Tevin Coleman,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,6,DROP,Tim Patrick,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,6,DROP,Stephen Gostkowski,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,6,DROP,Russell Gage,WR,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,6,DROP,Chris Boswell,K,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,6,DROP,Blake Jarwin,TE,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,6,DROP,Greg Olsen,TE,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,6,DROP,Alshon Jeffery,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,6,DROP,Brandon Aiyuk,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,6,DROP,Zane Gonzalez,K,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,6,DROP,Robbie Gould,K,Team Amijaz,(FA),{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,6,DROP,Chiefs D/ST,D/ST,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,6,DROP,Greg Ward,WR,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,7,TEAM->TEAM,DJ Moore,WR,Team Amijaz,Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,7,ADD,Tua Tagovailoa,QB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,7,ADD,Graham Gano,K,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,7,TRADE,Dallas Goedert,TE,Muqaddar Ka Sikandar,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,7,TRADE,Jarvis Landry,WR,Muqaddar Ka Sikandar,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,7,TRADE,Jimmy Graham,TE,Fresh Prince  Of Hel-Aire,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,7,ADD,Browns D/ST,D/ST,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,7,ADD,Travis Fulgham,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,7,ADD,Ryan Succop,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,7,ADD,Jamaal Williams,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,7,ADD,Darius Slayton,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,7,ADD,J.D. McKissic,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,7,ADD,Carson Wentz,QB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,7,ADD,Chargers D/ST,D/ST,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,7,TRADE,Zach Ertz,TE,Bhambhwani Pawan Dilip,Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,7,ADD,Jalen Reagor,WR,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,7,ADD,Brandon McManus,K,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,7,TEAM->TEAM,Marvin Jones Jr.,WR,Multiple Scoregasm,Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,7,ADD,Chiefs D/ST,D/ST,(FA),Team Amijaz,{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,7,ADD,Tee Higgins,WR,(FA),Team Amijaz,{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,7,ADD,Stephen Gostkowski,K,(FA),Team Amijaz,{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,7,ADD,Giovani Bernard,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,7,ADD,Antonio Brown,WR,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,7,ADD,Mike Williams,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,7,ADD,Boston Scott,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,7,TRADE,DeVante Parker,WR,Bhambhwani Pawan Dilip,Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,7,DROP,Greg Zuerlein,K,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,7,DROP,Leonard Fournette,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,7,DROP,Ryan Fitzpatrick,QB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,7,DROP,Andy Dalton,QB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,7,DROP,T.Y. Hilton,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,7,DROP,La'Mical Perine,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,7,DROP,Laviska Shenault Jr.,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,7,DROP,Cameron Brate,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,7,DROP,Jordan Reed,TE,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,7,DROP,Washington D/ST,D/ST,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,7,DROP,Nick Foles,QB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,7,DROP,Joey Slye,K,Team Amijaz,(FA),{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,7,DROP,Eric Ebron,TE,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,8,ADD,Joey Slye,K,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,8,ADD,JaMycal Hasty,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,8,ADD,Scotty Miller,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,8,ADD,Rashard Higgins,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,8,ADD,DeeJay Dallas,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,8,ADD,Malcolm Brown,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,8,ADD,Brandon Aiyuk,WR,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,8,ADD,Titans D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,8,TEAM->TEAM,Jerick McKinnon,RB,Fresh Prince  Of Hel-Aire,Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,8,ADD,Logan Thomas,TE,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,8,ADD,La'Mical Perine,RB,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,8,ADD,Sterling Shepard,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,8,ADD,Joe Burrow,QB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,8,TEAM->TEAM,Julian Edelman,WR,Pain Inflictors,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,8,ADD,Corey Davis,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,8,ADD,Eric Ebron,TE,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,8,ADD,Nelson Agholor,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,8,ADD,Cole Beasley,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,8,ADD,Washington D/ST,D/ST,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,8,ADD,Wayne Gallman,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,8,ADD,Gerald Everett,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,8,ADD,Leonard Fournette,RB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,8,ADD,Broncos D/ST,D/ST,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,8,TEAM->TEAM,Jason Sanders,K,Muqaddar Ka Sikandar,Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,8,ADD,Derek Carr,QB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,8,ADD,Dan Bailey,K,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,8,ADD,Harrison Bryant,TE,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,8,TEAM->TEAM,Jamaal Williams,RB,Wakanda Forever,Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,8,ADD,Tevin Coleman,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,8,DROP,D'Ernest Johnson,RB,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,8,DROP,Graham Gano,K,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,8,DROP,Browns D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,8,DROP,Odell Beckham Jr.,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,8,DROP,Dalton Schultz,TE,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,8,DROP,Ryan Succop,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,8,DROP,Darius Slayton,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,8,DROP,J.D. McKissic,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,8,DROP,Jake Elliott,K,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,8,DROP,Sammy Watkins,WR,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,8,DROP,Henry Ruggs III,WR,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,8,DROP,Giants D/ST,D/ST,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,8,DROP,J.K. Dobbins,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,8,DROP,Brandon McManus,K,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,8,DROP,Marvin Jones Jr.,WR,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,8,DROP,Kirk Cousins,QB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,8,DROP,Jerry Jeudy,WR,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,8,DROP,Darren Fells,TE,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,8,DROP,Mark Ingram II,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,8,DROP,Mike Williams,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,9,ADD,Giants D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,9,ADD,Jordan Reed,TE,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,9,TRADE,Derek Carr,QB,Team Vellapanti,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,9,ADD,Marvin Jones Jr.,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,9,ADD,J.K. Dobbins,RB,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,9,ADD,Tyler Bass,K,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,9,TEAM->TEAM,DeeJay Dallas,RB,Pain Inflictors,Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,9,ADD,Darius Slayton,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,9,ADD,Dalton Schultz,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,9,TRADE,Justin Jackson,RB,Team TitBit,Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,9,ADD,Jerry Jeudy,WR,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,9,TRADE,Mike Gesicki,TE,Bhambhwani Pawan Dilip,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,9,ADD,Jordan Howard,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,9,ADD,Packers D/ST,D/ST,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,9,ADD,Ryan Succop,K,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,9,TRADE,Gerald Everett,TE,Muqaddar Ka Sikandar,Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,9,ADD,Texans D/ST,D/ST,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,9,ADD,Matt Breida,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,9,ADD,Tony Pollard,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,9,DROP,Tua Tagovailoa,QB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,9,DROP,Scotty Miller,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,9,DROP,Titans D/ST,D/ST,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,9,DROP,Frank Gore,RB,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,9,DROP,Gardner Minshew II,QB,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,9,DROP,Nelson Agholor,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,9,DROP,Wayne Gallman,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,9,DROP,Broncos D/ST,D/ST,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,9,DROP,Jason Sanders,K,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,9,DROP,Emmanuel Sanders,WR,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,9,DROP,David Njoku,TE,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,9,DROP,Giovani Bernard,RB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,9,DROP,Chargers D/ST,D/ST,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,9,DROP,Harrison Bryant,TE,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,10,TRADE,DeeJay Dallas,RB,Multiple Scoregasm,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,10,TRADE,Chris Carson,RB,Multiple Scoregasm,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,10,TRADE,A.J. Brown,WR,Multiple Scoregasm,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,10,ADD,Curtis Samuel,WR,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,10,TEAM->TEAM,Washington D/ST,D/ST,Muqaddar Ka Sikandar,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,10,ADD,Wayne Gallman,RB,(FA),Team Amijaz,{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,10,ADD,Taysom Hill,QB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,10,ADD,Mike Williams,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,10,ADD,Irv Smith Jr.,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,10,ADD,Alshon Jeffery,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,10,ADD,Kalen Ballage,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,10,ADD,Giovani Bernard,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,10,ADD,Jason Sanders,K,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,10,ADD,Jakobi Meyers,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,10,ADD,Vikings D/ST,D/ST,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,10,ADD,Duke Johnson,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,10,ADD,Christian Kirk,WR,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,10,ADD,Mark Ingram II,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,10,TRADE,Ezekiel Elliott,RB,Bhambhwani Pawan Dilip,Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,10,TRADE,Mike Evans,WR,Bhambhwani Pawan Dilip,Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,10,ADD,J.D. McKissic,RB,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,10,ADD,Salvon Ahmed,RB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,10,DROP,A.J. Green,WR,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,10,DROP,JaMycal Hasty,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,10,DROP,Rashard Higgins,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,10,DROP,Adrian Peterson,RB,Team Amijaz,(FA),{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,10,DROP,La'Mical Perine,RB,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,10,DROP,J.K. Dobbins,RB,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,10,DROP,Boston Scott,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,10,DROP,Cole Beasley,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,10,DROP,Darius Slayton,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,10,DROP,Dalton Schultz,TE,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,10,DROP,Joe Burrow,QB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,10,DROP,Dan Bailey,K,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,10,DROP,Jordan Howard,RB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,10,DROP,Marquise Brown,WR,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,10,DROP,Jamaal Williams,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,10,DROP,Tevin Coleman,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,10,DROP,Texans D/ST,D/ST,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,10,DROP,Matt Breida,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,10,DROP,Tony Pollard,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,11,ADD,Kyle Rudolph,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,11,ADD,Nyheim Hines,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,11,ADD,Chargers D/ST,D/ST,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,11,ADD,Joe Burrow,QB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,11,ADD,Cole Beasley,WR,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,11,ADD,Carlos Hyde,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,11,ADD,Rex Burkhead,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,11,TRADE,J.D. McKissic,RB,Multiple Scoregasm,Team Amijaz,{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,11,ADD,Browns D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,11,ADD,Tua Tagovailoa,QB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,11,ADD,Kirk Cousins,QB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,11,ADD,Adrian Peterson,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,11,ADD,Kerryon Johnson,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,11,TEAM->TEAM,Tyler Higbee,TE,Wakanda Forever,Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,11,ADD,Cordarrelle Patterson,RB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,11,TRADE,Devin Singletary,RB,Team Amijaz,Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,11,ADD,Dalton Schultz,TE,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,11,ADD,Richard Rodgers,TE,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,11,DROP,Jarvis Landry,WR,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,11,DROP,Joey Slye,K,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,11,DROP,Derek Carr,QB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,11,DROP,DeeJay Dallas,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,11,DROP,Chase Edmonds,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,11,DROP,Irv Smith Jr.,TE,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,11,DROP,Alshon Jeffery,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,11,DROP,James White,RB,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,11,DROP,Giants D/ST,D/ST,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,11,DROP,Carson Wentz,QB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,11,DROP,Mark Ingram II,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,11,DROP,Zack Moss,RB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,11,DROP,Trey Burton,TE,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,11,DROP,Gerald Everett,TE,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,11,DROP,Corey Davis,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,12,TRADE,Bears D/ST,D/ST,Team Vellapanti,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,12,ADD,Joey Slye,K,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,12,ADD,James White,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,12,ADD,Jordan Wilkins,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,12,TRADE,Jordan Reed,TE,Bhambhwani Pawan Dilip,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,12,ADD,Derek Carr,QB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,12,ADD,Brian Hill,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,12,ADD,Giants D/ST,D/ST,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,ADD,Gus Edwards,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,ADD,Corey Davis,WR,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,ADD,Philip Rivers,QB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,ADD,Matt Gay,K,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,TEAM->TEAM,Nyheim Hines,RB,Muqaddar Ka Sikandar,Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,ADD,Ryan Fitzpatrick,QB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,ADD,Jordan Akins,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,12,ADD,Nelson Agholor,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,12,ADD,Benny Snell Jr.,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,12,ADD,Boston Scott,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,12,ADD,Bengals D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,12,ADD,Teddy Bridgewater,QB,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,12,ADD,Chase Edmonds,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,12,ADD,Carson Wentz,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,12,DROP,Kyle Rudolph,TE,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,12,DROP,Chargers D/ST,D/ST,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,12,DROP,Patriots D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,12,DROP,Joe Burrow,QB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,12,DROP,Carlos Hyde,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,12,DROP,Rex Burkhead,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,12,DROP,Alexander Mattison,RB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,12,DROP,49ers D/ST,D/ST,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,DROP,Sony Michel,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,DROP,Phillip Lindsay,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,DROP,Vikings D/ST,D/ST,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,DROP,Christian Kirk,WR,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,DROP,Tua Tagovailoa,QB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,DROP,Kirk Cousins,QB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,12,DROP,Parris Campbell,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,12,DROP,Adrian Peterson,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,12,DROP,Cordarrelle Patterson,RB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,12,DROP,Randy Bullock,K,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,12,DROP,Allen Lazard,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,12,DROP,Richard Rodgers,TE,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,13,ADD,Devontae Booker,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,13,ADD,Vikings D/ST,D/ST,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,13,TEAM->TEAM,Taysom Hill,QB,Muqaddar Ka Sikandar,Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,13,ADD,J.K. Dobbins,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,13,ADD,Frank Gore,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,13,ADD,Kyle Rudolph,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,13,ADD,Graham Gano,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,13,ADD,Jarvis Landry,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,13,ADD,Raiders D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,13,ADD,Jamaal Williams,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,13,ADD,Kirk Cousins,QB,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,13,ADD,Seahawks D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,13,ADD,Keke Coutee,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,13,ADD,Adrian Peterson,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,13,DROP,Jerry Jeudy,WR,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,13,DROP,Derek Carr,QB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,13,DROP,Brian Hill,RB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,13,DROP,Giants D/ST,D/ST,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,13,DROP,Gus Edwards,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,13,DROP,Matt Gay,K,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,13,DROP,Kalen Ballage,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,13,DROP,Nelson Agholor,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,13,DROP,Boston Scott,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,13,DROP,Rodrigo Blankenship,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,13,DROP,Joshua Kelley,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,13,DROP,Travis Fulgham,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,13,DROP,Bengals D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,13,DROP,Ka'imi Fairbairn,K,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,13,DROP,Browns D/ST,D/ST,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,13,DROP,Teddy Bridgewater,QB,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,13,DROP,Malcolm Brown,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,13,DROP,Kerryon Johnson,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,14,ADD,Peyton Barber,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,14,ADD,DeAndre Washington,RB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,14,ADD,Tim Patrick,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,14,ADD,Kalen Ballage,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,14,ADD,49ers D/ST,D/ST,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,14,ADD,Panthers D/ST,D/ST,(FA),Multiple Scoregasm,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,14,TEAM->TEAM,Seahawks D/ST,D/ST,Team BIGMADBLUE,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,14,ADD,Giants D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,14,ADD,Browns D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,14,DROP,Ryan Fitzpatrick,QB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,14,DROP,Vikings D/ST,D/ST,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,14,DROP,Jordan Wilkins,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,14,DROP,Benny Snell Jr.,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,14,DROP,Sterling Shepard,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,14,DROP,Raiders D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,14,DROP,Jamaal Williams,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,14,DROP,Bills D/ST,D/ST,Multiple Scoregasm,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2020,14,DROP,Jerick McKinnon,RB,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,14,DROP,Adrian Peterson,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,15,ADD,Patriots D/ST,D/ST,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,15,ADD,Cole Kmet,TE,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,15,ADD,T.Y. Hilton,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,15,ADD,Sony Michel,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,15,ADD,Bills D/ST,D/ST,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,15,ADD,Lynn Bowden Jr.,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,15,ADD,Nelson Agholor,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,15,ADD,Gus Edwards,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,15,ADD,Phillip Lindsay,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,15,ADD,Sterling Shepard,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,15,ADD,Jalen Hurts,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,15,ADD,Tony Pollard,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,15,DROP,Tim Patrick,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,15,DROP,Duke Johnson,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,15,DROP,Devontae Booker,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,15,DROP,Taysom Hill,QB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,15,DROP,Jordan Reed,TE,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,15,DROP,Seahawks D/ST,D/ST,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,15,DROP,Carson Wentz,QB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2020,15,DROP,Deebo Samuel,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,15,DROP,Justin Jackson,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,15,DROP,Mike Williams,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,15,DROP,Frank Gore,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,15,DROP,CeeDee Lamb,WR,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,16,ADD,Greg Zuerlein,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,16,ADD,Russell Gage,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,16,ADD,CeeDee Lamb,WR,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,16,ADD,Ito Smith,RB,(FA),Team BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,16,ADD,Baker Mayfield,QB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,16,ADD,Mike Williams,WR,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,16,ADD,Malcolm Brown,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,16,ADD,Jerick McKinnon,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,16,ADD,Marvin Hall,WR,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,16,ADD,Carlos Hyde,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,16,ADD,Dawson Knox,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,16,ADD,Emmanuel Sanders,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,16,DROP,DeAndre Washington,RB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2020,16,DROP,Giants D/ST,D/ST,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,16,DROP,Patriots D/ST,D/ST,Team BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2020,16,DROP,Cole Kmet,TE,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,16,DROP,Graham Gano,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,16,DROP,Clyde Edwards-Helaire,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,16,DROP,Jalen Reagor,WR,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,16,DROP,49ers D/ST,D/ST,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,16,DROP,Kyle Rudolph,TE,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,16,DROP,Phillip Lindsay,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,16,DROP,Sterling Shepard,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,16,DROP,Devonta Freeman,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,16,DROP,James White,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,17,ADD,Alexander Mattison,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,17,ADD,Sterling Shepard,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,17,ADD,Mike Boone,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,17,ADD,Rodrigo Blankenship,K,(FA),Team Amijaz,{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,17,ADD,Derek Carr,QB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,17,ADD,Boston Scott,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,17,ADD,Marquise Brown,WR,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,17,ADD,Ty Johnson,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,17,ADD,Ty Montgomery,RB,(FA),Fresh Prince  Of Hel-Aire,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,17,ADD,Irv Smith Jr.,TE,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,17,ADD,Dare Ogunbowale,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,17,ADD,Mitchell Trubisky,QB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2020,17,DROP,Jared Goff,QB,Team Amijaz,(FA),{E8084BA7-697B-4617-884B-A7697B7617C9},0,snapshot
+Game of Yards!,2020,17,DROP,Cam Newton,QB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,17,DROP,Julian Edelman,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,17,DROP,Kalen Ballage,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,17,DROP,Sony Michel,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,17,DROP,Russell Gage,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2020,17,DROP,Joe Mixon,RB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,17,DROP,Baker Mayfield,QB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2020,17,DROP,Lynn Bowden Jr.,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,17,DROP,Jerick McKinnon,RB,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,17,DROP,Marvin Hall,WR,Fresh Prince  Of Hel-Aire,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2020,17,DROP,Darrell Henderson Jr.,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2020,17,DROP,Peyton Barber,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot

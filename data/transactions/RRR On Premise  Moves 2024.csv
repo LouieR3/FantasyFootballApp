@@ -1,0 +1,470 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+RRR On Premise ,2024,2,ADD,Colby Parkinson,TE,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,2,ADD,Hayden Hurst,TE,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,2,ADD,Wan'Dale Robinson,WR,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,2,ADD,Alexander Mattison,RB,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,2,ADD,Texans D/ST,D/ST,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,2,ADD,Justin Fields,QB,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,2,ADD,Isaiah Likely,TE,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,2,ADD,Chargers D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,2,DROP,Kirk Cousins,QB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,2,DROP,Rome Odunze,WR,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,2,DROP,Jaleel McLaughlin,RB,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,2,DROP,Lions D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,2,DROP,Bengals D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,2,DROP,Will Levis,QB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,3,ADD,Derek Carr,QB,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,3,ADD,Rashid Shaheed,WR,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,3,ADD,Kareem Hunt,RB,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,3,ADD,Demarcus Robinson,WR,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,3,ADD,Jared Goff,QB,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,3,TEAM->TEAM,Jake Ferguson,TE,Stephen's Super Team,That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,3,ADD,Hunter Henry,TE,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,3,ADD,Cam Akers,RB,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,3,ADD,Raiders D/ST,D/ST,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,3,ADD,Alec Pierce,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,3,ADD,Geno Smith,QB,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,3,ADD,Jauan Jennings,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,3,ADD,Carson Steele,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,3,ADD,Buccaneers D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,3,ADD,Brenton Strange,TE,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,3,DROP,Chase Brown,RB,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,3,DROP,Jerry Jeudy,WR,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,3,DROP,Hollywood Brown,WR,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,3,DROP,Matthew Stafford,QB,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,3,DROP,Colby Parkinson,TE,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,3,DROP,Vikings D/ST,D/ST,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,3,DROP,Blake Corum,RB,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,3,DROP,Ravens D/ST,D/ST, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,3,DROP,Caleb Williams,QB,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,3,DROP,Adonai Mitchell,WR,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,3,DROP,Alexander Mattison,RB,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,3,DROP,Ray Davis,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,3,DROP,Chargers D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,4,ADD,Sam Darnold,QB,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,4,ADD,Braelon Allen,RB,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,4,ADD,Mike Gesicki,TE,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,4,ADD,Allen Lazard,WR,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,4,ADD,Titans D/ST,D/ST,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,4,ADD,Rico Dowdle,RB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,4,ADD,Quentin Johnston,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,4,ADD,Bucky Irving,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,4,ADD,Rome Odunze,WR,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,4,TEAM->TEAM,Chiefs D/ST,D/ST,Master and commanders,Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,4,ADD,Seahawks D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,4,ADD,Vikings D/ST,D/ST,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,4,ADD,Chris Boswell,K,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,4,ADD,Zach Ertz,TE,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,4,ADD,Daniel Jones,QB,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,4,DROP,Javonte Williams,RB,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,4,DROP,Tyler Allgeier,RB,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,4,DROP,Demarcus Robinson,WR,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,4,DROP,Tua Tagovailoa,QB,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,4,DROP,Jaylen Warren,RB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,4,DROP,Brandin Cooks,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,4,DROP,Raiders D/ST,D/ST, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,4,DROP,Jake Bates,K,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,4,DROP,Alec Pierce,WR,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,4,DROP,Geno Smith,QB,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,4,DROP,Keon Coleman,WR,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,4,DROP,Gus Edwards,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,4,DROP,Isaiah Likely,TE,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,4,DROP,Buccaneers D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,5,ADD,Justice Hill,RB,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,5,ADD,Colby Parkinson,TE,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,5,ADD,Chase McLaughlin,K,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,5,ADD,Commanders D/ST,D/ST,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,5,ADD,Jaleel McLaughlin,RB,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,5,TEAM->TEAM,Chris Boswell,K,Texadelphia,Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,5,ADD,Tutu Atwell,WR,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,5,ADD,Matt Gay,K,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,5,ADD,Broncos D/ST,D/ST,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,5,ADD,Tucker Kraft,TE,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,5,ADD,Javonte Williams,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,5,ADD,Bills D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,5,ADD,Alexander Mattison,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,5,ADD,Keon Coleman,WR,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,5,ADD,Dontayvion Wicks,WR,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,5,ADD,Xavier Legette,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,5,ADD,Packers D/ST,D/ST,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,5,ADD,Chase Brown,RB,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,5,ADD,Austin Seibert,K,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,5,ADD,Erick All Jr.,TE,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,5,ADD,Tre Tucker,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,5,DROP,Cam Akers,RB,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,5,DROP,Jake Elliott,K,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,5,DROP,Ezekiel Elliott,RB,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,5,DROP,Greg Zuerlein,K,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,5,DROP,Saints D/ST,D/ST,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,5,DROP,Hunter Henry,TE,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,5,DROP,Allen Lazard,WR,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,5,DROP,Titans D/ST,D/ST, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,5,DROP,Zamir White,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,5,DROP,Carson Steele,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,5,DROP,Rome Odunze,WR,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,5,DROP,Chiefs D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,5,DROP,T.J. Hockenson,TE,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,5,DROP,Cameron Dicker,K,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,5,DROP,Darnell Mooney,WR,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,5,DROP,Cowboys D/ST,D/ST,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,5,DROP,Texans D/ST,D/ST,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,5,DROP,Zach Ertz,TE,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,5,DROP,Daniel Jones,QB,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,6,ADD,Geno Smith,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,6,ADD,Zach Ertz,TE,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,6,ADD,Eagles D/ST,D/ST,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,6,ADD,Antonio Gibson,RB,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,6,TEAM->TEAM,Alexander Mattison,RB,Kill Bills ,Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,6,TEAM->TEAM,Amari Cooper,WR,Master and commanders,That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,6,TEAM->TEAM,Braelon Allen,RB,Big Kirko,That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,6,ADD,Josh Downs,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,6,ADD,Jalen Tolbert,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,6,ADD,JuJu Smith-Schuster,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,6,ADD,Cade Otton,TE,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,6,ADD,Trey Sermon,RB,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,6,ADD,Tank Bigsby,RB,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,6,ADD,Kirk Cousins,QB,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,6,TEAM->TEAM,Dalton Schultz,TE,Stephen's Super Team,Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,6,ADD,Texans D/ST,D/ST,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,6,ADD,Buccaneers D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,6,ADD,Romeo Doubs,WR,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,6,ADD,Jake Bates,K,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,6,ADD,Darnell Mooney,WR,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,6,ADD,Tyrone Tracy Jr.,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,6,ADD,T.J. Hockenson,TE,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,6,ADD,Daniel Jones,QB,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,6,ADD,Theo Johnson,TE,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,6,DROP,Anthony Richardson,QB,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,6,DROP,Mike Williams,WR,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,6,DROP,Dolphins D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,6,DROP,Jake Moody,K,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,6,DROP,Aaron Rodgers,QB,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,6,DROP,Commanders D/ST,D/ST,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,6,DROP,Jaleel McLaughlin,RB,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,6,DROP,Derek Carr,QB,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,6,DROP,Mike Gesicki,TE,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,6,DROP,Trey Benson,RB,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,6,DROP,Taysom Hill,TE,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,6,DROP,Justin Herbert,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,6,DROP,Quentin Johnston,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,6,DROP,Seahawks D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,6,DROP,Keon Coleman,WR,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,6,DROP,Brian Robinson Jr.,RB,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,6,DROP,Jauan Jennings,WR,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,6,DROP,Xavier Legette,WR,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,6,DROP,Erick All Jr.,TE,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,6,DROP,Tre Tucker,WR,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,7,ADD,Tyler Allgeier,RB,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,7,ADD,Hunter Henry,TE,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,7,ADD,Jake Elliott,K,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,7,TEAM->TEAM,Colts D/ST,D/ST,Big Kirko,Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,7,TEAM->TEAM,Cade Otton,TE,Texadelphia,Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,7,ADD,Anthony Richardson,QB,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,7,ADD,Commanders D/ST,D/ST,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,7,ADD,DeMario Douglas,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,7,ADD,Bo Nix,QB,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,7,ADD,Rams D/ST,D/ST,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,7,ADD,Drake Maye,QB,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,7,TEAM->TEAM,Alexander Mattison,RB,Stephen's Super Team,Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,7,TEAM->TEAM,Jameson Williams,WR,Claytons Team of Experts,Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,7,ADD,Jaguars D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,7,ADD,Brian Robinson Jr.,RB,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,7,ADD,Allen Lazard,WR,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,7,ADD,Cameron Dicker,K,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,7,ADD,Bengals D/ST,D/ST,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,7,ADD,Noah Fant,TE,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,7,TEAM->TEAM,Jayden Reed,WR,Claytons Team of Experts,Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,7,ADD,Lions D/ST,D/ST,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,7,DROP,Rashid Shaheed,WR,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,7,DROP,Colby Parkinson,TE,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,7,DROP,Tyler Conklin,TE,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,7,DROP,Jared Goff,QB,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,7,DROP,Jalen Tolbert,WR,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,7,DROP,Trey Sermon,RB,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,7,DROP,Justin Fields,QB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,7,DROP,Dontayvion Wicks,WR,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,7,DROP,Texans D/ST,D/ST,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,7,DROP,Buccaneers D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,7,DROP,Tyjae Spears,RB,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,7,DROP,Gabe Davis,WR,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,7,DROP,Jets D/ST,D/ST,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,7,DROP,Cairo Santos,K,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,7,DROP,Justice Hill,RB,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,7,DROP,Brenton Strange,TE,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,7,DROP,Tutu Atwell,WR,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,8,ADD,Jalen Tolbert,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,8,ADD,Chiefs D/ST,D/ST,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,8,ADD,Ricky Pearsall,WR,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,8,ADD,Chargers D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,8,ADD,Jauan Jennings,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,8,ADD,Russell Wilson,QB,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,8,ADD,Rashod Bateman,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,8,ADD,Jalen McMillan,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,8,ADD,Jets D/ST,D/ST,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,8,ADD,Jaylen Warren,RB,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,8,TEAM->TEAM,Josh Downs,WR,Texadelphia,Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,8,TEAM->TEAM,Bo Nix,QB,Texadelphia,Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,8,ADD,Keon Coleman,WR,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,8,ADD,Ravens D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,8,ADD,Texans D/ST,D/ST,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,8,DROP,Brandon Aiyuk,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,8,DROP,Eagles D/ST,D/ST,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,8,DROP,JuJu Smith-Schuster,WR,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,8,DROP,DeMario Douglas,WR,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,8,DROP,Rams D/ST,D/ST,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,8,DROP,Zack Moss,RB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,8,DROP,Drake Maye,QB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,8,DROP,Jameson Williams,WR,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,8,DROP,Jaguars D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,8,DROP,Bills D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,8,DROP,Zach Charbonnet,RB,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,8,DROP,Lions D/ST,D/ST,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,9,ADD,Bills D/ST,D/ST,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,9,ADD,Will Reichard,K,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,9,ADD,Zach Charbonnet,RB,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,9,ADD,Matthew Stafford,QB,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,9,ADD,Jonnu Smith,TE,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,9,TEAM->TEAM,Steelers D/ST,D/ST,That's Purdy Koo,Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,9,ADD,Cedric Tillman,WR,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,9,ADD,Eagles D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,9,ADD,Justin Herbert,QB,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,9,ADD,Caleb Williams,QB,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,9,TEAM->TEAM,Keenan Allen,WR,Bear Down,That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,9,ADD,Titans D/ST,D/ST,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,9,DROP,Jordan Addison,WR,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,9,DROP,Anthony Richardson,QB,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,9,DROP,Jalen Tolbert,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,9,DROP,Tyler Lockett,WR,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,9,DROP,Tank Bigsby,RB,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,9,DROP,Russell Wilson,QB,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,9,DROP,Pat Freiermuth,TE,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,9,DROP,Jordan Mason,RB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,9,DROP,Ravens D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,10,TEAM->TEAM,Jonnu Smith,TE,Master and commanders,Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,10,ADD,Alec Pierce,WR,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,10,ADD,Tyler Conklin,TE,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,10,ADD,Tyler Lockett,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,10,ADD,Xavier Legette,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,10,TEAM->TEAM,Rico Dowdle,RB, Johnny  Dramas ,"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,10,TEAM->TEAM,Bills D/ST,D/ST, Johnny  Dramas ,"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,10,TEAM->TEAM,Tyler Allgeier,RB,Stephen's Super Team,Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,10,ADD,Lions D/ST,D/ST,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,10,TEAM->TEAM,Steelers D/ST,D/ST,Master and commanders,Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,10,ADD,Tyler Bass,K,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,10,ADD,Giants D/ST,D/ST,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,10,ADD,Cowboys D/ST,D/ST,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,10,ADD,Tua Tagovailoa,QB,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,10,ADD,Mike Gesicki,TE,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,10,ADD,Quentin Johnston,WR,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,10,ADD,Jordan Addison,WR,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,10,DROP,Tucker Kraft,TE, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,10,DROP,Ricky Pearsall,WR,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,10,DROP,Will Reichard,K,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,10,DROP,Brandon Aubrey,K,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,10,DROP,Hayden Hurst,TE,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,10,DROP,Packers D/ST,D/ST,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,10,DROP,Commanders D/ST,D/ST,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,10,DROP,Jalen McMillan,WR,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,10,DROP,Allen Lazard,WR,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,10,DROP,Jets D/ST,D/ST,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,10,DROP,Dak Prescott,QB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,10,DROP,Alexander Mattison,RB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,10,DROP,Texans D/ST,D/ST,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,11,ADD,Aaron Rodgers,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,11,ADD,Jalen Tolbert,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,11,ADD,Russell Wilson,QB,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,11,ADD,Rams D/ST,D/ST,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,11,ADD,Dawson Knox,TE,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,11,ADD,Audric Estime,RB,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,11,ADD,Ricky Pearsall,WR,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,11,ADD,Jason Sanders,K,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,11,TEAM->TEAM,Javonte Williams,RB,Kill Bills ,Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,11,ADD,Saints D/ST,D/ST,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,11,ADD,Tucker Kraft,TE,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,11,ADD,Jerry Jeudy,WR,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,11,TEAM->TEAM,Justin Herbert,QB,Stephen's Super Team,Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,11,ADD,Alexander Mattison,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,11,ADD,Texans D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,11,ADD,Jake Moody,K,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,11,ADD,Dolphins D/ST,D/ST,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,11,ADD,Drake Maye,QB,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,11,ADD,Taysom Hill,TE,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,11,ADD,Jared Goff,QB,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,11,ADD,Jets D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,11,DROP,Chargers D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,11,DROP,Jonnu Smith,TE,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,11,DROP,Geno Smith,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,11,DROP,Xavier Legette,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,11,DROP,Daniel Jones,QB,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,11,DROP,Bengals D/ST,D/ST,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,11,DROP,Dalton Kincaid,TE,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,11,DROP,Austin Seibert,K,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,11,DROP,Antonio Gibson,RB,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,11,DROP,Giants D/ST,D/ST,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,11,DROP,Cowboys D/ST,D/ST,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,11,DROP,Tua Tagovailoa,QB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,11,DROP,Mike Gesicki,TE,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,11,DROP,Caleb Williams,QB,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,11,DROP,Harrison Butker,K,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,11,DROP,Eagles D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,11,DROP,Kirk Cousins,QB,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,11,DROP,Chiefs D/ST,D/ST,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,11,DROP,Jerome Ford,RB,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,11,DROP,Noah Fant,TE,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,12,ADD,Eagles D/ST,D/ST,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,12,ADD,Tua Tagovailoa,QB,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,12,ADD,Jason Myers,K,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,12,ADD,Chiefs D/ST,D/ST,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,12,ADD,Anthony Richardson,QB,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,12,ADD,Will Dissly,TE,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,12,ADD,Wil Lutz,K,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,12,ADD,Jameson Williams,WR,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,12,TEAM->TEAM,C.J. Stroud,QB,Bear Down,That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,12,ADD,Spencer Shrader,K,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,12,TRADE,Brian Robinson Jr.,RB,"No, This Is Patrick!",Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,12,TEAM->TEAM,Zach Ertz,TE,Stephen's Super Team,Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,12,ADD,Geno Smith,QB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,12,TEAM->TEAM,Evan Engram,TE,"No, This Is Patrick!",Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,12,ADD,Austin Seibert,K,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,12,ADD,Buccaneers D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,12,ADD,Jonnu Smith,TE,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,12,TRADE,Jerry Jeudy,WR,Master and commanders,"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,12,TRADE,Jaylen Warren,RB,Master and commanders,"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,12,ADD,Commanders D/ST,D/ST,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,12,DROP,Tyler Conklin,TE, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,12,DROP,Christian Kirk,WR,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,12,DROP,Rams D/ST,D/ST,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,12,DROP,Evan McPherson,K,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2024,12,DROP,Rashod Bateman,WR,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,12,DROP,Audric Estime,RB,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,12,DROP,Chris Godwin,WR,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,12,DROP,Jason Sanders,K,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,12,DROP,Saints D/ST,D/ST,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,12,DROP,Tucker Kraft,TE,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,12,DROP,Braelon Allen,RB,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,12,DROP,Kyle Pitts,TE,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,12,DROP,Alexander Mattison,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,12,DROP,Jake Moody,K,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,12,DROP,Jets D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,13,ADD,Dalton Kincaid,TE,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,13,ADD,Rome Odunze,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,13,TEAM->TEAM,Geno Smith,QB,Kill Bills , Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,13,ADD,Seahawks D/ST,D/ST,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,13,ADD,Jets D/ST,D/ST,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,13,ADD,Gus Edwards,RB,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,13,ADD,DeMario Douglas,WR,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,13,ADD,Nick Westbrook-Ikhine,WR,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,13,ADD,Brandon Aubrey,K,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,13,ADD,Kimani Vidal,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,13,DROP,Aaron Rodgers,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,13,DROP,Jalen Tolbert,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,13,DROP,Will Dissly,TE,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,13,DROP,Titans D/ST,D/ST,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,13,DROP,Zach Charbonnet,RB,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,13,DROP,Dolphins D/ST,D/ST,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,13,DROP,Jonathon Brooks,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,13,DROP,Romeo Doubs,WR,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,13,DROP,Wan'Dale Robinson,WR,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,14,ADD,Nick Folk,K,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,14,ADD,Jason Sanders,K,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,14,ADD,Dolphins D/ST,D/ST,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,14,ADD,Ameer Abdullah,RB,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,14,ADD,Elijah Moore,WR,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,14,ADD,Will Dissly,TE,(FA),Big Kirko,{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,14,ADD,Isaac Guerendo,RB,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,14,ADD,Chargers D/ST,D/ST,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,14,ADD,Tyjae Spears,RB,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,14,ADD,Sterling Shepard,WR,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,14,ADD,John Parker Romo,K,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,14,ADD,Adam Thielen,WR,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,14,ADD,Braelon Allen,RB,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,14,ADD,Saints D/ST,D/ST,(FA),"No, This Is Patrick!",{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,14,ADD,Zach Charbonnet,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,14,TEAM->TEAM,Chiefs D/ST,D/ST,Stephen's Super Team,Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,14,TEAM->TEAM,Spencer Shrader,K,That's Purdy Koo,Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,14,ADD,Wan'Dale Robinson,WR,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,14,ADD,Tucker Kraft,TE,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,14,ADD,Jaguars D/ST,D/ST,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,14,ADD,Sincere McCormick,RB,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,14,DROP,Ricky Pearsall,WR,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,14,DROP,Javonte Williams,RB,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,14,DROP,Dalton Kincaid,TE,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,14,DROP,Tyler Lockett,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,14,DROP,Raheem Mostert,RB,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,14,DROP,Seahawks D/ST,D/ST,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,14,DROP,Colts D/ST,D/ST,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,14,DROP,Dalton Schultz,TE,Big Kirko,(FA),{ED820BF3-C942-4041-820B-F3C9425041D9},0,snapshot
+RRR On Premise ,2024,14,DROP,Lions D/ST,D/ST,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,14,DROP,Wil Lutz,K,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,14,DROP,J.K. Dobbins,RB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,14,DROP,Alec Pierce,WR,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2024,14,DROP,Christian McCaffrey,RB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,14,DROP,Josh Downs,WR,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,14,DROP,Zach Ertz,TE,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,14,DROP,Commanders D/ST,D/ST,"No, This Is Patrick!",(FA),{95F44A62-C032-49BB-9961-F1B40077DCE9},0,snapshot
+RRR On Premise ,2024,14,DROP,Texans D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,14,DROP,Austin Seibert,K,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,14,DROP,Kimani Vidal,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,14,DROP,Matt Gay,K,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,15,ADD,Jameis Winston,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,15,ADD,Packers D/ST,D/ST,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,15,TEAM->TEAM,Jason Sanders,K,That's Purdy Koo,Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,15,ADD,Javonte Williams,RB,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,15,ADD,Commanders D/ST,D/ST,(FA),That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,15,TEAM->TEAM,Chase McLaughlin,K,Stephen's Super Team,That's Purdy Koo,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,15,ADD,Harrison Butker,K,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,15,ADD,Lions D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,15,ADD,Patrick Taylor Jr.,RB,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,15,ADD,Ravens D/ST,D/ST,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,15,ADD,Zach Ertz,TE,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,15,ADD,Wil Lutz,K,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,15,ADD,Aaron Rodgers,QB,(FA),Stephen's Super Team,{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,15,ADD,Dalton Kincaid,TE,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,15,ADD,Will Reichard,K,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,15,ADD,Cardinals D/ST,D/ST,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,15,DROP,Geno Smith,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,15,DROP,Younghoe Koo,K,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,15,DROP,Dolphins D/ST,D/ST,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,15,DROP,Ameer Abdullah,RB,That's Purdy Koo,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2024,15,DROP,Devin Singletary,RB,Claytons Team of Experts,(FA),{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,15,DROP,Steelers D/ST,D/ST,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,15,DROP,Tyler Bass,K,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,15,DROP,John Parker Romo,K,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,15,DROP,Evan Engram,TE,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,15,DROP,Brandon Aubrey,K,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,15,DROP,Browns D/ST,D/ST,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,15,DROP,Theo Johnson,TE,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,15,DROP,Spencer Shrader,K,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,15,DROP,Anthony Richardson,QB,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,15,DROP,Tucker Kraft,TE,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,15,DROP,Jaguars D/ST,D/ST,Stephen's Super Team,(FA),{E6292D15-54EC-4D1B-8122-E30E7276B5FE},0,snapshot
+RRR On Premise ,2024,16,ADD,Justice Hill,RB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,16,ADD,Falcons D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,16,ADD,Jalen McMillan,WR,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,16,ADD,Jerome Ford,RB,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,16,ADD,Kendre Miller,RB,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,16,ADD,Anthony Richardson,QB,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,16,ADD,Pat Freiermuth,TE,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,16,ADD,Caleb Williams,QB,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,16,ADD,Brandon Aubrey,K,(FA),Texadelphia,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,16,DROP,David Montgomery,RB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,16,DROP,Jason Sanders,K,Texadelphia,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2024,16,DROP,Lions D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2024,16,DROP,Justin Herbert,QB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,16,DROP,Nick Westbrook-Ikhine,WR,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,16,DROP,Braelon Allen,RB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,16,DROP,Patrick Taylor Jr.,RB,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,16,DROP,Trevor Lawrence,QB,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,16,DROP,Taysom Hill,TE,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,17,ADD,Justin Herbert,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,17,ADD,J.K. Dobbins,RB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,17,ADD,Alexander Mattison,RB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,17,ADD,Colts D/ST,D/ST,(FA),Master and commanders,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,17,ADD,Geno Smith,QB,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,17,ADD,Joe Flacco,QB,(FA),Plano Pipebombs ,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,17,ADD,Dolphins D/ST,D/ST,(FA),Claytons Team of Experts,{45196FC1-BEBD-41FC-A6D8-2527D65C9C56},0,snapshot
+RRR On Premise ,2024,17,DROP,Nick Folk,K, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,17,DROP,Jameis Winston,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2024,17,DROP,Vikings D/ST,D/ST,Master and commanders,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2024,17,DROP,Jalen Hurts,QB,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2024,17,DROP,Caleb Williams,QB,Plano Pipebombs ,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot

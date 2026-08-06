@@ -1,0 +1,476 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Game of Yards!,2021,2,ADD,Devin Singletary,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,2,ADD,Kenneth Gainwell,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,2,ADD,Juwan Johnson,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,2,ADD,Mark Ingram II,RB,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,2,ADD,Cardinals D/ST,D/ST,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,2,ADD,Marvin Jones Jr.,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,2,ADD,Sterling Shepard,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,2,ADD,Teddy Bridgewater,QB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,2,ADD,Jameis Winston,QB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,2,TEAM->TEAM,Colts D/ST,D/ST,The  Never CameBack,Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,2,ADD,Mike Williams,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,2,ADD,Phillip Lindsay,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,2,ADD,Christian Kirk,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,2,ADD,Eagles D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,2,ADD,Brandon McManus,K,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,2,ADD,Dalton Schultz,TE,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,2,ADD,Larry Rountree III,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,2,ADD,Alexander Mattison,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,2,ADD,Elijah Mitchell,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,2,DROP,Trey Lance,QB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,2,DROP,Matt Ryan,QB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,2,DROP,David Johnson,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,2,DROP,Packers D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,2,DROP,Tyrell Williams,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,2,DROP,Marquez Callaway,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,2,DROP,J.D. McKissic,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,2,DROP,Panthers D/ST,D/ST,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,2,DROP,Tony Jones Jr.,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,2,DROP,Deshaun Watson,QB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,2,DROP,Devontae Booker,RB,The  Never CameBack,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,2,DROP,Raheem Mostert,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,2,DROP,Jason Sanders,K,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,2,DROP,Michael Carter,RB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,2,DROP,Ben Roethlisberger,QB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,2,DROP,Justin Jackson,RB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,2,DROP,Josh Lambo,K,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,3,ADD,Derek Carr,QB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,3,ADD,Tony Pollard,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,3,ADD,Henry Ruggs III,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,3,ADD,Daniel Carlson,K,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,3,ADD,Kirk Cousins,QB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,3,ADD,Raiders D/ST,D/ST,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,3,ADD,Jalen Reagor,WR,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,3,ADD,J.D. McKissic,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,3,ADD,Cordarrelle Patterson,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,3,ADD,Panthers D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,3,ADD,Quintez Cephus,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,3,ADD,Rondale Moore,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,3,DROP,Tua Tagovailoa,QB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,3,DROP,Trevor Lawrence,QB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,3,DROP,Kenneth Gainwell,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,3,DROP,Juwan Johnson,TE,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,3,DROP,James Conner,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,3,DROP,Colts D/ST,D/ST,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,3,DROP,Phillip Lindsay,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,3,DROP,Christian Kirk,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,3,DROP,Eagles D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,3,DROP,Jakobi Meyers,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,4,ADD,Emmanuel Sanders,WR,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,4,ADD,Dawson Knox,TE,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,4,ADD,Titans D/ST,D/ST,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,4,ADD,Michael Pittman Jr.,WR,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,4,ADD,Peyton Barber,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,4,ADD,Chuba Hubbard,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,4,ADD,Hunter Renfrow,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,4,ADD,Taylor Heinicke,QB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,4,ADD,Tim Patrick,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,4,ADD,Greg Joseph,K,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,4,ADD,James Conner,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,4,ADD,Cowboys D/ST,D/ST,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,4,ADD,Nick Westbrook-Ikhine,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,4,ADD,Cole Beasley,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,4,ADD,Jakobi Meyers,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,4,ADD,Bears D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,4,ADD,Nick Folk,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,4,ADD,Bengals D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,4,ADD,Cameron Brate,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,4,DROP,Nelson Agholor,WR,The  Never CameBack,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,4,DROP,Ronald Jones II,RB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,4,DROP,Cole Kmet,TE,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,4,DROP,Jalen Reagor,WR,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,4,DROP,Sterling Shepard,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,4,DROP,Jameis Winston,QB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,4,DROP,Gerald Everett,TE,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,4,DROP,Dolphins D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,4,DROP,Quintez Cephus,WR,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,4,DROP,Larry Rountree III,RB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,4,DROP,Jonnu Smith,TE,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,4,DROP,Greg Zuerlein,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,4,DROP,Rondale Moore,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,4,DROP,Mecole Hardman,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,4,DROP,Laviska Shenault Jr.,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,4,DROP,Jimmy Garoppolo,QB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,4,DROP,Trey Sermon,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,4,DROP,Jason Myers,K,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,5,ADD,Falcons D/ST,D/ST,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,5,ADD,Matt Prater,K,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,5,ADD,T.Y. Hilton,WR,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,5,ADD,Alex Collins,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,5,ADD,Jonnu Smith,TE,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,5,ADD,Michael Carter,RB,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,5,ADD,Sam Darnold,QB,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,5,ADD,Tyler Conklin,TE,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,5,ADD,DeVante Parker,WR,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,5,ADD,Laviska Shenault Jr.,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,5,ADD,Kenneth Gainwell,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,5,ADD,Jamison Crowder,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,5,ADD,Rodrigo Blankenship,K,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,5,ADD,Samaje Perine,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,5,ADD,Sterling Shepard,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,5,ADD,A.J. Green,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,5,TEAM->TEAM,Mark Ingram II,RB,The  Never CameBack,Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,5,ADD,C.J. Uzomah,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,5,ADD,Darnell Mooney,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,5,ADD,Packers D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,5,TEAM->TEAM,Devin Singletary,RB,Muqaddar Ka Sikandar,Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,5,DROP,DJ Chark Jr.,WR,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,5,DROP,Peyton Barber,RB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,5,DROP,Gus Edwards,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,5,DROP,Brandon Aiyuk,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,5,DROP,Justin Fields,QB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,5,DROP,Ty'Son Williams,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,5,DROP,Tim Patrick,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,5,DROP,Nyheim Hines,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,5,DROP,Teddy Bridgewater,QB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,5,DROP,Nick Westbrook-Ikhine,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,5,DROP,Cole Beasley,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,5,DROP,Bengals D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,6,ADD,Colts D/ST,D/ST,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,6,ADD,Kadarius Toney,WR,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,6,ADD,David Njoku,TE,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,6,ADD,Ricky Seals-Jones,TE,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,6,ADD,Dolphins D/ST,D/ST,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,6,TEAM->TEAM,DeVante Parker,WR,The  Never CameBack,Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,6,ADD,Rondale Moore,WR,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,6,TEAM->TEAM,A.J. Green,WR,Muqaddar Ka Sikandar,Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,6,ADD,Khalil Herbert,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,6,ADD,Dan Arnold,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,6,ADD,Demetric Felton,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,6,ADD,D'Ernest Johnson,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,6,ADD,Darrel Williams,RB,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,6,ADD,Trevor Lawrence,QB,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,6,ADD,Marquez Callaway,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,6,TEAM->TEAM,Latavius Murray,RB,Wakanda Forever,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,6,ADD,Devontae Booker,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,6,ADD,Bengals D/ST,D/ST,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,6,DROP,JuJu Smith-Schuster,WR,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,6,DROP,Irv Smith Jr.,TE,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,6,DROP,Titans D/ST,D/ST,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,6,DROP,Falcons D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,6,DROP,Tyler Boyd,WR,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,6,DROP,Commanders D/ST,D/ST,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,6,DROP,Sam Darnold,QB,The  Never CameBack,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,6,DROP,Tyler Conklin,TE,The  Never CameBack,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,6,DROP,Rodrigo Blankenship,K,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,6,DROP,Kenyan Drake,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,6,DROP,Kirk Cousins,QB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,6,DROP,Samaje Perine,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,6,DROP,Jaylen Waddle,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,6,DROP,Darnell Mooney,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,6,DROP,Cameron Brate,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,6,DROP,Devin Singletary,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,7,ADD,Tyler Boyd,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,7,ADD,Randy Bullock,K,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,7,ADD,Kenyan Drake,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,7,ADD,Rhamondre Stevenson,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,7,ADD,Falcons D/ST,D/ST,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,7,TEAM->TEAM,Evan Engram,TE,Bhambhwani Pawan Dilip,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,7,ADD,Deshaun Watson,QB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,7,ADD,Jameis Winston,QB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,7,ADD,Jaylen Waddle,WR,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,7,ADD,Michael Badgley,K,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,7,ADD,Tua Tagovailoa,QB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,7,ADD,Sam Darnold,QB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,7,ADD,Christian Kirk,WR,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,7,ADD,O.J. Howard,TE,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,7,ADD,Matt Ryan,QB,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,7,ADD,Kirk Cousins,QB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,7,DROP,Jonnu Smith,TE,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,7,DROP,Kenneth Gainwell,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,7,DROP,Jamison Crowder,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,7,DROP,David Njoku,TE,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,7,DROP,Rondale Moore,WR,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,7,DROP,Bears D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,7,DROP,Dan Arnold,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,7,DROP,Trevor Lawrence,QB,The  Never CameBack,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,7,DROP,Michael Gallup,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,7,DROP,Bengals D/ST,D/ST,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,8,ADD,Cole Beasley,WR,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,8,TEAM->TEAM,Falcons D/ST,D/ST,Team Vellapanti,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,8,ADD,Teddy Bridgewater,QB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,8,ADD,David Johnson,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,8,TEAM->TEAM,Odell Beckham Jr.,WR,Team Vellapanti,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,8,TEAM->TEAM,Mark Ingram II,RB,Muqaddar Ka Sikandar,THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,8,ADD,Chase McLaughlin,K,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,8,TEAM->TEAM,Alex Collins,RB,Team Vellapanti,Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,8,ADD,Kenneth Gainwell,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,8,ADD,Michael Gallup,WR,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,8,ADD,Carson Wentz,QB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,8,ADD,Brandon Aiyuk,WR,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,8,ADD,Bengals D/ST,D/ST,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,8,ADD,Randall Cobb,WR,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,8,ADD,Adrian Peterson,RB,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,8,ADD,Bears D/ST,D/ST,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,8,ADD,Greg Zuerlein,K,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,8,ADD,Tommy Sweeney,TE,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,8,DROP,Laviska Shenault Jr.,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,8,DROP,Vikings D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,8,DROP,Derek Carr,QB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,8,DROP,Rhamondre Stevenson,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,8,DROP,Evan Engram,TE,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,8,DROP,Curtis Samuel,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,8,DROP,Jakobi Meyers,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,8,DROP,Deshaun Watson,QB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,8,DROP,Le'Veon Bell,RB,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,8,DROP,DeVante Parker,WR,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,8,DROP,A.J. Green,WR,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,8,DROP,Demetric Felton,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,8,DROP,Harrison Butker,K,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,8,DROP,Baker Mayfield,QB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,8,DROP,Sam Darnold,QB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,8,DROP,Cowboys D/ST,D/ST,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,8,DROP,O.J. Howard,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,9,ADD,Tyler Conklin,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,9,TEAM->TEAM,Kirk Cousins,QB,Muqaddar Ka Sikandar,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,9,TEAM->TEAM,Randy Bullock,K,THE BIGMADBLUE,Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,9,TRADE,James Robinson,RB,THE BIGMADBLUE,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,9,ADD,DeVante Parker,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,9,TRADE,Mark Ingram II,RB,THE BIGMADBLUE,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,9,ADD,Tyrod Taylor,QB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,9,TEAM->TEAM,Daniel Jones,QB,The  Never CameBack,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,9,ADD,Carlos Hyde,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,9,ADD,Derek Carr,QB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,9,TRADE,Deebo Samuel,WR,Wakanda Forever,THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,9,TRADE,Khalil Herbert,RB,Wakanda Forever,THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,9,TRADE,Myles Gaskin,RB,Wakanda Forever,THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,9,ADD,Boston Scott,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,9,ADD,Allen Lazard,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,9,TEAM->TEAM,Marquez Callaway,WR,Team HebAchi,Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,9,ADD,Taysom Hill,QB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,9,ADD,Jordan Love,QB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,9,ADD,Jeremy McNichols,RB,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,9,ADD,Dan Arnold,TE,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,9,ADD,Cowboys D/ST,D/ST,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,9,ADD,Pat Freiermuth,TE,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,9,ADD,Eagles D/ST,D/ST,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,9,ADD,Jordan Howard,RB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,9,TEAM->TEAM,Kenneth Gainwell,RB,Team Vellapanti,Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,9,DROP,Falcons D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,9,DROP,Teddy Bridgewater,QB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,9,DROP,Jameis Winston,QB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,9,DROP,Chase McLaughlin,K,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,9,DROP,Alex Collins,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,9,DROP,Carson Wentz,QB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,9,DROP,Henry Ruggs III,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,9,DROP,Bengals D/ST,D/ST,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,9,DROP,Damien Williams,RB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,9,DROP,Raiders D/ST,D/ST,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,9,DROP,Bears D/ST,D/ST,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,10,ADD,J.J. Taylor,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,10,ADD,Van Jefferson,WR,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,10,ADD,Titans D/ST,D/ST,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,10,ADD,Nyheim Hines,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,10,ADD,Russell Gage,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,10,ADD,Chris Boswell,K,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,10,ADD,Rhamondre Stevenson,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,10,ADD,Bears D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,10,ADD,Brian Johnson,K,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,10,ADD,Devonta Freeman,RB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,10,TRADE,Marquise Brown,WR,Team Vellapanti,Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,10,ADD,Carson Wentz,QB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,10,ADD,Elijah Moore,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,10,ADD,Devin Singletary,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,10,TRADE,Amari Cooper,WR,Team TitBit,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,10,DROP,David Johnson,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,10,DROP,Tyrod Taylor,QB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,10,DROP,49ers D/ST,D/ST,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,10,DROP,C.J. Uzomah,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,10,DROP,Ricky Seals-Jones,TE,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,10,DROP,Tyler Boyd,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,10,DROP,Devontae Booker,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,10,DROP,Allen Lazard,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,10,DROP,Jordan Love,QB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,10,DROP,Jeremy McNichols,RB,The  Never CameBack,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,10,DROP,Greg Zuerlein,K,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,10,DROP,Tommy Sweeney,TE,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,10,DROP,Kenneth Gainwell,RB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,11,ADD,D'Onta Foreman,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,11,TEAM->TEAM,Tua Tagovailoa,QB,Team TitBit,Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,11,ADD,Darnell Mooney,WR,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,11,ADD,Cole Kmet,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,11,ADD,Wayne Gallman,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,11,ADD,Greg Zuerlein,K,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,11,ADD,Jaguars D/ST,D/ST,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,11,ADD,Rashod Bateman,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,11,ADD,Rondale Moore,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,11,ADD,Harrison Butker,K,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,11,ADD,Alex Collins,RB,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,11,ADD,Tyree Jackson,TE,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,11,ADD,Jeff Wilson Jr.,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,11,DROP,Robby Anderson,WR,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,11,DROP,Kenyan Drake,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,11,DROP,J.J. Taylor,RB,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,11,DROP,Boston Scott,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,11,DROP,Russell Gage,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,11,DROP,Michael Badgley,K,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,11,DROP,Michael Thomas,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,11,DROP,DeVante Parker,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,11,DROP,Daniel Jones,QB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,11,DROP,Brian Johnson,K,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,11,DROP,Taylor Heinicke,QB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,11,DROP,Khalil Herbert,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,11,DROP,Sony Michel,RB,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,11,DROP,Randall Cobb,WR,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,11,DROP,T.Y. Hilton,WR,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,12,ADD,Lions D/ST,D/ST,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,12,ADD,Tyrod Taylor,QB,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,12,ADD,Jamison Crowder,WR,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,12,ADD,Dontrell Hilliard,RB,(FA),Team TitBit,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,12,ADD,David Johnson,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,12,ADD,Texans D/ST,D/ST,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,12,ADD,Tony Jones Jr.,RB,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,12,ADD,Ty Johnson,RB,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,12,ADD,Cam Newton,QB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,12,ADD,Rex Burkhead,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,12,ADD,Taylor Heinicke,QB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,12,DROP,Nyheim Hines,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,12,DROP,D'Onta Foreman,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,12,DROP,Randy Bullock,K,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,12,DROP,Latavius Murray,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,12,DROP,Darrel Williams,RB,The  Never CameBack,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,12,DROP,Matt Ryan,QB,The  Never CameBack,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,12,DROP,Wayne Gallman,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,12,DROP,Jordan Howard,RB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,12,DROP,Jaguars D/ST,D/ST,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,12,DROP,Broncos D/ST,D/ST,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,12,DROP,Adrian Peterson,RB,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,12,DROP,Tyree Jackson,TE,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,12,DROP,Taysom Hill,QB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,13,TEAM->TEAM,Taylor Heinicke,QB,THE BIGMADBLUE,The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,13,ADD,Matt Breida,RB,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,13,ADD,Foster Moreau,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,13,ADD,Sony Michel,RB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,13,ADD,DeVante Parker,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,13,ADD,Taysom Hill,QB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,13,ADD,Jason Sanders,K,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,13,ADD,Tre'Quan Smith,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,13,ADD,Vikings D/ST,D/ST,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,13,ADD,49ers D/ST,D/ST,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,13,ADD,Boston Scott,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,13,ADD,Broncos D/ST,D/ST,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,13,ADD,D'Onta Foreman,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,13,ADD,Jack Doyle,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,13,ADD,Gerald Everett,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,13,ADD,Giants D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,13,DROP,Jamison Crowder,WR,The  Never CameBack,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,13,DROP,Marquez Callaway,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,13,DROP,David Johnson,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,13,DROP,Texans D/ST,D/ST,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,13,DROP,Tony Jones Jr.,RB,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,13,DROP,Jared Cook,TE,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,13,DROP,Michael Gallup,WR,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,13,DROP,Cam Newton,QB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,13,DROP,Mike Davis,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,13,DROP,D'Ernest Johnson,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,13,DROP,Tyler Conklin,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,13,DROP,Cole Kmet,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,13,DROP,Carlos Hyde,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,13,DROP,Rondale Moore,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,14,ADD,Russell Gage,WR,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,14,ADD,Ricky Seals-Jones,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,14,ADD,Tevin Coleman,RB,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,14,ADD,Seahawks D/ST,D/ST,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,14,ADD,Evan Engram,TE,(FA),The  Never CameBack,{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,14,ADD,Michael Gallup,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,14,ADD,Chiefs D/ST,D/ST,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,14,ADD,Jalen Guyton,WR,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,14,ADD,Jermar Jefferson,RB,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,14,ADD,Tyler Conklin,TE,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,14,TEAM->TEAM,Broncos D/ST,D/ST,THE BIGMADBLUE,Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,14,ADD,Brian Johnson,K,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,14,TEAM->TEAM,Zack Moss,RB,Bhambhwani Pawan Dilip,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,14,ADD,Cole Kmet,TE,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,14,ADD,Marquez Valdes-Scantling,WR,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,14,ADD,Chargers D/ST,D/ST,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,14,ADD,Darrel Williams,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,14,DROP,Lions D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,14,DROP,Logan Thomas,TE,The  Never CameBack,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,14,DROP,Tyrod Taylor,QB,The  Never CameBack,(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Game of Yards!,2021,14,DROP,Brandon McManus,K,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,14,DROP,Matt Breida,RB,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,14,DROP,Courtland Sutton,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,14,DROP,Foster Moreau,TE,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,14,DROP,Devin Singletary,RB,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,14,DROP,Jason Sanders,K,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,14,DROP,Marvin Jones Jr.,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,14,DROP,Vikings D/ST,D/ST,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,14,DROP,Boston Scott,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,14,DROP,Robert Tonyan,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,14,DROP,Jack Doyle,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,14,DROP,Giants D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,14,DROP,Rhamondre Stevenson,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,14,DROP,Bears D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,15,ADD,Ronald Jones II,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,15,ADD,Rashaad Penny,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,15,ADD,Royce Freeman,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,15,ADD,K.J. Osborn,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,15,ADD,Justin Jackson,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,15,ADD,Rhamondre Stevenson,RB,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,15,ADD,A.J. Green,WR,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,15,ADD,David Johnson,RB,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,15,ADD,Gabriel Davis,WR,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,15,ADD,Kendrick Bourne,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,15,ADD,Bears D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,15,ADD,Rondale Moore,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,15,ADD,Mike Davis,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,15,ADD,Ameer Abdullah,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,15,ADD,Devin Singletary,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,15,ADD,Jaguars D/ST,D/ST,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,15,ADD,Tyler Huntley,QB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,15,DROP,Tre'Quan Smith,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,15,DROP,Kenny Golladay,WR,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,15,DROP,Alex Collins,RB,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,15,DROP,Ty Johnson,RB,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,15,DROP,Jalen Guyton,WR,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,15,DROP,Jermar Jefferson,RB,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,15,DROP,Tyler Conklin,TE,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,15,DROP,Brian Johnson,K,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,15,DROP,Zack Moss,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,15,DROP,Cole Kmet,TE,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,16,ADD,Cole Kmet,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,16,ADD,Bengals D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,16,ADD,Amon-Ra St. Brown,WR,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,16,ADD,Tyler Boyd,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,16,TEAM->TEAM,Russell Wilson,QB,Team Vellapanti,Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,16,ADD,Duke Johnson,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,16,ADD,Josh Gordon,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,16,ADD,Jake Elliott,K,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,16,ADD,Craig Reynolds,RB,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,16,ADD,Jared Cook,TE,(FA),Inglorious Staffords,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,16,TEAM->TEAM,Alexander Mattison,RB,Team Vellapanti,Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,16,ADD,Matt Ryan,QB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,16,DROP,Tyler Higbee,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,16,DROP,Rex Burkhead,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,16,DROP,Gerald Everett,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,16,DROP,Royce Freeman,RB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2021,16,DROP,DeVonta Smith,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,16,DROP,Chuba Hubbard,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,16,DROP,David Johnson,RB,Inglorious Staffords,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Game of Yards!,2021,16,DROP,Rashod Bateman,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,16,DROP,Bears D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,16,DROP,Mike Davis,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,16,DROP,Ameer Abdullah,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,16,DROP,Kadarius Toney,WR,Team Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,16,DROP,Sterling Shepard,WR,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,16,DROP,Tyler Huntley,QB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,17,ADD,Bears D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,17,ADD,Foster Moreau,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,17,ADD,Cam Akers,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,17,ADD,Allen Lazard,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,17,ADD,Rex Burkhead,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,17,ADD,DeVonta Smith,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,17,ADD,Dare Ogunbowale,RB,(FA),Bhambhwani Pawan Dilip,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,17,ADD,Jaret Patterson,RB,(FA),Team Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2021,17,ADD,Tyler Huntley,QB,(FA),Muqaddar Ka Sikandar,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,17,DROP,Ricky Seals-Jones,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,17,DROP,Bengals D/ST,D/ST,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2021,17,DROP,Chargers D/ST,D/ST,Bhambhwani Pawan Dilip,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2021,17,DROP,Rondale Moore,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2021,17,DROP,Myles Gaskin,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,17,DROP,Josh Gordon,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Game of Yards!,2021,17,DROP,Emmanuel Sanders,WR,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,17,DROP,Dontrell Hilliard,RB,Team TitBit,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2021,17,DROP,Alexander Mattison,RB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2021,17,DROP,Matt Ryan,QB,Muqaddar Ka Sikandar,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot

@@ -1,0 +1,335 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+RRR On Premise ,2023,2,ADD,Tutu Atwell,WR,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,2,ADD,Buccaneers D/ST,D/ST,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,2,ADD,Luke Musgrave,TE,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,2,ADD,Texans D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,2,ADD,Rashid Shaheed,WR,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,2,ADD,Justice Hill,RB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,2,ADD,Giants D/ST,D/ST,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,2,ADD,Kendrick Bourne,WR,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,2,ADD,Brock Purdy,QB,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,2,ADD,Hunter Henry,TE,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,2,ADD,Joshua Kelley,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,2,DROP,J.K. Dobbins,RB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,2,DROP,Steelers D/ST,D/ST,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,2,DROP,Taysom Hill,TE,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,2,DROP,49ers D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,2,DROP,Devin Singletary,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,2,DROP,Deon Jackson,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,2,DROP,Marvin Mims Jr.,WR,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,2,DROP,Evan Hull,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,2,DROP,Russell Wilson,QB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,2,DROP,Sam Howell,QB,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,2,DROP,Gerald Everett,TE,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,3,ADD,Kareem Hunt,RB,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,3,ADD,Robert Woods,WR,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,3,TEAM->TEAM,Elijah Moore,WR,Bear Down,Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,3,ADD,Raiders D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,3,TEAM->TEAM,Jets D/ST,D/ST,My Team Hurts,Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,3,ADD,49ers D/ST,D/ST,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,3,ADD,Chuba Hubbard,RB,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,3,ADD,Tank Dell,WR,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,3,ADD,Chiefs D/ST,D/ST,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,3,ADD,Jayden Reed,WR,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,3,ADD,Kendre Miller,RB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,3,ADD,Craig Reynolds,RB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,3,ADD,Steelers D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,3,ADD,Jake Moody,K,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,3,DROP,Tank Bigsby,RB,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,3,DROP,Alec Pierce,WR,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,3,DROP,Buccaneers D/ST,D/ST,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,3,DROP,Texans D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,3,DROP,Rashid Shaheed,WR,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,3,DROP,Giants D/ST,D/ST,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,3,DROP,Kendrick Bourne,WR,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,3,DROP,Nick Chubb,RB,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,3,DROP,Allen Lazard,WR,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,3,DROP,Van Jefferson,WR,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,3,DROP,Aaron Rodgers,QB,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,3,DROP,Graham Gano,K,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,3,DROP,Broncos D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,4,ADD,Jordan Love,QB,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,4,ADD,Kendrick Bourne,WR,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,4,ADD,Matt Breida,RB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,4,ADD,Russell Wilson,QB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,4,TEAM->TEAM,Justin Tucker,K,Shindo ,Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,4,ADD,Seahawks D/ST,D/ST,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,4,ADD,Tank Bigsby,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,4,ADD,Tyjae Spears,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,4,TEAM->TEAM,Tyler Bass,K,Red River Rising 💪,Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,4,ADD,Kenny Pickett,QB,(FA),Frisco Cougars,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,4,ADD,Joshua Palmer,WR,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,4,ADD,Brandon Aubrey,K,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,4,ADD,Chargers D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,4,ADD,Marvin Mims Jr.,WR,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,4,ADD,C.J. Stroud,QB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,4,TEAM->TEAM,Joshua Kelley,RB,Kill Bills ,My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,4,DROP,Mike Williams,WR,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,4,DROP,Patriots D/ST,D/ST,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,4,DROP,Cam Akers,RB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,4,DROP,Commanders D/ST,D/ST,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,4,DROP,Jaguars D/ST,D/ST,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,4,DROP,Kendre Miller,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,4,DROP,Craig Reynolds,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,4,DROP,Damien Harris,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,4,DROP,Younghoe Koo,K,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,4,DROP,Dolphins D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,4,DROP,Chase Claypool,WR,Frisco Cougars,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,5,ADD,Jaleel McLaughlin,RB,(FA),Bench Warmer,{0F0E5482-7DA5-4CF1-BA17-D025B6E79526},0,snapshot
+RRR On Premise ,2023,5,ADD,Riley Patterson,K,(FA),Bench Warmer,{0F0E5482-7DA5-4CF1-BA17-D025B6E79526},0,snapshot
+RRR On Premise ,2023,5,ADD,Tyler Conklin,TE,(FA),Bench Warmer,{0F0E5482-7DA5-4CF1-BA17-D025B6E79526},0,snapshot
+RRR On Premise ,2023,5,ADD,Patriots D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,5,ADD,Matt Prater,K,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,5,ADD,Texans D/ST,D/ST,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,5,ADD,Commanders D/ST,D/ST,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2023,5,ADD,Dolphins D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,5,TEAM->TEAM,Chuba Hubbard,RB,Shindo ,Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,5,ADD,Rashee Rice,WR,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,5,ADD,Colts D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,5,ADD,Jake Ferguson,TE,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,5,ADD,Tyler Boyd,WR,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,5,ADD,Lions D/ST,D/ST,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,5,DROP,Raiders D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,5,DROP,Pat Freiermuth,TE,Bench Warmer,(FA),{0F0E5482-7DA5-4CF1-BA17-D025B6E79526},0,snapshot
+RRR On Premise ,2023,5,DROP,Daniel Jones,QB,Bench Warmer,(FA),{0F0E5482-7DA5-4CF1-BA17-D025B6E79526},0,snapshot
+RRR On Premise ,2023,5,DROP,Jason Myers,K,Bench Warmer,(FA),{0F0E5482-7DA5-4CF1-BA17-D025B6E79526},0,snapshot
+RRR On Premise ,2023,5,DROP,Matt Breida,RB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,5,DROP,Treylon Burks,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2023,5,DROP,Steelers D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,5,DROP,Tank Bigsby,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,5,DROP,Packers D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,5,DROP,Justice Hill,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,5,DROP,Marvin Mims Jr.,WR,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,5,DROP,Joshua Kelley,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,6,ADD,Josh Downs,WR,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2023,6,ADD,Dawson Knox,TE,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,6,ADD,Falcons D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,6,ADD,Jonathan Mingo,WR,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,6,ADD,Logan Thomas,TE,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,6,ADD,Emari Demercado,RB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,6,ADD,Josh Reynolds,WR,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,6,ADD,Justice Hill,RB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,6,ADD,Keaontay Ingram,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,6,ADD,Cam Akers,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,6,TEAM->TEAM,Dak Prescott,QB,My Team Hurts,Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,6,DROP,Dalton Kincaid,TE,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,6,DROP,Jaxon Smith-Njigba,WR,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,6,DROP,Zach Charbonnet,RB,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,6,DROP,Texans D/ST,D/ST,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,6,DROP,Commanders D/ST,D/ST, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2023,6,DROP,Dalvin Cook,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,6,DROP,Kadarius Toney,WR,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,6,DROP,Kyler Murray,QB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,6,DROP,Chargers D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,6,DROP,Jake Ferguson,TE,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,6,DROP,Tyler Boyd,WR,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,7,ADD,Raiders D/ST,D/ST,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,7,ADD,Commanders D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,7,ADD,Jonnu Smith,TE,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,7,ADD,Wan'Dale Robinson,WR,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,7,ADD,Mecole Hardman,WR,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,7,ADD,Royce Freeman,RB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,7,ADD,Brett Maher,K,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,7,ADD,Kadarius Toney,WR,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,7,ADD,Kyler Murray,QB,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,7,ADD,Buccaneers D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,7,ADD,Rams D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,7,ADD,Darrell Henderson Jr.,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,7,ADD,Jason Sanders,K,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,7,DROP,Ravens D/ST,D/ST,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,7,DROP,Cameron Dicker,K,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,7,DROP,Russell Wilson,QB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,7,DROP,Falcons D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,7,DROP,Logan Thomas,TE,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,7,DROP,Jayden Reed,WR,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,7,DROP,Emari Demercado,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,7,DROP,Justice Hill,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,7,DROP,Hunter Henry,TE,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,7,DROP,Rashaad Penny,RB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,7,DROP,Ezekiel Elliott,RB,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,7,DROP,Patriots D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,7,DROP,Dolphins D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,7,DROP,Cam Akers,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,8,ADD,Tyler Boyd,WR,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,8,ADD,Logan Thomas,TE,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2023,8,ADD,Bears D/ST,D/ST,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,8,ADD,Jaxon Smith-Njigba,WR,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,8,ADD,Ravens D/ST,D/ST,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,8,ADD,Sam Howell,QB,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,8,ADD,Dalton Kincaid,TE,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,8,ADD,Jaguars D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,8,ADD,Emari Demercado,RB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,8,ADD,Jake Ferguson,TE,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,8,DROP,Dawson Knox,TE,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,8,DROP,Raiders D/ST,D/ST,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,8,DROP,Jonathan Mingo,WR,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,8,DROP,Josh Reynolds,WR,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,8,DROP,Wan'Dale Robinson,WR,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,8,DROP,Geno Smith,QB,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,8,DROP,Brett Maher,K,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,8,DROP,Keaontay Ingram,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,8,DROP,Rams D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,8,DROP,Jamaal Williams,RB,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,9,ADD,Will Levis,QB,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,9,ADD,Cameron Dicker,K,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,9,ADD,Ka'imi Fairbairn,K,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,9,ADD,Falcons D/ST,D/ST,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,9,ADD,Devin Singletary,RB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,9,TRADE,Michael Pittman Jr.,WR,Frisco Cougars,My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,9,TEAM->TEAM,Miles Sanders,RB,Kill Bills ,My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,9,ADD,Gerald Everett,TE,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,9,TRADE,DJ Moore,WR,Shindo ,Bench Warmer,{0F0E5482-7DA5-4CF1-BA17-D025B6E79526},0,snapshot
+RRR On Premise ,2023,9,ADD,Trey McBride,TE,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,9,TRADE,Kenneth Walker III,RB,Bench Warmer,Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,9,ADD,Steelers D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,9,ADD,Zach Charbonnet,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,9,ADD,Raiders D/ST,D/ST,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,9,TEAM->TEAM,Roschon Johnson,RB,Shindo ,Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,9,TRADE,Dameon Pierce,RB,My Team Hurts,Frisco Cougars,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,9,TRADE,Jaxon Smith-Njigba,WR,My Team Hurts,Frisco Cougars,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,9,ADD,Baker Mayfield,QB,(FA),Frisco Cougars,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,9,DROP,Jake Moody,K,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,9,DROP,Commanders D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,9,DROP,Mecole Hardman,WR,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,9,DROP,Royce Freeman,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,9,DROP,Bears D/ST,D/ST,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,9,DROP,Jaguars D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,9,DROP,Tutu Atwell,WR,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,9,DROP,Tyler Allgeier,RB,Frisco Cougars,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,9,DROP,Kenneth Gainwell,RB,Frisco Cougars,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,10,ADD,Bears D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,10,ADD,Cade Otton,TE,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,10,ADD,Younghoe Koo,K,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,10,ADD,Noah Brown,WR,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,10,ADD,Packers D/ST,D/ST,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,10,ADD,Taysom Hill,TE,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,10,ADD,Tyler Allgeier,RB,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,10,ADD,DeMario Douglas,WR,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,10,TEAM->TEAM,Harrison Butker,K,Frisco Cougars,Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,10,ADD,Nick Folk,K,(FA),Frisco Cougars,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,10,ADD,Bengals D/ST,D/ST,(FA),Frisco Cougars,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,10,DROP,Rashod Bateman,WR,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,10,DROP,Buccaneers D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,10,DROP,Dallas Goedert,TE,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,10,DROP,Falcons D/ST,D/ST,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,10,DROP,Devin Singletary,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,10,DROP,Gerald Everett,TE,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,10,DROP,Joshua Palmer,WR,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,10,DROP,Darrell Henderson Jr.,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,10,DROP,Samaje Perine,RB,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,10,DROP,Elijah Moore,WR,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,11,ADD,Joshua Dobbs,QB,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,11,ADD,Darrell Henderson Jr.,RB,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,11,ADD,Donald Parham Jr.,TE,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,11,ADD,Jaguars D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,11,ADD,Dolphins D/ST,D/ST,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,11,ADD,Jake Moody,K,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,11,ADD,Keaton Mitchell,RB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,11,ADD,Ty Chandler,RB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,11,ADD,Commanders D/ST,D/ST,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,11,ADD,Pat Freiermuth,TE,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,11,ADD,Devin Singletary,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,11,ADD,Vikings D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,11,DROP,Bears D/ST,D/ST,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,11,DROP,Kirk Cousins,QB,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,11,DROP,AJ Dillon,RB,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,11,DROP,Zay Jones,WR,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,11,DROP,Colts D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,11,DROP,Miles Sanders,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,11,DROP,Younghoe Koo,K,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,11,DROP,Packers D/ST,D/ST,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,11,DROP,K.J. Osborn,WR,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,11,DROP,Raiders D/ST,D/ST,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,11,DROP,Tyler Bass,K,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,11,DROP,Zach Charbonnet,RB,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,12,ADD,AJ Dillon,RB,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,12,ADD,Giants D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,12,ADD,Patriots D/ST,D/ST,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,12,ADD,Zach Charbonnet,RB,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,12,ADD,Jayden Reed,WR,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,12,DROP,Antonio Gibson,RB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2023,12,DROP,Jaguars D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,12,DROP,Evan McPherson,K,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,12,DROP,Commanders D/ST,D/ST,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,12,DROP,Romeo Doubs,WR,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,13,ADD,Derek Carr,QB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,13,ADD,Samaje Perine,RB,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,13,TEAM->TEAM,Jake Moody,K,My Team Hurts, Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2023,13,ADD,Matt Ammendola,K,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,13,ADD,Rams D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,13,ADD,Miles Sanders,RB,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,13,TEAM->TEAM,Jordan Love,QB,Bear Down,Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,13,ADD,Jake Browning,QB,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,13,ADD,Buccaneers D/ST,D/ST,(FA),Unicorns🦄 ,{D2DCF56C-66BC-40EE-BE19-26B47BBAC311},0,snapshot
+RRR On Premise ,2023,13,ADD,Juwan Johnson,TE,(FA),Unicorns🦄 ,{D2DCF56C-66BC-40EE-BE19-26B47BBAC311},0,snapshot
+RRR On Premise ,2023,13,ADD,Dallas Goedert,TE,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,13,ADD,Falcons D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,13,ADD,Russell Wilson,QB,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,13,ADD,Jaguars D/ST,D/ST,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,13,ADD,Romeo Doubs,WR,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,13,DROP,Darnell Mooney,WR, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2023,13,DROP,Robert Woods,WR,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,13,DROP,Will Levis,QB,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,13,DROP,Joshua Dobbs,QB,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,13,DROP,Donald Parham Jr.,TE,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,13,DROP,Giants D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,13,DROP,Luke Musgrave,TE,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,13,DROP,Emari Demercado,RB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,13,DROP,Patriots D/ST,D/ST,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,13,DROP,Tyler Boyd,WR,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,13,DROP,Saints D/ST,D/ST,Unicorns🦄 ,(FA),{D2DCF56C-66BC-40EE-BE19-26B47BBAC311},0,snapshot
+RRR On Premise ,2023,13,DROP,Elijah Mitchell,RB,Unicorns🦄 ,(FA),{D2DCF56C-66BC-40EE-BE19-26B47BBAC311},0,snapshot
+RRR On Premise ,2023,13,DROP,Greg Dulcich,TE,Unicorns🦄 ,(FA),{D2DCF56C-66BC-40EE-BE19-26B47BBAC311},0,snapshot
+RRR On Premise ,2023,13,DROP,Ka'imi Fairbairn,K,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,14,ADD,Colts D/ST,D/ST,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,14,ADD,Raiders D/ST,D/ST,(FA),Jackson's Tiktok,{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,14,ADD,Clyde Edwards-Helaire,RB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,14,TEAM->TEAM,Jayden Reed,WR,Kill Bills ,My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,14,ADD,Chargers D/ST,D/ST,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,14,ADD,Jonathan Mingo,WR,(FA),Dennis The Menace ,{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,14,ADD,Ezekiel Elliott,RB,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,14,ADD,Elijah Moore,WR,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,14,ADD,Chigoziem Okonkwo,TE,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,14,ADD,Texans D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,14,ADD,Evan McPherson,K,(FA),Frisco Cougars,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,14,ADD,Saints D/ST,D/ST,(FA),Frisco Cougars,{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,14,ADD,Packers D/ST,D/ST,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,14,ADD,Tyler Bass,K,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,14,ADD,Dontayvion Wicks,WR,(FA),Toby's Favorite Employee,{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,14,DROP,Matt Prater,K,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,14,DROP,Derek Carr,QB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,14,DROP,Samaje Perine,RB,Toby's Favorite Employee,(FA),{45D714CF-B0D8-49FA-9714-CFB0D859FAB7},0,snapshot
+RRR On Premise ,2023,14,DROP,Seahawks D/ST,D/ST,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,14,DROP,Rams D/ST,D/ST,Jackson's Tiktok,(FA),{43035DAF-DDD6-4952-835D-AFDDD6195257},0,snapshot
+RRR On Premise ,2023,14,DROP,Christian Kirk,WR,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,14,DROP,Cade Otton,TE,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,14,DROP,Kadarius Toney,WR,Dennis The Menace ,(FA),{72E06046-9EEC-4999-A060-469EEC399959},0,snapshot
+RRR On Premise ,2023,14,DROP,Mark Andrews,TE,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,14,DROP,Tank Dell,WR,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,14,DROP,Zach Charbonnet,RB,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,14,DROP,Nick Folk,K,Frisco Cougars,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,14,DROP,Bengals D/ST,D/ST,Frisco Cougars,(FA),{AAD245A4-298A-4362-A70B-5F838E0D6F64},0,snapshot
+RRR On Premise ,2023,15,ADD,Broncos D/ST,D/ST,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,15,ADD,Zay Jones,WR,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,15,ADD,Bears D/ST,D/ST,(FA),Bear Down,{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,15,ADD,Geno Smith,QB,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2023,15,ADD,Antonio Gibson,RB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,15,ADD,Marcus Mariota,QB,(FA),My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,15,ADD,Isaiah Likely,TE,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,15,ADD,Rashid Shaheed,WR,(FA),Red River Rising 💪,{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,15,DROP,Justin Herbert,QB, Johnny  Dramas ,(FA),{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2023,15,DROP,Jonnu Smith,TE,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,15,DROP,Matt Ammendola,K,Red River Rising 💪,(FA),{ACF2845F-A3D7-477C-962B-9C3D9AB963C5},0,snapshot
+RRR On Premise ,2023,15,DROP,Noah Brown,WR,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,15,DROP,Clyde Edwards-Helaire,RB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,15,DROP,Texans D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,15,DROP,Russell Wilson,QB,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,15,DROP,Jaguars D/ST,D/ST,Bear Down,(FA),{CC0C30CA-933C-4702-B525-0B223914CD0B},0,snapshot
+RRR On Premise ,2023,16,ADD,Leonard Fournette,RB,(FA),Kill Bills ,{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,16,ADD,Commanders D/ST,D/ST,(FA), Johnny  Dramas ,{2EE23928-38D5-4A7D-B660-50DE7C47A645},0,snapshot
+RRR On Premise ,2023,16,ADD,Noah Brown,WR,(FA),Shindo ,{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,16,TEAM->TEAM,Josh Downs,WR, Johnny  Dramas ,My Team Hurts,{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot
+RRR On Premise ,2023,16,DROP,Steelers D/ST,D/ST,Kill Bills ,(FA),{1BA8396F-D6D7-448B-870B-539450FA06F7},0,snapshot
+RRR On Premise ,2023,16,DROP,Elijah Moore,WR,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,16,DROP,Chigoziem Okonkwo,TE,Shindo ,(FA),{16A413B2-9FE8-4937-A413-B29FE8093782},0,snapshot
+RRR On Premise ,2023,16,DROP,Marcus Mariota,QB,My Team Hurts,(FA),{17471759-D3C1-4206-8612-A156BCC23AA1},0,snapshot

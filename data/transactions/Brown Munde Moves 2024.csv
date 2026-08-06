@@ -1,0 +1,277 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Brown Munde,2024,2,ADD,Chris Boswell,K,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,2,ADD,Allen Lazard,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,2,ADD,Jaleel McLaughlin,RB,(FA),Hark,{8BF15A87-7793-43C2-B15A-87779313C26A},0,snapshot
+Brown Munde,2024,2,ADD,Demarcus Robinson,WR,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,2,ADD,Jeff Wilson Jr.,RB,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,2,ADD,Colby Parkinson,TE,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,2,ADD,Justin Fields,QB,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,2,ADD,Commanders D/ST,D/ST,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,2,ADD,Isaiah Likely,TE,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,2,ADD,Chargers D/ST,D/ST,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,2,DROP,Ty Chandler,RB,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,2,DROP,Justin Herbert,QB,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,2,DROP,Curtis Samuel,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,2,DROP,Younghoe Koo,K,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,2,DROP,Bears D/ST,D/ST,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,2,DROP,Vikings D/ST,D/ST,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,2,DROP,Bengals D/ST,D/ST,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,2,DROP,Kirk Cousins,QB,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,3,ADD,Bucky Irving,RB,(FA),Hark,{8BF15A87-7793-43C2-B15A-87779313C26A},0,snapshot
+Brown Munde,2024,3,ADD,Braelon Allen,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,3,ADD,Kareem Hunt,RB,(FA),NoHalfSends,{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,3,ADD,Raiders D/ST,D/ST,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,3,ADD,Carson Steele,RB,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,3,ADD,Jauan Jennings,WR,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,3,ADD,Baker Mayfield,QB,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,3,ADD,Buccaneers D/ST,D/ST,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,3,ADD,Quentin Johnston,WR,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,3,ADD,Samaje Perine,RB,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,3,DROP,Tyjae Spears,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,3,DROP,Jaleel McLaughlin,RB,Hark,(FA),{8BF15A87-7793-43C2-B15A-87779313C26A},0,snapshot
+Brown Munde,2024,3,DROP,Jeff Wilson Jr.,RB,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,3,DROP,Taysom Hill,TE,NoHalfSends,(FA),{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,3,DROP,Romeo Doubs,WR,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,3,DROP,Eagles D/ST,D/ST,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,3,DROP,DeAndre Hopkins,WR,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,3,DROP,Justin Fields,QB,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,3,DROP,Commanders D/ST,D/ST,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,4,ADD,Emanuel Wilson,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,4,ADD,Cam Akers,RB,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,4,ADD,Titans D/ST,D/ST,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,4,ADD,Texans D/ST,D/ST,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,4,ADD,Rico Dowdle,RB,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,4,DROP,Austin Ekeler,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,4,DROP,Caleb Williams,QB,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,4,DROP,Buccaneers D/ST,D/ST,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,4,DROP,Isaiah Likely,TE,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,4,DROP,Chargers D/ST,D/ST,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,5,ADD,Justin Fields,QB,(FA),NoHalfSends,{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,5,ADD,Patriots D/ST,D/ST,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,5,ADD,Xavier Legette,WR,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,5,TEAM->TEAM,Javonte Williams,RB,Still Rollin',Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,5,TEAM->TEAM,Rashee Rice,WR,Team Padodara,THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,5,ADD,Broncos D/ST,D/ST,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,5,ADD,Wan'Dale Robinson,WR,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,5,ADD,Austin Seibert,K,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,5,ADD,Geno Smith,QB,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,5,ADD,T.J. Hockenson,TE,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,5,ADD,Trey Sermon,RB,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,5,TEAM->TEAM,Cam Akers,RB,Team Padodara,Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,5,ADD,Matt Gay,K,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,5,DROP,Raheem Mostert,RB,NoHalfSends,(FA),{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,5,DROP,Ezekiel Elliott,RB,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,5,DROP,Emanuel Wilson,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,5,DROP,Titans D/ST,D/ST,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,5,DROP,Hollywood Brown,WR,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,5,DROP,Rome Odunze,WR,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,5,DROP,Jake Bates,K,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,5,DROP,Quentin Johnston,WR,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,5,DROP,Texans D/ST,D/ST,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,5,DROP,Jauan Jennings,WR,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,6,ADD,Eagles D/ST,D/ST,(FA),Bhals,{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,6,ADD,Falcons D/ST,D/ST,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,6,ADD,Rome Odunze,WR,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,6,ADD,Tucker Kraft,TE,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,6,ADD,Jalen Tolbert,WR,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,6,ADD,Texans D/ST,D/ST,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,6,ADD,Matthew Wright,K,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,6,ADD,Alec Pierce,WR,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,6,TEAM->TEAM,Trey Sermon,RB,Meet the Nabers,Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,6,ADD,Josh Downs,WR,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,6,ADD,Kirk Cousins,QB,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,6,ADD,Chargers D/ST,D/ST,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,6,ADD,Ray Davis,RB,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,6,ADD,Tank Bigsby,RB,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,6,ADD,Younghoe Koo,K,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,6,ADD,Buccaneers D/ST,D/ST,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,6,ADD,Austin Ekeler,RB,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,6,ADD,Tyrone Tracy Jr.,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,6,DROP,Christian Watson,WR,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,6,DROP,Jerry Jeudy,WR,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,6,DROP,Raiders D/ST,D/ST,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,6,DROP,Carson Steele,RB,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,6,DROP,Ravens D/ST,D/ST,Bhals,(FA),{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,6,DROP,Samaje Perine,RB,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,6,DROP,Patriots D/ST,D/ST,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,6,DROP,Blake Corum,RB,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,6,DROP,Dolphins D/ST,D/ST,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,6,DROP,Demarcus Robinson,WR,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,6,DROP,Cam Akers,RB,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,6,DROP,Browns D/ST,D/ST,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,6,DROP,Aaron Rodgers,QB,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,6,DROP,Colby Parkinson,TE,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,6,DROP,Matt Gay,K,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,7,ADD,Colts D/ST,D/ST,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,7,ADD,Alexander Mattison,RB,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,7,ADD,Chase McLaughlin,K,(FA),Bhals,{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,7,ADD,Bengals D/ST,D/ST,(FA),Bhals,{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,7,ADD,Blake Corum,RB,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,7,ADD,Bills D/ST,D/ST,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,7,ADD,JuJu Smith-Schuster,WR,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,7,ADD,Rams D/ST,D/ST,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,7,ADD,Bub Means,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,7,DROP,DeMario Douglas,WR,Bhals,(FA),{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,7,DROP,Eagles D/ST,D/ST,Bhals,(FA),{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,7,DROP,Xavier Legette,WR,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,7,DROP,Falcons D/ST,D/ST,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,7,DROP,Matthew Wright,K,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,7,DROP,Trey Sermon,RB,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,7,DROP,Seahawks D/ST,D/ST,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,7,DROP,Ray Davis,RB,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,7,DROP,Buccaneers D/ST,D/ST,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,7,DROP,Rashid Shaheed,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,8,ADD,DeAndre Hopkins,WR,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,8,ADD,Bo Nix,QB,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,8,ADD,Jauan Jennings,WR,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,8,ADD,Lions D/ST,D/ST,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,8,ADD,Jalen McMillan,WR,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,8,ADD,Tua Tagovailoa,QB,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,8,ADD,Romeo Doubs,WR,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,8,ADD,Ravens D/ST,D/ST,(FA),Bhals,{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,8,ADD,Cole Kmet,TE,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,8,ADD,Ricky Pearsall,WR,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,8,ADD,Chiefs D/ST,D/ST,(FA),NoHalfSends,{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,8,DROP,Zamir White,RB,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,8,DROP,Colts D/ST,D/ST,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,8,DROP,Bengals D/ST,D/ST,Bhals,(FA),{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,8,DROP,Jerome Ford,RB,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,8,DROP,Alec Pierce,WR,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,8,DROP,Kirk Cousins,QB,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,8,DROP,Saints D/ST,D/ST,NoHalfSends,(FA),{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,8,DROP,Brandon Aiyuk,WR,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,8,DROP,Chris Godwin,WR,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,8,DROP,Christian Kirk,WR,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,8,DROP,Ja'Lynn Polk,WR,Hark,(FA),{8BF15A87-7793-43C2-B15A-87779313C26A},0,snapshot
+Brown Munde,2024,8,DROP,Bub Means,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,9,ADD,Raheem Mostert,RB,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,9,ADD,Sam Darnold,QB,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,9,ADD,Bengals D/ST,D/ST,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,9,ADD,Eagles D/ST,D/ST,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,9,ADD,Cedric Tillman,WR,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,9,ADD,Saints D/ST,D/ST,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,9,ADD,Jake Bates,K,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,9,ADD,Vikings D/ST,D/ST,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,9,ADD,Commanders D/ST,D/ST,(FA),Bhals,{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,9,ADD,Xavier Hutchinson,WR,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,9,ADD,Cade Otton,TE,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,9,ADD,Kirk Cousins,QB,(FA),NoHalfSends,{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,9,DROP,Wan'Dale Robinson,WR,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,9,DROP,Anthony Richardson,QB,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,9,DROP,JuJu Smith-Schuster,WR,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,9,DROP,Jauan Jennings,WR,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,9,DROP,Lions D/ST,D/ST,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,9,DROP,Jalen McMillan,WR,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,9,DROP,Ravens D/ST,D/ST,Bhals,(FA),{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,9,DROP,Allen Lazard,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,9,DROP,Braelon Allen,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,9,DROP,Stefon Diggs,WR,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,9,DROP,Justin Fields,QB,NoHalfSends,(FA),{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,10,ADD,Russell Wilson,QB,(FA),"All Barkley, No Bite",{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Brown Munde,2024,10,ADD,Quentin Johnston,WR,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,10,ADD,Cameron Dicker,K,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,10,ADD,Giants D/ST,D/ST,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,10,ADD,Jauan Jennings,WR,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,10,ADD,Bears D/ST,D/ST,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,10,ADD,Xavier Legette,WR,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,10,ADD,Falcons D/ST,D/ST,(FA),Bhals,{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,10,DROP,Gus Edwards,RB,"All Barkley, No Bite",(FA),{65AA71E4-A3D5-46CC-A222-C0C93E886D81},0,snapshot
+Brown Munde,2024,10,DROP,Austin Seibert,K,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,10,DROP,Bengals D/ST,D/ST,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,10,DROP,Rams D/ST,D/ST,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,10,DROP,Romeo Doubs,WR,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,10,DROP,Saints D/ST,D/ST,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,10,DROP,Commanders D/ST,D/ST,Bhals,(FA),{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,10,DROP,Cowboys D/ST,D/ST,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,10,DROP,Jordan Mason,RB,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,10,DROP,Ricky Pearsall,WR,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,10,DROP,Xavier Hutchinson,WR,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,11,ADD,Emanuel Wilson,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,11,ADD,Audric Estime,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,11,ADD,Lions D/ST,D/ST,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,11,ADD,Packers D/ST,D/ST,(FA),NoHalfSends,{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,11,ADD,Justin Herbert,QB,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,11,ADD,Tyler Bass,K,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,11,ADD,Rams D/ST,D/ST,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,11,ADD,Aaron Rodgers,QB,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,11,ADD,Dolphins D/ST,D/ST,(FA),Bhals,{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,11,DROP,Devin Singletary,RB,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,11,DROP,Rashee Rice,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,11,DROP,Cole Kmet,TE,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,11,DROP,Jake Bates,K,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,11,DROP,Geno Smith,QB,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,11,DROP,Zack Moss,RB,NoHalfSends,(FA),{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,11,DROP,Rome Odunze,WR,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,11,DROP,Giants D/ST,D/ST,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,11,DROP,Xavier Legette,WR,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,11,DROP,Falcons D/ST,D/ST,Bhals,(FA),{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,12,ADD,Buccaneers D/ST,D/ST,(FA),Hark,{8BF15A87-7793-43C2-B15A-87779313C26A},0,snapshot
+Brown Munde,2024,12,ADD,Jake Bates,K,(FA),NoHalfSends,{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,12,ADD,Marquez Valdes-Scantling,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,12,ADD,Geno Smith,QB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,12,ADD,Jonnu Smith,TE,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,12,ADD,Joshua Karty,K,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,12,TEAM->TEAM,Packers D/ST,D/ST,NoHalfSends,Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,12,ADD,Commanders D/ST,D/ST,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,12,ADD,Spencer Shrader,K,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,12,ADD,Adam Thielen,WR,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,12,DROP,Emanuel Wilson,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,12,DROP,Audric Estime,RB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,12,DROP,Tank Bigsby,RB,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,12,DROP,Dalton Schultz,TE,Hark,(FA),{8BF15A87-7793-43C2-B15A-87779313C26A},0,snapshot
+Brown Munde,2024,12,DROP,Jonathon Brooks,RB,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,12,DROP,Raheem Mostert,RB,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,12,DROP,Blake Corum,RB,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,12,DROP,Evan McPherson,K,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,13,ADD,Zach Ertz,TE,(FA),NoHalfSends,{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,13,ADD,Jeremy McNichols,RB,(FA),Hark,{8BF15A87-7793-43C2-B15A-87779313C26A},0,snapshot
+Brown Munde,2024,13,ADD,Jerry Jeudy,WR,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,13,ADD,Seahawks D/ST,D/ST,(FA),Bhals,{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,13,ADD,Gus Edwards,RB,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,13,ADD,Taysom Hill,TE,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,13,ADD,Braelon Allen,RB,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,13,DROP,Jets D/ST,D/ST,Hark,(FA),{8BF15A87-7793-43C2-B15A-87779313C26A},0,snapshot
+Brown Munde,2024,13,DROP,Keon Coleman,WR,NoHalfSends,(FA),{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,13,DROP,Geno Smith,QB,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,13,DROP,Jalen Tolbert,WR,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,13,DROP,Bears D/ST,D/ST,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,13,DROP,Joshua Karty,K,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,13,DROP,Austin Ekeler,RB,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,13,DROP,Dolphins D/ST,D/ST,Bhals,(FA),{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,13,DROP,Diontae Johnson,WR,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,13,DROP,DeAndre Hopkins,WR,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,14,ADD,Jason Myers,K,(FA),Hark,{8BF15A87-7793-43C2-B15A-87779313C26A},0,snapshot
+Brown Munde,2024,14,ADD,Isaac Guerendo,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,14,ADD,Saints D/ST,D/ST,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,14,ADD,Nick Folk,K,(FA),Team Padodara,{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,14,ADD,Nick Westbrook-Ikhine,WR,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,14,ADD,Cardinals D/ST,D/ST,(FA),BurgerBoyz,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,14,ADD,Dolphins D/ST,D/ST,(FA),Bhals,{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,14,DROP,Christian McCaffrey,RB,BurgerBoyz,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Brown Munde,2024,14,DROP,Tank Dell,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,14,DROP,49ers D/ST,D/ST,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,14,DROP,Gabe Davis,WR,Bhals,(FA),{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,14,DROP,Quentin Johnston,WR,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,14,DROP,Packers D/ST,D/ST,Meet the Nabers,(FA),{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,14,DROP,Rams D/ST,D/ST,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,14,DROP,Aaron Rodgers,QB,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,14,DROP,Spencer Shrader,K,Team Padodara,(FA),{1821880B-3A19-4F7F-8EE2-9DEEC03B465E},0,snapshot
+Brown Munde,2024,14,DROP,Taysom Hill,TE,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,15,ADD,Tank Bigsby,RB,(FA),Meet the Nabers,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,snapshot
+Brown Munde,2024,15,ADD,Ravens D/ST,D/ST,(FA),Bhals,{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,15,ADD,Patrick Taylor Jr.,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,15,DROP,Marquez Valdes-Scantling,WR,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,snapshot
+Brown Munde,2024,15,DROP,Dolphins D/ST,D/ST,Bhals,(FA),{0E22E7FC-569B-49C8-A313-22E034A6865F},0,snapshot
+Brown Munde,2024,16,ADD,Jerome Ford,RB,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,16,ADD,Kendre Miller,RB,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,17,ADD,Geno Smith,QB,(FA),NoHalfSends,{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,17,ADD,Raheem Mostert,RB,(FA),NoHalfSends,{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,17,ADD,Tyjae Spears,RB,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,17,ADD,Ameer Abdullah,RB,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,17,ADD,Colts D/ST,D/ST,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,17,DROP,Nick Chubb,RB,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,17,DROP,Braelon Allen,RB,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Brown Munde,2024,17,DROP,Darnell Mooney,WR,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,17,DROP,Commanders D/ST,D/ST,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Brown Munde,2024,17,DROP,Tony Pollard,RB,NoHalfSends,(FA),{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot
+Brown Munde,2024,17,DROP,Kirk Cousins,QB,NoHalfSends,(FA),{6A39F767-40D1-4825-B0A7-1D20433A3184},0,snapshot

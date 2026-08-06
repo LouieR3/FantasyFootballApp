@@ -1,0 +1,310 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+0755 Fantasy Football,2023,2,ADD,Joshua Kelley,RB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Gus Edwards,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Puka Nacua,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Hunter Henry,TE,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Zay Jones,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Tutu Atwell,WR,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Kyren Williams,RB,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Zach Ertz,TE,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Kendrick Bourne,WR,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Nick Folk,K,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Browns D/ST,D/ST,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Chuba Hubbard,RB,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,2,TEAM->TEAM,Deon Jackson,RB,Chicken Fried Chicken Meal,Furnace Party,{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,2,ADD,Justice Hill,RB,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,2,DROP,Treylon Burks,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,2,DROP,Allen Lazard,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,2,DROP,Kenny Pickett,QB,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,2,DROP,Patriots D/ST,D/ST,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,2,DROP,Younghoe Koo,K,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,2,DROP,Evan Hull,RB,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,2,DROP,Devin Singletary,RB,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,2,DROP,De'Von Achane,RB,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,2,DROP,Isaiah Likely,TE,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,2,DROP,Chase Edmonds,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,2,DROP,J.K. Dobbins,RB,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,2,DROP,Jordan Love,QB,Furnace Party,(FA),{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,2,DROP,Juwan Johnson,TE,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,3,ADD,Anthony Richardson,QB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,3,ADD,Josh Reynolds,WR,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,3,ADD,Tank Dell,WR,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,3,ADD,Chiefs D/ST,D/ST,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,3,ADD,Jerome Ford,RB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,3,ADD,Jeff Wilson Jr.,RB,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,3,TEAM->TEAM,Chuba Hubbard,RB,Arm Pitts,MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,3,ADD,Kareem Hunt,RB,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,3,ADD,Kendre Miller,RB,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,3,TEAM->TEAM,Dalton Kincaid,TE,India's Most Wanted,Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,3,DROP,Kadarius Toney,WR,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,3,DROP,Darnell Mooney,WR,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,3,DROP,Zay Jones,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,3,DROP,Ravens D/ST,D/ST,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,3,DROP,DJ Chark Jr.,WR,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,3,DROP,Jaguars D/ST,D/ST,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,3,DROP,Nick Chubb,RB,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,3,DROP,Chigoziem Okonkwo,TE,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,4,ADD,De'Von Achane,RB,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,4,ADD,Matt Breida,RB,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,4,ADD,Brandon Aubrey,K,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,4,ADD,Younghoe Koo,K,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,4,ADD,Jordan Love,QB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,4,ADD,Jake Moody,K,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,4,ADD,Joshua Palmer,WR,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,4,ADD,Seahawks D/ST,D/ST,(FA),Here 4 fun,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2023,4,ADD,Lions D/ST,D/ST,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,4,DROP,Riley Patterson,K,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,4,DROP,Samaje Perine,RB,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,4,DROP,Derek Carr,QB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,4,DROP,Nick Folk,K,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,4,DROP,Jeff Wilson Jr.,RB,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,4,DROP,Parris Campbell,WR,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,4,DROP,Jets D/ST,D/ST,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,4,DROP,Jason Myers,K,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,5,ADD,Ravens D/ST,D/ST,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,5,ADD,Jaleel McLaughlin,RB,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,5,ADD,Romeo Doubs,WR,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,5,ADD,Ka'imi Fairbairn,K,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,5,ADD,Jets D/ST,D/ST,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,5,ADD,Tyjae Spears,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,5,ADD,Jason Sanders,K,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,5,TRADE,Kenneth Gainwell,RB,Brady Gaga,3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,5,ADD,Brock Purdy,QB,(FA),"Baby Chark, Juju Juju ",{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,5,TRADE,Gus Edwards,RB,3rd World Immigrant,Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,5,ADD,Texans D/ST,D/ST,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,5,ADD,Samaje Perine,RB,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,5,DROP,Skyy Moore,WR,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,5,DROP,Cameron Dicker,K,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,5,DROP,Chiefs D/ST,D/ST,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,5,DROP,Odell Beckham Jr.,WR,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,5,DROP,Chuba Hubbard,RB,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,5,DROP,Daniel Jones,QB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,5,DROP,Younghoe Koo,K,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,5,DROP,Jared Goff,QB,"Baby Chark, Juju Juju ",(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,5,DROP,Van Jefferson,WR,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,5,DROP,Kendre Miller,RB,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,6,ADD,Chuba Hubbard,RB,(FA),Furnace Party,{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,6,ADD,Robert Woods,WR,(FA),"Baby Chark, Juju Juju ",{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,6,ADD,Emari Demercado,RB,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,6,ADD,Rashee Rice,WR,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,6,ADD,Chiefs D/ST,D/ST,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,6,ADD,Matthew Stafford,QB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,6,ADD,Logan Thomas,TE,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,6,ADD,Jeff Wilson Jr.,RB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,6,DROP,Kendrick Bourne,WR,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,6,DROP,Dalvin Cook,RB,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,6,DROP,Elijah Moore,WR,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,6,DROP,Jets D/ST,D/ST,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,6,DROP,Deon Jackson,RB,Furnace Party,(FA),{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,6,DROP,Joshua Kelley,RB,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,6,DROP,Samaje Perine,RB,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,6,DROP,Kareem Hunt,RB,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Latavius Murray,RB,(FA),Furnace Party,{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Elijah Moore,WR,(FA),Furnace Party,{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Jaguars D/ST,D/ST,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Kareem Hunt,RB,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Royce Freeman,RB,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Brandon McManus,K,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Curtis Samuel,WR,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Zach Evans,RB,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Buccaneers D/ST,D/ST,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Brett Maher,K,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Darrell Henderson Jr.,RB,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Craig Reynolds,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Baker Mayfield,QB,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,7,ADD,D'Onta Foreman,RB,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Jonnu Smith,TE,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Matt Prater,K,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Raiders D/ST,D/ST,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Josh Downs,WR,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,7,ADD,Packers D/ST,D/ST,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Rashaad Penny,RB,Furnace Party,(FA),{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Matt Breida,RB,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Brandon Aubrey,K,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Elijah Mitchell,RB,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Dalton Kincaid,TE,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Texans D/ST,D/ST,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Tutu Atwell,WR,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Ka'imi Fairbairn,K,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Emari Demercado,RB,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Chiefs D/ST,D/ST,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Anthony Richardson,QB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Jahan Dotson,WR,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Brandin Cooks,WR,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Rondale Moore,WR,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Commanders D/ST,D/ST,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Zach Ertz,TE,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,7,DROP,Hunter Henry,TE,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,8,ADD,Nick Folk,K,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,8,ADD,Dustin Hopkins,K,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,8,ADD,Kendrick Bourne,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,8,ADD,Younghoe Koo,K,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,8,ADD,Chiefs D/ST,D/ST,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,8,ADD,Emari Demercado,RB,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,8,ADD,Ka'imi Fairbairn,K,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,8,ADD,Jets D/ST,D/ST,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,8,ADD,Kyler Murray,QB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,8,ADD,Cameron Dicker,K,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,8,ADD,Jared Goff,QB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Jake Moody,K,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Brandon McManus,K,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Zach Evans,RB,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Buccaneers D/ST,D/ST,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Brett Maher,K,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Deshaun Watson,QB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Jason Sanders,K,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Matthew Stafford,QB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Jeff Wilson Jr.,RB,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Raiders D/ST,D/ST,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Daniel Carlson,K,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,8,DROP,Packers D/ST,D/ST,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Cade Otton,TE,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Jahan Dotson,WR,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Will Levis,QB,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Devin Singletary,RB,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Vikings D/ST,D/ST,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Raiders D/ST,D/ST,(FA),"Baby Chark, Juju Juju ",{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,9,ADD,DeMario Douglas,WR,(FA),"Baby Chark, Juju Juju ",{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Brandin Cooks,WR,(FA),"Baby Chark, Juju Juju ",{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,9,TEAM->TEAM,Romeo Doubs,WR,India's Most Wanted,MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Gerald Everett,TE,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Deshaun Watson,QB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Leonard Fournette,RB,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Dalton Kincaid,TE,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Falcons D/ST,D/ST,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,9,ADD,C.J. Stroud,QB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,9,ADD,Sam Howell,QB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Jameson Williams,WR,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Jaguars D/ST,D/ST,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,9,DROP,JuJu Smith-Schuster,WR,"Baby Chark, Juju Juju ",(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Quentin Johnston,WR,"Baby Chark, Juju Juju ",(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Damien Harris,RB,"Baby Chark, Juju Juju ",(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Miles Sanders,RB,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Jaxon Smith-Njigba,WR,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Russell Wilson,QB,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Baker Mayfield,QB,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Matt Prater,K,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Jordan Love,QB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Chiefs D/ST,D/ST,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Craig Reynolds,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,9,DROP,Jared Goff,QB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,10,ADD,Taysom Hill,TE,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,10,ADD,Baker Mayfield,QB,(FA),Here 4 fun,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2023,10,ADD,Noah Brown,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,10,ADD,Jared Goff,QB,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,10,ADD,Brandon Aubrey,K,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,10,ADD,Commanders D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,10,ADD,Matt Gay,K,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,10,ADD,Keaton Mitchell,RB,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,10,DROP,Seahawks D/ST,D/ST,Here 4 fun,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2023,10,DROP,Logan Thomas,TE,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,10,DROP,Romeo Doubs,WR,MOTHER MAY I,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,10,DROP,Gerald Everett,TE,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,10,DROP,Leonard Fournette,RB,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,10,DROP,Roschon Johnson,RB,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,10,DROP,Josh Reynolds,WR,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,10,DROP,Ka'imi Fairbairn,K,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,10,DROP,Cam Akers,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,11,ADD,Ty Chandler,RB,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,11,ADD,Logan Thomas,TE,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,11,ADD,Buccaneers D/ST,D/ST,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,11,ADD,Daniel Carlson,K,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,11,TRADE,Sam Howell,QB,3rd World Immigrant,Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,11,TRADE,Jordan Addison,WR,3rd World Immigrant,Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,11,ADD,Trey McBride,TE,(FA),Brady Gaga,{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,11,TRADE,Kyren Williams,RB,India's Most Wanted,3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,11,TRADE,Dalton Kincaid,TE,India's Most Wanted,3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,11,TRADE,Puka Nacua,WR,Chicken Fried Chicken Meal,3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,11,ADD,Riley Patterson,K,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,11,ADD,Chiefs D/ST,D/ST,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,11,TRADE,Adam Thielen,WR,3rd World Immigrant,India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,11,TRADE,C.J. Stroud,QB,3rd World Immigrant,India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,11,ADD,Joshua Dobbs,QB,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,11,TEAM->TEAM,Kyle Pitts,TE,Arm Pitts,MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,11,DROP,Will Levis,QB,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,11,DROP,Bengals D/ST,D/ST,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,11,DROP,Younghoe Koo,K,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,11,DROP,Deshaun Watson,QB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,11,DROP,Jared Goff,QB,Brady Gaga,(FA),{99C913F4-1FF6-4361-93D2-117EA19F759C},0,snapshot
+0755 Fantasy Football,2023,11,DROP,DeMario Douglas,WR,"Baby Chark, Juju Juju ",(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,11,DROP,Emari Demercado,RB,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,11,DROP,Falcons D/ST,D/ST,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,11,DROP,Matt Gay,K,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,11,DROP,Trevor Lawrence,QB,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,11,DROP,Jaleel McLaughlin,RB,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,12,ADD,Jayden Reed,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,12,ADD,Trevor Lawrence,QB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,12,ADD,Roschon Johnson,RB,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,12,ADD,Patriots D/ST,D/ST,(FA),Here 4 fun,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2023,12,ADD,Jake Moody,K,(FA),Furnace Party,{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,12,ADD,Elijah Mitchell,RB,(FA),Furnace Party,{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,12,DROP,Michael Thomas,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,12,DROP,K.J. Osborn,WR,Here 4 fun,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2023,12,DROP,Commanders D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,12,DROP,Darrell Henderson Jr.,RB,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,12,DROP,Mike Williams,WR,Furnace Party,(FA),{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,12,DROP,Kirk Cousins,QB,Furnace Party,(FA),{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,12,DROP,Graham Gano,K,Furnace Party,(FA),{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Wil Lutz,K,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Jordan Love,QB,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Colts D/ST,D/ST,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Brandon McManus,K,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Matt Gay,K,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Jaguars D/ST,D/ST,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Chris Boswell,K,(FA),Here 4 fun,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Falcons D/ST,D/ST,(FA),Here 4 fun,{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Graham Gano,K,(FA),Furnace Party,{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Russell Wilson,QB,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,13,ADD,DeMario Douglas,WR,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Juwan Johnson,TE,(FA),"Baby Chark, Juju Juju ",{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,13,ADD,Jared Goff,QB,(FA),"Baby Chark, Juju Juju ",{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,13,DROP,George Pickens,WR,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Buccaneers D/ST,D/ST,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Daniel Carlson,K,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Lions D/ST,D/ST,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Ty Chandler,RB,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Riley Patterson,K,India's Most Wanted,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Michael Gallup,WR,Here 4 fun,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Patriots D/ST,D/ST,Here 4 fun,(FA),{CA88790D-FA73-4DE0-B975-466F5EE06CAA},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Cade Otton,TE,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Jahan Dotson,WR,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Jake Moody,K,Furnace Party,(FA),{895560E7-2F06-4344-BFC6-24F2919D0BB0},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Joe Burrow,QB,"Baby Chark, Juju Juju ",(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,13,DROP,Tyler Higbee,TE,"Baby Chark, Juju Juju ",(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,14,ADD,Clyde Edwards-Helaire,RB,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,14,ADD,Romeo Doubs,WR,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,14,ADD,Texans D/ST,D/ST,(FA),India's Most Wanted,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+0755 Fantasy Football,2023,14,ADD,George Pickens,WR,(FA),MOTHER MAY I,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+0755 Fantasy Football,2023,14,ADD,Zay Jones,WR,(FA),"Baby Chark, Juju Juju ",{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,14,ADD,Isaiah Likely,TE,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,14,ADD,Miles Sanders,RB,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,14,ADD,Packers D/ST,D/ST,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,14,DROP,Khalil Herbert,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,14,DROP,Logan Thomas,TE,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,14,DROP,Royce Freeman,RB,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,14,DROP,Russell Wilson,QB,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,15,ADD,Matthew Stafford,QB,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,15,ADD,Jake Browning,QB,(FA),Arm Pitts,{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,15,ADD,Odell Beckham Jr.,WR,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,15,ADD,Ty Chandler,RB,(FA),Pineapples and Tartar Sauce,{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,15,DROP,Sam Howell,QB,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,15,DROP,Justin Herbert,QB,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,15,DROP,Matt Gay,K,Arm Pitts,(FA),{B1F0C84F-7E0C-4088-B0C8-4F7E0C008826},0,snapshot
+0755 Fantasy Football,2023,15,DROP,Justice Hill,RB,Pineapples and Tartar Sauce,(FA),{03E31D1D-A927-47A0-B1C9-F4AD3AF7BFB8},0,snapshot
+0755 Fantasy Football,2023,16,ADD,Broncos D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,16,DROP,Dalton Kincaid,TE,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,16,DROP,Clyde Edwards-Helaire,RB,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,16,DROP,Romeo Doubs,WR,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,17,ADD,Rams D/ST,D/ST,(FA),3rd World Immigrant,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,17,ADD,Hunter Henry,TE,(FA),"Baby Chark, Juju Juju ",{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,17,ADD,Younghoe Koo,K,(FA),Chicken Fried Chicken Meal,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,17,ADD,Jason Sanders,K,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,17,ADD,Zamir White,RB,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,17,ADD,Justice Hill,RB,(FA),MPT Phase Tua,{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,17,DROP,Saints D/ST,D/ST,3rd World Immigrant,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+0755 Fantasy Football,2023,17,DROP,Juwan Johnson,TE,"Baby Chark, Juju Juju ",(FA),{30B3E10C-D363-4E74-8961-7D4829DE152A},0,snapshot
+0755 Fantasy Football,2023,17,DROP,Wil Lutz,K,Chicken Fried Chicken Meal,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+0755 Fantasy Football,2023,17,DROP,Dustin Hopkins,K,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,17,DROP,Keaton Mitchell,RB,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,17,DROP,Joshua Dobbs,QB,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot
+0755 Fantasy Football,2023,17,DROP,Kyle Pitts,TE,MPT Phase Tua,(FA),{41DB8DCC-B03B-4144-9B8D-CCB03BA144A2},0,snapshot

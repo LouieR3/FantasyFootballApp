@@ -1,0 +1,433 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Pennoni Younglings,2025,2,ADD,Aaron Rodgers,QB,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,2,ADD,Calvin Austin III,WR,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,2,ADD,Quentin Johnston,WR,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,2,ADD,Rams D/ST,D/ST,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,2,TEAM->TEAM,Braelon Allen,RB,Prahlad's Ghost,Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,2,ADD,Trey Benson,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,2,ADD,Harold Fannin Jr.,TE,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,2,ADD,Michael Penix Jr.,QB,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,2,ADD,Juwan Johnson,TE,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,2,ADD,Jonnu Smith,TE,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,2,ADD,JuJu Smith-Schuster,WR,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,2,DROP,Xavier Legette,WR,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,2,DROP,Woody Marks,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,2,DROP,Cam Ward,QB,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,2,DROP,Patriots D/ST,D/ST,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,2,DROP,Dameon Pierce,RB,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,2,DROP,Jaydon Blue,RB,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,2,DROP,Rashid Shaheed,WR,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,3,ADD,DeAndre Hopkins,WR,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,3,ADD,Kareem Hunt,RB,(FA),1900 Sleepers,{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,3,ADD,Kayshon Boutte,WR,(FA),1900 Sleepers,{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,3,ADD,Daniel Jones,QB,(FA),Red Zone Risk Assessors,{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,3,ADD,Bengals D/ST,D/ST,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,3,ADD,Trevor Lawrence,QB,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,3,ADD,Falcons D/ST,D/ST,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,3,ADD,Troy Franklin,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,3,ADD,Kenneth Gainwell,RB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,3,ADD,Romeo Doubs,WR,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,3,ADD,Rashid Shaheed,WR,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,3,ADD,Chiefs D/ST,D/ST,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,3,ADD,Russell Wilson,QB,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,3,TEAM->TEAM,Harold Fannin Jr.,TE,Prahlad's Ghost,Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,3,ADD,Buccaneers D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,3,DROP,Will Shipley,RB,1900 Sleepers,(FA),{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,3,DROP,Calvin Austin III,WR,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,3,DROP,Rams D/ST,D/ST,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,3,DROP,Michael Penix Jr.,QB,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,3,DROP,Marvin Mims Jr.,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,3,DROP,DeMario Douglas,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,3,DROP,Najee Harris,RB,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,3,DROP,Tyler Bass,K,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,3,DROP,Justin Fields,QB,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,3,DROP,Jayden Higgins,WR,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,3,DROP,JuJu Smith-Schuster,WR,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,4,ADD,Chargers D/ST,D/ST,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,4,TEAM->TEAM,Bhayshul Tuten,RB,19th St Halal Cart,Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,4,ADD,Elic Ayomanor,WR,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,4,ADD,Calvin Austin III,WR,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,4,ADD,Spencer Shrader,K,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,4,ADD,Jeremy McNichols,RB,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,4,ADD,Tyler Allgeier,RB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,4,ADD,Tyquan Thornton,WR,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,4,ADD,Jaxson Dart,QB,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,4,ADD,Woody Marks,RB,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,4,TEAM->TEAM,Bo Nix,QB,The Golden Receivers,19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,4,ADD,Christian Kirk,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,4,ADD,Tre Tucker,WR,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,4,ADD,Justin Fields,QB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,4,DROP,Adam Thielen,WR,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,4,DROP,Jerome Ford,RB,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,4,DROP,Harrison Butker,K,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,4,DROP,Colston Loveland,TE,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,4,DROP,Bengals D/ST,D/ST,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,4,DROP,Dylan Sampson,RB,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,4,DROP,Falcons D/ST,D/ST,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,4,DROP,Dak Prescott,QB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,4,DROP,Tank Bigsby,RB,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,4,DROP,Chiefs D/ST,D/ST,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,4,DROP,Russell Wilson,QB,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,4,DROP,C.J. Stroud,QB,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,5,ADD,Dak Prescott,QB,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,5,ADD,Blake Corum,RB,(FA),1900 Sleepers,{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,5,ADD,Michael Carter,RB,(FA),1900 Sleepers,{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,5,ADD,Dalton Schultz,TE,(FA),1900 Sleepers,{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,5,ADD,Cardinals D/ST,D/ST,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,5,ADD,Matt Prater,K,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,5,ADD,Rico Dowdle,RB,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,5,ADD,Giants D/ST,D/ST,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,5,ADD,Justice Hill,RB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,5,ADD,Sam Darnold,QB,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,5,ADD,Kendre Miller,RB,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,5,TEAM->TEAM,Rashid Shaheed,WR,PAI Alcoholics Anonymous ,Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,5,ADD,Nick Folk,K,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,5,ADD,Darren Waller,TE,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,5,ADD,Dolphins D/ST,D/ST,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,5,ADD,Marvin Mims Jr.,WR,(FA),Red Zone Risk Assessors,{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,5,ADD,Malik Washington,WR,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,5,ADD,Chiefs D/ST,D/ST,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,5,ADD,Jason Myers,K,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,5,ADD,Tommy Tremble,TE,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,5,ADD,Browns D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,5,ADD,Emari Demercado,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,5,TEAM->TEAM,Jerry Jeudy,WR,PAI Alcoholics Anonymous ,Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,5,ADD,Darius Slayton,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,5,ADD,Tyjae Spears,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,5,DROP,James Conner,RB,1900 Sleepers,(FA),{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,5,DROP,Austin Ekeler,RB,1900 Sleepers,(FA),{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,5,DROP,Kayshon Boutte,WR,1900 Sleepers,(FA),{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,5,DROP,Brandon McManus,K,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,5,DROP,Braelon Allen,RB,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,5,DROP,Chargers D/ST,D/ST,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,5,DROP,Trevor Lawrence,QB,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,5,DROP,Aaron Rodgers,QB,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,5,DROP,DeAndre Hopkins,WR,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,5,DROP,Jeremy McNichols,RB,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,5,DROP,Tyreek Hill,WR,Red Zone Risk Assessors,(FA),{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,5,DROP,Cairo Santos,K,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,5,DROP,Jonnu Smith,TE,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,5,DROP,Tyquan Thornton,WR,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,5,DROP,Packers D/ST,D/ST,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,5,DROP,Chris Boswell,K,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,5,DROP,Jalen Coker,WR,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,5,DROP,Buccaneers D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,5,DROP,49ers D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,5,DROP,Troy Franklin,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,5,DROP,Christian Kirk,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,5,DROP,Malik Nabers,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,5,DROP,Kaleb Johnson,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,6,ADD,Kendrick Bourne,WR,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,6,ADD,Trevor Lawrence,QB,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,6,ADD,Kimani Vidal,RB,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,6,ADD,Jaguars D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,6,ADD,Patriots D/ST,D/ST,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,6,ADD,AJ Dillon,RB,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,6,ADD,C.J. Stroud,QB,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,6,ADD,Matt Gay,K,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,6,ADD,Eddy Pineiro,K,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,6,ADD,Chargers D/ST,D/ST,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,6,ADD,Sterling Shepard,WR,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,6,ADD,Packers D/ST,D/ST,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,6,ADD,Mason Taylor,TE,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,6,ADD,Troy Franklin,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,6,ADD,Hassan Haskins,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,6,ADD,Rams D/ST,D/ST,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,6,ADD,Jake Tonges,TE,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,6,ADD,Joshua Karty,K,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,6,DROP,Ollie Gordon II,RB,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,6,DROP,Cardinals D/ST,D/ST,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,6,DROP,Giants D/ST,D/ST,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,6,DROP,Vikings D/ST,D/ST,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,6,DROP,Calvin Austin III,WR,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,6,DROP,Spencer Shrader,K,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,6,DROP,Jaxson Dart,QB,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,6,DROP,Malik Washington,WR,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,6,DROP,Chiefs D/ST,D/ST,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,6,DROP,Jason Myers,K,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,6,DROP,Tommy Tremble,TE,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,6,DROP,Geno Smith,QB,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,6,DROP,Ka'imi Fairbairn,K,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,6,DROP,Harold Fannin Jr.,TE,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,6,DROP,Emari Demercado,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,6,DROP,Bills D/ST,D/ST,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,6,DROP,Juwan Johnson,TE,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,6,DROP,Darius Slayton,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,7,ADD,Panthers D/ST,D/ST,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,7,ADD,Aaron Rodgers,QB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,7,ADD,Bears D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,7,ADD,Chris Boswell,K,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,7,TEAM->TEAM,Tyler Allgeier,RB,PAI Alcoholics Anonymous ,cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,7,ADD,Jason Myers,K,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,7,ADD,Kayshon Boutte,WR,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,7,TEAM->TEAM,Tyjae Spears,RB,The Golden Receivers,Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,7,TEAM->TEAM,Matt Gay,K,Philadelphia Bills Mafia,Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,7,ADD,Harold Fannin Jr.,TE,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,7,ADD,Ka'imi Fairbairn,K,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,7,ADD,Bam Knight,RB,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,7,ADD,Chiefs D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,7,ADD,Cade Otton,TE,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,7,ADD,Emanuel Wilson,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,7,ADD,Michael Mayer,TE,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,7,DROP,Dolphins D/ST,D/ST,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,7,DROP,Tyler Loop,K,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,7,DROP,Elic Ayomanor,WR,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,7,DROP,Jaguars D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,7,DROP,Matt Prater,K,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,7,DROP,AJ Dillon,RB,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,7,DROP,Tyrone Tracy Jr.,RB,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,7,DROP,Wil Lutz,K,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,7,DROP,Mason Taylor,TE,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,7,DROP,Joe Mixon,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,7,DROP,Browns D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,7,DROP,Hassan Haskins,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,7,DROP,Jake Tonges,TE,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,8,ADD,Xavier Legette,WR,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,8,ADD,Buccaneers D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,8,ADD,Michael Badgley,K,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,8,TEAM->TEAM,Troy Franklin,WR,The Golden Receivers,19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,8,ADD,Will Reichard,K,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,8,ADD,Browns D/ST,D/ST,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,8,ADD,Oronde Gadsden,TE,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,8,ADD,Joe Flacco,QB,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,8,ADD,Jaxson Dart,QB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,8,TEAM->TEAM,Jerry Jeudy,WR,Prahlad's Ghost,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,8,ADD,Josh Reynolds,WR,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,8,ADD,Kyle Monangai,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,8,ADD,Brashard Smith,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,8,TEAM->TEAM,Travis Hunter,WR,19th St Halal Cart,Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,8,ADD,Tez Johnson,WR,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,8,ADD,Jonnu Smith,TE,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,8,ADD,Wil Lutz,K,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,8,ADD,Falcons D/ST,D/ST,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,8,ADD,Isaiah Davis,RB,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,8,TEAM->TEAM,Darnell Mooney,WR,cman,Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,8,ADD,Harrison Butker,K,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,8,TEAM->TEAM,Aaron Rodgers,QB,PAI Alcoholics Anonymous ,Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,8,ADD,Tyrone Tracy Jr.,RB,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,8,DROP,Darren Waller,TE,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,8,DROP,Panthers D/ST,D/ST,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,8,DROP,Jake Bates,K,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,8,DROP,Lions D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,8,DROP,Bears D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,8,DROP,Jason Myers,K,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,8,DROP,Kayshon Boutte,WR,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,8,DROP,Bhayshul Tuten,RB,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,8,DROP,Tyjae Spears,RB,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,8,DROP,Matt Gay,K,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,8,DROP,Justin Fields,QB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,8,DROP,Kendre Miller,RB,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,8,DROP,Sterling Shepard,WR,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,8,DROP,Mike Evans,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,8,DROP,Emanuel Wilson,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,8,DROP,Rams D/ST,D/ST,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,8,DROP,Joshua Karty,K,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,8,DROP,Michael Mayer,TE,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,9,ADD,Jason Myers,K,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,9,TEAM->TEAM,Texans D/ST,D/ST,Eli,1900 Sleepers,{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,9,TEAM->TEAM,Harrison Butker,K,Daddy's Finally Home,1900 Sleepers,{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,9,TEAM->TEAM,Patriots D/ST,D/ST,Daddy's Finally Home,19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,9,ADD,Kayshon Boutte,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,9,ADD,Lions D/ST,D/ST,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,9,ADD,Jake Bates,K,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,9,ADD,Tyjae Spears,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,9,ADD,Christian Watson,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,9,ADD,49ers D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,9,ADD,Jacoby Brissett,QB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,9,ADD,Rams D/ST,D/ST,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,9,ADD,Tua Tagovailoa,QB,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,9,ADD,Chimere Dike,WR,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,9,ADD,Alec Pierce,WR,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,9,ADD,Cairo Santos,K,(FA),Red Zone Risk Assessors,{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,9,ADD,Theo Johnson,TE,(FA),Red Zone Risk Assessors,{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,9,ADD,Samaje Perine,RB,(FA),Red Zone Risk Assessors,{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,9,ADD,Jaguars D/ST,D/ST,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,9,ADD,Tyler Loop,K,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,9,ADD,Malik Washington,WR,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,9,TEAM->TEAM,Keon Coleman,WR,Prahlad's Ghost,Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,9,DROP,Eagles D/ST,D/ST,1900 Sleepers,(FA),{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,9,DROP,Blake Corum,RB,1900 Sleepers,(FA),{FB64662C-A6C7-423B-B6EE-231900310D44},0,snapshot
+Pennoni Younglings,2025,9,DROP,Xavier Legette,WR,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,9,DROP,Will Reichard,K,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,9,DROP,Browns D/ST,D/ST,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,9,DROP,Nick Folk,K,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,9,DROP,Jerry Jeudy,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,9,DROP,Josh Reynolds,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,9,DROP,Chiefs D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,9,DROP,Cade Otton,TE,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,9,DROP,Travis Hunter,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,9,DROP,Calvin Ridley,WR,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,9,DROP,Cam Skattebo,RB,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,9,DROP,Jonnu Smith,TE,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,9,DROP,Darnell Mooney,WR,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,9,DROP,Ravens D/ST,D/ST,Red Zone Risk Assessors,(FA),{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,9,DROP,Brenton Strange,TE,Red Zone Risk Assessors,(FA),{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,9,DROP,Marvin Mims Jr.,WR,Red Zone Risk Assessors,(FA),{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,9,DROP,Aaron Rodgers,QB,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,10,ADD,Matt Prater,K,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,10,ADD,Bills D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,10,ADD,Parker Washington,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,10,ADD,Will Reichard,K,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,10,ADD,Emari Demercado,RB,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,10,ADD,Travis Hunter,WR,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,10,ADD,Calvin Austin III,WR,(FA),Red Zone Risk Assessors,{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,10,ADD,Michael Penix Jr.,QB,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,10,TEAM->TEAM,Jacoby Brissett,QB,Prahlad's Ghost,Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,10,ADD,Devin Singletary,RB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,10,ADD,Darius Slayton,WR,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,10,ADD,Cade Otton,TE,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,10,ADD,Ravens D/ST,D/ST,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,10,ADD,Justin Fields,QB,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,10,DROP,Kayshon Boutte,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,10,DROP,Trevor Lawrence,QB,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,10,DROP,Brashard Smith,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,10,DROP,49ers D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,10,DROP,Justice Hill,RB,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,10,DROP,Kendrick Bourne,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,10,DROP,Chimere Dike,WR,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,10,DROP,Brock Purdy,QB,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,10,DROP,Samaje Perine,RB,Red Zone Risk Assessors,(FA),{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,10,DROP,Jaguars D/ST,D/ST,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,10,DROP,Malik Washington,WR,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,11,ADD,Sean Tucker,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,11,ADD,49ers D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,11,TRADE,Emeka Egbuka,WR,Daddy's Finally Home,Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,11,TRADE,TreVeyon Henderson,RB,Daddy's Finally Home,Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,11,TRADE,Chuba Hubbard,RB,Philadelphia Bills Mafia,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,11,ADD,Blake Corum,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,11,ADD,Andy Borregales,K,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,11,ADD,Kayshon Boutte,WR,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,11,ADD,Juwan Johnson,TE,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,11,ADD,Colston Loveland,TE,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,11,TRADE,Travis Etienne Jr.,RB,The Golden Receivers,Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,11,ADD,Cowboys D/ST,D/ST,(FA),Red Zone Risk Assessors,{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,11,TEAM->TEAM,Will Reichard,K,Prahlad's Ghost,19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,11,ADD,Bears D/ST,D/ST,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,11,ADD,Jerry Jeudy,WR,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,11,TRADE,Deebo Samuel,WR,Prahlad's Ghost,Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,11,TRADE,Bucky Irving,RB,Prahlad's Ghost,Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,11,TEAM->TEAM,Tre Tucker,WR,Philadelphia Bills Mafia,PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,11,ADD,Brock Purdy,QB,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,11,TEAM->TEAM,Jacory Croskey-Merritt,RB,Eli,cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,11,DROP,Ka'imi Fairbairn,K,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,11,DROP,Matt Prater,K,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,11,DROP,Bills D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,11,DROP,Evan Engram,TE,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,11,DROP,Tua Tagovailoa,QB,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,11,DROP,Travis Hunter,WR,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,11,DROP,Michael Badgley,K,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,11,DROP,Colts D/ST,D/ST,Red Zone Risk Assessors,(FA),{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,11,DROP,Hollywood Brown,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,11,DROP,Isaiah Davis,RB,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,11,DROP,Jayden Reed,WR,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,11,DROP,Justin Fields,QB,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,12,ADD,Nick Folk,K,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,12,ADD,Raiders D/ST,D/ST,(FA),Red Zone Risk Assessors,{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,12,ADD,Eagles D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,12,ADD,Jayden Reed,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,12,ADD,Cam Little,K,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,12,ADD,Browns D/ST,D/ST,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,12,ADD,Pat Freiermuth,TE,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,12,ADD,Emanuel Wilson,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,12,ADD,Ka'imi Fairbairn,K,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,12,ADD,Bhayshul Tuten,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,12,ADD,Michael Wilson,WR,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,12,ADD,Mike Evans,WR,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,12,ADD,Jaguars D/ST,D/ST,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,12,ADD,Trevor Lawrence,QB,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,12,TEAM->TEAM,Andy Borregales,K,The Golden Receivers,19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,12,ADD,Harrison Mevis,K,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,12,ADD,AJ Barner,TE,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,12,DROP,Parker Washington,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,12,DROP,49ers D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,12,DROP,Chuba Hubbard,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,12,DROP,Blake Corum,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,12,DROP,Wil Lutz,K,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,12,DROP,Calvin Austin III,WR,Red Zone Risk Assessors,(FA),{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,12,DROP,Buccaneers D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,12,DROP,Will Reichard,K,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,12,DROP,Chargers D/ST,D/ST,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,12,DROP,Bam Knight,RB,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,12,DROP,Keon Coleman,WR,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,12,DROP,Michael Penix Jr.,QB,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,12,DROP,Matthew Golden,WR,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,12,DROP,Cade Otton,TE,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,12,DROP,J.J. McCarthy,QB,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,12,DROP,Sam LaPorta,TE,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,13,ADD,Jayden Higgins,WR,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,13,ADD,Chimere Dike,WR,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,13,ADD,John Metchie III,WR,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,13,ADD,Darren Waller,TE,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,13,ADD,Bam Knight,RB,(FA),Pho_King,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,13,ADD,Chargers D/ST,D/ST,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,13,TEAM->TEAM,Trevor Lawrence,QB,19th St Halal Cart,Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,13,ADD,Devin Neal,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,13,ADD,Darnell Mooney,WR,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,13,ADD,Chris Rodriguez Jr.,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,13,TEAM->TEAM,Eagles D/ST,D/ST,Prahlad's Ghost,The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,13,ADD,Brenton Strange,TE,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,13,TEAM->TEAM,Emanuel Wilson,RB,The Golden Receivers,Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,13,ADD,Sam LaPorta,TE,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,13,TEAM->TEAM,Keenan Allen,WR,Christian McCalf-Injury,PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,13,DROP,Kayshon Boutte,WR,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,13,DROP,Tyjae Spears,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,13,DROP,Rashid Shaheed,WR,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,13,DROP,Eddy Pineiro,K,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,13,DROP,Pat Freiermuth,TE,Pho_King,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Pennoni Younglings,2025,13,DROP,Jordan Mason,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,13,DROP,Josh Downs,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,13,DROP,Packers D/ST,D/ST,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,13,DROP,Colston Loveland,TE,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,13,DROP,Jaguars D/ST,D/ST,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,13,DROP,Darius Slayton,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,13,DROP,Harrison Mevis,K,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,14,ADD,Luther Burden III,WR,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,14,ADD,Colston Loveland,TE,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,14,ADD,Chuba Hubbard,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,14,TEAM->TEAM,Eagles D/ST,D/ST,The Golden Receivers,Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,14,ADD,Titans D/ST,D/ST,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,14,ADD,Jordan Mason,RB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,14,ADD,Buccaneers D/ST,D/ST,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,14,ADD,Colts D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,14,ADD,Matt Prater,K,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,14,DROP,Cowboys D/ST,D/ST,Red Zone Risk Assessors,(FA),{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,14,DROP,Ricky Pearsall,WR,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,14,DROP,Sean Tucker,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,14,DROP,Chargers D/ST,D/ST,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,14,DROP,Brandon Aiyuk,WR,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,14,DROP,Bhayshul Tuten,RB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,14,DROP,Emanuel Wilson,RB,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,14,DROP,J.K. Dobbins,RB,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,14,DROP,Bears D/ST,D/ST,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,15,ADD,Vikings D/ST,D/ST,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,15,ADD,49ers D/ST,D/ST,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,15,ADD,Ricky Pearsall,WR,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,15,ADD,Isaiah Likely,TE,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,15,ADD,J.J. McCarthy,QB,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,15,ADD,Bears D/ST,D/ST,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,15,ADD,Emanuel Wilson,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,15,ADD,Rashid Shaheed,WR,(FA),cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,15,ADD,Jaguars D/ST,D/ST,(FA),Red Zone Risk Assessors,{6FB8D500-4E34-47B8-9028-B156BEC56621},0,snapshot
+Pennoni Younglings,2025,15,ADD,Philip Rivers,QB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,15,DROP,Ravens D/ST,D/ST,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,15,DROP,Jerry Jeudy,WR,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,15,DROP,Luther Burden III,WR,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2025,15,DROP,Tez Johnson,WR,cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2025,15,DROP,Zach Charbonnet,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,15,DROP,Trey Benson,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2025,15,DROP,Joe Flacco,QB,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,15,DROP,Titans D/ST,D/ST,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,15,DROP,Darnell Mooney,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2025,15,DROP,Colts D/ST,D/ST,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,15,DROP,Matt Prater,K,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2025,16,ADD,Saints D/ST,D/ST,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,16,ADD,Colby Parkinson,TE,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,16,ADD,Audric Estime,RB,(FA),Christian McCalf-Injury,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,16,DROP,Bears D/ST,D/ST,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,16,DROP,Brian Robinson Jr.,RB,Christian McCalf-Injury,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2025,17,ADD,Dylan Sampson,RB,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,17,ADD,Taysom Hill,TE,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,17,ADD,Tyler Shough,QB,(FA),PAI Alcoholics Anonymous ,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2025,17,DROP,Rachaad White,RB,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2025,17,DROP,Emari Demercado,RB,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2025,17,DROP,Xavier Worthy,WR,PAI Alcoholics Anonymous ,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot

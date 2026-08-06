@@ -1,0 +1,222 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+EBC League,2025,2,ADD,Dylan Sampson,RB,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,2,ADD,Keenan Allen,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,2,ADD,Harold Fannin Jr.,TE,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,2,DROP,Tank Bigsby,RB,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,2,DROP,Bhayshul Tuten,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,3,TEAM->TEAM,Zach Charbonnet,RB,THE POOL ,Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,3,ADD,Hollywood Brown,WR,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,3,ADD,Daniel Jones,QB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,3,ADD,Tucker Kraft,TE,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,3,ADD,Juwan Johnson,TE,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,3,ADD,Packers D/ST,D/ST,(FA),Jimoke Jukes,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,3,ADD,Cam Little,K,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,3,ADD,Quentin Johnston,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,3,DROP,Colston Loveland,TE,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,3,DROP,Kaleb Johnson,RB,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,3,DROP,Brock Purdy,QB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,3,DROP,Ravens D/ST,D/ST,Jimoke Jukes,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,3,DROP,Chase McLaughlin,K,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,3,DROP,Dont'e Thornton Jr.,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,4,ADD,Ravens D/ST,D/ST,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2025,4,ADD,Trey Benson,RB,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,4,ADD,Hunter Henry,TE,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,4,ADD,Brock Purdy,QB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,4,ADD,Tre Tucker,WR,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,4,ADD,Brandon Aiyuk,WR,(FA),CeeDee's Nuts,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,4,ADD,Joe Mixon,RB,(FA),CeeDee's Nuts,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,4,ADD,Spencer Shrader,K,(FA),CeeDee's Nuts,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,4,ADD,Jordan Love,QB,(FA),CeeDee's Nuts,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,4,ADD,Zach Ertz,TE,(FA),CeeDee's Nuts,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,4,DROP,Dylan Sampson,RB,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,4,DROP,Hollywood Brown,WR,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,4,DROP,Brenton Strange,TE,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,4,DROP,Commanders D/ST,D/ST,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2025,4,DROP,Rachaad White,RB,CeeDee's Nuts,(FA),{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,4,DROP,Jahan Dotson,WR,CeeDee's Nuts,(FA),{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,4,DROP,Christian Watson,WR,CeeDee's Nuts,(FA),{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,4,DROP,Alexander Mattison,RB,CeeDee's Nuts,(FA),{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,4,DROP,Tyler Bass,K,CeeDee's Nuts,(FA),{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,4,DROP,Tyrone Tracy Jr.,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,5,ADD,Jaxson Dart,QB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,5,ADD,Wan'Dale Robinson,WR,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,5,ADD,Woody Marks,RB,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,5,ADD,Elic Ayomanor,WR,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,5,ADD,Chase McLaughlin,K,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,5,ADD,Kenneth Gainwell,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,5,DROP,Malik Nabers,WR,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,5,DROP,Zach Charbonnet,RB,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,5,DROP,Brock Purdy,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,5,DROP,James Conner,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,5,DROP,Ka'imi Fairbairn,K,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,5,DROP,Tre Tucker,WR,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,6,ADD,Joshua Karty,K,(FA),CeeDee's Nuts,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,6,ADD,Colts D/ST,D/ST,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,6,ADD,Dallas Goedert,TE,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,6,ADD,Rico Dowdle,RB,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,6,ADD,Rachaad White,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,6,ADD,Darren Waller,TE,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,6,ADD,Saints D/ST,D/ST,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,6,ADD,Kendrick Bourne,WR,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2025,6,ADD,Tre Tucker,WR,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2025,6,ADD,Browns D/ST,D/ST,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2025,6,ADD,Matthew Stafford,QB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,6,ADD,Patriots D/ST,D/ST,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,6,DROP,Texans D/ST,D/ST,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,6,DROP,Jaxson Dart,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,6,DROP,Tyreek Hill,WR,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2025,6,DROP,Austin Ekeler,RB,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2025,6,DROP,Ravens D/ST,D/ST,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2025,6,DROP,Spencer Shrader,K,CeeDee's Nuts,(FA),{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,6,DROP,Bills D/ST,D/ST,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,6,DROP,Juwan Johnson,TE,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,6,DROP,Vikings D/ST,D/ST,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,6,DROP,Harold Fannin Jr.,TE,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,6,DROP,Daniel Jones,QB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,7,ADD,Zach Charbonnet,RB,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,7,ADD,Harold Fannin Jr.,TE,(FA),Jimoke Jukes,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,7,ADD,Vikings D/ST,D/ST,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,7,ADD,Michael Mayer,TE,(FA),OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2025,7,ADD,Kimani Vidal,RB,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,7,ADD,Eddy Pineiro,K,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,7,DROP,Elic Ayomanor,WR,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,7,DROP,Woody Marks,RB,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,7,DROP,Saints D/ST,D/ST,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,7,DROP,Cam Little,K,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,7,DROP,Tyler Loop,K,OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2025,8,TRADE,Zach Charbonnet,RB,Werewolves of London,CeeDee's Nuts,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,8,TRADE,Wan'Dale Robinson,WR,Werewolves of London,CeeDee's Nuts,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,8,TRADE,Drake Maye,QB,Werewolves of London,CeeDee's Nuts,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,8,ADD,Oronde Gadsden,TE,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,8,ADD,Rashid Shaheed,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,8,ADD,Daniel Jones,QB,(FA),Riley  Read option,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2025,8,ADD,Texans D/ST,D/ST,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,8,TEAM->TEAM,Aaron Jones Sr.,RB,Werewolves of London,Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,8,ADD,Jaxson Dart,QB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,8,ADD,Woody Marks,RB,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,8,TRADE,Tony Pollard,RB,CeeDee's Nuts,Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,8,TRADE,Chris Olave,WR,CeeDee's Nuts,Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,8,TRADE,Jordan Love,QB,CeeDee's Nuts,Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,8,DROP,Mike Evans,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,8,DROP,Darren Waller,TE,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,8,DROP,Joe Burrow,QB,Riley  Read option,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2025,8,DROP,Colts D/ST,D/ST,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,8,DROP,Matthew Stafford,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,9,ADD,Michael Badgley,K,(FA),Jimoke Jukes,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,9,ADD,Rams D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,9,ADD,Bam Knight,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,9,ADD,Jason Myers,K,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,9,ADD,Ka'imi Fairbairn,K,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,9,ADD,Tyrone Tracy Jr.,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,9,ADD,Kyle Monangai,RB,(FA),Riley  Read option,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2025,9,DROP,Steelers D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,9,DROP,Cooper Kupp,WR,Jimoke Jukes,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,9,DROP,Jake Elliott,K,Jimoke Jukes,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,9,DROP,Kenneth Gainwell,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,9,DROP,Cam Skattebo,RB,Riley  Read option,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2025,9,DROP,Jordan Mason,RB,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,9,DROP,Matthew Golden,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,9,DROP,Wil Lutz,K,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,10,ADD,Kareem Hunt,RB,(FA),OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2025,10,ADD,Jaguars D/ST,D/ST,(FA),OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2025,10,ADD,Jared Goff,QB,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,10,ADD,Tyler Loop,K,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,10,ADD,Troy Franklin,WR,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,10,ADD,Matthew Stafford,QB,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,10,ADD,Emari Demercado,RB,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,10,ADD,J.J. McCarthy,QB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,10,ADD,Matt Prater,K,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,10,DROP,Travis Hunter,WR,OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2025,10,DROP,Eagles D/ST,D/ST,OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2025,10,DROP,Jerome Ford,RB,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,10,DROP,Bam Knight,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,10,DROP,Ricky Pearsall,WR,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,10,DROP,Tucker Kraft,TE,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,10,DROP,Jason Myers,K,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,10,DROP,Tony Pollard,RB,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,10,DROP,Dak Prescott,QB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,11,ADD,Ricky Pearsall,WR,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,11,ADD,Dak Prescott,QB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,11,ADD,Kyle Pitts Sr.,TE,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,11,ADD,Cairo Santos,K,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,11,TEAM->TEAM,Jaxson Dart,QB,Abyss Diamond Eyes,Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,11,ADD,Tua Tagovailoa,QB,(FA),Riley  Read option,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2025,11,ADD,Chargers D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,11,ADD,Andy Borregales,K,(FA),Jimoke Jukes,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,11,ADD,Dalton Schultz,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,11,ADD,Jake Elliott,K,(FA),CeeDee's Nuts,{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,11,DROP,Rams D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,11,DROP,Emari Demercado,RB,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,11,DROP,Michael Badgley,K,Jimoke Jukes,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,11,DROP,Joshua Karty,K,CeeDee's Nuts,(FA),{668E3A23-4B03-4D9E-9804-4C9D479F4E8F},0,snapshot
+EBC League,2025,11,DROP,J.J. McCarthy,QB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,11,DROP,Hunter Henry,TE,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,11,DROP,Jordan Love,QB,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,11,DROP,Matt Prater,K,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,11,DROP,Kyler Murray,QB,Riley  Read option,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2025,12,ADD,Ravens D/ST,D/ST,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,12,ADD,Emanuel Wilson,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,12,ADD,Kenneth Gainwell,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,12,ADD,Sean Tucker,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,12,ADD,Christian Watson,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,12,ADD,Alec Pierce,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,12,ADD,Jason Myers,K,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,12,ADD,Brock Purdy,QB,(FA),Jimoke Jukes,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,12,ADD,Michael Wilson,WR,(FA),Jimoke Jukes,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,12,ADD,Hunter Henry,TE,(FA),Jimoke Jukes,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,12,ADD,Raiders D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,12,DROP,Calvin Ridley,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,12,DROP,Jacory Croskey-Merritt,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,12,DROP,Rachaad White,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,12,DROP,Oronde Gadsden,TE,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,12,DROP,Ka'imi Fairbairn,K,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,12,DROP,Chargers D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,12,DROP,Chuba Hubbard,RB,Jimoke Jukes,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,12,DROP,Harold Fannin Jr.,TE,Jimoke Jukes,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,12,DROP,Eddy Pineiro,K,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,12,DROP,Dalton Schultz,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,13,TEAM->TEAM,Kyle Pitts Sr.,TE,Werewolves of London,First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2025,13,ADD,Jacoby Brissett,QB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,13,ADD,Ka'imi Fairbairn,K,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,13,ADD,Oronde Gadsden,TE,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,13,ADD,Joe Burrow,QB,(FA),THE POOL ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,13,ADD,Chargers D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,13,ADD,Darnell Mooney,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,13,DROP,Cairo Santos,K,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,13,DROP,Ravens D/ST,D/ST,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,13,DROP,Kendrick Bourne,WR,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2025,13,DROP,Kimani Vidal,RB,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,13,DROP,Rashid Shaheed,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,13,DROP,Alec Pierce,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,13,DROP,Raiders D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,14,ADD,Juwan Johnson,TE,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,14,ADD,Steelers D/ST,D/ST,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,14,ADD,Alec Pierce,WR,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,14,ADD,Rams D/ST,D/ST,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,14,DROP,Patriots D/ST,D/ST,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,14,DROP,Trey Benson,RB,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,14,DROP,Brock Purdy,QB,Jimoke Jukes,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2025,14,DROP,Ricky Pearsall,WR,THE POOL ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2025,14,DROP,Vikings D/ST,D/ST,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,14,DROP,Sean Tucker,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,15,ADD,Eagles D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,15,ADD,Mike Evans,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,15,ADD,Devin Neal,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,15,DROP,Chargers D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2025,15,DROP,Emanuel Wilson,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,15,DROP,Juwan Johnson,TE,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,16,ADD,Tony Pollard,RB,(FA),Werewolves of London,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,16,ADD,Bills D/ST,D/ST,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,16,ADD,Brock Purdy,QB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,16,ADD,Michael Carter,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,16,ADD,Audric Estime,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,16,DROP,J.K. Dobbins,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,16,DROP,Darnell Mooney,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,16,DROP,Steelers D/ST,D/ST,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,16,DROP,Devin Neal,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,16,DROP,Alec Pierce,WR,Werewolves of London,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2025,17,ADD,Harold Fannin Jr.,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2025,17,ADD,Patriots D/ST,D/ST,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,17,ADD,Juwan Johnson,TE,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,17,DROP,Chris Godwin Jr.,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2025,17,DROP,Bills D/ST,D/ST,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot

@@ -1,0 +1,225 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+EBC League,2022,2,ADD,Darrell Henderson Jr.,RB,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,2,ADD,Julio Jones,WR,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,2,ADD,Bengals D/ST,D/ST,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,2,ADD,Curtis Samuel,WR,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,2,ADD,Rashaad Penny,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,2,ADD,Carson Wentz,QB,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,2,DROP,Darnell Mooney,WR,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,2,DROP,Chris Olave,WR,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,2,DROP,Rhamondre Stevenson,RB,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,2,DROP,Ravens D/ST,D/ST,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,2,DROP,Cole Kmet,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,2,DROP,Dak Prescott,QB,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,3,ADD,Marcus Mariota,QB,(FA),Pitman MaleManipulator,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,3,ADD,James Robinson,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,3,ADD,Ryan Succop,K,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,3,ADD,Tyler Higbee,TE,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,3,DROP,Elijah Moore,WR,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,3,DROP,Aaron Rodgers,QB,Pitman MaleManipulator,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,3,DROP,Harrison Butker,K,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,3,DROP,Hunter Henry,TE,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,4,ADD,Trevor Lawrence,QB,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,4,ADD,Khalil Herbert,RB,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,4,ADD,Chris Olave,WR,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,4,ADD,Cardinals D/ST,D/ST,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,4,TEAM->TEAM,Tua Tagovailoa,QB,Wut happened uh 🤷🏽‍♂️,Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,4,ADD,Chargers D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,4,ADD,Kirk Cousins,QB,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2022,4,DROP,Darrell Henderson Jr.,RB,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,4,DROP,Julio Jones,WR,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,4,DROP,Bengals D/ST,D/ST,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,4,DROP,Rashaad Penny,RB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,4,DROP,Mike Gesicki,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,4,DROP,Trey Lance,QB,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2022,5,ADD,Melvin Gordon III,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,5,ADD,Gerald Everett,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,5,ADD,Jeff Wilson Jr.,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,5,ADD,Romeo Doubs,WR,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,5,ADD,Jamaal Williams,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,5,ADD,David Njoku,TE,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,5,ADD,Geno Smith,QB,(FA),Pitman MaleManipulator,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,5,ADD,Jaguars D/ST,D/ST,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,5,DROP,Cardinals D/ST,D/ST,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,5,DROP,Cam Akers,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,5,DROP,Tua Tagovailoa,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,5,DROP,Allen Robinson II,WR,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,5,DROP,Javonte Williams,RB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,5,DROP,Chargers D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,5,DROP,Marcus Mariota,QB,Pitman MaleManipulator,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,6,ADD,Rhamondre Stevenson,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,6,ADD,Graham Gano,K,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,6,ADD,Jakobi Meyers,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,6,ADD,Rams D/ST,D/ST,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,6,DROP,Russell Wilson,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,6,DROP,JuJu Smith-Schuster,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,6,DROP,Melvin Gordon III,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,6,DROP,AJ Dillon,RB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,7,ADD,Dak Prescott,QB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,7,ADD,Kenneth Walker III,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,7,ADD,Tua Tagovailoa,QB,(FA),Pitman MaleManipulator,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,7,ADD,Hayden Hurst,TE,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,7,ADD,Marcus Mariota,QB,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,7,ADD,Noah Fant,TE,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,7,ADD,Chris Boswell,K,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2022,7,ADD,Broncos D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2022,7,TEAM->TEAM,Geno Smith,QB,Pitman MaleManipulator,Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,7,ADD,Ravens D/ST,D/ST,(FA),Riley  Read option,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2022,7,ADD,Harrison Butker,K,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,7,DROP,Jamaal Williams,RB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,7,DROP,Graham Gano,K,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,7,DROP,Rams D/ST,D/ST,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,7,DROP,Dalton Schultz,TE,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,7,DROP,Carson Wentz,QB,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,7,DROP,Khalil Herbert,RB,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,7,DROP,Matt Gay,K,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2022,7,DROP,Garrett Wilson,WR,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2022,7,DROP,Steelers D/ST,D/ST,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,7,DROP,Van Jefferson,WR,Riley  Read option,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2022,8,TEAM->TEAM,Chris Godwin,WR,Seigaku FC,Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,8,ADD,Falcons D/ST,D/ST,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,8,ADD,Michael Carter,RB,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,8,ADD,Patriots D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,8,ADD,Aaron Rodgers,QB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,8,ADD,Raheem Mostert,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,8,ADD,Evan Engram,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,8,ADD,Gus Edwards,RB,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,8,ADD,Daniel Jones,QB,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,8,ADD,JuJu Smith-Schuster,WR,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,8,ADD,Tyler Boyd,WR,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,8,ADD,Jason Myers,K,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,8,ADD,Graham Gano,K,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2022,8,DROP,Jeff Wilson Jr.,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,8,DROP,Jakobi Meyers,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,8,DROP,Diontae Johnson,WR,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,8,DROP,Evan McPherson,K,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,8,DROP,Damien Harris,RB,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,8,DROP,Marcus Mariota,QB,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,8,DROP,J.K. Dobbins,RB,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,8,DROP,Trevor Lawrence,QB,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,8,DROP,Jaguars D/ST,D/ST,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,8,DROP,Chris Boswell,K,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2022,8,DROP,Jameis Winston,QB,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,8,DROP,Breece Hall,RB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,8,DROP,Matthew Stafford,QB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,9,ADD,Rondale Moore,WR,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,9,ADD,Diontae Johnson,WR,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,9,ADD,Dalton Schultz,TE,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,9,TEAM->TEAM,David Montgomery,RB,Seigaku FC,Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,9,TEAM->TEAM,Raheem Mostert,RB,Abyss Diamond Eyes,Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,9,TEAM->TEAM,Patriots D/ST,D/ST,The Hungry Dogs,Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,9,ADD,Zay Jones,WR,(FA),Pitman MaleManipulator,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,9,ADD,Jakobi Meyers,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,9,ADD,Seahawks D/ST,D/ST,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,9,TEAM->TEAM,Geno Smith,QB,Champagne  Papi ,Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,9,ADD,Tony Pollard,RB,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,9,ADD,Bengals D/ST,D/ST,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,9,DROP,Noah Fant,TE,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,9,DROP,Rashod Bateman,WR,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,9,DROP,Harrison Butker,K,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,9,DROP,Ezekiel Elliott,RB,Pitman MaleManipulator,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,9,DROP,Tom Brady,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,9,DROP,Evan Engram,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,9,DROP,Gus Edwards,RB,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,10,ADD,Trevor Lawrence,QB,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,10,ADD,Harrison Butker,K,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,10,ADD,Jeff Wilson Jr.,RB,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,10,ADD,Joshua Palmer,WR,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,10,ADD,Justin Fields,QB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,10,ADD,Greg Dulcich,TE,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,10,ADD,Odell Beckham Jr.,WR,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,10,ADD,Jamaal Williams,RB,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,10,DROP,David Njoku,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,10,DROP,Aaron Rodgers,QB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,10,DROP,Curtis Samuel,WR,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,10,DROP,Raheem Mostert,RB,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,10,DROP,Elijah Mitchell,RB,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,10,DROP,Romeo Doubs,WR,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,10,DROP,Seahawks D/ST,D/ST,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,10,DROP,Hayden Hurst,TE,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,10,DROP,Bengals D/ST,D/ST,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,11,ADD,David Njoku,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,11,ADD,Hayden Hurst,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,11,ADD,Cairo Santos,K,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,11,ADD,Elijah Mitchell,RB,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,11,ADD,Younghoe Koo,K,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,11,ADD,Bengals D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,11,ADD,Darnell Mooney,WR,(FA),Riley  Read option,{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2022,11,ADD,Allen Robinson II,WR,(FA),Pitman MaleManipulator,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,11,ADD,Taylor Heinicke,QB,(FA),Pitman MaleManipulator,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,11,DROP,Zach Ertz,TE,Pitman MaleManipulator,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,11,DROP,Zay Jones,WR,Pitman MaleManipulator,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,11,DROP,Jerry Jeudy,WR,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,11,DROP,Dawson Knox,TE,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,11,DROP,Greg Dulcich,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,11,DROP,Gerald Everett,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,11,DROP,Hunter Renfrow,WR,Riley  Read option,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2022,11,DROP,Michael Thomas,WR,Riley  Read option,(FA),{6C5C9AAC-ABFF-4A0B-8E79-850BC109731F},0,snapshot
+EBC League,2022,12,TEAM->TEAM,Mike Williams,WR,The Hungry Dogs,Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,12,ADD,George Pickens,WR,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,12,ADD,Garrett Wilson,WR,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,12,ADD,Isiah Pacheco,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,12,ADD,Jets D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,12,ADD,Greg Dulcich,TE,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,12,ADD,Ezekiel Elliott,RB,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,12,ADD,Foster Moreau,TE,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,12,DROP,Cairo Santos,K,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,12,DROP,Packers D/ST,D/ST,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,12,DROP,Ryan Succop,K,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,12,DROP,Kyle Pitts,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,12,DROP,James Robinson,RB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,12,DROP,Bengals D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,13,ADD,Deshaun Watson,QB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,13,ADD,Rachaad White,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,13,ADD,Browns D/ST,D/ST,(FA),Pitman MaleManipulator,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,13,ADD,Latavius Murray,RB,(FA),Pitman MaleManipulator,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,13,ADD,Brett Maher,K,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,13,ADD,Christian Watson,WR,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,13,DROP,Joshua Palmer,WR,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,13,DROP,Younghoe Koo,K,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,13,DROP,Dak Prescott,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,13,DROP,Jets D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,13,DROP,Saints D/ST,D/ST,Pitman MaleManipulator,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,13,DROP,Allen Robinson II,WR,Pitman MaleManipulator,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,13,DROP,Taylor Heinicke,QB,Pitman MaleManipulator,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,14,ADD,Evan Engram,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,14,TEAM->TEAM,Jeff Wilson Jr.,RB,Champagne  Papi ,Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,14,ADD,Cardinals D/ST,D/ST,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,14,ADD,D'Onta Foreman,RB,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,14,ADD,Gerald Everett,TE,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,14,ADD,Cam Akers,RB,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,14,ADD,Raheem Mostert,RB,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,14,TEAM->TEAM,Tyler Boyd,WR,Seigaku FC,Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,14,ADD,Jerry Jeudy,WR,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,14,DROP,Courtland Sutton,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,14,DROP,Hayden Hurst,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,14,DROP,Rondale Moore,WR,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,14,DROP,Drake London,WR,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,14,DROP,Falcons D/ST,D/ST,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,14,DROP,Elijah Mitchell,RB,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,14,DROP,George Pickens,WR,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,15,ADD,Zay Jones,WR,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,15,TEAM->TEAM,Diontae Johnson,WR,The Hungry Dogs,Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,15,ADD,Chiefs D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,15,ADD,Ben DiNucci,QB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,15,ADD,Cole Kmet,TE,(FA),Wut happened uh 🤷🏽‍♂️,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,15,ADD,Zonovan Knight,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,15,DROP,Jeff Wilson Jr.,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2022,15,DROP,Foster Moreau,TE,Wut happened uh 🤷🏽‍♂️,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2022,15,DROP,Raheem Mostert,RB,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,15,DROP,Tyler Boyd,WR,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,15,DROP,Buccaneers D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,16,ADD,Jerick McKinnon,RB,(FA),Seigaku FC,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,16,ADD,Tom Brady,QB,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,16,ADD,Dak Prescott,QB,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,16,ADD,Zack Moss,RB,(FA),Champagne  Papi ,{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,16,ADD,Titans D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,16,ADD,Dawson Knox,TE,(FA),Pitman MaleManipulator,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2022,16,DROP,Daniel Jones,QB,Seigaku FC,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2022,16,DROP,Cam Akers,RB,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,16,DROP,Diontae Johnson,WR,Champagne  Papi ,(FA),{E7893FEC-BC37-48CB-9509-34C663E71ADC},0,snapshot
+EBC League,2022,16,DROP,Chiefs D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,17,ADD,Chiefs D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,17,ADD,Cam Akers,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,17,DROP,Greg Dulcich,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2022,17,DROP,Titans D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot

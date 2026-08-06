@@ -1,0 +1,127 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+EBC League,2024,2,ADD,Jordan Mason,RB,(FA),JanSteez,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,2,TEAM->TEAM,Dalton Kincaid,TE,Inter Miami CF,The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,2,ADD,Trevor Lawrence,QB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,2,ADD,Eagles D/ST,D/ST,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,2,ADD,Brock Bowers,TE,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,2,ADD,Dallas Goedert,TE,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,2,ADD,Isaiah Likely,TE,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,2,ADD,J.K. Dobbins,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,2,DROP,Taysom Hill,TE,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,2,DROP,Aaron Rodgers,QB,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,2,DROP,Vikings D/ST,D/ST,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,2,DROP,Jake Ferguson,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,2,DROP,Austin Ekeler,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,3,ADD,Baker Mayfield,QB,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,3,ADD,Rashid Shaheed,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,3,DROP,Kirk Cousins,QB,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,4,ADD,Titans D/ST,D/ST,(FA),JanSteez,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,4,ADD,Chuba Hubbard,RB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,4,TEAM->TEAM,Cowboys D/ST,D/ST,Inter Miami CF,First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,4,ADD,Justin Fields,QB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,4,ADD,Jauan Jennings,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,4,ADD,Vikings D/ST,D/ST,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,4,DROP,Chase Brown,RB,JanSteez,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,4,DROP,Ezekiel Elliott,RB,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,4,DROP,Trevor Lawrence,QB,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,4,DROP,Eagles D/ST,D/ST,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,4,DROP,Ladd McConkey,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,5,ADD,Austin Seibert,K,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,5,ADD,Broncos D/ST,D/ST,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,5,ADD,Jake Ferguson,TE,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,5,DROP,Jake Elliott,K,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,5,DROP,Cowboys D/ST,D/ST,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,5,DROP,Isaiah Likely,TE,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,6,ADD,Eagles D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,6,ADD,Rico Dowdle,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,6,ADD,Younghoe Koo,K,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,6,DROP,Anthony Richardson,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,6,DROP,DeAndre Hopkins,WR,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,6,DROP,Dolphins D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,7,ADD,Cade Otton,TE,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,7,ADD,Kirk Cousins,QB,(FA),JanSteez,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,7,ADD,Tom Brady,QB,(FA),JanSteez,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,7,DROP,Xavier Worthy,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,7,DROP,Rashid Shaheed,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,7,DROP,Jordan Addison,WR,JanSteez,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,7,DROP,Titans D/ST,D/ST,JanSteez,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,8,ADD,Ladd McConkey,WR,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,8,ADD,Chargers D/ST,D/ST,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,8,ADD,Geno Smith,QB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,8,ADD,Kareem Hunt,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,8,DROP,Zack Moss,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,8,DROP,Jake Moody,K,JanSteez,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,8,DROP,Tom Brady,QB,JanSteez,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,8,DROP,Brandon Aiyuk,WR,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,8,DROP,Broncos D/ST,D/ST,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,8,DROP,Eagles D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,9,ADD,Sam Darnold,QB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,9,ADD,Jake Elliott,K,(FA),JanSteez,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,9,ADD,Tua Tagovailoa,QB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,9,DROP,Geno Smith,QB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,9,DROP,Keenan Allen,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,9,DROP,Rico Dowdle,RB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,9,DROP,Younghoe Koo,K,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,10,ADD,Eagles D/ST,D/ST,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,10,ADD,Josh Downs,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,10,ADD,Darnell Mooney,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,10,DROP,Browns D/ST,D/ST,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,10,DROP,Dallas Goedert,TE,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,11,ADD,Chris Boswell,K,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,11,ADD,DeAndre Hopkins,WR,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,11,TEAM->TEAM,Najee Harris,RB,The Hungry Dogs,Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,11,ADD,Dolphins D/ST,D/ST,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,11,ADD,Cameron Dicker,K,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,11,ADD,Chase Brown,RB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,11,ADD,Jared Goff,QB,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,11,ADD,Tucker Kraft,TE,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,11,ADD,Pat Freiermuth,TE,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2024,11,ADD,Jake Bates,K,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2024,11,DROP,Greg Zuerlein,K,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2024,11,DROP,Chargers D/ST,D/ST,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,11,DROP,Dalton Kincaid,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,11,DROP,Sam Darnold,QB,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,11,DROP,Austin Seibert,K,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,11,DROP,Tua Tagovailoa,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,12,ADD,Justin Herbert,QB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,12,ADD,Hunter Henry,TE,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,12,ADD,Broncos D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,12,ADD,Bo Nix,QB,(FA),JanSteez,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,12,ADD,Texans D/ST,D/ST,(FA),JanSteez,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,12,DROP,Keon Coleman,WR,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2024,12,DROP,Stefon Diggs,WR,JanSteez,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,12,DROP,Ravens D/ST,D/ST,JanSteez,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,12,DROP,Jordan Mason,RB,JanSteez,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,12,DROP,Harrison Butker,K,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,12,DROP,Tucker Kraft,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,13,ADD,Taysom Hill,TE,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,13,ADD,Lions D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,13,DROP,Sam LaPorta,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,13,DROP,Chiefs D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,14,ADD,Sam Darnold,QB,(FA),Bryson Stott Fan Club,{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2024,14,ADD,Bucky Irving,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,14,ADD,Tua Tagovailoa,QB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,14,ADD,Sam LaPorta,TE,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,14,ADD,Tyrone Tracy Jr.,RB,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,14,ADD,Jonnu Smith,TE,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,14,ADD,Chase McLaughlin,K,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,14,DROP,Hunter Henry,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,14,DROP,Taysom Hill,TE,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,14,DROP,C.J. Stroud,QB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,14,DROP,Jake Ferguson,TE,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,14,DROP,Kareem Hunt,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,14,DROP,Diontae Johnson,WR,Bryson Stott Fan Club,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,snapshot
+EBC League,2024,14,DROP,Broncos D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,15,ADD,Quentin Johnston,WR,(FA),JanSteez,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,15,ADD,Chargers D/ST,D/ST,(FA),JanSteez,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,15,ADD,Rico Dowdle,RB,(FA),JanSteez,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,15,ADD,Jerry Jeudy,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,15,ADD,Jason Sanders,K,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,15,DROP,Kyle Pitts,TE,JanSteez,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,15,DROP,Texans D/ST,D/ST,JanSteez,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+EBC League,2024,15,DROP,Deebo Samuel Sr.,WR,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2024,15,DROP,Evan McPherson,K,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2024,17,ADD,Buccaneers D/ST,D/ST,(FA),Pleasant Valley Panthers,{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,17,ADD,Colts D/ST,D/ST,(FA),The Hungry Dogs,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2024,17,DROP,Jets D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
+EBC League,2024,17,DROP,Lions D/ST,D/ST,The Hungry Dogs,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
