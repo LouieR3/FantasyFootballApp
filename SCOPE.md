@@ -442,6 +442,8 @@ Compare the draft grade at **r = −0.51** against final standing. The reason is
 
 `data/transactions/<League> Weekly Rosters <Year>.csv.gz` (gzipped: 24 MB → 2 MB across a full backfill, 11.5×; pandas infers the codec) and `<League> Moves <Year>.csv` (plain, small, worth diffing). Backfill with `python pipeline/backfill_transactions.py --skip-existing` — ~17 requests per league-season; 2019 is a hard floor.
 
+⚠️ **The `.csv.gz` snapshots must be committed.** `.gitignore` carries `*.csv.gz` with an explicit `!data/transactions/*.csv.gz` exception. Drop that exception and the page deploys empty in a way that looks like the backfill never ran: the `Moves` files are plain `.csv` and push normally, but they hold no points, so nothing can be scored. The page now detects exactly this state — move logs present, snapshots absent — and says so instead of telling you to re-run the backfill you already ran.
+
 | League | Seasons |
 |---|---|
 | Game of Yards! | 2019–2025 |
