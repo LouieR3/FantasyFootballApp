@@ -326,6 +326,11 @@ def owner_careers(tg, league):
         standings['League Name'] = standings['League Name'].map(registry.canonical)
         standings = standings[standings['League Name'] == league]
 
+    # Transaction Grade belongs here and only here: it is a per-season
+    # per-manager number, so the careers table is the one place it lines up with
+    # the draft grade for the same team-year and the two can be read together.
+    txn_grades = _transaction_grades(league)
+
     rows = []
     for (oid, year), g in tg.groupby(['Owner ID', 'Year']):
         reg, po = g[~g['Is Playoff']], g[g['Is Playoff']]
@@ -348,8 +353,33 @@ def owner_careers(tg, league):
             'Points Against': round(g['Opp Score'].sum(), 1),
             'Avg Score': round(g['Score'].mean(), 1),
             'Finish': finish, 'Draft Grade': grade,
+            'Transaction Grade': txn_grades.get((int(year), team), np.nan),
         })
     return pd.DataFrame(rows).sort_values(['Owner', 'Year']).reset_index(drop=True)
+
+
+def _transaction_grades(league):
+    """(year, team) -> Transaction Grade, or {} if never backfilled.
+
+    Imported lazily and wrapped: the transaction data is optional, and a league
+    with no snapshots must still get a careers table.
+    """
+    try:
+        from ffapp.espn import transactions as _tx
+        from ffapp.metrics import transaction_analysis as _ta
+    except Exception:
+        return {}
+    out = {}
+    for lg, year in _tx.available_seasons():
+        if registry.canonical(lg) != league:
+            continue
+        rosters, moves = _tx.load_season(lg, year)
+        if rosters.empty:
+            continue
+        summary = _ta.owner_summary(rosters, moves)
+        for team, grade in zip(summary['Team'], summary['Transaction Grade']):
+            out[(int(year), str(team).strip())] = grade
+    return out
 
 
 def head_to_head_matrix(tg):

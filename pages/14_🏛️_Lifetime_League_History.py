@@ -8,15 +8,32 @@ import os
 import pandas as pd
 import streamlit as st
 
-from paths import ALL_MATCHUPS
+from paths import ALL_MATCHUPS, TRANSACTIONS_DIR
 from ffapp import league_registry as registry
 from ffapp.metrics import lifetime as lt
+from ffapp.metrics import transaction_hall_of_fame as thof
 from ffapp.ui.tables import apply_display_defaults, show_table
 
 
 @st.cache_data(show_spinner=False)
 def leagues_with_history(file_key):
     return lt.multi_season_leagues()
+
+
+def transactions_key():
+    """Cache key that changes when the transaction data does."""
+    return os.path.getmtime(TRANSACTIONS_DIR) if os.path.isdir(TRANSACTIONS_DIR) else 0
+
+
+@st.cache_data(show_spinner='Scoring this league\'s transaction history...')
+def league_transactions(league, dir_key):
+    """One league's owner-level transaction record, plus headline totals."""
+    if not dir_key:
+        return pd.DataFrame(), {}
+    txn = thof.transaction_seasons()
+    _adds, _drops, trades = thof.all_moves()
+    return (thof.league_transaction_history(league, txn, trades),
+            thof.league_transaction_totals(league, txn, _adds, _drops, trades))
 
 
 @st.cache_data(show_spinner='Stitching together every season...')
@@ -84,7 +101,7 @@ a week cutoff, since leagues start their postseason in different weeks.
                    f'and are excluded: {", ".join(f"{r.Team} ({r.Year})" for r in miss.itertuples())}')
 
     tabs = st.tabs(['All-time', 'Careers', 'Head to head', 'Playoffs',
-                    'Record book', 'Streaks & feats'])
+                    'Record book', 'Streaks & feats', 'Transactions'])
 
     # ---------------------------------------------------------------- all-time
     with tabs[0]:
@@ -103,15 +120,39 @@ a week cutoff, since leagues start their postseason in different weeks.
         owners = sorted(careers['Owner'].unique())
         pick = st.multiselect('Managers', owners, default=[], placeholder='Everyone')
         view = careers[careers['Owner'].isin(pick)] if pick else careers
-        show_table(view, max_rows=25,
+        grad = [c for c in ('Draft Grade', 'Transaction Grade') if c in view.columns]
+        styled = view.style
+        if grad:
+            styled = styled.background_gradient(subset=grad, cmap='RdYlGn')
+        if 'Finish' in view.columns:
+            styled = styled.background_gradient(subset=['Finish'], cmap='RdYlGn_r')
+        show_table(styled, max_rows=25,
                    formats={'Year': '{:.0f}', 'Finish': '{:.0f}'})
+        st.caption(
+            'How the season was built, start to finish: **Draft Grade** for the draft, '
+            '**Transaction Grade** for everything after it. Both curve within their own '
+            'league-season, so 75 is average either way. Transaction Grade is shown here '
+            'and nowhere else on this page — it is a per-season number, and this is the '
+            'one table where it lines up with the draft grade for the same team-year.'
+        )
         blank_finish = sorted(careers.loc[careers['Finish'].isna(), 'Year'].unique())
         if blank_finish:
             st.caption(
-                'Draft Grade is always current. **Finish** is blank for '
-                f"{', '.join(str(int(y)) for y in blank_finish)} because the final "
-                'standing comes from a live ESPN pull — run `analysis/draft_analysis.py` '
-                'to fill it in.'
+                '⚠️ **Finish** is blank for '
+                f"{', '.join(str(int(y)) for y in blank_finish)}: the final standing is "
+                'ESPN\'s own `final_standing` and cannot be rebuilt from the stored data '
+                '(reconstructing it from brackets and records matches on only ~62% of '
+                'team-seasons). Run `python pipeline/refresh_standings.py` to fill it in.'
+            )
+        blank_txn = ('Transaction Grade' in careers.columns
+                     and careers['Transaction Grade'].isna().any())
+        if blank_txn:
+            years = sorted(careers.loc[careers['Transaction Grade'].isna(),
+                                       'Year'].unique())
+            st.caption(
+                '**Transaction Grade** is blank for '
+                f"{', '.join(str(int(y)) for y in years)} — run "
+                '`python pipeline/backfill_transactions.py` to pull those seasons.'
             )
 
         st.markdown('##### Franchise trends')
@@ -204,6 +245,76 @@ a week cutoff, since leagues start their postseason in different weeks.
                    .background_gradient(subset=['Longest Losing Streak'], cmap='Reds'),
                    formats={'Longest Win Streak': '{:.0f}',
                             'Longest Losing Streak': '{:.0f}'})
+
+    # ------------------------------------------------------------ transactions
+    with tabs[6]:
+        history, totals = league_transactions(league, transactions_key())
+        if history.empty:
+            st.info(
+                'No transaction data for this league yet. Run '
+                '`python pipeline/backfill_transactions.py` to build weekly roster '
+                'snapshots back to 2019.'
+            )
+        else:
+            st.markdown('##### League-wide transaction history')
+            a, b, c, d = st.columns(4)
+            a.metric('Total moves', f"{totals['moves']:,}")
+            b.metric('Value added (SPAR)', f"{totals['spar_total']:,.0f}")
+            c.metric('Trades', totals['trades'])
+            d.metric('Avg trade margin',
+                     f"{totals['avg_trade_margin']:.1f}"
+                     if totals['avg_trade_margin'] is not None else '—')
+
+            a, b, c, d = st.columns(4)
+            a.metric('From the wire', f"{totals['spar_from_wire']:,.0f}")
+            b.metric('From trades', f"{totals['spar_from_trades']:,.0f}")
+            c.metric('Avg SPAR per team-season', f"{totals['spar_avg']:,.0f}")
+            d.metric('Total drop regret', f"{totals['drop_regret']:,.0f}")
+            st.caption(
+                f"{totals['seasons']} seasons · {totals['adds']:,} adds · "
+                f"{totals['drops']:,} drops. **SPAR** = started points above "
+                'replacement — value that actually reached a starting lineup.'
+            )
+
+            st.markdown('##### By owner')
+            st.caption(
+                'Raw SPAR, deliberately not z-scored: everyone here played the same '
+                'league under the same scoring, so the raw number is already '
+                'comparable and is the more legible one. **Avg Trade Margin** is '
+                'signed from that owner\'s side — positive means they came out ahead '
+                'on the average trade.'
+            )
+            show_table(
+                history.style
+                    .background_gradient(subset=['Total SPAR', 'Avg SPAR',
+                                                 'SPAR per Add', 'Avg Grade'],
+                                         cmap='RdYlGn')
+                    .background_gradient(subset=['Avg Trade Margin'], cmap='RdYlGn')
+                    .background_gradient(subset=['Drop Regret'], cmap='Reds'),
+                formats={'Seasons': '{:.0f}', 'Moves': '{:.0f}', 'Adds': '{:.0f}',
+                         'Trade Adds': '{:.0f}', 'Trades': '{:.0f}'},
+            )
+
+            traders = history[history['Trades'] > 0]
+            if len(traders) >= 2:
+                best = traders.iloc[traders['Avg Trade Margin'].argmax()]
+                worst = traders.iloc[traders['Avg Trade Margin'].argmin()]
+                a, b = st.columns(2)
+                a.success(
+                    f"**Best trader — {best['Owner']}**  \n"
+                    f"{best['Avg Trade Margin']:+.1f} avg margin over "
+                    f"{int(best['Trades'])} trade(s) ({best['Trade Record']})"
+                )
+                b.error(
+                    f"**Worst trader — {worst['Owner']}**  \n"
+                    f"{worst['Avg Trade Margin']:+.1f} avg margin over "
+                    f"{int(worst['Trades'])} trade(s) ({worst['Trade Record']})"
+                )
+                st.caption(
+                    'Trade counts in these leagues are small, so a single lopsided '
+                    'deal can decide both titles — read them as a fact about those '
+                    'trades, not a verdict on the manager.'
+                )
 
 
 app()

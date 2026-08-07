@@ -198,16 +198,16 @@ The grade is computed in `draft_data.py` (and mirrored in `analysis/draft_analys
 
 **Yes for the grading itself** — verified against the current data on 2026-07-28:
 
-| Check | Result |
-|---|---|
-| Draft picks graded | 6,772 / 6,772 rows, 0 NaN, all within 30–100 |
-| Free agents graded | 1,710 / 1,710 rows, 0 NaN, all within 30–100 |
-| Letter grades match their numeric grade | 0 mismatches across all 75 files |
-| Grade spread (picks / FAs) | sd 9.93 / 10.00 — full range in use, no pinning |
-| Team grades | 429 team-seasons, sd 9.95, range 51.7–100, full A+→F |
-| Predictive validity | team grade vs final standing **r = −0.51**, vs points-for **r = +0.53** |
-| FA grade vs that FA's own points | **+0.77** mean within league-year (was +0.65) |
-| P1–P7 from above | all addressed; one formula for every season |
+| Check                                   | Result                                                                              |
+| --------------------------------------- | ----------------------------------------------------------------------------------- |
+| Draft picks graded                      | 6,772 / 6,772 rows, 0 NaN, all within 30–100                                       |
+| Free agents graded                      | 1,710 / 1,710 rows, 0 NaN, all within 30–100                                       |
+| Letter grades match their numeric grade | 0 mismatches across all 75 files                                                    |
+| Grade spread (picks / FAs)              | sd 9.93 / 10.00 — full range in use, no pinning                                    |
+| Team grades                             | 429 team-seasons, sd 9.95, range 51.7–100, full A+→F                              |
+| Predictive validity                     | team grade vs final standing**r = −0.51**, vs points-for **r = +0.53** |
+| FA grade vs that FA's own points        | **+0.77** mean within league-year (was +0.65)                                 |
+| P1–P7 from above                       | all addressed; one formula for every season                                         |
 
 ⬜ **Three things remain open** (none of them block using the grades):
 
@@ -240,11 +240,11 @@ New page `pages/13_🔎_Draft_Analysis.py` over `ffapp/metrics/draft_analysis.py
 
 **The core idea — accuracy vs luck.** Each pick is measured against **Expected** (what that draft slot historically returns, from the position-rank curve fit across all 39 league-seasons), then split:
 
-| | |
-|---|---|
+|              |                                                                                                    |
+| ------------ | -------------------------------------------------------------------------------------------------- |
 | `ACCURACY` | Projected − Expected — you took a player the market already rated above the slot. Your decision. |
-| `LUCK` | Actual − Projected — breakouts, injuries, situation. Not your decision. |
-| `VALUE` | Actual − Expected = ACCURACY + LUCK |
+| `LUCK`     | Actual − Projected — breakouts, injuries, situation. Not your decision.                          |
+| `VALUE`    | Actual − Expected = ACCURACY + LUCK                                                               |
 
 Verified exact (`max residual 0.000000000`) across all 39 league-seasons.
 
@@ -300,11 +300,11 @@ Symptom: no 2025 playoff results and no 2025 draft grades on the cross-league pa
 
 Cause: those pages read one-off **aggregate** CSVs that were never rebuilt.
 
-| File | Was | Now |
-|---|---|---|
-| `data/all_playoff_dfs.csv` | 160 rows, **stopped at 2024**, last written 2025-09-30 | 264 rows, 2019–2025 |
-| `data/all_playoffs_with_predictions.csv` | 128 rows, stopped at 2024 | 212 rows, incl. 77 for 2025 and 11 championship games |
-| `data/drafts/Draft_Grades_with_Standings.csv` | stops at 2024 (needs live ESPN standings) | unchanged — grades now read from `Aggregated_Draft_Grades.csv` instead |
+| File                                            | Was                                                         | Now                                                                      |
+| ----------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `data/all_playoff_dfs.csv`                    | 160 rows,**stopped at 2024**, last written 2025-09-30 | 264 rows, 2019–2025                                                     |
+| `data/all_playoffs_with_predictions.csv`      | 128 rows, stopped at 2024                                   | 212 rows, incl. 77 for 2025 and 11 championship games                    |
+| `data/drafts/Draft_Grades_with_Standings.csv` | stops at 2024 (needs live ESPN standings)                   | unchanged — grades now read from`Aggregated_Draft_Grades.csv` instead |
 
 Three separate problems behind it:
 
@@ -391,10 +391,10 @@ New page `pages/16_🔄_Transaction_Analysis.py` over `ffapp/espn/transactions.p
 
 `league.recent_activity()` gives exact move types and FAAB bids, but it is only **reliably** available for the season in progress. Probed directly across both endpoint shapes the library uses:
 
-| Season | `/seasons/{year}/…/communication/` | `/leagueHistory/…` |
-|---|---|---|
-| 2021–2025 | **404** "This Communication Group does not exist" | 404 |
-| 2026 | **200** (0 topics — season not started) | 404 |
+| Season     | `/seasons/{year}/…/communication/`                   | `/leagueHistory/…` |
+| ---------- | ------------------------------------------------------- | --------------------- |
+| 2021–2025 | **404** "This Communication Group does not exist" | 404                   |
+| 2026       | **200** (0 topics — season not started)          | 404                   |
 
 Retention past the current season is real but erratic and cannot be planned around: of 38 backfilled league-seasons exactly **one** — Game of Yards! 2024 — still served its log (379 genuine messages, December 2024 dates), while EBC League 2024 did not, and repeat calls for the same league-year have disagreed. Treat historical availability as a bonus. **The only dependable capture is in-season**, which is why both weekly scripts call `build_season` every run.
 
@@ -424,13 +424,13 @@ The pull originally ended at `current_week - 1`, which reads as obviously correc
 
 `tools/check_transactions.py` runs 33 correctness assertions against synthetic rosters with hand-computed answers, then measures the metric itself. Over **423 team-seasons from 38 league-seasons**:
 
-| | |
-|---|---|
-| corr(Moves, SPAR) | **+0.69** — SPAR substantially tracks sheer activity |
-| corr(SPAR, Wins) | **+0.01** (n=361) — nothing |
-| corr(SPAR per Add, Wins) | **−0.06** — volume-adjusting does not rescue it |
-| corr(Moves, Wins) | +0.09 |
-| YoY SPAR, same team | +0.27 (n=153) — mostly persistence of *being active* |
+|                          |                                                             |
+| ------------------------ | ----------------------------------------------------------- |
+| corr(Moves, SPAR)        | **+0.69** — SPAR substantially tracks sheer activity |
+| corr(SPAR, Wins)         | **+0.01** (n=361) — nothing                          |
+| corr(SPAR per Add, Wins) | **−0.06** — volume-adjusting does not rescue it     |
+| corr(Moves, Wins)        | +0.09                                                       |
+| YoY SPAR, same team      | +0.27 (n=153) — mostly persistence of*being active*      |
 
 Compare the draft grade at **r = −0.51** against final standing. The reason is baseline, not a bug: a team that drafted well has little to gain from the wire and scores low for a good reason, while a team patching a broken draft can post a huge SPAR and still lose. So the column is named **Transaction Grade**, and the module docstring and the page both state these numbers — the same treatment the draft page's ACCURACY got after its persistence measured r = +0.08.
 
@@ -444,15 +444,15 @@ Compare the draft grade at **r = −0.51** against final standing. The reason is
 
 ⚠️ **The `.csv.gz` snapshots must be committed.** `.gitignore` carries `*.csv.gz` with an explicit `!data/transactions/*.csv.gz` exception. Drop that exception and the page deploys empty in a way that looks like the backfill never ran: the `Moves` files are plain `.csv` and push normally, but they hold no points, so nothing can be scored. The page now detects exactly this state — move logs present, snapshots absent — and says so instead of telling you to re-run the backfill you already ran.
 
-| League | Seasons |
-|---|---|
-| Game of Yards! | 2019–2025 |
-| EBC League | 2021–2025 |
-| 0755 Fantasy Football, Pennoni Younglings, THE BEST OF THE BEST | 2022–2025 |
-| RRR On Premise *(Ava's, renamed Philly Extra Special in 2025)* | 2021–2024 |
-| Brown Munde | 2023–2025 |
-| Family Fantasy | 2024–2025 |
-| OnP Fantasy, Operators Football League, Ross' Fantasy League, The Girl's Room | 2025 |
+| League                                                                        | Seasons    |
+| ----------------------------------------------------------------------------- | ---------- |
+| Game of Yards!                                                                | 2019–2025 |
+| EBC League                                                                    | 2021–2025 |
+| 0755 Fantasy Football, Pennoni Younglings, THE BEST OF THE BEST               | 2022–2025 |
+| RRR On Premise*(Ava's, renamed Philly Extra Special in 2025)*               | 2021–2024 |
+| Brown Munde                                                                   | 2023–2025 |
+| Family Fantasy                                                                | 2024–2025 |
+| OnP Fantasy, Operators Football League, Ross' Fantasy League, The Girl's Room | 2025       |
 
 ⬜ **4 real gaps — credentials, not missing leagues.** `THE BEST OF THE BEST` 2019–2021 and `The Girl's Room` 2024 return `ESPNAccessDenied`: the stored cookie cannot read them. The backfill script now separates these from `ESPNInvalidLeague` (league genuinely did not exist), because lumping them together hid the distinction entirely.
 
@@ -478,11 +478,11 @@ Beyond this page, the weekly snapshots are the missing input for **best-possible
 
 ### Three different normalisations, deliberately
 
-| Ranking | Basis | Why |
-|---|---|---|
-| Team-season, manager | **SPAR z** (within league-season) | where a league advantage would compound over a career |
-| Trades | **raw margin** | both sides sit in the same league-season — already comparable |
-| Individual adds/drops | **raw SPAR** | the headline of "best pickup ever" *is* the raw number |
+| Ranking               | Basis                                   | Why                                                            |
+| --------------------- | --------------------------------------- | -------------------------------------------------------------- |
+| Team-season, manager  | **SPAR z** (within league-season) | where a league advantage would compound over a career          |
+| Trades                | **raw margin**                    | both sides sit in the same league-season — already comparable |
+| Individual adds/drops | **raw SPAR**                      | the headline of "best pickup ever"*is* the raw number        |
 
 ⚠️ The third case is the one place a scoring-settings bias survives — a PPR league is over-represented among big receiver and back pickups. Stated on the page rather than quietly normalised away.
 
@@ -502,6 +502,44 @@ Yes in the data, mostly not on screen. It varies — 194 of 7,242 acquisitions c
 
 ---
 
+## 3g. Lifetime transactions, Finish fix, front page — ✅ 2026-08-06
+
+### League-wide transaction history (Lifetime page, new **Transactions** tab)
+
+Headline totals for the league — moves, SPAR split into **from the wire** vs **from trades**, average trade margin, total drop regret — then a per-owner table with total/avg SPAR, SPAR per add, trade count, **avg trade margin signed from that owner's side**, and a won-lost trade record. Best and worst trader are called out explicitly.
+
+Deliberately **not** z-scored, unlike the Hall of Fame views: everyone in one league played the same scoring, so raw SPAR is already comparable and is the more legible number. Normalising here would obscure rather than help.
+
+> Trade counts per league are small (EBC League: 7 across 5 seasons), so one lopsided deal can decide both "best" and "worst trader". The page says so rather than implying a stable ranking.
+
+### 🔴 Finish was blank for all of 2025 — ✅ fixed
+
+`Draft_Grades_with_Standings.csv` had stalled at **2024**. The old producer could not refresh it: `analysis/draft_analysis.py`'s `determine_final_standings(league_name, year)` reassigns `year = 2025` on its third line, discarding the argument, then matches its league config on that year — so it only ever resolved one season and silently returned an empty frame for any other.
+
+**Deriving it offline was tried and rejected.** Reconstructing ESPN's `final_standing` from playoff brackets plus regular-season records matches on only **62%** of team-seasons (champion 23/24, but the middle of the table diverges — ESPN's consolation brackets and tiebreakers are not reproducible from what we store). A number wrong for four teams in ten is worse than a blank.
+
+New `pipeline/refresh_standings.py` does the real thing: one League init per league-season, read `team.final_standing`, merge current draft grades, write the file. **277 rows → 465, now 2019–2025, 164 team-seasons of 2025 Finish across 14 leagues.**
+
+Unplayed seasons are skipped — ESPN reports an existing-but-unstarted season as `final_standing 0, 0-0-0` for everyone, and writing those put a **Finish of 0** on 2026 rows, which reads as "finished first" at a glance.
+
+⬜ 7 league-seasons still refuse (`ESPNAccessDenied`) — THE BEST OF THE BEST 2019–21, The Girl's Room 2024, BP- Loudoun 2024, OnP Fantasy 2026, Mike Daisy 2024. Cookie scope, not missing data.
+
+### Transaction Grade on the careers table, and only there
+
+Added to `lifetime.owner_careers()`. It is a per-season per-manager number, and the careers table is the one place it lines up with the **Draft Grade** for the same team-year — the season's story start to finish. Both curve within their own league-season, so 75 is average either way. Deliberately absent from the all-time table and the head-to-head views, where a per-season grade would have to be averaged into something meaningless.
+
+Loaded lazily and wrapped in `try`, so a league with no transaction backfill still renders its careers table.
+
+### Front page rewritten
+
+Now covers the five cross-league pages (Playoff Analysis, Draft Analysis, Transaction Analysis, Lifetime History, Hall of Fame) alongside the per-league sections, and explains the z-score-within-league-season idea once, up front.
+
+**Added: "Want your league added?"** — an expander with the real steps for finding a league ID and the `espn_s2` / `SWID` cookies in devtools.
+
+🔒 **No input form, deliberately.** A public page that collects live session cookies is structurally identical to a credential-phishing page. Anyone holding `espn_s2` + `SWID` can read that ESPN account until the cookies expire, and Streamlit widget values would pass through server memory and session state on a hosted app. The expander says to send them privately instead, notes that logging out of ESPN everywhere revokes them, and states that the pipeline only ever reads.
+
+---
+
 ## 4. Feature backlog
 
 Items carried over from `todo.txt` are marked ⭐.
@@ -514,6 +552,7 @@ Items carried over from `todo.txt` are marked ⭐.
 - ✅ **Head-to-head rivalry view** — §3c, Head to head tab.
 - 🟡 **Championship/podium tracker** — titles, finals and playoff appearances done in §3c; podium (2nd/3rd) still needs full final standings.
 - ⭐ **Cross-season Elo** (`elo.py` exists — surface it): Elo carried across seasons with decay, charted over the franchise's life.
+- ⭐**League wide Transaction History** - best trader, best adder, best worst trade and transaction grade next to draft grade and final standing
 - ✅ **Owner-based identity** — solved offline in §3c (100% resolution incl. mid-season renames), no ESPN call needed.
 - ✅ **Co-owner attribution** (2026-07-28): ESPN returns a list of owners per team and the code took `owners[0]`, so a co-owned season landed on whoever ESPN listed first — splitting a franchise's history across two people. `owner_overrides.py` now defines the canonical owner per co-owned team-year, and every user-facing path resolves through it. First entry: Pennoni Younglings 2024 "Philadelphia Bills Mafia" (Henry Morris + Robbie Wilston) → **Robbie Wilston**, so Henry's history is 2022–2023 and Robbie's is 2024–2025. Add future cases to `PREFERRED_CO_OWNER`.
 

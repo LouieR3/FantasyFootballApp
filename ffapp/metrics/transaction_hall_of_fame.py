@@ -271,6 +271,112 @@ MANAGER_COLS = ['Owner', 'Seasons', 'Leagues', 'Total Moves', 'Total SPAR',
                 'Avg SPAR z', 'Avg SPAR per Add', 'Avg Grade', 'Best Season',
                 'Total Drop Regret']
 
+# --------------------------------------------------------- one league's history
+
+LEAGUE_OWNER_COLS = ['Owner', 'Seasons', 'Moves', 'Adds', 'Trade Adds',
+                     'Total SPAR', 'Avg SPAR', 'SPAR per Add',
+                     'Trades', 'Avg Trade Margin', 'Trade Record',
+                     'Drop Regret', 'Avg Grade']
+
+
+def league_transaction_history(league, txn=None, trades=None):
+    """Career transaction record for every owner *within one league*.
+
+    Deliberately not z-scored: everyone here played the same league under the
+    same scoring, so raw SPAR is already comparable and is the more legible
+    number. The cross-league Hall of Fame views normalise; this one does not
+    need to.
+
+    ``Avg Trade Margin`` is signed from this owner's side - positive means they
+    came out ahead on the average trade, which is the "who is the best/worst
+    trader" answer. ``Trade Record`` counts trades won-lost.
+    """
+    txn = transaction_seasons() if txn is None else txn
+    if txn.empty:
+        return pd.DataFrame(columns=LEAGUE_OWNER_COLS)
+    mine = txn[txn['League'] == league]
+    if mine.empty:
+        return pd.DataFrame(columns=LEAGUE_OWNER_COLS)
+
+    if trades is None:
+        trades = all_moves()[2]
+    league_trades = (trades[trades['League'] == league]
+                     if not trades.empty and 'League' in trades.columns
+                     else pd.DataFrame())
+
+    # per team: margins from that team's own point of view
+    margins = {}
+    if not league_trades.empty:
+        for a, b, ag, bg in zip(league_trades['Team A'], league_trades['Team B'],
+                                league_trades['A Gain'], league_trades['B Gain']):
+            margins.setdefault(a, []).append(ag - bg)
+            margins.setdefault(b, []).append(bg - ag)
+
+    rows = []
+    for _oid, g in mine.groupby('Owner ID'):
+        teams = set(g['Team'])
+        mine_margins = [m for t in teams for m in margins.get(t, [])]
+        won = sum(1 for m in mine_margins if m > 0)
+        lost = sum(1 for m in mine_margins if m < 0)
+        adds = int(g['Adds'].sum())
+        rows.append({
+            'Owner': g['Owner'].iloc[-1],
+            'Seasons': len(g),
+            'Moves': int(g['Moves'].sum()),
+            'Adds': adds,
+            'Trade Adds': int(g['Trade Adds'].sum()),
+            'Total SPAR': round(float(g['SPAR'].sum()), 1),
+            'Avg SPAR': round(float(g['SPAR'].mean()), 1),
+            'SPAR per Add': round(float(g['SPAR'].sum() / adds), 2) if adds else 0.0,
+            'Trades': len(mine_margins),
+            'Avg Trade Margin': (round(sum(mine_margins) / len(mine_margins), 1)
+                                 if mine_margins else None),
+            'Trade Record': f'{won}-{lost}' if mine_margins else '—',
+            'Drop Regret': round(float(g['Drop Regret'].sum()), 1),
+            'Avg Grade': round(float(g['Transaction Grade'].mean()), 1),
+        })
+    out = pd.DataFrame(rows)
+    return (out.sort_values('Total SPAR', ascending=False)[LEAGUE_OWNER_COLS]
+            .reset_index(drop=True))
+
+
+def league_transaction_totals(league, txn=None, adds=None, drops=None, trades=None):
+    """Headline totals for one league's whole transaction history."""
+    txn = transaction_seasons() if txn is None else txn
+    if adds is None or drops is None or trades is None:
+        adds, drops, trades = all_moves()
+
+    mine = txn[txn['League'] == league] if not txn.empty else txn
+    if mine.empty:
+        return {}
+
+    def _league(df, col='Season'):
+        if df.empty:
+            return df
+        if 'League' in df.columns:
+            return df[df['League'] == league]
+        return df[df[col].astype(str).str.startswith(f'{league} ')]
+
+    my_adds, my_drops, my_trades = _league(adds), _league(drops), _league(trades)
+    wire = my_adds[my_adds['Type'] != tx.TRADE] if not my_adds.empty else my_adds
+    via_trade = my_adds[my_adds['Type'] == tx.TRADE] if not my_adds.empty else my_adds
+
+    return {
+        'seasons': int(mine['Year'].nunique()),
+        'team_seasons': len(mine),
+        'moves': int(mine['Moves'].sum()),
+        'adds': int(mine['Adds'].sum()),
+        'drops': int(mine['Drops'].sum()),
+        'trades': len(my_trades),
+        'spar_total': round(float(mine['SPAR'].sum()), 1),
+        'spar_avg': round(float(mine['SPAR'].mean()), 1),
+        'spar_from_wire': round(float(wire['SPAR'].sum()), 1) if len(wire) else 0.0,
+        'spar_from_trades': round(float(via_trade['SPAR'].sum()), 1) if len(via_trade) else 0.0,
+        'drop_regret': round(float(mine['Drop Regret'].sum()), 1),
+        'avg_trade_margin': (round(float(my_trades['Margin'].mean()), 1)
+                             if len(my_trades) else None),
+    }
+
 
 def manager_transaction_records(txn, min_seasons=MIN_SEASONS_FOR_MANAGER_VIEWS):
     """Career transaction record per owner, pooled across every league they play.

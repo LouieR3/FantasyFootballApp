@@ -31,8 +31,8 @@ Each league page has a year selector and renders the following sections (data pe
 |---|---|
 | **Playoff Analysis** | Every playoff bracket on file, all champions, seed-vs-outcome history |
 | **Post-Season Draft Analysis** | One league-season's draft post-mortem: value over slot split into accuracy vs luck, steals and busts, value left on the board, and the best draft each manager could have had at their own pick slots (exact, slot-constrained) |
-| **Lifetime League History** | Multi-year leagues: all-time table, head-to-head, playoff records, streaks, records book |
-| **All-Time Hall of Fame** | Every team-season across every league, ranked by league-relative metrics — best and worst ever, worst champions, best manager without a ring |
+| **Lifetime League History** | Multi-year leagues: all-time table, careers (with Draft Grade + Transaction Grade side by side), head-to-head, playoff records, streaks, records book, and a league-wide transaction history showing who wins their trades |
+| **All-Time Hall of Fame** | Every team-season across every league, ranked by league-relative metrics — best and worst ever, worst champions, best manager without a ring — plus all-time transaction feats (most lopsided/biggest/most mutual trades, best pickups, worst drops) |
 | **Transaction Analysis** | Every add, drop and trade scored by started points above replacement: best pickups, drops that hurt, trade winners, and a manager scorecard (see `ffapp/metrics/transaction_analysis.py`) |
 
 ## Repo layout
@@ -112,7 +112,8 @@ Cache keys include each file's modification time, so re-running the pipeline inv
 | `pipeline/rebuild_aggregates.py` | Rebuild the cross-league playoff CSVs from the workbooks — **run weekly**, offline; without it the cross-league pages silently omit the newest season |
 | `pipeline/add_current_week_results.py` | Append the current week into `data/all_matchups.csv` |
 | `pipeline/playoff_chances.py`, `pipeline/playoff_add_predicted.py` | Playoff-odds datasets used by the Playoff Analysis page |
-| `pipeline/backfill_transactions.py` | Weekly roster snapshots + add/drop/trade log for past seasons (~14 requests per league-season; 2019 is a hard floor) |
+| `pipeline/backfill_transactions.py` | Weekly roster snapshots + add/drop/trade log for past seasons (~17 requests per league-season; 2019 is a hard floor) |
+| `pipeline/refresh_standings.py` | Final standings (`Finish` on the Lifetime careers table) — needs ESPN's `final_standing`, so **run after each season ends**; without it Finish is blank for the newest year |
 
 Typical in-season week:
 

@@ -5,8 +5,9 @@ st.set_page_config(page_title="Louie's Fantasy Football App", page_icon="🏈", 
 st.markdown("## 🏈 Welcome to Louie's Fantasy Football App!")
 st.markdown(
     "Custom analytics for the ESPN fantasy football leagues I (or a friend) am in. "
-    "Pick a league from the sidebar — each page has a **year selector** at the top, "
-    "and leagues are labeled by name and season."
+    "Pick a league from the sidebar — each league page has a **year selector** at "
+    "the top. Below the league pages are the **cross-league deep dives**, which "
+    "pool every league and every season on file."
 )
 st.caption(
     "Built by Louie Rodriguez · "
@@ -15,6 +16,7 @@ st.caption(
 
 st.divider()
 
+# ---------------------------------------------------------------- league pages
 st.markdown("### What you'll find on each league page")
 
 st.markdown(
@@ -96,7 +98,129 @@ st.markdown(
   unlikely the result.
 
 - **Lifetime Record** — pick an owner to see their all-time head-to-head record
-  against everyone else in that league, plus a season-by-season breakdown with
-  record, points for and against, finish and draft grade.
+  against everyone else in that league, plus a season-by-season breakdown.
     """
+)
+
+st.divider()
+
+# --------------------------------------------------------- cross-league pages
+st.markdown("### Deep dives across every league")
+st.markdown(
+    "These pool every league and season on file rather than looking at one team's year."
+)
+
+a, b = st.columns(2)
+
+with a:
+    st.markdown(
+        """
+#### 🏟️ Playoff Analysis
+Every bracket ever played, all champions, and how seeding has actually held up
+against results.
+
+#### 🔎 Post-Season Draft Analysis
+A full post-mortem of one league's draft. Value over slot is split into
+**Accuracy** (did you take a player the market already rated above that slot?)
+and **Luck** (did they beat their own projection?) — the two add up exactly.
+Also: the steals and busts, how much value was left on the board, and the best
+draft each manager *could* have had, solved exactly against their own pick slots
+and their league's real lineup rules.
+
+#### 🔄 Transaction Analysis
+Every add, drop and trade of a season, scored by **SPAR** — started points above
+replacement. Points only count when the player was actually in your lineup, and
+an add is worth what it *beat*, not what it scored. Best pickups, drops that came
+back to haunt, who won each trade, and a manager scorecard.
+        """
+    )
+
+with b:
+    st.markdown(
+        """
+#### 🏛️ Lifetime League History
+For leagues with more than one season: all-time standings, career records,
+head-to-head between any two managers, playoff records, the clutch-and-choke
+table, longest streaks, the record book — and a league-wide transaction history
+showing who has actually won their trades.
+
+#### 🏆 All-Time Hall of Fame
+Every team-season from every league, ranked for bragging rights and humiliation
+alike: best and worst teams ever, the best team to miss the playoffs, the worst
+team to win it all, the best manager still without a ring. Plus the all-time
+transaction feats — most lopsided trades, biggest trades, the genuinely mutual
+ones, best waiver pickups and worst drops.
+
+> **Comparing across leagues is the hard part.** Leagues differ in size, scoring
+> and season length, so raw points mean different things. Cross-league rankings
+> use **z-scores within each league-season** — "+2.0" means two standard
+> deviations better than that league that year, which travels anywhere.
+        """
+    )
+
+st.divider()
+
+# ------------------------------------------------------------ add your league
+st.markdown("### Want your league added?")
+
+with st.expander("📥 How to add your league — what I need from you", expanded=False):
+    st.markdown(
+        """
+Send me three things and I can pull your league's full history — every season
+ESPN still has, usually back to 2019.
+
+**1. Your league ID** — the easy one. Open your league on ESPN and look at the
+address bar:
+
+```
+https://fantasy.espn.com/football/league?leagueId=1234567&seasonId=2025
+                                                  ^^^^^^^
+```
+
+That number is the league ID. **If your league is public, that's all I need** —
+skip the rest.
+
+**2 & 3. `espn_s2` and `SWID`** — only needed for **private** leagues. These are
+two cookies your browser already has once you're logged into ESPN:
+
+1. Open your league on ESPN in Chrome or Edge, logged in
+2. Press **F12** to open developer tools
+3. Go to the **Application** tab (Firefox calls it **Storage**)
+4. In the left sidebar: **Cookies → https://fantasy.espn.com**
+5. Find these two rows and copy their **Value**:
+   - `espn_s2` — a very long string with `%` signs in it
+   - `SWID` — short, looks like `{1A2B3C4D-5E6F-...}`, curly braces included
+
+Paste all three into a message and send them to me directly.
+        """
+    )
+    st.warning(
+        "**Send these to me privately — a text or DM, not through this site.** "
+        "There is deliberately no form here to type them into. `espn_s2` and "
+        "`SWID` are live session cookies: anyone holding them can read your ESPN "
+        "fantasy account as you until they expire. Treat them like a password. "
+        "A public web page that collects them is exactly what a credential-"
+        "phishing page looks like, so this one doesn't — and you shouldn't type "
+        "them into any other site that asks, either.",
+        icon="🔒",
+    )
+    st.markdown(
+        """
+**Two things worth knowing:**
+
+- They expire. Logging out of ESPN everywhere invalidates them immediately, so
+  that's your off switch if you ever change your mind.
+- I only ever read with them — standings, matchups, rosters, drafts and
+  transactions. Nothing is ever written back to your league.
+
+**What you get once it's in:** every section above for each season, plus your
+league's own Lifetime History page, and your teams join the all-time Hall of Fame
+rankings against everyone else's.
+        """
+    )
+
+st.caption(
+    "Something look wrong, or a section missing for a season you expected? "
+    "Tell me which league and year — most gaps are just a season that hasn't "
+    "been pulled yet."
 )
