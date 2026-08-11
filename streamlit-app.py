@@ -133,6 +133,15 @@ replacement. Points only count when the player was actually in your lineup, and
 an add is worth what it *beat*, not what it scored. Best pickups, drops that came
 back to haunt, who won each trade, and a manager scorecard.
 
+#### 🧠 Insights — what actually wins
+A real statistical study of every team-season on file. **The draft is by far the
+biggest thing you control** — best-quartile drafts win 60% of games and 17 of the
+titles; worst-quartile win 41% and one. It works purely by scoring more points,
+with nothing left over. Meanwhile **roster construction barely registers**:
+RB-first over WR-first isn't statistically detectable, and neither is waiver-wire
+activity. Opening with a QB is the one clear mistake. Negative results get equal
+billing, and significance is corrected for testing many metrics at once.
+
 #### 📋 Live Draft Assistant
 For draft day. Upload your rankings sheet and it tells you who's still
 available, who's **falling past their positional value**, how thin each position

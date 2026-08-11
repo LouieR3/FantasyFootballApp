@@ -622,6 +622,53 @@ Simulating 12-team snake drafts from every slot — not unit tests — caught al
 
 ---
 
+## 3i. Insights — what actually wins — ✅ built 2026-08-10
+
+`pages/18_🧠_Insights.py` over `ffapp/metrics/insights.py`. A real statistical study of **403 team-seasons across 14 leagues, 2019–2025, 34 titles**, computed live from the same files the rest of the app reads rather than written down once.
+
+### Method
+
+Outcomes are league-relative (`Win %`, `PPG z`, playoff rate, title). ~20 metrics are tested per outcome, so **Holm-Bonferroni** correction is applied within each outcome and only survivors are marked. That correction does real work — see below.
+
+### What holds up (all p < 0.001, survives correction)
+
+| Metric | r vs Win % |
+|---|---|
+| PPG z | **+0.78** |
+| LPI | +0.63 |
+| Started points | +0.60 |
+| **Draft Grade** | **+0.52** |
+| Luck | +0.46 |
+
+### The draft is the biggest controllable lever
+
+| Draft grade quartile | Win % | Playoff rate | Titles |
+|---|---|---|---|
+| Worst 25% | 41.1 | 33.7% | **1** |
+| 2nd | 46.9 | 52.5% | 4 |
+| 3rd | 52.7 | 69.0% | 12 |
+| Best 25% | **59.8** | **80.2%** | **17** |
+
+**And it wins purely by scoring.** Mediation: draft grade → PPG z is +0.65, PPG z → wins is +0.78, and the partial correlation of draft grade with wins *holding scoring fixed* is **+0.03**. There is no separate "well-constructed roster" bonus beyond the points it produces.
+
+### What does *not* hold up — the more useful half
+
+**No roster-construction metric survives correction.** `RB in 3` (r = +0.105, p = 0.035) and `Moves` (p = 0.034) look significant at a naive threshold and both die under Holm.
+
+- **RB-heavy vs WR-heavy starts:** 51.2% vs 48.3% win rate, p = 0.095; playoff rates 60% vs 56%, p = 0.50. Not significant. And **"even" splits do as well as RB-heavy** (51.1%), which is what you would expect if the mix simply does not matter. The lesson is *don't force it*, not *take backs first*.
+- **Positional share of started points** (RB/WR/QB/TE): all |r| ≤ 0.07, none significant. How production is distributed matters far less than how much there is.
+- **In-season management:** SPAR +0.04, Transaction Grade +0.03, both ns — consistent with §3e.
+
+**The one real positional finding:** opening with a **QB** — 22 teams, 31.8% playoff rate against a 58.8% baseline, **p = 0.015**, and 0 titles against 1.9 expected. RB-first and WR-first are indistinguishable from baseline (p = 0.51, p = 1.00). TE-first shows 3 titles in 9 (p = 0.034) but on n = 9 it is flagged as a curiosity, not a strategy.
+
+**Consistency is an artifact.** Score CV vs win rate is −0.22 and significant — but CV is sd ÷ mean, so a high scorer mechanically looks steadier. Split by scoring tier it collapses to ≈ −0.11 and loses significance in all three tiers. Reported that way rather than as a finding.
+
+### Honest framing
+
+The user asked for an "AI Insight" page. What was built is a **statistics** page: correlations, significance tests and mediation over their own data, with the negative results given equal billing. Headlines are generated from the computed numbers (`headline_findings`), so they cannot drift out of step with the tables beneath them.
+
+---
+
 ## 4. Feature backlog
 
 Items carried over from `todo.txt` are marked ⭐.
