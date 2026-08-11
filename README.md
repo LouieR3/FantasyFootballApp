@@ -34,6 +34,7 @@ Each league page has a year selector and renders the following sections (data pe
 | **Lifetime League History** | Multi-year leagues: all-time table, careers (with Draft Grade + Transaction Grade side by side), head-to-head, playoff records, streaks, records book, and a league-wide transaction history showing who wins their trades |
 | **All-Time Hall of Fame** | Every team-season across every league, ranked by league-relative metrics — best and worst ever, worst champions, best manager without a ring — plus all-time transaction feats (most lopsided/biggest/most mutual trades, best pickups, worst drops) |
 | **Transaction Analysis** | Every add, drop and trade scored by started points above replacement: best pickups, drops that hurt, trade winners, and a manager scorecard (see `ffapp/metrics/transaction_analysis.py`) |
+| **Live Draft Assistant** | Upload a rankings CSV and it tells you who's available, who's falling past their positional value, and — given your roster and your league's lineup — what to take next. Two modes: **manual** (no ESPN connection at all) or **live** (polls the draft feed). **Run locally during a live draft** — it polls with your `espn_s2` cookie |
 
 ## Repo layout
 
@@ -61,6 +62,7 @@ FantasyFootballApp/
 │   └── espn/                 # pulling + shaping ESPN data
 │       ├── draft_data.py  all_matchups.py  all_playoffs.py  season_results.py
 │       ├── transactions.py       # weekly roster snapshots + activity feed
+│       ├── live_draft.py         # live draft board (raw API — espn_api can't)
 │       ├── week_utils.py  league_settings.py
 │
 ├── pipeline/                 # runnable entry points (see below)
@@ -72,6 +74,7 @@ FantasyFootballApp/
     ├── drafts/               # draft + free agent results csv per league-year
     ├── odds/                 # betting odds xlsx per league-year
     ├── transactions/         # weekly roster snapshots + reconstructed moves per league-year
+    ├── rankings/             # draft rankings CSVs for the Draft Assistant (gitignored — third-party sheets)
     └── *.csv                 # cross-league aggregates (all_matchups, Master_Draft_Data, ...)
 ```
 

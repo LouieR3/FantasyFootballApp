@@ -132,6 +132,14 @@ Every add, drop and trade of a season, scored by **SPAR** — started points abo
 replacement. Points only count when the player was actually in your lineup, and
 an add is worth what it *beat*, not what it scored. Best pickups, drops that came
 back to haunt, who won each trade, and a manager scorecard.
+
+#### 📋 Live Draft Assistant
+For draft day. Upload your rankings sheet and it tells you who's still
+available, who's **falling past their positional value**, how thin each position
+is getting, and — given your roster and your league's real lineup — **what to
+take next**. Works fully offline (tick players off as they go) or reads the live
+ESPN draft feed. The positional path is adjustable: from pure best-available to
+a strict RB-then-WR-then-TE/QB order.
         """
     )
 

@@ -540,6 +540,88 @@ Now covers the five cross-league pages (Playoff Analysis, Draft Analysis, Transa
 
 ---
 
+## 3h. Live Draft Assistant — ✅ built 2026-08-10
+
+`pages/17_📋_Draft_Assistant.py` over `ffapp/espn/live_draft.py` (ESPN reads) and `ffapp/metrics/draft_board.py` (rankings join + value). Upload a rankings CSV, watch the live board, see who is falling past their value and how long until you are up.
+
+### `espn_api` cannot read a live draft — this is why the module exists
+
+`base_league._fetch_draft` opens with:
+
+```python
+if not data.get('draftDetail', {}).get('drafted'):
+    return
+```
+
+ESPN only flips `drafted` to True when the draft **completes**, so `league.draft` is empty for the entire window you need it, and `refresh_draft()` calls the same function. `live_draft.py` therefore talks to the `mDraftDetail` view directly with `requests` — no espn_api dependency at all.
+
+### What the raw endpoint gives you (verified against real leagues)
+
+- **The full pick order exists before anyone picks.** An undrafted 2026 league already returns every slot with `overallPickNumber`, `roundId`, `teamId` and `playerId = -1`. So the snake order — including the back-to-back turns at the wrap — is known up front, which makes "picks until you're up" arithmetic rather than guesswork.
+- A pick landing just sets that slot's `playerId`. Taken vs available is one scan; no event log to replay, nothing to miss.
+- **Polling is cheap:** ~0.45s per call, 5/5 clean. The page offers off / 5s / 10s / 30s via `st.fragment(run_every=...)`, so only the board re-runs.
+- ESPN's own rank and ADP come from `kona_player_info` with `sortDraftRanks` (PPR / STANDARD / SUPERFLEX / ELIMINATION).
+
+### Three findings that shaped the design
+
+**1. Naive rank-diff is garbage.** The first value pass surfaced `49ers D/ST +235`, `Jake Elliott +221`, `Panthers D/ST +217` — because ESPN ranks defences and kickers near 400 while sheets rank them near 190, so the difference swamps every real edge. **All value is now position-relative**: `Pos VALUE` = ADP position-rank − ECR position-rank.
+
+**2. ADP beats editorial rank for value.** A sheet's rank is an opinion about who is better; ADP is evidence about where players actually go. `VALUE` is ECR-vs-ADP — who the room is letting slide — with ESPN's rank carried alongside as a second opinion.
+
+**3. Name matching was the real integration risk, and it is solved.** 11% of names differ by suffix or punctuation alone. Normalisation treats the two kinds differently on purpose: periods and apostrophes are **deleted** (`A.J. Brown` → `aj brown`), hyphens become **spaces** (`Amon-Ra St. Brown` → `amon ra st brown`). Deleting hyphens instead yields `amonra`, which matches neither spelling — caught by a test, not in production. Three passes (exact → spacing-insensitive → last-name+position), fallbacks only when unambiguous so it can never pick the wrong Josh Allen.
+
+**Result: 200/200 matched** against the live ESPN pool on a real sheet. Unmatched players are always listed on the page, never dropped.
+
+### Also handled
+
+- **K/DST still appear in the draft log.** Sheets omit them but people draft them; reading the log off the matched board alone would skip picks. The log resolves from the ESPN pool instead.
+- `recent_picks` reads `state['taken']` — the same source `board()` uses — rather than re-scanning `slots`. Two functions deriving "what's been picked" from different fields can disagree, and a log contradicting the board is worse than no log.
+- Sparse `Round` columns are forward-filled into a per-player **Target Round** (sheets set it only on each round's first player, making it a tier marker).
+- Flexible column aliases, because these sheets are hand-built: `Name`/`Player`, `FantasyPros`/`ECR`/`Rk`/`Rank`/`Consensus`, etc. Fails loudly with the actual column list when it cannot find them.
+
+### Tabs
+
+Best available · 💰 Value · 📉 Reaches (going earlier than they're worth) · By position · Scarcity (how many of each position remain within N ECR of the best one left) · Draft log.
+
+### Data + safety
+
+⚠️ **`data/rankings/*.csv` is gitignored.** A rankings sheet is somebody else's product; pushing one to a public repo redistributes their work. Only `data/rankings/README.md` is tracked. Upload is the intended path on a deployed app.
+
+⚠️ **Run it locally during a draft.** It polls ESPN with your `espn_s2`, so on the public app anyone with the URL sees your board. Stated on the page. The module only ever reads — it cannot make a pick.
+
+⬜ **FantasyPros has no free API.** Their API needs a paid key, so ingestion is CSV upload. ECR barely moves once you are drafting, so live fetching buys almost nothing and adds a ToS problem. Their current export terms are worth checking before relying on it.
+
+`tools/check_draft_board.py` — 46 assertions: normalisation (including the must-NOT-collapse cases), column aliasing, matching, value maths, K/DST logging, roster needs and caps, recommendation ordering, dropoff, plus a live replay that freezes a completed draft at picks 0/24/100 and asserts the board shrinks.
+
+### Two tracking modes — the CSV alone is enough
+
+**Manual (default)** — no ESPN connection, no credentials, no network. Tick players off as they go, mark which are yours, type your next pick number. The sheet supplies ECR, ADP and ESPN rank from its own columns, which are already a snapshot of ESPN's API on the day it was built.
+
+**Live ESPN draft** — polls `mDraftDetail` so picks land automatically. Still uses the sheet for all rankings; ESPN is only consulted for *who has been picked* and to map its numeric `playerId` to a name. Falls back with a message pointing at manual mode if credentials expire mid-draft.
+
+`add_value` treats **ECR as the only required column**. ADP and ESPN rank are optional — a sheet with neither still gives a usable ranked board. Requiring them meant a valid two-column sheet raised `KeyError` instead of degrading.
+
+### Roster construction: "what should I take at each pick"
+
+Needs are **flex-aware and greedy in the right order** — dedicated slots fill before flex ones, so a third back soaks the flex rather than leaving WR2 looking open. Driven by the league's real `settings.roster` when stored, otherwise a lineup editor on the page.
+
+**The positional path is measured, not asserted.** `positional_dropoff` compares the best ECR available now against the best likely to survive to your next turn (ADP as the estimate). A big gap means waiting is expensive. That adapts — if the room has ignored TE, it says so — where a hardcoded RB > WR > TE/QB order cannot.
+
+`Adjusted ECR = ECR ÷ position score`, where position score = dropoff × need × your lean. A **lean slider (0–3)** exponentiates the priority weights: 0 drafts pure ECR, 1 is a mild RB-first path, 3 follows the path almost regardless of ECR. The lean is deliberately allowed to lose to a big ECR gap; at a middle slot the default takes a receiver ranked 14 spots higher over filling an empty backfield, and whether that's right is taste, not arithmetic.
+
+Also: **Draft plan** projects the rest of your draft pick by pick, carrying each assumed selection into the next turn's needs.
+
+### Four bugs found by simulating full drafts
+
+Simulating 12-team snake drafts from every slot — not unit tests — caught all of these:
+
+1. **Value-over-ADP inverted player quality.** Using it as a tie-break inside the score offered Tyrone Tracy (ECR 131) ahead of D'Andre Swift (ECR 60) at pick 24, because deep players fall furthest past their ADP. "Which position" and "which player" are now separate calculations.
+2. **The lean was decorative.** At 1.15 vs 1.10 an RB-first and a WR-first setting produced *identical* drafts. Weights widened and the exponent slider added.
+3. **Need didn't scale with count.** Needing two backs scored the same as needing one receiver, so the RB hole stayed open while the pool drained. Now `+0.30` per additional unfilled starter.
+4. **Hard leans built illegal rosters.** At lean 3 a 13-round sim took **nine backs and no quarterback**. Caps are now derived from the league's own slots (startable + bench allowance → RB 6, WR 6, TE 3, QB 2, K 1, D/ST 1), so a position drops out once it's full.
+
+---
+
 ## 4. Feature backlog
 
 Items carried over from `todo.txt` are marked ⭐.

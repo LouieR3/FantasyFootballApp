@@ -9,3 +9,11 @@ __pycache__/
 # scores anything comes back with nothing.
 *.csv.gz
 !data/transactions/*.csv.gz
+
+# Third-party ranking sheets used by the Draft Assistant. Deliberately NOT
+# committed: these are somebody else's product (a paid or shared rankings sheet),
+# and pushing one to a public repo redistributes their work. Drop your own CSVs
+# here and the page picks them up locally; the page also takes a direct upload,
+# which is the intended path on a deployed app.
+data/rankings/*.csv
+!data/rankings/README.md
