@@ -382,16 +382,57 @@ def _transaction_grades(league):
     return out
 
 
-def head_to_head_matrix(tg):
-    """Owner x owner win totals across every season."""
+def head_to_head_matrix(tg, metric='meetings'):
+    """Owner x owner grid across every season.
+
+    ``metric='meetings'`` counts total games played between the pair - the
+    default, because a lone win total in a cell is ambiguous: 4 could be 4-0 or
+    4-9, and the reader cannot tell without hunting for the mirrored cell.
+    Meetings are symmetric and unambiguous, and the rivalry view underneath
+    gives the actual record.
+
+    ``metric='wins'`` gives the old row-beats-column win totals.
+    """
     valid = tg.dropna(subset=['Owner ID', 'Opp Owner ID'])
-    wins = valid[valid['Result'] == 'W']
-    if wins.empty:
+    if metric == 'wins':
+        valid = valid[valid['Result'] == 'W']
+    if valid.empty:
         return pd.DataFrame()
-    piv = wins.pivot_table(index='Owner', columns='Opp Owner', values='Score',
-                           aggfunc='size').fillna(0).astype(int)
+    piv = valid.pivot_table(index='Owner', columns='Opp Owner', values='Score',
+                            aggfunc='size').fillna(0).astype(int)
     owners = sorted(set(piv.index) | set(piv.columns))
     return piv.reindex(index=owners, columns=owners, fill_value=0)
+
+
+def head_to_head_records(tg):
+    """Owner x owner grid of 'W-L' strings - the record, not a bare count.
+
+    The one display that is never ambiguous, at the cost of not being sortable
+    or gradient-able. Diagonal is blank; a pair that never met shows '-'.
+    """
+    valid = tg.dropna(subset=['Owner ID', 'Opp Owner ID'])
+    if valid.empty:
+        return pd.DataFrame()
+    wins = valid[valid['Result'] == 'W'].pivot_table(
+        index='Owner', columns='Opp Owner', values='Score', aggfunc='size')
+    played = valid.pivot_table(index='Owner', columns='Opp Owner',
+                               values='Score', aggfunc='size')
+    owners = sorted(set(played.index) | set(played.columns))
+    wins = wins.reindex(index=owners, columns=owners)
+    played = played.reindex(index=owners, columns=owners)
+    out = pd.DataFrame('', index=owners, columns=owners, dtype=object)
+    for a in owners:
+        for b in owners:
+            if a == b:
+                continue
+            n = played.at[a, b]
+            if pd.isna(n) or n == 0:
+                out.at[a, b] = '-'
+                continue
+            w = wins.at[a, b]
+            w = 0 if pd.isna(w) else int(w)
+            out.at[a, b] = f'{w}-{int(n) - w}'
+    return out
 
 
 def rivalry(tg, owner_a, owner_b):

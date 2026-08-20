@@ -71,6 +71,10 @@ MIN_POOL = 4
 
 ACQUIRING = (tx.ADD, tx.TRADE, tx.TEAM_TO_TEAM)
 
+# Per-league-season Transaction Grade lookups, memoised because league pages ask
+# team by team and each miss would otherwise rescore the whole season.
+_TEAM_GRADE_CACHE = {}
+
 
 # ---------------------------------------------------------------------------
 # replacement level
@@ -382,3 +386,25 @@ def biggest_mistakes(rosters, moves, n=15):
     return regret.head(n)[['Week', 'Player', 'Position', 'Dropped By',
                            'Picked Up By', 'Weeks Started After',
                            'Points Started After', 'SPAR After']]
+
+
+def team_transaction_grade(league_name, year, team_name):
+    """One team-season's Transaction Grade, or (None, None) if not backfilled.
+
+    The counterpart to ``draft_grading.team_draft_grade``, so a league page can
+    show the two side by side. Reads the stored snapshots rather than ESPN, and
+    caches per league-season because the caller asks team by team.
+    """
+    key = (str(league_name), int(year))
+    cached = _TEAM_GRADE_CACHE.get(key)
+    if cached is None:
+        rosters, moves = tx.load_season(league_name, int(year))
+        if rosters.empty:
+            _TEAM_GRADE_CACHE[key] = {}
+            return None, None
+        summary = owner_summary(rosters, moves)
+        cached = {str(t).strip(): (g, l) for t, g, l in
+                  zip(summary['Team'], summary['Transaction Grade'],
+                      summary['Letter Grade'])}
+        _TEAM_GRADE_CACHE[key] = cached
+    return cached.get(str(team_name).strip(), (None, None))

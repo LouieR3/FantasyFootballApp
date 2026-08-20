@@ -669,6 +669,32 @@ The user asked for an "AI Insight" page. What was built is a **statistics** page
 
 ---
 
+## 3j. Display fixes — 2026-08-10
+
+### Head-to-head grid was ambiguous — fixed
+
+The "All-time wins, row versus column" grid showed a single win total per cell, which cannot be read on its own: a `4` might be 4-0 or 4-9, and the reader has to hunt for the mirrored cell to tell. Now a three-way toggle, defaulting to **Total meetings** — symmetric, unambiguous, and it reads the same both ways. **Record (W-L)** spells the record out per cell (`lifetime.head_to_head_records`), and **Wins only** keeps the old view for anyone who wants it. The rivalry section underneath still gives game-by-game.
+
+### Transaction Grade on the league-page Lifetime Record — added
+
+The year-by-year table at the bottom of the Lifetime Record section carried **Draft Grade** but not **Transaction Grade**, so it told half the story of each season. Added via a new `transaction_analysis.team_transaction_grade(league, year, team)` — the counterpart to `draft_grading.team_draft_grade`, memoised per league-season because the page asks team by team and each miss would otherwise rescore the whole season.
+
+Both grade columns now get an RdYlGn gradient, decimals are formatted (the table previously inherited pandas' 6-place default), and the All Time row averages the per-season grades rather than regrading. A season with no snapshots leaves the cell blank with a caption saying to run the backfill, instead of rendering `nan`.
+
+### Draft Results display — rebuilt
+
+It was one bare `AgGrid(df)` over ~180 rows sorted by grade: technically complete, practically unreadable. Nobody scans a draft as a flat list. New `ffapp/ui/draft_board_view.py` powers three tabs:
+
+- **Draft board** — rounds down, teams across, in *first-round draft order* so a positional run shows as a streak along a row. Cells are coloured in discrete grade bands (a continuous gradient behind text is unreadable), plus steals and busts side by side.
+- **All picks** — the flat table with team and position filters, a grade gradient and sane decimals.
+- **By team** — one row per manager: average pick grade, total points, best and worst pick, positional counts, and how the first five rounds were spent.
+
+Two implementation notes: the round is derived from `Total Pick ÷ team count` rather than parsed out of the `"4 - 10"` string, so it survives either column being formatted differently; and the board keeps labels and grades in two aligned frames, because a Styler needs numbers to colour by and text to show and they cannot share a cell.
+
+⬜ The **By team** average-pick-grade column is a mean of individual picks, so it clusters near the middle by construction (the same CLT effect that collapsed team grades onto C in §3). It is fine for ranking within one draft; the caption points at the standardized team Draft Grade for anything else.
+
+---
+
 ## 4. Feature backlog
 
 Items carried over from `todo.txt` are marked ⭐.

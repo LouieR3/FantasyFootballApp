@@ -16,6 +16,7 @@ from streamlit_echarts import st_pyecharts
 from espn_api.football import League
 from ffapp.metrics.monte_carlo_odds import add_weekly_analysis_to_main
 from ffapp.metrics.owner_overrides import resolve_owner
+from ffapp.ui import draft_board_view as draft_view
 from ffapp.ui.data_loader import load_sheet, load_csv, load_owner_df, get_league, sheet_names
 from ffapp.ui.tables import apply_display_defaults, table_height
 
@@ -762,9 +763,69 @@ def display_draft_results(draft_file):
         "Sort by Draft Grade to find the steals, or by Total Pick to walk the draft in order."
     )
     df = df.drop(columns=['Owner ID'], errors='ignore')
-    # Increment index to start at 1
-    df.index += 1
-    AgGrid(df)
+
+    tab_board, tab_all, tab_team = st.tabs(['Draft board', 'All picks', 'By team'])
+
+    with tab_board:
+        labels, grades = draft_view.board_grid(df)
+        if labels.empty:
+            st.info('Not enough pick data to build a board.')
+        else:
+            st.caption(
+                'Rounds down, teams across, in first-round draft order — so a run '
+                'on one position shows up as a streak across a row. Cells are '
+                "coloured by that pick's grade: green A, olive C, red F."
+            )
+            st.dataframe(
+                labels.style.apply(lambda _: draft_view.band_colors(grades),
+                                   axis=None),
+                height=table_height(len(labels)), use_container_width=True)
+
+            st.markdown('##### Steals and busts')
+            steals, busts = draft_view.steals_and_busts(df, 5)
+            a, b = st.columns(2)
+            with a:
+                st.caption('Best picks for where they went')
+                st.dataframe(steals.style.background_gradient(
+                    subset=['Draft Grade'], cmap='Greens').format(precision=1),
+                    hide_index=True, use_container_width=True)
+            with b:
+                st.caption('Worst picks for where they went')
+                st.dataframe(busts.style.background_gradient(
+                    subset=['Draft Grade'], cmap='Reds_r').format(precision=1),
+                    hide_index=True, use_container_width=True)
+
+    with tab_all:
+        c1, c2 = st.columns(2)
+        teams = sorted(df['Team'].dropna().unique())
+        positions = sorted(df['Position'].dropna().unique())
+        pick_teams = c1.multiselect('Team', teams, placeholder='All teams')
+        pick_pos = c2.multiselect('Position', positions, placeholder='All positions')
+        view = df
+        if pick_teams:
+            view = view[view['Team'].isin(pick_teams)]
+        if pick_pos:
+            view = view[view['Position'].isin(pick_pos)]
+        st.caption(f'{len(view)} picks. Sort any column; grade is coloured.')
+        st.dataframe(
+            view.style.background_gradient(subset=['Draft Grade'], cmap='RdYlGn')
+                .format(precision=1, na_rep='—'),
+            height=table_height(len(view), max_rows=20), hide_index=True,
+            use_container_width=True)
+
+    with tab_team:
+        summary = draft_view.team_summary(df)
+        st.caption(
+            'Average pick grade is a mean of individual picks, so it clusters near '
+            'the middle by construction — use it to rank within this draft, not as '
+            "the team's standardized Draft Grade (that one is on the Lifetime "
+            'Record section and the Draft Analysis page).'
+        )
+        st.dataframe(
+            summary.style.background_gradient(subset=['Avg Pick Grade', 'Total Points'],
+                                              cmap='RdYlGn').format(precision=1),
+            height=table_height(len(summary)), hide_index=True,
+            use_container_width=True)
 
 def display_biggest_lpi_upsets(file):
     st.header('Biggest LPI Upsets')
@@ -824,9 +885,24 @@ def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
     height = table_height(len(names))
     st.dataframe(df4, height=height, hide_index=True)
 
-    # df5 = year_df.style.background_gradient(subset=['Win Percentage'])
     st.write("Here is this team's record by year:")
-    st.dataframe(year_df, hide_index=True)
+    # Draft Grade and Transaction Grade are the two halves of a season: how it was
+    # drafted and how it was managed after. Both curve inside their own
+    # league-season, so 75 is average either way and they are directly comparable.
+    grade_cols = [c for c in ('Draft Grade', 'Transaction Grade')
+                  if c in year_df.columns and year_df[c].notna().any()]
+    styled_years = year_df.style
+    if grade_cols:
+        styled_years = styled_years.background_gradient(subset=grade_cols,
+                                                        cmap='RdYlGn')
+    st.dataframe(styled_years.format(precision=1, na_rep='—'),
+                 height=table_height(len(year_df)), hide_index=True,
+                 use_container_width=True)
+    if 'Transaction Grade' in year_df.columns and year_df['Transaction Grade'].isna().any():
+        st.caption(
+            'Blank **Transaction Grade** means that season has no weekly roster '
+            'snapshots yet — run `python pipeline/backfill_transactions.py`.'
+        )
 
 # st.header('Upset Factor of Previous Week')
 # st.write('This simply compares both the Expected Win total against the Strength of Schedule total to see which teams are best')

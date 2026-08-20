@@ -165,14 +165,35 @@ a week cutoff, since leagues start their postseason in different weeks.
 
     # ------------------------------------------------------------- head to head
     with tabs[2]:
-        st.markdown('##### All-time wins, row versus column')
-        h2h = lt.head_to_head_matrix(tg)
-        if h2h.empty:
-            st.info('Not enough resolved matchups yet.')
+        st.markdown('##### All-time grid, row versus column')
+        view = st.radio(
+            'Show', ['Total meetings', 'Record (W-L)', 'Wins only'],
+            horizontal=True, key='h2h_view',
+            help='A bare win total is ambiguous - 4 could be 4-0 or 4-9 - so '
+                 'total meetings is the default. Record spells it out.')
+        if view == 'Record (W-L)':
+            rec = lt.head_to_head_records(tg)
+            if rec.empty:
+                st.info('Not enough resolved matchups yet.')
+            else:
+                show_table(rec, hide_index=False, precision=None, max_rows=25)
+                st.caption("Row's record against column. Blank diagonal; "
+                           '"-" means they have never met.')
         else:
-            show_table(h2h.style.background_gradient(cmap='Greens', axis=None),
-                       hide_index=False, precision=0, max_rows=25)
-            st.caption('Read across a row for that manager\'s wins over each rival.')
+            metric = 'wins' if view == 'Wins only' else 'meetings'
+            h2h = lt.head_to_head_matrix(tg, metric)
+            if h2h.empty:
+                st.info('Not enough resolved matchups yet.')
+            else:
+                cmap = 'Greens' if metric == 'wins' else 'Blues'
+                show_table(h2h.style.background_gradient(cmap=cmap, axis=None),
+                           hide_index=False, precision=0, max_rows=25)
+                st.caption(
+                    'Games each pair has played all time - symmetric, so the '
+                    'grid reads the same both ways. Use **Record** for who won '
+                    'them, or the rivalry view below for game-by-game.'
+                    if metric == 'meetings' else
+                    "Row's wins over each column.")
 
         st.divider()
         st.markdown('##### Rivalry')

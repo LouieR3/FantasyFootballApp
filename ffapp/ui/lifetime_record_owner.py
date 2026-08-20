@@ -12,6 +12,7 @@ import inflect
 import os
 
 from ffapp.metrics.draft_grading import team_draft_grade
+from ffapp.metrics.transaction_analysis import team_transaction_grade
 from ffapp.metrics.owner_overrides import resolve_owner, owner_id_for
 from ffapp.ui.data_loader import _cache_data, get_league
 
@@ -25,6 +26,18 @@ start_time = time.time()
 espn_s2=CRED["louie_s2_pages"]
 swid=CRED["louie_swid"]
 p = inflect.engine()
+
+def _mean_or_none(df, col):
+    """Mean of a column, or None when every value is missing.
+
+    ``Series.mean()`` on an all-NaN column returns NaN, which then renders as a
+    stray "nan" in the All Time row for a league with no transaction snapshots.
+    """
+    if col not in df.columns:
+        return None
+    vals = df[col].dropna()
+    return round(float(vals.mean()), 2) if len(vals) else None
+
 
 def lifetime_record_owner(league_id, espn_s2, swid, years, owner_name_to_filter):
     """Cached entry point - see _lifetime_record_owner for the actual work.
@@ -179,6 +192,10 @@ def _lifetime_record_owner(league_id, years, owner_name_to_filter, _espn_s2, _sw
         # mean of pick grades, which would collapse every team onto a C.
         league_name = league.settings.name.replace(" 22/23", "")
         avg_draft_grade, _ = team_draft_grade(league_name, year, team_name)
+        # Same team-year, the other half of the story: how the roster was managed
+        # after the draft. Returns (None, None) for a season with no transaction
+        # snapshots, so the column simply stays blank rather than breaking.
+        txn_grade, txn_letter = team_transaction_grade(league_name, year, team_name)
 
         # Get final and regular season standings
         standings = [team.team_name.strip() for team in league.standings()]
@@ -214,7 +231,9 @@ def _lifetime_record_owner(league_id, years, owner_name_to_filter, _espn_s2, _sw
             "Regular Season Place": reg_season_place_ordinal,
             "Final Place": final_place_ordinal,
             "Draft Grade": avg_draft_grade,
-            "Letter Grade": grade_to_letter(avg_draft_grade) if avg_draft_grade else None
+            "Letter Grade": grade_to_letter(avg_draft_grade) if avg_draft_grade else None,
+            "Transaction Grade": txn_grade,
+            "Txn Letter": txn_letter,
         })
 
     # Create yearly stats DataFrame
@@ -230,7 +249,14 @@ def _lifetime_record_owner(league_id, years, owner_name_to_filter, _espn_s2, _sw
         "Regular Season Place": "",
         "Final Place": "",
         "Draft Grade": year_df["Draft Grade"].mean().round(2),
-        "Letter Grade": grade_to_letter(year_df["Draft Grade"].mean().round(2))
+        "Letter Grade": grade_to_letter(year_df["Draft Grade"].mean().round(2)),
+        # mean of per-season grades, not a regrade: each season's grade is already
+        # curved inside its own league-season, so averaging them is the honest
+        # "how has this manager operated over time" number
+        "Transaction Grade": _mean_or_none(year_df, "Transaction Grade"),
+        "Txn Letter": (grade_to_letter(_mean_or_none(year_df, "Transaction Grade"))
+                       if _mean_or_none(year_df, "Transaction Grade") is not None
+                       else None),
     }
     year_df = pd.concat([year_df, pd.DataFrame([all_time_stats])], ignore_index=True)
 
