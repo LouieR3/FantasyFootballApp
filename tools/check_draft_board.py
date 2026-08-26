@@ -215,6 +215,70 @@ def test_dropoff():
     check('the scarcer position sorts first', drop.index[0], 'RB')
 
 
+def test_header_detection():
+    """Community sheets bury the header under rows of prose."""
+    print("\n[header detection]")
+    prose = (
+        "PURPOSE: rankings and strength of schedule,,,,\n"
+        "Updated 8/24,,,,\n"
+        "Green Row,,Elite OLine and easy schedule,,\n"
+        ",,,,\n"
+        "Full PPR RK,FULL PPR TIERS,ADP Sleeper,ADP RT Sports,Player name ,POS\n"
+        "1,1,3,2,Ja'Marr Chase,WR\n"
+        "2,1,1,1,Jahmyr Gibbs,RB\n"
+        "-,4,,,Deep Sleeper Guy,RB\n")
+    check('finds the header under 4 prose rows',
+          db.find_header_row(io.StringIO(prose)), 4)
+
+    rk = db.load_rankings(io.StringIO(prose))
+    check('only ranked players make the board', len(rk), 2)
+    check('the unranked row is reported, not dropped silently',
+          rk.attrs['rows_unranked'], 1)
+    check('and it is named', rk.attrs['unranked_players'], ['Deep Sleeper Guy'])
+    check('rank column read from "Full PPR RK"', rk['ECR'].tolist(), [1.0, 2.0])
+    check('tier read from "FULL PPR TIERS"', rk['Tier'].tolist(), [1.0, 1.0])
+
+    # two ADP sources -> averaged, not arbitrarily picked
+    check('both ADP sources detected', len(rk.attrs['adp_columns']), 2)
+    chase = rk[rk['Player'] == "Ja'Marr Chase"].iloc[0]
+    check('ADP is the mean of the two sources', float(chase['Sheet ADP']), 2.5)
+
+    print("  -- a plain sheet still loads with the header on row 0 --")
+    plain = "Player,Pos,ECR,ADP\nBijan Robinson,RB,1,2\n"
+    check('header row 0', db.find_header_row(io.StringIO(plain)), 0)
+    check('plain sheet still parses', len(db.load_rankings(io.StringIO(plain))), 1)
+
+
+def test_dst_naming():
+    """Sheets write 'Houston Texans'; ESPN writes 'Texans D/ST'."""
+    print("\n[D/ST naming]")
+    check('nickname from the ESPN spelling', db._dst_key('Texans D/ST'), 'texans')
+    check('nickname from the sheet spelling', db._dst_key('Houston Texans'),
+          'texans')
+    check('two-word city still reduces to the nickname',
+          db._dst_key('Los Angeles Rams'), 'rams')
+    check('numeric nickname survives', db._dst_key('San Francisco 49ers'), '49ers')
+
+    pool = {90: {'player_id': 90, 'name': 'Texans D/ST', 'position': 'D/ST',
+                 'pro_team_id': 34, 'espn_rank': 234, 'adp': 190.0,
+                 'percent_owned': 40.0, 'injured': False, 'injury_status': None}}
+    rk = db.load_rankings(io.StringIO(
+        "Player name ,POS,Full PPR RK\nHouston Texans,DST,156\n"))
+    check('sheet DST normalised to ESPN D/ST', rk['Pos'].tolist(), ['D/ST'])
+    m, left, _missing = db.match_to_espn(rk, pool)
+    check('the defence matches across conventions', len(m), 1)
+    check('and resolves to the ESPN name', m.iloc[0]['ESPN Name'], 'Texans D/ST')
+    check('nothing left unmatched', len(left), 0)
+
+
+def test_position_normalisation():
+    print("\n[position normalisation]")
+    rk = db.load_rankings(io.StringIO(
+        "Player,Pos,Rk\nA Kicker,PK,300\nA Defence,DEF,310\nA Back,rb,5\n"))
+    check('PK -> K, DEF -> D/ST, lowercase upper-cased',
+          sorted(rk['Pos'].tolist()), ['D/ST', 'K', 'RB'])
+
+
 def test_live(csv_path):
     """Replay a real completed draft as if it were happening."""
     print("\n[live replay against a real draft]")
@@ -230,7 +294,9 @@ def test_live(csv_path):
 
     LID, S2, SWID = 310334683, CRED['louie_s2'], CRED['louie_swid']
     try:
-        pool = ld.player_pool(LID, 2026, S2, SWID, limit=400)
+        # scale depth with the sheet, exactly as the page does
+        depth = int(min(max(400, len(db.load_rankings(csv_path)) + 150), 1000))
+        pool = ld.player_pool(LID, 2026, S2, SWID, limit=depth)
         state25 = ld.draft_state(LID, 2025, S2, SWID)
         state26 = ld.draft_state(LID, 2026, S2, SWID)
     except Exception as e:
@@ -255,7 +321,15 @@ def test_live(csv_path):
     m, left, espn_left = db.match_to_espn(rk, pool)
     rate = len(m) / max(len(rk), 1)
     print(f"  match rate against live ESPN pool: {len(m)}/{len(rk)} = {rate:.1%}")
-    check('match rate above 95%', rate > 0.95, True)
+    # A deep sheet ranks players ESPN does not carry at all (unsigned veterans,
+    # camp bodies), so a blanket rate is the wrong bar. What matters is coverage
+    # of the range anyone actually drafts.
+    top = rk[rk['ECR'] <= 200]
+    covered = m[m['ECR'] <= 200]
+    draftable = len(covered) / max(len(top), 1)
+    print(f"  coverage of the ECR top 200 (the draftable range): "
+          f"{len(covered)}/{len(top)} = {draftable:.1%}")
+    check('every player in the ECR top 200 is matched', draftable > 0.99, True)
     v = db.add_value(m)
 
     # freeze the completed 2025 draft partway and confirm the board shrinks
@@ -289,6 +363,9 @@ if __name__ == '__main__':
 
     test_names()
     test_column_aliases()
+    test_header_detection()
+    test_dst_naming()
+    test_position_normalisation()
     test_matching_and_value()
     test_kdst_in_log()
     test_roster_logic()

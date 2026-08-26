@@ -57,28 +57,28 @@ dave_s2 = CRED["dave_s2"]
 # Avas League
 # league = League(league_id=417131856, year=2025, espn_s2=ava_s2, swid=CRED["ava_swid"])
 # Matts League
-# league = League(league_id=261375772, year=2024, espn_s2=matt_s2, swid=CRED["matt_swid"])
+league = League(league_id=261375772, year=2024, espn_s2=matt_s2, swid=CRED["matt_swid"])
 # Elles League
 # league = League(league_id=1259693145, year=2025, espn_s2=elle_s2, swid=CRED["elle_swid"])
 
 # Dave Work League
 # year = 2025
-league = League(
-    league_id=1675186799,
-    year=year,
-    espn_s2=dave_s2,
-    swid=CRED["dave_swid"],
-)
+# league = League(
+#     league_id=1675186799,
+#     year=year,
+#     espn_s2=dave_s2,
+#     swid=CRED["dave_swid"],
+# )
 # league = League(league_id= 1924463077, year= year, espn_s2= dave_s2, swid= CRED["dave_swid"])
 
 
-nolan_s2 = CRED["nolan_s2"]
-league = League(
-    league_id=496646254,
-    year=year,
-    espn_s2=nolan_s2,
-    swid=CRED["nolan_swid"],
-)
+# nolan_s2 = CRED["nolan_s2"]
+# league = League(
+#     league_id=496646254,
+#     year=year,
+#     espn_s2=nolan_s2,
+#     swid=CRED["nolan_swid"],
+# )
 
 
 def test_league_data(league):

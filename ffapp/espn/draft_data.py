@@ -69,13 +69,30 @@ def pull_draft_data(league, year):
                 player_name = pick.playerName  # Player's name
                 team = pick.team.team_name  # Team
                 
-                # Get player stats
-                if player_name == "Josh Allen":
-                    player = league.player_info(playerId=3918298)
-                elif player_name == 'A.J. Green':
-                    player = league.player_info(playerId=13983)
-                else:
+                # Look up by player id, not name. Name lookup is ambiguous -
+                # hence the old hardcoded cases for Josh Allen and A.J. Green -
+                # and returns None for anything it cannot resolve, which used to
+                # crash the entire league on `player.position` below. The pick
+                # object carries the id, so use it.
+                player = None
+                if getattr(pick, 'playerId', None):
+                    player = league.player_info(playerId=pick.playerId)
+                if player is None:                      # last resort
                     player = league.player_info(player_name)
+                if player is None or getattr(player, 'position', None) is None:
+                    # One unresolvable pick must not lose the other 191. Recorded
+                    # with an unknown position and no stats so the row still
+                    # exists and the gap is visible rather than silent.
+                    print(f"  WARNING: could not resolve {player_name!r} "
+                          f"(id={getattr(pick, 'playerId', None)}) - "
+                          f"recording with no stats")
+                    data.append({
+                        "Pick": pick_number, "Player": player_name,
+                        "Position": "UNK", "Team": team,
+                        "Projected Points": 0, "Projected Avg Points": 0,
+                        "Points": 0, "Avg Points": 0, "Games Played": 0,
+                    })
+                    continue
                     
                 # print(pick)
                 # print(player)
@@ -260,10 +277,12 @@ def pull_draft_data(league, year):
         print("=======")
         # --------------------------------------------------------------------------------------
     except Exception as e:
-        # Handle errors, such as the league not existing
-        print(f"Error: League '{league}' for year {year} does not exist or could not be loaded.")
-        print(f"Details: {str(e)}")
-        print(f"Details: {str(e)}")
+        # Was previously reported as "league does not exist", which sent debugging
+        # in the wrong direction when the real failure was a single player lookup.
+        import traceback
+        print(f"Error pulling draft data for '{league}' {year}: "
+              f"{type(e).__name__}: {e}")
+        traceback.print_exc()
 
 
 espn_s2 = CRED["louie_s2"]
@@ -304,7 +323,7 @@ leagues = [
     # Avas League
     {"league_id": 417131856, "year": year, "espn_s2": ava_s2, "swid": CRED["ava_swid"], "name": "Philly Extra Special"},
     # Matts League
-    # {"league_id": 261375772, "year": year, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
+    {"league_id": 261375772, "year": year, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
     # Elles League
     {"league_id": 1259693145, "year": year, "espn_s2": elle_s2, "swid": CRED["elle_swid"], "name": "Operators Football League"},
     # Dave Work League

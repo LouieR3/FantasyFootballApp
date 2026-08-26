@@ -32,6 +32,8 @@ while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'path
     _d = _os.path.dirname(_d)
 _sys.path.insert(0, _d)
 
+import csv
+import io
 import re
 
 import numpy as np
@@ -43,18 +45,46 @@ SUFFIXES = {'jr', 'sr', 'ii', 'iii', 'iv', 'v'}
 # Column names accepted for each field, in preference order. Ranking sheets are
 # hand-built and inconsistent, so this is matched case-insensitively.
 COLUMN_ALIASES = {
-    'name': ('name', 'player', 'player name', 'playername'),
+    'name': ('name', 'player', 'player name', 'playername', 'players'),
     'position': ('pos', 'position'),
     'pro_team': ('team', 'tm', 'nfl team'),
     'ecr': ('fantasypros', 'ecr', 'fp', 'rank', 'overall rank', 'rk',
-            'fantasypros rank', 'consensus'),
-    'sheet_adp': ('adp', 'avg pick', 'average draft position'),
+            'fantasypros rank', 'consensus',
+            # richer community sheets label the overall rank by scoring format
+            'full ppr rk', 'ppr rk', 'half ppr rk', 'standard rk', 'overall rk'),
     'sheet_espn': ('espn', 'espn rank'),
     'bye': ('bye', 'bye week'),
-    'tier': ('tier',),
+    'tier': ('tier', 'tiers', 'full ppr tiers', 'ppr tiers'),
     'round': ('round', 'rd'),
     'notes': ('landmine', 'notes', 'note'),
+    # --- richer sheets: passed through for display, never used for ranking ---
+    'auction': ('auction', 'auction value', '$'),
+    'age': ('age',),
+    'oline': ('oline ovrl', 'oline overall', 'o-line', 'oline'),
+    'oline_pass': ('oline pass blk', 'oline pass'),
+    'oline_run': ('oline run blk', 'oline run'),
+    'sos_early': ('1st 5 games sos by position', '1st 5 games sos', 'early sos'),
+    'sos_full': ('full sos by position 1-14', 'full sos', 'sos'),
+    'sos_playoff': ('playoff sos by position 15-17', 'playoff sos'),
+    'boom': ('boom factor', 'boom'),
+    'handcuff': ('cuff', 'handcuff'),
+    'rookie': ('rookie',),
+    'drafted': ('drafted',),
 }
+
+# ADP is matched by prefix rather than exact name: sheets carry several sources
+# ('ADP Sleeper', 'ADP RT Sports') and averaging independent ones beats picking a
+# favourite. Measured on a real sheet the two correlate at r = 0.93 but differ by
+# ~21 picks on average, so the choice is not cosmetic.
+ADP_PREFIXES = ('adp', 'avg pick', 'average draft position')
+
+# Auction values get labelled with the league settings ('Auction, 12 teams, $200'),
+# so this one is prefix-matched too. Prefix matching is NOT applied generally: the
+# 'team' alias would then swallow 'Team Depth Chart WR/TE' and 'Team Def'.
+AUCTION_PREFIXES = ('auction', 'auction value')
+
+# Rows a sheet uses as spacers or section banners rather than players.
+JUNK_NAMES = {'', '-', '--', 'nan', 'none', 'player', 'player name'}
 
 # D/ST show up under many spellings; normalise to the city/nickname token ESPN uses.
 DST_WORDS = ('dst', 'd/st', 'defense', 'def')
@@ -94,6 +124,19 @@ def _tight(text):
     return _clean(text).replace(' ', '')
 
 
+def _dst_key(name):
+    """Nickname token for a defence, however the source spells it.
+
+    ESPN writes "Texans D/ST"; ranking sheets write "Houston Texans". Both reduce
+    to "texans" - the nickname is the one token the two conventions share. Team
+    nicknames are single words across the current league ("49ers", "Commanders"),
+    so taking the last remaining token is safe.
+    """
+    words = [w for w in _clean(name).split(' ')
+             if w and w not in ('dst', 'd', 'st', 'def', 'defense')]
+    return words[-1] if words else ''
+
+
 def _is_dst(name, position=None):
     low = str(name or '').lower()
     return (str(position or '').lower().replace('/', '') in ('dst', 'def')
@@ -109,41 +152,197 @@ def _resolve_columns(df):
             if alias in lower:
                 found[field] = lower[alias]
                 break
+    if 'auction' not in found:
+        for low, actual in lower.items():
+            if any(low.startswith(pfx) for pfx in AUCTION_PREFIXES):
+                found['auction'] = actual
+                break
     return found
 
 
-def load_rankings(source):
+def _header_score(cells):
+    """How much a row looks like a header: count of cells matching a known alias."""
+    lower = {str(c).strip().lower() for c in cells if str(c).strip()}
+    hits = 0
+    for aliases in COLUMN_ALIASES.values():
+        if lower & set(aliases):
+            hits += 1
+    if any(any(v.startswith(pfx) for pfx in ADP_PREFIXES) for v in lower):
+        hits += 1
+    has_name = bool(lower & set(COLUMN_ALIASES['name']))
+    has_rank = bool(lower & set(COLUMN_ALIASES['ecr']))
+    return hits, (has_name and has_rank)
+
+
+def _raw_rows(source, scan):
+    """First `scan` rows as lists of strings, whatever their individual widths.
+
+    Deliberately the csv module rather than pandas: pandas fixes the column count
+    from the first row it sees, so on a sheet whose prose preamble is narrower
+    than its real header the header row is "bad" and gets skipped - losing the
+    one row this is looking for.
+    """
+    if hasattr(source, 'read'):
+        pos = source.tell() if hasattr(source, 'tell') else None
+        text = source.read()
+        if isinstance(text, bytes):
+            text = text.decode('utf-8', errors='replace')
+        if pos is not None and hasattr(source, 'seek'):
+            source.seek(pos)
+        handle = io.StringIO(text)
+        close = False
+    else:
+        handle = io.open(source, encoding='utf-8-sig', errors='replace',
+                         newline='')
+        close = True
+    try:
+        reader = csv.reader(handle)
+        rows = []
+        for i, row in enumerate(reader):
+            if i >= scan:
+                break
+            rows.append(row)
+        return rows
+    finally:
+        if close:
+            handle.close()
+
+
+def find_header_row(source, scan=25):
+    """Which row holds the column names.
+
+    Community cheat sheets open with several rows of prose - a purpose blurb, a
+    colour legend, donation details - before the real header. Rather than making
+    the reader count them (and re-count when the author adds a line), score each
+    of the first `scan` rows on how many known column names it contains and take
+    the best row that carries both a name and a rank column.
+    """
+    try:
+        rows = _raw_rows(source, scan)
+    except (OSError, UnicodeError, csv.Error):
+        # Only genuine read/parse failures fall back to row 0. A bare
+        # `except Exception` here previously swallowed a NameError in this very
+        # function and made a hard bug look like a sheet with no preamble.
+        return 0
+    best, best_score = 0, -1
+    for i, row in enumerate(rows):
+        score, usable = _header_score(row)
+        if usable and score > best_score:
+            best, best_score = i, score
+    return best
+
+
+def _adp_columns(df):
+    """Every column that looks like an ADP source, in file order."""
+    out = []
+    for c in df.columns:
+        low = str(c).strip().lower()
+        if any(low.startswith(pfx) for pfx in ADP_PREFIXES):
+            out.append(c)
+    return out
+
+
+def _numeric(series):
+    """to_numeric that survives thousands separators and currency symbols."""
+    cleaned = (series.astype(str)
+               .str.replace(',', '', regex=False)
+               .str.replace('$', '', regex=False)
+               .str.strip())
+    return pd.to_numeric(cleaned, errors='coerce')
+
+
+MIN_ADP_TIE_CLUSTER = 10
+
+
+def informative_adp(adp, min_cluster=MIN_ADP_TIE_CLUSTER):
+    """ADP with its saturated tail blanked out.
+
+    Draft-position feeds stop discriminating past the end of a typical draft and
+    park everyone on one value. On a live ESPN pool 42% of players shared an ADP
+    of exactly 170.0 (max 171.5), so any rank computed through that plateau is an
+    artifact of tie-breaking rather than a real market signal.
+
+    Any ADP value shared by `min_cluster` or more players marks the plateau; that
+    value and everything above it becomes NaN. Returns `(series, cutoff)`, with
+    cutoff None when the column discriminates all the way down.
+    """
+    vals = pd.to_numeric(adp, errors='coerce')
+    counts = vals.round(1).value_counts()
+    big = counts[counts >= min_cluster]
+    if big.empty:
+        return vals, None
+    cutoff = float(big.index.min())
+    return vals.where(vals < cutoff), cutoff
+
+
+def load_rankings(source, header_row=None):
     """Read a rankings CSV into a tidy frame. `source` is a path or file object.
 
     Requires a name column and a rank column; everything else is optional and
-    passed through when present.
+    passed through when present. The header row is detected rather than assumed
+    (see `find_header_row`), so a sheet with prose above the table just works.
+
+    The returned frame carries a ``.attrs`` dict describing what was found - the
+    header row used, which ADP sources were averaged, and how many rows were set
+    aside as spacers or as unranked - so the page can report it instead of
+    letting rows vanish quietly.
     """
-    df = pd.read_csv(source)
+    if header_row is None:
+        header_row = find_header_row(source)
+    # engine='python' tolerates rows wider than the header, which hand-built
+    # sheets produce whenever a note is typed past the last real column.
+    try:
+        df = pd.read_csv(source, skiprows=header_row)
+    except pd.errors.ParserError:
+        if hasattr(source, 'seek'):
+            source.seek(0)
+        df = pd.read_csv(source, skiprows=header_row, engine='python',
+                         on_bad_lines='skip')
     # hand-built sheets usually carry an unnamed index column
     df = df.loc[:, ~df.columns.astype(str).str.match(r'^Unnamed')]
     cols = _resolve_columns(df)
 
     if 'name' not in cols:
         raise ValueError(
-            f'No name column found. Looked for {COLUMN_ALIASES["name"]}; '
-            f'the file has {list(df.columns)}')
+            'No name column found (header row %d). Looked for %s; the file has %s'
+            % (header_row, COLUMN_ALIASES['name'], list(df.columns)))
     if 'ecr' not in cols:
         raise ValueError(
-            f'No ranking column found. Looked for {COLUMN_ALIASES["ecr"]}; '
-            f'the file has {list(df.columns)}')
+            'No ranking column found (header row %d). Looked for %s; the file has %s'
+            % (header_row, COLUMN_ALIASES['ecr'], list(df.columns)))
 
     out = pd.DataFrame({
         'Player': df[cols['name']].astype(str).str.strip(),
-        'ECR': pd.to_numeric(df[cols['ecr']], errors='coerce'),
+        'ECR': _numeric(df[cols['ecr']]),
     })
-    for field, label in (('position', 'Pos'), ('pro_team', 'NFL'),
-                         ('sheet_adp', 'Sheet ADP'), ('sheet_espn', 'Sheet ESPN'),
-                         ('bye', 'Bye'), ('tier', 'Tier'), ('notes', 'Notes')):
-        if field in cols:
-            val = df[cols[field]]
-            out[label] = (pd.to_numeric(val, errors='coerce')
-                          if field in ('sheet_adp', 'sheet_espn', 'bye', 'tier')
-                          else val.astype(str).str.strip())
+
+    NUMERIC = {'sheet_espn', 'bye', 'tier', 'age', 'auction'}
+    PASSTHROUGH = (
+        ('position', 'Pos'), ('pro_team', 'NFL'), ('sheet_espn', 'Sheet ESPN'),
+        ('bye', 'Bye'), ('tier', 'Tier'), ('notes', 'Notes'),
+        ('auction', 'Auction $'), ('age', 'Age'), ('oline', 'OLine'),
+        ('oline_pass', 'OLine Pass'), ('oline_run', 'OLine Run'),
+        ('sos_early', 'SoS 1-5'), ('sos_full', 'SoS Full'),
+        ('sos_playoff', 'SoS Playoff'), ('boom', 'Boom'),
+        ('handcuff', 'Handcuff'), ('rookie', 'Rookie'),
+        ('drafted', 'Sheet Drafted'),
+    )
+    for field, label in PASSTHROUGH:
+        if field not in cols:
+            continue
+        val = df[cols[field]]
+        out[label] = (_numeric(val) if field in NUMERIC
+                      else val.astype(str).str.strip())
+
+    # ADP: average every source the sheet carries. Independent sources disagree by
+    # ~20 picks on a real sheet, so a mean is a better estimate of where a player
+    # actually goes than arbitrarily trusting whichever column came first.
+    adp_cols = _adp_columns(df)
+    if adp_cols:
+        adp = pd.concat([_numeric(df[c]) for c in adp_cols], axis=1)
+        out['Sheet ADP'] = adp.mean(axis=1, skipna=True).round(1)
+        if len(adp_cols) > 1:
+            out['ADP Sources'] = adp.notna().sum(axis=1)
 
     # A sparse Round column marks where each round begins in the sheet's own
     # recommended order - i.e. tier boundaries. Forward-fill turns it into a
@@ -152,9 +351,30 @@ def load_rankings(source):
         out['Target Round'] = pd.to_numeric(df[cols['round']],
                                             errors='coerce').ffill()
 
-    out = out.dropna(subset=['ECR'])
-    out['_key'] = out['Player'].map(_clean)
-    return out.sort_values('ECR').reset_index(drop=True)
+    # Positions normalised to ESPN spelling, so matching and the lineup logic
+    # agree: a sheet writing 'DST' must not become a new position.
+    if 'Pos' in out.columns:
+        out['Pos'] = (out['Pos'].str.upper()
+                      .replace({'DST': 'D/ST', 'DEF': 'D/ST', 'PK': 'K'}))
+
+    n_raw = len(out)
+    out = out[~out['Player'].str.strip().str.lower().isin(JUNK_NAMES)]
+    n_named = len(out)
+    unranked = out[out['ECR'].isna()]['Player'].tolist()
+
+    result = out.dropna(subset=['ECR']).copy()
+    result['_key'] = result['Player'].map(_clean)
+    result = result.sort_values('ECR').reset_index(drop=True)
+    result.attrs.update({
+        'header_row': header_row,
+        'adp_columns': [str(c) for c in adp_cols],
+        'rows_total': n_raw,
+        'rows_named': n_named,
+        'rows_ranked': len(result),
+        'rows_unranked': len(unranked),
+        'unranked_players': unranked,
+    })
+    return result
 
 
 def match_to_espn(rankings, pool):
@@ -167,13 +387,15 @@ def match_to_espn(rankings, pool):
     fallbacks only fire when there is exactly one candidate, so they can never
     silently pick the wrong Josh Allen.
     """
-    by_key, by_tight, by_lastpos = {}, {}, {}
+    by_key, by_tight, by_lastpos, by_dst = {}, {}, {}, {}
     for pid, p in pool.items():
         key = _clean(p['name'])
         by_key.setdefault(key, []).append(pid)
         by_tight.setdefault(_tight(p['name']), []).append(pid)
         last = key.split(' ')[-1] if key else ''
         by_lastpos.setdefault((last, p['position']), []).append(pid)
+        if _is_dst(p['name'], p['position']):
+            by_dst.setdefault(_dst_key(p['name']), []).append(pid)
 
     used, rows, unmatched = set(), [], []
     for r in rankings.to_dict('records'):
@@ -192,6 +414,13 @@ def match_to_espn(rankings, pool):
                      if p not in used]
             if len(tight) == 1:
                 hit = tight[0]
+
+        if hit is None and _is_dst(r.get('Player'), pos):
+            # "Houston Texans" -> "texans" -> ESPN's "Texans D/ST"
+            cands = [p for p in by_dst.get(_dst_key(r.get('Player')), [])
+                     if p not in used]
+            if len(cands) == 1:
+                hit = cands[0]
 
         if hit is None and key:
             last = key.split(' ')[-1]
@@ -290,15 +519,41 @@ def add_value(matched):
     if 'Pos' not in df.columns:
         df['Pos'] = '?'
 
-    # position rank on each scale, so the two are comparable within a position
-    df['Pos ECR'] = df.groupby('Pos')['ECR'].rank(method='min')
-    df['Pos ADP'] = df.groupby('Pos')['ADP'].rank(method='min')
-    df['Pos ESPN'] = df.groupby('Pos')['ESPN Rank'].rank(method='min')
+    # Raw ADP is kept for display, but value is computed only where ADP still
+    # discriminates - see informative_adp: the tail is a plateau, not data.
+    scoring_adp, adp_cutoff = informative_adp(df['ADP'])
+    df.attrs['adp_cutoff'] = adp_cutoff
 
-    df['VALUE'] = (df['ADP'] - df['ECR']).round(1)
+    # Position ranks, computed over the SAME rows on both scales.
+    #
+    # rank() drops NaN per column independently, so on a sheet where ECR covers
+    # 510 players and ADP only 287 the two ranks have different denominators and
+    # their difference reads as value that is not there - it inflated a real +3
+    # into +58. Ranking only rows that carry both keeps the comparison honest;
+    # rows missing either get NaN and drop out of the value views rather than
+    # generating a phantom bargain.
+    both = df['ECR'].notna() & scoring_adp.notna()
+    df['Pos ECR'] = np.nan
+    df['Pos ADP'] = np.nan
+    if both.any():
+        pair = df.loc[both].assign(_adp=scoring_adp.loc[both])
+        df.loc[both, 'Pos ECR'] = pair.groupby('Pos')['ECR'].rank(method='min')
+        df.loc[both, 'Pos ADP'] = pair.groupby('Pos')['_adp'].rank(method='min')
+    # ESPN rank is a second opinion, ranked against ECR over the rows both cover
+    esp = df['ECR'].notna() & df['ESPN Rank'].notna()
+    df['Pos ESPN'] = np.nan
+    df['Pos ECR vs ESPN'] = np.nan
+    if esp.any():
+        pair = df.loc[esp]
+        df.loc[esp, 'Pos ESPN'] = pair.groupby('Pos')['ESPN Rank'].rank(method='min')
+        df.loc[esp, 'Pos ECR vs ESPN'] = pair.groupby('Pos')['ECR'].rank(method='min')
+
+    df['VALUE'] = (scoring_adp - df['ECR']).round(1)
     df['Pos VALUE'] = (df['Pos ADP'] - df['Pos ECR']).round(1)
-    # ESPN as a second opinion, not the basis - see the module docstring
-    df['ESPN vs ECR'] = (df['Pos ESPN'] - df['Pos ECR']).round(1)
+    # ESPN as a second opinion, not the basis - see the module docstring. Uses its
+    # own paired ECR rank for the same reason as above.
+    df['ESPN vs ECR'] = (df['Pos ESPN'] - df['Pos ECR vs ESPN']).round(1)
+    df = df.drop(columns=['Pos ECR vs ESPN'])
     return df
 
 

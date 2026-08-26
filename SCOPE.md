@@ -158,7 +158,7 @@ Byes and varying bracket sizes were already handled correctly (`opponent == team
 | **Dave - work (OnP)**                   | OnP Fantasy                     | 2025            | 1675186799 | `dave_s2`        | `5_🍹_Dave_Redbull_League.py`            |
 | **Dave - friends**                      | The Mike Daisy Sports IQ League | 2025            | 1924463077 | `dave_s2`        | `5_🎮_Dave_Friend_League.py`             |
 | **Jackson (Dukes)**                     | Ross' Fantasy League            | 2025            | 558148583  | `ayush_s2`       | `6_👑_Dukes_League.py`                   |
-| **Matt**                                | BP- Loudoun 2025                | 2025            | 261375772  | `matt_s2`        | `5_👷🏻‍♀️_Matts-League.py`           |
+| **Matt**                                | BP- Loudoun 2025                | 2025            | 261375772  | `matt_s2`        | `5_👷🏻‍♀️_Matts_League.py`           |
 | **Dave - older On Premise league ⚠️** | RRR On Premise                  | 2024            | —         | —                 | *(no page)*                              |
 | **unknown ⚠️**                        | Board Fantasy Football          | 2025            | —         | —                 | *(no page)*                              |
 
@@ -377,7 +377,7 @@ All four metrics exercised across all seven team views plus the manager views. I
 
 Build time went **40s → 4s** by memoising `owner_crosswalk` / `owner_display_names` / the raw matchup read in `lifetime.py` — without it, `owner_display_names` re-read all 42 workbooks once per league (588 Excel reads).
 
-⬜ **`BP- Loudoun 2025` (Matt's league) is excluded** — it has 202 team-games but no draft file, so its teams cannot be tied to a manager. It is commented out in `draft_data.py`'s league list; uncomment it, run the draft pull, and it joins automatically. The page says so rather than silently omitting it.
+✅ **`BP- Loudoun 2025` (Matt's league) is now included** — resolved 2026-08-10. It was commented out in `draft_data.py`, so it had no draft file and therefore no owner IDs. Uncommented, pulled and regraded: **415 team-seasons** now (was 403), all 12 of its teams tied to a named manager. See §3l for the full diagnosis — the same one line also kept it out of Transaction Analysis.
 
 > Data note: two Game of Yards workbooks spell a playoff round **"Quater Final"**. Normalised on read; the typo is baked into those files, not current code.
 
@@ -692,6 +692,172 @@ It was one bare `AgGrid(df)` over ~180 rows sorted by grade: technically complet
 Two implementation notes: the round is derived from `Total Pick ÷ team count` rather than parsed out of the `"4 - 10"` string, so it survives either column being formatted differently; and the board keeps labels and grades in two aligned frames, because a Styler needs numbers to colour by and text to show and they cannot share a cell.
 
 ⬜ The **By team** average-pick-grade column is a mean of individual picks, so it clusters near the middle by construction (the same CLT effect that collapsed team grades onto C in §3). It is fine for ranking within one draft; the caption points at the standardized team Draft Grade for anything else.
+
+---
+
+## 3k. Draft Assistant: full cheat-sheet support — 2026-08-10
+
+Switched the reference sheet to a much richer community cheat sheet (**510 ranked
+players vs 200**, and far more context per player). Supporting it needed four real
+fixes, three of which were latent bugs the thinner sheet never exposed.
+
+### The sheet
+
+862 rows, 510 ranked (1–515) plus a 352-row unranked tail. Includes K and D/ST
+(32 each), which the previous sheet omitted entirely. Extra columns now surfaced:
+tier, two ADP sources, auction value, age, OLine pass/run/overall, strength of
+schedule split three ways (first 5 games / full season / playoff weeks), Boom
+Factor, handcuff RB, rookie flag, and the sheet's own `DRAFTED` column.
+
+### Header row is detected, not assumed
+
+The sheet opens with six rows of prose — purpose blurb, colour legend, donation
+details — before the real header. Rather than hardcoding "row 7" (and re-counting
+whenever the author adds a line), `find_header_row` scores each of the first 25
+rows on how many known column names it contains and takes the best row carrying
+both a name and a rank column. Detected row 6 here, row 0 on the old sheet.
+
+### Four fixes
+
+1. **Ragged rows broke the probe.** `pd.read_csv` fixes the column count from the
+   first row it sees, so when the prose preamble is *narrower* than the header,
+   the header row is the "bad" line — and `on_bad_lines='skip'` threw away exactly
+   the row being searched for. Now read with the `csv` module, which has no notion
+   of a fixed width. `load_rankings` also falls back to `engine='python'` on a
+   `ParserError` for the same reason.
+
+2. **A bare `except Exception` hid a hard bug.** `find_header_row` wrapped its
+   probe in a catch-all that swallowed a `NameError` (`io` was never imported) and
+   returned 0 — making a genuine crash look like "this sheet has no preamble". The
+   catch is now narrowed to `OSError / UnicodeError / csv.Error`.
+
+3. **D/ST naming.** Sheets write `Houston Texans`; ESPN writes `Texans D/ST`.
+   Neither normalisation nor the last-name fallback bridges that, so all 32
+   defences went unmatched. A nickname pass (`_dst_key`) reduces both conventions
+   to `texans`. Match rate 82.2% → 88.4%.
+
+4. **🔴 ESPN's ADP saturates, and it was fabricating value.** Measured on a live
+   660-player pool: **277 players (42%) share an ADP of exactly 170.0**, max 171.5.
+   Past roughly pick 170 the column means "undrafted", not a draft position.
+   Ranking through that plateau collapsed hundreds of ties onto one rank while ECR
+   spread out normally, so a receiver at ECR 162 / ADP 170.9 scored **Pos VALUE
+   +96** — pure tie-breaking artifact. `informative_adp` now finds the plateau
+   (any value shared by ≥10 players) and treats it and everything above as
+   missing. The value list went from deep sleepers at +96 to *Chris Godwin Jr.,
+   ECR 74, ADP 143, +18* — a bargain that is actually real.
+
+   Related: position ranks are now computed over rows carrying **both** ECR and
+   ADP. `Series.rank()` skips NaN per column independently, so with ECR covering
+   510 players and ADP only 287 the two ranks had different denominators and their
+   difference read as value.
+
+### Coverage, honestly
+
+| | old sheet | new sheet |
+|---|---|---|
+| Ranked players | 200 | **510** |
+| Match rate vs ESPN | 99.5% | 90.2% |
+| **Coverage of ECR top 200** | 99.5% | **100%** |
+
+The 50 unmatched are all ECR 285–511: unsigned veterans (marked `FA` on the sheet)
+and camp bodies that ESPN does not rank at all. **Zero** unmatched inside the top
+200, so nothing in a 180-pick draft is missing. The test asserts top-200 coverage
+rather than a blanket rate, because a deep sheet ranking players ESPN does not
+carry should not be a failure.
+
+The ESPN pool depth now scales with the sheet (`max(400, len(sheet) + 150)`, capped
+at 1000) — a fixed 400 left the tail of a 510-player sheet unmatchable.
+
+⬜ **ADP covers only 287 of 510 ranked players** on this sheet, so value, dropoff
+and survival are unavailable for the rest. That is a property of the source, not a
+bug: those players have no market price because they are not being drafted.
+
+Both sheets are exercised by `tools/check_draft_board.py`; the loader stays
+backward compatible and 25/25 pages render.
+
+---
+
+## 3l. Matt's league (BP- Loudoun) was missing from two pages — 2026-08-10
+
+It was absent from **Draft Analysis** and **Transaction Analysis** for two
+independent reasons, one of which cascaded from the other.
+
+### What it did and did not have
+
+| Dataset | Loudoun rows |
+|---|---|
+| Workbook (`data/leagues/`) | ✅ `BP- Loudoun 2025 2025.xlsx` |
+| `all_matchups.csv` | ✅ 103 (2025) |
+| `all_playoff_dfs.csv` | ✅ 7 (2025) |
+| `Draft_Grades_with_Standings.csv` | ✅ 12 (2025) |
+| **Draft file** | ❌ none |
+| **Transaction data** | ❌ none |
+
+So the league page, Playoff Analysis and the standings all worked; only the two
+pages that need a draft file or transaction snapshots were missing it.
+
+### Cause 1 — the draft entry was commented out
+
+`ffapp/espn/draft_data.py` had the league commented out (since the "repo clean up"
+commit). No draft pull meant no `data/drafts/BP- Loudoun 2025 Draft Results
+2025.csv`, and the Draft Analysis page discovers seasons by globbing exactly that
+pattern. Uncommented and pulled.
+
+Because the draft file is also where **owner IDs** come from, this is the same
+reason the league was excluded from Lifetime History and the Hall of Fame - the
+gap noted in §3d was this one line all along.
+
+### Cause 2 — the comment propagated into a second pipeline
+
+`pipeline/backfill_transactions.py`'s league list was built by copying the list
+out of `draft_data.py` — where this league was commented out. So it was never even
+*attempted* for transactions: not a failure in the logs, just silently absent.
+One disabled line in one file became a missing league in a pipeline written months
+later.
+
+Worth remembering as a pattern: the league set is currently duplicated across
+`draft_data.py`, `ESPNWeeklyUpdateList.py`, `backfill_transactions.py`,
+`refresh_standings.py`, `season_results.py` and `create_betting_odds.py`. §2 already
+flags consolidating on `league_registry` as the highest-value cleanup; this is a
+concrete instance of the cost of not having done it.
+
+### Result
+
+Transactions built for 2025: **3,590 player-weeks over 18 weeks (reg_season 15),
+170 adds, 164 drops, 5 traded players, 12 teams**, all with owner IDs resolved.
+One confirmed trade — week 9, `At Risk of CTE` won a Texans D/ST + Chase Brown for
+Eagles D/ST + David Montgomery + DJ Moore swap by **67.3 SPAR**.
+
+Also fixed a misleading tally in the backfill: an existing-but-unplayed season
+writes no files, yet was still counted, so the run reported "built 2
+league-seasons" for one real season plus an empty 2026. It now counts only seasons
+that actually produced data.
+
+### 🔴 And the draft pull was crashing on one unresolvable player
+
+Uncommenting the league was not enough - `pull_draft_data` then died with
+`'NoneType' object has no attribute 'position'` after reading all 192 picks.
+
+`league.player_info(player_name)` resolves picks **by name**, which is ambiguous
+(the function already carried hardcoded playerId overrides for "Josh Allen" and
+"A.J. Green") and returns `None` for anything it cannot resolve - so the next line
+took the whole league down. Worse, the outer handler reported *"League ... does not
+exist or could not be loaded"*, which points debugging at credentials instead of at
+a player lookup.
+
+Every pick already carries `pick.playerId`. Switched to id-based lookup, which is
+unambiguous and needs no special cases; name lookup is kept only as a fallback, and
+a pick that still cannot be resolved is recorded with position `UNK` and a warning
+rather than discarding the other 191. The except clause now prints the real
+exception and a traceback.
+
+This was not specific to Matt's league - any league containing one name ESPN could
+not resolve would have failed the same way, silently attributed to the league not
+existing.
+
+⬜ **BP- Loudoun 2024 is `ESPNAccessDenied`** — the stored `matt_s2` cookie cannot
+read it. 2019–2023 genuinely do not exist. So 2025 is the league's only recoverable
+season either way.
 
 ---
 

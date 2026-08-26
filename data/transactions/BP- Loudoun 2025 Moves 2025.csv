@@ -1,0 +1,353 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+BP- Loudoun 2025,2025,2,ADD,49ers D/ST,D/ST,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,2,ADD,Kayshon Boutte,WR,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,2,ADD,Quentin Johnston,WR,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,2,TEAM->TEAM,Ravens D/ST,D/ST,Fear the Turtle,Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,2,ADD,Rams D/ST,D/ST,(FA),Fear the Turtle,{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,2,ADD,JuJu Smith-Schuster,WR,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,2,ADD,Daniel Jones,QB,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,2,ADD,Zach Ertz,TE,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,2,DROP,Luther Burden III,WR,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,2,DROP,Chiefs D/ST,D/ST,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,2,DROP,Tank Bigsby,RB,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,2,DROP,Commanders D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,2,DROP,Xavier Worthy,WR,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,2,DROP,Tre' Harris,WR,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,3,ADD,Xavier Worthy,WR,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,3,ADD,Falcons D/ST,D/ST,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,3,TEAM->TEAM,Will Shipley,RB,Yangblood Bravesheart,Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,3,ADD,Juwan Johnson,TE,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,3,ADD,Harold Fannin Jr.,TE,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,3,ADD,Packers D/ST,D/ST,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,3,ADD,Jake Tonges,TE,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,3,TEAM->TEAM,Kayshon Boutte,WR,Trash Panda Express,At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,3,DROP,Dylan Sampson,RB,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,3,DROP,Cardinals D/ST,D/ST,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,3,DROP,Miles Sanders,RB,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,3,DROP,Chris Godwin Jr.,WR,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,3,DROP,49ers D/ST,D/ST,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,3,DROP,Joshua Palmer,WR,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,4,ADD,Tre Tucker,WR,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,4,ADD,Patriots D/ST,D/ST,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,4,ADD,Jeremy McNichols,RB,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,4,ADD,Tyquan Thornton,WR,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,4,ADD,Woody Marks,RB,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,4,ADD,Chris Godwin Jr.,WR,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,4,ADD,Kenneth Gainwell,RB,(FA),Fear the Turtle,{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,4,DROP,Falcons D/ST,D/ST,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,4,DROP,Kaleb Johnson,RB,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,4,DROP,Jayden Higgins,WR,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,4,DROP,James Conner,RB,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,4,DROP,Adam Thielen,WR,Fear the Turtle,(FA),{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,4,DROP,Najee Harris,RB,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Emari Demercado,RB,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Brenton Strange,TE,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Matt Prater,K,(FA),Hannah's Hail Mary,{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Michael Carter,RB,(FA),Hannah's Hail Mary,{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Troy Franklin,WR,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Browns D/ST,D/ST,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Spencer Shrader,K,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Darius Slayton,WR,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Kendre Miller,RB,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Elic Ayomanor,WR,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Chiefs D/ST,D/ST,(FA),Jeffrey's not so Scary Team,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Darren Waller,TE,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Matthew Stafford,QB,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Cardinals D/ST,D/ST,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Jaxson Dart,QB,(FA),Fear the Turtle,{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,5,ADD,Malik Washington,WR,(FA),Fear the Turtle,{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,Austin Ekeler,RB,Hannah's Hail Mary,(FA),{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,David Njoku,TE,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,Braelon Allen,RB,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,Evan McPherson,K,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,Patriots D/ST,D/ST,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,Jerome Ford,RB,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,Tyreek Hill,WR,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,Steelers D/ST,D/ST,Jeffrey's not so Scary Team,(FA),{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,Packers D/ST,D/ST,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,Colston Loveland,TE,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,Malik Nabers,WR,Fear the Turtle,(FA),{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,5,DROP,DeMario Douglas,WR,Fear the Turtle,(FA),{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Commanders D/ST,D/ST,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,6,TEAM->TEAM,Zach Ertz,TE,At Risk of CTE,Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Packers D/ST,D/ST,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Kimani Vidal,RB,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,David Njoku,TE,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Sterling Shepard,WR,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Eddy Pineiro,K,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,AJ Barner,TE,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Hassan Haskins,RB,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Rico Dowdle,RB,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Joshua Karty,K,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Titans D/ST,D/ST,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Kendrick Bourne,WR,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Patriots D/ST,D/ST,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,6,ADD,Steelers D/ST,D/ST,(FA),Jeffrey's not so Scary Team,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,Bills D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,Ravens D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,Emari Demercado,RB,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,Brock Purdy,QB,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,Jeremy McNichols,RB,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,Spencer Shrader,K,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,Kyler Murray,QB,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,DeAndre Hopkins,WR,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,Kayshon Boutte,WR,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,Chiefs D/ST,D/ST,Jeffrey's not so Scary Team,(FA),{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,Jaydon Blue,RB,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,6,DROP,Cardinals D/ST,D/ST,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,7,ADD,Michael Penix Jr.,QB,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,7,ADD,Chris Moore,WR,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,7,ADD,Kayshon Boutte,WR,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,7,TEAM->TEAM,DJ Moore,WR,Derk Prerscert,At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,7,ADD,Michael Mayer,TE,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,7,ADD,Chiefs D/ST,D/ST,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,7,TEAM->TEAM,Mark Andrews,TE,Jeffrey's not so Scary Team,Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,7,ADD,Cade Otton,TE,(FA),Jeffrey's not so Scary Team,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,7,DROP,Tyquan Thornton,WR,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,7,DROP,Darius Slayton,WR,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,7,DROP,Christian Kirk,WR,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,7,DROP,Packers D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,7,DROP,Ka'imi Fairbairn,K,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,7,DROP,AJ Barner,TE,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Falcons D/ST,D/ST,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Theo Johnson,TE,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Packers D/ST,D/ST,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,8,TEAM->TEAM,TreVeyon Henderson,RB,Tracey Time,Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Chargers D/ST,D/ST,(FA),Fear the Turtle,{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Will Reichard,K,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Isaiah Davis,RB,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Joe Flacco,QB,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Tyler Loop,K,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Mason Taylor,TE,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Carson Wentz,QB,(FA),Jeffrey's not so Scary Team,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Bears D/ST,D/ST,(FA),Jeffrey's not so Scary Team,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Kyle Monangai,RB,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Jaylin Noel,WR,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Aaron Rodgers,QB,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Tez Johnson,WR,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Oronde Gadsden,TE,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Michael Badgley,K,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,8,ADD,Buccaneers D/ST,D/ST,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Kendre Miller,RB,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Michael Penix Jr.,QB,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Commanders D/ST,D/ST,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Sterling Shepard,WR,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Michael Mayer,TE,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Rashod Bateman,WR,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Hassan Haskins,RB,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Tyler Allgeier,RB,Fear the Turtle,(FA),{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Trevor Lawrence,QB,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Will Shipley,RB,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Joshua Karty,K,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Mike Evans,WR,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Matthew Stafford,QB,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Evan Engram,TE,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Justin Fields,QB,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Titans D/ST,D/ST,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Geno Smith,QB,Jeffrey's not so Scary Team,(FA),{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,8,DROP,Steelers D/ST,D/ST,Jeffrey's not so Scary Team,(FA),{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Jacoby Brissett,QB,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,9,TRADE,Texans D/ST,D/ST,Derk Prerscert,At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,9,TRADE,Chase Brown,RB,Derk Prerscert,At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Jason Myers,K,(FA),Fear the Turtle,{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Chimere Dike,WR,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Ka'imi Fairbairn,K,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Alec Pierce,WR,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,9,TEAM->TEAM,Matthew Golden,WR,Jeffrey's not so Scary Team,Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Christian Watson,WR,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Sam Darnold,QB,(FA),Jeffrey's not so Scary Team,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Dalton Schultz,TE,(FA),Jeffrey's not so Scary Team,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Brandon McManus,K,(FA),Jeffrey's not so Scary Team,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,AJ Barner,TE,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Raiders D/ST,D/ST,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Brock Purdy,QB,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Matthew Stafford,QB,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Bam Knight,RB,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,9,TRADE,Eagles D/ST,D/ST,At Risk of CTE,Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,9,TRADE,David Montgomery,RB,At Risk of CTE,Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,9,TRADE,DJ Moore,WR,At Risk of CTE,Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Ravens D/ST,D/ST,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Cairo Santos,K,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,9,ADD,Jaguars D/ST,D/ST,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Falcons D/ST,D/ST,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Jake Elliott,K,Fear the Turtle,(FA),{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Chris Moore,WR,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Brian Robinson Jr.,RB,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Wil Lutz,K,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Isaiah Davis,RB,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Joe Flacco,QB,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Marvin Mims Jr.,WR,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Cam Little,K,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Chiefs D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Mason Taylor,TE,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Chase McLaughlin,K,Jeffrey's not so Scary Team,(FA),{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Carson Wentz,QB,Jeffrey's not so Scary Team,(FA),{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Matt Gay,K,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Jalen Coker,WR,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Tez Johnson,WR,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,9,DROP,Buccaneers D/ST,D/ST,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,10,ADD,Colston Loveland,TE,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,10,ADD,Bills D/ST,D/ST,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,10,ADD,Jake Elliott,K,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,10,ADD,Devin Singletary,RB,(FA),Jeffrey's not so Scary Team,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2025,10,ADD,Mike Evans,WR,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,10,ADD,Chase McLaughlin,K,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,10,ADD,DeMario Douglas,WR,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,10,ADD,Nick Folk,K,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,10,TEAM->TEAM,Jayden Daniels,QB,Jeffrey's not so Scary Team,Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,10,ADD,Darius Slayton,WR,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,10,ADD,Panthers D/ST,D/ST,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,10,ADD,Calvin Austin III,WR,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,10,DROP,Kayshon Boutte,WR,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,10,DROP,Jake Tonges,TE,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,10,DROP,Tucker Kraft,TE,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,10,DROP,Patriots D/ST,D/ST,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,10,DROP,Ka'imi Fairbairn,K,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,10,DROP,Raiders D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,10,DROP,Brock Purdy,QB,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,10,DROP,Elic Ayomanor,WR,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,10,DROP,Kendrick Bourne,WR,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,10,DROP,Ollie Gordon II,RB,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,10,DROP,Jaguars D/ST,D/ST,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,11,ADD,Patriots D/ST,D/ST,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,11,ADD,Sean Tucker,RB,(FA),Fear the Turtle,{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,11,ADD,Kayshon Boutte,WR,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,11,ADD,Steelers D/ST,D/ST,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,11,ADD,Cam Little,K,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,11,ADD,Pat Freiermuth,TE,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,11,ADD,Emari Demercado,RB,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,11,ADD,Cowboys D/ST,D/ST,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,11,DROP,Joe Burrow,QB,Fear the Turtle,(FA),{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,11,DROP,Bills D/ST,D/ST,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,11,DROP,Bhayshul Tuten,RB,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,11,DROP,J.J. McCarthy,QB,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,11,DROP,Cedric Tillman,WR,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,11,DROP,Browns D/ST,D/ST,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,11,DROP,Michael Badgley,K,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,11,DROP,Panthers D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,12,ADD,Brock Purdy,QB,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,12,ADD,Michael Wilson,WR,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,12,ADD,Browns D/ST,D/ST,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,12,ADD,Joe Burrow,QB,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,12,ADD,Parker Washington,WR,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,12,ADD,Tyler Shough,QB,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,12,ADD,Andy Borregales,K,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,12,ADD,Emanuel Wilson,RB,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,12,ADD,Andrei Iosivas,WR,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,12,ADD,Ka'imi Fairbairn,K,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,12,ADD,Tyler Allgeier,RB,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,12,DROP,Chimere Dike,WR,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,12,DROP,Calvin Ridley,WR,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,12,DROP,Aaron Rodgers,QB,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,12,DROP,J.K. Dobbins,RB,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,12,DROP,Eddy Pineiro,K,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,12,DROP,Brandon Aiyuk,WR,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,12,DROP,Jayden Daniels,QB,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,12,DROP,Steelers D/ST,D/ST,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,12,DROP,Troy Franklin,WR,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,12,DROP,Jordan Mason,RB,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,12,DROP,Calvin Austin III,WR,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,13,ADD,49ers D/ST,D/ST,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,13,ADD,Buccaneers D/ST,D/ST,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,13,ADD,Devin Neal,RB,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,13,ADD,Jaguars D/ST,D/ST,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,13,TEAM->TEAM,Browns D/ST,D/ST,Foxes Hopefuls,Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,13,ADD,Troy Franklin,WR,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,13,TEAM->TEAM,Parker Washington,WR,Foxes Hopefuls,"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,13,ADD,Jayden Daniels,QB,(FA),Fear the Turtle,{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,13,ADD,Chimere Dike,WR,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,13,ADD,Falcons D/ST,D/ST,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,13,ADD,Isaiah Hodgins,WR,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,13,ADD,Jayden Higgins,WR,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,13,DROP,Chris Godwin Jr.,WR,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,13,DROP,Matthew Golden,WR,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,13,DROP,Patriots D/ST,D/ST,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,13,DROP,Malik Washington,WR,Fear the Turtle,(FA),{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2025,13,DROP,Jaylin Noel,WR,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,13,DROP,Tyler Shough,QB,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,13,DROP,David Njoku,TE,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,13,DROP,AJ Barner,TE,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,13,DROP,Cowboys D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,13,DROP,Emanuel Wilson,RB,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,13,DROP,Darnell Mooney,WR,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,Saints D/ST,D/ST,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,Chiefs D/ST,D/ST,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,Chris Godwin Jr.,WR,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,Luther Burden III,WR,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,Titans D/ST,D/ST,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,John Metchie III,WR,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,Evan McPherson,K,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,Devaughn Vele,WR,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,Jordan Mason,RB,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,Chris Rodriguez Jr.,RB,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,14,TEAM->TEAM,Xavier Worthy,WR,Foxes Hopefuls,At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,Colby Parkinson,TE,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,14,ADD,Adonai Mitchell,WR,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Chase McLaughlin,K,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,DeMario Douglas,WR,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Buccaneers D/ST,D/ST,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Jake Elliott,K,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Andrei Iosivas,WR,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Falcons D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Jonnu Smith,TE,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Andy Borregales,K,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Kayshon Boutte,WR,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Tyler Allgeier,RB,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Nick Folk,K,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Pat Freiermuth,TE,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,14,DROP,Emari Demercado,RB,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,15,ADD,Cowboys D/ST,D/ST,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,15,ADD,Mike Gesicki,TE,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,15,ADD,Jaylen Wright,RB,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,15,ADD,Ryan Flournoy,WR,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,15,ADD,Trevor Lawrence,QB,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,15,ADD,Brian Robinson Jr.,RB,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,15,ADD,Bills D/ST,D/ST,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,15,ADD,Patriots D/ST,D/ST,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,15,DROP,Isiah Pacheco,RB,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,15,DROP,Parker Washington,WR,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,15,DROP,Titans D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,15,DROP,Daniel Jones,QB,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,15,DROP,Colston Loveland,TE,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,15,DROP,Browns D/ST,D/ST,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,15,DROP,Packers D/ST,D/ST,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,15,DROP,Devaughn Vele,WR,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2025,15,DROP,Colby Parkinson,TE,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,16,ADD,Blake Corum,RB,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,16,ADD,Malik Davis,RB,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,16,ADD,Dolphins D/ST,D/ST,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,16,DROP,Cowboys D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2025,16,DROP,Nick Chubb,RB,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,snapshot
+BP- Loudoun 2025,2025,16,DROP,Patrick Mahomes,QB,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,16,DROP,Xavier Worthy,WR,At Risk of CTE,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,17,ADD,AJ Barner,TE,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,17,ADD,Tyler Shough,QB,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,17,ADD,Taysom Hill,TE,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,17,ADD,Colston Loveland,TE,(FA),Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,17,TEAM->TEAM,Blake Corum,RB,At Risk of CTE,Foxes Hopefuls,{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,17,ADD,Dylan Sampson,RB,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,17,ADD,Mack Hollins,WR,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,17,DROP,Quinshon Judkins,RB,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,17,DROP,Devin Neal,RB,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,17,DROP,Ricky Pearsall,WR,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,17,DROP,49ers D/ST,D/ST,Foxes Hopefuls,(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2025,17,DROP,Bam Knight,RB,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,17,DROP,Ravens D/ST,D/ST,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,18,ADD,Samaje Perine,RB,(FA),At Risk of CTE,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2025,18,ADD,Parker Washington,WR,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,18,ADD,Jahan Dotson,WR,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,18,ADD,Tanner McKee,QB,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,18,ADD,Tank Bigsby,RB,(FA),"Bad, Bad, A.J. Brown",{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,18,ADD,Jaydon Blue,RB,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,18,ADD,Audric Estime,RB,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,18,ADD,Chig Okonkwo,TE,(FA),Trash Panda Express,{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,18,ADD,Isiah Pacheco,RB,(FA),Derk Prerscert,{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot
+BP- Loudoun 2025,2025,18,ADD,Michael Mayer,TE,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2025,18,DROP,Breece Hall,RB,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,18,DROP,Harold Fannin Jr.,TE,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,18,DROP,Taysom Hill,TE,Trash Panda Express,(FA),{1EBC8DBD-EC4C-4072-8BBC-6D539BE4D6FD},0,snapshot
+BP- Loudoun 2025,2025,18,DROP,Justin Herbert,QB,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,18,DROP,Michael Pittman Jr.,WR,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,18,DROP,Keon Coleman,WR,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,18,DROP,Darius Slayton,WR,"Bad, Bad, A.J. Brown",(FA),{10FCCFDD-378B-48B3-9235-1B7FE979B565},0,snapshot
+BP- Loudoun 2025,2025,18,DROP,Rashee Rice,WR,Derk Prerscert,(FA),{C13611CA-DD4A-4EA6-B706-B9D3BAE99D5F},0,snapshot

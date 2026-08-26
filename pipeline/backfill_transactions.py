@@ -45,6 +45,11 @@ LEAGUES = [
     {"league_id": 1049459,    "s2": "la_s2",      "swid": "la_swid",      "name": "THE BEST OF THE BEST"},
     {"league_id": 1399036372, "s2": "hannah_s2",  "swid": "hannah_swid",  "name": "The Girl's Room 💞🏈"},
     {"league_id": 417131856,  "s2": "ava_s2",     "swid": "ava_swid",     "name": "Philly Extra Special"},
+    # ESPN reports this league's name with the year baked in ("BP- Loudoun
+    # 2025"), so its files land as "BP- Loudoun 2025 ... 2025". That is fine -
+    # split_league_year handles the doubled year - but it is why the name here
+    # looks odd.
+    {"league_id": 261375772,  "s2": "matt_s2",    "swid": "matt_swid",    "name": "BP- Loudoun"},
     {"league_id": 1259693145, "s2": "elle_s2",    "swid": "elle_swid",    "name": "Operators Football League"},
     {"league_id": 1675186799, "s2": "dave_s2",    "swid": "dave_swid",    "name": "OnP Fantasy"},
     {"league_id": 558148583,  "s2": "ayush_s2",   "swid": "ayush_swid",   "name": "Ross' Fantasy League"},
@@ -87,8 +92,14 @@ def run(years, only_league=None, skip_existing=False):
                 # ESPN reports the league's own name; prefer it so files line up
                 # with the rest of data/ rather than with this script's label
                 name = league.settings.name.replace(" 22/23", "") or cfg['name']
-                tx.build_season(league, name, year)
-                done += 1
+                rosters, _moves, _note = tx.build_season(league, name, year)
+                # A season that exists but has not been played writes nothing, so
+                # it must not be counted as built - the tally previously claimed
+                # "2 league-seasons" for one real season plus an empty next year.
+                if not rosters.empty:
+                    done += 1
+                else:
+                    skipped += 1
             except Exception as e:
                 failed.append((cfg['name'], year, type(e).__name__, str(e)))
 

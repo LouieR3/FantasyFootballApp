@@ -18,8 +18,16 @@ from ffapp.ui.tables import apply_display_defaults, hide_constant, show_table
 RANKINGS_DIR = os.path.join(DATA_DIR, 'rankings')
 POLL_CHOICES = {'Off (manual refresh)': 0, 'Every 5s': 5, 'Every 10s': 10,
                 'Every 30s': 30}
-SHOW = ['ECR', 'Pos', 'Player', 'NFL', 'Bye', 'ADP', 'Sheet ESPN', 'VALUE',
-        'Pos VALUE', 'Need', 'Dropoff', 'Adjusted ECR', 'Target Round', 'Notes']
+# Display order. Everything is optional - `cols_for` keeps only what the loaded
+# sheet actually has, so a thin sheet and a full cheat sheet both render sensibly.
+SHOW = ['ECR', 'Tier', 'Pos', 'Player', 'NFL', 'Bye', 'ADP', 'Sheet ESPN',
+        'VALUE', 'Pos VALUE', 'Need', 'Dropoff', 'Adjusted ECR', 'Target Round',
+        # richer sheets: context that changes a close call
+        'Boom', 'OLine', 'SoS 1-5', 'SoS Full', 'SoS Playoff',
+        'Handcuff', 'Rookie', 'Age', 'Auction $', 'Notes']
+
+# Columns worth colouring when present, and how.
+GRADIENTS = {'VALUE': 'Greens', 'Pos VALUE': 'Greens'}
 
 
 @st.cache_data(show_spinner=False)
@@ -34,13 +42,50 @@ def rankings_from_path(path, mtime):
 
 
 @st.cache_data(ttl=600, show_spinner='Loading the ESPN player pool...')
-def pool_cached(league_id, year, rank_type, _s2, _swid):
-    return ld.player_pool(league_id, year, _s2, _swid, limit=400, rank_type=rank_type)
+def pool_cached(league_id, year, rank_type, _s2, _swid, limit=400):
+    """ESPN ranks/ADP. `limit` scales with the sheet: a 510-player cheat sheet
+    needs a deeper pool than a 200-player one or its tail cannot be matched."""
+    return ld.player_pool(league_id, year, _s2, _swid, limit=limit,
+                          rank_type=rank_type)
 
 
 @st.cache_data(ttl=600, show_spinner=False)
 def teams_cached(league_id, year, _s2, _swid):
     return ld.teams(league_id, year, _s2, _swid)
+
+
+def _report_sheet(rankings):
+    """Say what the loader made of the file, rather than leaving it to be guessed.
+
+    Community sheets carry prose above the header, several ADP sources, and a
+    long unranked tail. All three are handled silently, which is exactly why they
+    are worth reporting: a reader who sees "510 of 862" knows nothing broke.
+    """
+    a = getattr(rankings, 'attrs', {}) or {}
+    bits = []
+    if a.get('header_row'):
+        bits.append(f"header found on row {a['header_row'] + 1}")
+    adp = a.get('adp_columns') or []
+    if len(adp) > 1:
+        bits.append('ADP averaged from ' + ' + '.join(f'`{c}`' for c in adp))
+    elif adp:
+        bits.append(f'ADP from `{adp[0]}`')
+    if a.get('rows_unranked'):
+        bits.append(f"{a['rows_unranked']} unranked rows set aside "
+                    f"of {a.get('rows_named', '?')}")
+    extras = [c for c in ('Tier', 'Boom', 'OLine', 'SoS 1-5', 'SoS Playoff',
+                          'Handcuff', 'Auction $', 'Age')
+              if c in rankings.columns]
+    if extras:
+        bits.append('extra context: ' + ', '.join(extras))
+    if bits:
+        st.caption(' · '.join(bits))
+    if a.get('rows_unranked'):
+        with st.expander(f"The {a['rows_unranked']} rows without a rank"):
+            st.caption('These carry no overall rank in the sheet, so they cannot '
+                       'be ordered on the board. Listed here so nothing looks '
+                       'like it vanished.')
+            st.write(', '.join(a.get('unranked_players', [])[:200]))
 
 
 def cols_for(df):
@@ -71,7 +116,8 @@ def app():
     if up is not None:
         try:
             rankings = rankings_from_bytes(up.getvalue(), up.name)
-            st.success(f'{len(rankings)} players from **{up.name}**')
+            st.success(f'{len(rankings)} ranked players from **{up.name}**')
+            _report_sheet(rankings)
         except Exception as e:
             st.error(f'Could not read that CSV: {e}')
             return
@@ -84,7 +130,8 @@ def app():
                 path = os.path.join(RANKINGS_DIR, pick)
                 try:
                     rankings = rankings_from_path(path, os.path.getmtime(path))
-                    st.info(f'{len(rankings)} players from **{pick}**')
+                    st.info(f'{len(rankings)} ranked players from **{pick}**')
+                    _report_sheet(rankings)
                 except Exception as e:
                     st.error(f'Could not read {pick}: {e}')
                     return
@@ -212,7 +259,10 @@ column is treated as tier markers and forward-filled into **Target Round**.
     # ============================================== 3. build the board
     if live:
         try:
-            pool = pool_cached(league_id, int(year), rank_type, s2, swid)
+            # +150 headroom: ESPN ranks kickers and defences far deeper than
+            # a sheet does, so an exact-size pool misses the tail.
+            depth = int(min(max(400, len(rankings) + 150), 1000))
+            pool = pool_cached(league_id, int(year), rank_type, s2, swid, depth)
             team_names = teams_cached(league_id, int(year), s2, swid)
         except ld.DraftUnavailable as e:
             st.error(f'{e}\n\nSwitch to **Manual** above to keep drafting.')
