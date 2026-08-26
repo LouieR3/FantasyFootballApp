@@ -9,8 +9,9 @@ import os
 import pandas as pd
 import streamlit as st
 
-from paths import LEAGUES_DIR
+from paths import DRAFTS_DIR, LEAGUES_DIR
 from ffapp import league_registry as registry
+from ffapp.metrics import lifetime as lt
 from ffapp.ui.data_loader import load_sheet, sheet_names
 from ffapp.ui.league_colors import league_color_key, style_league_column
 from ffapp.ui.tables import apply_display_defaults, show_table
@@ -19,7 +20,7 @@ LPI_COL = 'Louie Power Index (LPI)'
 
 
 @st.cache_data(show_spinner=False)
-def build_master(dir_key):
+def build_master(dir_key, drafts_key=None):
     """Every league-season's Louie Power Index rows in one frame."""
     rows = []
     for path in sorted(glob.glob(os.path.join(LEAGUES_DIR, '*.xlsx'))):
@@ -56,7 +57,26 @@ def build_master(dir_key):
     if not rows:
         return pd.DataFrame()
     out = pd.concat(rows, ignore_index=True)
-    out['Owner'] = out['Owner'].fillna('—')
+
+    # Fill the gaps from the shared identity layer instead of leaving a dash.
+    # Reading only each workbook's own owner column left 15 league-seasons
+    # blank, so the same manager showed a name on the Hall of Fame and a dash
+    # here. Resolving team -> owner id -> name means one named appearance
+    # anywhere covers that person everywhere.
+    lt.clear_caches()
+    lookup = lt.owner_name_lookup()
+    def _fill(owner, league, year, team):
+        text = '' if pd.isna(owner) else str(owner).strip()
+        if text and text != '—':
+            return text
+        try:
+            return lookup.get((league, int(year), str(team).strip()))
+        except (TypeError, ValueError):
+            return None
+    out['Owner'] = pd.Series(
+        [_fill(o, l, y, t) for o, l, y, t in
+         zip(out['Owner'], out['League'], out['Year'], out['Team'])],
+        index=out.index).fillna('—')
     return out.sort_values(LPI_COL, ascending=False).reset_index(drop=True)
 
 
@@ -70,7 +90,11 @@ def app():
         'Leagues are colour-coded — the key below gives whose league each one is.'
     )
 
-    master = build_master(os.path.getmtime(LEAGUES_DIR))
+    # Owner names now resolve through the draft files, so the key has to move
+    # when a draft lands - otherwise a newly added league keeps showing a dash.
+    drafts_key = ((os.path.getmtime(DRAFTS_DIR), len(os.listdir(DRAFTS_DIR)))
+                  if os.path.isdir(DRAFTS_DIR) else 0)
+    master = build_master(os.path.getmtime(LEAGUES_DIR), drafts_key)
     if master.empty:
         st.error('No league data found.')
         return

@@ -8,7 +8,8 @@ import os
 import pandas as pd
 import streamlit as st
 
-from paths import ALL_MATCHUPS, ALL_PLAYOFF_DFS, TRANSACTIONS_DIR
+from paths import (AGGREGATED_DRAFT_GRADES, ALL_MATCHUPS, ALL_PLAYOFF_DFS,
+                   DRAFTS_DIR, TRANSACTIONS_DIR)
 from ffapp import league_registry as registry
 from ffapp.metrics import hall_of_fame as hof
 from ffapp.metrics import lifetime as lt
@@ -31,8 +32,30 @@ TXN_INT = {'Week': '{:.0f}', 'Weeks Started': '{:.0f}', 'Moves': '{:.0f}',
 TXN_MGR_FMT = {'Seasons': '{:.0f}', 'Leagues': '{:.0f}', 'Total Moves': '{:.0f}'}
 
 
+def data_key():
+    """Everything `team_seasons()` actually reads, so the cache cannot go stale.
+
+    It was keyed on all_matchups + all_playoff_dfs only, but team_seasons also
+    reads every draft file (for owner ids and grades) and the grades aggregate.
+    Adding a league changed `data/drafts/` and nothing invalidated - so the new
+    league showed up on every other page and silently not here.
+    """
+    parts = []
+    for p in (ALL_MATCHUPS, ALL_PLAYOFF_DFS, AGGREGATED_DRAFT_GRADES):
+        parts.append(os.path.getmtime(p) if os.path.exists(p) else 0)
+    if os.path.isdir(DRAFTS_DIR):
+        # count as well as mtime: some filesystems do not bump a directory mtime
+        # for a rewritten file, and a regrade rewrites every draft in place
+        parts.append(os.path.getmtime(DRAFTS_DIR))
+        parts.append(len(os.listdir(DRAFTS_DIR)))
+    return tuple(parts)
+
+
 @st.cache_data(show_spinner='Building every team-season ever...')
-def all_team_seasons(matchup_key, playoff_key):
+def all_team_seasons(key):
+    # The identity layer is lru_cached in-process, below this cache, so clear it
+    # whenever this rebuilds or the fresh read gets handed the previous crosswalk.
+    lt.clear_caches()
     return hof.team_seasons()
 
 
@@ -61,8 +84,7 @@ def app():
         'and humiliation alike.'
     )
 
-    ts = all_team_seasons(os.path.getmtime(ALL_MATCHUPS),
-                          os.path.getmtime(ALL_PLAYOFF_DFS))
+    ts = all_team_seasons(data_key())
     if ts.empty:
         st.error('No team-season data available.')
         return

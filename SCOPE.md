@@ -861,6 +861,66 @@ season either way.
 
 ---
 
+## 3m. Two inconsistencies behind the same symptom — 2026-08-10
+
+Reported: Matt's league showed up on the Draft and Transaction pages but *not* in
+the Hall of Fame, and the LPI Master List was missing owner names that the Hall of
+Fame had. Two separate bugs, both about a cache or a lookup being narrower than
+the thing it was standing in for.
+
+### 🔴 The Hall of Fame cache key did not cover its own inputs
+
+`all_team_seasons` was keyed on `all_matchups.csv` + `all_playoff_dfs.csv`. But
+`hof.team_seasons()` also reads **every draft file** (for owner ids) and
+`Aggregated_Draft_Grades.csv`. Adding a league changed `data/drafts/` and neither
+tracked file moved, so the cache never invalidated — the league appeared on every
+page that keyed off drafts and silently not here.
+
+**Two layers had to be fixed, not one.** Under `st.cache_data` sits the
+`lru_cache`d identity layer in `lifetime.py` (`owner_crosswalk`,
+`owner_display_names`, `_raw_matchups_cached`). Even with a corrected key, the
+rebuild would have been handed the previous crosswalk from process memory. New
+`lifetime.clear_caches()` drops them, and the cached loader calls it on every
+rebuild. This is the third time this repo has been bitten by a process-level cache
+sitting beneath a Streamlit one — see §3e and §3f.
+
+The key now includes the grades aggregate, the drafts directory mtime **and its
+file count**, because a regrade rewrites every draft in place and some filesystems
+do not bump a directory mtime for that.
+
+Verified: teams at LPI ≥ 54 went from **14 to 15**, with
+`Matthew Graesser / At Risk of CTE / BP- Loudoun 2025 / LPI 55` now in place.
+
+### The LPI Master List used a weaker owner lookup than everything else
+
+It read the owner name from **each workbook's own** `Louie Power Index` sheet,
+where the column is spelled `Owners` in 21 workbooks, `Owner` in 6, and is absent
+from 15. So a manager named in one season showed a dash in another — and the same
+team could show a name on the Hall of Fame and `—` here.
+
+It now falls back to `lifetime.owner_name_lookup()`: team → owner id (draft
+crosswalk) → name (any workbook that names them). One named appearance anywhere
+covers that person everywhere.
+
+**Owner names: 296/461 → 440/461 (+144).**
+
+⬜ **21 rows across 7 league-seasons remain unnamed** — 0755 Fantasy Football
+2022–24, Brown Munde 2023, THE BEST OF THE BEST 2022–24. Checked: not a matching
+bug. Team names agree exactly between the draft files and the sheets (double
+spaces and all); those owner ids simply never appear with a name in *any* workbook.
+Nothing to fix in code — the names are not in the data.
+
+Also fixed: the LPI page's cache key now moves when a draft file lands, or the new
+resolution would have kept serving the old dashes.
+
+> The Hall of Fame already prints a "Not included: … no draft file on record" line
+> for leagues it has to omit. That caption was correct and doing its job — the bug
+> was that a league *with* a draft file was being dropped by a stale cache, which
+> no caption would catch. Worth remembering that a visible-gaps note only covers
+> the gaps you predicted.
+
+---
+
 ## 4. Feature backlog
 
 Items carried over from `todo.txt` are marked ⭐.

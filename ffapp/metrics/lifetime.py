@@ -55,6 +55,42 @@ if not hasattr(registry, 'canonical'):
 DRAFT_RE = re.compile(r'^(.+?) Draft Results (\d{4})\.csv$')
 
 
+def clear_caches():
+    """Drop the memoised identity layer.
+
+    `owner_crosswalk`, `owner_display_names` and the raw matchup read are
+    `lru_cache`d because building cross-league views calls them once per league.
+    That cache lives in the *process*, underneath Streamlit's `st.cache_data`, so
+    a page whose own cache key changed would still be handed the previous
+    crosswalk - which is how a newly added league could be missing from the Hall
+    of Fame while showing up everywhere else. Pages call this when their key moves.
+    """
+    for fn in (owner_crosswalk, owner_display_names, _raw_matchups_cached):
+        try:
+            fn.cache_clear()
+        except AttributeError:
+            pass
+
+
+def owner_name_lookup():
+    """(league, year, team) -> owner display name, using the full identity layer.
+
+    Resolves the team to an owner id through the draft crosswalk, then that id to
+    a name via any workbook that names them. That is why this beats reading a
+    single workbook's owner column: a league-season whose own sheet has no owner
+    column still gets a name if the same person is named in another season.
+    """
+    xw = owner_crosswalk()
+    names = owner_display_names()
+    out = {}
+    for league, year, team, oid in zip(xw['League'], xw['Year'], xw['Team'],
+                                       xw['Owner ID']):
+        name = names.get(str(oid))
+        if name:
+            out[(league, int(year), str(team).strip())] = name
+    return out
+
+
 # --------------------------------------------------------------- identity layer
 @lru_cache(maxsize=1)
 def owner_crosswalk():
