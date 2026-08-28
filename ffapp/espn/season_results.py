@@ -5,6 +5,8 @@ while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'path
 _sys.path.insert(0, _d)
 from credentials import CRED
 import pandas as pd
+
+from ffapp import league_registry as registry
 from espn_api.football import League
 import pandas as pd
 import time
@@ -85,7 +87,9 @@ def add_playoff_results(league):
 
         settings = league.settings
 
-        leagueName = settings.name.replace(" 22/23", "")
+        # Canonical, not raw: ESPN renames leagues, and filing under the new
+        # name silently forks a league's history into two (see league_registry).
+        leagueName = registry.canonical(settings.name.replace(" 22/23", ""))
         # fileName = leagueName + " " + str(year) +".xlsx"
         fileName = leagueName + " " + str(year)
         sheet_name = "LPI By Week"

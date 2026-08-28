@@ -241,6 +241,116 @@ def test_week_mapper():
 
 
 # ---------------------------------------------------------------------------
+def test_weekly_spar():
+    print("\n[weekly SPAR]")
+    # one position, three weeks, two teams. RB replacement each week is the 25th
+    # percentile of that week's rostered RBs - with 2 players that is the min.
+    spec = []
+    for w, (a, b) in enumerate([(20.0, 0.0), (10.0, 10.0), (30.0, 5.0)], start=1):
+        spec.append((w, 't1', 'star', 'RB', 'RB', a))
+        spec.append((w, 't2', 'scrub', 'RB', 'RB', b))
+    rosters = _roster_rows(spec)
+    wk = ta.weekly_spar(rosters)
+    check('one row per player-week', len(wk), 6)
+
+    star = wk[wk['Player'] == 'star'].set_index('Week')
+    # week 1 replacement = min(20, 0) = 0 -> SPAR 20
+    check('week 1 SPAR', float(star.loc[1, 'SPAR']), 20.0)
+    # week 2 both scored 10 -> replacement 10 -> SPAR 0
+    check('week 2 SPAR when tied with replacement', float(star.loc[2, 'SPAR']), 0.0)
+    # week 3 replacement = 5 -> SPAR 25
+    check('week 3 SPAR', float(star.loc[3, 'SPAR']), 25.0)
+
+    # a benched week earns nothing, but is still reported
+    spec2 = [(1, 't1', 'x', 'RB', 'BE', 40.0), (1, 't2', 'y', 'RB', 'RB', 1.0)]
+    wk2 = ta.weekly_spar(_roster_rows(spec2))
+    bench = wk2[wk2['Player'] == 'x'].iloc[0]
+    check('benched week earns no SPAR', float(bench['SPAR']), 0.0)
+    check('but the week is still listed', len(wk2), 2)
+
+    print("  -- weekly must reconcile with the season stint totals --")
+    st = ta.stints(rosters)
+    for player in ('star', 'scrub'):
+        weekly_total = float(wk[wk['Player'] == player]['SPAR'].sum())
+        stint_total = float(st[st['Player'] == player]['SPAR'].sum())
+        check(f'{player}: weekly sum == stint total',
+              round(weekly_total, 2), round(stint_total, 2))
+
+
+def test_trade_timeline():
+    print("\n[trade timeline]")
+    # t1 and t2 swap in week 2. t1 gets 'got1' (10/wk), t2 gets 'got2' (30/wk),
+    # so t2 leads on arrival and t1 never catches up.
+    spec = []
+    for w in (1, 2, 3, 4):
+        # a constant pair keeps replacement level predictable
+        spec.append((w, 't1', 'filler1', 'WR', 'WR', 0.0))
+        spec.append((w, 't2', 'filler2', 'WR', 'WR', 0.0))
+    spec += [(1, 't2', 'got1', 'WR', 'WR', 10.0),
+             (2, 't1', 'got1', 'WR', 'WR', 10.0),
+             (3, 't1', 'got1', 'WR', 'WR', 10.0),
+             (4, 't1', 'got1', 'WR', 'WR', 10.0),
+             (1, 't1', 'got2', 'WR', 'WR', 30.0),
+             (2, 't2', 'got2', 'WR', 'WR', 30.0),
+             (3, 't2', 'got2', 'WR', 'WR', 30.0),
+             (4, 't2', 'got2', 'WR', 'WR', 30.0)]
+    rosters = _roster_rows(spec)
+    moves = tx.reconstruct_moves(rosters)
+    check('the swap is detected as a trade',
+          sorted(moves[moves['Type'] == tx.TRADE]['Player']), ['got1', 'got2'])
+
+    events = ta.trade_events(moves)
+    check('one trade event', len(events), 1)
+    check('made in week 2', events[0]['week'], 2)
+
+    tl = ta.trade_timeline(rosters, moves)
+    check('a row per week from the trade onward', len(tl), 3)     # weeks 2,3,4
+    check('starts at the trade week', int(tl['Week'].min()), 2)
+
+    a = events[0]['team_a']
+    got_a = events[0]['a_received'][0]
+    # whoever received got2 (30/wk) should lead by 20 per week
+    first, last = tl.iloc[0], tl.iloc[-1]
+    check('margin grows each week',
+          abs(float(last['Margin'])) > abs(float(first['Margin'])), True)
+    check('leader is the side that got the better player',
+          last['Leader'], 't1' if got_a == 'got2' else 't2')
+
+    print("  -- and the final week must equal the season-total trade margin --")
+    season = ta.trades(rosters, moves)
+    check('timeline endpoint == trades() margin',
+          round(abs(float(last['Margin'])), 2),
+          round(float(season.iloc[0]['Margin']), 2))
+
+    board = ta.trade_scoreboard(rosters, moves)
+    check('scoreboard has one row', len(board), 1)
+    check('weeks since counts inclusively', int(board.iloc[0]['Weeks Since']), 3)
+
+
+def test_team_spar_timeline():
+    print("\n[team SPAR timeline]")
+    spec = [(1, 't1', 'own', 'RB', 'RB', 5.0), (2, 't1', 'own', 'RB', 'RB', 5.0),
+            (3, 't1', 'own', 'RB', 'RB', 5.0),
+            (2, 't1', 'added', 'RB', 'RB', 25.0),
+            (3, 't1', 'added', 'RB', 'RB', 25.0),
+            (1, 't2', 'other', 'RB', 'RB', 0.0), (2, 't2', 'other', 'RB', 'RB', 0.0),
+            (3, 't2', 'other', 'RB', 'RB', 0.0)]
+    rosters = _roster_rows(spec)
+    moves = tx.reconstruct_moves(rosters)
+    tl = ta.team_spar_timeline(rosters, moves)
+    check('one row per week', len(tl), 3)
+    check('nothing credited before the acquisition', float(tl.loc[1, 't1']), 0.0)
+    check('cumulative, not per-week',
+          float(tl.loc[3, 't1']) > float(tl.loc[2, 't1']), True)
+
+    print("  -- and it must reconcile with the season owner_summary --")
+    own = ta.owner_summary(rosters, moves)
+    for team in tl.columns:
+        s = float(own[own['Team'] == team]['SPAR'].iloc[0])
+        check(f'{team} final == summary SPAR', round(float(tl.iloc[-1][team]), 1),
+              round(s, 1))
+
+
 def wins_by_team():
     """(League, Year, Team) -> regular-season wins, from all_matchups.csv."""
     if not os.path.exists(ALL_MATCHUPS):
@@ -315,6 +425,9 @@ if __name__ == '__main__':
     test_move_impacts()
     test_drop_costs()
     test_week_range()
+    test_weekly_spar()
+    test_trade_timeline()
+    test_team_spar_timeline()
     test_activity_labels()
     test_week_mapper()
     test_validity()

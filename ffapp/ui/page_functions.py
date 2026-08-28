@@ -911,3 +911,108 @@ def display_lifetime_record(file, league_id, espn_s2, swid, year_options):
 # df.index += 1
 # df3 = df.style.background_gradient(subset=['Louie Power Index (LPI)'])
 # st.dataframe(df3)
+
+
+def display_trades(league_name, year):
+    """Trades and roster value tracked week by week for one league-season.
+
+    Reads the weekly roster snapshots written by the weekly update, so it extends
+    itself every run - no separate refresh. A league-season that has never been
+    pulled shows how to pull it rather than an empty section.
+    """
+    from ffapp.espn import transactions as tx
+    from ffapp.metrics import transaction_analysis as ta
+
+    rosters, moves = tx.load_season(league_name, int(year))
+    if rosters.empty:
+        return  # nothing pulled for this league-season; stay quiet on old years
+
+    st.header('Trades & Roster Value')
+    st.write(
+        "Every trade tracked week by week. Value is **SPAR** \u2014 started points "
+        "above replacement \u2014 so a player only earns for the team that acquired "
+        "them, and only in weeks they were actually started. The margin moves as "
+        "the season does: a trade that looks settled in October can turn over."
+    )
+
+    weekly = ta.weekly_spar(rosters)
+    board = ta.trade_scoreboard(rosters, moves, weekly)
+    timeline = ta.trade_timeline(rosters, moves, weekly)
+
+    last_week = int(weekly['Week'].max()) if len(weekly) else 0
+    st.caption(f'Through week {last_week}. Updates when the weekly pipeline runs.')
+
+    if board.empty:
+        st.info(
+            'No confirmed trades in this league-season yet. A trade is only '
+            'identifiable from weekly snapshots when both sides move in the same '
+            'week \u2014 a one-way move is indistinguishable from a drop and a claim.'
+        )
+    else:
+        st.markdown('##### Trade scoreboard')
+        show = board.drop(columns=['Source'], errors='ignore')
+        st.dataframe(
+            show.style.background_gradient(subset=['Margin'], cmap='Oranges')
+                .format(precision=1),
+            height=table_height(len(show)), hide_index=True,
+            use_container_width=True)
+        st.caption('**Leading** is who is ahead so far, not a final verdict \u2014 '
+                   'the margin is still moving.')
+
+        st.markdown('##### Week by week')
+        pick = st.selectbox('Trade', board['Trade'].tolist(),
+                            key=f'trade_pick_{league_name}_{year}')
+        one = timeline[timeline['Trade'] == pick]
+        if one.empty:
+            st.info('No weekly data for that trade.')
+        else:
+            row = board[board['Trade'] == pick].iloc[0]
+            a, b = row['Team A'], row['Team B']
+            c1, c2, c3 = st.columns(3)
+            c1.metric(f'{a} received', f"{row['A Value']:.1f}",
+                      help=row['A Received'])
+            c2.metric(f'{b} received', f"{row['B Value']:.1f}",
+                      help=row['B Received'])
+            c3.metric('Margin', f"{row['Margin']:.1f}",
+                      delta=f"{row['Leading']} ahead"
+                      if row['Leading'] != 'level' else 'level',
+                      delta_color='off')
+
+            chart = one.set_index('Week')[['A Cumulative', 'B Cumulative']]
+            chart.columns = [a, b]
+            st.line_chart(chart)
+            st.caption('Cumulative SPAR each side has earned from the players it '
+                       'received, from the week of the trade onward.')
+
+            st.markdown('###### Margin over time')
+            st.caption(f'Positive favours **{a}**, negative favours **{b}**. '
+                       'Crossing zero means the trade flipped.')
+            st.bar_chart(one.set_index('Week')[['Margin']])
+
+            with st.expander('Every week of this trade'):
+                cols = ['Week', 'A Cumulative', 'B Cumulative', 'Margin', 'Leader']
+                st.dataframe(one[cols].style.format(precision=1),
+                             height=table_height(len(one), max_rows=20),
+                             hide_index=True, use_container_width=True)
+
+    # ---------------------------------------------------- all roster value
+    st.markdown('##### Value added from the wire and trades')
+    team_tl = ta.team_spar_timeline(rosters, moves, weekly)
+    if team_tl.empty:
+        st.info('No acquisitions scored yet this season.')
+    else:
+        st.caption(
+            'Running SPAR from every player each team **acquired**, counted from '
+            'the week they arrived. This is value added after the draft, not total '
+            'scoring \u2014 a team that drafted well can sit low here quite happily.'
+        )
+        st.line_chart(team_tl)
+
+        latest = (team_tl.iloc[-1].sort_values(ascending=False)
+                  .rename('SPAR').reset_index())
+        latest.columns = ['Team', 'SPAR']
+        st.dataframe(
+            latest.style.background_gradient(subset=['SPAR'], cmap='RdYlGn')
+                  .format(precision=1),
+            height=table_height(len(latest)), hide_index=True,
+            use_container_width=True)

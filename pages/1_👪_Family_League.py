@@ -37,7 +37,7 @@ def app():
     odds_file = f"{ODDS_DIR}/{league} Betting Odds.xlsx"
 
     from ffapp.ui.page_functions import display_remaining_schedule_difficulty, display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds, display_betting_odds
-    from ffapp.ui.page_functions import display_playoff_odds_by_week, display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results
+    from ffapp.ui.page_functions import display_playoff_odds_by_week, display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results, display_trades
     
     display_playoff_results(file)
 
@@ -61,6 +61,10 @@ def app():
     display_expected_wins(file)
 
     display_draft_results(draft_file)
+
+    # Trades and post-draft roster value, tracked week by week.
+    display_trades(league_name, selected_year)
+
     
 
     display_biggest_lpi_upsets(file)

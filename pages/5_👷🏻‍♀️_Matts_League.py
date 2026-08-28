@@ -14,29 +14,45 @@ def app():
     from ffapp.ui.calcPercent import percent
     from ffapp.ui.playoffNum import playoff_num
 
-    league_id = 261375772
+    from ffapp import league_registry as registry
+
+    # "BP- Loudoun 2025" is the storage key every file on disk is named after, so
+    # it stays. ESPN rebuilt this league for 2026 under a new id and name, and the
+    # registry knows the two belong together - see league_registry's docstring.
+    LEAGUE = "BP- Loudoun 2025"
     espn_s2 = CRED["matt_s2"]
     swid = CRED["matt_swid"]
     # Seasons with data on file - no hard-coded list to keep in sync
-    year_options = available_years("BP- Loudoun 2025")
+    year_options = available_years(LEAGUE)
     if not year_options:
-        st.error("No season data found for BP- Loudoun 2025.")
+        st.error(f"No season data found for {registry.display_name(LEAGUE)}.")
         return
     selected_year = st.selectbox(
         "Select Year", year_options, index=len(year_options) - 1
     )
 
-    
-    league = f"BP- Loudoun 2025 {selected_year}"
+    # The id differs by season, so every live ESPN call below has to ask per year
+    # rather than trust one constant. 2025 and earlier read the original league;
+    # 2026 onward read the rebuilt one.
+    league_id = registry.league_id_for(LEAGUE, selected_year)
+
+    league = f"{LEAGUE} {selected_year}"
     file = f"{LEAGUES_DIR}/" + league + ".xlsx"
-    st.title("👷🏻‍♀️ " + league)
+    st.title("👷🏻‍♀️ "
+             + f"{registry.display_name(LEAGUE)} {selected_year}")
+    if registry.seasons_with_other_id(LEAGUE):
+        st.caption(
+            f"Reading ESPN league `{league_id}` for {selected_year}. This league "
+            "was rebuilt on ESPN, so seasons before and after live under different "
+            "ESPN ids but are treated as one league here."
+        )
     # Extract the league name without the year
     league_name = " ".join(league.split()[:-1])  # Removes the year from the league string
     draft_file = f"{DRAFTS_DIR}/{league_name} Draft Results {selected_year}.csv"
     odds_file = f"{ODDS_DIR}/{league} Betting Odds.xlsx"
 
     from ffapp.ui.page_functions import display_remaining_schedule_difficulty, display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds, display_betting_odds
-    from ffapp.ui.page_functions import display_playoff_odds_by_week, display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results
+    from ffapp.ui.page_functions import display_playoff_odds_by_week, display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results, display_trades
     
     display_playoff_results(file)
 
@@ -59,6 +75,10 @@ def app():
     display_expected_wins(file)
 
     display_draft_results(draft_file)
+
+    # Trades and post-draft roster value, tracked week by week.
+    display_trades(league_name, selected_year)
+
     
 
     display_biggest_lpi_upsets(file)

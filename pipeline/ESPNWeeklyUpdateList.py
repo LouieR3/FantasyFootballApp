@@ -17,6 +17,7 @@ import math
 import numpy as np
 import random
 import openpyxl
+from ffapp import league_registry as registry
 from ffapp.metrics.monte_carlo_odds import (
     calculate_team_stats, 
     simulate_remaining_season, 
@@ -81,8 +82,12 @@ leagues = [
 # Loop through each league configuration
 for league_config in leagues:
     try:
+        # Resolve the id for this season: a league ESPN rebuilt keeps its old
+        # id resolvable, so a hardcoded one fails silently rather than loudly.
+        _lid = (registry.league_id_for(league_config["name"], league_config["year"])
+                or league_config["league_id"])
         league = League(
-            league_id=league_config["league_id"],
+            league_id=_lid,
             year=league_config["year"],
             espn_s2=league_config["espn_s2"],
             swid=league_config["swid"],
@@ -91,7 +96,9 @@ for league_config in leagues:
     
         settings = league.settings
 
-        leagueName = settings.name.replace(" 22/23", "")
+        # Canonical, not raw: ESPN renames leagues, and filing under the new
+        # name silently forks a league's history into two (see league_registry).
+        leagueName = registry.canonical(settings.name.replace(" 22/23", ""))
         league_settings.save_settings(leagueName, year, settings)
         fileName = leagueName + " "+str(year)
         file = leagueName + ".xlsx"

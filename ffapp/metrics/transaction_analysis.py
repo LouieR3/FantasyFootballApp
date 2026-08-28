@@ -408,3 +408,190 @@ def team_transaction_grade(league_name, year, team_name):
                       summary['Letter Grade'])}
         _TEAM_GRADE_CACHE[key] = cached
     return cached.get(str(team_name).strip(), (None, None))
+
+
+# ===========================================================================
+# Week by week
+# ===========================================================================
+# Everything above collapses a season to one number per move. The weekly
+# snapshots already hold per-player per-week started points, so the same value
+# can be read as a running total instead - which is what makes a trade watchable
+# during a season rather than only judged after it.
+#
+# No new data is needed. `build_season` runs in the weekly update, so each run
+# extends these series by one week automatically.
+
+
+def weekly_spar(rosters, st=None):
+    """One row per player-week: what they scored, and what that was worth.
+
+    ``SPAR`` here is per week rather than per stint, so it can be summed over any
+    window. Weeks a player was benched contribute 0 to SPAR and are still
+    reported, because "rostered but not started" is a real outcome.
+    """
+    cols = ['Week', 'Team', 'Owner ID', 'Player', 'Position', 'Started',
+            'Points', 'Replacement', 'SPAR']
+    if rosters is None or rosters.empty:
+        return pd.DataFrame(columns=cols)
+
+    levels = replacement_levels(rosters)
+    out = rosters[['Week', 'Team', 'Owner ID', 'Player', 'Position', 'Started',
+                   'Points']].copy()
+    out['Week'] = out['Week'].astype(int)
+    out['Started'] = out['Started'].astype(bool)
+    out['Points'] = pd.to_numeric(out['Points'], errors='coerce').fillna(0.0)
+    out['Replacement'] = [float(levels.get((w, p), 0.0))
+                          for w, p in zip(out['Week'], out['Position'])]
+    out['SPAR'] = np.where(out['Started'],
+                           out['Points'] - out['Replacement'], 0.0).round(2)
+    return out[cols].sort_values(['Week', 'Team', 'Player'], ignore_index=True)
+
+
+def trade_events(moves):
+    """Each confirmed trade as one record, with both sides' player lists.
+
+    Shares the same-week same-pair rule as `trades()`: a trade needs a genuine
+    two-way swap, because at snapshot granularity a one-way move is
+    indistinguishable from a drop-and-claim.
+    """
+    if moves is None or moves.empty:
+        return []
+    traded = moves[moves['Type'] == tx.TRADE]
+    if traded.empty:
+        return []
+
+    events = []
+    for week, chunk in traded.groupby('Week'):
+        pairs = {tuple(sorted((f, t)))
+                 for f, t in zip(chunk['From Team'], chunk['To Team'])}
+        for a, b in sorted(pairs):
+            a_got = chunk[(chunk['To Team'] == a) & (chunk['From Team'] == b)]
+            b_got = chunk[(chunk['To Team'] == b) & (chunk['From Team'] == a)]
+            if a_got.empty or b_got.empty:
+                continue
+            events.append({
+                'trade_id': f'W{int(week)}: {a} / {b}',
+                'week': int(week),
+                'team_a': a, 'team_b': b,
+                'a_received': list(a_got['Player']),
+                'b_received': list(b_got['Player']),
+                'source': chunk['Source'].iloc[0] if 'Source' in chunk else 'snapshot',
+            })
+    return sorted(events, key=lambda e: e['week'])
+
+
+def trade_timeline(rosters, moves, weekly=None):
+    """Cumulative SPAR for each side of every trade, week by week.
+
+    Credit only accrues while a player is **on the team that received them** and
+    **in a starting lineup**, so flipping a piece on again or benching it stops
+    the clock. That is the whole point of tracking it weekly: a trade that looked
+    settled in week 6 can turn over by week 12.
+
+    ``Margin`` is signed from team A's side. The leader at the latest week is
+    whoever is ahead *so far*, not a verdict.
+    """
+    cols = ['Trade', 'Week', 'Team A', 'Team B', 'A Cumulative', 'B Cumulative',
+            'Margin', 'Leader']
+    events = trade_events(moves)
+    if not events:
+        return pd.DataFrame(columns=cols)
+
+    wk = weekly_spar(rosters) if weekly is None else weekly
+    if wk.empty:
+        return pd.DataFrame(columns=cols)
+    # (player, team, week) -> SPAR earned that week for that team
+    earned = {}
+    for player, team, week, spar in zip(wk['Player'], wk['Team'], wk['Week'],
+                                        wk['SPAR']):
+        earned[(player, team, int(week))] = float(spar)
+    weeks = sorted(wk['Week'].unique())
+
+    rows = []
+    for e in events:
+        a_total = b_total = 0.0
+        for w in [x for x in weeks if x >= e['week']]:
+            a_total += sum(earned.get((p, e['team_a'], w), 0.0)
+                           for p in e['a_received'])
+            b_total += sum(earned.get((p, e['team_b'], w), 0.0)
+                           for p in e['b_received'])
+            margin = round(a_total - b_total, 2)
+            rows.append({
+                'Trade': e['trade_id'], 'Week': w,
+                'Team A': e['team_a'], 'Team B': e['team_b'],
+                'A Cumulative': round(a_total, 2),
+                'B Cumulative': round(b_total, 2),
+                'Margin': margin,
+                'Leader': e['team_a'] if margin > 0
+                          else (e['team_b'] if margin < 0 else 'level'),
+            })
+    return pd.DataFrame(rows, columns=cols)
+
+
+def trade_scoreboard(rosters, moves, weekly=None):
+    """Where every trade stands right now - one row per trade, latest week."""
+    cols = ['Trade', 'Week Made', 'Weeks Since', 'Team A', 'A Received',
+            'A Value', 'Team B', 'B Received', 'B Value', 'Margin', 'Leading',
+            'Source']
+    events = trade_events(moves)
+    tl = trade_timeline(rosters, moves, weekly)
+    if not events or tl.empty:
+        return pd.DataFrame(columns=cols)
+
+    latest = tl.sort_values('Week').groupby('Trade').tail(1).set_index('Trade')
+    rows = []
+    for e in events:
+        if e['trade_id'] not in latest.index:
+            continue
+        r = latest.loc[e['trade_id']]
+        rows.append({
+            'Trade': e['trade_id'], 'Week Made': e['week'],
+            'Weeks Since': int(r['Week']) - e['week'] + 1,
+            'Team A': e['team_a'], 'A Received': ', '.join(e['a_received']),
+            'A Value': r['A Cumulative'],
+            'Team B': e['team_b'], 'B Received': ', '.join(e['b_received']),
+            'B Value': r['B Cumulative'],
+            'Margin': abs(float(r['Margin'])),
+            'Leading': r['Leader'],
+            'Source': e['source'],
+        })
+    return (pd.DataFrame(rows, columns=cols)
+            .sort_values('Week Made', ignore_index=True))
+
+
+def team_spar_timeline(rosters, moves, weekly=None):
+    """Cumulative acquisition SPAR per team, week by week.
+
+    Counts only players a team **acquired** (add, trade or team-to-team) and only
+    from the week they arrived - so it is the running answer to "how much has
+    working the roster been worth to me this season", not total scoring.
+    """
+    if rosters is None or rosters.empty or moves is None or moves.empty:
+        return pd.DataFrame()
+    wk = weekly_spar(rosters) if weekly is None else weekly
+    if wk.empty:
+        return pd.DataFrame()
+
+    acq = moves[moves['Type'].isin(ACQUIRING)]
+    if acq.empty:
+        return pd.DataFrame()
+    # earliest week each (team, player) was acquired
+    first = {}
+    for player, team, week in zip(acq['Player'], acq['To Team'], acq['Week']):
+        key = (team, player)
+        first[key] = min(first.get(key, 10 ** 6), int(week))
+
+    wk = wk.copy()
+    wk['_from'] = [first.get((t, p)) for t, p in zip(wk['Team'], wk['Player'])]
+    wk = wk[wk['_from'].notna() & (wk['Week'] >= wk['_from'])]
+    if wk.empty:
+        return pd.DataFrame()
+
+    per_week = (wk.groupby(['Team', 'Week'])['SPAR'].sum()
+                  .unstack('Team').fillna(0.0).sort_index())
+    # reindex onto every week so a team with no acquisitions early still plots
+    all_weeks = sorted(int(w) for w in
+                       pd.unique(weekly_spar(rosters)['Week'] if weekly is None
+                                 else weekly['Week']))
+    per_week = per_week.reindex(all_weeks).fillna(0.0)
+    return per_week.cumsum().round(2)

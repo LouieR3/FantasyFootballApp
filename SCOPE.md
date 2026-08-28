@@ -921,6 +921,144 @@ resolution would have kept serving the old dashes.
 
 ---
 
+## 3n. Weekly trade tracking on the league pages — 2026-08-10
+
+New **Trades & Roster Value** section on every league-season page
+(`page_functions.display_trades`), plus the weekly primitives behind it in
+`transaction_analysis.py`.
+
+**No new data was needed.** The weekly roster snapshots already hold per-player
+per-week started points; everything before this collapsed them to a season total.
+Reading the same numbers as a running total is what makes a trade watchable during
+a season rather than only judged after it. And because `build_season` runs inside
+the weekly update, every series extends itself each week with no separate refresh.
+
+### New primitives
+
+| | |
+|---|---|
+| `weekly_spar(rosters)` | one row per player-week: points, replacement level, SPAR |
+| `trade_events(moves)` | each confirmed trade as a record with both sides' player lists |
+| `trade_timeline(rosters, moves)` | cumulative SPAR per side, per week, with a signed margin |
+| `trade_scoreboard(rosters, moves)` | where every trade stands at the latest week |
+| `team_spar_timeline(rosters, moves)` | cumulative acquisition SPAR per team, per week |
+
+Credit accrues only while a player is **on the team that received them** and **in
+a starting lineup**, so flipping a piece on again or benching it stops the clock.
+
+### It actually moves — which is the point
+
+Replaying BP- Loudoun 2025 (trade made week 9) as the season progresses:
+
+| Through week | At Risk of CTE | Derk Prerscert | Margin | Leading |
+|---|---|---|---|---|
+| 9 | 25.7 | 33.1 | 7.4 | Derk Prerscert |
+| 10 | 37.7 | 42.4 | 4.7 | Derk Prerscert |
+| 12 | 84.6 | 75.0 | 9.6 | **At Risk of CTE** |
+| 15 | 147.6 | 137.4 | 10.2 | At Risk of CTE |
+| 18 | 241.3 | 173.9 | 67.3 | At Risk of CTE |
+
+The trade **flips between weeks 10 and 12**. A season-total number would have shown
+only the 67.3 and hidden that entirely. The page labels the leader "so far, not a
+final verdict" for exactly this reason.
+
+### Reconciliation is asserted, not assumed
+
+Every weekly view has to agree with the season view it refines, so the tests check
+it both ways: weekly SPAR sums to the stint total per player, the trade timeline's
+final week equals `trades()`' season margin, and `team_spar_timeline`'s last row
+equals `owner_summary`'s SPAR. Verified on real data to within rounding (±0.02).
+
+### 🔴 The smoke test's stub had a stale hardcoded list
+
+Wiring the new section into 15 league pages dropped the smoke test from 25/25 to
+**10/25** with `ImportError: cannot import name 'display_trades' ... (unknown
+location)` — which reads like a bug in the pages. The cause was
+`tools/smoke_pages.py` stubbing `page_functions` with a **hand-maintained list of
+function names**, so every new display function silently breaks the harness in a
+way that points at the wrong file.
+
+The stub now regexes `^def (display_\w+|owner_df_creation)` out of the real module,
+so it cannot go stale. Deliberately *not* a blanket `__getattr__` fallback: that
+would also swallow a genuinely misspelled import, which is exactly what this
+harness exists to catch. It raises if it finds no functions at all, rather than
+silently stubbing an empty module.
+
+⬜ Old seasons that predate the transaction backfill render nothing here (the
+section returns early rather than showing an empty shell). Run
+`pipeline/backfill_transactions.py` to fill a season in.
+
+---
+
+## 3o. A league ESPN rebuilt: two ids, one league — 2026-08-10
+
+Matt's league was recreated on ESPN for 2026: **id 261375772 -> 29400230**, name
+**"BP- Loudoun 2025" -> "Loudoun Fantasy League (LFL)"**, 12 teams -> 14. Without
+linking them, 2026 would have become a separate league in every discovery path and
+the page's year selector would have split in two.
+
+### Why it needed more than a new id
+
+The 2026 pull derives its filename from `league.settings.name`, so it would have
+written `Loudoun Fantasy League (LFL) 2026.xlsx` while 2025 sits in
+`BP- Loudoun 2025 2025.xlsx`. Two names, two leagues, everywhere.
+
+Worse, the retired id **still resolves** for 2026 - it returns the old league with
+`current_week 0` and no data. A hardcoded id therefore fails *silently* rather
+than raising.
+
+### Three registry additions
+
+| | |
+|---|---|
+| `ids_by_year` | `{2026: 29400230}` on the league entry |
+| `display` | "Loudoun Fantasy League" for the screen |
+| `ALIASES` | the new ESPN name (and the short pipeline label) fold onto the existing storage key |
+
+`league_id_for(name, year)` treats an override as **"from this season onward"**,
+not "exactly this season" - so 2027 keeps the new id rather than falling back to
+the retired one.
+
+`display` exists because `espn_name` is the join key for every file under `data/`.
+Renaming it means migrating filenames plus the League column of six aggregates,
+which is not worth it to fix a label - and the label was genuinely wrong, since the
+storage key's embedded "2025" rendered the 2026 tab as "BP- Loudoun 2025 2026".
+
+### 🔴 Every pipeline now files under the canonical name
+
+Eight places took the storage name straight from `league.settings.name`:
+`ESPNWeeklyUpdate`, `ESPNWeeklyUpdateList`, `ESPN_Add_Old_Season` (x2),
+`backfill_transactions`, `refresh_standings`, `draft_data`, `season_results`.
+
+All now wrap it in `registry.canonical()`. **This is the root cause of the existing
+"Family League" / "Family Fantasy" split in the data** — the same bug, already
+realised once. Handling renames in the registry rather than in eight call sites
+means the next one is a one-line change.
+
+Five pipelines also resolve the id per season now
+(`registry.league_id_for(cfg['name'], year)`), instead of trusting one constant.
+
+### Verified end to end
+
+```
+pipeline resolves 'BP- Loudoun' 2026 -> league id 29400230
+  ESPN reports the name as 'Loudoun Fantasy League (LFL)'
+  canonical() folds it to  'BP- Loudoun 2025'
+  so 2026 files as: BP- Loudoun 2025 2026.xlsx   (same league as the 2025 tab)
+```
+
+And with a 2026 workbook present, `available_years('BP- Loudoun 2025')` returns
+`['2025', '2026']` - one page, both tabs. 2025 keeps reading the original league;
+2026 onward reads the rebuilt one.
+
+⬜ The storage key stays `BP- Loudoun 2025`, which is odd to read in a filename.
+Renaming it to something clean is a data migration across `leagues/`, `drafts/`,
+`transactions/`, `odds/`, `league_settings.json` and the League column of six
+aggregates. Worth doing deliberately if it ever becomes annoying; `display` makes
+it invisible on screen in the meantime.
+
+---
+
 ## 4. Feature backlog
 
 Items carried over from `todo.txt` are marked ⭐.

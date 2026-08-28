@@ -10,6 +10,7 @@ import io
 import os
 import sys
 import traceback
+import re
 import types
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -83,12 +84,18 @@ def _mk(name):
     def f(*a, **k):
         CALLS.append(name)
     return f
-for name in ("display_playoff_results display_schedule_comparison display_strength_of_schedule "
-             "display_expected_wins display_playoff_odds display_playoff_odds_by_week "
-             "display_remaining_schedule_difficulty display_betting_odds "
-             "display_betting_odds_full_width display_lpi_by_week display_lpi "
-             "display_draft_results display_biggest_lpi_upsets display_lifetime_record "
-             "owner_df_creation").split():
+# Names are read out of the real module rather than listed here. A hardcoded list
+# goes stale the moment a display function is added, and the failure is an opaque
+# "cannot import name ... (unknown location)" from the stub - which looks like a
+# bug in the page. Regexing the source keeps the stub in step while still letting
+# a genuinely misspelled import fail, which a blanket __getattr__ would hide.
+_real = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                     "ffapp", "ui", "page_functions.py")
+with open(_real, encoding="utf-8") as fh:
+    _names = re.findall(r"^def (display_\w+|owner_df_creation)", fh.read(), re.M)
+if not _names:
+    raise SystemExit(f"found no display_* functions in {_real} - stub would be empty")
+for name in _names:
     setattr(pf, name, _mk(name))
 sys.modules["ffapp.ui.page_functions"] = pf
 

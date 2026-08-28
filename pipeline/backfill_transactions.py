@@ -29,6 +29,7 @@ import os
 
 from credentials import CRED
 from paths import TRANSACTIONS_DIR, weekly_roster_file
+from ffapp import league_registry as registry
 from ffapp.espn import transactions as tx
 
 EARLIEST_YEAR = 2019          # box_scores / recent_activity both refuse earlier
@@ -82,7 +83,11 @@ def run(years, only_league=None, skip_existing=False):
                 skipped += 1
                 continue
             try:
-                league = League(league_id=cfg['league_id'], year=year,
+                # A league ESPN rebuilt has a different id per era, so ask
+                # per year - the retired id still resolves and would quietly
+                # return a season with no data.
+                lid = registry.league_id_for(cfg['name'], year) or cfg['league_id']
+                league = League(league_id=lid, year=year,
                                 espn_s2=CRED[cfg['s2']], swid=CRED[cfg['swid']])
             except Exception as e:
                 # a league that did not exist that year is expected, not an error
@@ -91,7 +96,9 @@ def run(years, only_league=None, skip_existing=False):
             try:
                 # ESPN reports the league's own name; prefer it so files line up
                 # with the rest of data/ rather than with this script's label
-                name = league.settings.name.replace(" 22/23", "") or cfg['name']
+                name = registry.canonical(
+                    league.settings.name.replace(" 22/23", "")
+                    or cfg['name'])
                 rosters, _moves, _note = tx.build_season(league, name, year)
                 # A season that exists but has not been played writes nothing, so
                 # it must not be counted as built - the tally previously claimed

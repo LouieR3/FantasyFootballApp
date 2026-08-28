@@ -18,6 +18,7 @@ import numpy as np
 import random
 import os
 
+from ffapp import league_registry as registry
 from ffapp.metrics.owner_overrides import resolve_owner
 from ffapp.espn import league_settings
 from paths import DRAFTS_DIR
@@ -54,7 +55,9 @@ def pull_draft_data(league, year):
 
         settings = league.settings
 
-        leagueName = settings.name.replace(" 22/23", "")
+        # Canonical, not raw: ESPN renames leagues, and filing under the new
+        # name silently forks a league's history into two (see league_registry).
+        leagueName = registry.canonical(settings.name.replace(" 22/23", ""))
         fileName = leagueName + " " + str(year)
 
         # --------------------------------------------------------------------------------------
@@ -339,8 +342,11 @@ if __name__ == "__main__":
     # seasons together so grades stay comparable across leagues and years.
     for league_config in leagues:
         try:
+            _lid = (registry.league_id_for(league_config["name"],
+                                           league_config["year"])
+                    or league_config["league_id"])
             league = League(
-                league_id=league_config["league_id"],
+                league_id=_lid,
                 year=league_config["year"],
                 espn_s2=league_config["espn_s2"],
                 swid=league_config["swid"],

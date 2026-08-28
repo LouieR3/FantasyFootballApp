@@ -38,6 +38,7 @@ import pandas as pd
 
 from credentials import CRED
 from paths import AGGREGATED_DRAFT_GRADES, DRAFT_GRADES_WITH_STANDINGS
+from ffapp import league_registry as registry
 from ffapp.espn import transactions as tx          # for say(): league names carry emoji
 from ffapp.metrics.owner_overrides import owner_id_for
 
@@ -73,14 +74,18 @@ def pull(years):
     for cfg in LEAGUES:
         for year in years:
             try:
-                league = League(league_id=cfg['league_id'], year=year,
+                # see backfill_transactions: id can differ by season
+                lid = registry.league_id_for(cfg['name'], year) or cfg['league_id']
+                league = League(league_id=lid, year=year,
                                 espn_s2=CRED[cfg['s2']], swid=CRED[cfg['swid']])
             except Exception as e:
                 (denied if 'AccessDenied' in type(e).__name__ else absent
                  ).append((cfg['name'], year))
                 continue
             try:
-                name = league.settings.name.replace(" 22/23", "") or cfg['name']
+                name = registry.canonical(
+                    league.settings.name.replace(" 22/23", "")
+                    or cfg['name'])
                 standings = league.standings()
             except Exception as e:
                 tx.say(f"  {cfg['name']} {year}: standings failed "

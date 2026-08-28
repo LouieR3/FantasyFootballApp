@@ -18,6 +18,7 @@ import numpy as np
 import random
 import openpyxl
 import os
+from ffapp import league_registry as registry
 from ffapp.metrics.monte_carlo_odds import (
     calculate_team_stats, 
     simulate_remaining_season, 
@@ -79,7 +80,9 @@ league = League(league_id=1242265374, year=year, espn_s2=CRED["turf_s2"], swid=C
 def pull_league_data(league):
     settings = league.settings
 
-    leagueName = settings.name.replace(" 22/23", "")
+    # Canonical, not raw: ESPN renames leagues, and filing under the new
+    # name silently forks a league's history into two (see league_registry).
+    leagueName = registry.canonical(settings.name.replace(" 22/23", ""))
     fileName = leagueName + " " + str(year)
     file = leagueName + ".xlsx"
 
@@ -478,7 +481,9 @@ def missing_info_checker():
                     continue
                 # print(league)
                 settings = league.settings
-                league_name = settings.name.replace(" 22/23", "")
+                # Canonical, not raw: ESPN renames leagues, and filing under the new
+                # name silently forks a league's history into two (see league_registry).
+                league_name = registry.canonical(settings.name.replace(" 22/23", ""))
                 file_name = league_name + " " + str(year)
                 file_path = f"{LEAGUES_DIR}/{file_name}.xlsx"
 
