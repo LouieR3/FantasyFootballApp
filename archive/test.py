@@ -184,4 +184,4 @@ def test_team_data(league):
     print(team.acquisitions)
 
 
-test_team_data(league)
+# test_team_data(league)

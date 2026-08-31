@@ -1,8 +1,185 @@
 {
+  "0755 Fantasy Football|2026": {
+    "playoff_team_count": 6,
+    "reg_season_count": 14,
+    "roster": {
+      "BE": 7,
+      "D/ST": 1,
+      "IR": 1,
+      "K": 1,
+      "QB": 1,
+      "RB": 2,
+      "RB/WR/TE": 1,
+      "TE": 1,
+      "WR": 2
+    },
+    "team_count": null
+  },
   "BP- Loudoun 2025|2025": {
     "playoff_team_count": 6,
     "reg_season_count": 15,
     "roster": {},
     "team_count": 12
+  },
+  "BP- Loudoun 2025|2026": {
+    "playoff_team_count": 6,
+    "reg_season_count": 14,
+    "roster": {
+      "BE": 7,
+      "D/ST": 1,
+      "IR": 1,
+      "K": 1,
+      "QB": 1,
+      "RB": 2,
+      "RB/WR/TE": 1,
+      "TE": 1,
+      "WR": 2
+    },
+    "team_count": null
+  },
+  "Brown Munde|2026": {
+    "playoff_team_count": 6,
+    "reg_season_count": 14,
+    "roster": {
+      "BE": 7,
+      "D/ST": 1,
+      "IR": 1,
+      "K": 1,
+      "QB": 1,
+      "RB": 2,
+      "RB/WR/TE": 1,
+      "WR": 2,
+      "WR/TE": 1
+    },
+    "team_count": null
+  },
+  "EBC League|2026": {
+    "playoff_team_count": 6,
+    "reg_season_count": 14,
+    "roster": {
+      "BE": 6,
+      "D/ST": 1,
+      "IR": 1,
+      "K": 1,
+      "QB": 1,
+      "RB": 2,
+      "RB/WR/TE": 1,
+      "TE": 1,
+      "WR": 2
+    },
+    "team_count": null
+  },
+  "Family Fantasy|2026": {
+    "playoff_team_count": 7,
+    "reg_season_count": 14,
+    "roster": {
+      "BE": 7,
+      "D/ST": 1,
+      "IR": 1,
+      "K": 1,
+      "QB": 1,
+      "RB": 2,
+      "RB/WR/TE": 1,
+      "TE": 1,
+      "WR": 2
+    },
+    "team_count": null
+  },
+  "Game of Yards!|2026": {
+    "playoff_team_count": 6,
+    "reg_season_count": 14,
+    "roster": {
+      "BE": 7,
+      "D/ST": 1,
+      "HC": 1,
+      "IR": 1,
+      "K": 1,
+      "QB": 1,
+      "RB": 2,
+      "RB/WR/TE": 1,
+      "TE": 1,
+      "WR": 2
+    },
+    "team_count": null
+  },
+  "Pennoni Younglings|2026": {
+    "playoff_team_count": 7,
+    "reg_season_count": 14,
+    "roster": {
+      "BE": 6,
+      "D/ST": 1,
+      "IR": 1,
+      "K": 1,
+      "QB": 1,
+      "RB": 2,
+      "RB/WR/TE": 1,
+      "TE": 1,
+      "WR": 2
+    },
+    "team_count": null
+  },
+  "Philly Extra Special|2026": {
+    "playoff_team_count": 6,
+    "reg_season_count": 14,
+    "roster": {
+      "BE": 7,
+      "D/ST": 1,
+      "IR": 1,
+      "K": 1,
+      "QB": 1,
+      "RB": 2,
+      "RB/WR/TE": 1,
+      "TE": 1,
+      "WR": 2
+    },
+    "team_count": null
+  },
+  "THE BEST OF THE BEST|2026": {
+    "playoff_team_count": 8,
+    "reg_season_count": 14,
+    "roster": {
+      "BE": 4,
+      "D/ST": 1,
+      "IR": 1,
+      "K": 1,
+      "OP": 1,
+      "QB": 1,
+      "RB": 2,
+      "WR": 2,
+      "WR/TE": 1
+    },
+    "team_count": null
+  },
+  "The Girl's Room 💞🏈|2026": {
+    "playoff_team_count": 6,
+    "reg_season_count": 15,
+    "roster": {
+      "BE": 7,
+      "D/ST": 1,
+      "IR": 1,
+      "K": 1,
+      "QB": 1,
+      "RB": 2,
+      "RB/WR/TE": 1,
+      "TE": 1,
+      "WR": 2
+    },
+    "team_count": null
+  },
+  "Turf On Grade 2.0|2026": {
+    "playoff_team_count": 4,
+    "reg_season_count": 14,
+    "roster": {
+      "BE": 7,
+      "D/ST": 1,
+      "IR": 1,
+      "K": 1,
+      "QB": 1,
+      "RB": 2,
+      "RB/WR/TE": 1,
+      "TE": 1,
+      "WR": 2
+    },
+    "team_count": null
   }
 }

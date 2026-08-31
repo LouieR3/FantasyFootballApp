@@ -12,7 +12,6 @@ from ffapp.ui.lifetime_record_owner import lifetime_record_owner
 from streamlit_echarts5 import st_echarts
 from pyecharts.charts import Line
 from pyecharts import options as opts
-from streamlit_echarts import st_pyecharts
 from espn_api.football import League
 from ffapp.metrics.monte_carlo_odds import add_weekly_analysis_to_main
 from ffapp.metrics.owner_overrides import resolve_owner

@@ -46,7 +46,14 @@ streamlit-aggrid>=1.0
 # would break the install outright. Checked: neither depends on starlette, fastapi or
 # uvicorn, so neither was involved in the gzip failure above. (page_functions imports
 # one symbol from each - worth consolidating onto a single charting component.)
-streamlit-echarts
+# streamlit-echarts (the pre-fork package) REMOVED. It calls
+# st.components.v2.component() at import time, which streamlit 1.62 rejects:
+#   StreamlitAPIException: Component 'streamlit-echarts.streamlit_echarts'
+#   must be declared in pyproject.toml with asset_dir to use file-backed js
+# That is an import-time failure, so it takes down every page importing
+# page_functions, which was the only importer - and only for st_pyecharts,
+# which was never called. streamlit-echarts5 supplies both st_echarts and
+# st_pyecharts with identical signatures, so one package now does the job.
 streamlit-echarts5
 pyecharts>=2.0,<3           # imported directly by page_functions; previously relied on
                             # streamlit-echarts pulling it in transitively
