@@ -335,6 +335,10 @@ leagues = [
     {"league_id": 1924463077, "year": year, "espn_s2": dave_s2, "swid": CRED["dave_swid"], "name": "The Mike Daisy Sports IQ League"},
     # Ayush League
     {"league_id": 558148583, "year": year, "espn_s2": ayush_s2, "swid": CRED["ayush_swid"], "name": "Ross' Fantasy League"},
+    # Goofy Goobers (2026)
+    {"league_id": 1616305229, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "The Goofy Goobers"},
+    # Campers and Skiers and Prahlad (2026)
+    {"league_id": 47829282, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Campers and Skiers and Prahlad"},
 ]
 
 if __name__ == "__main__":

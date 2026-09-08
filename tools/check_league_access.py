@@ -29,7 +29,7 @@ for _stream in (sys.stdout, sys.stderr):
     if hasattr(_stream, 'reconfigure'):
         _stream.reconfigure(errors='replace')
 
-year = 2025
+year = 2026
 
 # Pennoni Younglings
 # league = League(league_id=310334683, year=year, espn_s2=CRED["louie_s2"], swid=CRED["louie_swid"])
@@ -44,7 +44,7 @@ year = 2025
 # league = League(league_id=1339704102, year=year, espn_s2=CRED["prahlad_s2"], swid=CRED["prahlad_swid"])
 
 # Game of Yards
-league = League(league_id=1616305229, year=year, espn_s2=CRED["prahlad_s2"], swid=CRED["prahlad_swid"])
+league = League(league_id=1616305229, year=year, espn_s2="AECLgt4HZRKLkzczGIwr967LwGef6s7ZNmZRyzL9VuwBH9IUk3CP22LTtghDeiELcIb1o9IfCNUuzN%2BAg3zR8LHh5uWWn5wC61jvFj%2Bs80OAxCrTCamuccHP0Dg2MqzwgLUbIsrD7nzYgO6tDYIJHoHzpB0tCiZ9RRi9AvZewCupgpcTipn77NcrQ9e6mO2Nhjj8in3L8kvbX7Qu4dHRqew84TNhX0m0vLMbj6KGSUtUP2XWbWOdpbfh8XBcfBC60wOEVCqJxIR1qIfRCuodlThTuhzMBCw%2BwOBTg6WfZXoh3Q%3D%3D", swid="{4C1C5213-4BB5-4243-87AC-0BCB2D637264}")
 
 # Brown Munde
 # league = League(league_id=367134149, year=2022, espn_s2=CRED["prahlad_s2"], swid=CRED["prahlad_swid"])

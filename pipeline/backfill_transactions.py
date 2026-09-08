@@ -54,6 +54,8 @@ LEAGUES = [
     {"league_id": 1259693145, "s2": "elle_s2",    "swid": "elle_swid",    "name": "Operators Football League"},
     {"league_id": 1675186799, "s2": "dave_s2",    "swid": "dave_swid",    "name": "OnP Fantasy"},
     {"league_id": 558148583,  "s2": "ayush_s2",   "swid": "ayush_swid",   "name": "Ross' Fantasy League"},
+    {"league_id": 1616305229, "s2": "louie_s2",   "swid": "louie_swid",   "name": "The Goofy Goobers"},
+    {"league_id": 47829282,   "s2": "louie_s2",   "swid": "louie_swid",   "name": "Campers and Skiers and Prahlad"},
 ]
 
 

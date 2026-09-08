@@ -103,6 +103,14 @@ LEAGUES = [
          s2="matt_s2", swid="matt_swid",
          page="5_👷🏻‍♀️_Matts-League.py", color="#c49c94", confirmed=True),
 
+    # --- additional leagues (2026 new) ---
+    dict(espn_name="The Goofy Goobers", association="Louie - new 2026",
+         league_id=1616305229, s2="louie_s2", swid="louie_swid",
+         page="2_🤪_Goofy_Goobers.py", color="#ff7f0e", confirmed=True),
+    dict(espn_name="Campers and Skiers and Prahlad", association="Prahlad - new 2026",
+         league_id=47829282, s2="louie_s2", swid="louie_swid",
+         page="2_🏕️_Campers_and_Skiers.py", color="#1abc9c", confirmed=True),
+
     # --- data on disk but no page ---
     dict(espn_name="RRR On Premise ", association="Dave - older On Premise league",
          league_id=None, s2=None, swid=None,

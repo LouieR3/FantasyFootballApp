@@ -60,6 +60,8 @@ LEAGUES = [
     {"league_id": 1675186799, "s2": "dave_s2",    "swid": "dave_swid",    "name": "OnP Fantasy"},
     {"league_id": 1924463077, "s2": "dave_s2",    "swid": "dave_swid",    "name": "The Mike Daisy Sports IQ League"},
     {"league_id": 558148583,  "s2": "ayush_s2",   "swid": "ayush_swid",   "name": "Ross' Fantasy League"},
+    {"league_id": 1616305229, "s2": "louie_s2",   "swid": "louie_swid",   "name": "The Goofy Goobers"},
+    {"league_id": 47829282,   "s2": "louie_s2",   "swid": "louie_swid",   "name": "Campers and Skiers and Prahlad"},
 ]
 
 COLUMNS = ['Team', 'Draft Grade', 'Letter Grade', 'League Name', 'Standing',
