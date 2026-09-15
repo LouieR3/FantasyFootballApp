@@ -50,7 +50,8 @@ LEAGUES = [
          league_id=310334683, s2="louie_s2_pages", swid="louie_swid",
          page="1_🏈_Pennoni_Younglings.py", color="#1f77b4", confirmed=True),
     dict(espn_name="Family Fantasy", association="Louie - family",
-         league_id=1343668602, s2="louie_s2_pages", swid="louie_swid",
+         league_id=996930954, ids_by_year={2026: 1343668602},
+         s2="louie_s2_pages", swid="louie_swid",
          page="1_👪_Family_League.py", color="#2ca02c", confirmed=True),
     dict(espn_name="EBC League", association="Louie - EBC friends",
          league_id=1118513122, s2="louie_s2_pages", swid="louie_swid",
@@ -117,7 +118,7 @@ LEAGUES = [
          page=None, color="#f7b6d2", confirmed=False),
     dict(espn_name="Board Fantasy Football", association="Nolan - friends",
          league_id=496646254, s2="nolan_s2", swid="nolan_swid",
-         page="2_🎲_Board_Fantasy_Football.py", color="#9b59b6", confirmed=True),
+         page=None, color="#9b59b6", confirmed=True),
 ]
 
 # Older names ESPN used for the same league. `all_matchups.csv` carries whatever
@@ -126,6 +127,10 @@ LEAGUES = [
 # canonicalising, that franchise's lifetime history splits in two.
 ALIASES = {
     'Family League': 'Family Fantasy',
+    # 2026 Family League is a rebuild - folding the new name onto the old storage
+    # key keeps both seasons in one league everywhere - one page, one year selector,
+    # one lifetime history (like Matt's league).
+    '2026 Family League': 'Family Fantasy',
     # Matt's league was rebuilt as a new ESPN league for 2026. Folding the new
     # name onto the old storage key keeps both seasons in one league everywhere -
     # one page, one year selector, one lifetime history.
