@@ -82,17 +82,17 @@ team_name = "At Risk of CTE"
 # team_name = "P90 Asiimov"
 
 # Avas League
-league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
-team_name = "Big Ballsy Bozos"
+# league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
+# team_name = "Big Ballsy Bozos"
 
 # Hannahs League
 # league = League(league_id=1399036372, year=year, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
 # team_name = "It's Miller Time"
-# team_name = "Nothing Beats A Jets 2 Holiday"
+# team_name = "Immaculate Concepcion"
 
 # Las League
-# league = League(league_id=1049459, year=year, espn_s2=CRED["la_s2"], swid=CRED["la_swid"])
-# team_name = "Team Rodriguez"
+league = League(league_id=1049459, year=year, espn_s2=CRED["la_s2"], swid=CRED["la_swid"])
+team_name = "Team Rodriguez"
 
 fantasypros_rank_df = fantasypros_ranks()
 # Define draft order
