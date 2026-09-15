@@ -27,3 +27,23 @@ def clean_record_column(df, column_name):
     df = df.copy()
     df[column_name] = df[column_name].apply(format_record)
     return df
+
+
+def clean_all_record_columns(df):
+    """
+    Auto-detect and format all record columns in a dataframe.
+
+    Looks for columns with 'Record', 'record' in the name and formats them
+    to omit zero ties.
+
+    Args:
+        df: DataFrame
+
+    Returns:
+        DataFrame with all record columns formatted
+    """
+    df = df.copy()
+    for col in df.columns:
+        if 'record' in col.lower():
+            df[col] = df[col].apply(format_record)
+    return df

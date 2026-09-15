@@ -7,7 +7,6 @@ import pandas as pd
 import streamlit as st
 from ffapp.ui.calcPercent import percent
 from ffapp.ui.playoffNum import playoff_num
-from st_aggrid import AgGrid
 from ffapp.ui.lifetime_record_owner import lifetime_record_owner
 from streamlit_echarts5 import st_echarts
 from pyecharts.charts import Line
@@ -18,6 +17,7 @@ from ffapp.metrics.owner_overrides import resolve_owner
 from ffapp.ui import draft_board_view as draft_view
 from ffapp.ui.data_loader import load_sheet, load_csv, load_owner_df, get_league, sheet_names
 from ffapp.ui.tables import apply_display_defaults, table_height
+from ffapp.utils.record_display import clean_record_column, clean_all_record_columns
 
 # pandas renders styled floats at 6 decimals by default (1954.300000); one
 # decimal suits points, percentages and LPI. Explicit .format() calls still win.
@@ -106,7 +106,13 @@ def display_schedule_comparison(file):
 
     df = load_sheet(file, "Schedule Grid")
     df.rename(columns={'Unnamed: 0': 'Teams'}, inplace=True)
-    
+
+    # Format record columns (Schedule Grid contains team records)
+    from ffapp.utils.format_record import format_record
+    for col in df.columns:
+        if col != 'Teams':
+            df[col] = df[col].apply(format_record)
+
     df = df.set_index("Teams")
     pd.options.mode.chained_assignment = None
     names = []
@@ -279,10 +285,11 @@ def display_playoff_odds(file, league_id, espn_s2, swid, year):
         columns_to_drop = ['Current_Win_Pct', 'Avg_Score', 'Total_Points_For', 'Expected_Final_Record']
         df = df.drop(columns=columns_to_drop)
         df.columns = [col.replace('_', ' ') for col in df.columns]
+        df = clean_all_record_columns(df)
         df = df.set_index("Team")
         st.header('Record Predictions')
         st.write("This table shows what each team's predicted final record is based on the history of each team's scores this year. It does not take projections or byes into account. It uses the team's scoring data to run 10,000 monte carlo simulations of each matchup given a team's average score and standard deviation.")
-        
+
         st.dataframe(df, height=height, width=700)
     except:
         print("No Record Predictions Yet")
