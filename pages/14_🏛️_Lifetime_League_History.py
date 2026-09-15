@@ -49,6 +49,9 @@ def unresolved(league, file_key):
 def app():
     apply_display_defaults()
 
+    # Clear module-level caches when matchup data changes
+    lt.clear_caches()
+
     st.header('🏛️ Lifetime League History')
     st.write(
         'Every season of a league stitched into one history — careers, rivalries, '
