@@ -33,7 +33,19 @@
     "roster": {},
     "team_count": 14
   },
+  "Board Fantasy Football|2026": {
+    "playoff_team_count": 4,
+    "reg_season_count": 13,
+    "roster": {},
+    "team_count": 10
+  },
   "Brown Munde|2026": {
+    "playoff_team_count": 6,
+    "reg_season_count": 14,
+    "roster": {},
+    "team_count": 10
+  },
+  "Campers and Skiers and Prahlad|2026": {
     "playoff_team_count": 6,
     "reg_season_count": 14,
     "roster": {},
@@ -106,6 +118,12 @@
     "reg_season_count": 15,
     "roster": {},
     "team_count": 12
+  },
+  "The Goofy Goobers|2026": {
+    "playoff_team_count": 6,
+    "reg_season_count": 14,
+    "roster": {},
+    "team_count": 10
   },
   "Turf On Grade 2.0|2026": {
     "playoff_team_count": 4,

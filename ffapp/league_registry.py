@@ -105,19 +105,19 @@ LEAGUES = [
 
     # --- additional leagues (2026 new) ---
     dict(espn_name="The Goofy Goobers", association="Louie - new 2026",
-         league_id=1616305229, s2="louie_s2", swid="louie_swid",
+         league_id=1616305229, s2="prahlad2_s2", swid="prahlad_swid",
          page="2_🤪_Goofy_Goobers.py", color="#ff7f0e", confirmed=True),
     dict(espn_name="Campers and Skiers and Prahlad", association="Prahlad - new 2026",
-         league_id=47829282, s2="louie_s2", swid="louie_swid",
+         league_id=47829282, s2="prahlad2_s2", swid="prahlad_swid",
          page="2_🏕️_Campers_and_Skiers.py", color="#1abc9c", confirmed=True),
 
     # --- data on disk but no page ---
     dict(espn_name="RRR On Premise ", association="Dave - older On Premise league",
          league_id=None, s2=None, swid=None,
          page=None, color="#f7b6d2", confirmed=False),
-    dict(espn_name="Board Fantasy Football", association="unknown",
-         league_id=None, s2=None, swid=None,
-         page=None, color="#dbdb8d", confirmed=False),
+    dict(espn_name="Board Fantasy Football", association="Nolan - friends",
+         league_id=496646254, s2="nolan_s2", swid="nolan_swid",
+         page="2_🎲_Board_Fantasy_Football.py", color="#9b59b6", confirmed=True),
 ]
 
 # Older names ESPN used for the same league. `all_matchups.csv` carries whatever

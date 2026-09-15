@@ -32,7 +32,7 @@ def load_matchups(league_name, year):
         all_matchups = pd.read_csv(f"{DATA_DIR}/all_matchups.csv")
         # Filter to this league and year
         league_matchups = all_matchups[
-            (all_matchups['League Name'] == league_name) &
+            (all_matchups['League'] == league_name) &
             (all_matchups['Year'] == year)
         ].copy()
         return league_matchups
@@ -41,11 +41,13 @@ def load_matchups(league_name, year):
         return pd.DataFrame()
 
 def load_standings(league_name, year):
-    """Load standings from the league workbook."""
+    """Load standings from the league workbook's Record Odds sheet."""
     try:
         file_path = f"{LEAGUES_DIR}/{league_name} {year}.xlsx"
-        standings = pd.read_excel(file_path, sheet_name="Standings")
-        return standings
+        standings = pd.read_excel(file_path, sheet_name="Record Odds")
+        return standings.sort_values(
+            ['Current_Win_Pct', 'Total_Points_For'], ascending=False
+        )
     except Exception as e:
         print(f"Warning: Could not load standings: {e}")
         return pd.DataFrame()
@@ -61,14 +63,14 @@ def get_latest_week_matchups(league_name, year):
     if pd.isna(latest_week):
         return pd.DataFrame()
 
-    return matchups[matchups['Week'] == latest_week].sort_values('Team 1')
+    return matchups[matchups['Week'] == latest_week].sort_values('Home Team')
 
 def format_matchup_row(row):
     """Format a single matchup as HTML."""
-    team1 = row.get('Team 1', '?')
-    team2 = row.get('Team 2', '?')
-    score1 = row.get('Team 1 Points', 0)
-    score2 = row.get('Team 2 Points', 0)
+    team1 = row.get('Home Team', '?')
+    team2 = row.get('Away Team', '?')
+    score1 = row.get('Home Score', 0)
+    score2 = row.get('Away Score', 0)
 
     # Determine winner
     if pd.notna(score1) and pd.notna(score2):
@@ -110,10 +112,8 @@ def build_html_email(league_name, year, week):
         standings = standings.head(10)  # Top 10 teams
         for _, row in standings.iterrows():
             team = row.get('Team', '?')
-            wins = row.get('Wins', 0)
-            losses = row.get('Losses', 0)
-            pf = row.get('Points For', 0)
-            record = f"{int(wins)}-{int(losses)}"
+            record = row.get('Current_Record', '?')
+            pf = row.get('Total_Points_For', 0)
             standings_html += f"""
             <tr>
                 <td>{team}</td>
@@ -285,6 +285,11 @@ def build_html_email(league_name, year, week):
     return html
 
 def main():
+    try:
+        _sys.stdout.reconfigure(encoding='utf-8')
+    except AttributeError:
+        pass
+
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('--league', default='Pennoni Younglings',
@@ -310,7 +315,7 @@ def main():
 
     # Write to file
     output_path = Path(args.output)
-    output_path.write_text(html)
+    output_path.write_text(html, encoding='utf-8')
 
     print(f"✅ Email generated: {output_path.resolve()}")
     print(f"   League: {args.league}")

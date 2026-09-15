@@ -24,8 +24,8 @@ start_time = time.time()
 espn_s2 = CRED["louie_s2"]
 
 # Pennoni Younglings
-year = 2025
-league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+year = 2026
+# league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 
 # Family League
 # league = League(league_id=996930954, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
@@ -67,32 +67,28 @@ elle_s2 = CRED["elle_s2"]
 # print(league.free_agents(position='D/ST'))
 # asdf
 
-# Elles League
-# league = League(league_id=1259693145, year=2025, espn_s2=elle_s2, swid=CRED["elle_swid"])
-# team_name = "yay football woo"
-
 # Matts League
-league = League(league_id=261375772, year=2025, espn_s2=matt_s2, swid=CRED["matt_swid"])
+league = League(league_id=261375772, year=year, espn_s2=matt_s2, swid=CRED["matt_swid"])
 team_name = "At Risk of CTE"
 
 # Pennoni Younglings
 # league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 # team_name = "The Golden Receivers"
 # Family League
-# league = League(league_id=996930954, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-# team_name = "Golden Receivers"
+# league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+# team_name = "Big Bosh Bashers"
 # EBC League
 # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-# team_name = "Werewolves of London"
+# team_name = "P90 Asiimov"
 
 # Avas League
-# league = League(league_id=417131856, year=2025, espn_s2=ava_s2, swid=CRED["ava_swid"])
-# team_name = "Big Ballsy Bozos"
+league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
+team_name = "Big Ballsy Bozos"
 
 # Hannahs League
-league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
+# league = League(league_id=1399036372, year=year, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
 # team_name = "It's Miller Time"
-team_name = "Nothing Beats A Jets 2 Holiday"
+# team_name = "Nothing Beats A Jets 2 Holiday"
 
 # Las League
 # league = League(league_id=1049459, year=year, espn_s2=CRED["la_s2"], swid=CRED["la_swid"])
@@ -198,7 +194,7 @@ def fantasypros_freeagents(league, fantasypros_rank_df):
     print("\nTop TE Free Agents:")
     print(te_df)
 
-# fantasypros_freeagents(league, fantasypros_rank_df)
+fantasypros_freeagents(league, fantasypros_rank_df)
 
 def print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name):
     # ------------------
@@ -290,7 +286,7 @@ def print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name):
 
     print("\n-----------------------------\n")
 
-# print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)
+print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)
 
 def test_team_data(league):
     team_names = [team.team_name for team in league.teams]
@@ -391,7 +387,7 @@ def test_team_data(league):
             print(f"{player.name}: {player.points} points, {player.projected_points} projected, {player.slot_position}")
     print()
 
-test_team_data(league)
+# test_team_data(league)
 
 def find_trade_partners(league, team_name):
     print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)

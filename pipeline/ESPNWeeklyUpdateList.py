@@ -44,6 +44,8 @@ matt_s2 = CRED["matt_s2"]
 elle_s2 = CRED["elle_s2"]
 dave_s2 = CRED["dave_s2"]
 ayush_s2 = CRED["ayush_s2"]
+nolan_s2 = CRED["nolan_s2"]
+prahlad2_s2 = CRED["prahlad2_s2"]
 # List of league configurations
 year = 2026
 leagues = [
@@ -69,6 +71,12 @@ leagues = [
     {"league_id": 29400230, "year": year, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
     # Ayush League
     {"league_id": 558148583, "year": year, "espn_s2": ayush_s2, "swid": CRED["ayush_swid"], "name": "Ross' Fantasy League"},
+    # Nolans League
+    {"league_id": 496646254, "year": year, "espn_s2": nolan_s2, "swid": CRED["nolan_swid"], "name": "Nolan's League"},
+    # The Goofy Goobers League
+    {"league_id": 1616305229, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "The Goofy Goobers"},
+    # Campers and Skiers and Prahlad League
+    {"league_id": 47829282, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "Campers and Skiers and Prahlad"},
 ]
 
 # Loop through each league configuration

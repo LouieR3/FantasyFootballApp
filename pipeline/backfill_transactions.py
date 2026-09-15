@@ -38,7 +38,7 @@ EARLIEST_YEAR = 2019          # box_scores / recent_activity both refuse earlier
 # which is what every other data file on disk is keyed by.
 LEAGUES = [
     {"league_id": 310334683,  "s2": "louie_s2",   "swid": "louie_swid",   "name": "Pennoni Younglings"},
-    {"league_id": 996930954,  "s2": "louie_s2",   "swid": "louie_swid",   "name": "Family Fantasy"},
+    {"league_id": 1343668602,  "s2": "louie_s2",   "swid": "louie_swid",   "name": "Family Fantasy"},
     {"league_id": 1118513122, "s2": "louie_s2",   "swid": "louie_swid",   "name": "EBC League"},
     {"league_id": 1339704102, "s2": "prahlad_s2", "swid": "prahlad_swid", "name": "0755 Fantasy Football"},
     {"league_id": 1781851,    "s2": "prahlad_s2", "swid": "prahlad_swid", "name": "Game of Yards!"},
@@ -56,7 +56,11 @@ LEAGUES = [
     {"league_id": 558148583,  "s2": "ayush_s2",   "swid": "ayush_swid",   "name": "Ross' Fantasy League"},
     {"league_id": 1616305229, "s2": "louie_s2",   "swid": "louie_swid",   "name": "The Goofy Goobers"},
     {"league_id": 47829282,   "s2": "louie_s2",   "swid": "louie_swid",   "name": "Campers and Skiers and Prahlad"},
+    {"league_id": 496646254,  "s2": "nolan_s2",   "swid": "nolan_swid",   "name": "Board Fantasy Football"},
+    {"league_id": 29400230, "s2": "matt_s2", "swid": "matt_swid", "name": "BP- Loudoun 2025"},
+    {"league_id":1242265374, "s2": "turf_s2", "swid": "prahlad_swid", "name": "Turf On Grade 2.0"},
 ]
+
 
 
 def _already_built(league_name, year):

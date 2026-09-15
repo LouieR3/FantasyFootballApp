@@ -345,6 +345,8 @@ leagues = [
     {"league_id": 1616305229, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "The Goofy Goobers"},
     # Campers and Skiers and Prahlad (2026)
     {"league_id": 47829282, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Campers and Skiers and Prahlad"},
+    # Board Fantasy Football (Nolan)
+    {"league_id": 496646254, "year": year, "espn_s2": CRED["nolan_s2"], "swid": CRED["nolan_swid"], "name": "Board Fantasy Football"},
 ]
 
 if __name__ == "__main__":
