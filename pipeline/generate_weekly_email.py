@@ -75,8 +75,8 @@ def format_matchup_row(row):
         winner_class = "winner" if score1 > score2 else ("loser" if score1 < score2 else "tie")
         loser_class = "loser" if score2 > score1 else ("winner" if score2 < score1 else "tie")
 
-        score1_display = f"<span class='{winner_class if score1 > score2 else 'loser if score1 < score2 else \"\"'}'>{score1:.1f}</span>"
-        score2_display = f"<span class='{loser_class if score2 > score1 else 'winner if score2 < score1 else \"\"'}'>{score2:.1f}</span>"
+        score1_display = f"<span class='{winner_class}'>{score1:.1f}</span>"
+        score2_display = f"<span class='{loser_class}'>{score2:.1f}</span>"
     else:
         score1_display = "—"
         score2_display = "—"

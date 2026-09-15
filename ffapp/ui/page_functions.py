@@ -382,6 +382,9 @@ def display_remaining_schedule_difficulty(file):
     st.dataframe(df_styled, height=height)
 
 def display_betting_odds(file):
+    if not os.path.exists(file):
+        st.info("⚠️ Betting odds not yet available for this league. Run `pipeline/create_betting_odds.py` to generate them.")
+        return
 
     st.header('Betting Odds')
     st.write(
@@ -391,7 +394,11 @@ def display_betting_odds(file):
         "Negative odds indicate favorites (bet that amount to win 100), "
         "while positive odds indicate underdogs (win that amount on 100 bet)."
     )
-    df_names = load_sheet(file, "Make Playoff Odds")
+    try:
+        df_names = load_sheet(file, "Make Playoff Odds")
+    except Exception as e:
+        st.warning(f"Could not load betting odds: {e}")
+        return
     # Display the styled DataFrame
     df_names = df_names.set_index("Team")
     height = table_height(len(df_names))
@@ -517,6 +524,10 @@ def display_betting_odds_full_width(file):
     Parameters:
     - file (str): Path to the Excel file containing betting odds sheets.
     """
+    if not os.path.exists(file):
+        st.info("⚠️ Betting odds not yet available for this league. Run `pipeline/create_betting_odds.py` to generate them.")
+        return
+
     st.header('Betting Odds')
     st.write(
         "This section shows American betting odds for various playoff scenarios. "
@@ -525,10 +536,14 @@ def display_betting_odds_full_width(file):
         "Negative odds indicate favorites (bet that amount to win 100), "
         "while positive odds indicate underdogs (win that amount on 100 bet)."
     )
-    
-    # --- MAKE PLAYOFF ODDS ---
-    st.subheader('Make Playoff Odds')
-    df_playoff = load_sheet(file, "Make Playoff Odds")
+
+    try:
+        # --- MAKE PLAYOFF ODDS ---
+        st.subheader('Make Playoff Odds')
+        df_playoff = load_sheet(file, "Make Playoff Odds")
+    except Exception as e:
+        st.warning(f"Could not load betting odds: {e}")
+        return
 
     # Set Team index
     if 'Team' in df_playoff.columns:

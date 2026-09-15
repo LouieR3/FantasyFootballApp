@@ -39,7 +39,7 @@ elle_s2 = CRED["elle_s2"]
 dave_s2 = CRED["dave_s2"]
 ayush_s2 = CRED["ayush_s2"]
 # List of league configurations
-year = 2025
+year = 2026
 leagues = [
     # Pennoni Younglings
     {"league_id": 310334683, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Pennoni Younglings"},
