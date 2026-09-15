@@ -54,9 +54,9 @@ def app():
         st.info("No archived leagues found. All leagues have current season data!")
         return
 
-    # Exclude Family Fantasy from archived (it has 2026 data now)
+    # Exclude leagues that have current season data
     archived_leagues = {k: v for k, v in archived_leagues.items()
-                       if k not in ["Family Fantasy", "Family League"]}
+                       if k not in ["Family Fantasy", "Family League", "0755 Fantasy Football"]}
 
     # Create dropdown options: "League Name (Year)"
     options = []
