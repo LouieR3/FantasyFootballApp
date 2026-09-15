@@ -68,6 +68,9 @@ leagues = [
     # {"league_id": 47829282, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "Campers and Skiers and Prahlad"},
 ]
 
+# from ffapp.leagues_config import get_leagues_for_year
+
+# leagues = get_leagues_for_year(year)
 # Nolan League
 # league = League(
 #     league_id=496646254,

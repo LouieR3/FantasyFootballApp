@@ -7,6 +7,7 @@ from credentials import CRED
 import streamlit as st
 from paths import DRAFTS_DIR, LEAGUES_DIR, ODDS_DIR
 from ffapp.ui.data_loader import available_years
+from ffapp import league_registry as registry
 def app():
     import pandas as pd
     from operator import itemgetter
@@ -14,7 +15,6 @@ def app():
     from ffapp.ui.calcPercent import percent
     from ffapp.ui.playoffNum import playoff_num
 
-    league_id = 996930954
     espn_s2=CRED["louie_s2_pages"]
     swid=CRED["louie_swid"]
     # Seasons with data on file - no hard-coded list to keep in sync
@@ -26,26 +26,29 @@ def app():
         "Select Year", year_options, index=len(year_options) - 1
     )
 
+    year = int(selected_year)
+    # Get correct league ID for the selected year from registry
+    league_id = registry.league_id_for("Family Fantasy", year)
+
     league = f"Family Fantasy {selected_year}"
     st.title("👪 " + league)
     file = f"{LEAGUES_DIR}/" + league + ".xlsx"
     # Extract the league name without the year
     league_name = " ".join(league.split()[:-1])  # Removes the year from the league string
     draft_file = f"{DRAFTS_DIR}/{league_name} Draft Results {selected_year}.csv"
-    
+
     file = f"{LEAGUES_DIR}/" + league + ".xlsx"
     odds_file = f"{ODDS_DIR}/{league} Betting Odds.xlsx"
 
     from ffapp.ui.page_functions import display_remaining_schedule_difficulty, display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds, display_betting_odds
     from ffapp.ui.page_functions import display_playoff_odds_by_week, display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results, display_trades
-    
+
     display_playoff_results(file)
 
     display_schedule_comparison(file)
 
     display_lpi(league_id, espn_s2, swid, file)
 
-    year = int(selected_year)
     display_playoff_odds(file, league_id, espn_s2, swid, year)
     if year > 2024:
         display_playoff_odds_by_week(file)
