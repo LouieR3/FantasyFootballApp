@@ -58,14 +58,15 @@ DRAFT_RE = re.compile(r'^(.+?) Draft Results (\d{4})\.csv$')
 def clear_caches():
     """Drop the memoised identity layer.
 
-    `owner_crosswalk`, `owner_display_names` and the raw matchup read are
-    `lru_cache`d because building cross-league views calls them once per league.
-    That cache lives in the *process*, underneath Streamlit's `st.cache_data`, so
-    a page whose own cache key changed would still be handed the previous
-    crosswalk - which is how a newly added league could be missing from the Hall
-    of Fame while showing up everywhere else. Pages call this when their key moves.
+    `owner_crosswalk`, `owner_display_names`, `_raw_matchups_cached`, and
+    `_live_league_mapping` are `lru_cache`d because building cross-league views
+    calls them once per league. That cache lives in the *process*, underneath
+    Streamlit's `st.cache_data`, so a page whose own cache key changed would
+    still be handed the previous crosswalk - which is how a newly added league
+    could be missing from the Hall of Fame while showing up everywhere else.
+    Pages call this when their key moves.
     """
-    for fn in (owner_crosswalk, owner_display_names, _raw_matchups_cached):
+    for fn in (owner_crosswalk, owner_display_names, _raw_matchups_cached, _live_league_mapping):
         try:
             fn.cache_clear()
         except AttributeError:
@@ -145,6 +146,46 @@ def owner_display_names():
     return names
 
 
+@lru_cache(maxsize=16)
+def _live_league_mapping(league, year):
+    """Try to get current team/owner mapping from live ESPN league data.
+
+    Returns dict of {(year, team_name): owner_id}, or {} if unavailable.
+    Skips gracefully if credentials are missing or league fetch fails.
+    Cached per league/year to avoid repeated ESPN API calls.
+    """
+    try:
+        from credentials import CRED
+        from espn_api.football import League
+        from ffapp.metrics.owner_overrides import resolve_owner
+
+        creds = registry.credentials_for(league, year)
+        if not creds or not creds[0]:
+            return {}
+
+        league_id, s2_key, swid_key = creds
+        s2 = CRED.get(s2_key) if s2_key else None
+        swid = CRED.get(swid_key) if swid_key else None
+
+        league_obj = League(
+            league_id=league_id,
+            year=year,
+            espn_s2=s2,
+            swid=swid
+        )
+
+        mapping = {}
+        for team in league_obj.teams:
+            owner = resolve_owner(league_obj, team)
+            owner_id = owner.get('id')
+            if owner_id:
+                mapping[(int(year), str(team.team_name).strip())] = str(owner_id)
+
+        return mapping
+    except Exception:
+        return {}
+
+
 def resolve_teams(league):
     """(year, team name) -> owner id for one league, including renamed teams.
 
@@ -152,6 +193,9 @@ def resolve_teams(league):
     elimination: if a season has exactly one unclaimed name on each side they
     must be the same team. Anything still ambiguous is left unmapped rather than
     guessed, and surfaced by `unresolved_teams`.
+
+    For ongoing seasons without draft data (e.g., current year), live league
+    data from ESPN is used as fallback to resolve teams to owners.
     """
     league = registry.canonical(league)
     xw = owner_crosswalk()
@@ -194,6 +238,15 @@ def resolve_teams(league):
                         and len(weeks[name]) + len(weeks[cand]) == typical):
                     mapping[(year, name)] = mapping[(year, cand)]
                     break
+
+    # Try to resolve remaining unresolved teams using live league data (e.g., for ongoing seasons)
+    for year, g in am.groupby('Year'):
+        seen = {n for n in set(g['Home Team']) | set(g['Away Team']) if n}
+        unresolved = {name for name in seen if (year, name) not in mapping}
+        if unresolved:
+            live_mapping = _live_league_mapping(league, year)
+            mapping.update(live_mapping)
+
     return mapping
 
 
