@@ -194,33 +194,6 @@ def resolve_teams(league):
                         and len(weeks[name]) + len(weeks[cand]) == typical):
                     mapping[(year, name)] = mapping[(year, cand)]
                     break
-
-    # cross-year fallback: if teams are still unresolved, match them to owners
-    # from previous years who are missing from the current year's draft.
-    # This handles cases where draft data isn't yet available for the current year.
-    for year, g in am.groupby('Year'):
-        seen = {n for n in set(g['Home Team']) | set(g['Away Team']) if n}
-        drafted = set(xw[xw['Year'] == year]['Team'])
-        extra = sorted(seen - drafted)
-        if not extra:
-            continue
-
-        # Find which owners played in previous years
-        prev_years = xw[xw['Year'] < year]['Year'].unique()
-        if len(prev_years) == 0:
-            continue
-
-        # Get owner IDs that were in previous years
-        prev_owner_ids = set(xw[xw['Year'].isin(prev_years)]['Owner ID'].unique())
-        # Get owner IDs in current year's draft
-        curr_owner_ids = set(xw[xw['Year'] == year]['Owner ID'].unique())
-        # Owners missing from current year (likely renamed their teams)
-        missing_owners = prev_owner_ids - curr_owner_ids
-
-        # Assign missing owners to unresolved teams in order
-        for name, oid in zip(extra, sorted(missing_owners)):
-            mapping[(year, name)] = oid
-
     return mapping
 
 
@@ -317,8 +290,8 @@ def team_games(league):
     tg['Result'] = np.where(tg['Margin'] > 0, 'W', np.where(tg['Margin'] < 0, 'L', 'T'))
     tg['vs Projection'] = tg['Score'] - tg['Predicted']
     names = owner_display_names()
-    tg['Owner'] = tg['Owner ID'].map(names)
-    tg['Opp Owner'] = tg['Opp Owner ID'].map(names)
+    tg['Owner'] = tg['Owner ID'].map(names).fillna(tg['Team'])
+    tg['Opp Owner'] = tg['Opp Owner ID'].map(names).fillna(tg['Opponent'])
     # fall back to the most recent team name when no owner name is on file
     latest = (tg.sort_values('Year').groupby('Owner ID')['Team'].last())
     tg['Owner'] = tg['Owner'].fillna(tg['Owner ID'].map(latest))
@@ -456,7 +429,7 @@ def head_to_head_matrix(tg, metric='meetings'):
 
     ``metric='wins'`` gives the old row-beats-column win totals.
     """
-    valid = tg.dropna(subset=['Owner ID', 'Opp Owner ID'])
+    valid = tg.dropna(subset=['Owner', 'Opp Owner'])
     if metric == 'wins':
         valid = valid[valid['Result'] == 'W']
     if valid.empty:
@@ -473,7 +446,7 @@ def head_to_head_records(tg):
     The one display that is never ambiguous, at the cost of not being sortable
     or gradient-able. Diagonal is blank; a pair that never met shows '-'.
     """
-    valid = tg.dropna(subset=['Owner ID', 'Opp Owner ID'])
+    valid = tg.dropna(subset=['Owner', 'Opp Owner'])
     if valid.empty:
         return pd.DataFrame()
     wins = valid[valid['Result'] == 'W'].pivot_table(
