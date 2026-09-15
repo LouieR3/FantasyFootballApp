@@ -290,8 +290,8 @@ def team_games(league):
     tg['Result'] = np.where(tg['Margin'] > 0, 'W', np.where(tg['Margin'] < 0, 'L', 'T'))
     tg['vs Projection'] = tg['Score'] - tg['Predicted']
     names = owner_display_names()
-    tg['Owner'] = tg['Owner ID'].map(names)
-    tg['Opp Owner'] = tg['Opp Owner ID'].map(names)
+    tg['Owner'] = tg['Owner ID'].map(names).fillna(tg['Team'])
+    tg['Opp Owner'] = tg['Opp Owner ID'].map(names).fillna(tg['Opponent'])
     # fall back to the most recent team name when no owner name is on file
     latest = (tg.sort_values('Year').groupby('Owner ID')['Team'].last())
     tg['Owner'] = tg['Owner'].fillna(tg['Owner ID'].map(latest))
@@ -313,7 +313,7 @@ def _owner_label(g, oid):
 def all_time_table(tg):
     """One row per owner: the franchise record book."""
     rows = []
-    for oid, g in tg.groupby('Owner ID'):
+    for oid, g in tg[tg['Owner ID'].notna()].groupby('Owner ID'):
         w, l, t = _wlt(g)
         reg, po = g[~g['Is Playoff']], g[g['Is Playoff']]
         rw, rl, _ = _wlt(reg)
@@ -368,7 +368,7 @@ def owner_careers(tg, league):
     txn_grades = _transaction_grades(league)
 
     rows = []
-    for (oid, year), g in tg.groupby(['Owner ID', 'Year']):
+    for (oid, year), g in tg[tg['Owner ID'].notna()].groupby(['Owner ID', 'Year']):
         reg, po = g[~g['Is Playoff']], g[g['Is Playoff']]
         rw, rl, _ = _wlt(reg)
         pw, pl, _ = _wlt(po)
@@ -429,7 +429,7 @@ def head_to_head_matrix(tg, metric='meetings'):
 
     ``metric='wins'`` gives the old row-beats-column win totals.
     """
-    valid = tg.dropna(subset=['Owner ID', 'Opp Owner ID'])
+    valid = tg.dropna(subset=['Owner', 'Opp Owner'])
     if metric == 'wins':
         valid = valid[valid['Result'] == 'W']
     if valid.empty:
@@ -446,7 +446,7 @@ def head_to_head_records(tg):
     The one display that is never ambiguous, at the cost of not being sortable
     or gradient-able. Diagonal is blank; a pair that never met shows '-'.
     """
-    valid = tg.dropna(subset=['Owner ID', 'Opp Owner ID'])
+    valid = tg.dropna(subset=['Owner', 'Opp Owner'])
     if valid.empty:
         return pd.DataFrame()
     wins = valid[valid['Result'] == 'W'].pivot_table(
@@ -500,7 +500,7 @@ def playoff_records(tg, league):
                 champs[wid] = champs.get(wid, 0) + 1
 
     rows = []
-    for oid, g in tg[tg['Is Playoff']].groupby('Owner ID'):
+    for oid, g in tg[tg['Is Playoff'] & tg['Owner ID'].notna()].groupby('Owner ID'):
         w, l, _ = _wlt(g)
         rows.append({
             'Owner': _owner_label(g, oid),
@@ -560,7 +560,7 @@ def _longest_run(g, result):
 def streaks(tg):
     """Longest winning and losing runs per owner, spanning seasons."""
     rows = []
-    for oid, g in tg.groupby('Owner ID'):
+    for oid, g in tg[tg['Owner ID'].notna()].groupby('Owner ID'):
         wn, wspan = _longest_run(g, 'W')
         ln, lspan = _longest_run(g, 'L')
         rows.append({
