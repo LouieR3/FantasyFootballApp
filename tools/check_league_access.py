@@ -1,12 +1,9 @@
 """Given raw ESPN credentials, what does that actually get you?
 
-Before wiring a new league into the app, it's worth checking the credentials
-work at all and seeing what ESPN hands back: how many prior seasons it will
-serve, the current season's settings, and the team names - all without
-touching any file under data/.
-
-Swap the active `league = League(...)` line below for the league you want to
-check, same as archive/test.py.
+Walks every league in `leagues` below for the current year and reports, per
+league, whether the credentials work and - if so - who owns each team. Meant
+as a quick "what's broken right now" pass across all the leagues the pipeline
+pulls, without touching any file under data/.
 
     python tools/check_league_access.py
 """
@@ -29,67 +26,68 @@ for _stream in (sys.stdout, sys.stderr):
     if hasattr(_stream, 'reconfigure'):
         _stream.reconfigure(errors='replace')
 
+louie_s2 = CRED["louie_s2"]
+prahlad_s2 = CRED["prahlad_s2"]
+la_s2 = CRED["la_s2"]
+hannah_s2 = CRED["hannah_s2"]
+ava_s2 = CRED["ava_s2"]
+matt_s2 = CRED["matt_s2"]
+ayush_s2 = CRED["ayush_s2"]
+
 year = 2026
-
-# Pennoni Younglings
-# league = League(league_id=310334683, year=year, espn_s2=CRED["louie_s2"], swid=CRED["louie_swid"])
-
-# Family League
-# league = League(league_id=996930954, year=year, espn_s2=CRED["louie_s2"], swid=CRED["louie_swid"])
-
-# EBC League
-# league = League(league_id=1118513122, year=year, espn_s2=CRED["louie_s2"], swid=CRED["louie_swid"])
-
-# Pennoni Transportation
-# league = League(league_id=1339704102, year=year, espn_s2=CRED["prahlad_s2"], swid=CRED["prahlad_swid"])
-
-# Game of Yards
-league = League(league_id=1616305229, year=year, espn_s2="AECLgt4HZRKLkzczGIwr967LwGef6s7ZNmZRyzL9VuwBH9IUk3CP22LTtghDeiELcIb1o9IfCNUuzN%2BAg3zR8LHh5uWWn5wC61jvFj%2Bs80OAxCrTCamuccHP0Dg2MqzwgLUbIsrD7nzYgO6tDYIJHoHzpB0tCiZ9RRi9AvZewCupgpcTipn77NcrQ9e6mO2Nhjj8in3L8kvbX7Qu4dHRqew84TNhX0m0vLMbj6KGSUtUP2XWbWOdpbfh8XBcfBC60wOEVCqJxIR1qIfRCuodlThTuhzMBCw%2BwOBTg6WfZXoh3Q%3D%3D", swid="{4C1C5213-4BB5-4243-87AC-0BCB2D637264}")
-
-# Brown Munde
-# league = League(league_id=367134149, year=2022, espn_s2=CRED["prahlad_s2"], swid=CRED["prahlad_swid"])
-
-# Turf On Grade League
-# league = League(league_id=1242265374, year=2024, espn_s2=CRED["turf_s2"], swid=CRED["prahlad_swid"])
-
-# Las League
-# league = League(league_id=1049459, year=2025, espn_s2=CRED["la_s2"], swid=CRED["la_swid"])
-
-# Hannahs League
-# league = League(league_id=1399036372, year=year, espn_s2=CRED["hannah_s2"], swid=CRED["hannah_swid"])
-
-# Avas League
-# league = League(league_id=417131856, year=2025, espn_s2=CRED["ava_s2"], swid=CRED["ava_swid"])
-
-# Matts League
-# league = League(league_id=261375772, year=2024, espn_s2=CRED["matt_s2"], swid=CRED["matt_swid"])
-
-# Elles League
-# league = League(league_id=1259693145, year=2025, espn_s2=CRED["elle_s2"], swid=CRED["elle_swid"])
-
-# Dave Work League
-# league = League(league_id=1675186799, year=2025, espn_s2=CRED["dave_s2"], swid=CRED["dave_swid"])
+leagues = [
+    # Pennoni Younglings
+    {"league_id": 310334683, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Pennoni Younglings"},
+    # Family League
+    {"league_id": 1343668602, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Family League"},
+    # EBC League
+    {"league_id": 1118513122, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "EBC League"},
+    # Game of Yards
+    {"league_id": 1781851, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Game of Yards!"},
+    # Brown Munde
+    {"league_id": 367134149, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Brown Munde"},
+    # Turf On Grade 2.0 League
+    {"league_id": 1242265374, "year": year, "espn_s2": CRED["turf_s2"], "swid": CRED["prahlad_swid"], "name": "Turf On Grade 2.0"},
+    # Las League
+    {"league_id": 1049459, "year": year, "espn_s2": la_s2, "swid": CRED["la_swid"], "name": "THE BEST OF THE BEST"},
+    # Hannahs League
+    {"league_id": 1399036372, "year": year, "espn_s2": hannah_s2, "swid": CRED["hannah_swid"], "name": "The Girl's Room 💞🏈"},
+    # Avas League
+    {"league_id": 417131856, "year": year, "espn_s2": ava_s2, "swid": CRED["ava_swid"], "name": "Philly Extra Special"},
+    # Matts League
+    {"league_id": 29400230, "year": year, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
+    # Ayush League
+    {"league_id": 558148583, "year": year, "espn_s2": ayush_s2, "swid": CRED["ayush_swid"], "name": "Ross' Fantasy League"},
+]
 
 
-def check_league_access(league):
-    seasons = sorted(set(league.previousSeasons) | {league.year})
-    print(f"Seasons available: {len(seasons)}")
-    print(f"  {seasons}")
-    print()
-
+def check_league_access(league_config):
+    league = League(
+        league_id=league_config["league_id"],
+        year=league_config["year"],
+        espn_s2=league_config["espn_s2"],
+        swid=league_config["swid"],
+    )
     settings = league.settings
     print(f"League: {settings.name} ({league.year})")
-    print(f"  Team count:          {settings.team_count}")
-    print(f"  Regular season wks:  {settings.reg_season_count}")
-    print(f"  Playoff teams:       {settings.playoff_team_count}")
-    print(f"  Tie rule:            {settings.tie_rule}")
-    print(f"  Roster:              {settings.position_slot_counts}")
-    print()
-
     print(f"Teams ({len(league.teams)}):")
     for team in league.teams:
         owner = team.owners[0].get('firstName', '?') if team.owners else '?'
         print(f"  {team.team_id:>2}  {team.team_name}  (owner: {owner})")
 
 
-check_league_access(league)
+results = []
+for league_config in leagues:
+    print(f"=== {league_config['name']} ({league_config['league_id']}) ===")
+    try:
+        check_league_access(league_config)
+        results.append((league_config['name'], True, None))
+    except Exception as e:
+        print(f"  FAILED: {type(e).__name__}: {e}")
+        results.append((league_config['name'], False, str(e)))
+    print()
+
+print("=== Summary ===")
+for name, ok, err in results:
+    status = "OK" if ok else f"FAILED - {err}"
+    print(f"  {name:<30} {status}")

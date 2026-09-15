@@ -10,6 +10,10 @@ import os
 from openpyxl import load_workbook
 from paths import DATA_DIR, LEAGUES_DIR
 
+# Which league to run this analysis for. Change this instead of passing
+# --league on the command line.
+LEAGUE_NAME = "Pennoni Younglings"
+
 def winless_record_chances(leagues, years):
     """
     Analyzes the percentage chance of making the playoffs for teams starting winless at 0-1 through 0-7.
@@ -419,6 +423,9 @@ leagues = [
     # Elles League
     {"league_id": 1259693145, "year": year, "espn_s2": elle_s2, "swid": CRED["elle_swid"], "name": "Matts League"},
 ]
+
+# Filter down to just the league selected above.
+leagues = [l for l in leagues if l["name"] == LEAGUE_NAME]
 
 years = [2018, 2019, 2020, 2021, 2022, 2023, 2024]
 league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])

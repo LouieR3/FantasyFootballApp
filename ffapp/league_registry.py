@@ -50,7 +50,7 @@ LEAGUES = [
          league_id=310334683, s2="louie_s2_pages", swid="louie_swid",
          page="1_🏈_Pennoni_Younglings.py", color="#1f77b4", confirmed=True),
     dict(espn_name="Family Fantasy", association="Louie - family",
-         league_id=996930954, s2="louie_s2_pages", swid="louie_swid",
+         league_id=1343668602, s2="louie_s2_pages", swid="louie_swid",
          page="1_👪_Family_League.py", color="#2ca02c", confirmed=True),
     dict(espn_name="EBC League", association="Louie - EBC friends",
          league_id=1118513122, s2="louie_s2_pages", swid="louie_swid",
@@ -99,7 +99,7 @@ LEAGUES = [
     # Rebuilt on ESPN for 2026 under a new id and name - see the module docstring.
     dict(espn_name="BP- Loudoun 2025", association="Matt",
          display="Loudoun Fantasy League",
-         league_id=261375772, ids_by_year={2026: 29400230},
+         league_id=29400230, ids_by_year={2026: 29400230},
          s2="matt_s2", swid="matt_swid",
          page="5_👷🏻‍♀️_Matts-League.py", color="#c49c94", confirmed=True),
 

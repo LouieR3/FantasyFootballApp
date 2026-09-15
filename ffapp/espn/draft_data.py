@@ -299,8 +299,14 @@ matt_s2 = CRED["matt_s2"]
 elle_s2 = CRED["elle_s2"]
 dave_s2 = CRED["dave_s2"]
 ayush_s2 = CRED["ayush_s2"]
-# List of league configurations
-year = 2025
+
+import argparse
+import datetime
+current_year = datetime.date.today().year
+parser = argparse.ArgumentParser()
+parser.add_argument('--years', type=int, nargs='+', default=[current_year],
+                    help='Pull draft data for these years (default: current year)')
+args = parser.parse_args()
 
 # List of league configurations
 
@@ -344,21 +350,24 @@ leagues = [
 if __name__ == "__main__":
     # Pull raw draft + free agent data for every league, then regrade all
     # seasons together so grades stay comparable across leagues and years.
-    for league_config in leagues:
-        try:
-            _lid = (registry.league_id_for(league_config["name"],
-                                           league_config["year"])
-                    or league_config["league_id"])
-            league = League(
-                league_id=_lid,
-                year=league_config["year"],
-                espn_s2=league_config["espn_s2"],
-                swid=league_config["swid"],
-            )
-            pull_draft_data(league, year)
-        except Exception as e:
-            print(f"Failed to process league: {league_config['name']}. Error: {str(e)}")
-            continue
+    for year in args.years:
+        for league_config in leagues:
+            # Update league_config year for this iteration
+            league_config_copy = league_config.copy()
+            league_config_copy["year"] = year
+            try:
+                _lid = (registry.league_id_for(league_config["name"], year)
+                        or league_config["league_id"])
+                league = League(
+                    league_id=_lid,
+                    year=year,
+                    espn_s2=league_config["espn_s2"],
+                    swid=league_config["swid"],
+                )
+                pull_draft_data(league, year)
+            except Exception as e:
+                print(f"Failed to process {league_config['name']} {year}. Error: {str(e)}")
+                continue
 
     from ffapp.metrics.draft_grading import regrade_all
     regrade_all()
