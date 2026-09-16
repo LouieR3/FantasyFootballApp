@@ -148,38 +148,37 @@ def owner_display_names():
 
 @lru_cache(maxsize=16)
 def _live_league_mapping(league, year):
-    """Try to get current team/owner mapping from live ESPN league data.
+    """Match 2026 teams to owners by historical continuity from past years.
+
+    When draft files don't exist (ongoing season), infer team ownership by
+    looking at which owner played each team in the most recent past season. Teams
+    usually stay with their owner across seasons, so this is more reliable than
+    using ESPN's live owner IDs (which may not match draft file owner IDs).
 
     Returns dict of {(year, team_name): owner_id}, or {} if unavailable.
-    Skips gracefully if credentials are missing or league fetch fails.
-    Cached per league/year to avoid repeated ESPN API calls.
     """
     try:
-        from credentials import CRED
-        from espn_api.football import League
-        from ffapp.metrics.owner_overrides import resolve_owner
+        xw = owner_crosswalk()
+        xw = xw[xw['League'] == league]
 
-        creds = registry.credentials_for(league, year)
-        if not creds or not creds[0]:
-            return {}
+        am = _raw_matchups()
+        am = am[am['League'] == league]
 
-        league_id, s2_key, swid_key = creds
-        s2 = CRED.get(s2_key) if s2_key else None
-        swid = CRED.get(swid_key) if swid_key else None
+        # Get teams seen in the year's matchup data
+        teams_in_year = am[am['Year'] == year]
+        teams_to_resolve = {n for n in set(teams_in_year['Home Team']) | set(teams_in_year['Away Team']) if n}
 
-        league_obj = League(
-            league_id=league_id,
-            year=year,
-            espn_s2=s2,
-            swid=swid
-        )
-
+        # For each team, find the most recent prior year it was played and use that owner
         mapping = {}
-        for team in league_obj.teams:
-            owner = resolve_owner(league_obj, team)
-            owner_id = owner.get('id')
-            if owner_id:
-                mapping[(int(year), str(team.team_name).strip())] = str(owner_id)
+        for team_name in teams_to_resolve:
+            # Look through past years (in reverse chronological order) to find this team
+            past_years = sorted(xw['Year'].unique(), reverse=True)
+            for past_year in past_years:
+                past_owner = xw[(xw['Year'] == past_year) & (xw['Team'] == team_name)]['Owner ID'].values
+                if len(past_owner) > 0:
+                    # Found the team in a past year, use its owner
+                    mapping[(int(year), str(team_name).strip())] = str(past_owner[0])
+                    break
 
         return mapping
     except Exception:
