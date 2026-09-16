@@ -148,16 +148,17 @@ def owner_display_names():
 
 @lru_cache(maxsize=16)
 def _live_league_mapping(league, year):
-    """Match 2026 teams to owners by historical continuity from past years.
+    """Match ongoing-season teams to owners using two strategies.
 
-    When draft files don't exist (ongoing season), infer team ownership by
-    looking at which owner played each team in the most recent past season. Teams
-    usually stay with their owner across seasons, so this is more reliable than
-    using ESPN's live owner IDs (which may not match draft file owner IDs).
+    1. Historical continuity: for teams that existed in past years, use their owner
+    2. Live league fallback: for brand-new teams without history, get owner from ESPN API
 
     Returns dict of {(year, team_name): owner_id}, or {} if unavailable.
     """
     try:
+        from credentials import CRED
+        from espn_api.football import League
+
         xw = owner_crosswalk()
         xw = xw[xw['League'] == league]
 
@@ -168,8 +169,9 @@ def _live_league_mapping(league, year):
         teams_in_year = am[am['Year'] == year]
         teams_to_resolve = {n for n in set(teams_in_year['Home Team']) | set(teams_in_year['Away Team']) if n}
 
-        # For each team, find the most recent prior year it was played and use that owner
         mapping = {}
+
+        # Strategy 1: Historical continuity for teams that existed in past years
         for team_name in teams_to_resolve:
             # Look through past years (in reverse chronological order) to find this team
             past_years = sorted(xw['Year'].unique(), reverse=True)
@@ -179,6 +181,30 @@ def _live_league_mapping(league, year):
                     # Found the team in a past year, use its owner
                     mapping[(int(year), str(team_name).strip())] = str(past_owner[0])
                     break
+
+        # Strategy 2: Live league fallback for teams still unresolved (brand new in this year)
+        unresolved = {t for t in teams_to_resolve if (year, t) not in mapping}
+        if unresolved:
+            creds = registry.credentials_for(league, year)
+            if creds and creds[0]:
+                league_id, s2_key, swid_key = creds
+                s2 = CRED.get(s2_key) if s2_key else None
+                swid = CRED.get(swid_key) if swid_key else None
+
+                league_obj = League(
+                    league_id=league_id,
+                    year=year,
+                    espn_s2=s2,
+                    swid=swid
+                )
+
+                # Build a map of team names to owner IDs from the live league
+                for team in league_obj.teams:
+                    team_name = str(team.team_name).strip()
+                    if team_name in unresolved and team.owners:
+                        owner_id = team.owners[0].get('id')
+                        if owner_id:
+                            mapping[(int(year), team_name)] = str(owner_id)
 
         return mapping
     except Exception:
