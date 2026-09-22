@@ -25,6 +25,7 @@ from ffapp import league_registry as registry
 louie_s2 = CRED["louie_s2"]
 louie_s2_pages = CRED["louie_s2_pages"]
 prahlad_s2 = CRED["prahlad_s2"]
+prahlad2_s2 = CRED["prahlad2_s2"]
 la_s2 = CRED["la_s2"]
 hannah_s2 = CRED["hannah_s2"]
 ava_s2 = CRED["ava_s2"]
@@ -52,8 +53,8 @@ LEAGUES_METADATA = [
     {"name": "BP- Loudoun 2025", "s2_key": "matt_s2", "swid_key": "matt_swid"},
     {"name": "Ross' Fantasy League", "s2_key": "ayush_s2", "swid_key": "ayush_swid"},
     {"name": "Board Fantasy Football", "s2_key": "nolan_s2", "swid_key": "nolan_swid"},
-    {"name": "The Goofy Goobers", "s2_key": "louie_s2", "swid_key": "louie_swid"},
-    {"name": "Campers and Skiers and Prahlad", "s2_key": "louie_s2", "swid_key": "louie_swid"},
+    {"name": "The Goofy Goobers", "s2_key": "prahlad2_s2", "swid_key": "prahlad2_s2"},
+    {"name": "Campers and Skiers and Prahlad", "s2_key": "prahlad_s2", "swid_key": "prahlad_swid"},
 ]
 
 def get_leagues_for_year(year):

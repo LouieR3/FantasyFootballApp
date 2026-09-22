@@ -1,1 +1,23 @@
 League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+The Goofy Goobers,2026,2,ADD,Alvin Kamara,RB,(FA),Bands Emeka Dance,{ACAB1E9E-16AE-49C8-80FB-6C40F0A1BE48},0,activity
+The Goofy Goobers,2026,2,ADD,Devaughn Vele,WR,(FA),Bands Emeka Dance,{ACAB1E9E-16AE-49C8-80FB-6C40F0A1BE48},0,activity
+The Goofy Goobers,2026,2,ADD,Buccaneers D/ST,D/ST,(FA),Fiery Dragons,{0BD86400-A403-4212-B484-0E144CEC717B},0,activity
+The Goofy Goobers,2026,2,ADD,Jalen Coker,WR,(FA),Delco Football Team,{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
+The Goofy Goobers,2026,2,ADD,Bryce Young,QB,(FA),Delco Football Team,{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
+The Goofy Goobers,2026,2,ADD,Chiefs D/ST,D/ST,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+The Goofy Goobers,2026,2,ADD,Jonah Coleman,RB,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+The Goofy Goobers,2026,2,ADD,Michael Mayer,TE,(FA),Rocket Bowers,{5E530C03-3F19-48F0-A309-52B769E76347},0,activity
+The Goofy Goobers,2026,2,ADD,Caleb Douglas,WR,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
+The Goofy Goobers,2026,2,ADD,Kaelon Black,RB,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
+The Goofy Goobers,2026,2,ADD,Tyreek Hill,WR,(FA),Chum is Fum,{0133199B-35FB-4A3D-895E-622E61E976F3},0,activity
+The Goofy Goobers,2026,2,ADD,Rachaad White,RB,(FA),Chum is Fum,{0133199B-35FB-4A3D-895E-622E61E976F3},0,activity
+The Goofy Goobers,2026,2,DROP,Bo Nix,QB,Delco Football Team,(FA),{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
+The Goofy Goobers,2026,2,DROP,Kenny Gainwell,RB,Delco Football Team,(FA),{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
+The Goofy Goobers,2026,2,DROP,Juwan Johnson,TE,Rocket Bowers,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,activity
+The Goofy Goobers,2026,2,DROP,De'Zhaun Stribling,WR,Bands Emeka Dance,(FA),{ACAB1E9E-16AE-49C8-80FB-6C40F0A1BE48},0,activity
+The Goofy Goobers,2026,2,DROP,Tank Dell,WR,Bands Emeka Dance,(FA),{ACAB1E9E-16AE-49C8-80FB-6C40F0A1BE48},0,activity
+The Goofy Goobers,2026,2,DROP,Tyjae Spears,RB,Fiery Dragons,(FA),{0BD86400-A403-4212-B484-0E144CEC717B},0,activity
+The Goofy Goobers,2026,2,DROP,Jacob Saylors,RB,Chum is Fum,(FA),{0133199B-35FB-4A3D-895E-622E61E976F3},0,activity
+The Goofy Goobers,2026,2,DROP,Kyler Murray,QB,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+The Goofy Goobers,2026,2,DROP,Jaguars D/ST,D/ST,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+The Goofy Goobers,2026,2,DROP,Terrance Ferguson,TE,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
