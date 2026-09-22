@@ -614,6 +614,6 @@ for league_config in leagues:
 # except FileNotFoundError:
 #     print("No existing all_matchups.csv found, creating a new one.")
 
-# create_betting_odds(leagues, year)
+create_betting_odds(leagues, year)
 
 print("--- %s seconds ---" % (time.time() - start_time))
