@@ -1,1 +1,17 @@
 League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+BP- Loudoun 2025,2026,2,ADD,Demarcus Robinson,WR,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,activity
+BP- Loudoun 2025,2026,2,ADD,Vikings D/ST,D/ST,(FA),Yahya's Crew,{02235E1C-5112-4E60-B33B-855CF6F17474},0,activity
+BP- Loudoun 2025,2026,2,ADD,Bengals D/ST,D/ST,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,activity
+BP- Loudoun 2025,2026,2,ADD,Giants D/ST,D/ST,(FA),"Bears, Jags, Foxes, Oh My!",{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
+BP- Loudoun 2025,2026,2,ADD,Michael Mayer,TE,(FA),"Bears, Jags, Foxes, Oh My!",{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
+BP- Loudoun 2025,2026,2,ADD,Kalif Raymond,WR,(FA),Graesser's Golden Receivers,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity
+BP- Loudoun 2025,2026,2,ADD,Antonio Williams,WR,(FA),Graesser's Golden Receivers,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity
+BP- Loudoun 2025,2026,2,ADD,Malachi Fields,WR,(FA),Dale's Dangerous Team,{56CFC8FF-F79E-4080-8DB4-22446FAED9DE},0,activity
+BP- Loudoun 2025,2026,2,ADD,Devin Singletary,RB,(FA),Laces Out Dan,{C3E40188-7814-4A00-A401-887814CA00FA},0,activity
+BP- Loudoun 2025,2026,2,DROP,A.J. Brown,WR,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,activity
+BP- Loudoun 2025,2026,2,DROP,Jaguars D/ST,D/ST,"Bears, Jags, Foxes, Oh My!",(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
+BP- Loudoun 2025,2026,2,DROP,Chig Okonkwo,TE,"Bears, Jags, Foxes, Oh My!",(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
+BP- Loudoun 2025,2026,2,DROP,Brenton Strange,TE,Yahya's Crew,(FA),{02235E1C-5112-4E60-B33B-855CF6F17474},0,activity
+BP- Loudoun 2025,2026,2,DROP,Greg Dulcich,TE,Dale's Dangerous Team,(FA),{56CFC8FF-F79E-4080-8DB4-22446FAED9DE},0,activity
+BP- Loudoun 2025,2026,2,DROP,Jauan Jennings,WR,Graesser's Golden Receivers,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity
+BP- Loudoun 2025,2026,2,DROP,Xavier Legette,WR,Graesser's Golden Receivers,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity

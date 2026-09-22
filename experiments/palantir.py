@@ -17,7 +17,8 @@ import math
 import numpy as np
 import random
 import os
-from test_fantasypros_scrape import fantasypros_ranks
+from test_fantasypros_scrape import fantasypros_ros_ranks
+from test_fantasypros_scrape import fantasypros_week_ranks
 import re
 start_time = time.time()
 
@@ -26,31 +27,23 @@ espn_s2 = CRED["louie_s2"]
 # Pennoni Younglings
 year = 2026
 # league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-
 # Family League
 # league = League(league_id=996930954, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-
 # EBC League
 # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-
 # Pennoni Transportation
 # league = League(league_id=1339704102, year=year, espn_s2=CRED["prahlad_s2"], swid=CRED["prahlad_swid"])
-
 # Game of Yards
 # league = League(league_id=1781851, year=year, espn_s2=CRED["prahlad_s2"], swid=CRED["prahlad_swid"])
-
 # Brown Munde
 # league = League(league_id=367134149, year=2022, espn_s2=CRED["prahlad_s2"], swid=CRED["prahlad_swid"])
-
 # Turf On Grade League
 # league = League(league_id=1242265374, year=2024, espn_s2=CRED["turf_s2"], swid=CRED["prahlad_swid"])
-
 # Las League
 # league = League(league_id=1049459, year=2025, espn_s2=CRED["la_s2"], swid=CRED["la_swid"])
-
 # Hannahs League
-hannah_s2 = CRED["hannah_s2"]
-league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
+# hannah_s2 = CRED["hannah_s2"]
+# league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
 
 ava_s2 = CRED["ava_s2"]
 matt_s2 = CRED["matt_s2"]
@@ -68,8 +61,8 @@ elle_s2 = CRED["elle_s2"]
 # asdf
 
 # Matts League
-league = League(league_id=261375772, year=year, espn_s2=matt_s2, swid=CRED["matt_swid"])
-team_name = "At Risk of CTE"
+# league = League(league_id=261375772, year=year, espn_s2=matt_s2, swid=CRED["matt_swid"])
+# team_name = "At Risk of CTE"
 
 # Pennoni Younglings
 # league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
@@ -94,7 +87,7 @@ team_name = "At Risk of CTE"
 league = League(league_id=1049459, year=year, espn_s2=CRED["la_s2"], swid=CRED["la_swid"])
 team_name = "Team Rodriguez"
 
-fantasypros_rank_df = fantasypros_ranks()
+fantasypros_rank_df = fantasypros_ros_ranks()
 # Define draft order
 slot_order = {
     "QB": 1,
@@ -389,6 +382,158 @@ def test_team_data(league):
 
 # test_team_data(league)
 
+def suggest_lineup(league, team_name):
+    flex_df, qb_df = fantasypros_week_ranks()
+
+    suffixes = ["ii", "iii", "jr", "sr", "iv"]
+
+    def clean_name(name):
+        name = name.lower()
+        for s in suffixes:
+            name = re.sub(rf"\b{s}\b", "", name)
+        name = re.sub(r"[^a-z0-9\s.']", "", name)
+        name = re.sub(r"\s+", " ", name).strip()
+        return name
+
+    flex_df = flex_df.copy()
+    qb_df = qb_df.copy()
+    flex_df['player_name_clean'] = flex_df['player_name'].apply(clean_name)
+    qb_df['player_name_clean'] = qb_df['player_name'].apply(clean_name)
+
+    def get_week_rank(player_name, position):
+        # Only QB/RB/WR/TE are covered by the scraped weekly ranking pages
+        if position == "QB":
+            df = qb_df
+        elif position in ("RB", "WR", "TE"):
+            df = flex_df
+        else:
+            return None, None
+
+        clean = clean_name(player_name)
+        match = df[df['player_name_clean'] == clean]
+        if match.empty:
+            match = df[df['player_name_clean'].str.contains(clean, na=False)]
+        if match.empty:
+            return None, None
+
+        r = match.iloc[0]
+        return r['rank_ecr'], r['pos_rank']
+
+    # ------------------
+    # Find team
+    # ------------------
+    team_names = [team.team_name for team in league.teams]
+    if team_name not in team_names:
+        print(f"Team '{team_name}' not found! Available teams: {team_names}")
+        return
+
+    team = league.teams[team_names.index(team_name)]
+
+    slot_order = {
+        "QB": 1,
+        "RB": 2,
+        "WR": 3,
+        "TE": 4,
+        "RB/WR/TE": 5,
+        "D/ST": 6,
+        "K": 7,
+        "BE": 8,
+        "IR": 9,
+    }
+
+    players_info = []
+    for p in team.roster:
+        rank_ecr, pos_rank = get_week_rank(p.name, p.position)
+        players_info.append({
+            "name": p.name,
+            "position": p.position,
+            "slot_position": p.lineupSlot,
+            "rank_ecr": rank_ecr if rank_ecr is not None else float('inf'),
+            "pos_rank": pos_rank if pos_rank is not None else "(n/a)",
+        })
+
+    current_starters = [p for p in players_info if p['slot_position'] not in ("BE", "IR")]
+    bench = [p for p in players_info if p['slot_position'] == "BE"]
+
+    # ------------------
+    # Figure out how many starting slots exist per position (flex counted separately)
+    # ------------------
+    slot_counts = {}
+    flex_slots = 0
+    for p in current_starters:
+        if p['slot_position'] == "RB/WR/TE":
+            flex_slots += 1
+        else:
+            slot_counts[p['slot_position']] = slot_counts.get(p['slot_position'], 0) + 1
+
+    pool = current_starters + bench
+    used = set()
+    suggested = {}
+
+    for pos, count in slot_counts.items():
+        if pos in ("D/ST", "K"):
+            # No weekly ranking data scraped for these -- keep current starters as-is
+            chosen = [p for p in current_starters if p['slot_position'] == pos]
+        else:
+            candidates = [p for p in pool if p['position'] == pos and p['name'] not in used]
+            candidates.sort(key=lambda x: x['rank_ecr'])
+            chosen = candidates[:count]
+        suggested[pos] = chosen
+        for p in chosen:
+            used.add(p['name'])
+
+    if flex_slots:
+        flex_candidates = [p for p in pool if p['position'] in ("RB", "WR", "TE") and p['name'] not in used]
+        flex_candidates.sort(key=lambda x: x['rank_ecr'])
+        chosen = flex_candidates[:flex_slots]
+        suggested["RB/WR/TE"] = chosen
+        for p in chosen:
+            used.add(p['name'])
+
+    # ------------------
+    # Ignore cosmetic reshuffles: RB/WR/TE all feed the FLEX slot, so the
+    # greedy pass above can relabel two players who were already both
+    # starting (e.g. swap which one is "TE" vs "FLEX") with no real bench
+    # call-up happening. Only keep the reassignment if the actual set of
+    # starting RB/WR/TE-eligible players changed.
+    # ------------------
+    flex_group_slots = [s for s in ("RB", "WR", "TE") if s in slot_counts] + (["RB/WR/TE"] if flex_slots else [])
+    current_flex_group_names = {
+        p['name'] for p in current_starters if p['slot_position'] in flex_group_slots
+    }
+    suggested_flex_group_names = {
+        p['name'] for slot in flex_group_slots for p in suggested.get(slot, [])
+    }
+    if current_flex_group_names == suggested_flex_group_names:
+        for slot in flex_group_slots:
+            suggested[slot] = sorted(
+                [p for p in current_starters if p['slot_position'] == slot],
+                key=lambda x: x['rank_ecr']
+            )
+
+    # ------------------
+    # Print current vs suggested, slot by slot, in slot_order
+    # ------------------
+    print(f"\n----- {team_name}: Current vs. Suggested Lineup (this week) -----\n")
+    for slot_pos in sorted(slot_counts.keys() | ({"RB/WR/TE"} if flex_slots else set()), key=lambda s: slot_order.get(s, 99)):
+        current_list = sorted(
+            [p for p in current_starters if p['slot_position'] == slot_pos],
+            key=lambda x: x['rank_ecr']
+        )
+        suggested_list = sorted(suggested.get(slot_pos, []), key=lambda x: x['rank_ecr'])
+
+        for current_p, suggested_p in zip(current_list, suggested_list):
+            swap_flag = "  <-- SWAP" if current_p['name'] != suggested_p['name'] else ""
+            print(
+                f"{slot_pos:<10} "
+                f"{current_p['name']:<22} {str(current_p['pos_rank']):<8} -> "
+                f"{suggested_p['name']:<22} {str(suggested_p['pos_rank']):<8}"
+                f"{swap_flag}"
+            )
+
+    print("\n-----------------------------\n")
+
+
 def find_trade_partners(league, team_name):
     print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)
 
@@ -408,3 +553,5 @@ def find_trade_partners(league, team_name):
         print(f"\n----------")
 
 # find_trade_partners(league, team_name)
+
+suggest_lineup(league, team_name)

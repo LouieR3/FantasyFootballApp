@@ -1,1 +1,10 @@
 League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+EBC League,2026,2,ADD,Dalton Kincaid,TE,(FA),P90 Asiimov,{4656A2AD-A939-460B-96A2-ADA939760B8B},5,activity
+EBC League,2026,2,ADD,Tyler Shough,QB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},1,activity
+EBC League,2026,2,ADD,Juwan Johnson,TE,(FA),Wise Warlocks,{89E249D2-17CC-4743-B60A-232D01C6434D},2,activity
+EBC League,2026,2,ADD,Jalen Coker,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},6,activity
+EBC League,2026,2,ADD,Kyle Monangai,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},4,activity
+EBC League,2026,2,DROP,T.J. Hockenson,TE,P90 Asiimov,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
+EBC League,2026,2,DROP,Tony Pollard,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,activity
+EBC League,2026,2,DROP,Rico Dowdle,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,activity
+EBC League,2026,2,DROP,Hunter Henry,TE,Wise Warlocks,(FA),{89E249D2-17CC-4743-B60A-232D01C6434D},0,activity

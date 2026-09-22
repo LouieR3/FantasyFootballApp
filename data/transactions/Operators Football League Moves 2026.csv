@@ -1,1 +1,8 @@
 League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Operators Football League,2026,2,ADD,Devaughn Vele,WR,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,activity
+Operators Football League,2026,2,ADD,Jordan Love,QB,(FA),Hunks of Hanet ,{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,activity
+Operators Football League,2026,2,ADD,Kaelon Black,RB,(FA),Junya Ettlinger's First Team,{5918A112-DDF9-4368-8414-A143EC58B846},0,activity
+Operators Football League,2026,2,ADD,C.J. Stroud,QB,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,activity
+Operators Football League,2026,2,DROP,Kyler Murray,QB,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,activity
+Operators Football League,2026,2,DROP,Malachi Fields,WR,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,activity
+Operators Football League,2026,2,DROP,De'Zhaun Stribling,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,activity

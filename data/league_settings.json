@@ -2,18 +2,8 @@
   "0755 Fantasy Football|2026": {
     "playoff_team_count": 6,
     "reg_season_count": 14,
-    "roster": {
-      "BE": 7,
-      "D/ST": 1,
-      "IR": 1,
-      "K": 1,
-      "QB": 1,
-      "RB": 2,
-      "RB/WR/TE": 1,
-      "TE": 1,
-      "WR": 2
-    },
-    "team_count": null
+    "roster": {},
+    "team_count": 10
   },
   "2026 Family League|2026": {
     "playoff_team_count": 6,
@@ -58,20 +48,10 @@
     "team_count": 8
   },
   "Family Fantasy|2026": {
-    "playoff_team_count": 7,
+    "playoff_team_count": 6,
     "reg_season_count": 14,
-    "roster": {
-      "BE": 7,
-      "D/ST": 1,
-      "IR": 1,
-      "K": 1,
-      "QB": 1,
-      "RB": 2,
-      "RB/WR/TE": 1,
-      "TE": 1,
-      "WR": 2
-    },
-    "team_count": null
+    "roster": {},
+    "team_count": 12
   },
   "Game of Yards!|2026": {
     "playoff_team_count": 6,

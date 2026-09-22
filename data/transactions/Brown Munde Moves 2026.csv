@@ -1,1 +1,15 @@
 League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Brown Munde,2026,2,ADD,49ers D/ST,D/ST,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,activity
+Brown Munde,2026,2,ADD,Devin Singletary,RB,(FA),THE BIGMADBLUE,{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,activity
+Brown Munde,2026,2,ADD,Malachi Fields,WR,(FA),The Man In Jahmyrror,{7C5105C9-0740-4E06-AF54-4D5BAF9475AC},0,activity
+Brown Munde,2026,2,ADD,Buccaneers D/ST,D/ST,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Brown Munde,2026,2,ADD,Chris Brooks,RB,(FA),Team BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Brown Munde,2026,2,ADD,Kaelon Black,RB,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Brown Munde,2026,2,ADD,Trevor Lawrence,QB,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Brown Munde,2026,2,ADD,T.J. Hockenson,TE,(FA),Still Rollin',{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Brown Munde,2026,2,DROP,Jaguars D/ST,D/ST,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Brown Munde,2026,2,DROP,Tre Tucker,WR,Team BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Brown Munde,2026,2,DROP,Titans D/ST,D/ST,THE BIGMADBLUE,(FA),{949FEE5A-4440-43DB-9FEE-5A4440A3DBBC},0,activity
+Brown Munde,2026,2,DROP,De'Zhaun Stribling,WR,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Brown Munde,2026,2,DROP,Kyler Murray,QB,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Brown Munde,2026,2,DROP,Terrance Ferguson,TE,Still Rollin',(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity

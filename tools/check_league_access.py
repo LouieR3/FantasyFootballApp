@@ -38,12 +38,12 @@ nolan_s2 = CRED["nolan_s2"]
 
 year = 2026
 leagues = [
-    # # Pennoni Younglings
-    # {"league_id": 310334683, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Pennoni Younglings"},
-    # # Family League
-    # {"league_id": 1343668602, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Family League"},
-    # # EBC League
-    # {"league_id": 1118513122, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "EBC League"},
+    # Pennoni Younglings
+    {"league_id": 310334683, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Pennoni Younglings"},
+    # Family League
+    {"league_id": 1343668602, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Family League"},
+    # EBC League
+    {"league_id": 1118513122, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "EBC League"},
     # # Game of Yards
     # {"league_id": 1781851, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Game of Yards!"},
     # # Brown Munde
@@ -60,8 +60,8 @@ leagues = [
     # {"league_id": 29400230, "year": year, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
     # # Ayush League
     # {"league_id": 558148583, "year": year, "espn_s2": ayush_s2, "swid": CRED["ayush_swid"], "name": "Ross' Fantasy League"},
-    # Nolans League
-    {"league_id": 496646254, "year": year, "espn_s2": nolan_s2, "swid": CRED["nolan_swid"], "name": "Nolan's League"},
+    # # Nolans League
+    # {"league_id": 496646254, "year": year, "espn_s2": nolan_s2, "swid": CRED["nolan_swid"], "name": "Nolan's League"},
     # # The Goofy Goobers League
     # {"league_id": 1616305229, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "The Goofy Goobers"},
     # # Campers and Skiers and Prahlad League
