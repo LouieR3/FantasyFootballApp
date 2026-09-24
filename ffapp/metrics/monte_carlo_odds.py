@@ -41,42 +41,7 @@ def create_results_dataframe(teams, scores_df, current_week):
 
 def calculate_team_stats(teams, scores_df, current_week, reg_season_count):
     """Calculate current stats and scoring statistics for each team"""
-    team_stats = {}
-    
-    # Determine how many regular season games have been completed
-    completed_reg_games = min(current_week - 1, reg_season_count)
-    
-    for team_idx, team in enumerate(teams):
-        # Only use regular season scores for statistics
-        reg_season_scores = [score for score in scores_df.iloc[team_idx, :completed_reg_games] if score > 0]
-        
-        # Calculate regular season record including ties
-        reg_season_outcomes = team.outcomes[:completed_reg_games]
-        wins = sum(1 for outcome in reg_season_outcomes if outcome == 'W')
-        losses = sum(1 for outcome in reg_season_outcomes if outcome == 'L')
-        ties = sum(1 for outcome in reg_season_outcomes if outcome == 'T')
-        
-        # Scoring statistics based on regular season performance
-        avg_score = np.mean(reg_season_scores) if reg_season_scores else 100.0
-        score_std = np.std(reg_season_scores) if len(reg_season_scores) > 1 else 15.0
-        
-        # Adjust std dev based on sample size (more games = more confidence)
-        games_played = len(reg_season_scores)
-        confidence_factor = max(0.5, 1 - (games_played / 40))
-        adjusted_std = score_std * (1 + confidence_factor)
-        
-        team_stats[team.team_name] = {
-            'team_obj': team,
-            'wins': wins,
-            'losses': losses,
-            'ties': ties,
-            'avg_score': avg_score,
-            'score_std': adjusted_std,
-            'games_played': games_played,
-            'total_points': sum(reg_season_scores)
-        }
-    
-    return team_stats
+    return calculate_team_stats_for_week(teams, scores_df, current_week - 1, reg_season_count)
 
 def simulate_remaining_season(teams, team_stats, current_week, reg_season_count, num_playoff_teams, num_simulations=1000):
     """Run Monte Carlo simulation for remaining REGULAR SEASON games only"""
@@ -327,29 +292,39 @@ def calculate_playoff_chances_by_week(teams, scores_df, reg_season_count, num_pl
 def calculate_team_stats_for_week(teams, scores_df, through_week, reg_season_count):
     """Calculate team stats through a specific week"""
     team_stats = {}
-    
+
     # Determine how many regular season games have been completed through this week
     completed_reg_games = min(through_week, reg_season_count)
-    
+
+    # League-wide scoring std, used to stabilize each team's std estimate early in
+    # the season when a team only has 1-2 games (too few to estimate volatility from)
+    all_scores = scores_df.iloc[:, :completed_reg_games].to_numpy().flatten()
+    all_scores = all_scores[all_scores > 0]
+    league_std = np.std(all_scores) if len(all_scores) > 1 else 15.0
+    MIN_STD = 12.0
+    SHRINKAGE_GAMES = 4  # games of history needed before a team's own std dominates its estimate
+
     for team_idx, team in enumerate(teams):
         # Only use regular season scores through this week
         reg_season_scores = [score for score in scores_df.iloc[team_idx, :completed_reg_games] if score > 0]
-        
+
         # Calculate regular season record including ties
         reg_season_outcomes = team.outcomes[:completed_reg_games]
         wins = sum(1 for outcome in reg_season_outcomes if outcome == 'W')
         losses = sum(1 for outcome in reg_season_outcomes if outcome == 'L')
         ties = sum(1 for outcome in reg_season_outcomes if outcome == 'T')
-        
+
         # Scoring statistics
         avg_score = np.mean(reg_season_scores) if reg_season_scores else 100.0
-        score_std = np.std(reg_season_scores) if len(reg_season_scores) > 1 else 15.0
-        
-        # Adjust std dev based on sample size
         games_played = len(reg_season_scores)
-        confidence_factor = max(0.5, 1 - (games_played / 40))
-        adjusted_std = score_std * (1 + confidence_factor)
-        
+        raw_std = np.std(reg_season_scores) if games_played > 1 else league_std
+
+        # Blend the team's own std with the league-wide std so a couple of similar
+        # scores early in the season don't make a team look unrealistically consistent
+        shrink_weight = games_played / (games_played + SHRINKAGE_GAMES)
+        blended_std = shrink_weight * raw_std + (1 - shrink_weight) * league_std
+        adjusted_std = max(MIN_STD, blended_std)
+
         team_stats[team.team_name] = {
             'team_obj': team,
             'wins': wins,
@@ -360,7 +335,7 @@ def calculate_team_stats_for_week(teams, scores_df, through_week, reg_season_cou
             'games_played': games_played,
             'total_points': sum(reg_season_scores)
         }
-    
+
     return team_stats
 
 def simulate_from_week(teams, team_stats, start_week, reg_season_count, num_playoff_teams, num_simulations):
@@ -496,11 +471,10 @@ def convert_probability_to_odds(probability_pct):
     Returns:
         dict: Dictionary with American, Decimal, and Fractional odds
     """
-    if probability_pct <= 0:
-        return {'American': '+∞', 'Decimal': '∞', 'Fractional': '∞/1', 'Implied_Prob': '0.0%'}
-    if probability_pct >= 100:
-        return {'American': '-∞', 'Decimal': '1.00', 'Fractional': '0/1', 'Implied_Prob': '100.0%'}
-    
+    # "0 out of N simulations" isn't truly 0% (or 100%), just below the simulation's
+    # resolution, so clamp instead of showing infinite odds for a non-certain outcome
+    probability_pct = min(99.9, max(0.1, probability_pct))
+
     prob = probability_pct / 100.0
     
     # Decimal odds

@@ -12,6 +12,7 @@ from paths import ALL_MATCHUPS, TRANSACTIONS_DIR
 from ffapp import league_registry as registry
 from ffapp.metrics import lifetime as lt
 from ffapp.metrics import transaction_hall_of_fame as thof
+from ffapp.metrics import injuries as inj
 from ffapp.ui.tables import apply_display_defaults, show_table
 
 
@@ -46,11 +47,22 @@ def unresolved(league, file_key):
     return lt.unresolved_teams(league)
 
 
+@st.cache_data(show_spinner='Analyzing starter injuries...')
+def injury_summary_cached(league):
+    return inj.injury_summary(league)
+
+
+@st.cache_data(show_spinner='Computing injury luck stats...')
+def injury_luck_cached(league):
+    return inj.injury_luck_by_owner(league)
+
+
 def app():
     apply_display_defaults()
 
     # Clear module-level caches when matchup data changes
     lt.clear_caches()
+    inj.clear_caches()
 
     st.header('🏛️ Lifetime League History')
     st.write(
@@ -104,7 +116,7 @@ a week cutoff, since leagues start their postseason in different weeks.
                    f'and are excluded: {", ".join(f"{r.Team} ({r.Year})" for r in miss.itertuples())}')
 
     tabs = st.tabs(['All-time', 'Careers', 'Head to head', 'Playoffs',
-                    'Record book', 'Streaks & feats', 'Transactions'])
+                    'Record book', 'Streaks & feats', 'Injury Luck', 'Transactions'])
 
     # ---------------------------------------------------------------- all-time
     with tabs[0]:
@@ -270,8 +282,47 @@ a week cutoff, since leagues start their postseason in different weeks.
                    formats={'Longest Win Streak': '{:.0f}',
                             'Longest Losing Streak': '{:.0f}'})
 
-    # ------------------------------------------------------------ transactions
+    # ----------------------------------------------------------- injury luck
     with tabs[6]:
+        st.markdown('##### Injury luck by owner')
+        st.caption(
+            'Starter injuries in rounds 1-2 across all seasons. **Injury Score** '
+            'combines games played and scoring underperformance (0=healthy, 1=severe). '
+            'Flagged as injured if score > 0.3 or games played < 12.'
+        )
+        luck = injury_luck_cached(league)
+        if luck.empty:
+            st.info('No draft data for this league yet.')
+        else:
+            show_table(luck.style.background_gradient(
+                subset=['Total Games Missed', 'Avg Games Missed / Injury'],
+                cmap='Reds'),
+                formats={'Avg Injuries / Season': '{:.2f}',
+                         'Avg Games Missed / Injury': '{:.1f}'})
+
+        st.divider()
+        st.markdown('##### Season-by-season first injuries')
+        summary = injury_summary_cached(league)
+        if summary.empty:
+            st.info('No injury data to analyze yet.')
+        else:
+            display_summary = summary[[
+                'Year', 'Team', 'First Injured', 'First Position', 'Round',
+                'Games Played', 'Games Missed', 'Injury Score', 'Injured Count R1-R2'
+            ]].copy()
+            display_summary = display_summary.rename(columns={
+                'Injured Count R1-R2': 'Injured (R1-R2)'
+            })
+            show_table(display_summary.style.background_gradient(
+                subset=['Games Missed', 'Injury Score'],
+                cmap='Reds'),
+                formats={'Year': '{:.0f}', 'Games Missed': '{:.0f}',
+                         'Games Played': '{:.0f}', 'Injured (R1-R2)': '{:.0f}',
+                         'Injury Score': '{:.2f}'},
+                max_rows=25)
+
+    # ------------------------------------------------------------ transactions
+    with tabs[7]:
         history, totals = league_transactions(league, transactions_key())
         if history.empty:
             st.info(

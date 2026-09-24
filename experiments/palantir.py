@@ -19,6 +19,7 @@ import random
 import os
 from test_fantasypros_scrape import fantasypros_ros_ranks
 from test_fantasypros_scrape import fantasypros_week_ranks
+from paths import DATA_DIR
 import re
 start_time = time.time()
 
@@ -42,7 +43,7 @@ year = 2026
 # Las League
 # league = League(league_id=1049459, year=2025, espn_s2=CRED["la_s2"], swid=CRED["la_swid"])
 # Hannahs League
-# hannah_s2 = CRED["hannah_s2"]
+hannah_s2 = CRED["hannah_s2"]
 # league = League(league_id=1399036372, year=2025, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
 
 ava_s2 = CRED["ava_s2"]
@@ -62,7 +63,7 @@ elle_s2 = CRED["elle_s2"]
 
 # Matts League
 # league = League(league_id=261375772, year=year, espn_s2=matt_s2, swid=CRED["matt_swid"])
-# team_name = "At Risk of CTE"
+# team_name = "Graesser's Golden Receivers"
 
 # Pennoni Younglings
 # league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
@@ -79,13 +80,13 @@ elle_s2 = CRED["elle_s2"]
 # team_name = "Big Ballsy Bozos"
 
 # Hannahs League
-# league = League(league_id=1399036372, year=year, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
-# team_name = "It's Miller Time"
+league = League(league_id=1399036372, year=year, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
+team_name = "It's Miller Time"
 # team_name = "Immaculate Concepcion"
 
 # Las League
-league = League(league_id=1049459, year=year, espn_s2=CRED["la_s2"], swid=CRED["la_swid"])
-team_name = "Team Rodriguez"
+# league = League(league_id=1049459, year=year, espn_s2=CRED["la_s2"], swid=CRED["la_swid"])
+# team_name = "Team Rodriguez"
 
 fantasypros_rank_df = fantasypros_ros_ranks()
 # Define draft order
@@ -187,7 +188,6 @@ def fantasypros_freeagents(league, fantasypros_rank_df):
     print("\nTop TE Free Agents:")
     print(te_df)
 
-fantasypros_freeagents(league, fantasypros_rank_df)
 
 def print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name):
     # ------------------
@@ -279,7 +279,6 @@ def print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name):
 
     print("\n-----------------------------\n")
 
-print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)
 
 def test_team_data(league):
     team_names = [team.team_name for team in league.teams]
@@ -534,24 +533,308 @@ def suggest_lineup(league, team_name):
     print("\n-----------------------------\n")
 
 
-def find_trade_partners(league, team_name):
-    print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)
+def _clean_player_name(name):
+    suffixes = ["ii", "iii", "jr", "sr", "iv"]
+    name = name.lower()
+    for s in suffixes:
+        name = re.sub(rf"\b{s}\b", "", name)
+    name = re.sub(r"[^a-z0-9\s.']", "", name)
+    name = re.sub(r"\s+", " ", name).strip()
+    return name
 
+
+TRADE_POSITIONS = ["QB", "RB", "WR", "TE"]
+
+
+def _build_league_wide_df(league, fantasypros_rank_df):
+    """One row per rostered player, league-wide, with FantasyPros ROS rank,
+    ESPN's own positional rank, actual points-to-date, and ESPN's rest-of-season
+    projection -- the raw ingredients for spotting value/inefficiency."""
+    fp = fantasypros_rank_df.copy()
+    fp['player_name_clean'] = fp['player_name'].apply(_clean_player_name)
+    fp['player_positions_norm'] = fp['player_position_id'].replace({"DST": "D/ST", "DEF": "D/ST"})
+    fp['fp_pos_rank_num'] = fp['pos_rank'].apply(
+        lambda s: int(re.search(r'\d+', str(s)).group()) if pd.notnull(s) and re.search(r'\d+', str(s)) else np.nan
+    )
+    fp_max_rank_by_pos = fp.groupby('player_positions_norm')['fp_pos_rank_num'].max().to_dict()
+
+    rows = []
+    for team in league.teams:
+        for p in team.roster:
+            clean = _clean_player_name(p.name)
+            match = fp[fp['player_name_clean'].str.contains(clean, na=False)]
+            if len(match):
+                r = match.iloc[0]
+                fp_pos_rank_str = r['pos_rank']
+                fp_pos_rank_num = r['fp_pos_rank_num']
+            else:
+                fp_pos_rank_str, fp_pos_rank_num = None, np.nan
+
+            rows.append({
+                "team_name": team.team_name,
+                "name": p.name,
+                "position": p.position,
+                "lineup_slot": p.lineupSlot,
+                "fp_pos_rank_str": fp_pos_rank_str if fp_pos_rank_str is not None else "(n/a)",
+                "fp_pos_rank": fp_pos_rank_num,
+                "fp_max_rank_at_pos": fp_max_rank_by_pos.get(p.position, np.nan),
+                "espn_pos_rank": p.posRank if p.posRank else np.nan,
+                "total_points": p.total_points,
+                "projected_total_points": p.projected_total_points,
+                "avg_points": p.avg_points,
+                "projected_avg_points": p.projected_avg_points,
+            })
+
+    df = pd.DataFrame(rows)
+
+    # Rank players within their own position, league-wide among ROSTERED players only,
+    # by ESPN's rest-of-season pace (proj_rank) and by how they've actually scored (actual_rank).
+    # Blend 60/40 toward the forward-looking projection -- it's still the best signal for
+    # what a player is worth going forward, while giving weight to real, in-season production.
+    df['proj_rank'] = df.groupby('position')['projected_avg_points'].rank(ascending=False, method='min')
+    df['actual_rank'] = df.groupby('position')['avg_points'].rank(ascending=False, method='min')
+    df['point_value_rank'] = df['proj_rank'] * 0.6 + df['actual_rank'] * 0.4
+
+    pos_rostered_count = df.groupby('position')['name'].transform('count')
+    df['point_value_pct'] = df['point_value_rank'] / pos_rostered_count
+    df['fp_pct'] = df['fp_pos_rank'] / df['fp_max_rank_at_pos']
+
+    # Positive inefficiency = the market (FantasyPros consensus) ranks this player worse than
+    # their actual+projected points warrant -> undervalued, a buy-low target on someone else's roster.
+    # Negative inefficiency = reputation is running ahead of production -> a sell-high trade chip.
+    df['inefficiency'] = df['fp_pct'] - df['point_value_pct']
+
+    # Negative hot_cold = outperforming ESPN's rest-of-season projection right now (hot, sell
+    # before regression). Positive = currently cold relative to a projection that still likes them
+    # (buy-low window before it rebounds).
+    df['hot_cold'] = df['actual_rank'] - df['proj_rank']
+
+    return df
+
+
+def _compute_team_starters(team_df, position_slot_counts):
+    """Fill the team's actual starting lineup slots (base positions + flex) using the
+    best-by-point-value player available, so positional need reflects this specific
+    roster's personnel rather than a generic slot count."""
+    base_needs = {
+        "QB": position_slot_counts.get("QB", 0) + position_slot_counts.get("OP", 0),
+        "RB": position_slot_counts.get("RB", 0),
+        "WR": position_slot_counts.get("WR", 0),
+        "TE": position_slot_counts.get("TE", 0),
+    }
+    flex_slots = (
+        position_slot_counts.get("RB/WR/TE", 0)
+        + position_slot_counts.get("RB/WR", 0)
+        + position_slot_counts.get("WR/TE", 0)
+    )
+
+    needs = dict(base_needs)
+    starters = {pos: [] for pos in needs}
+    used_names = set()
+
+    for pos, n in base_needs.items():
+        pos_players = team_df[team_df['position'] == pos].sort_values('point_value_rank')
+        chosen = pos_players.head(n)
+        starters[pos] = chosen['name'].tolist()
+        used_names.update(chosen['name'])
+
+    if flex_slots:
+        flex_pool = team_df[
+            team_df['position'].isin(["RB", "WR", "TE"]) & ~team_df['name'].isin(used_names)
+        ].sort_values('point_value_rank')
+        flex_chosen = flex_pool.head(flex_slots)
+        for _, row in flex_chosen.iterrows():
+            needs[row['position']] = needs.get(row['position'], 0) + 1
+            starters[row['position']].append(row['name'])
+            used_names.add(row['name'])
+
+    return needs, starters, used_names
+
+
+def _analyze_team(team_name, league_df, position_slot_counts, gap_pct_threshold=0.55, surplus_pct_threshold=0.5):
+    """Return (needs, starters, gaps, surplus) for a single team.
+
+    gaps: positions where the best available starting lineup is still weak (starter
+    point-value percentile worse than gap_pct_threshold, or a required slot has no
+    rostered player at all).
+    surplus: positions with quality bench depth beyond what's needed to start --
+    "quality" meaning top half (surplus_pct_threshold) of the league-wide rostered
+    pool at that position.
+    """
+    team_df = league_df[league_df['team_name'] == team_name]
+    needs, starters, used_names = _compute_team_starters(team_df, position_slot_counts)
+
+    gaps = {}
+    surplus = {}
+    for pos in TRADE_POSITIONS:
+        pos_df = team_df[team_df['position'] == pos]
+        starter_names = starters.get(pos, [])
+        n_needed = needs.get(pos, 0)
+
+        if n_needed > 0:
+            starter_rows = pos_df[pos_df['name'].isin(starter_names)]
+            if len(starter_rows) < n_needed:
+                gaps[pos] = {"reason": "no rostered player to fill this slot", "starter_pct": 1.0}
+            else:
+                starter_pct = starter_rows['point_value_pct'].mean()
+                if starter_pct >= gap_pct_threshold:
+                    gaps[pos] = {"reason": "weak starter production", "starter_pct": starter_pct}
+
+        bench_rows = pos_df[~pos_df['name'].isin(starter_names)]
+        quality_bench = bench_rows[bench_rows['point_value_pct'] <= surplus_pct_threshold]
+        if len(quality_bench) > 0:
+            surplus[pos] = quality_bench.sort_values('point_value_pct')
+
+    return needs, starters, gaps, surplus
+
+
+def _fmt_player_line(row):
+    fp = f"{row['position']}{int(row['fp_pos_rank'])}" if pd.notnull(row['fp_pos_rank']) else row['fp_pos_rank_str']
+    espn_rk = f"{row['position']}{int(row['espn_pos_rank'])}" if pd.notnull(row['espn_pos_rank']) else "n/a"
+    tag = ""
+    if row['inefficiency'] >= 0.15:
+        tag = "  [undervalued: FantasyPros ranks it worse than actual/projected points support]"
+    elif row['inefficiency'] <= -0.15:
+        tag = "  [FantasyPros reputation is running ahead of actual production]"
+    elif row['hot_cold'] <= -3:
+        tag = "  [hot: currently outscoring its own ESPN rest-of-season pace]"
+    elif row['hot_cold'] >= 3:
+        tag = "  [cold: underscoring a projection that still likes it]"
+    return (
+        f"{row['name']:<24} FP {fp:<7} ESPN {espn_rk:<7} "
+        f"actual {row['avg_points']:>5.1f} ppg ({row['total_points']:>6.1f} total)  "
+        f"proj {row['projected_avg_points']:>5.1f} ppg ({row['projected_total_points']:>6.1f} ROS){tag}"
+    )
+
+
+def _export_league_rosters(league, league_df, output_path):
+    """Write one sheet per team: Position, Player, FP Rank, ESPN Rank, Actual PPG, Proj PPG."""
+    slot_order_export = {"QB": 1, "RB": 2, "WR": 3, "TE": 4, "D/ST": 5, "K": 6}
+
+    export_df = league_df.copy()
+    export_df['FP Rank'] = export_df.apply(
+        lambda r: f"{r['position']}{int(r['fp_pos_rank'])}" if pd.notnull(r['fp_pos_rank']) else r['fp_pos_rank_str'],
+        axis=1
+    )
+    export_df['ESPN Rank'] = export_df.apply(
+        lambda r: f"{r['position']}{int(r['espn_pos_rank'])}" if pd.notnull(r['espn_pos_rank']) else "n/a",
+        axis=1
+    )
+    export_df['Actual PPG'] = export_df['avg_points']
+    export_df['Proj PPG'] = export_df['projected_avg_points']
+    export_df['_slot_sort'] = export_df['position'].map(slot_order_export).fillna(99)
+    export_df = export_df.sort_values(['_slot_sort', 'fp_pos_rank'])
+
+    cols = ['position', 'name', 'FP Rank', 'ESPN Rank', 'Actual PPG', 'Proj PPG']
+    rename = {'position': 'Position', 'name': 'Player'}
+
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
+        for team in league.teams:
+            team_sheet = export_df[export_df['team_name'] == team.team_name][cols].rename(columns=rename)
+            sheet_name = re.sub(r'[\[\]:*?/\\]', '', team.team_name)[:31] or "Team"
+            team_sheet.to_excel(writer, sheet_name=sheet_name, index=False)
+
+    print(f"Wrote per-team roster export to {output_path}\n")
+    return output_path
+
+
+def find_trade_partners(league, team_name):
     team_names = [team.team_name for team in league.teams]
     if team_name not in team_names:
         print(f"Team '{team_name}' not found! Available teams: {team_names}")
         return
-    
-    team = league.teams[team_names.index(team_name)]
-    print(f"\n----- Finding trade partners for {team.team_name} -----\n")
 
-    for other_team in league.teams:
-        if other_team.team_name == team.team_name:
+    print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)
+
+    league_df = _build_league_wide_df(league, fantasypros_rank_df)
+    position_slot_counts = league.settings.position_slot_counts
+
+    export_path = os.path.join(DATA_DIR, "trade_analysis", f"league_rosters_{year}_wk{league.current_week}.xlsx")
+    _export_league_rosters(league, league_df, export_path)
+
+    print(
+        f"Week {league.current_week} of the season -- actual-points columns reflect a small "
+        f"in-season sample, so weight the projection columns more heavily early on.\n"
+    )
+
+    my_needs, my_starters, my_gaps, my_surplus = _analyze_team(team_name, league_df, position_slot_counts)
+
+    print(f"\n===== {team_name}: Needs & Assets =====\n")
+    if my_gaps:
+        print("GAPS (weak starting production):")
+        for pos, info in my_gaps.items():
+            print(f"  {pos}: {info['reason']} (starter percentile {info['starter_pct']:.0%} of rostered {pos}s)")
+    else:
+        print("GAPS: none detected -- every starting slot grades out above-average.")
+
+    if my_surplus:
+        print("\nSURPLUS (tradeable depth beyond your starting lineup):")
+        for pos, rows in my_surplus.items():
+            print(f"  {pos}:")
+            for _, row in rows.iterrows():
+                print(f"    {_fmt_player_line(row)}")
+    else:
+        print("\nSURPLUS: no clear tradeable depth beyond your starters.")
+
+    if not my_gaps:
+        print("\nNo starting-lineup gaps found, so there's no urgent need to trade -- "
+              "showing partner fits anyway based on your surplus below.")
+
+    # ------------------------------------------------------------------
+    # Score every other team as a trade partner: do they have surplus at one
+    # of my gap positions, and a gap at one of my surplus positions?
+    # ------------------------------------------------------------------
+    partner_scores = []
+    other_team_analysis = {}
+    for other in league.teams:
+        if other.team_name == team_name:
             continue
-        print(f"Potential trade partner: {other_team.team_name}")
-        print_team_with_fantasypros_ranks(league, fantasypros_rank_df, other_team.team_name)
-        print(f"\n----------")
+        needs, starters, gaps, surplus = _analyze_team(other.team_name, league_df, position_slot_counts)
+        other_team_analysis[other.team_name] = (needs, starters, gaps, surplus)
+
+        fills_my_gap = [pos for pos in my_gaps if pos in surplus]
+        wants_my_surplus = [pos for pos in my_surplus if pos in gaps]
+
+        score = len(fills_my_gap) * 2 + len(wants_my_surplus) * 2
+
+        if score > 0:
+            partner_scores.append((other.team_name, score, fills_my_gap, wants_my_surplus))
+
+    partner_scores.sort(key=lambda x: x[1], reverse=True)
+
+    print(f"\n\n===== Trade Partner Fit for {team_name} =====\n")
+    if not partner_scores:
+        print("No team currently has a clean surplus/gap match against your roster.")
+        return
+
+    for rank, (other_name, score, fills_my_gap, wants_my_surplus) in enumerate(partner_scores, start=1):
+        needs, starters, gaps, surplus = other_team_analysis[other_name]
+        print(f"{rank}. {other_name}  (fit score {score})")
+        if fills_my_gap:
+            print(f"   Their surplus fills your gap at: {', '.join(fills_my_gap)}")
+        if wants_my_surplus:
+            print(f"   Their gap matches your surplus at: {', '.join(wants_my_surplus)}")
+        if not fills_my_gap and not wants_my_surplus:
+            partial = [pos for pos in my_gaps if pos in surplus]
+            print(f"   Partial fit -- they have surplus at: {', '.join(partial)} (no reciprocal need of yours)")
+
+        if fills_my_gap:
+            print("   TARGET (buy toward your gap):")
+            for pos in fills_my_gap:
+                for _, row in surplus[pos].iterrows():
+                    print(f"     {_fmt_player_line(row)}")
+
+        if wants_my_surplus:
+            print("   OFFER (sell from your surplus, they need it):")
+            for pos in wants_my_surplus:
+                for _, row in my_surplus[pos].iterrows():
+                    print(f"     {_fmt_player_line(row)}")
+
+        print()
 
 # find_trade_partners(league, team_name)
 
+fantasypros_freeagents(league, fantasypros_rank_df)
+print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)
 suggest_lineup(league, team_name)
