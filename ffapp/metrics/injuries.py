@@ -142,8 +142,8 @@ def injury_analysis(league, year, rounds=(1, 2)):
     ]].sort_values('Injury Score', ascending=False)
 
 
-@lru_cache(maxsize=16)
-def injury_summary(league):
+@lru_cache(maxsize=32)
+def injury_summary(league, rounds=(1, 2)):
     """Injury trends across all seasons: first starter injured timing, by owner.
 
     Returns
@@ -154,6 +154,7 @@ def injury_summary(league):
     """
     league = registry.canonical(league)
     rows = []
+    round_label = f"R{rounds[0]}-R{rounds[-1]}"
 
     for path in glob.glob(os.path.join(DRAFTS_DIR, f'* Draft Results *.csv')):
         m = DRAFT_RE.match(os.path.basename(path))
@@ -161,7 +162,7 @@ def injury_summary(league):
             continue
 
         year = int(m.group(2))
-        inj = injury_analysis(league, year, rounds=(1, 2))
+        inj = injury_analysis(league, year, rounds=rounds)
 
         if inj.empty:
             continue
@@ -191,7 +192,8 @@ def injury_summary(league):
                 'Injury Score': round(float(first['Injury Score']), 2),
                 'Games Played': int(first['Games Played']),
                 'Games Missed': games_missed,
-                'Injured Count R1-R2': len(injured_rows),
+                'Injured Count': len(injured_rows),
+                'Round Label': round_label,
             })
 
     if not rows:
@@ -200,8 +202,8 @@ def injury_summary(league):
     return pd.DataFrame(rows).sort_values(['Year', 'Team']).reset_index(drop=True)
 
 
-@lru_cache(maxsize=16)
-def injury_luck_by_owner(league):
+@lru_cache(maxsize=32)
+def injury_luck_by_owner(league, rounds=(1, 2)):
     """Aggregate injury stats by owner across all seasons.
 
     Returns
@@ -211,23 +213,25 @@ def injury_luck_by_owner(league):
         First Injury By Week (median timing), Injury Frequency
     """
     league = registry.canonical(league)
-    summary = injury_summary(league)
+    summary = injury_summary(league, rounds=rounds)
 
     if summary.empty:
         return pd.DataFrame()
 
+    round_label = f"R{rounds[0]}-R{rounds[-1]}"
     rows = []
     for owner in summary['Owner'].unique():
         owner_data = summary[summary['Owner'] == owner]
+        total_injuries = owner_data['Injured Count'].sum()
 
         rows.append({
             'Owner': owner,
             'Seasons': len(owner_data),
-            'Injuries (R1-R2)': owner_data['Injured Count R1-R2'].sum(),
-            'Avg Injuries / Season': round(owner_data['Injured Count R1-R2'].mean(), 2),
+            f'Injuries ({round_label})': total_injuries,
+            'Avg Injuries / Season': round(owner_data['Injured Count'].mean(), 2),
             'Total Games Missed': owner_data['Games Missed'].sum(),
             'Avg Games Missed / Injury': round(
-                owner_data['Games Missed'].sum() / max(1, owner_data['Injured Count R1-R2'].sum()),
+                owner_data['Games Missed'].sum() / max(1, total_injuries),
                 1
             ),
         })

@@ -52,9 +52,19 @@ def injury_summary_cached(league):
     return inj.injury_summary(league)
 
 
+@st.cache_data(show_spinner='Analyzing starter injuries (top 8 rounds)...')
+def injury_summary_top8_cached(league):
+    return inj.injury_summary(league, rounds=(1, 2, 3, 4, 5, 6, 7, 8))
+
+
 @st.cache_data(show_spinner='Computing injury luck stats...')
 def injury_luck_cached(league):
     return inj.injury_luck_by_owner(league)
+
+
+@st.cache_data(show_spinner='Computing injury luck stats (top 8 rounds)...')
+def injury_luck_top8_cached(league):
+    return inj.injury_luck_by_owner(league, rounds=(1, 2, 3, 4, 5, 6, 7, 8))
 
 
 def app():
@@ -308,16 +318,53 @@ a week cutoff, since leagues start their postseason in different weeks.
         else:
             display_summary = summary[[
                 'Year', 'Team', 'First Injured', 'First Position', 'Round',
-                'Games Played', 'Games Missed', 'Injury Score', 'Injured Count R1-R2'
+                'Games Played', 'Games Missed', 'Injury Score', 'Injured Count'
             ]].copy()
             display_summary = display_summary.rename(columns={
-                'Injured Count R1-R2': 'Injured (R1-R2)'
+                'Injured Count': 'Count'
             })
             show_table(display_summary.style.background_gradient(
                 subset=['Games Missed', 'Injury Score'],
                 cmap='Reds'),
                 formats={'Year': '{:.0f}', 'Games Missed': '{:.0f}',
-                         'Games Played': '{:.0f}', 'Injured (R1-R2)': '{:.0f}',
+                         'Games Played': '{:.0f}', 'Count': '{:.0f}',
+                         'Injury Score': '{:.2f}'},
+                max_rows=25)
+
+        st.divider()
+        st.markdown('##### All starter injuries (rounds 1-8)')
+        st.caption(
+            'Broader view: any starter pick that underperformed or missed games, '
+            'rounds 1-8 across all seasons.'
+        )
+        luck_top8 = injury_luck_top8_cached(league)
+        if luck_top8.empty:
+            st.info('No draft data for this league yet.')
+        else:
+            show_table(luck_top8.style.background_gradient(
+                subset=['Total Games Missed', 'Avg Games Missed / Injury'],
+                cmap='Reds'),
+                formats={'Avg Injuries / Season': '{:.2f}',
+                         'Avg Games Missed / Injury': '{:.1f}'})
+
+        st.divider()
+        st.markdown('##### Season-by-season (rounds 1-8)')
+        summary_top8 = injury_summary_top8_cached(league)
+        if summary_top8.empty:
+            st.info('No injury data to analyze yet.')
+        else:
+            display_summary_top8 = summary_top8[[
+                'Year', 'Team', 'First Injured', 'First Position', 'Round',
+                'Games Played', 'Games Missed', 'Injury Score', 'Injured Count'
+            ]].copy()
+            display_summary_top8 = display_summary_top8.rename(columns={
+                'Injured Count': 'Count'
+            })
+            show_table(display_summary_top8.style.background_gradient(
+                subset=['Games Missed', 'Injury Score'],
+                cmap='Reds'),
+                formats={'Year': '{:.0f}', 'Games Missed': '{:.0f}',
+                         'Games Played': '{:.0f}', 'Count': '{:.0f}',
                          'Injury Score': '{:.2f}'},
                 max_rows=25)
 
