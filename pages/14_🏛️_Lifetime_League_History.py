@@ -48,23 +48,13 @@ def unresolved(league, file_key):
 
 
 @st.cache_data(show_spinner='Analyzing starter injuries...')
-def injury_summary_cached(league):
-    return inj.injury_summary(league)
-
-
-@st.cache_data(show_spinner='Analyzing starter injuries (top 8 rounds)...')
-def injury_summary_top8_cached(league):
-    return inj.injury_summary(league, rounds=(1, 2, 3, 4, 5, 6, 7, 8))
+def injury_summary_cached(league, rounds=(1, 2)):
+    return inj.injury_summary(league, rounds=rounds)
 
 
 @st.cache_data(show_spinner='Computing injury luck stats...')
-def injury_luck_cached(league):
-    return inj.injury_luck_by_owner(league)
-
-
-@st.cache_data(show_spinner='Computing injury luck stats (top 8 rounds)...')
-def injury_luck_top8_cached(league):
-    return inj.injury_luck_by_owner(league, rounds=(1, 2, 3, 4, 5, 6, 7, 8))
+def injury_luck_cached(league, rounds=(1, 2)):
+    return inj.injury_luck_by_owner(league, rounds=rounds)
 
 
 def app():
@@ -300,7 +290,7 @@ a week cutoff, since leagues start their postseason in different weeks.
             'combines games played and scoring underperformance (0=healthy, 1=severe). '
             'Flagged as injured if score > 0.3 or games played < 12.'
         )
-        luck = injury_luck_cached(league)
+        luck = injury_luck_cached(league, rounds=(1, 2))
         if luck.empty:
             st.info('No draft data for this league yet.')
         else:
@@ -312,7 +302,7 @@ a week cutoff, since leagues start their postseason in different weeks.
 
         st.divider()
         st.markdown('##### Season-by-season first injuries')
-        summary = injury_summary_cached(league)
+        summary = injury_summary_cached(league, rounds=(1, 2))
         if summary.empty:
             st.info('No injury data to analyze yet.')
         else:
@@ -337,7 +327,7 @@ a week cutoff, since leagues start their postseason in different weeks.
             'Broader view: any starter pick that underperformed or missed games, '
             'rounds 1-8 across all seasons.'
         )
-        luck_top8 = injury_luck_top8_cached(league)
+        luck_top8 = injury_luck_cached(league, rounds=(1, 2, 3, 4, 5, 6, 7, 8))
         if luck_top8.empty:
             st.info('No draft data for this league yet.')
         else:
@@ -349,7 +339,7 @@ a week cutoff, since leagues start their postseason in different weeks.
 
         st.divider()
         st.markdown('##### Season-by-season (rounds 1-8)')
-        summary_top8 = injury_summary_top8_cached(league)
+        summary_top8 = injury_summary_cached(league, rounds=(1, 2, 3, 4, 5, 6, 7, 8))
         if summary_top8.empty:
             st.info('No injury data to analyze yet.')
         else:
