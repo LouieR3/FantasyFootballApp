@@ -33,7 +33,9 @@ matt_s2 = CRED["matt_s2"]
 elle_s2 = CRED["elle_s2"]
 dave_s2 = CRED["dave_s2"]
 ayush_s2 = CRED["ayush_s2"]
+ayush_s2_2026 = CRED["ayush_s2_2026"]
 nolan_s2 = CRED["nolan_s2"]
+amanda_s2 = CRED["amanda_s2"]
 
 # Define league metadata once - no hardcoding league IDs per year
 LEAGUES_METADATA = [
@@ -51,7 +53,8 @@ LEAGUES_METADATA = [
     {"name": "OnP Fantasy", "s2_key": "dave_s2", "swid_key": "dave_swid"},
     {"name": "The Mike Daisy Sports IQ League", "s2_key": "dave_s2", "swid_key": "dave_swid"},
     {"name": "BP- Loudoun 2025", "s2_key": "matt_s2", "swid_key": "matt_swid"},
-    {"name": "Ross' Fantasy League", "s2_key": "ayush_s2", "swid_key": "ayush_swid"},
+    {"name": "Ross' Fantasy League", "s2_key": "ayush_s2_2026", "swid_key": "ayush_swid_2026"},
+    {"name": "Amanda's League", "s2_key": "amanda_s2", "swid_key": "amanda_swid"},
     {"name": "Board Fantasy Football", "s2_key": "nolan_s2", "swid_key": "nolan_swid"},
     {"name": "The Goofy Goobers", "s2_key": "prahlad2_s2", "swid_key": "prahlad2_s2"},
     {"name": "Campers and Skiers and Prahlad", "s2_key": "prahlad_s2", "swid_key": "prahlad_swid"},

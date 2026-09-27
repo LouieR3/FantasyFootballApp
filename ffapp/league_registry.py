@@ -95,8 +95,11 @@ LEAGUES = [
          league_id=1924463077, s2="dave_s2", swid="dave_swid",
          page=None, color="#98df8a", confirmed=True),
     dict(espn_name="Ross' Fantasy League", association="Ayush (Dukes)",
-         league_id=558148583, s2="ayush_s2", swid="ayush_swid",
+         league_id=558148583, s2="ayush_s2_2026", swid="ayush_swid_2026",
          page="6_👑_Dukes_League.py", color="#c5b0d5", confirmed=False),
+    dict(espn_name="Amanda's League", association="Amanda",
+         league_id=1165085642, s2="amanda_s2", swid="amanda_swid",
+         page="7_💜_Amandas_League.py", color="#e74c3c", confirmed=True),
     # Rebuilt on ESPN for 2026 under a new id and name - see the module docstring.
     dict(espn_name="BP- Loudoun 2025", association="Matt",
          display="Loudoun Fantasy League",
