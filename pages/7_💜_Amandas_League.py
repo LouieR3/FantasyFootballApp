@@ -47,7 +47,7 @@ def app():
     display_playoff_odds(file, league_id, espn_s2, swid, year)
     if year > 2024:
         display_betting_odds(odds_file)
-    display_lpi_by_week(league_id, espn_s2, swid, file)
+    display_lpi_by_week(file)
     display_strength_of_schedule(file)
     display_expected_wins(file)
     display_draft_results(draft_file, file)
