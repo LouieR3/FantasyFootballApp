@@ -1,0 +1,25 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Fantasy 2026,2026,2,ADD,Buccaneers D/ST,D/ST,(FA),LUKEWARMRANCH,{BD71A541-1210-4976-B1BA-8D146F0767F1},0,activity
+Fantasy 2026,2026,2,ADD,Bengals D/ST,D/ST,(FA),GibbsMe All Your Lovin',{552489C0-7639-4988-A489-C07639C988C2},0,activity
+Fantasy 2026,2026,2,ADD,Evan McPherson,K,(FA),GibbsMe All Your Lovin',{552489C0-7639-4988-A489-C07639C988C2},0,activity
+Fantasy 2026,2026,2,ADD,Kalif Raymond,WR,(FA),GibbsMe All Your Lovin',{552489C0-7639-4988-A489-C07639C988C2},0,activity
+Fantasy 2026,2026,2,ADD,Demarcus Robinson,WR,(FA),GibbsMe All Your Lovin',{552489C0-7639-4988-A489-C07639C988C2},0,activity
+Fantasy 2026,2026,2,ADD,Dontayvion Wicks,WR,(FA),asholes,{7FDB6494-C06F-48C2-9AA1-954B1486C133},0,activity
+Fantasy 2026,2026,2,ADD,Chris Brooks,RB,(FA),CeeDeez TDs,{515B0E66-88C5-4290-9B0E-6688C54290A8},0,activity
+Fantasy 2026,2026,2,ADD,Chiefs D/ST,D/ST,(FA),Chasing the W,{14CF74B1-6D01-4C18-AFE1-4C0191EFF6EA},0,activity
+Fantasy 2026,2026,2,ADD,Jordan Addison,WR,(FA),Chasing the W,{14CF74B1-6D01-4C18-AFE1-4C0191EFF6EA},0,activity
+Fantasy 2026,2026,2,ADD,Kaelon Black,RB,(FA),Dietz NUTZ,{FB00A526-02E3-4330-8CA3-C58C14F34790},0,activity
+Fantasy 2026,2026,2,ADD,49ers D/ST,D/ST,(FA),Dietz NUTZ,{FB00A526-02E3-4330-8CA3-C58C14F34790},0,activity
+Fantasy 2026,2026,2,ADD,Cairo Santos,K,(FA),Dietz NUTZ,{FB00A526-02E3-4330-8CA3-C58C14F34790},0,activity
+Fantasy 2026,2026,2,ADD,Devaughn Vele,WR,(FA),Amanda's Awesome Team,{9979E92C-9818-4436-9671-ABA329BBE6D9},0,activity
+Fantasy 2026,2026,2,DROP,Tyjae Spears,RB,asholes,(FA),{7FDB6494-C06F-48C2-9AA1-954B1486C133},0,activity
+Fantasy 2026,2026,2,DROP,Jaguars D/ST,D/ST,LUKEWARMRANCH,(FA),{BD71A541-1210-4976-B1BA-8D146F0767F1},0,activity
+Fantasy 2026,2026,2,DROP,Harrison Mevis,K,GibbsMe All Your Lovin',(FA),{552489C0-7639-4988-A489-C07639C988C2},0,activity
+Fantasy 2026,2026,2,DROP,Lions D/ST,D/ST,GibbsMe All Your Lovin',(FA),{552489C0-7639-4988-A489-C07639C988C2},0,activity
+Fantasy 2026,2026,2,DROP,De'Zhaun Stribling,WR,GibbsMe All Your Lovin',(FA),{552489C0-7639-4988-A489-C07639C988C2},0,activity
+Fantasy 2026,2026,2,DROP,Baker Mayfield,QB,Dietz NUTZ,(FA),{FB00A526-02E3-4330-8CA3-C58C14F34790},0,activity
+Fantasy 2026,2026,2,DROP,Spencer Shrader,K,Dietz NUTZ,(FA),{FB00A526-02E3-4330-8CA3-C58C14F34790},0,activity
+Fantasy 2026,2026,2,DROP,Chargers D/ST,D/ST,Dietz NUTZ,(FA),{FB00A526-02E3-4330-8CA3-C58C14F34790},0,activity
+Fantasy 2026,2026,2,DROP,Cyrus Allen,WR,Amanda's Awesome Team,(FA),{9979E92C-9818-4436-9671-ABA329BBE6D9},0,activity
+Fantasy 2026,2026,2,DROP,Wan'Dale Robinson,WR,Chasing the W,(FA),{14CF74B1-6D01-4C18-AFE1-4C0191EFF6EA},0,activity
+Fantasy 2026,2026,2,DROP,Browns D/ST,D/ST,Chasing the W,(FA),{14CF74B1-6D01-4C18-AFE1-4C0191EFF6EA},0,activity

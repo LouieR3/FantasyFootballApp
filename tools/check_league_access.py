@@ -68,11 +68,10 @@ leagues = [
     # # Campers and Skiers and Prahlad League
     # {"league_id": 47829282, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "Campers and Skiers and Prahlad"},
     # Amandas League
-    {"league_id": 1165085642, "year": year, "espn_s2": amanda_s2, "swid": CRED["amanda_swid"], "name": "Amandas League"},
+    {"league_id": 1165085642, "year": year, "espn_s2": "AEBShd2SDIa7%2BvTUJZKxCHVtyGxh%2Bvu1Tlz6HGKABaqowv3SBk%2Fu5FXgGKaVf7cI%2BPDKtpfHPVRvZV3Fbuu0UDGrNtVrUcwEVScJ8KjZtjxn%2F8fJThHcOjzk%2FaZe1qWGwOicnMEG5j6O3H%2BT9HA2pRRt94zOaUj9yyOgHV1Z9gLRGfazxfc4UP3LIyITE85shykkjiwwMpSyVCsw1Ze1I8WsX048NNrCfPqghNKlGO%2FlaSE0YKlWrYyfz8wFo4CoZyeczkUl%2BIb1jb05YWB6YZkH5Sytxnjrc7PP%2FL73uAJGdA%3D%3D", "swid": "{9979E92C-9818-4436-9671-ABA329BBE6D9}", "name": "Amandas League"},
 ]
 
 # from ffapp.leagues_config import get_leagues_for_year
-
 # leagues = get_leagues_for_year(year)
 # Nolan League
 # league = League(
