@@ -32,6 +32,7 @@ def app():
     st.title("💜 " + league)
     # Extract the league name without the year
     league_name = " ".join(league.split()[:-1])  # Removes the year from the league string
+    league_name = "Fantasy 2026"
     draft_file = f"{DRAFTS_DIR}/{league_name} Draft Results {selected_year}.csv"
     odds_file = f"{ODDS_DIR}/{league} Betting Odds.xlsx"
 
