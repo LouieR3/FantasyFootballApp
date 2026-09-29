@@ -52,40 +52,40 @@ ayush_s2_2026 = CRED["ayush_s2_2026"]
 year = 2026
 from ffapp.leagues_config import get_leagues_for_year
 
-leagues = get_leagues_for_year(year)
+# leagues = get_leagues_for_year(year)
 
-# leagues = [
-#     # Pennoni Younglings
-#     {"league_id": 310334683, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Pennoni Younglings"},
-#     # Family League
-#     {"league_id": 1343668602, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Family League"},
-#     # EBC League
-#     {"league_id": 1118513122, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "EBC League"},
-#     # Game of Yards
-#     {"league_id": 1781851, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Game of Yards!"},
-#     # Brown Munde
-#     {"league_id": 367134149, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Brown Munde"},
-#     # Turf On Grade 2.0 League
-#     {"league_id":1242265374, "year":year, "espn_s2":CRED["turf_s2"], "swid":CRED["prahlad_swid"], "name": "Turf On Grade 2.0"},
-#     # Las League
-#     {"league_id": 1049459, "year": year, "espn_s2": la_s2, "swid": CRED["la_swid"], "name": "THE BEST OF THE BEST"},
-#     # Hannahs League
-#     {"league_id": 1399036372, "year": year, "espn_s2": hannah_s2, "swid": CRED["hannah_swid"], "name": "The Girl's Room 💞🏈"},
-#     # Avas League
-#     {"league_id": 417131856, "year": year, "espn_s2": ava_s2, "swid": CRED["ava_swid"], "name": "Philly Extra Special"},
-#     # Matts League
-#     {"league_id": 29400230, "year": year, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
-#     # Ayush League
-#     {"league_id": 558148583, "year": year, "espn_s2": ayush_s2_2026, "swid": CRED["ayush_swid_2026"], "name": "Ross' Fantasy League"},
-#     # Nolans League
-#     {"league_id": 496646254, "year": year, "espn_s2": nolan_s2, "swid": CRED["nolan_swid"], "name": "Nolan's League"},
-#     # The Goofy Goobers League
-#     {"league_id": 1616305229, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "The Goofy Goobers"},
-#     # Campers and Skiers and Prahlad League
-#     {"league_id": 47829282, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "Campers and Skiers and Prahlad"},
-#     # Amandas League
-#     {"league_id": 1165085642, "year": year, "espn_s2": amanda_s2, "swid": CRED["amanda_swid"], "name": "Amandas League"},
-# ]
+leagues = [
+    # # Pennoni Younglings
+    # {"league_id": 310334683, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Pennoni Younglings"},
+    # # Family League
+    # {"league_id": 1343668602, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Family League"},
+    # # EBC League
+    # {"league_id": 1118513122, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "EBC League"},
+    # # Game of Yards
+    # {"league_id": 1781851, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Game of Yards!"},
+    # # Brown Munde
+    # {"league_id": 367134149, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Brown Munde"},
+    # # Turf On Grade 2.0 League
+    # {"league_id":1242265374, "year":year, "espn_s2":CRED["turf_s2"], "swid":CRED["prahlad_swid"], "name": "Turf On Grade 2.0"},
+    # # Las League
+    # {"league_id": 1049459, "year": year, "espn_s2": la_s2, "swid": CRED["la_swid"], "name": "THE BEST OF THE BEST"},
+    # # Hannahs League
+    # {"league_id": 1399036372, "year": year, "espn_s2": hannah_s2, "swid": CRED["hannah_swid"], "name": "The Girl's Room 💞🏈"},
+    # # Avas League
+    # {"league_id": 417131856, "year": year, "espn_s2": ava_s2, "swid": CRED["ava_swid"], "name": "Philly Extra Special"},
+    # # Matts League
+    # {"league_id": 29400230, "year": year, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
+    # Ayush League
+    {"league_id": 558148583, "year": year, "espn_s2": ayush_s2_2026, "swid": CRED["ayush_swid_2026"], "name": "Ross' Fantasy League"},
+    # # Nolans League
+    # {"league_id": 496646254, "year": year, "espn_s2": nolan_s2, "swid": CRED["nolan_swid"], "name": "Nolan's League"},
+    # # The Goofy Goobers League
+    # {"league_id": 1616305229, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "The Goofy Goobers"},
+    # # Campers and Skiers and Prahlad League
+    # {"league_id": 47829282, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "Campers and Skiers and Prahlad"},
+    # Amandas League
+    {"league_id": 1165085642, "year": year, "espn_s2": amanda_s2, "swid": CRED["amanda_swid"], "name": "Amandas League"},
+]
 
 # Loop through each league configuration
 for league_config in leagues:
@@ -604,19 +604,19 @@ for league_config in leagues:
         print(f"Details: {str(e)}")
         continue  # Move to the next league
 
-# all_matchups_df = get_weeks_matchups(leagues, year)
-# try:
-#     current_matchups = pd.read_csv(f"{DATA_DIR}/all_matchups.csv")
-#     all_matchups_df = pd.concat([current_matchups, all_matchups_df]).drop_duplicates().reset_index(drop=True)
-#     all_matchups_df["Home Predicted Score"] = all_matchups_df["Home Predicted Score"].round(2)
-#     all_matchups_df["Away Predicted Score"] = all_matchups_df["Away Predicted Score"].round(2)
-#     all_matchups_df["Predicted Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
-#     all_matchups_df["Actual Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
-#     print("Merged with existing all_matchups.csv")
-#     print(all_matchups_df)
-#     all_matchups_df.to_csv(f"{DATA_DIR}/all_matchups.csv", index=False)
-# except FileNotFoundError:
-#     print("No existing all_matchups.csv found, creating a new one.")
+all_matchups_df = get_weeks_matchups(leagues, year)
+try:
+    current_matchups = pd.read_csv(f"{DATA_DIR}/all_matchups.csv")
+    all_matchups_df = pd.concat([current_matchups, all_matchups_df]).drop_duplicates().reset_index(drop=True)
+    all_matchups_df["Home Predicted Score"] = all_matchups_df["Home Predicted Score"].round(2)
+    all_matchups_df["Away Predicted Score"] = all_matchups_df["Away Predicted Score"].round(2)
+    all_matchups_df["Predicted Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
+    all_matchups_df["Actual Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
+    print("Merged with existing all_matchups.csv")
+    print(all_matchups_df)
+    all_matchups_df.to_csv(f"{DATA_DIR}/all_matchups.csv", index=False)
+except FileNotFoundError:
+    print("No existing all_matchups.csv found, creating a new one.")
 
 create_betting_odds(leagues, year)
 

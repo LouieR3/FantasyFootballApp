@@ -1,10 +1,29 @@
 League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
-EBC League,2026,2,ADD,Dalton Kincaid,TE,(FA),P90 Asiimov,{4656A2AD-A939-460B-96A2-ADA939760B8B},5,activity
-EBC League,2026,2,ADD,Tyler Shough,QB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},1,activity
-EBC League,2026,2,ADD,Juwan Johnson,TE,(FA),Wise Warlocks,{89E249D2-17CC-4743-B60A-232D01C6434D},2,activity
-EBC League,2026,2,ADD,Jalen Coker,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},6,activity
-EBC League,2026,2,ADD,Kyle Monangai,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},4,activity
-EBC League,2026,2,DROP,T.J. Hockenson,TE,P90 Asiimov,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
-EBC League,2026,2,DROP,Tony Pollard,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,activity
-EBC League,2026,2,DROP,Rico Dowdle,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,activity
-EBC League,2026,2,DROP,Hunter Henry,TE,Wise Warlocks,(FA),{89E249D2-17CC-4743-B60A-232D01C6434D},0,activity
+EBC League,2026,2,ADD,Dalton Kincaid,TE,(FA),P90 Asiimov,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2026,2,ADD,Tyler Shough,QB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2026,2,ADD,Juwan Johnson,TE,(FA),Wise Warlocks,{89E249D2-17CC-4743-B60A-232D01C6434D},0,snapshot
+EBC League,2026,2,ADD,Jalen Coker,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2026,2,ADD,Kyle Monangai,RB,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2026,2,DROP,T.J. Hockenson,TE,P90 Asiimov,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2026,2,DROP,Tony Pollard,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2026,2,DROP,Rico Dowdle,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2026,2,DROP,Hunter Henry,TE,Wise Warlocks,(FA),{89E249D2-17CC-4743-B60A-232D01C6434D},0,snapshot
+EBC League,2026,3,ADD,Justin Herbert,QB,Wise Warlocks,OBJYN,{10F78273-9201-4EE8-B782-739201DEE809},1,activity
+EBC League,2026,3,ADD,Bryce Young,QB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},5,activity
+EBC League,2026,3,ADD,Josh Downs,WR,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},2,activity
+EBC League,2026,3,ADD,Emmett Johnson,RB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},1,activity
+EBC League,2026,3,ADD,Harrison Butker,K,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},1,activity
+EBC League,2026,3,ADD,Tyler Shough,QB,First down syndrome ,Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},5,activity
+EBC League,2026,3,ADD,Patrick Mahomes,QB,(FA),Wise Warlocks,{89E249D2-17CC-4743-B60A-232D01C6434D},8,activity
+EBC League,2026,3,ADD,Dalton Schultz,TE,(FA),Wise Warlocks,{89E249D2-17CC-4743-B60A-232D01C6434D},5,activity
+EBC League,2026,3,ADD,Deebo Samuel Sr.,WR,(FA),Wise Warlocks,{89E249D2-17CC-4743-B60A-232D01C6434D},4,activity
+EBC League,2026,3,ADD,Evan McPherson,K,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},2,activity
+EBC League,2026,3,DROP,Jayden Daniels,QB,OBJYN,(FA),{10F78273-9201-4EE8-B782-739201DEE809},0,activity
+EBC League,2026,3,DROP,Kenny Gainwell,RB,P90 Asiimov,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
+EBC League,2026,3,DROP,MarShawn Lloyd,RB,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,activity
+EBC League,2026,3,DROP,Cameron Dicker,K,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,activity
+EBC League,2026,3,DROP,De'Zhaun Stribling,WR,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,activity
+EBC League,2026,3,DROP,Courtland Sutton,WR,Wise Warlocks,(FA),{89E249D2-17CC-4743-B60A-232D01C6434D},0,activity
+EBC League,2026,3,DROP,Juwan Johnson,TE,Wise Warlocks,(FA),{89E249D2-17CC-4743-B60A-232D01C6434D},0,activity
+EBC League,2026,3,DROP,Jaxson Dart,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,activity
+EBC League,2026,3,DROP,Harrison Mevis,K,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,activity

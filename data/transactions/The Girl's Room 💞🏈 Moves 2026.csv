@@ -1,18 +1,43 @@
 League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
-The Girl's Room 💞🏈,2026,2,ADD,Caleb Douglas,WR,(FA),Flock Around and Find Out,{3251D3F1-A2F9-4601-BEF2-9005CBB120BE},0,activity
-The Girl's Room 💞🏈,2026,2,ADD,49ers D/ST,D/ST,(FA),Third Down and Long Story,{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,activity
-The Girl's Room 💞🏈,2026,2,ADD,Antonio Williams,WR,(FA),Third Down and Long Story,{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,activity
-The Girl's Room 💞🏈,2026,2,ADD,Trey Smack,K,(FA),Third Down and Long Story,{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,activity
-The Girl's Room 💞🏈,2026,2,ADD,Buccaneers D/ST,D/ST,(FA),Sacks and the City,{FD379251-A8A4-42A5-8FA5-83D1DA913174},0,activity
-The Girl's Room 💞🏈,2026,2,ADD,Devaughn Vele,WR,(FA),Immaculate Concepcion,{9979E92C-9818-4436-9671-ABA329BBE6D9},0,activity
-The Girl's Room 💞🏈,2026,2,ADD,Dontayvion Wicks,WR,(FA),Immaculate Concepcion,{9979E92C-9818-4436-9671-ABA329BBE6D9},0,activity
-The Girl's Room 💞🏈,2026,2,ADD,Kendre Miller,RB,(FA),Immaculate Concepcion,{9979E92C-9818-4436-9671-ABA329BBE6D9},0,activity
-The Girl's Room 💞🏈,2026,2,ADD,Chiefs D/ST,D/ST,(FA),Immaculate Concepcion,{9979E92C-9818-4436-9671-ABA329BBE6D9},0,activity
-The Girl's Room 💞🏈,2026,2,DROP,Mike Washington Jr.,RB,Flock Around and Find Out,(FA),{3251D3F1-A2F9-4601-BEF2-9005CBB120BE},0,activity
-The Girl's Room 💞🏈,2026,2,DROP,Spencer Shrader,K,Third Down and Long Story,(FA),{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,activity
-The Girl's Room 💞🏈,2026,2,DROP,Rashid Shaheed,WR,Third Down and Long Story,(FA),{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,activity
-The Girl's Room 💞🏈,2026,2,DROP,Titans D/ST,D/ST,Third Down and Long Story,(FA),{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,activity
-The Girl's Room 💞🏈,2026,2,DROP,Rams D/ST,D/ST,Immaculate Concepcion,(FA),{9979E92C-9818-4436-9671-ABA329BBE6D9},0,activity
-The Girl's Room 💞🏈,2026,2,DROP,De'Zhaun Stribling,WR,Immaculate Concepcion,(FA),{9979E92C-9818-4436-9671-ABA329BBE6D9},0,activity
-The Girl's Room 💞🏈,2026,2,DROP,Cyrus Allen,WR,Immaculate Concepcion,(FA),{9979E92C-9818-4436-9671-ABA329BBE6D9},0,activity
-The Girl's Room 💞🏈,2026,2,DROP,Packers D/ST,D/ST,Sacks and the City,(FA),{FD379251-A8A4-42A5-8FA5-83D1DA913174},0,activity
+The Girl's Room 💞🏈,2026,2,ADD,Caleb Douglas,WR,(FA),Flock Around and Find Out,{3251D3F1-A2F9-4601-BEF2-9005CBB120BE},0,snapshot
+The Girl's Room 💞🏈,2026,2,ADD,49ers D/ST,D/ST,(FA),Third Down and Long Story,{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,snapshot
+The Girl's Room 💞🏈,2026,2,ADD,Antonio Williams,WR,(FA),Third Down and Long Story,{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,snapshot
+The Girl's Room 💞🏈,2026,2,ADD,Trey Smack,K,(FA),Third Down and Long Story,{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,snapshot
+The Girl's Room 💞🏈,2026,2,ADD,Buccaneers D/ST,D/ST,(FA),Sacks and the City,{FD379251-A8A4-42A5-8FA5-83D1DA913174},0,snapshot
+The Girl's Room 💞🏈,2026,2,ADD,Devaughn Vele,WR,(FA),Immaculate Concepcion,{9979E92C-9818-4436-9671-ABA329BBE6D9},0,snapshot
+The Girl's Room 💞🏈,2026,2,ADD,Dontayvion Wicks,WR,(FA),Immaculate Concepcion,{9979E92C-9818-4436-9671-ABA329BBE6D9},0,snapshot
+The Girl's Room 💞🏈,2026,2,ADD,Kendre Miller,RB,(FA),Immaculate Concepcion,{9979E92C-9818-4436-9671-ABA329BBE6D9},0,snapshot
+The Girl's Room 💞🏈,2026,2,ADD,Chiefs D/ST,D/ST,(FA),Immaculate Concepcion,{9979E92C-9818-4436-9671-ABA329BBE6D9},0,snapshot
+The Girl's Room 💞🏈,2026,2,DROP,Mike Washington Jr.,RB,Flock Around and Find Out,(FA),{3251D3F1-A2F9-4601-BEF2-9005CBB120BE},0,snapshot
+The Girl's Room 💞🏈,2026,2,DROP,Spencer Shrader,K,Third Down and Long Story,(FA),{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,snapshot
+The Girl's Room 💞🏈,2026,2,DROP,Rashid Shaheed,WR,Third Down and Long Story,(FA),{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,snapshot
+The Girl's Room 💞🏈,2026,2,DROP,Titans D/ST,D/ST,Third Down and Long Story,(FA),{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,snapshot
+The Girl's Room 💞🏈,2026,2,DROP,Rams D/ST,D/ST,Immaculate Concepcion,(FA),{9979E92C-9818-4436-9671-ABA329BBE6D9},0,snapshot
+The Girl's Room 💞🏈,2026,2,DROP,De'Zhaun Stribling,WR,Immaculate Concepcion,(FA),{9979E92C-9818-4436-9671-ABA329BBE6D9},0,snapshot
+The Girl's Room 💞🏈,2026,2,DROP,Cyrus Allen,WR,Immaculate Concepcion,(FA),{9979E92C-9818-4436-9671-ABA329BBE6D9},0,snapshot
+The Girl's Room 💞🏈,2026,2,DROP,Packers D/ST,D/ST,Sacks and the City,(FA),{FD379251-A8A4-42A5-8FA5-83D1DA913174},0,snapshot
+The Girl's Room 💞🏈,2026,3,ADD,Bengals D/ST,D/ST,(FA),Tush Push Director 🍑,{6463FE68-068E-42B0-BF9C-B0AEFD28D60C},0,activity
+The Girl's Room 💞🏈,2026,3,ADD,Deshaun Watson,QB,(FA),Tush Push Director 🍑,{6463FE68-068E-42B0-BF9C-B0AEFD28D60C},0,activity
+The Girl's Room 💞🏈,2026,3,ADD,Bryce Young,QB,(FA),Tush Push Director 🍑,{6463FE68-068E-42B0-BF9C-B0AEFD28D60C},0,activity
+The Girl's Room 💞🏈,2026,3,ADD,Tre Tucker,WR,(FA),Tush Push Director 🍑,{6463FE68-068E-42B0-BF9C-B0AEFD28D60C},0,activity
+The Girl's Room 💞🏈,2026,3,ADD,Zach Ertz,TE,(FA),Flock Around and Find Out,{3251D3F1-A2F9-4601-BEF2-9005CBB120BE},0,activity
+The Girl's Room 💞🏈,2026,3,ADD,Vikings D/ST,D/ST,(FA),Flock Around and Find Out,{3251D3F1-A2F9-4601-BEF2-9005CBB120BE},0,activity
+The Girl's Room 💞🏈,2026,3,ADD,Denzel Boston,WR,(FA),michelle’s boy toys ,{BE673AAC-9E3A-4AF1-BF53-30207830C68F},0,activity
+The Girl's Room 💞🏈,2026,3,ADD,Evan McPherson,K,(FA),michelle’s boy toys ,{BE673AAC-9E3A-4AF1-BF53-30207830C68F},0,activity
+The Girl's Room 💞🏈,2026,3,ADD,Emanuel Wilson,RB,(FA),Sacks and the City,{FD379251-A8A4-42A5-8FA5-83D1DA913174},0,activity
+The Girl's Room 💞🏈,2026,3,ADD,Darren Waller,TE,(FA),Third Down and Long Story,{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,activity
+The Girl's Room 💞🏈,2026,3,TEAM->TEAM,Tony Pollard,RB,Tush Push Director 🍑,Immaculate Concepcion,{9979E92C-9818-4436-9671-ABA329BBE6D9},0,snapshot
+The Girl's Room 💞🏈,2026,3,ADD,Geno Smith,QB,(FA),Gridiron Grace,{2C5A506D-2152-485A-A901-E0C1F08F8915},0,activity
+The Girl's Room 💞🏈,2026,3,ADD,Adonai Mitchell,WR,(FA),Rolling with the Homies,{876E1E23-9F22-4BB6-85DA-7F1326D7A4D3},0,activity
+The Girl's Room 💞🏈,2026,3,ADD,Oronde Gadsden,TE,(FA),Rolling with the Homies,{876E1E23-9F22-4BB6-85DA-7F1326D7A4D3},0,activity
+The Girl's Room 💞🏈,2026,3,DROP,Chargers D/ST,D/ST,Flock Around and Find Out,(FA),{3251D3F1-A2F9-4601-BEF2-9005CBB120BE},0,activity
+The Girl's Room 💞🏈,2026,3,DROP,Quentin Johnston,WR,Flock Around and Find Out,(FA),{3251D3F1-A2F9-4601-BEF2-9005CBB120BE},0,activity
+The Girl's Room 💞🏈,2026,3,DROP,Ravens D/ST,D/ST,Tush Push Director 🍑,(FA),{6463FE68-068E-42B0-BF9C-B0AEFD28D60C},0,activity
+The Girl's Room 💞🏈,2026,3,DROP,Daniel Jones,QB,Tush Push Director 🍑,(FA),{6463FE68-068E-42B0-BF9C-B0AEFD28D60C},0,activity
+The Girl's Room 💞🏈,2026,3,DROP,Will Reichard,K,michelle’s boy toys ,(FA),{BE673AAC-9E3A-4AF1-BF53-30207830C68F},0,activity
+The Girl's Room 💞🏈,2026,3,DROP,Brenton Strange,TE,Third Down and Long Story,(FA),{406D4692-3C67-4DBA-B1E3-5736014C31B1},0,activity
+The Girl's Room 💞🏈,2026,3,DROP,Alec Pierce,WR,Sacks and the City,(FA),{FD379251-A8A4-42A5-8FA5-83D1DA913174},0,activity
+The Girl's Room 💞🏈,2026,3,DROP,Kendre Miller,RB,Immaculate Concepcion,(FA),{9979E92C-9818-4436-9671-ABA329BBE6D9},0,activity
+The Girl's Room 💞🏈,2026,3,DROP,Browns D/ST,D/ST,Gridiron Grace,(FA),{2C5A506D-2152-485A-A901-E0C1F08F8915},0,activity
+The Girl's Room 💞🏈,2026,3,DROP,Chris Rodriguez Jr.,RB,Rolling with the Homies,(FA),{876E1E23-9F22-4BB6-85DA-7F1326D7A4D3},0,activity
+The Girl's Room 💞🏈,2026,3,DROP,Michael Mayer,TE,Rolling with the Homies,(FA),{876E1E23-9F22-4BB6-85DA-7F1326D7A4D3},0,activity

@@ -1,8 +1,22 @@
 League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
-Family Fantasy,2026,2,ADD,Brenton Strange,TE,(FA),For Me to Poop On,{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,activity
-Family Fantasy,2026,2,ADD,Dontayvion Wicks,WR,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
-Family Fantasy,2026,2,ADD,Chris Brooks,RB,(FA),Michael's Magnificent Team,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
-Family Fantasy,2026,2,ADD,Kaelon Black,RB,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
-Family Fantasy,2026,2,ADD,Joe Flacco,QB,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
-Family Fantasy,2026,2,DROP,Hunter Henry,TE,For Me to Poop On,(FA),{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,activity
-Family Fantasy,2026,2,DROP,Samaje Perine,RB,Flacillionares,(FA),{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,2,ADD,Brenton Strange,TE,(FA),For Me to Poop On,{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,snapshot
+Family Fantasy,2026,2,ADD,Dontayvion Wicks,WR,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
+Family Fantasy,2026,2,ADD,Chris Brooks,RB,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,snapshot
+Family Fantasy,2026,2,ADD,Kaelon Black,RB,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,snapshot
+Family Fantasy,2026,2,ADD,Joe Flacco,QB,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,snapshot
+Family Fantasy,2026,2,DROP,Hunter Henry,TE,For Me to Poop On,(FA),{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,snapshot
+Family Fantasy,2026,2,DROP,Samaje Perine,RB,Flacillionares,(FA),{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,snapshot
+Family Fantasy,2026,3,ADD,Vikings D/ST,D/ST,(FA),For Me to Poop On,{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,activity
+Family Fantasy,2026,3,ADD,Terrance Ferguson,TE,(FA),Jackson's Scary Team,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
+Family Fantasy,2026,3,ADD,49ers D/ST,D/ST,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,3,ADD,Hunter Henry,TE,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,3,ADD,Bryce Young,QB,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,3,ADD,Emanuel Wilson,RB,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,3,ADD,Jacoby Brissett,QB,(FA),That movie was great...,{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,activity
+Family Fantasy,2026,3,ADD,Kyler Murray,QB,Flacillionares,Big Bosh Bashers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
+Family Fantasy,2026,3,DROP,Jaguars D/ST,D/ST,For Me to Poop On,(FA),{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,activity
+Family Fantasy,2026,3,DROP,Isaac TeSlaa,WR,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,3,DROP,Keaton Mitchell,RB,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,3,DROP,Brian Robinson Jr.,RB,Flacillionares,(FA),{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,3,DROP,Tyler Allgeier,RB,That movie was great...,(FA),{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,activity
+Family Fantasy,2026,3,DROP,Baker Mayfield,QB,Big Bosh Bashers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity

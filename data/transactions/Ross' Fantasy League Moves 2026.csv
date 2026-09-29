@@ -1,11 +1,20 @@
 League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
-Ross' Fantasy League,2026,2,ADD,Brock Purdy,QB,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,activity
-Ross' Fantasy League,2026,2,ADD,Caleb Williams,QB,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
-Ross' Fantasy League,2026,2,ADD,Jalen Coker,WR,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
-Ross' Fantasy League,2026,2,ADD,49ers D/ST,D/ST,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
-Ross' Fantasy League,2026,2,ADD,Dalton Kincaid,TE,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,activity
-Ross' Fantasy League,2026,2,DROP,Tony Pollard,RB,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,activity
-Ross' Fantasy League,2026,2,DROP,Steelers D/ST,D/ST,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
-Ross' Fantasy League,2026,2,DROP,Justin Herbert,QB,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
-Ross' Fantasy League,2026,2,DROP,Zach Charbonnet,RB,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
-Ross' Fantasy League,2026,2,DROP,Jake Ferguson,TE,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,activity
+Ross' Fantasy League,2026,2,ADD,Brock Purdy,QB,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2026,2,ADD,Caleb Williams,QB,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2026,2,ADD,Jalen Coker,WR,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2026,2,ADD,49ers D/ST,D/ST,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2026,2,ADD,Dalton Kincaid,TE,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2026,2,DROP,Tony Pollard,RB,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2026,2,DROP,Steelers D/ST,D/ST,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2026,2,DROP,Justin Herbert,QB,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2026,2,DROP,Zach Charbonnet,RB,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2026,2,DROP,Jake Ferguson,TE,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2026,3,ADD,Bryce Young,QB,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
+Ross' Fantasy League,2026,3,ADD,Chiefs D/ST,D/ST,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
+Ross' Fantasy League,2026,3,ADD,Tyler Shough,QB,(FA),Tailed Bijan Bomb,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
+Ross' Fantasy League,2026,3,ADD,Dalton Schultz,TE,(FA),Tailed Bijan Bomb,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
+Ross' Fantasy League,2026,3,ADD,Denzel Boston,WR,(FA),Yung Killas,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,activity
+Ross' Fantasy League,2026,3,DROP,Rhamondre Stevenson,RB,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
+Ross' Fantasy League,2026,3,DROP,49ers D/ST,D/ST,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
+Ross' Fantasy League,2026,3,DROP,Drake Maye,QB,Tailed Bijan Bomb,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
+Ross' Fantasy League,2026,3,DROP,Dallas Goedert,TE,Tailed Bijan Bomb,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
