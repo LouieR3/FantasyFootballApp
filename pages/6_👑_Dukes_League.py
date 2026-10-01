@@ -64,8 +64,8 @@ def app():
     except Exception:
         pass
 
-    display_playoff_odds_by_week(league_id, espn_s2, swid, file)
-    display_remaining_schedule_difficulty(league_id, espn_s2, swid, file)
+    display_playoff_odds_by_week(file)
+    display_remaining_schedule_difficulty(file)
 
     try:
         display_biggest_lpi_upsets(league_name)

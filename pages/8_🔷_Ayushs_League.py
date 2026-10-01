@@ -49,21 +49,22 @@ def app():
 
         def filter_owner_columns(data, **kwargs):
             if isinstance(data, pd.DataFrame):
-                cols_to_drop = [col for col in data.columns if 'owner' in col.lower()]
+                # Strip whitespace from column names and filter
+                cols_to_drop = [col for col in data.columns if 'owner' in col.strip().lower()]
                 if cols_to_drop:
                     data = data.drop(columns=cols_to_drop, errors='ignore')
             return original_dataframe(data, **kwargs)
 
         def filter_owner_table(data, **kwargs):
             if isinstance(data, pd.DataFrame):
-                cols_to_drop = [col for col in data.columns if 'owner' in col.lower()]
+                cols_to_drop = [col for col in data.columns if 'owner' in col.strip().lower()]
                 if cols_to_drop:
                     data = data.drop(columns=cols_to_drop, errors='ignore')
             return original_table(data, **kwargs)
 
         def filter_owner_write(obj, **kwargs):
             if isinstance(obj, pd.DataFrame):
-                cols_to_drop = [col for col in obj.columns if 'owner' in col.lower()]
+                cols_to_drop = [col for col in obj.columns if 'owner' in col.strip().lower()]
                 if cols_to_drop:
                     obj = obj.drop(columns=cols_to_drop, errors='ignore')
             return original_write(obj, **kwargs)
@@ -98,8 +99,8 @@ def app():
     except Exception:
         pass
 
-    display_playoff_odds_by_week(league_id, espn_s2, swid, file)
-    display_remaining_schedule_difficulty(league_id, espn_s2, swid, file)
+    display_playoff_odds_by_week(file)
+    display_remaining_schedule_difficulty(file)
 
     try:
         display_biggest_lpi_upsets(league_name)
