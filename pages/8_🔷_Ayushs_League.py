@@ -8,6 +8,10 @@ import streamlit as st
 from paths import DRAFTS_DIR, LEAGUES_DIR, ODDS_DIR
 from ffapp.ui.data_loader import available_years
 
+# Initialize session state for privacy mode
+if 'ayush_privacy_mode' not in st.session_state:
+    st.session_state.ayush_privacy_mode = False
+
 def app():
     import pandas as pd
     from operator import itemgetter
@@ -31,11 +35,40 @@ def app():
     league = f"{league_name} {selected_year}"
     file = f"{LEAGUES_DIR}/" + league + ".xlsx"
     st.title("🔷 Ayush's League - " + league)
+
+    # Privacy toggle
+    col1, col2 = st.columns([0.8, 0.2])
+    with col2:
+        st.session_state.ayush_privacy_mode = st.toggle("🔒 Privacy Mode", st.session_state.ayush_privacy_mode)
+    if st.session_state.ayush_privacy_mode:
+        with col1:
+            st.info("Privacy mode ON - Owner/player names hidden")
+
     draft_file = f"{DRAFTS_DIR}/{league_name} Draft Results {selected_year}.csv"
     odds_file = f"{ODDS_DIR}/{league} Betting Odds.xlsx"
 
     from ffapp.ui.page_functions import display_remaining_schedule_difficulty, display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds, display_betting_odds
     from ffapp.ui.page_functions import display_playoff_odds_by_week, display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results, display_trades
+
+    # Privacy mode: intercept and filter dataframe displays
+    if st.session_state.ayush_privacy_mode:
+        original_dataframe = st.dataframe
+        original_table = st.table
+
+        def privacy_filtered_dataframe(data, **kwargs):
+            if isinstance(data, pd.DataFrame):
+                cols_to_drop = [col for col in data.columns if 'owner' in col.lower() or 'player name' in col.lower() or col.lower() == 'team']
+                data = data.drop(columns=cols_to_drop, errors='ignore')
+            return original_dataframe(data, **kwargs)
+
+        def privacy_filtered_table(data, **kwargs):
+            if isinstance(data, pd.DataFrame):
+                cols_to_drop = [col for col in data.columns if 'owner' in col.lower() or 'player name' in col.lower() or col.lower() == 'team']
+                data = data.drop(columns=cols_to_drop, errors='ignore')
+            return original_table(data, **kwargs)
+
+        st.dataframe = privacy_filtered_dataframe
+        st.table = privacy_filtered_table
 
     display_playoff_results(file)
 
