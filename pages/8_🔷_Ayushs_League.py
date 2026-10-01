@@ -43,6 +43,7 @@ def app():
 
     # Filter Owner/Owners columns from display
     if HIDE_OWNER_COLUMNS:
+        print("Filtering Owner/Owners columns...")
         original_dataframe = st.dataframe
         original_table = st.table
         original_write = st.write

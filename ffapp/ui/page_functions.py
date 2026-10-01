@@ -354,18 +354,22 @@ def display_playoff_odds_by_week(file):
 def display_remaining_schedule_difficulty(file):
     st.header('Remaining Schedule Difficulty')
     st.write("This table shows the average Louie Power Index (LPI) of each team's remaining opponents for the rest of the season. A higher average LPI indicates a tougher remaining schedule, while a lower average LPI suggests an easier path ahead.")
-    
+
     # Read the Excel sheet
     df = load_sheet(file, "Remaining Schedule Difficulty")
-    
+
     # Process the DataFrame
     df = df.iloc[:, 1:]
     df.index += 1
 
+    # Remove Owners column for Ketkar Fantasy Football league
+    if "Ketkar Fantasy Football" in file and "Owners" in df.columns:
+        df = df.drop(columns=["Owners"])
+
     # Format specific columns
     columns_to_format = ['Avg_Points_For', 'Avg_Opp_Points_For', 'Avg_Opp_LPI']
     df[columns_to_format] = df[columns_to_format].applymap(lambda x: f"{x:.1f}")  # Format to 1 decimal place
-    # df = df.drop('Win_Pct', axis=1) 
+    # df = df.drop('Win_Pct', axis=1)
     # df['Win_Pct'] = df['Win_Pct'].apply(lambda x: f"{x:.3f}")  # Format to 3 decimal places
     df['Avg_Opp_Win_Pct'] = df['Avg_Opp_Win_Pct'].apply(lambda x: f"{x:.3f}")  # Format to 3 decimal places
 
@@ -727,9 +731,13 @@ def display_lpi(league_id, espn_s2, swid, file):
     # st.write('The Louie Power Index compares Expected Wins and Strength of Schedule to produce a strength of schedule adjusted score.')
     st.write('The LPI shows which direction teams should trend - high scores but worse records suggest improvement ahead. Low scores but better records indicate expected decline. Positive scores indicate winning against tough schedules. Negative scores mean losing with an easy schedule. Higher scores are better. Scores near zero are neutral.')
     df = load_sheet(file, "Louie Power Index")
-    
+
     df = df.iloc[: , 1:]
     df.index += 1
+
+    # Remove Owners column for specific league
+    if league_id == 250835749 and "Owners" in df.columns:
+        df = df.drop(columns=["Owners"])
 
     # Extract year from file name, e.g., '0755 Fantasy Football 2022.xlsx'
     base_name = os.path.basename(file)
