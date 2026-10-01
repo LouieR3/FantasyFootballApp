@@ -1,4 +1,6 @@
 import os as _os, sys as _sys
+
+from ffapp.ui.page_functions import display_biggest_lpi_upsets
 _d = _os.path.dirname(_os.path.abspath(__file__))
 while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
     _d = _os.path.dirname(_d)
@@ -102,10 +104,5 @@ def app():
 
     display_playoff_odds_by_week(file)
     display_remaining_schedule_difficulty(file)
-
-    try:
-        display_biggest_lpi_upsets(league_name)
-    except Exception:
-        pass
-
+    display_biggest_lpi_upsets(league_name)
 app()
