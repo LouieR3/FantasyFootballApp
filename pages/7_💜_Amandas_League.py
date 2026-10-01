@@ -50,11 +50,25 @@ def app():
     display_lpi_by_week(file)
     display_strength_of_schedule(file)
     display_expected_wins(file)
-    display_draft_results(draft_file, file)
-    display_trades(draft_file)
-    display_lifetime_record(league_name)
+
+    # Draft results and trades require draft file to exist
+    try:
+        display_draft_results(draft_file, file)
+        display_trades(draft_file)
+    except FileNotFoundError:
+        st.warning("Draft data not yet available for this league")
+
+    try:
+        display_lifetime_record(league_name)
+    except Exception:
+        pass
+
     display_playoff_odds_by_week(league_id, espn_s2, swid, file)
     display_remaining_schedule_difficulty(league_id, espn_s2, swid, file)
-    display_biggest_lpi_upsets(league_name)
+
+    try:
+        display_biggest_lpi_upsets(league_name)
+    except Exception:
+        pass
 
 app()
