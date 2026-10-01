@@ -104,5 +104,5 @@ def app():
 
     display_playoff_odds_by_week(file)
     display_remaining_schedule_difficulty(file)
-    display_biggest_lpi_upsets(league_name)
+    display_biggest_lpi_upsets(file)
 app()

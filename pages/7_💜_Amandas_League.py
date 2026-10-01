@@ -67,7 +67,7 @@ def app():
     display_remaining_schedule_difficulty(file)
 
     try:
-        display_biggest_lpi_upsets(league_name)
+        display_biggest_lpi_upsets(file)
     except Exception:
         pass
 
