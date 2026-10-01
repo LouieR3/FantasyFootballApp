@@ -100,6 +100,9 @@ LEAGUES = [
     dict(espn_name="Amanda's League", association="Amanda",
          league_id=1165085642, s2="amanda_s2", swid="amanda_swid",
          page="7_💜_Amandas_League.py", color="#e74c3c", confirmed=True),
+    dict(espn_name="Ketkar Fantasy Football 2026", association="Ayush (2)",
+         league_id=250835749, s2="ayush_league2_s2", swid="ayush_league2_swid",
+         page="9_🔷_Ayushs_League_2.py", color="#3498db", confirmed=True),
     # Rebuilt on ESPN for 2026 under a new id and name - see the module docstring.
     dict(espn_name="BP- Loudoun 2025", association="Matt",
          display="Loudoun Fantasy League",

@@ -62,8 +62,9 @@ elle_s2 = CRED["elle_s2"]
 # asdf
 
 # Matts League
-# league = League(league_id=261375772, year=year, espn_s2=matt_s2, swid=CRED["matt_swid"])
+league = League(league_id=29400230, year=year, espn_s2=matt_s2, swid=CRED["matt_swid"])
 # team_name = "At Risk of CTE"
+team_name = "Graesser's Golden Receivers"
 
 # Pennoni Younglings
 league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
@@ -71,6 +72,7 @@ team_name = "The Golden Receivers"
 # Family League
 # league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 # team_name = "Big Bosh Bashers"
+# team_name = "Jackson's Scary Team"
 # EBC League
 # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 # team_name = "P90 Asiimov"
@@ -833,7 +835,7 @@ def find_trade_partners(league, team_name):
 
         print()
 
-find_trade_partners(league, team_name)
+# find_trade_partners(league, team_name)
 
 fantasypros_freeagents(league, fantasypros_rank_df)
 print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)
