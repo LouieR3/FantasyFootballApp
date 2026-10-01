@@ -30,7 +30,7 @@ def app():
     league_name = "Ketkar Fantasy Football 2026"
     league = f"{league_name} {selected_year}"
     file = f"{LEAGUES_DIR}/" + league + ".xlsx"
-    st.title("🔷 Ayush's League 2 - " + league)
+    st.title("🔷 Ayush's League - " + league)
     draft_file = f"{DRAFTS_DIR}/{league_name} Draft Results {selected_year}.csv"
     odds_file = f"{ODDS_DIR}/{league} Betting Odds.xlsx"
 
