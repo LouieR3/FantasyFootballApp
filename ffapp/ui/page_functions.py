@@ -363,8 +363,7 @@ def display_remaining_schedule_difficulty(file):
     df.index += 1
 
     # Remove Owners column for Ketkar Fantasy Football league
-    if "Ketkar Fantasy Football" in file and "Owners" in df.columns:
-        df = df.drop(columns=["Owners"])
+    if "Ketkar Fantasy Football" in file and "Owner" in df.columns:
         df = df.drop(columns=["Owner"])
 
     # Format specific columns
