@@ -54,9 +54,9 @@ def app():
 
     # Draft results and trades require draft file to exist
     try:
-        display_draft_results(draft_file, file)
+        display_draft_results(draft_file)
         display_trades(draft_file)
-    except FileNotFoundError:
+    except (FileNotFoundError, Exception):
         st.warning("Draft data not yet available for this league")
 
     try:

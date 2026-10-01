@@ -45,21 +45,32 @@ def app():
     if HIDE_OWNER_COLUMNS:
         original_dataframe = st.dataframe
         original_table = st.table
+        original_write = st.write
 
         def filter_owner_columns(data, **kwargs):
             if isinstance(data, pd.DataFrame):
-                cols_to_drop = [col for col in data.columns if col.lower() in ('owner', 'owners')]
-                data = data.drop(columns=cols_to_drop, errors='ignore')
+                cols_to_drop = [col for col in data.columns if 'owner' in col.lower()]
+                if cols_to_drop:
+                    data = data.drop(columns=cols_to_drop, errors='ignore')
             return original_dataframe(data, **kwargs)
 
         def filter_owner_table(data, **kwargs):
             if isinstance(data, pd.DataFrame):
-                cols_to_drop = [col for col in data.columns if col.lower() in ('owner', 'owners')]
-                data = data.drop(columns=cols_to_drop, errors='ignore')
+                cols_to_drop = [col for col in data.columns if 'owner' in col.lower()]
+                if cols_to_drop:
+                    data = data.drop(columns=cols_to_drop, errors='ignore')
             return original_table(data, **kwargs)
+
+        def filter_owner_write(obj, **kwargs):
+            if isinstance(obj, pd.DataFrame):
+                cols_to_drop = [col for col in obj.columns if 'owner' in col.lower()]
+                if cols_to_drop:
+                    obj = obj.drop(columns=cols_to_drop, errors='ignore')
+            return original_write(obj, **kwargs)
 
         st.dataframe = filter_owner_columns
         st.table = filter_owner_table
+        st.write = filter_owner_write
 
     display_playoff_results(file)
 
@@ -77,9 +88,9 @@ def app():
 
     # Draft results and trades require draft file to exist
     try:
-        display_draft_results(draft_file, file)
+        display_draft_results(draft_file)
         display_trades(draft_file)
-    except FileNotFoundError:
+    except (FileNotFoundError, Exception):
         st.warning("Draft data not yet available for this league")
 
     try:
