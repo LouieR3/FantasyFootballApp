@@ -75,6 +75,7 @@ nolan_s2 = CRED["nolan_s2"]
 elle_s2 = CRED["elle_s2"]
 amanda_s2 = CRED["amanda_s2"]
 ayush_s2_2026 = CRED["ayush_s2_2026"]
+ayush_league2_s2 = CRED["ayush_league2_s2"]
 # List of league configurations
 year = 2026
 
@@ -103,16 +104,18 @@ leagues = get_leagues_for_year(year)
 #     # {"league_id": 417131856, "year": year, "espn_s2": ava_s2, "swid": CRED["ava_swid"], "name": "Philly Extra Special"},
 #     # # Matts League
 #     # {"league_id": 29400230, "year": year, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
-#     # Ayush League
-#     {"league_id": 558148583, "year": year, "espn_s2": ayush_s2_2026, "swid": CRED["ayush_swid_2026"], "name": "Ross' Fantasy League"},
+#     # # Ayush League
+#     # {"league_id": 558148583, "year": year, "espn_s2": ayush_s2_2026, "swid": CRED["ayush_swid_2026"], "name": "Ross' Fantasy League"},
 #     # # Nolans League
 #     # {"league_id": 496646254, "year": year, "espn_s2": nolan_s2, "swid": CRED["nolan_swid"], "name": "Nolan's League"},
 #     # # The Goofy Goobers League
 #     # {"league_id": 1616305229, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "The Goofy Goobers"},
 #     # # Campers and Skiers and Prahlad League
 #     # {"league_id": 47829282, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "Campers and Skiers and Prahlad"},
-#     # Amandas League
-#     {"league_id": 1165085642, "year": year, "espn_s2": amanda_s2, "swid": CRED["amanda_swid"], "name": "Amandas League"},
+#     # # Amandas League
+#     # {"league_id": 1165085642, "year": year, "espn_s2": "AEBShd2SDIa7%2BvTUJZKxCHVtyGxh%2Bvu1Tlz6HGKABaqowv3SBk%2Fu5FXgGKaVf7cI%2BPDKtpfHPVRvZV3Fbuu0UDGrNtVrUcwEVScJ8KjZtjxn%2F8fJThHcOjzk%2FaZe1qWGwOicnMEG5j6O3H%2BT9HA2pRRt94zOaUj9yyOgHV1Z9gLRGfazxfc4UP3LIyITE85shykkjiwwMpSyVCsw1Ze1I8WsX048NNrCfPqghNKlGO%2FlaSE0YKlWrYyfz8wFo4CoZyeczkUl%2BIb1jb05YWB6YZkH5Sytxnjrc7PP%2FL73uAJGdA%3D%3D", "swid": "{9979E92C-9818-4436-9671-ABA329BBE6D9}", "name": "Amandas League"},
+#     # Ayush League
+#     {"league_id": 250835749, "year": year, "espn_s2": ayush_league2_s2, "swid": CRED["ayush_league2_swid"], "name": "Ayush League"},
 # ]
 
 league_config = leagues[0]

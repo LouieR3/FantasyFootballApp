@@ -25,10 +25,10 @@ start_time = time.time()
 
 # ====== CONFIGURATION ======
 # Replace these with the league info
-league_id = 1165085642  # Amanda's League
-espn_s2 = CRED["amanda_s2"]
-swid = CRED["amanda_swid"]
-league_name = "Fantasy 2026"  # Canonical ESPN name (use registry.canonical() if unsure)
+league_id = 250835749  # Amanda's League
+espn_s2 = CRED["ayush_league2_s2"]
+swid = CRED["ayush_league2_swid"]
+league_name = "Ketkar Fantasy Football 2026"  # Canonical ESPN name (use registry.canonical() if unsure)
 year = 2026
 # ===========================
 

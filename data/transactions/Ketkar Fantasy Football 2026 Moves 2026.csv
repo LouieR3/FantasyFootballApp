@@ -1,0 +1,31 @@
+League,Year,Week,Type,Player,Position,From Team,To Team,Owner ID,FAAB Bid,Source
+Ketkar Fantasy Football 2026,2026,2,ADD,Jalen Coker,WR,(FA),Gotham City Gridiron Gang ,{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,ADD,Jared Goff,QB,(FA),Gotham City Gridiron Gang ,{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,ADD,T.J. Hockenson,TE,(FA),"Lox, Stocks and 2 Skattebooms!",{B3EECEB5-F0FC-447C-9E12-EED841B68D35},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,ADD,Pat Freiermuth,TE,(FA),"Lox, Stocks and 2 Skattebooms!",{B3EECEB5-F0FC-447C-9E12-EED841B68D35},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,ADD,Chiefs D/ST,D/ST,(FA),"Lox, Stocks and 2 Skattebooms!",{B3EECEB5-F0FC-447C-9E12-EED841B68D35},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,ADD,Deebo Samuel Sr.,WR,(FA),"Lox, Stocks and 2 Skattebooms!",{B3EECEB5-F0FC-447C-9E12-EED841B68D35},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,ADD,Buccaneers D/ST,D/ST,(FA),Sharrell’s Peril,{3926B2E1-C505-4808-811A-FB79E321F033},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,DROP,Alec Pierce,WR,Gotham City Gridiron Gang ,(FA),{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,DROP,Rico Dowdle,RB,Gotham City Gridiron Gang ,(FA),{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,DROP,Kyle Pitts Sr.,TE,"Lox, Stocks and 2 Skattebooms!",(FA),{B3EECEB5-F0FC-447C-9E12-EED841B68D35},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,DROP,Courtland Sutton,WR,"Lox, Stocks and 2 Skattebooms!",(FA),{B3EECEB5-F0FC-447C-9E12-EED841B68D35},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,DROP,Jordan Addison,WR,"Lox, Stocks and 2 Skattebooms!",(FA),{B3EECEB5-F0FC-447C-9E12-EED841B68D35},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,DROP,Eagles D/ST,D/ST,"Lox, Stocks and 2 Skattebooms!",(FA),{B3EECEB5-F0FC-447C-9E12-EED841B68D35},0,snapshot
+Ketkar Fantasy Football 2026,2026,2,DROP,Browns D/ST,D/ST,Sharrell’s Peril,(FA),{3926B2E1-C505-4808-811A-FB79E321F033},0,snapshot
+Ketkar Fantasy Football 2026,2026,3,ADD,Tyler Shough,QB,(FA),FP Jets,{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
+Ketkar Fantasy Football 2026,2026,3,ADD,49ers D/ST,D/ST,(FA),Gotham City Gridiron Gang ,{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
+Ketkar Fantasy Football 2026,2026,3,ADD,Evan McPherson,K,(FA),Gotham City Gridiron Gang ,{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
+Ketkar Fantasy Football 2026,2026,3,ADD,Xavier Worthy,WR,(FA),Dillan,{FB31A16F-6594-4B8F-AA7B-4C3B2CA427D3},0,activity
+Ketkar Fantasy Football 2026,2026,3,ADD,Eagles D/ST,D/ST,(FA),Sharrell’s Peril,{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
+Ketkar Fantasy Football 2026,2026,3,ADD,Denzel Boston,WR,(FA),Sharrell’s Peril,{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
+Ketkar Fantasy Football 2026,2026,3,ADD,Bryce Young,QB,(FA),"Lox, Stocks and 2 Skattebooms!",{B3EECEB5-F0FC-447C-9E12-EED841B68D35},0,activity
+Ketkar Fantasy Football 2026,2026,3,DROP,Rams D/ST,D/ST,Gotham City Gridiron Gang ,(FA),{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
+Ketkar Fantasy Football 2026,2026,3,DROP,Jake Bates,K,Gotham City Gridiron Gang ,(FA),{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
+Ketkar Fantasy Football 2026,2026,3,DROP,Travis Hunter,WR,FP Jets,(FA),{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
+Ketkar Fantasy Football 2026,2026,3,DROP,Daniel Jones,QB,Dillan,(FA),{FB31A16F-6594-4B8F-AA7B-4C3B2CA427D3},0,activity
+Ketkar Fantasy Football 2026,2026,3,DROP,Jaxson Dart,QB,"Lox, Stocks and 2 Skattebooms!",(FA),{B3EECEB5-F0FC-447C-9E12-EED841B68D35},0,activity
+Ketkar Fantasy Football 2026,2026,3,DROP,Jameson Williams,WR,Sharrell’s Peril,(FA),{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
+Ketkar Fantasy Football 2026,2026,3,DROP,Buccaneers D/ST,D/ST,Sharrell’s Peril,(FA),{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
+Ketkar Fantasy Football 2026,2026,3,DROP,A.J. Brown,WR,Ashu’s Seahawks ,(FA),{EB42F8FA-666E-421C-86D3-2DBEA5429D63},0,activity
+Ketkar Fantasy Football 2026,2026,3,DROP,Jayden Daniels,QB,Ashu’s Seahawks ,(FA),{EB42F8FA-666E-421C-86D3-2DBEA5429D63},0,activity

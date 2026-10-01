@@ -36,7 +36,7 @@ ayush_s2 = CRED["ayush_s2"]
 ayush_s2_2026 = CRED["ayush_s2_2026"]
 nolan_s2 = CRED["nolan_s2"]
 amanda_s2 = CRED["amanda_s2"]
-
+ayush_league2_s2 = CRED["ayush_league2_s2"]
 # Define league metadata once - no hardcoding league IDs per year
 LEAGUES_METADATA = [
     {"name": "Pennoni Younglings", "s2_key": "louie_s2_pages", "swid_key": "louie_swid"},
@@ -58,6 +58,7 @@ LEAGUES_METADATA = [
     {"name": "Board Fantasy Football", "s2_key": "nolan_s2", "swid_key": "nolan_swid"},
     {"name": "The Goofy Goobers", "s2_key": "prahlad2_s2", "swid_key": "prahlad2_s2"},
     {"name": "Campers and Skiers and Prahlad", "s2_key": "prahlad_s2", "swid_key": "prahlad_swid"},
+    {"name": "Ketkar Fantasy Football 2026", "s2_key": "ayush_league2_s2", "swid_key": "ayush_league2_swid"},
 ]
 
 def get_leagues_for_year(year):
