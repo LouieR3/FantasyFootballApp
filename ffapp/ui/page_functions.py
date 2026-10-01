@@ -365,6 +365,7 @@ def display_remaining_schedule_difficulty(file):
     # Remove Owners column for Ketkar Fantasy Football league
     if "Ketkar Fantasy Football" in file and "Owners" in df.columns:
         df = df.drop(columns=["Owners"])
+        df = df.drop(columns=["Owner"])
 
     # Format specific columns
     columns_to_format = ['Avg_Points_For', 'Avg_Opp_Points_For', 'Avg_Opp_LPI']
