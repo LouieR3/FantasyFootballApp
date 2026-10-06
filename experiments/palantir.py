@@ -67,8 +67,8 @@ league = League(league_id=29400230, year=year, espn_s2=matt_s2, swid=CRED["matt_
 team_name = "Graesser's Golden Receivers"
 
 # Pennoni Younglings
-league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-team_name = "The Golden Receivers"
+# league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+# team_name = "The Golden Receivers"
 # Family League
 # league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 # team_name = "Big Bosh Bashers"
@@ -91,8 +91,8 @@ team_name = "Big Ballsy Bozos"
 # team_name = "Team Rodriguez"
 
 # Ayush League
-league = League(league_id=250835749, year=year, espn_s2=ayush_league2_s2, swid=CRED["ayush_league2_swid"])
-team_name = "Austin Powers"
+# league = League(league_id=250835749, year=year, espn_s2=ayush_league2_s2, swid=CRED["ayush_league2_swid"])
+# team_name = "Austin Powers"
 
 fantasypros_rank_df = fantasypros_ros_ranks()
 # Define draft order

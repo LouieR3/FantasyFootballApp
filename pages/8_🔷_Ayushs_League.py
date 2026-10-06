@@ -65,12 +65,15 @@ def app():
                     data = data.drop(columns=cols_to_drop, errors='ignore')
             return original_table(data, **kwargs)
 
-        def filter_owner_write(obj, **kwargs):
-            if isinstance(obj, pd.DataFrame):
-                cols_to_drop = [col for col in obj.columns if 'owner' in col.strip().lower()]
-                if cols_to_drop:
-                    obj = obj.drop(columns=cols_to_drop, errors='ignore')
-            return original_write(obj, **kwargs)
+        def filter_owner_write(*args, **kwargs):
+            filtered_args = []
+            for arg in args:
+                if isinstance(arg, pd.DataFrame):
+                    cols_to_drop = [col for col in arg.columns if 'owner' in col.strip().lower()]
+                    if cols_to_drop:
+                        arg = arg.drop(columns=cols_to_drop, errors='ignore')
+                filtered_args.append(arg)
+            return original_write(*filtered_args, **kwargs)
 
         st.dataframe = filter_owner_columns
         st.table = filter_owner_table
