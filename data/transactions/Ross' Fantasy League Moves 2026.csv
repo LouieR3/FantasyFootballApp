@@ -9,12 +9,27 @@ Ross' Fantasy League,2026,2,DROP,Steelers D/ST,D/ST,Penguins FC,(FA),{B09021F7-1
 Ross' Fantasy League,2026,2,DROP,Justin Herbert,QB,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
 Ross' Fantasy League,2026,2,DROP,Zach Charbonnet,RB,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
 Ross' Fantasy League,2026,2,DROP,Jake Ferguson,TE,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
-Ross' Fantasy League,2026,3,ADD,Bryce Young,QB,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
-Ross' Fantasy League,2026,3,ADD,Chiefs D/ST,D/ST,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
-Ross' Fantasy League,2026,3,ADD,Tyler Shough,QB,(FA),Tailed Bijan Bomb,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
-Ross' Fantasy League,2026,3,ADD,Dalton Schultz,TE,(FA),Tailed Bijan Bomb,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
-Ross' Fantasy League,2026,3,ADD,Denzel Boston,WR,(FA),Yung Killas,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,activity
-Ross' Fantasy League,2026,3,DROP,Rhamondre Stevenson,RB,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
-Ross' Fantasy League,2026,3,DROP,49ers D/ST,D/ST,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
-Ross' Fantasy League,2026,3,DROP,Drake Maye,QB,Tailed Bijan Bomb,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
-Ross' Fantasy League,2026,3,DROP,Dallas Goedert,TE,Tailed Bijan Bomb,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
+Ross' Fantasy League,2026,3,ADD,Bryce Young,QB,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2026,3,ADD,Chiefs D/ST,D/ST,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2026,3,ADD,Tyler Shough,QB,(FA),Tailed Bijan Bomb,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2026,3,ADD,Dalton Schultz,TE,(FA),Tailed Bijan Bomb,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2026,3,ADD,Denzel Boston,WR,(FA),Yung Killas,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2026,3,DROP,Rhamondre Stevenson,RB,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2026,3,DROP,49ers D/ST,D/ST,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,snapshot
+Ross' Fantasy League,2026,3,DROP,Drake Maye,QB,Tailed Bijan Bomb,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2026,3,DROP,Dallas Goedert,TE,Tailed Bijan Bomb,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2026,4,ADD,Tyler Loop,K,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,activity
+Ross' Fantasy League,2026,4,ADD,Juwan Johnson,TE,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,activity
+Ross' Fantasy League,2026,4,ADD,Jordan Love,QB,(FA),Yung Killas,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,activity
+Ross' Fantasy League,2026,4,ADD,Vikings D/ST,D/ST,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
+Ross' Fantasy League,2026,4,ADD,Evan McPherson,K,(FA),Penguins FC,{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
+Ross' Fantasy League,2026,4,ADD,Tony Pollard,RB,(FA),big beautiful lugia,{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,activity
+Ross' Fantasy League,2026,4,ADD,Steelers D/ST,D/ST,(FA),big beautiful lugia,{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,activity
+Ross' Fantasy League,2026,4,ADD,Braelon Allen,RB,(FA),Tailed Bijan Bomb,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
+Ross' Fantasy League,2026,4,DROP,Cameron Dicker,K,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,activity
+Ross' Fantasy League,2026,4,DROP,Ka'imi Fairbairn,K,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
+Ross' Fantasy League,2026,4,DROP,Chiefs D/ST,D/ST,Penguins FC,(FA),{B09021F7-1FD3-4A7C-88A1-FF4EDDEA2BAE},0,activity
+Ross' Fantasy League,2026,4,DROP,De'Von Achane,RB,Tailed Bijan Bomb,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
+Ross' Fantasy League,2026,4,DROP,Kyle Pitts Sr.,TE,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,activity
+Ross' Fantasy League,2026,4,DROP,Eagles D/ST,D/ST,big beautiful lugia,(FA),{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,activity
+Ross' Fantasy League,2026,4,DROP,Jaxson Dart,QB,Yung Killas,(FA),{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,activity

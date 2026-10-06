@@ -6,12 +6,21 @@ Operators Football League,2026,2,ADD,C.J. Stroud,QB,(FA),Big Ballsy Bozos,{9B611
 Operators Football League,2026,2,DROP,Kyler Murray,QB,Hunks of Hanet ,(FA),{DFBEAEC0-6413-495E-996E-B8D40DF5E7CE},0,snapshot
 Operators Football League,2026,2,DROP,Malachi Fields,WR,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,snapshot
 Operators Football League,2026,2,DROP,De'Zhaun Stribling,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
-Operators Football League,2026,3,ADD,Bryce Young,QB,(FA),Ler and Order,{8F96766E-1AAF-4AAB-A4A1-B3344170B37B},0,activity
-Operators Football League,2026,3,ADD,Denzel Boston,WR,(FA),Ler and Order,{8F96766E-1AAF-4AAB-A4A1-B3344170B37B},0,activity
-Operators Football League,2026,3,ADD,Tyler Shough,QB,(FA),Jockstrap jubilee ,{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,activity
-Operators Football League,2026,3,ADD,Dalton Schultz,TE,(FA),Jockstrap jubilee ,{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,activity
-Operators Football League,2026,3,ADD,49ers D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,activity
-Operators Football League,2026,3,DROP,Travis Hunter,WR,Ler and Order,(FA),{8F96766E-1AAF-4AAB-A4A1-B3344170B37B},0,activity
-Operators Football League,2026,3,DROP,Jaxson Dart,QB,Jockstrap jubilee ,(FA),{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,activity
-Operators Football League,2026,3,DROP,Woody Marks,RB,Jockstrap jubilee ,(FA),{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,activity
-Operators Football League,2026,3,DROP,Ravens D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,activity
+Operators Football League,2026,3,ADD,Bryce Young,QB,(FA),Ler and Order,{8F96766E-1AAF-4AAB-A4A1-B3344170B37B},0,snapshot
+Operators Football League,2026,3,ADD,Denzel Boston,WR,(FA),Ler and Order,{8F96766E-1AAF-4AAB-A4A1-B3344170B37B},0,snapshot
+Operators Football League,2026,3,ADD,Tyler Shough,QB,(FA),Jockstrap jubilee ,{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2026,3,ADD,Dalton Schultz,TE,(FA),Jockstrap jubilee ,{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2026,3,ADD,49ers D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2026,3,DROP,Travis Hunter,WR,Ler and Order,(FA),{8F96766E-1AAF-4AAB-A4A1-B3344170B37B},0,snapshot
+Operators Football League,2026,3,DROP,Jaxson Dart,QB,Jockstrap jubilee ,(FA),{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2026,3,DROP,Woody Marks,RB,Jockstrap jubilee ,(FA),{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
+Operators Football League,2026,3,DROP,Ravens D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2026,4,ADD,Vikings D/ST,D/ST,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,activity
+Operators Football League,2026,4,ADD,Ollie Gordon II,RB,(FA),Sacks and the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,activity
+Operators Football League,2026,4,ADD,Keenan Allen,WR,(FA),Sacks and the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,activity
+Operators Football League,2026,4,ADD,Braelon Allen,RB,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,activity
+Operators Football League,2026,4,ADD,Alvin Kamara,RB,(FA),Junya Ettlinger's First Team,{5918A112-DDF9-4368-8414-A143EC58B846},0,activity
+Operators Football League,2026,4,DROP,Jayden Reed,WR,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,activity
+Operators Football League,2026,4,DROP,Isiah Pacheco,RB,Sacks and the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,activity
+Operators Football League,2026,4,DROP,Tyler Allgeier,RB,Sacks and the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,activity
+Operators Football League,2026,4,DROP,Kaelon Black,RB,Junya Ettlinger's First Team,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,activity

@@ -53,42 +53,42 @@ ayush_league2_s2 = CRED["ayush_league2_s2"]
 year = 2026
 from ffapp.leagues_config import get_leagues_for_year
 
-# leagues = get_leagues_for_year(year)
+leagues = get_leagues_for_year(year)
 
-leagues = [
-    # # Pennoni Younglings
-    # {"league_id": 310334683, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Pennoni Younglings"},
-    # # Family League
-    # {"league_id": 1343668602, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Family League"},
-    # # EBC League
-    # {"league_id": 1118513122, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "EBC League"},
-    # # Game of Yards
-    # {"league_id": 1781851, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Game of Yards!"},
-    # # Brown Munde
-    # {"league_id": 367134149, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Brown Munde"},
-    # # Turf On Grade 2.0 League
-    # {"league_id":1242265374, "year":year, "espn_s2":CRED["turf_s2"], "swid":CRED["prahlad_swid"], "name": "Turf On Grade 2.0"},
-    # # Las League
-    # {"league_id": 1049459, "year": year, "espn_s2": la_s2, "swid": CRED["la_swid"], "name": "THE BEST OF THE BEST"},
-    # # Hannahs League
-    # {"league_id": 1399036372, "year": year, "espn_s2": hannah_s2, "swid": CRED["hannah_swid"], "name": "The Girl's Room 💞🏈"},
-    # # Avas League
-    # {"league_id": 417131856, "year": year, "espn_s2": ava_s2, "swid": CRED["ava_swid"], "name": "Philly Extra Special"},
-    # # Matts League
-    # {"league_id": 29400230, "year": year, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
-    # # Ayush League
-    # {"league_id": 558148583, "year": year, "espn_s2": ayush_s2_2026, "swid": CRED["ayush_swid_2026"], "name": "Ross' Fantasy League"},
-    # # Nolans League
-    # {"league_id": 496646254, "year": year, "espn_s2": nolan_s2, "swid": CRED["nolan_swid"], "name": "Nolan's League"},
-    # # The Goofy Goobers League
-    # {"league_id": 1616305229, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "The Goofy Goobers"},
-    # # Campers and Skiers and Prahlad League
-    # {"league_id": 47829282, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "Campers and Skiers and Prahlad"},
-    # # Amandas League
-    # {"league_id": 1165085642, "year": year, "espn_s2": "AEBShd2SDIa7%2BvTUJZKxCHVtyGxh%2Bvu1Tlz6HGKABaqowv3SBk%2Fu5FXgGKaVf7cI%2BPDKtpfHPVRvZV3Fbuu0UDGrNtVrUcwEVScJ8KjZtjxn%2F8fJThHcOjzk%2FaZe1qWGwOicnMEG5j6O3H%2BT9HA2pRRt94zOaUj9yyOgHV1Z9gLRGfazxfc4UP3LIyITE85shykkjiwwMpSyVCsw1Ze1I8WsX048NNrCfPqghNKlGO%2FlaSE0YKlWrYyfz8wFo4CoZyeczkUl%2BIb1jb05YWB6YZkH5Sytxnjrc7PP%2FL73uAJGdA%3D%3D", "swid": "{9979E92C-9818-4436-9671-ABA329BBE6D9}", "name": "Amandas League"},
-    # Ayush League
-    {"league_id": 250835749, "year": year, "espn_s2": ayush_league2_s2, "swid": CRED["ayush_league2_swid"], "name": "Ayush League"},
-]
+# leagues = [
+#     # # Pennoni Younglings
+#     # {"league_id": 310334683, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Pennoni Younglings"},
+#     # # Family League
+#     # {"league_id": 1343668602, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Family League"},
+#     # # EBC League
+#     # {"league_id": 1118513122, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "EBC League"},
+#     # # Game of Yards
+#     # {"league_id": 1781851, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Game of Yards!"},
+#     # # Brown Munde
+#     # {"league_id": 367134149, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Brown Munde"},
+#     # # Turf On Grade 2.0 League
+#     # {"league_id":1242265374, "year":year, "espn_s2":CRED["turf_s2"], "swid":CRED["prahlad_swid"], "name": "Turf On Grade 2.0"},
+#     # # Las League
+#     # {"league_id": 1049459, "year": year, "espn_s2": la_s2, "swid": CRED["la_swid"], "name": "THE BEST OF THE BEST"},
+#     # # Hannahs League
+#     # {"league_id": 1399036372, "year": year, "espn_s2": hannah_s2, "swid": CRED["hannah_swid"], "name": "The Girl's Room 💞🏈"},
+#     # # Avas League
+#     # {"league_id": 417131856, "year": year, "espn_s2": ava_s2, "swid": CRED["ava_swid"], "name": "Philly Extra Special"},
+#     # # Matts League
+#     # {"league_id": 29400230, "year": year, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
+#     # # Ayush League
+#     # {"league_id": 558148583, "year": year, "espn_s2": ayush_s2_2026, "swid": CRED["ayush_swid_2026"], "name": "Ross' Fantasy League"},
+#     # # Nolans League
+#     # {"league_id": 496646254, "year": year, "espn_s2": nolan_s2, "swid": CRED["nolan_swid"], "name": "Nolan's League"},
+#     # # The Goofy Goobers League
+#     # {"league_id": 1616305229, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "The Goofy Goobers"},
+#     # # Campers and Skiers and Prahlad League
+#     # {"league_id": 47829282, "year": year, "espn_s2": prahlad2_s2, "swid": CRED["prahlad_swid"], "name": "Campers and Skiers and Prahlad"},
+#     # # Amandas League
+#     # {"league_id": 1165085642, "year": year, "espn_s2": "AEBShd2SDIa7%2BvTUJZKxCHVtyGxh%2Bvu1Tlz6HGKABaqowv3SBk%2Fu5FXgGKaVf7cI%2BPDKtpfHPVRvZV3Fbuu0UDGrNtVrUcwEVScJ8KjZtjxn%2F8fJThHcOjzk%2FaZe1qWGwOicnMEG5j6O3H%2BT9HA2pRRt94zOaUj9yyOgHV1Z9gLRGfazxfc4UP3LIyITE85shykkjiwwMpSyVCsw1Ze1I8WsX048NNrCfPqghNKlGO%2FlaSE0YKlWrYyfz8wFo4CoZyeczkUl%2BIb1jb05YWB6YZkH5Sytxnjrc7PP%2FL73uAJGdA%3D%3D", "swid": "{9979E92C-9818-4436-9671-ABA329BBE6D9}", "name": "Amandas League"},
+#     # Ayush League
+#     {"league_id": 250835749, "year": year, "espn_s2": ayush_league2_s2, "swid": CRED["ayush_league2_swid"], "name": "Ayush League"},
+# ]
 
 # Loop through each league configuration
 for league_config in leagues:
