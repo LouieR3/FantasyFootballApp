@@ -1,6 +1,4 @@
 import os as _os, sys as _sys
-
-from ffapp.ui.page_functions import display_biggest_lpi_upsets
 _d = _os.path.dirname(_os.path.abspath(__file__))
 while _d != _os.path.dirname(_d) and not _os.path.exists(_os.path.join(_d, 'paths.py')):
     _d = _os.path.dirname(_d)
@@ -43,16 +41,13 @@ def app():
     from ffapp.ui.page_functions import display_remaining_schedule_difficulty, display_playoff_results, display_schedule_comparison, display_strength_of_schedule, display_playoff_odds, display_betting_odds
     from ffapp.ui.page_functions import display_playoff_odds_by_week, display_lifetime_record, display_biggest_lpi_upsets, display_lpi_by_week, display_expected_wins, display_lpi, display_draft_results, display_trades
 
-    # Filter Owner/Owners columns from display
+    # Filter Owner/Owners columns from dataframe/table display only
     if HIDE_OWNER_COLUMNS:
-        print("Filtering Owner/Owners columns...")
         original_dataframe = st.dataframe
         original_table = st.table
-        original_write = st.write
 
         def filter_owner_columns(data, **kwargs):
             if isinstance(data, pd.DataFrame):
-                # Strip whitespace from column names and filter
                 cols_to_drop = [col for col in data.columns if 'owner' in col.strip().lower()]
                 if cols_to_drop:
                     data = data.drop(columns=cols_to_drop, errors='ignore')
@@ -65,19 +60,8 @@ def app():
                     data = data.drop(columns=cols_to_drop, errors='ignore')
             return original_table(data, **kwargs)
 
-        def filter_owner_write(*args, **kwargs):
-            filtered_args = []
-            for arg in args:
-                if isinstance(arg, pd.DataFrame):
-                    cols_to_drop = [col for col in arg.columns if 'owner' in col.strip().lower()]
-                    if cols_to_drop:
-                        arg = arg.drop(columns=cols_to_drop, errors='ignore')
-                filtered_args.append(arg)
-            return original_write(*filtered_args, **kwargs)
-
         st.dataframe = filter_owner_columns
         st.table = filter_owner_table
-        st.write = filter_owner_write
 
     display_playoff_results(file)
 
@@ -86,9 +70,27 @@ def app():
     display_lpi(league_id, espn_s2, swid, file)
 
     year = int(selected_year)
-    display_playoff_odds(file, league_id, espn_s2, swid, year)
+    try:
+        display_playoff_odds(file, league_id, espn_s2, swid, year)
+    except Exception:
+        st.warning("Playoff odds not available for this league/year")
+
     if year > 2024:
-        display_betting_odds(odds_file)
+        try:
+            display_playoff_odds_by_week(file)
+        except Exception:
+            pass
+
+        try:
+            display_betting_odds(odds_file)
+        except Exception:
+            pass
+
+        try:
+            display_remaining_schedule_difficulty(file)
+        except Exception:
+            pass
+
     display_lpi_by_week(file)
     display_strength_of_schedule(file)
     display_expected_wins(file)
@@ -107,5 +109,10 @@ def app():
 
     display_playoff_odds_by_week(file)
     display_remaining_schedule_difficulty(file)
-    display_biggest_lpi_upsets(file)
+
+    try:
+        display_biggest_lpi_upsets(league_name)
+    except Exception:
+        pass
+
 app()
