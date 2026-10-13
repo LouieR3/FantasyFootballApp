@@ -67,19 +67,19 @@ league = League(league_id=29400230, year=year, espn_s2=matt_s2, swid=CRED["matt_
 team_name = "Graesser's Golden Receivers"
 
 # Pennoni Younglings
-# league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-# team_name = "The Golden Receivers"
+league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+team_name = "The Golden Receivers"
 # Family League
-# league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-# team_name = "Big Bosh Bashers"
+league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+team_name = "Big Bosh Bashers"
 # team_name = "Jackson's Scary Team"
 # EBC League
-# league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-# team_name = "P90 Asiimov"
+league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+team_name = "P90 Asiimov"
 
 # Avas League
-league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
-team_name = "Big Ballsy Bozos"
+# league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
+# team_name = "Big Ballsy Bozos"
 
 # Hannahs League
 # league = League(league_id=1399036372, year=year, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
@@ -455,6 +455,7 @@ def suggest_lineup(league, team_name):
             "slot_position": p.lineupSlot,
             "rank_ecr": rank_ecr if rank_ecr is not None else float('inf'),
             "pos_rank": pos_rank if pos_rank is not None else "(n/a)",
+            "player_obj": p,
         })
 
     current_starters = [p for p in players_info if p['slot_position'] not in ("BE", "IR")]
@@ -535,6 +536,55 @@ def suggest_lineup(league, team_name):
                 f"{suggested_p['name']:<22} {str(suggested_p['pos_rank']):<8}"
                 f"{swap_flag}"
             )
+
+    print("\n-----------------------------\n")
+
+    # ------------------
+    # Free agent upgrade check, using this week's ESPN projected points.
+    # For each position among the suggested starters, see if any available
+    # free agent projects higher than the weakest starter at that position.
+    # ------------------
+    current_week = league.current_week
+
+    def week_projection(player_dict_or_obj):
+        player_obj = player_dict_or_obj['player_obj'] if isinstance(player_dict_or_obj, dict) else player_dict_or_obj
+        return player_obj.stats.get(current_week, {}).get('projected_points', 0) or 0
+
+    starters_flat = [p for slot in suggested for p in suggested[slot]]
+    starter_positions = {p['position'] for p in starters_flat}
+
+    print(f"----- {team_name}: Free Agent Upgrades (Week {current_week} projections) -----\n")
+    found_upgrade = False
+    for pos in sorted(starter_positions, key=lambda s: slot_order.get(s, 99)):
+        starters_at_pos = sorted(
+            [p for p in starters_flat if p['position'] == pos],
+            key=week_projection,
+        )
+        if not starters_at_pos:
+            continue
+        weakest = starters_at_pos[0]
+        weakest_proj = week_projection(weakest)
+
+        try:
+            fa_candidates = league.free_agents(position=pos, size=15)
+        except Exception:
+            fa_candidates = []
+
+        fa_candidates = [fa for fa in fa_candidates if not fa.on_bye_week]
+        fa_candidates.sort(key=week_projection, reverse=True)
+
+        if fa_candidates:
+            best_fa = fa_candidates[0]
+            best_fa_proj = week_projection(best_fa)
+            if best_fa_proj > weakest_proj + 1:
+                found_upgrade = True
+                print(
+                    f"{pos:<6} ADD {best_fa.name:<22} ({best_fa_proj:>5.1f} proj)  "
+                    f"over  {weakest['name']:<22} ({weakest_proj:>5.1f} proj)"
+                )
+
+    if not found_upgrade:
+        print("No free agent currently projects higher than your weakest starter at any position.")
 
     print("\n-----------------------------\n")
 
