@@ -278,7 +278,7 @@ for league_config in leagues:
             lpi_weekly_df['Change From Last Week'] = 0
 
         # Display the updated DataFrame
-        print(lpi_weekly_df)
+        # print(lpi_weekly_df)
         def owner_df_creation(league):
             """
             Creates a DataFrame mapping owner IDs to Display Names and Team Names for a given league.
@@ -305,7 +305,7 @@ for league_config in leagues:
         owner_df = owner_df_creation(league)
         team_dict = dict(zip(owner_df['Team Name'], owner_df['Display Name']))
         # Display the updated DataFrame
-        print(lpi_weekly_df)
+        # print(lpi_weekly_df)
         lpi_df = lpi_weekly_df[[week_name, 'Change From Last Week']]
         lpi_df = lpi_df.rename(columns={week_name: "Louie Power Index (LPI)"})
         lpi_df.insert(loc = 0, column = 'Teams', value = lpi_df.index)
@@ -553,13 +553,13 @@ for league_config in leagues:
         summary_df, seed_df = create_summary_dataframes(
             team_stats, final_records, playoff_makes, last_place_finishes, seed_counts, num_playoff_teams, 1000, len(teams), reg_season_count
         )
-        print(summary_df)
+        # print(summary_df)
         summary_df = (
             summary_df.sort_values('Playoff_Chance_Pct', ascending=False)
             .reset_index(drop=True)
             .set_index("Team")
         )
-        print(seed_df)
+        # print(seed_df)
 
         remaining_schedue_df = calculate_remaining_schedule_difficulty(
             team_stats, schedules_df, lpi_df, current_week, reg_season_count
@@ -607,19 +607,19 @@ for league_config in leagues:
         print(f"Details: {str(e)}")
         continue  # Move to the next league
 
-all_matchups_df = get_weeks_matchups(leagues, year)
-try:
-    current_matchups = pd.read_csv(f"{DATA_DIR}/all_matchups.csv")
-    all_matchups_df = pd.concat([current_matchups, all_matchups_df]).drop_duplicates().reset_index(drop=True)
-    all_matchups_df["Home Predicted Score"] = all_matchups_df["Home Predicted Score"].round(2)
-    all_matchups_df["Away Predicted Score"] = all_matchups_df["Away Predicted Score"].round(2)
-    all_matchups_df["Predicted Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
-    all_matchups_df["Actual Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
-    print("Merged with existing all_matchups.csv")
-    print(all_matchups_df)
-    all_matchups_df.to_csv(f"{DATA_DIR}/all_matchups.csv", index=False)
-except FileNotFoundError:
-    print("No existing all_matchups.csv found, creating a new one.")
+# all_matchups_df = get_weeks_matchups(leagues, year)
+# try:
+#     current_matchups = pd.read_csv(f"{DATA_DIR}/all_matchups.csv")
+#     all_matchups_df = pd.concat([current_matchups, all_matchups_df]).drop_duplicates().reset_index(drop=True)
+#     all_matchups_df["Home Predicted Score"] = all_matchups_df["Home Predicted Score"].round(2)
+#     all_matchups_df["Away Predicted Score"] = all_matchups_df["Away Predicted Score"].round(2)
+#     all_matchups_df["Predicted Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Predicted Score"] > row["Away Predicted Score"] else (row["Away Team"] if row["Away Predicted Score"] > row["Home Predicted Score"] else "Tie"), axis=1)
+#     all_matchups_df["Actual Winner"] = all_matchups_df.apply(lambda row: row["Home Team"] if row["Home Score"] > row["Away Score"] else (row["Away Team"] if row["Away Score"] > row["Home Score"] else "Tie"), axis=1)
+#     print("Merged with existing all_matchups.csv")
+#     print(all_matchups_df)
+#     all_matchups_df.to_csv(f"{DATA_DIR}/all_matchups.csv", index=False)
+# except FileNotFoundError:
+#     print("No existing all_matchups.csv found, creating a new one.")
 
 create_betting_odds(leagues, year)
 

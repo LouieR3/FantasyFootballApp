@@ -74,8 +74,8 @@ league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["lou
 team_name = "Big Bosh Bashers"
 # team_name = "Jackson's Scary Team"
 # EBC League
-league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-team_name = "P90 Asiimov"
+# league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+# team_name = "P90 Asiimov"
 
 # Avas League
 # league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])

@@ -1,8 +1,8 @@
 """Analyze most common players on undefeated, winless, 1st place, and last place teams by week.
 
 Aggregates across all 2026 leagues to show which players are most common on:
-- 3-0 teams (undefeated)
-- 0-3 teams (no wins)
+- Undefeated teams (won every game played so far, as of that week)
+- Winless teams (lost every game played so far, as of that week)
 - 1st place teams
 - Last place teams
 
@@ -78,8 +78,8 @@ def get_team_rank_by_week(league, week):
 def analyze_week(league, league_name, week):
     """Analyze a league for a specific week and return player stats by category."""
     results = {
-        '3-0': defaultdict(int),  # Undefeated
-        '0-3': defaultdict(int),  # Winless
+        'Undefeated': defaultdict(int),  # Won every game played so far this season
+        'Winless': defaultdict(int),  # Lost every game played so far this season
         '1st': defaultdict(int),  # 1st place by points
         'Last': defaultdict(int),  # Last place by points
     }
@@ -94,12 +94,14 @@ def analyze_week(league, league_name, week):
     # Check each team
     for team in league.teams:
         wins, losses = get_team_record_by_week(league, team, week)
+        games_played = wins + losses
 
-        # Categorize team
-        if wins == 3 and losses == 0:
-            category = '3-0'
-        elif wins == 0 and losses == 3:
-            category = '0-3'
+        # Categorize team (undefeated/winless is relative to games played so
+        # far this week, not a fixed record like 3-0)
+        if games_played > 0 and wins == games_played:
+            category = 'Undefeated'
+        elif games_played > 0 and losses == games_played:
+            category = 'Winless'
         elif team == first_place_team:
             category = '1st'
         elif team == last_place_team:
@@ -160,8 +162,8 @@ def main():
         print(f"\n--- WEEK {week} ---")
 
         aggregate = {
-            '3-0': defaultdict(int),
-            '0-3': defaultdict(int),
+            'Undefeated': defaultdict(int),
+            'Winless': defaultdict(int),
             '1st': defaultdict(int),
             'Last': defaultdict(int),
         }
@@ -184,7 +186,7 @@ def main():
         all_weeks[week] = (aggregate, total_teams)
 
         # Print summary
-        for category in ['3-0', '0-3', '1st', 'Last']:
+        for category in ['Undefeated', 'Winless', '1st', 'Last']:
             print(f"\n{category} Teams ({total_teams[category]} teams across all leagues):")
 
             if not aggregate[category]:
@@ -205,7 +207,7 @@ def main():
     # Save by week
     for week, (aggregate, total_teams) in all_weeks.items():
         week_data = []
-        for category in ['3-0', '0-3', '1st', 'Last']:
+        for category in ['Undefeated', 'Winless', '1st', 'Last']:
             for player, count in sorted(aggregate[category].items(), key=lambda x: x[1], reverse=True):
                 week_data.append({
                     'Week': week,
@@ -228,7 +230,7 @@ def main():
                 agg_players[category][player] += count
 
     agg_data = []
-    for category in ['3-0', '0-3', '1st', 'Last']:
+    for category in ['Undefeated', 'Winless', '1st', 'Last']:
         for player, total_count in sorted(agg_players[category].items(), key=lambda x: x[1], reverse=True):
             agg_data.append({
                 'Category': category,

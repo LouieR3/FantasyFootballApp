@@ -43,16 +43,33 @@ EBC League,2026,4,DROP,De'Von Achane,RB,Wise Warlocks,(FA),{89E249D2-17CC-4743-B
 EBC League,2026,4,DROP,Jason Myers,K,Wise Warlocks,(FA),{89E249D2-17CC-4743-B60A-232D01C6434D},0,snapshot
 EBC League,2026,4,DROP,Broncos D/ST,D/ST,Pleasant Valley Panthers,(FA),{8DC6CB03-411B-4540-86CB-03411B854029},0,snapshot
 EBC League,2026,4,DROP,Kyle Monangai,RB,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
-EBC League,2026,5,ADD,Jared Goff,QB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},1,activity
-EBC League,2026,5,ADD,Romeo Doubs,WR,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},1,activity
-EBC League,2026,5,ADD,Matt Gay,K,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},1,activity
-EBC League,2026,5,ADD,Tyreek Hill,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},2,activity
-EBC League,2026,5,ADD,Denzel Boston,WR,(FA),P90 Asiimov,{4656A2AD-A939-460B-96A2-ADA939760B8B},5,activity
-EBC League,2026,5,ADD,Emanuel Wilson,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},2,activity
-EBC League,2026,5,ADD,Spencer Shrader,K,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},1,activity
-EBC League,2026,5,DROP,Emmett Johnson,RB,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,activity
-EBC League,2026,5,DROP,Harrison Butker,K,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,activity
-EBC League,2026,5,DROP,Sam Darnold,QB,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,activity
-EBC League,2026,5,DROP,Mark Andrews,TE,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,activity
-EBC League,2026,5,DROP,Caleb Williams,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,activity
-EBC League,2026,5,DROP,Jake Bates,K,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,activity
+EBC League,2026,5,ADD,Jared Goff,QB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2026,5,ADD,Romeo Doubs,WR,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2026,5,ADD,Matt Gay,K,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2026,5,ADD,Tyreek Hill,WR,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2026,5,ADD,Denzel Boston,WR,(FA),P90 Asiimov,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+EBC League,2026,5,ADD,Emanuel Wilson,RB,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2026,5,ADD,Spencer Shrader,K,(FA),Abyss Diamond Eyes,{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2026,5,DROP,Emmett Johnson,RB,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2026,5,DROP,Harrison Butker,K,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2026,5,DROP,Sam Darnold,QB,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,snapshot
+EBC League,2026,5,DROP,Mark Andrews,TE,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,snapshot
+EBC League,2026,5,DROP,Caleb Williams,QB,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2026,5,DROP,Jake Bates,K,Abyss Diamond Eyes,(FA),{9AE3AD76-F6D3-4C3E-B0CB-3A5B9E1C501A},0,snapshot
+EBC League,2026,6,ADD,Pat Freiermuth,TE,(FA),Wise Warlocks,{89E249D2-17CC-4743-B60A-232D01C6434D},2,activity
+EBC League,2026,6,ADD,Xavier Worthy,WR,(FA),Wise Warlocks,{89E249D2-17CC-4743-B60A-232D01C6434D},1,activity
+EBC League,2026,6,ADD,Jared Goff,QB,First down syndrome ,Wise Warlocks,{89E249D2-17CC-4743-B60A-232D01C6434D},2,activity
+EBC League,2026,6,ADD,Tony Pollard,RB,(FA),P90 Asiimov,{4656A2AD-A939-460B-96A2-ADA939760B8B},13,activity
+EBC League,2026,6,ADD,Tyler Loop,K,(FA),Inter Miami CF,{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},1,activity
+EBC League,2026,6,ADD,Juwan Johnson,TE,(FA),Jimoke Jukes,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},1,activity
+EBC League,2026,6,ADD,Jordan Love,QB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},1,activity
+EBC League,2026,6,ADD,Devaughn Vele,WR,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},1,activity
+EBC League,2026,6,ADD,Dameon Pierce,RB,(FA),First down syndrome ,{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},1,activity
+EBC League,2026,6,DROP,Colston Loveland,TE,Wise Warlocks,(FA),{89E249D2-17CC-4743-B60A-232D01C6434D},0,activity
+EBC League,2026,6,DROP,Deebo Samuel Sr.,WR,Wise Warlocks,(FA),{89E249D2-17CC-4743-B60A-232D01C6434D},0,activity
+EBC League,2026,6,DROP,Kenyon Sadiq,TE,Wise Warlocks,(FA),{89E249D2-17CC-4743-B60A-232D01C6434D},0,activity
+EBC League,2026,6,DROP,Josh Downs,WR,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,activity
+EBC League,2026,6,DROP,Romeo Doubs,WR,First down syndrome ,(FA),{CF59EECF-F236-4BE7-93F6-C873EFC4BF85},0,activity
+EBC League,2026,6,DROP,Evan McPherson,K,Inter Miami CF,(FA),{A34A1D3B-AB7E-49E5-8A1D-3BAB7E89E546},0,activity
+EBC League,2026,6,DROP,TreVeyon Henderson,RB,P90 Asiimov,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
+EBC League,2026,6,DROP,Kyle Pitts Sr.,TE,Jimoke Jukes,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
