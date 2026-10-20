@@ -14,7 +14,7 @@ def app():
     from ffapp.ui.calcPercent import percent
     from ffapp.ui.playoffNum import playoff_num
 
-    league_id = 1259693145
+    league_id = 417131856
     espn_s2 = CRED["elle_s2"]
     swid = CRED["elle_swid"]
     # Seasons with data on file - no hard-coded list to keep in sync
