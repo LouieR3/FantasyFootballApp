@@ -46,10 +46,7 @@ def app():
     display_lpi(league_id, espn_s2, swid, file)
 
     year = int(selected_year)
-    try:
-        display_playoff_odds(file, league_id, espn_s2, swid, year)
-    except Exception:
-        st.warning("Playoff odds not available for this league/year")
+    display_playoff_odds(file, league_id, espn_s2, swid, year)
 
     if year > 2024:
         try:
