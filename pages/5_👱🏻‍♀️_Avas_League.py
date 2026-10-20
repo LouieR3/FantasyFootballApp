@@ -15,8 +15,8 @@ def app():
     from ffapp.ui.playoffNum import playoff_num
 
     league_id = 417131856
-    espn_s2 = CRED["elle_s2"]
-    swid = CRED["elle_swid"]
+    espn_s2 = CRED["ava_s2"]
+    swid = CRED["ava_swid"]
     # Seasons with data on file - no hard-coded list to keep in sync
     year_options = available_years("Operators Football League")
     if not year_options:
