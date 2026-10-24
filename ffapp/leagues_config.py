@@ -59,6 +59,7 @@ LEAGUES_METADATA = [
     {"name": "The Goofy Goobers", "s2_key": "prahlad2_s2", "swid_key": "prahlad2_s2"},
     {"name": "Campers and Skiers and Prahlad", "s2_key": "prahlad_s2", "swid_key": "prahlad_swid"},
     {"name": "Ketkar Fantasy Football 2026", "s2_key": "ayush_league2_s2", "swid_key": "ayush_league2_swid"},
+    {"name": "AGP 30", "s2_key": "quentin_s2", "swid_key": "quentin_swid"},
 ]
 
 def get_leagues_for_year(year):

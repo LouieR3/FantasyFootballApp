@@ -59,6 +59,7 @@ LEAGUES = [
     {"league_id": 496646254,  "s2": "nolan_s2",   "swid": "nolan_swid",   "name": "Board Fantasy Football"},
     {"league_id": 29400230, "s2": "matt_s2", "swid": "matt_swid", "name": "BP- Loudoun 2025"},
     {"league_id":1242265374, "s2": "turf_s2", "swid": "prahlad_swid", "name": "Turf On Grade 2.0"},
+    {"league_id": 793550328, "s2": "quentin_s2", "swid": "quentin_swid", "name": "AGP 30"},
 ]
 
 

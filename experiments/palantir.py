@@ -67,8 +67,8 @@ league = League(league_id=29400230, year=year, espn_s2=matt_s2, swid=CRED["matt_
 team_name = "Graesser's Golden Receivers"
 
 # Pennoni Younglings
-league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-team_name = "The Golden Receivers"
+# league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+# team_name = "The Golden Receivers"
 # Family League
 league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 team_name = "Big Bosh Bashers"

@@ -311,42 +311,50 @@ args = parser.parse_args()
 # List of league configurations
 
 leagues = [
+    # "year" below is a placeholder, not read anywhere - the real per-iteration
+    # year comes from args.years via league_config_copy / the League() call
+    # below. It used to read the bare name `year`, which is never assigned at
+    # module scope and raised NameError on every import of this module
+    # (including `from ffapp.espn.draft_data import pull_draft_data`, used by
+    # ESPN_Add_Old_Season.py and ESPN_Add_Mid_Season_League.py).
     # Pennoni Younglings
-    {"league_id": 310334683, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Pennoni Younglings"},
+    {"league_id": 310334683, "year": None, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Pennoni Younglings"},
     # Family League
-    {"league_id": 996930954, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Family League"},
+    {"league_id": 996930954, "year": None, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Family League"},
     # EBC League
-    {"league_id": 1118513122, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "EBC League"},
+    {"league_id": 1118513122, "year": None, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "EBC League"},
     # Pennoni Transportation
-    {"league_id": 1339704102, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "0755 Fantasy Football"},
+    {"league_id": 1339704102, "year": None, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "0755 Fantasy Football"},
     # Game of Yards
-    {"league_id": 1781851, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Game of Yards!"},
+    {"league_id": 1781851, "year": None, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Game of Yards!"},
     # Brown Munde
-    {"league_id": 367134149, "year": year, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Brown Munde"},
+    {"league_id": 367134149, "year": None, "espn_s2": prahlad_s2, "swid": CRED["prahlad_swid"], "name": "Brown Munde"},
     # Turf On Grade 2.0 League
-    # {"league_id":1242265374, "year":year, "espn_s2":CRED["turf_s2"], "swid":CRED["prahlad_swid"], "name": "Turf On Grade 2.0"},
+    # {"league_id":1242265374, "year":None, "espn_s2":CRED["turf_s2"], "swid":CRED["prahlad_swid"], "name": "Turf On Grade 2.0"},
     # Las League
-    {"league_id": 1049459, "year": year, "espn_s2": la_s2, "swid": CRED["la_swid"], "name": "THE BEST OF THE BEST"},
+    {"league_id": 1049459, "year": None, "espn_s2": la_s2, "swid": CRED["la_swid"], "name": "THE BEST OF THE BEST"},
     # Hannahs League
-    {"league_id": 1399036372, "year": year, "espn_s2": hannah_s2, "swid": CRED["hannah_swid"], "name": "The Girl's Room 💞🏈"},
+    {"league_id": 1399036372, "year": None, "espn_s2": hannah_s2, "swid": CRED["hannah_swid"], "name": "The Girl's Room 💞🏈"},
     # Avas League
-    {"league_id": 417131856, "year": year, "espn_s2": ava_s2, "swid": CRED["ava_swid"], "name": "Philly Extra Special"},
+    {"league_id": 417131856, "year": None, "espn_s2": ava_s2, "swid": CRED["ava_swid"], "name": "Philly Extra Special"},
     # Matts League
-    {"league_id": 261375772, "year": year, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
+    {"league_id": 261375772, "year": None, "espn_s2": matt_s2, "swid": CRED["matt_swid"], "name": "BP- Loudoun 2025"},
     # Elles League
-    {"league_id": 1259693145, "year": year, "espn_s2": elle_s2, "swid": CRED["elle_swid"], "name": "Operators Football League"},
+    {"league_id": 1259693145, "year": None, "espn_s2": elle_s2, "swid": CRED["elle_swid"], "name": "Operators Football League"},
     # Dave Work League
-    {"league_id": 1675186799, "year": year, "espn_s2": dave_s2, "swid": CRED["dave_swid"], "name": "OnP Fantasy"},
+    {"league_id": 1675186799, "year": None, "espn_s2": dave_s2, "swid": CRED["dave_swid"], "name": "OnP Fantasy"},
     # Dave Friend League
-    {"league_id": 1924463077, "year": year, "espn_s2": dave_s2, "swid": CRED["dave_swid"], "name": "The Mike Daisy Sports IQ League"},
+    {"league_id": 1924463077, "year": None, "espn_s2": dave_s2, "swid": CRED["dave_swid"], "name": "The Mike Daisy Sports IQ League"},
     # Ayush League
-    {"league_id": 558148583, "year": year, "espn_s2": ayush_s2, "swid": CRED["ayush_swid"], "name": "Ross' Fantasy League"},
+    {"league_id": 558148583, "year": None, "espn_s2": ayush_s2, "swid": CRED["ayush_swid"], "name": "Ross' Fantasy League"},
     # Goofy Goobers (2026)
-    {"league_id": 1616305229, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "The Goofy Goobers"},
+    {"league_id": 1616305229, "year": None, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "The Goofy Goobers"},
     # Campers and Skiers and Prahlad (2026)
-    {"league_id": 47829282, "year": year, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Campers and Skiers and Prahlad"},
+    {"league_id": 47829282, "year": None, "espn_s2": louie_s2, "swid": CRED["louie_swid"], "name": "Campers and Skiers and Prahlad"},
     # Board Fantasy Football (Nolan)
-    {"league_id": 496646254, "year": year, "espn_s2": CRED["nolan_s2"], "swid": CRED["nolan_swid"], "name": "Board Fantasy Football"},
+    {"league_id": 496646254, "year": None, "espn_s2": CRED["nolan_s2"], "swid": CRED["nolan_swid"], "name": "Board Fantasy Football"},
+    # AGP 30 (Quentin)
+    {"league_id": 793550328, "year": None, "espn_s2": CRED["quentin_s2"], "swid": CRED["quentin_swid"], "name": "AGP 30"},
 ]
 
 if __name__ == "__main__":

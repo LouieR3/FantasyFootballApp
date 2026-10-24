@@ -55,7 +55,7 @@ def fantasypros_ros_ranks():
     df = pd.DataFrame(players)
     df = df[['player_name', 'player_team_id', 'player_position_id', 'player_owned_avg', 'rank_ecr', 'rank_min', 'rank_max', 'rank_ave', 'rank_std', 'pos_rank']]
 
-    print(df)
+    # print(df)
     return df
 
 def _fetch_fantasypros_ecr_df(url, headers):
@@ -115,8 +115,8 @@ def fantasypros_week_ranks():
     flex_df = _fetch_fantasypros_ecr_df(flex_url, headers)
     qb_df = _fetch_fantasypros_ecr_df(qb_url, headers)
 
-    print(flex_df)
-    print(qb_df)
+    # print(flex_df)
+    # print(qb_df)
     return flex_df, qb_df
 
 # flex_df, qb_df = fantasypros_week_ranks()

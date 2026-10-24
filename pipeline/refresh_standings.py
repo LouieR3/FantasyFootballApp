@@ -63,6 +63,7 @@ LEAGUES = [
     {"league_id": 1616305229, "s2": "louie_s2",   "swid": "louie_swid",   "name": "The Goofy Goobers"},
     {"league_id": 47829282,   "s2": "louie_s2",   "swid": "louie_swid",   "name": "Campers and Skiers and Prahlad"},
     {"league_id": 496646254,  "s2": "nolan_s2",   "swid": "nolan_swid",   "name": "Board Fantasy Football"},
+    {"league_id": 793550328,  "s2": "quentin_s2", "swid": "quentin_swid", "name": "AGP 30"},
 ]
 
 COLUMNS = ['Team', 'Draft Grade', 'Letter Grade', 'League Name', 'Standing',
