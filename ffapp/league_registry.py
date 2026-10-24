@@ -127,7 +127,7 @@ LEAGUES = [
          page=None, color="#9b59b6", confirmed=True),
     dict(espn_name="AGP 30", association="Quentin",
          league_id=793550328, s2="quentin_s2", swid="quentin_swid",
-         page=None, color="#2c3e50", confirmed=True),
+         page="9_🎲_Quentins_League.py", color="#2c3e50", confirmed=True),
 ]
 
 # Older names ESPN used for the same league. `all_matchups.csv` carries whatever
