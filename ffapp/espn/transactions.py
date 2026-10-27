@@ -75,6 +75,12 @@ ROSTER_COLUMNS = ['League', 'Year', 'Week', 'Team', 'Owner ID', 'Player',
 MOVE_COLUMNS = ['League', 'Year', 'Week', 'Type', 'Player', 'Position',
                 'From Team', 'To Team', 'Owner ID', 'FAAB Bid', 'Source']
 
+# A week this far back from the latest completed week is treated as settled and
+# served from the on-disk roster snapshot instead of re-fetched. ESPN stat
+# corrections surface within a week or two of a game, essentially never later,
+# so this is cheap insurance against caching a value that still might change.
+FRESH_WEEKS = 2
+
 
 def say(msg):
     """print() that cannot take down a pull.
@@ -99,8 +105,9 @@ def say(msg):
 def pull_weekly_rosters(league, league_name, year, through_week=None):
     """Every team's roster for every completed week, as a tidy DataFrame.
 
-    One ESPN request per week. ``through_week`` defaults to the last week anyone
-    actually scored in; pass it explicitly to limit the pull.
+    One ESPN request per week that is not already settled on disk - see
+    ``FRESH_WEEKS``. ``through_week`` defaults to the last week anyone actually
+    scored in; pass it explicitly to limit the pull.
 
     The last week is found with ``week_utils.completed_weeks`` rather than
     ``current_week - 1``. On a finished season ESPN leaves ``current_week`` at
@@ -111,10 +118,30 @@ def pull_weekly_rosters(league, league_name, year, through_week=None):
     last = through_week if through_week else _completed_weeks(league)
     last = max(int(last or 0), 0)
 
+    # Weeks older than the fresh window are done and on disk from a previous
+    # run - re-fetching them every week is the single biggest cost of the
+    # weekly pipeline (one ESPN request per historical week, every league,
+    # every run) for data that cannot change. Reuse it, and only refetch the
+    # most recent couple of weeks plus anything genuinely new.
+    stable_cutoff = max(0, last - FRESH_WEEKS)
+    cached = pd.DataFrame(columns=ROSTER_COLUMNS)
+    if stable_cutoff > 0:
+        try:
+            existing, _ = load_season(league_name, year)
+        except Exception:
+            existing = pd.DataFrame(columns=ROSTER_COLUMNS)
+        if not existing.empty:
+            cached = existing[existing['Week'] <= stable_cutoff]
+            cached_max = int(cached['Week'].max()) if not cached.empty else 0
+            # the cache may not actually reach the cutoff (first run after a
+            # gap, or a short prior pull) - only trust it as far as it goes
+            stable_cutoff = min(stable_cutoff, cached_max)
+            cached = cached[cached['Week'] <= stable_cutoff]
+
     owner_cache = {t.team_name: owner_id_for(league, t) for t in league.teams}
 
     rows = []
-    for week in range(1, last + 1):
+    for week in range(stable_cutoff + 1, last + 1):
         try:
             boxes = league.box_scores(week=week)
         except Exception as e:                      # a single bad week must not
@@ -141,9 +168,11 @@ def pull_weekly_rosters(league, league_name, year, through_week=None):
                         'Points': round(float(p.points or 0), 2),
                         'Projected': round(float(p.projected_points or 0), 2),
                     })
-    df = pd.DataFrame(rows, columns=ROSTER_COLUMNS)
+    fresh = pd.DataFrame(rows, columns=ROSTER_COLUMNS)
+    df = pd.concat([cached, fresh], ignore_index=True) if not cached.empty else fresh
+    fetched_weeks = fresh['Week'].nunique() if len(fresh) else 0
     say(f"    rosters: {len(df)} player-weeks over {df['Week'].nunique() if len(df) else 0} weeks "
-          f"(reg_season={reg})")
+          f"(reg_season={reg}, {fetched_weeks} fetched, {stable_cutoff} reused from disk)")
     return df
 
 

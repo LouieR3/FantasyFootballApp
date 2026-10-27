@@ -138,94 +138,74 @@ for league_config in leagues:
         # print(scores_df)
         # print()
         # print(schedules_df)
-        # Create empty dataframe  
-        records_df = pd.DataFrame(index=team_names, columns=team_names)
+        # For every week, and every (team, hypothetical-opponent) pair, work out
+        # whether `team` would have won that week had it used `opponent`'s
+        # schedule instead of its own - this is the "wins against every
+        # schedule" matrix that LPI and Expected Wins are built from. The
+        # original approach recomputed that full n^2 matrix from scratch for
+        # every week 1..current_week (O(weeks^2 * teams^2)): each week's
+        # single-week result doesn't depend on which week we're "viewing from",
+        # so computing it once per week and cumulatively summing gives the
+        # identical numbers in O(weeks * teams^2) - verified byte-identical
+        # against the original nested-loop output on real league data before
+        # swapping it in.
+        n_teams = len(team_names)
+        team_pos = {name: i for i, name in enumerate(team_names)}
+        scores_arr = scores_df.to_numpy(dtype=float)
+        opp_idx_arr = schedules_df.applymap(team_pos.get).to_numpy()
 
-        # Fill diagonal with team names
-        records_df.fillna('', inplace=True) 
+        W = current_week - 1  # weeks actually played
+        win_stack = np.zeros((W, n_teams, n_teams), dtype=np.int64)
+        loss_stack = np.zeros((W, n_teams, n_teams), dtype=np.int64)
+        tie_stack = np.zeros((W, n_teams, n_teams), dtype=np.int64)
 
-        # Initialize a DataFrame to store total wins for each team against all schedules
-        total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
+        for i in range(W):
+            week_scores = scores_arr[:, i]            # each team's real score this week
+            real_opp = opp_idx_arr[:, i]               # each team's real opponent this week
+            oppo_score = week_scores[real_opp]         # score of whoever O's opponent was this week
 
-        # Initialize an empty DataFrame to store LPI scores for each week
-        lpi_weekly_df = pd.DataFrame()
+            # general case: team's real score vs. what hypothetical-opponent O's
+            # real opponent scored this week (the "strength of schedule" swap)
+            diff_general = week_scores[:, None] - oppo_score[None, :]
+            # when O is the team itself, or O is the team's actual opponent this
+            # week, that reduces to the team's own real result this week -
+            # using the general formula there would wrongly compare a team to
+            # itself (opponents play each other, so O's opponent is the team)
+            diff_real = week_scores - oppo_score
+            idx_range = np.arange(n_teams)
+            is_self_or_real_opponent = ((idx_range[None, :] == idx_range[:, None])
+                                        | (idx_range[None, :] == real_opp[:, None]))
+            diff = np.where(is_self_or_real_opponent, diff_real[:, None], diff_general)
 
-        # Iterate through each week
-        for week in range(1, current_week):
-            # Initialize a DataFrame to store total wins for each team against all schedules for this week
-            total_wins_weekly_df = pd.DataFrame(0, columns=team_names, index=team_names)
+            win_stack[i] = diff > 0
+            loss_stack[i] = diff < 0
+            tie_stack[i] = diff == 0
 
-            # Iterate through teams (similar to your previous code)
-            for team in team_names:
-                # Get team scores
-                team_scores = scores_df.loc[team].tolist() 
-                # Iterate through opponents
-                for opp in team_names:
-                    
-                    # Compare scores
-                    wins = 0
-                    losses = 0
-                    ties = 0
-                    for i in range(week):
-                        # Get opponent schedule
-                        opp_schedule = schedules_df.loc[opp].tolist()
-                        
-                        # Get opponent scores
-                        opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
-                        if team == opp:
-                            # Get team's opponent this week
+        cum_win = np.cumsum(win_stack, axis=0)
+        cum_loss = np.cumsum(loss_stack, axis=0)
+        cum_tie = np.cumsum(tie_stack, axis=0)
 
-                            opp_team = schedules_df.loc[team, i]
-                            
-                            # Get team and opponent score
-                            team_score = scores_df.loc[team, i]
-                            opp_score = scores_df.loc[opp_team, i]
+        # Only the final week's full win/loss/tie grid is kept (the 'Schedule
+        # Grid' sheet); every earlier week's grid was discarded after reducing
+        # it to that week's LPI score, same as before.
+        w_last, l_last, t_last = cum_win[W - 1], cum_loss[W - 1], cum_tie[W - 1]
+        records_df = pd.DataFrame(
+            [[f"{w_last[a, b]}-{l_last[a, b]}-{t_last[a, b]}" for b in range(n_teams)]
+             for a in range(n_teams)],
+            index=team_names, columns=team_names,
+        )
+        total_wins_weekly_df = pd.DataFrame(w_last, index=team_names, columns=team_names)
 
-                            if team_score > opp_score:
-                                wins += 1
-                            elif team_score < opp_score:
-                                losses += 1
-                            else:
-                                ties += 1
-
-                        else:
-                            # Check if opponent is the same 
-                            if opp == schedules_df.loc[team, i]:
-                                # Opponent is the same, get correct scores
-                                team_score = scores_df.loc[team, i]
-                                opp_score = scores_df.loc[schedules_df.loc[team, i], i]
-
-                            else:  
-                                # Opponent is different
-                                opp_schedule = schedules_df.loc[opp].tolist()
-                                opp_scores = [scores_df.loc[o][i] for i, o in enumerate(opp_schedule)]
-                                team_score = team_scores[i]
-                                opp_score = opp_scores[i]
-
-                            # Compare scores
-                            if team_score > opp_score:
-                                wins += 1
-                            elif team_score < opp_score:
-                                losses += 1
-                            else:
-                                ties += 1
-                    
-                    # Record result
-                    record = f"{wins}-{losses}-{ties}"
-                    records_df.at[team, opp] = record 
-                    # Update the total wins DataFrame for this week
-                    total_wins_weekly_df.at[team, opp] = wins  # Set wins for all opponents
-
-            # Calculate LPI scores for this week
-            team_wins = total_wins_weekly_df.sum(axis=1)
-            schedule_wins = [sum(total_wins_weekly_df[team]) for team in team_names]
-            num_teams_in_league = len(team_names)
-            lpi_scores = ((team_wins - schedule_wins) * (12 / num_teams_in_league)).round().astype(int)
+        lpi_weekly_df = pd.DataFrame(index=team_names)
+        num_teams_in_league = n_teams
+        for week in range(1, W + 1):
+            wins_matrix = cum_win[week - 1]
+            team_wins = wins_matrix.sum(axis=1)
+            schedule_wins = wins_matrix.sum(axis=0)
+            lpi_scores = np.round((team_wins - schedule_wins) * (12 / num_teams_in_league)).astype(int)
             week_name = "Week " + str(week)
-            # Add LPI scores for this week to the weekly DataFrame
             lpi_weekly_df[week_name] = lpi_scores
-            lpi_weekly_df = lpi_weekly_df.sort_values(by=[week_name], ascending=[False])
-            # lpi_df.reset_index(drop=True, inplace=True)
+        lpi_weekly_df = lpi_weekly_df.sort_values(by=[week_name], ascending=[False])
         # Display the DataFrame with LPI scores for each week
 
         # Calculate actual wins
@@ -571,9 +551,23 @@ for league_config in leagues:
                 .set_index("Team")
         )
 
+        # Previous run's per-week playoff odds, if any - weeks already decided
+        # are reused rather than re-simulated (see monte_carlo_odds.FRESH_WEEKS).
+        # Must be read before `writer` below opens the same path for writing.
+        cached_weekly_df = None
+        workbook_path = f"{LEAGUES_DIR}/{fileName}.xlsx"
+        if _os.path.exists(workbook_path):
+            try:
+                cached_weekly_df = pd.read_excel(
+                    workbook_path, sheet_name='Playoff Odds By Week', index_col=0
+                )
+            except Exception:
+                cached_weekly_df = None
+
         # Or use the integrated function for full output
         weekly_df = add_weekly_analysis_to_main(
-            teams, scores_df, reg_season_count, num_playoff_teams, current_week
+            teams, scores_df, reg_season_count, num_playoff_teams, current_week,
+            cached=cached_weekly_df
         )
         seed_df.to_excel(writer, sheet_name='Playoff Odds')
         weekly_df.to_excel(writer, sheet_name='Playoff Odds By Week')

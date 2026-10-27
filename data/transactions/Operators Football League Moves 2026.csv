@@ -38,17 +38,34 @@ Operators Football League,2026,5,DROP,Xavier Worthy,WR,Big Ballsy Bozos,(FA),{9B
 Operators Football League,2026,5,DROP,49ers D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
 Operators Football League,2026,5,DROP,De'Von Achane,RB,Jockstrap jubilee ,(FA),{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
 Operators Football League,2026,5,DROP,Cairo Santos,K,Jockstrap jubilee ,(FA),{B502FBA7-F2E3-4E73-81F6-2D6F7103471B},0,snapshot
-Operators Football League,2026,6,ADD,Matt Gay,K,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,activity
-Operators Football League,2026,6,ADD,Woody Marks,RB,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,activity
-Operators Football League,2026,6,ADD,Adonai Mitchell,WR,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,activity
-Operators Football League,2026,6,ADD,Xavier Worthy,WR,(FA),Sacks and the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,activity
-Operators Football League,2026,6,ADD,Pat Freiermuth,TE,(FA),Junya Ettlinger's First Team,{5918A112-DDF9-4368-8414-A143EC58B846},0,activity
-Operators Football League,2026,6,ADD,Jameis Winston,QB,(FA),Junya Ettlinger's First Team,{5918A112-DDF9-4368-8414-A143EC58B846},0,activity
-Operators Football League,2026,6,ADD,49ers D/ST,D/ST,(FA),Ler and Order,{8F96766E-1AAF-4AAB-A4A1-B3344170B37B},0,activity
-Operators Football League,2026,6,DROP,Commanders D/ST,D/ST,Sacks and the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,activity
-Operators Football League,2026,6,DROP,Mike Washington Jr.,RB,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,activity
-Operators Football League,2026,6,DROP,Marvin Harrison Jr.,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,activity
-Operators Football League,2026,6,DROP,Kenny Gainwell,RB,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,activity
-Operators Football League,2026,6,DROP,Lions D/ST,D/ST,Ler and Order,(FA),{8F96766E-1AAF-4AAB-A4A1-B3344170B37B},0,activity
-Operators Football League,2026,6,DROP,Brian Thomas Jr.,WR,Junya Ettlinger's First Team,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,activity
-Operators Football League,2026,6,DROP,Jordan Mason,RB,Junya Ettlinger's First Team,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,activity
+Operators Football League,2026,6,ADD,Matt Gay,K,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2026,6,ADD,Woody Marks,RB,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2026,6,ADD,Adonai Mitchell,WR,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2026,6,ADD,Xavier Worthy,WR,(FA),Sacks and the City,{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2026,6,ADD,Pat Freiermuth,TE,(FA),Junya Ettlinger's First Team,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2026,6,ADD,Jameis Winston,QB,(FA),Junya Ettlinger's First Team,{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2026,6,ADD,49ers D/ST,D/ST,(FA),Ler and Order,{8F96766E-1AAF-4AAB-A4A1-B3344170B37B},0,snapshot
+Operators Football League,2026,6,DROP,Commanders D/ST,D/ST,Sacks and the City,(FA),{0C1EF165-EE98-44D3-9EF1-65EE9804D340},0,snapshot
+Operators Football League,2026,6,DROP,Mike Washington Jr.,RB,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,snapshot
+Operators Football League,2026,6,DROP,Marvin Harrison Jr.,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2026,6,DROP,Kenny Gainwell,RB,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,snapshot
+Operators Football League,2026,6,DROP,Lions D/ST,D/ST,Ler and Order,(FA),{8F96766E-1AAF-4AAB-A4A1-B3344170B37B},0,snapshot
+Operators Football League,2026,6,DROP,Brian Thomas Jr.,WR,Junya Ettlinger's First Team,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2026,6,DROP,Jordan Mason,RB,Junya Ettlinger's First Team,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,snapshot
+Operators Football League,2026,7,ADD,Germie Bernard,WR,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,activity
+Operators Football League,2026,7,ADD,Brenton Strange,TE,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,activity
+Operators Football League,2026,7,ADD,Jets D/ST,D/ST,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,activity
+Operators Football League,2026,7,ADD,Ryan Fitzgerald,K,(FA),Big Ballsy Bozos,{9B611343-247D-458B-88C3-50BB33789365},0,activity
+Operators Football League,2026,7,ADD,Tre Tucker,WR,(FA),Natural rack,{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,activity
+Operators Football League,2026,7,ADD,Zach Charbonnet,RB,(FA),Case Closed ,{1EC10606-80E9-4A6D-A618-E448864CAA58},0,activity
+Operators Football League,2026,7,ADD,Kyler Murray,QB,(FA),Junya Ettlinger's First Team,{5918A112-DDF9-4368-8414-A143EC58B846},0,activity
+Operators Football League,2026,7,ADD,Jordan Mason,RB,(FA),Junya Ettlinger's First Team,{5918A112-DDF9-4368-8414-A143EC58B846},0,activity
+Operators Football League,2026,7,DROP,Tank Dell,WR,Natural rack,(FA),{D6BE629A-CDFF-4E0C-9979-BFE0C45F3007},0,activity
+Operators Football League,2026,7,DROP,Terry McLaurin,WR,Case Closed ,(FA),{1EC10606-80E9-4A6D-A618-E448864CAA58},0,activity
+Operators Football League,2026,7,DROP,Mark Andrews,TE,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,activity
+Operators Football League,2026,7,DROP,Cameron Dicker,K,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,activity
+Operators Football League,2026,7,DROP,Jaguars D/ST,D/ST,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,activity
+Operators Football League,2026,7,DROP,Adonai Mitchell,WR,Big Ballsy Bozos,(FA),{9B611343-247D-458B-88C3-50BB33789365},0,activity
+Operators Football League,2026,7,DROP,Jalen Hurts,QB,Junya Ettlinger's First Team,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,activity
+Operators Football League,2026,7,DROP,Jacory Croskey-Merritt,RB,Junya Ettlinger's First Team,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,activity
+Operators Football League,2026,7,DROP,Jameis Winston,QB,Junya Ettlinger's First Team,(FA),{5918A112-DDF9-4368-8414-A143EC58B846},0,activity

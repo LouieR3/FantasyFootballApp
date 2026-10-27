@@ -113,43 +113,74 @@ Pennoni Younglings,2026,5,DROP,Kyler Murray,QB,The Golden Receivers,(FA),{4656A2
 Pennoni Younglings,2026,5,DROP,Harrison Butker,K,Tomas,(FA),{B3FA8480-A668-4D07-BBEA-F82A86C03CDB},0,snapshot
 Pennoni Younglings,2026,5,DROP,Isaiah Davis,RB,Tomas,(FA),{B3FA8480-A668-4D07-BBEA-F82A86C03CDB},0,snapshot
 Pennoni Younglings,2026,5,DROP,Raiders D/ST,D/ST,Tomas,(FA),{B3FA8480-A668-4D07-BBEA-F82A86C03CDB},0,snapshot
-Pennoni Younglings,2026,6,ADD,Rachaad White,RB,(FA),Lets Get Structural,{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
+Pennoni Younglings,2026,6,ADD,Rachaad White,RB,(FA),Lets Get Structural,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
 Pennoni Younglings,2026,6,ADD,Chris Godwin Jr.,WR,The Golden Receivers,Lets Get Structural,{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
-Pennoni Younglings,2026,6,ADD,Germie Bernard,WR,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,activity
-Pennoni Younglings,2026,6,ADD,Dameon Pierce,RB,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,activity
-Pennoni Younglings,2026,6,ADD,Dominic Zvada,K,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,activity
+Pennoni Younglings,2026,6,ADD,Germie Bernard,WR,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2026,6,ADD,Dameon Pierce,RB,(FA),Eli,{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2026,6,ADD,Dominic Zvada,K,(FA),19th St Halal Cart,{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
 Pennoni Younglings,2026,6,ADD,C.J. Stroud,QB,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
-Pennoni Younglings,2026,6,ADD,Brenton Strange,TE,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
-Pennoni Younglings,2026,6,ADD,Adonai Mitchell,WR,(FA),Cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,activity
-Pennoni Younglings,2026,6,ADD,Tyjae Spears,RB,(FA),Cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,activity
-Pennoni Younglings,2026,6,ADD,Chase McLaughlin,K,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,activity
-Pennoni Younglings,2026,6,ADD,Tyler Higbee,TE,(FA),J. Dobbs Holdings LLC,{B3221D79-B4BD-48BE-A802-D450FBD90ACF},0,activity
-Pennoni Younglings,2026,6,ADD,Kimani Vidal,RB,(FA),J. Dobbs Holdings LLC,{B3221D79-B4BD-48BE-A802-D450FBD90ACF},0,activity
-Pennoni Younglings,2026,6,ADD,Colts D/ST,D/ST,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Pennoni Younglings,2026,6,ADD,Harrison Butker,K,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Pennoni Younglings,2026,6,ADD,Aaron Rodgers,QB,(FA),Little Bill,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,activity
+Pennoni Younglings,2026,6,ADD,Brenton Strange,TE,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2026,6,ADD,Adonai Mitchell,WR,(FA),Cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2026,6,ADD,Tyjae Spears,RB,(FA),Cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2026,6,ADD,Chase McLaughlin,K,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2026,6,ADD,Tyler Higbee,TE,(FA),J. Dobbs Holdings LLC,{B3221D79-B4BD-48BE-A802-D450FBD90ACF},0,snapshot
+Pennoni Younglings,2026,6,ADD,Kimani Vidal,RB,(FA),J. Dobbs Holdings LLC,{B3221D79-B4BD-48BE-A802-D450FBD90ACF},0,snapshot
+Pennoni Younglings,2026,6,ADD,Colts D/ST,D/ST,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2026,6,ADD,Harrison Butker,K,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2026,6,ADD,Aaron Rodgers,QB,(FA),Little Bill,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
 Pennoni Younglings,2026,6,ADD,Kendre Miller,RB,(FA),Little Bill,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,activity
-Pennoni Younglings,2026,6,ADD,Efton Chism III,WR,(FA),Little Bill,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,activity
-Pennoni Younglings,2026,6,ADD,Panthers D/ST,D/ST,(FA),Little Bill,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,activity
-Pennoni Younglings,2026,6,ADD,MarShawn Lloyd,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
-Pennoni Younglings,2026,6,ADD,Matt Gay,K,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
+Pennoni Younglings,2026,6,ADD,Efton Chism III,WR,(FA),Little Bill,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2026,6,ADD,Panthers D/ST,D/ST,(FA),Little Bill,{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2026,6,ADD,MarShawn Lloyd,RB,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2026,6,ADD,Matt Gay,K,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
 Pennoni Younglings,2026,6,ADD,Kalif Raymond,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
-Pennoni Younglings,2026,6,ADD,Brandin Cooks,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
-Pennoni Younglings,2026,6,DROP,Evan McPherson,K,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,activity
-Pennoni Younglings,2026,6,DROP,Will Shipley,RB,Lets Get Structural,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
-Pennoni Younglings,2026,6,DROP,Cowboys D/ST,D/ST,Cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,activity
-Pennoni Younglings,2026,6,DROP,Dohnte Meyers,WR,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,activity
-Pennoni Younglings,2026,6,DROP,Roschon Johnson,RB,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,activity
-Pennoni Younglings,2026,6,DROP,Roman Wilson,WR,J. Dobbs Holdings LLC,(FA),{B3221D79-B4BD-48BE-A802-D450FBD90ACF},0,activity
-Pennoni Younglings,2026,6,DROP,Harrison Mevis,K,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Pennoni Younglings,2026,6,DROP,Bengals D/ST,D/ST,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Pennoni Younglings,2026,6,DROP,Bo Nix,QB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
-Pennoni Younglings,2026,6,DROP,Tre' Harris,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
+Pennoni Younglings,2026,6,ADD,Brandin Cooks,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2026,6,DROP,Evan McPherson,K,19th St Halal Cart,(FA),{DC811D3C-5EC4-4818-8E91-66D1350A42D2},0,snapshot
+Pennoni Younglings,2026,6,DROP,Will Shipley,RB,Lets Get Structural,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Pennoni Younglings,2026,6,DROP,Cowboys D/ST,D/ST,Cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,snapshot
+Pennoni Younglings,2026,6,DROP,Dohnte Meyers,WR,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2026,6,DROP,Roschon Johnson,RB,Eli,(FA),{4406D5E2-027E-496A-8DB3-92E87CDFFD33},0,snapshot
+Pennoni Younglings,2026,6,DROP,Roman Wilson,WR,J. Dobbs Holdings LLC,(FA),{B3221D79-B4BD-48BE-A802-D450FBD90ACF},0,snapshot
+Pennoni Younglings,2026,6,DROP,Harrison Mevis,K,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2026,6,DROP,Bengals D/ST,D/ST,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Pennoni Younglings,2026,6,DROP,Bo Nix,QB,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Pennoni Younglings,2026,6,DROP,Tre' Harris,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
 Pennoni Younglings,2026,6,DROP,Dontayvion Wicks,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
-Pennoni Younglings,2026,6,DROP,Jacoby Brissett,QB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
-Pennoni Younglings,2026,6,DROP,Mike Washington Jr.,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
-Pennoni Younglings,2026,6,DROP,Jonathon Brooks,RB,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,activity
-Pennoni Younglings,2026,6,DROP,Quentin Johnston,WR,Little Bill,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,activity
-Pennoni Younglings,2026,6,DROP,Chargers D/ST,D/ST,Little Bill,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,activity
-Pennoni Younglings,2026,6,DROP,Caleb Douglas,WR,Little Bill,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,activity
-Pennoni Younglings,2026,6,DROP,Antonio Williams,WR,Little Bill,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,activity
+Pennoni Younglings,2026,6,DROP,Jacoby Brissett,QB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2026,6,DROP,Mike Washington Jr.,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,snapshot
+Pennoni Younglings,2026,6,DROP,Jonathon Brooks,RB,Philadelphia Bills Mafia,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Pennoni Younglings,2026,6,DROP,Quentin Johnston,WR,Little Bill,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2026,6,DROP,Chargers D/ST,D/ST,Little Bill,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2026,6,DROP,Caleb Douglas,WR,Little Bill,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2026,6,DROP,Antonio Williams,WR,Little Bill,(FA),{E5F04052-4D5B-41A7-B040-524D5BF1A7E1},0,snapshot
+Pennoni Younglings,2026,7,ADD,Roschon Johnson,RB,(FA),Lets Get Structural,{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
+Pennoni Younglings,2026,7,ADD,Ryan Flournoy,WR,(FA),Lets Get Structural,{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
+Pennoni Younglings,2026,7,ADD,Titans D/ST,D/ST,(FA),Lets Get Structural,{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
+Pennoni Younglings,2026,7,ADD,Evan McPherson,K,(FA),The Golden Receivers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
+Pennoni Younglings,2026,7,ADD,Hunter Henry,TE,(FA),Philadelphia Bills Mafia,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,activity
+Pennoni Younglings,2026,7,ADD,Dontayvion Wicks,WR,(FA),Cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,activity
+Pennoni Younglings,2026,7,ADD,Michael Mayer,TE,(FA),Cman,{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,activity
+Pennoni Younglings,2026,7,ADD,Matt Gay,K,Prahlad's Ghost,Tomas,{B3FA8480-A668-4D07-BBEA-F82A86C03CDB},0,activity
+Pennoni Younglings,2026,7,ADD,Mark Andrews,TE,Daddy's Finally Home,Tomas,{B3FA8480-A668-4D07-BBEA-F82A86C03CDB},0,activity
+Pennoni Younglings,2026,7,ADD,Chase McLaughlin,K,Philadelphia Bills Mafia,J. Dobbs Holdings LLC,{B3221D79-B4BD-48BE-A802-D450FBD90ACF},0,activity
+Pennoni Younglings,2026,7,ADD,Kyler Murray,QB,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Pennoni Younglings,2026,7,ADD,Browns D/ST,D/ST,(FA),Daddy's Finally Home,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Pennoni Younglings,2026,7,ADD,DeMario Douglas,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
+Pennoni Younglings,2026,7,ADD,Omar Cooper Jr.,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
+Pennoni Younglings,2026,7,ADD,Kendrick Bourne,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
+Pennoni Younglings,2026,7,ADD,Jordyn Tyson,WR,(FA),Prahlad's Ghost,{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
+Pennoni Younglings,2026,7,DROP,Rico Dowdle,RB,Lets Get Structural,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
+Pennoni Younglings,2026,7,DROP,Makai Lemon,WR,Lets Get Structural,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
+Pennoni Younglings,2026,7,DROP,49ers D/ST,D/ST,Lets Get Structural,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
+Pennoni Younglings,2026,7,DROP,Courtland Sutton,WR,The Golden Receivers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
+Pennoni Younglings,2026,7,DROP,Michael Pittman Jr.,WR,Cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,activity
+Pennoni Younglings,2026,7,DROP,Adonai Mitchell,WR,Cman,(FA),{3038B793-C0D8-4773-82BA-30F522EA1C1A},0,activity
+Pennoni Younglings,2026,7,DROP,Jalen Hurts,QB,J. Dobbs Holdings LLC,(FA),{B3221D79-B4BD-48BE-A802-D450FBD90ACF},0,activity
+Pennoni Younglings,2026,7,DROP,Tyler Loop,K,J. Dobbs Holdings LLC,(FA),{B3221D79-B4BD-48BE-A802-D450FBD90ACF},0,activity
+Pennoni Younglings,2026,7,DROP,Jake Ferguson,TE,Tomas,(FA),{B3FA8480-A668-4D07-BBEA-F82A86C03CDB},0,activity
+Pennoni Younglings,2026,7,DROP,Cameron Dicker,K,Tomas,(FA),{B3FA8480-A668-4D07-BBEA-F82A86C03CDB},0,activity
+Pennoni Younglings,2026,7,DROP,Keaton Mitchell,RB,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Pennoni Younglings,2026,7,DROP,Colts D/ST,D/ST,Daddy's Finally Home,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Pennoni Younglings,2026,7,DROP,MarShawn Lloyd,RB,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
+Pennoni Younglings,2026,7,DROP,Kalif Raymond,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity
+Pennoni Younglings,2026,7,DROP,Brandin Cooks,WR,Prahlad's Ghost,(FA),{0FCD52B7-4836-49D1-8E35-7FFB99B37B42},0,activity

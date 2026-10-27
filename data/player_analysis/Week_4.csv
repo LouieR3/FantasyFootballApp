@@ -9,8 +9,8 @@ Week,Category,Player,Count,Pct_of_Category
 4,Undefeated,George Kittle,3,23.1%
 4,Undefeated,Josh Jacobs,3,23.1%
 4,Undefeated,Zach Charbonnet,3,23.1%
-4,Undefeated,Bears D/ST,3,23.1%
 4,Undefeated,Rome Odunze,3,23.1%
+4,Undefeated,Bo Nix,3,23.1%
 4,Undefeated,CeeDee Lamb,3,23.1%
 4,Undefeated,Chase Brown,3,23.1%
 4,Undefeated,Rams D/ST,3,23.1%
@@ -23,6 +23,7 @@ Week,Category,Player,Count,Pct_of_Category
 4,Undefeated,Brandon Aubrey,2,15.4%
 4,Undefeated,Travis Kelce,2,15.4%
 4,Undefeated,Keenan Allen,2,15.4%
+4,Undefeated,Bears D/ST,2,15.4%
 4,Undefeated,Kirk Cousins,2,15.4%
 4,Undefeated,Malik Nabers,2,15.4%
 4,Undefeated,D'Andre Swift,2,15.4%
@@ -30,14 +31,12 @@ Week,Category,Player,Count,Pct_of_Category
 4,Undefeated,Patrick Mahomes,2,15.4%
 4,Undefeated,Jake Ferguson,2,15.4%
 4,Undefeated,Juwan Johnson,2,15.4%
-4,Undefeated,Patriots D/ST,2,15.4%
 4,Undefeated,Christian McCaffrey,2,15.4%
 4,Undefeated,Tetairoa McMillan,2,15.4%
 4,Undefeated,Drake Maye,2,15.4%
 4,Undefeated,Sam LaPorta,2,15.4%
 4,Undefeated,Travis Hunter,2,15.4%
 4,Undefeated,Broncos D/ST,2,15.4%
-4,Undefeated,Bo Nix,2,15.4%
 4,Undefeated,Jared Goff,2,15.4%
 4,Undefeated,Zay Flowers,2,15.4%
 4,Undefeated,Deebo Samuel Sr.,2,15.4%
@@ -60,6 +59,7 @@ Week,Category,Player,Count,Pct_of_Category
 4,Undefeated,Chris Godwin Jr.,1,7.7%
 4,Undefeated,Chase McLaughlin,1,7.7%
 4,Undefeated,Deshaun Watson,1,7.7%
+4,Undefeated,Titans D/ST,1,7.7%
 4,Undefeated,Garrett Wilson,1,7.7%
 4,Undefeated,Denzel Boston,1,7.7%
 4,Undefeated,Travis Etienne Jr.,1,7.7%
@@ -94,6 +94,7 @@ Week,Category,Player,Count,Pct_of_Category
 4,Undefeated,Stefon Diggs,1,7.7%
 4,Undefeated,Braelon Allen,1,7.7%
 4,Undefeated,Spencer Shrader,1,7.7%
+4,Undefeated,Jets D/ST,1,7.7%
 4,Undefeated,Brock Bowers,1,7.7%
 4,Undefeated,Rhamondre Stevenson,1,7.7%
 4,Undefeated,Dalton Kincaid,1,7.7%
@@ -124,14 +125,17 @@ Week,Category,Player,Count,Pct_of_Category
 4,Undefeated,Kaelon Black,1,7.7%
 4,Undefeated,Roman Wilson,1,7.7%
 4,Undefeated,Aaron Rodgers,1,7.7%
+4,Undefeated,Samaje Perine,1,7.7%
 4,Undefeated,Amon-Ra St. Brown,1,7.7%
 4,Undefeated,George Pickens,1,7.7%
-4,Undefeated,Makai Lemon,1,7.7%
 4,Undefeated,Jordan Addison,1,7.7%
 4,Undefeated,Mark Andrews,1,7.7%
+4,Undefeated,Dominic Zvada,1,7.7%
 4,Winless,Jordan Mason,4,33.3%
+4,Winless,Browns D/ST,4,33.3%
 4,Winless,Puka Nacua,3,25.0%
 4,Winless,Dallas Goedert,3,25.0%
+4,Winless,Matt Gay,3,25.0%
 4,Winless,Blake Corum,3,25.0%
 4,Winless,Justin Jefferson,3,25.0%
 4,Winless,Bo Nix,3,25.0%
@@ -145,6 +149,7 @@ Week,Category,Player,Count,Pct_of_Category
 4,Winless,Chris Rodriguez Jr.,2,16.7%
 4,Winless,C.J. Stroud,2,16.7%
 4,Winless,Brian Robinson Jr.,2,16.7%
+4,Winless,Chris Boswell,2,16.7%
 4,Winless,Ja'Marr Chase,2,16.7%
 4,Winless,Trey McBride,2,16.7%
 4,Winless,Rashee Rice,2,16.7%
@@ -153,32 +158,30 @@ Week,Category,Player,Count,Pct_of_Category
 4,Winless,Bryce Young,2,16.7%
 4,Winless,Emanuel Wilson,2,16.7%
 4,Winless,Breece Hall,2,16.7%
-4,Winless,Davante Adams,2,16.7%
 4,Winless,Harold Fannin Jr.,2,16.7%
 4,Winless,Wan'Dale Robinson,2,16.7%
 4,Winless,Makai Lemon,2,16.7%
-4,Winless,Browns D/ST,2,16.7%
 4,Winless,George Pickens,2,16.7%
 4,Winless,Brandon Aubrey,2,16.7%
 4,Winless,J.K. Dobbins,2,16.7%
+4,Winless,Aaron Rodgers,2,16.7%
 4,Winless,DK Metcalf,2,16.7%
+4,Winless,Michael Penix Jr.,2,16.7%
 4,Winless,Derrick Henry,2,16.7%
 4,Winless,Harrison Butker,2,16.7%
 4,Winless,D'Andre Swift,2,16.7%
 4,Winless,Matthew Stafford,2,16.7%
-4,Winless,Cam Little,2,16.7%
 4,Winless,Matthew Golden,2,16.7%
 4,Winless,Dalton Kincaid,2,16.7%
 4,Winless,Travis Etienne Jr.,1,8.3%
 4,Winless,DJ Moore,1,8.3%
 4,Winless,Kenny Gainwell,1,8.3%
 4,Winless,Brock Purdy,1,8.3%
-4,Winless,Jake Ferguson,1,8.3%
 4,Winless,Josh Downs,1,8.3%
 4,Winless,Tyler Allgeier,1,8.3%
 4,Winless,Rashid Shaheed,1,8.3%
-4,Winless,Cameron Dicker,1,8.3%
 4,Winless,Jets D/ST,1,8.3%
+4,Winless,Mark Andrews,1,8.3%
 4,Winless,Jonathan Taylor,1,8.3%
 4,Winless,Javonte Williams,1,8.3%
 4,Winless,Ladd McConkey,1,8.3%
@@ -186,8 +189,9 @@ Week,Category,Player,Count,Pct_of_Category
 4,Winless,Christian Watson,1,8.3%
 4,Winless,Brian Thomas Jr.,1,8.3%
 4,Winless,Romeo Doubs,1,8.3%
-4,Winless,Kenyon Sadiq,1,8.3%
 4,Winless,Cowboys D/ST,1,8.3%
+4,Winless,Kaelon Black,1,8.3%
+4,Winless,Omar Cooper Jr.,1,8.3%
 4,Winless,Colston Loveland,1,8.3%
 4,Winless,Joe Burrow,1,8.3%
 4,Winless,Kyle Monangai,1,8.3%
@@ -195,17 +199,18 @@ Week,Category,Player,Count,Pct_of_Category
 4,Winless,Spencer Shrader,1,8.3%
 4,Winless,Malik Washington,1,8.3%
 4,Winless,Jaguars D/ST,1,8.3%
-4,Winless,KC Concepcion,1,8.3%
 4,Winless,Dontayvion Wicks,1,8.3%
+4,Winless,49ers D/ST,1,8.3%
 4,Winless,Josh Allen,1,8.3%
 4,Winless,Tony Pollard,1,8.3%
 4,Winless,Jordan Addison,1,8.3%
 4,Winless,Tyjae Spears,1,8.3%
 4,Winless,Jalen Coker,1,8.3%
-4,Winless,Jalen McMillan,1,8.3%
 4,Winless,Cairo Santos,1,8.3%
 4,Winless,Isaiah Davis,1,8.3%
 4,Winless,George Holani,1,8.3%
+4,Winless,J.J. McCarthy,1,8.3%
+4,Winless,Bam Knight,1,8.3%
 4,Winless,Chase Brown,1,8.3%
 4,Winless,Kyren Williams,1,8.3%
 4,Winless,Trevor Lawrence,1,8.3%
@@ -221,15 +226,11 @@ Week,Category,Player,Count,Pct_of_Category
 4,Winless,Seahawks Coach,1,8.3%
 4,Winless,Jacory Croskey-Merritt,1,8.3%
 4,Winless,Tyler Shough,1,8.3%
-4,Winless,Daniel Jones,1,8.3%
 4,Winless,Alvin Kamara,1,8.3%
 4,Winless,Zay Flowers,1,8.3%
 4,Winless,Jadarian Price,1,8.3%
 4,Winless,Eagles D/ST,1,8.3%
 4,Winless,Mack Hollins,1,8.3%
-4,Winless,Aaron Rodgers,1,8.3%
-4,Winless,Michael Penix Jr.,1,8.3%
-4,Winless,Matt Gay,1,8.3%
 4,Winless,Terry McLaurin,1,8.3%
 4,Winless,Marvin Harrison Jr.,1,8.3%
 4,Winless,Texans D/ST,1,8.3%
@@ -240,17 +241,17 @@ Week,Category,Player,Count,Pct_of_Category
 4,Winless,Kenneth Walker III,1,8.3%
 4,Winless,Jalen Hurts,1,8.3%
 4,Winless,Rams D/ST,1,8.3%
+4,Winless,Cam Little,1,8.3%
 4,Winless,Juwan Johnson,1,8.3%
 4,Winless,Jameson Williams,1,8.3%
 4,Winless,Isaiah Likely,1,8.3%
-4,Winless,Tyreek Hill,1,8.3%
 4,Winless,Jaxon Smith-Njigba,1,8.3%
 4,Winless,Cam Skattebo,1,8.3%
+4,Winless,Davante Adams,1,8.3%
 4,Winless,Rome Odunze,1,8.3%
 4,Winless,T.J. Hockenson,1,8.3%
 4,Winless,Pat Freiermuth,1,8.3%
 4,Winless,Deebo Samuel Sr.,1,8.3%
-4,Winless,Giants D/ST,1,8.3%
 4,Winless,Will Reichard,1,8.3%
 4,Winless,Brock Bowers,1,8.3%
 4,Winless,Parker Washington,1,8.3%
@@ -258,25 +259,22 @@ Week,Category,Player,Count,Pct_of_Category
 4,Winless,Chris Godwin Jr.,1,8.3%
 4,Winless,Keenan Allen,1,8.3%
 4,Winless,Trey Smack,1,8.3%
-4,Winless,Oronde Gadsden,1,8.3%
 4,Winless,Bengals D/ST,1,8.3%
-4,Winless,Saints D/ST,1,8.3%
 4,Winless,Kendre Miller,1,8.3%
+4,Winless,Panthers D/ST,1,8.3%
 4,Winless,Garrett Wilson,1,8.3%
 4,Winless,Quinshon Judkins,1,8.3%
-4,Winless,David Montgomery,1,8.3%
 4,Winless,Carnell Tate,1,8.3%
-4,Winless,Ravens D/ST,1,8.3%
 4,Winless,Patrick Mahomes,1,8.3%
 4,Winless,Ollie Gordon II,1,8.3%
 4,Winless,Kyle Pitts Sr.,1,8.3%
 4,Winless,Dameon Pierce,1,8.3%
+4,Winless,Kyler Murray,1,8.3%
 4,1st,Dak Prescott,3,27.3%
 4,1st,Jaxon Smith-Njigba,2,18.2%
 4,1st,Garrett Wilson,2,18.2%
 4,1st,Joe Burrow,2,18.2%
 4,1st,Jaylen Warren,2,18.2%
-4,1st,Jacory Croskey-Merritt,2,18.2%
 4,1st,Juwan Johnson,2,18.2%
 4,1st,Jason Myers,2,18.2%
 4,1st,Kendre Miller,2,18.2%
@@ -285,8 +283,8 @@ Week,Category,Player,Count,Pct_of_Category
 4,1st,David Montgomery,2,18.2%
 4,1st,Parker Washington,2,18.2%
 4,1st,Brock Purdy,2,18.2%
-4,1st,Cam Little,2,18.2%
 4,1st,Brenton Strange,2,18.2%
+4,1st,Kyle Pitts Sr.,2,18.2%
 4,1st,Christian McCaffrey,2,18.2%
 4,1st,Trey McBride,2,18.2%
 4,1st,Kenneth Walker III,2,18.2%
@@ -298,11 +296,12 @@ Week,Category,Player,Count,Pct_of_Category
 4,1st,Bijan Robinson,2,18.2%
 4,1st,Zay Flowers,2,18.2%
 4,1st,Travis Kelce,2,18.2%
-4,1st,Brian Thomas Jr.,2,18.2%
+4,1st,Will Reichard,2,18.2%
 4,1st,Nico Collins,1,9.1%
 4,1st,Breece Hall,1,9.1%
 4,1st,Bucky Irving,1,9.1%
 4,1st,Alec Pierce,1,9.1%
+4,1st,Jacory Croskey-Merritt,1,9.1%
 4,1st,Jalen Coker,1,9.1%
 4,1st,Aaron Rodgers,1,9.1%
 4,1st,Efton Chism III,1,9.1%
@@ -311,9 +310,10 @@ Week,Category,Player,Count,Pct_of_Category
 4,1st,Jaylen Waddle,1,9.1%
 4,1st,Matthew Golden,1,9.1%
 4,1st,Mike Washington Jr.,1,9.1%
-4,1st,Dalton Schultz,1,9.1%
+4,1st,Cam Little,1,9.1%
 4,1st,Vikings D/ST,1,9.1%
-4,1st,Chiefs D/ST,1,9.1%
+4,1st,Ryan Fitzgerald,1,9.1%
+4,1st,Jonah Coleman,1,9.1%
 4,1st,Emeka Egbuka,1,9.1%
 4,1st,Lamar Jackson,1,9.1%
 4,1st,Michael Pittman Jr.,1,9.1%
@@ -328,10 +328,8 @@ Week,Category,Player,Count,Pct_of_Category
 4,1st,Tyler Warren,1,9.1%
 4,1st,Courtland Sutton,1,9.1%
 4,1st,Mike Evans,1,9.1%
-4,1st,Rachaad White,1,9.1%
 4,1st,Spencer Shrader,1,9.1%
 4,1st,Ollie Gordon II,1,9.1%
-4,1st,Tyler Higbee,1,9.1%
 4,1st,Jeremiyah Love,1,9.1%
 4,1st,Davante Adams,1,9.1%
 4,1st,Mark Andrews,1,9.1%
@@ -348,6 +346,7 @@ Week,Category,Player,Count,Pct_of_Category
 4,1st,Drake Maye,1,9.1%
 4,1st,George Kittle,1,9.1%
 4,1st,Rhamondre Stevenson,1,9.1%
+4,1st,Brian Thomas Jr.,1,9.1%
 4,1st,Steelers D/ST,1,9.1%
 4,1st,Xavier Worthy,1,9.1%
 4,1st,Kyren Williams,1,9.1%
@@ -357,7 +356,6 @@ Week,Category,Player,Count,Pct_of_Category
 4,1st,Ka'imi Fairbairn,1,9.1%
 4,1st,Isiah Pacheco,1,9.1%
 4,1st,Patriots D/ST,1,9.1%
-4,1st,Will Reichard,1,9.1%
 4,1st,Tyson Bagent,1,9.1%
 4,1st,Kirk Cousins,1,9.1%
 4,1st,DeMario Douglas,1,9.1%
@@ -370,6 +368,7 @@ Week,Category,Player,Count,Pct_of_Category
 4,1st,Wan'Dale Robinson,1,9.1%
 4,1st,Dalton Kincaid,1,9.1%
 4,1st,Devaughn Vele,1,9.1%
+4,1st,Omar Cooper Jr.,1,9.1%
 4,Last,Jared Goff,4,28.6%
 4,Last,David Montgomery,4,28.6%
 4,Last,Rashee Rice,3,21.4%
@@ -377,7 +376,7 @@ Week,Category,Player,Count,Pct_of_Category
 4,Last,Ollie Gordon II,3,21.4%
 4,Last,Garrett Wilson,3,21.4%
 4,Last,Jaylen Waddle,3,21.4%
-4,Last,Brian Robinson Jr.,3,21.4%
+4,Last,Blake Corum,3,21.4%
 4,Last,Jalen Coker,3,21.4%
 4,Last,Spencer Shrader,3,21.4%
 4,Last,Jonathan Taylor,3,21.4%
@@ -385,7 +384,7 @@ Week,Category,Player,Count,Pct_of_Category
 4,Last,Ladd McConkey,2,14.3%
 4,Last,TreVeyon Henderson,2,14.3%
 4,Last,Patrick Mahomes,2,14.3%
-4,Last,Jeremiyah Love,2,14.3%
+4,Last,DeMario Douglas,2,14.3%
 4,Last,Jalen Hurts,2,14.3%
 4,Last,Alec Pierce,2,14.3%
 4,Last,Dalton Schultz,2,14.3%
@@ -393,16 +392,14 @@ Week,Category,Player,Count,Pct_of_Category
 4,Last,Omarion Hampton,2,14.3%
 4,Last,Marvin Harrison Jr.,2,14.3%
 4,Last,Wan'Dale Robinson,2,14.3%
-4,Last,Eagles D/ST,2,14.3%
 4,Last,Tyler Loop,2,14.3%
 4,Last,Chase Brown,2,14.3%
-4,Last,Jacory Croskey-Merritt,2,14.3%
 4,Last,Jordan Love,2,14.3%
 4,Last,A.J. Brown,2,14.3%
 4,Last,Travis Etienne Jr.,2,14.3%
-4,Last,Blake Corum,2,14.3%
 4,Last,Travis Kelce,2,14.3%
 4,Last,Bears D/ST,2,14.3%
+4,Last,Brian Robinson Jr.,2,14.3%
 4,Last,Amon-Ra St. Brown,2,14.3%
 4,Last,DeVonta Smith,2,14.3%
 4,Last,Tyler Shough,2,14.3%
@@ -415,11 +412,11 @@ Week,Category,Player,Count,Pct_of_Category
 4,Last,Jonah Coleman,1,7.1%
 4,Last,Braelon Allen,1,7.1%
 4,Last,Will Reichard,1,7.1%
-4,Last,MarShawn Lloyd,1,7.1%
-4,Last,Matt Gay,1,7.1%
-4,Last,Kalif Raymond,1,7.1%
-4,Last,Brandin Cooks,1,7.1%
+4,Last,Omar Cooper Jr.,1,7.1%
+4,Last,Kendrick Bourne,1,7.1%
+4,Last,Jordyn Tyson,1,7.1%
 4,Last,Jaxon Smith-Njigba,1,7.1%
+4,Last,Jeremiyah Love,1,7.1%
 4,Last,Cam Skattebo,1,7.1%
 4,Last,Rhamondre Stevenson,1,7.1%
 4,Last,Steelers D/ST,1,7.1%
@@ -430,17 +427,20 @@ Week,Category,Player,Count,Pct_of_Category
 4,Last,Kyren Williams,1,7.1%
 4,Last,Sam LaPorta,1,7.1%
 4,Last,Justin Herbert,1,7.1%
+4,Last,Eagles D/ST,1,7.1%
 4,Last,Cameron Dicker,1,7.1%
 4,Last,Chiefs Coach,1,7.1%
 4,Last,Woody Marks,1,7.1%
 4,Last,Jahmyr Gibbs,1,7.1%
 4,Last,George Pickens,1,7.1%
 4,Last,Joe Burrow,1,7.1%
+4,Last,Jacory Croskey-Merritt,1,7.1%
 4,Last,Texans D/ST,1,7.1%
 4,Last,Jason Myers,1,7.1%
 4,Last,Chris Godwin Jr.,1,7.1%
 4,Last,Rashid Shaheed,1,7.1%
 4,Last,Tyjae Spears,1,7.1%
+4,Last,Kaelon Black,1,7.1%
 4,Last,Jake Elliott,1,7.1%
 4,Last,Antonio Williams,1,7.1%
 4,Last,Brenton Strange,1,7.1%
@@ -454,9 +454,9 @@ Week,Category,Player,Count,Pct_of_Category
 4,Last,Breece Hall,1,7.1%
 4,Last,Josh Jacobs,1,7.1%
 4,Last,Chuba Hubbard,1,7.1%
-4,Last,Bryce Young,1,7.1%
-4,Last,Emanuel Wilson,1,7.1%
-4,Last,Chiefs D/ST,1,7.1%
+4,Last,Vikings D/ST,1,7.1%
+4,Last,Zach Charbonnet,1,7.1%
+4,Last,Caleb Williams,1,7.1%
 4,Last,Josh Allen,1,7.1%
 4,Last,Quinshon Judkins,1,7.1%
 4,Last,Rico Dowdle,1,7.1%
@@ -466,13 +466,14 @@ Week,Category,Player,Count,Pct_of_Category
 4,Last,Dontayvion Wicks,1,7.1%
 4,Last,Khalil Shakir,1,7.1%
 4,Last,Germie Bernard,1,7.1%
+4,Last,49ers D/ST,1,7.1%
 4,Last,Emeka Egbuka,1,7.1%
 4,Last,Brock Bowers,1,7.1%
-4,Last,Terry McLaurin,1,7.1%
 4,Last,Jaylen Warren,1,7.1%
 4,Last,Mark Andrews,1,7.1%
-4,Last,49ers D/ST,1,7.1%
 4,Last,Tyler Allgeier,1,7.1%
+4,Last,Denzel Boston,1,7.1%
+4,Last,Bengals D/ST,1,7.1%
 4,Last,Ja'Marr Chase,1,7.1%
 4,Last,Nico Collins,1,7.1%
 4,Last,Tyler Warren,1,7.1%
@@ -493,4 +494,5 @@ Week,Category,Player,Count,Pct_of_Category
 4,Last,Isaiah Likely,1,7.1%
 4,Last,Deebo Samuel Sr.,1,7.1%
 4,Last,Kirk Cousins,1,7.1%
-4,Last,DeMario Douglas,1,7.1%
+4,Last,Tyrone Tracy Jr.,1,7.1%
+4,Last,Bam Knight,1,7.1%

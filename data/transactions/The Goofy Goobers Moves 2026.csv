@@ -26,7 +26,7 @@ The Goofy Goobers,2026,3,ADD,49ers D/ST,D/ST,(FA),Fiery Dragons,{0BD86400-A403-4
 The Goofy Goobers,2026,3,ADD,Dalton Schultz,TE,(FA),Fiery Dragons,{0BD86400-A403-4212-B484-0E144CEC717B},0,snapshot
 The Goofy Goobers,2026,3,ADD,Dontayvion Wicks,WR,(FA),Rice Rice Baby,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
 The Goofy Goobers,2026,3,ADD,Kyler Murray,QB,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
-The Goofy Goobers,2026,3,ADD,RJ Harvey,RB,(FA),Rocket Bowers,{5E530C03-3F19-48F0-A309-52B769E76347},0,activity
+The Goofy Goobers,2026,3,ADD,RJ Harvey,RB,(FA),Rocket Bowers,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
 The Goofy Goobers,2026,3,ADD,Woody Marks,RB,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
 The Goofy Goobers,2026,3,ADD,Tank Bigsby,RB,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
 The Goofy Goobers,2026,3,ADD,Panthers D/ST,D/ST,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
@@ -46,7 +46,7 @@ The Goofy Goobers,2026,4,ADD,Joe Mixon,RB,(FA),Revenge of De Smithy,{4C1C5213-4B
 The Goofy Goobers,2026,4,ADD,Juwan Johnson,TE,(FA),Fiery Dragons,{0BD86400-A403-4212-B484-0E144CEC717B},0,activity
 The Goofy Goobers,2026,4,ADD,Braelon Allen,RB,(FA),Fiery Dragons,{0BD86400-A403-4212-B484-0E144CEC717B},0,snapshot
 The Goofy Goobers,2026,4,ADD,Ollie Gordon II,RB,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
-The Goofy Goobers,2026,4,ADD,Malik Washington,WR,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
+The Goofy Goobers,2026,4,ADD,Malik Washington,WR,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
 The Goofy Goobers,2026,4,TEAM->TEAM,Jordan Mason,RB,Revenge of De Smithy,Bands Emeka Dance,{ACAB1E9E-16AE-49C8-80FB-6C40F0A1BE48},0,snapshot
 The Goofy Goobers,2026,4,ADD,Kalif Raymond,WR,(FA),Delco Football Team,{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,snapshot
 The Goofy Goobers,2026,4,ADD,Keenan Allen,WR,(FA),Rocket Bowers,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
@@ -77,36 +77,62 @@ The Goofy Goobers,2026,5,DROP,Eddy Pineiro,K,Fiery Dragons,(FA),{0BD86400-A403-4
 The Goofy Goobers,2026,5,DROP,Braelon Allen,RB,Fiery Dragons,(FA),{0BD86400-A403-4212-B484-0E144CEC717B},0,snapshot
 The Goofy Goobers,2026,5,DROP,Justin Herbert,QB,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
 The Goofy Goobers,2026,5,DROP,Woody Marks,RB,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
-The Goofy Goobers,2026,6,ADD,Aaron Rodgers,QB,(FA),Rice Rice Baby,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
-The Goofy Goobers,2026,6,ADD,Jaguars D/ST,D/ST,(FA),Rice Rice Baby,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
-The Goofy Goobers,2026,6,ADD,Woody Marks,RB,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
-The Goofy Goobers,2026,6,ADD,Kyle Pitts Sr.,TE,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
-The Goofy Goobers,2026,6,ADD,Dameon Pierce,RB,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
-The Goofy Goobers,2026,6,ADD,Chris Boswell,K,(FA),Chum is Fum,{0133199B-35FB-4A3D-895E-622E61E976F3},0,activity
-The Goofy Goobers,2026,6,ADD,Devaughn Vele,WR,Bands Emeka Dance,Knee Chubbs 401(k),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
-The Goofy Goobers,2026,6,ADD,Eddy Pineiro,K,(FA),Infinite Blitz,{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,activity
-The Goofy Goobers,2026,6,ADD,MarShawn Lloyd,RB,(FA),Infinite Blitz,{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,activity
-The Goofy Goobers,2026,6,ADD,Kendre Miller,RB,(FA),Infinite Blitz,{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,activity
-The Goofy Goobers,2026,6,ADD,Harrison Butker,K,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-The Goofy Goobers,2026,6,ADD,Kirk Cousins,QB,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+The Goofy Goobers,2026,6,ADD,Aaron Rodgers,QB,(FA),Rice Rice Baby,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+The Goofy Goobers,2026,6,ADD,Jaguars D/ST,D/ST,(FA),Rice Rice Baby,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+The Goofy Goobers,2026,6,ADD,Woody Marks,RB,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
+The Goofy Goobers,2026,6,ADD,Kyle Pitts Sr.,TE,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
+The Goofy Goobers,2026,6,ADD,Dameon Pierce,RB,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
+The Goofy Goobers,2026,6,ADD,Chris Boswell,K,(FA),Chum is Fum,{0133199B-35FB-4A3D-895E-622E61E976F3},0,snapshot
+The Goofy Goobers,2026,6,TEAM->TEAM,Devaughn Vele,WR,Bands Emeka Dance,Knee Chubbs 401(k),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,snapshot
+The Goofy Goobers,2026,6,ADD,Eddy Pineiro,K,(FA),Infinite Blitz,{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,snapshot
+The Goofy Goobers,2026,6,ADD,MarShawn Lloyd,RB,(FA),Infinite Blitz,{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,snapshot
+The Goofy Goobers,2026,6,ADD,Kendre Miller,RB,(FA),Infinite Blitz,{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,snapshot
+The Goofy Goobers,2026,6,ADD,Harrison Butker,K,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+The Goofy Goobers,2026,6,ADD,Kirk Cousins,QB,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
 The Goofy Goobers,2026,6,ADD,Braelon Allen,RB,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-The Goofy Goobers,2026,6,ADD,Pat Freiermuth,TE,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-The Goofy Goobers,2026,6,ADD,Tyler Loop,K,(FA),Fiery Dragons,{0BD86400-A403-4212-B484-0E144CEC717B},0,activity
-The Goofy Goobers,2026,6,ADD,Tyler Higbee,TE,(FA),Delco Football Team,{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
-The Goofy Goobers,2026,6,ADD,Germie Bernard,WR,(FA),Bands Emeka Dance,{ACAB1E9E-16AE-49C8-80FB-6C40F0A1BE48},0,activity
-The Goofy Goobers,2026,6,DROP,Jauan Jennings,WR,Knee Chubbs 401(k),(FA),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
-The Goofy Goobers,2026,6,DROP,Dontayvion Wicks,WR,Rice Rice Baby,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
-The Goofy Goobers,2026,6,DROP,Sam Darnold,QB,Rice Rice Baby,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
-The Goofy Goobers,2026,6,DROP,Blake Corum,RB,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-The Goofy Goobers,2026,6,DROP,Will Reichard,K,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-The Goofy Goobers,2026,6,DROP,Jacoby Brissett,QB,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-The Goofy Goobers,2026,6,DROP,Bengals D/ST,D/ST,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-The Goofy Goobers,2026,6,DROP,Courtland Sutton,WR,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
-The Goofy Goobers,2026,6,DROP,Malik Washington,WR,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
-The Goofy Goobers,2026,6,DROP,Will Shipley,RB,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
-The Goofy Goobers,2026,6,DROP,Bo Nix,QB,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
-The Goofy Goobers,2026,6,DROP,Chad Ryland,K,Fiery Dragons,(FA),{0BD86400-A403-4212-B484-0E144CEC717B},0,activity
-The Goofy Goobers,2026,6,DROP,Jake Bates,K,Chum is Fum,(FA),{0133199B-35FB-4A3D-895E-622E61E976F3},0,activity
-The Goofy Goobers,2026,6,DROP,Josh Downs,WR,Infinite Blitz,(FA),{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,activity
-The Goofy Goobers,2026,6,DROP,Harrison Mevis,K,Infinite Blitz,(FA),{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,activity
-The Goofy Goobers,2026,6,DROP,Kalif Raymond,WR,Delco Football Team,(FA),{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
+The Goofy Goobers,2026,6,ADD,Pat Freiermuth,TE,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+The Goofy Goobers,2026,6,ADD,Tyler Loop,K,(FA),Fiery Dragons,{0BD86400-A403-4212-B484-0E144CEC717B},0,snapshot
+The Goofy Goobers,2026,6,ADD,Tyler Higbee,TE,(FA),Delco Football Team,{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,snapshot
+The Goofy Goobers,2026,6,ADD,Germie Bernard,WR,(FA),Bands Emeka Dance,{ACAB1E9E-16AE-49C8-80FB-6C40F0A1BE48},0,snapshot
+The Goofy Goobers,2026,6,DROP,Jauan Jennings,WR,Knee Chubbs 401(k),(FA),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,snapshot
+The Goofy Goobers,2026,6,DROP,Dontayvion Wicks,WR,Rice Rice Baby,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+The Goofy Goobers,2026,6,DROP,Sam Darnold,QB,Rice Rice Baby,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+The Goofy Goobers,2026,6,DROP,Blake Corum,RB,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+The Goofy Goobers,2026,6,DROP,Will Reichard,K,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+The Goofy Goobers,2026,6,DROP,Jacoby Brissett,QB,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+The Goofy Goobers,2026,6,DROP,Bengals D/ST,D/ST,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+The Goofy Goobers,2026,6,DROP,Courtland Sutton,WR,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
+The Goofy Goobers,2026,6,DROP,Malik Washington,WR,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
+The Goofy Goobers,2026,6,DROP,Will Shipley,RB,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
+The Goofy Goobers,2026,6,DROP,Bo Nix,QB,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,snapshot
+The Goofy Goobers,2026,6,DROP,Chad Ryland,K,Fiery Dragons,(FA),{0BD86400-A403-4212-B484-0E144CEC717B},0,snapshot
+The Goofy Goobers,2026,6,DROP,Jake Bates,K,Chum is Fum,(FA),{0133199B-35FB-4A3D-895E-622E61E976F3},0,snapshot
+The Goofy Goobers,2026,6,DROP,Josh Downs,WR,Infinite Blitz,(FA),{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,snapshot
+The Goofy Goobers,2026,6,DROP,Harrison Mevis,K,Infinite Blitz,(FA),{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,snapshot
+The Goofy Goobers,2026,6,DROP,Kalif Raymond,WR,Delco Football Team,(FA),{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,snapshot
+The Goofy Goobers,2026,7,ADD,DeMario Douglas,WR,(FA),Rice Rice Baby,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
+The Goofy Goobers,2026,7,ADD,Malik Washington,WR,(FA),Rice Rice Baby,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
+The Goofy Goobers,2026,7,ADD,Browns D/ST,D/ST,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
+The Goofy Goobers,2026,7,ADD,Matt Gay,K,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
+The Goofy Goobers,2026,7,ADD,Kyler Murray,QB,(FA),Wookie Warriors,{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
+The Goofy Goobers,2026,7,ADD,Will Reichard,K,(FA),Infinite Blitz,{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,activity
+The Goofy Goobers,2026,7,ADD,Rashid Shaheed,WR,(FA),Infinite Blitz,{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,activity
+The Goofy Goobers,2026,7,ADD,Dominic Zvada,K,(FA),Knee Chubbs 401(k),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
+The Goofy Goobers,2026,7,ADD,Blake Corum,RB,(FA),Rocket Bowers,{5E530C03-3F19-48F0-A309-52B769E76347},0,activity
+The Goofy Goobers,2026,7,ADD,Zach Charbonnet,RB,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+The Goofy Goobers,2026,7,ADD,C.J. Stroud,QB,(FA),Revenge of De Smithy,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+The Goofy Goobers,2026,7,ADD,Tre Tucker,WR,(FA),Delco Football Team,{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
+The Goofy Goobers,2026,7,ADD,Jaylin Noel,WR,(FA),Fiery Dragons,{0BD86400-A403-4212-B484-0E144CEC717B},0,activity
+The Goofy Goobers,2026,7,DROP,Aaron Rodgers,QB,Rice Rice Baby,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
+The Goofy Goobers,2026,7,DROP,Jaguars D/ST,D/ST,Rice Rice Baby,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
+The Goofy Goobers,2026,7,DROP,David Montgomery,RB,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
+The Goofy Goobers,2026,7,DROP,Ravens D/ST,D/ST,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
+The Goofy Goobers,2026,7,DROP,Cam Little,K,Wookie Warriors,(FA),{48DD5405-3EC5-4B60-8CF7-01337C5A9438},0,activity
+The Goofy Goobers,2026,7,DROP,Makai Lemon,WR,Knee Chubbs 401(k),(FA),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
+The Goofy Goobers,2026,7,DROP,Eddy Pineiro,K,Infinite Blitz,(FA),{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,activity
+The Goofy Goobers,2026,7,DROP,Kendre Miller,RB,Infinite Blitz,(FA),{81BF2CAD-580F-4F0A-A112-DEBABC624798},0,activity
+The Goofy Goobers,2026,7,DROP,Jalen Hurts,QB,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+The Goofy Goobers,2026,7,DROP,Kirk Cousins,QB,Revenge of De Smithy,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+The Goofy Goobers,2026,7,DROP,Rico Dowdle,RB,Rocket Bowers,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,activity
+The Goofy Goobers,2026,7,DROP,Juwan Johnson,TE,Fiery Dragons,(FA),{0BD86400-A403-4212-B484-0E144CEC717B},0,activity
+The Goofy Goobers,2026,7,DROP,Jayden Reed,WR,Delco Football Team,(FA),{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity

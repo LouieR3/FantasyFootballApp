@@ -43,34 +43,53 @@ Campers and Skiers and Prahlad,2026,5,DROP,Sam Darnold,QB,J.K. Dobby,(FA),{8E853
 Campers and Skiers and Prahlad,2026,5,DROP,Buccaneers D/ST,D/ST,Knee Chubbs,(FA),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,snapshot
 Campers and Skiers and Prahlad,2026,5,DROP,Chiefs D/ST,D/ST,Potato Squad,(FA),{9CAE71CC-849A-4335-A54B-A3F845E24817},0,snapshot
 Campers and Skiers and Prahlad,2026,5,DROP,Harrison Butker,K,Potato Squad,(FA),{9CAE71CC-849A-4335-A54B-A3F845E24817},0,snapshot
-Campers and Skiers and Prahlad,2026,6,ADD,Rachaad White,RB,Maulin's Monstrous Team,Alley Cats,{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Patriots D/ST,D/ST,(FA),Alley Cats,{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Caleb Williams,QB,(FA),LaPortAuthority,{5E530C03-3F19-48F0-A309-52B769E76347},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Dominic Zvada,K,(FA),Potato Squad,{9CAE71CC-849A-4335-A54B-A3F845E24817},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,DeMario Douglas,WR,(FA),J.K. Dobby,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Ollie Gordon II,RB,(FA),Maulin's Monstrous Team,{DA4BDCF4-80A2-4AA3-BAD8-84137CA04536},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Spencer Shrader,K,(FA),Maulin's Monstrous Team,{DA4BDCF4-80A2-4AA3-BAD8-84137CA04536},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Woody Marks,RB,(FA),Cutlet Slutz,{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Germie Bernard,WR,(FA),Cutlet Slutz,{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Dak Prescott,QB,Knee Chubbs,Robbie's Rowdy Team,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,activity
+Campers and Skiers and Prahlad,2026,6,TEAM->TEAM,Rachaad White,RB,Maulin's Monstrous Team,Alley Cats,{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,Patriots D/ST,D/ST,(FA),Alley Cats,{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,Caleb Williams,QB,(FA),LaPortAuthority,{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,Dominic Zvada,K,(FA),Potato Squad,{9CAE71CC-849A-4335-A54B-A3F845E24817},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,DeMario Douglas,WR,(FA),J.K. Dobby,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,Ollie Gordon II,RB,(FA),Maulin's Monstrous Team,{DA4BDCF4-80A2-4AA3-BAD8-84137CA04536},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,Spencer Shrader,K,(FA),Maulin's Monstrous Team,{DA4BDCF4-80A2-4AA3-BAD8-84137CA04536},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,Woody Marks,RB,(FA),Cutlet Slutz,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,Germie Bernard,WR,(FA),Cutlet Slutz,{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Campers and Skiers and Prahlad,2026,6,TEAM->TEAM,Dak Prescott,QB,Knee Chubbs,Robbie's Rowdy Team,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
 Campers and Skiers and Prahlad,2026,6,TRADE,Kyle Monangai,RB,The Turbanator,BB-Ate My Lemons,{D08A1391-7D90-4C74-8A13-917D909C7482},0,snapshot
-Campers and Skiers and Prahlad,2026,6,ADD,Chiefs D/ST,D/ST,(FA),The Turbanator,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Harrison Butker,K,(FA),The Turbanator,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Dameon Pierce,RB,(FA),The Turbanator,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Campers and Skiers and Prahlad,2026,6,ADD,Chiefs D/ST,D/ST,(FA),The Turbanator,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,Harrison Butker,K,(FA),The Turbanator,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,Dameon Pierce,RB,(FA),The Turbanator,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
 Campers and Skiers and Prahlad,2026,6,TRADE,Bhayshul Tuten,RB,BB-Ate My Lemons,The Turbanator,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
-Campers and Skiers and Prahlad,2026,6,ADD,Jordan Love,QB,(FA),Knee Chubbs,{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Ravens D/ST,D/ST,(FA),Knee Chubbs,{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
-Campers and Skiers and Prahlad,2026,6,ADD,Pat Freiermuth,TE,(FA),Knee Chubbs,{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Dontayvion Wicks,WR,J.K. Dobby,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Rico Dowdle,RB,Alley Cats,(FA),{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Lions D/ST,D/ST,Alley Cats,(FA),{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Darius Cooper,WR,Cutlet Slutz,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Justin Herbert,QB,LaPortAuthority,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Will Reichard,K,Potato Squad,(FA),{9CAE71CC-849A-4335-A54B-A3F845E24817},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Hunter Henry,TE,Knee Chubbs,(FA),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Cowboys D/ST,D/ST,Knee Chubbs,(FA),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Jake Bates,K,Maulin's Monstrous Team,(FA),{DA4BDCF4-80A2-4AA3-BAD8-84137CA04536},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Harrison Mevis,K,The Turbanator,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Emmett Johnson,RB,The Turbanator,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Keaton Mitchell,RB,The Turbanator,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Campers and Skiers and Prahlad,2026,6,DROP,Kyler Murray,QB,Robbie's Rowdy Team,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,activity
+Campers and Skiers and Prahlad,2026,6,ADD,Jordan Love,QB,(FA),Knee Chubbs,{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,Ravens D/ST,D/ST,(FA),Knee Chubbs,{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,snapshot
+Campers and Skiers and Prahlad,2026,6,ADD,Pat Freiermuth,TE,(FA),Knee Chubbs,{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Dontayvion Wicks,WR,J.K. Dobby,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Rico Dowdle,RB,Alley Cats,(FA),{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Lions D/ST,D/ST,Alley Cats,(FA),{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Darius Cooper,WR,Cutlet Slutz,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Justin Herbert,QB,LaPortAuthority,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Will Reichard,K,Potato Squad,(FA),{9CAE71CC-849A-4335-A54B-A3F845E24817},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Hunter Henry,TE,Knee Chubbs,(FA),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Cowboys D/ST,D/ST,Knee Chubbs,(FA),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Jake Bates,K,Maulin's Monstrous Team,(FA),{DA4BDCF4-80A2-4AA3-BAD8-84137CA04536},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Harrison Mevis,K,The Turbanator,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Emmett Johnson,RB,The Turbanator,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Keaton Mitchell,RB,The Turbanator,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Campers and Skiers and Prahlad,2026,6,DROP,Kyler Murray,QB,Robbie's Rowdy Team,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,snapshot
+Campers and Skiers and Prahlad,2026,7,ADD,Jaylin Noel,WR,(FA),Alley Cats,{135CE830-2B82-4A28-8CDD-6E8EB575382A},0,activity
+Campers and Skiers and Prahlad,2026,7,ADD,Tre Tucker,WR,(FA),LaPortAuthority,{5E530C03-3F19-48F0-A309-52B769E76347},0,activity
+Campers and Skiers and Prahlad,2026,7,ADD,Tyrone Tracy Jr.,RB,(FA),J.K. Dobby,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
+Campers and Skiers and Prahlad,2026,7,ADD,Bam Knight,RB,(FA),J.K. Dobby,{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
+Campers and Skiers and Prahlad,2026,7,ADD,Will Reichard,K,(FA),Robbie's Rowdy Team,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,activity
+Campers and Skiers and Prahlad,2026,7,ADD,Omar Cooper Jr.,WR,(FA),Robbie's Rowdy Team,{A279F58E-795F-4115-B9F5-8E795F7115FC},0,activity
+Campers and Skiers and Prahlad,2026,7,ADD,Kendre Miller,RB,(FA),Cutlet Slutz,{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
+Campers and Skiers and Prahlad,2026,7,ADD,Kyler Murray,QB,(FA),The Turbanator,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Campers and Skiers and Prahlad,2026,7,ADD,Chris Boswell,K,(FA),Knee Chubbs,{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
+Campers and Skiers and Prahlad,2026,7,ADD,Panthers D/ST,D/ST,(FA),Knee Chubbs,{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
+Campers and Skiers and Prahlad,2026,7,DROP,Terry McLaurin,WR,LaPortAuthority,(FA),{5E530C03-3F19-48F0-A309-52B769E76347},0,activity
+Campers and Skiers and Prahlad,2026,7,DROP,Jacory Croskey-Merritt,RB,J.K. Dobby,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
+Campers and Skiers and Prahlad,2026,7,DROP,Brian Robinson Jr.,RB,J.K. Dobby,(FA),{8E853A19-B927-4F0B-B78A-85B0F21BBBBB},0,activity
+Campers and Skiers and Prahlad,2026,7,DROP,Michael Pittman Jr.,WR,Cutlet Slutz,(FA),{0CE04EAF-1603-4259-869A-A567F9953F44},0,activity
+Campers and Skiers and Prahlad,2026,7,DROP,Brian Thomas Jr.,WR,Robbie's Rowdy Team,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,activity
+Campers and Skiers and Prahlad,2026,7,DROP,Cam Little,K,Robbie's Rowdy Team,(FA),{A279F58E-795F-4115-B9F5-8E795F7115FC},0,activity
+Campers and Skiers and Prahlad,2026,7,DROP,Chiefs D/ST,D/ST,The Turbanator,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Campers and Skiers and Prahlad,2026,7,DROP,Bo Nix,QB,Knee Chubbs,(FA),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity
+Campers and Skiers and Prahlad,2026,7,DROP,Ravens D/ST,D/ST,Knee Chubbs,(FA),{2B84F6B0-13D8-436F-84F6-B013D8736FBB},0,activity

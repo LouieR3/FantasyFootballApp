@@ -244,10 +244,17 @@ def get_ordinal_suffix(n):
         suffix = {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')
     return suffix
 
-def calculate_playoff_chances_by_week(teams, scores_df, reg_season_count, num_playoff_teams, current_week, num_simulations=1000):
+# A week this far back from the current one is treated as decided: its
+# Monte Carlo odds-as-of-that-week will never change, so re-running 1000
+# simulations for it every pipeline run is pure waste. Kept in step with
+# transactions.FRESH_WEEKS so "settled" means the same thing everywhere.
+FRESH_WEEKS = 2
+
+
+def calculate_playoff_chances_by_week(teams, scores_df, reg_season_count, num_playoff_teams, current_week, num_simulations=1000, cached=None):
     """
     Calculate each team's playoff chances week by week from week 1 to current week.
-    
+
     Args:
         teams: List of team objects from ESPN API
         scores_df: DataFrame of team scores
@@ -255,38 +262,73 @@ def calculate_playoff_chances_by_week(teams, scores_df, reg_season_count, num_pl
         num_playoff_teams: Number of teams that make playoffs
         current_week: Current week number
         num_simulations: Number of Monte Carlo simulations per week
-    
+        cached: optional DataFrame (team-name index, 'Week_N' columns) from a
+            previous run - usually the 'Playoff Odds By Week' sheet of the
+            league's existing workbook. Weeks older than FRESH_WEEKS are reused
+            from here instead of re-simulated, since a past week's odds are
+            fixed once that week is in the books. Weeks within the fresh
+            window, and anything missing from `cached`, are always simulated.
+
     Returns:
         pd.DataFrame: DataFrame with teams as index and weeks as columns showing playoff %
     """
-    
+
     # Initialize results dictionary
     weekly_playoff_chances = defaultdict(dict)
-    
-    # Calculate for each week from 1 to current_week
-    for week in range(1, current_week + 1):
+    team_names = {team.team_name for team in teams}
+
+    stable_cutoff = max(0, current_week - FRESH_WEEKS)
+    reused_weeks = []
+    if cached is not None and not cached.empty:
+        # Trust a cached week only if it covers exactly today's teams - a
+        # mid-season rename would otherwise silently drop or blank a team
+        # for every week before the rename, which is worse than just
+        # recomputing the handful of weeks affected.
+        if set(cached.index) == team_names:
+            for week in range(1, stable_cutoff + 1):
+                col = f'Week_{week}'
+                if col not in cached.columns:
+                    continue
+                values = cached[col]
+                if values.isna().any():
+                    continue
+                for team_name, pct in values.items():
+                    weekly_playoff_chances[team_name][col] = float(pct)
+                reused_weeks.append(week)
+
+    # Calculate for each week from 1 to current_week, skipping ones just reused
+    weeks_to_simulate = [w for w in range(1, current_week + 1) if w not in reused_weeks]
+    if reused_weeks:
+        print(f"Reusing playoff odds for weeks {reused_weeks[0]}-{reused_weeks[-1]} "
+              f"from the previous run ({len(weeks_to_simulate)} week(s) left to simulate)")
+    for week in weeks_to_simulate:
         print(f"Calculating playoff odds for week {week}...")
-        
+
         # Calculate team stats up to this week
         team_stats = calculate_team_stats_for_week(teams, scores_df, week, reg_season_count)
-        
+
         # Run simulation from this week forward
         playoff_makes = simulate_from_week(
             teams, team_stats, week, reg_season_count, num_playoff_teams, num_simulations
         )
-        
+
         # Calculate playoff percentage for each team
         for team_name in team_stats.keys():
             playoff_pct = (playoff_makes[team_name] / num_simulations) * 100
             weekly_playoff_chances[team_name][f'Week_{week}'] = playoff_pct
-    
+
     # Convert to DataFrame
     playoff_df = pd.DataFrame(weekly_playoff_chances).T
-    
+
+    # Reusing cache + simulating fresh weeks can interleave columns out of
+    # order - put them back in Week_1..Week_N order.
+    week_cols = [f'Week_{w}' for w in range(1, current_week + 1) if f'Week_{w}' in playoff_df.columns]
+    playoff_df = playoff_df[week_cols]
+
     # Sort by current week's playoff chances
     last_week_col = f'Week_{current_week}'
     playoff_df = playoff_df.sort_values(last_week_col, ascending=False)
-    
+
     return playoff_df
 
 def calculate_team_stats_for_week(teams, scores_df, through_week, reg_season_count):
@@ -423,9 +465,13 @@ def simulate_from_week(teams, team_stats, start_week, reg_season_count, num_play
     return playoff_makes
 
 # Example usage function to integrate with existing code
-def add_weekly_analysis_to_main(teams, scores_df, reg_season_count, num_playoff_teams, current_week):
+def add_weekly_analysis_to_main(teams, scores_df, reg_season_count, num_playoff_teams, current_week, cached=None):
     """
     Function to add to your main script to show weekly playoff progression
+
+    `cached`: previous run's weekly playoff-odds DataFrame, if available - see
+    `calculate_playoff_chances_by_week` for how it's used to skip re-simulating
+    weeks that are already decided.
     """
     print("\n" + "="*80)
     print("PLAYOFF CHANCES BY WEEK")
@@ -435,7 +481,7 @@ def add_weekly_analysis_to_main(teams, scores_df, reg_season_count, num_playoff_
 
     # Calculate weekly playoff chances
     weekly_df = calculate_playoff_chances_by_week(
-        teams, scores_df, reg_season_count, num_playoff_teams, current_week, num_simulations=1000
+        teams, scores_df, reg_season_count, num_playoff_teams, current_week, num_simulations=1000, cached=cached
     )
     
     # Display results
