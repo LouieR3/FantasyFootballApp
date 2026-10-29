@@ -516,7 +516,22 @@ for league_config in leagues:
             # Written with the rest of the sheets below. Appending here used to
             # be pointless: the xlsxwriter call that follows recreates the
             # workbook from scratch and wiped this sheet every run.
-            
+
+        # Previous run's per-week playoff odds, if any - weeks already decided
+        # are reused rather than re-simulated (see monte_carlo_odds.FRESH_WEEKS).
+        # Must be read before `pd.ExcelWriter` below opens this same path: once
+        # that write handle is open, reading the "old" file back is unreliable
+        # (this is why the cache silently never hit when read after it).
+        cached_weekly_df = None
+        workbook_path = f"{LEAGUES_DIR}/{fileName}.xlsx"
+        if _os.path.exists(workbook_path):
+            try:
+                cached_weekly_df = pd.read_excel(
+                    workbook_path, sheet_name='Playoff Odds By Week', index_col=0
+                )
+            except Exception:
+                cached_weekly_df = None
+
         writer = pd.ExcelWriter(f"{LEAGUES_DIR}/{fileName}.xlsx", engine='xlsxwriter')
         records_df.to_excel(writer, sheet_name='Schedule Grid')
         schedule_rank_df.to_excel(writer, sheet_name='Wins Against Schedule')
@@ -550,19 +565,6 @@ for league_config in leagues:
                 .reset_index(drop=True)
                 .set_index("Team")
         )
-
-        # Previous run's per-week playoff odds, if any - weeks already decided
-        # are reused rather than re-simulated (see monte_carlo_odds.FRESH_WEEKS).
-        # Must be read before `writer` below opens the same path for writing.
-        cached_weekly_df = None
-        workbook_path = f"{LEAGUES_DIR}/{fileName}.xlsx"
-        if _os.path.exists(workbook_path):
-            try:
-                cached_weekly_df = pd.read_excel(
-                    workbook_path, sheet_name='Playoff Odds By Week', index_col=0
-                )
-            except Exception:
-                cached_weekly_df = None
 
         # Or use the integrated function for full output
         weekly_df = add_weekly_analysis_to_main(

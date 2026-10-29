@@ -67,17 +67,16 @@ league = League(league_id=29400230, year=year, espn_s2=matt_s2, swid=CRED["matt_
 team_name = "Graesser's Golden Receivers"
 
 # Pennoni Younglings
-# league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-# team_name = "The Golden Receivers"
+league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+team_name = "The Golden Receivers"
 # Family League
-league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-team_name = "Big Bosh Bashers"
-# team_name = "Jackson's Scary Team"
+# league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+# team_name = "Big Bosh Bashers"
 # EBC League
 # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 # team_name = "P90 Asiimov"
 
-# Avas League
+# Avas Leagueu
 # league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
 # team_name = "Big Ballsy Bozos"
 
@@ -89,10 +88,6 @@ team_name = "Big Bosh Bashers"
 # Las League
 # league = League(league_id=1049459, year=year, espn_s2=CRED["la_s2"], swid=CRED["la_swid"])
 # team_name = "Team Rodriguez"
-
-# Ayush League
-# league = League(league_id=250835749, year=year, espn_s2=ayush_league2_s2, swid=CRED["ayush_league2_swid"])
-# team_name = "Austin Powers"
 
 fantasypros_rank_df = fantasypros_ros_ranks()
 # Define draft order
