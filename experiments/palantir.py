@@ -67,18 +67,18 @@ league = League(league_id=29400230, year=year, espn_s2=matt_s2, swid=CRED["matt_
 team_name = "Graesser's Golden Receivers"
 
 # Pennoni Younglings
-league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-team_name = "The Golden Receivers"
+# league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+# team_name = "The Golden Receivers"
 # Family League
-# league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-# team_name = "Big Bosh Bashers"
+league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+team_name = "Big Bosh Bashers"
 # EBC League
 # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 # team_name = "P90 Asiimov"
 
 # Avas Leagueu
-league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
-team_name = "Big Ballsy Bozos"
+# league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
+# team_name = "Big Ballsy Bozos"
 
 # # Hannahs League
 # league = League(league_id=1399036372, year=year, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
@@ -884,8 +884,6 @@ def find_trade_partners(league, team_name):
 
         print()
 
-# find_trade_partners(league, team_name)
-
 fantasypros_freeagents(league, fantasypros_rank_df)
-print_team_with_fantasypros_ranks(league, fantasypros_rank_df, team_name)
+find_trade_partners(league, team_name)
 suggest_lineup(league, team_name)
