@@ -77,10 +77,10 @@ team_name = "The Golden Receivers"
 # team_name = "P90 Asiimov"
 
 # Avas Leagueu
-# league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
-# team_name = "Big Ballsy Bozos"
+league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
+team_name = "Big Ballsy Bozos"
 
-# Hannahs League
+# # Hannahs League
 # league = League(league_id=1399036372, year=year, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
 # team_name = "It's Miller Time"
 # team_name = "Immaculate Concepcion"

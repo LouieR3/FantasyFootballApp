@@ -138,44 +138,69 @@ Game of Yards!,2026,7,DROP,Davante Adams,WR,Team HebAchi,(FA),{49094F84-F849-417
 Game of Yards!,2026,7,DROP,Jalen Hurts,QB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
 Game of Yards!,2026,7,DROP,Keenan Allen,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
 Game of Yards!,2026,8,ADD,Patriots Coach,HC,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
-Game of Yards!,2026,8,ADD,Raiders D/ST,D/ST,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
-Game of Yards!,2026,8,ADD,Bengals D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
-Game of Yards!,2026,8,ADD,Kirk Cousins,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
-Game of Yards!,2026,8,ADD,Chig Okonkwo,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
-Game of Yards!,2026,8,ADD,Kaelon Black,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
-Game of Yards!,2026,8,ADD,Kyle Pitts Sr.,TE,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
-Game of Yards!,2026,8,ADD,Lions Coach,HC,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
-Game of Yards!,2026,8,ADD,Commanders D/ST,D/ST,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
-Game of Yards!,2026,8,ADD,Steelers Coach,HC,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
-Game of Yards!,2026,8,ADD,Bears D/ST,D/ST,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
-Game of Yards!,2026,8,ADD,Davante Adams,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
-Game of Yards!,2026,8,ADD,Bo Nix,QB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
-Game of Yards!,2026,8,ADD,Cairo Santos,K,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
-Game of Yards!,2026,8,ADD,Buccaneers D/ST,D/ST,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
-Game of Yards!,2026,8,ADD,Geno Smith,QB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
-Game of Yards!,2026,8,ADD,Jaguars Coach,HC,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
-Game of Yards!,2026,8,ADD,Bengals Coach,HC,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
-Game of Yards!,2026,8,ADD,Omar Cooper Jr.,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
-Game of Yards!,2026,8,ADD,Seth McGowan,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
-Game of Yards!,2026,8,ADD,Tyler Bass,K,(FA),Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Game of Yards!,2026,8,ADD,Chris Rodriguez Jr.,RB,(FA),Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2026,8,ADD,Raiders D/ST,D/ST,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2026,8,ADD,Bengals D/ST,D/ST,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2026,8,ADD,Kirk Cousins,QB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2026,8,ADD,Chig Okonkwo,TE,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2026,8,ADD,Kaelon Black,RB,(FA),Pain Inflictors,{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2026,8,ADD,Kyle Pitts Sr.,TE,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2026,8,ADD,Lions Coach,HC,(FA),Brown Munde,{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2026,8,ADD,Commanders D/ST,D/ST,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2026,8,ADD,Steelers Coach,HC,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2026,8,ADD,Bears D/ST,D/ST,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,snapshot
+Game of Yards!,2026,8,ADD,Davante Adams,WR,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2026,8,ADD,Bo Nix,QB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2026,8,ADD,Cairo Santos,K,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2026,8,ADD,Buccaneers D/ST,D/ST,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2026,8,ADD,Geno Smith,QB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2026,8,ADD,Jaguars Coach,HC,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2026,8,ADD,Bengals Coach,HC,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2026,8,ADD,Omar Cooper Jr.,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2026,8,ADD,Seth McGowan,RB,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2026,8,ADD,Tyler Bass,K,(FA),Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2026,8,ADD,Chris Rodriguez Jr.,RB,(FA),Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
 Game of Yards!,2026,8,DROP,Dominic Zvada,K,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
-Game of Yards!,2026,8,DROP,Jets Coach,HC,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
-Game of Yards!,2026,8,DROP,Juwan Johnson,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
-Game of Yards!,2026,8,DROP,Bryce Young,QB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
-Game of Yards!,2026,8,DROP,Emanuel Wilson,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
-Game of Yards!,2026,8,DROP,Matt Gay,K,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,activity
-Game of Yards!,2026,8,DROP,Ravens Coach,HC,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
-Game of Yards!,2026,8,DROP,Mark Andrews,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,activity
-Game of Yards!,2026,8,DROP,Harrison Butker,K,Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Game of Yards!,2026,8,DROP,Dameon Pierce,RB,Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
-Game of Yards!,2026,8,DROP,Eagles Coach,HC,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
-Game of Yards!,2026,8,DROP,Chiefs D/ST,D/ST,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
-Game of Yards!,2026,8,DROP,Devaughn Vele,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
-Game of Yards!,2026,8,DROP,Pat Freiermuth,TE,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
-Game of Yards!,2026,8,DROP,Kendre Miller,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
-Game of Yards!,2026,8,DROP,Texans D/ST,D/ST,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
-Game of Yards!,2026,8,DROP,Ka'imi Fairbairn,K,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
-Game of Yards!,2026,8,DROP,Dalton Kincaid,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
-Game of Yards!,2026,8,DROP,49ers Coach,HC,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
-Game of Yards!,2026,8,DROP,Xavier Worthy,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2026,8,DROP,Jets Coach,HC,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,snapshot
+Game of Yards!,2026,8,DROP,Juwan Johnson,TE,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2026,8,DROP,Bryce Young,QB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2026,8,DROP,Emanuel Wilson,RB,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2026,8,DROP,Matt Gay,K,Pain Inflictors,(FA),{4802A561-2D04-4FD7-AFB4-E8C5CDCD4C04},0,snapshot
+Game of Yards!,2026,8,DROP,Ravens Coach,HC,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2026,8,DROP,Mark Andrews,TE,Brown Munde,(FA),{60CC5CD8-3581-4D90-95A9-86CD9BECD0C9},0,snapshot
+Game of Yards!,2026,8,DROP,Harrison Butker,K,Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2026,8,DROP,Dameon Pierce,RB,Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,snapshot
+Game of Yards!,2026,8,DROP,Eagles Coach,HC,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2026,8,DROP,Chiefs D/ST,D/ST,BB,(FA),{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,snapshot
+Game of Yards!,2026,8,DROP,Devaughn Vele,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2026,8,DROP,Pat Freiermuth,TE,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2026,8,DROP,Kendre Miller,RB,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,snapshot
+Game of Yards!,2026,8,DROP,Texans D/ST,D/ST,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2026,8,DROP,Ka'imi Fairbairn,K,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2026,8,DROP,Dalton Kincaid,TE,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2026,8,DROP,49ers Coach,HC,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2026,8,DROP,Xavier Worthy,WR,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,snapshot
+Game of Yards!,2026,9,ADD,Bears Coach,HC,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2026,9,ADD,Lions D/ST,D/ST,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2026,9,ADD,Kyler Murray,QB,(FA),Groot-o-Matic,{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2026,9,ADD,Devin Singletary,RB,(FA),BB,{5E7FB20B-E820-4BAD-BFB2-0BE820DBADF3},0,activity
+Game of Yards!,2026,9,ADD,Elijah Mitchell,RB,(FA),Team HebAchi,{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2026,9,ADD,Matt Gay,K,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2026,9,ADD,Texans Coach,HC,(FA),Vidhi's Spirited Team,{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2026,9,ADD,Giants D/ST,D/ST,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2026,9,ADD,49ers Coach,HC,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2026,9,ADD,Keenan Allen,WR,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2026,9,ADD,Hunter Henry,TE,(FA),Wakanda Forever,{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2026,9,ADD,Jonah Coleman,RB,(FA),Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2026,9,ADD,Texans D/ST,D/ST,(FA),Vellapanti,{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2026,9,DROP,Sam Darnold,QB,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2026,9,DROP,Patriots Coach,HC,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2026,9,DROP,Raiders D/ST,D/ST,Groot-o-Matic,(FA),{CFED3745-01A7-4D35-B869-DD322FB8CCE1},0,activity
+Game of Yards!,2026,9,DROP,Cowboys Coach,HC,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2026,9,DROP,Chris Boswell,K,Vidhi's Spirited Team,(FA),{8AA85666-1E0A-41B3-8FEF-E502B1D08914},0,activity
+Game of Yards!,2026,9,DROP,Geno Smith,QB,Team HebAchi,(FA),{49094F84-F849-4173-B052-21E1CDEDB4EF},0,activity
+Game of Yards!,2026,9,DROP,Jets D/ST,D/ST,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2026,9,DROP,Vikings Coach,HC,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2026,9,DROP,Bengals Coach,HC,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2026,9,DROP,Omar Cooper Jr.,WR,Wakanda Forever,(FA),{85C7DDE2-8C6F-4A9A-85F8-F5D550F146AC},0,activity
+Game of Yards!,2026,9,DROP,Patriots D/ST,D/ST,Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity
+Game of Yards!,2026,9,DROP,Chris Rodriguez Jr.,RB,Vellapanti,(FA),{4C1C5213-4BB5-4243-87AC-0BCB2D637264},0,activity

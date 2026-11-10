@@ -141,36 +141,65 @@ Family Fantasy,2026,7,DROP,Terry McLaurin,WR,ICSquirrels,(FA),{88877912-82AE-408
 Family Fantasy,2026,7,DROP,MarShawn Lloyd,RB,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
 Family Fantasy,2026,7,DROP,Dylan Sampson,RB,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
 Family Fantasy,2026,7,DROP,Jameis Winston,QB,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
-Family Fantasy,2026,8,ADD,Chad Ryland,K,(FA),Jackson's Scary Team,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Family Fantasy,2026,8,ADD,Josh Downs,WR,That movie was great...,Big Bosh Bashers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
-Family Fantasy,2026,8,ADD,Caleb Douglas,WR,(FA),That movie was great...,{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,activity
-Family Fantasy,2026,8,ADD,Mason Taylor,TE,(FA),That movie was great...,{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,activity
-Family Fantasy,2026,8,ADD,Bengals D/ST,D/ST,(FA),Your Mom,{F1F84656-65C6-418D-85EB-A941DF949C09},0,activity
-Family Fantasy,2026,8,ADD,Ryan Flournoy,WR,(FA),Your Mom,{F1F84656-65C6-418D-85EB-A941DF949C09},0,activity
-Family Fantasy,2026,8,ADD,Kimani Vidal,RB,(FA),Delco Dee,{8F726947-16B6-4023-8839-58DD00CD6659},0,activity
-Family Fantasy,2026,8,ADD,Davante Adams,WR,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
-Family Fantasy,2026,8,ADD,Matt Gay,K,(FA),lawrence's Lucrative Team,{D0CA38D4-82C5-48C1-8974-77C7B710B5EB},0,activity
-Family Fantasy,2026,8,ADD,Mike Gesicki,TE,(FA),Noah's Nifty Team,{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,activity
-Family Fantasy,2026,8,ADD,Tyler Bass,K,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
-Family Fantasy,2026,8,ADD,Commanders D/ST,D/ST,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
-Family Fantasy,2026,8,ADD,Corey Kiner,RB,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
-Family Fantasy,2026,8,ADD,Malik Willis,QB,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
-Family Fantasy,2026,8,ADD,Eli Raridon,TE,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
-Family Fantasy,2026,8,ADD,Patriots D/ST,D/ST,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
-Family Fantasy,2026,8,ADD,Geno Smith,QB,(FA),For Me to Poop On,{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,activity
-Family Fantasy,2026,8,DROP,Texans D/ST,D/ST,Your Mom,(FA),{F1F84656-65C6-418D-85EB-A941DF949C09},0,activity
-Family Fantasy,2026,8,DROP,Justin Herbert,QB,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
+Family Fantasy,2026,8,ADD,Chad Ryland,K,(FA),Jackson's Scary Team,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Family Fantasy,2026,8,TEAM->TEAM,Josh Downs,WR,That movie was great...,Big Bosh Bashers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Family Fantasy,2026,8,ADD,Caleb Douglas,WR,(FA),That movie was great...,{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,snapshot
+Family Fantasy,2026,8,ADD,Mason Taylor,TE,(FA),That movie was great...,{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,snapshot
+Family Fantasy,2026,8,ADD,Bengals D/ST,D/ST,(FA),Your Mom,{F1F84656-65C6-418D-85EB-A941DF949C09},0,snapshot
+Family Fantasy,2026,8,ADD,Ryan Flournoy,WR,(FA),Your Mom,{F1F84656-65C6-418D-85EB-A941DF949C09},0,snapshot
+Family Fantasy,2026,8,ADD,Kimani Vidal,RB,(FA),Delco Dee,{8F726947-16B6-4023-8839-58DD00CD6659},0,snapshot
+Family Fantasy,2026,8,ADD,Davante Adams,WR,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,snapshot
+Family Fantasy,2026,8,ADD,Matt Gay,K,(FA),lawrence's Lucrative Team,{D0CA38D4-82C5-48C1-8974-77C7B710B5EB},0,snapshot
+Family Fantasy,2026,8,ADD,Mike Gesicki,TE,(FA),Noah's Nifty Team,{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,snapshot
+Family Fantasy,2026,8,ADD,Tyler Bass,K,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
+Family Fantasy,2026,8,ADD,Commanders D/ST,D/ST,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
+Family Fantasy,2026,8,ADD,Corey Kiner,RB,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
+Family Fantasy,2026,8,ADD,Malik Willis,QB,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,snapshot
+Family Fantasy,2026,8,ADD,Eli Raridon,TE,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,snapshot
+Family Fantasy,2026,8,ADD,Patriots D/ST,D/ST,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,snapshot
+Family Fantasy,2026,8,ADD,Geno Smith,QB,(FA),For Me to Poop On,{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,snapshot
+Family Fantasy,2026,8,DROP,Texans D/ST,D/ST,Your Mom,(FA),{F1F84656-65C6-418D-85EB-A941DF949C09},0,snapshot
+Family Fantasy,2026,8,DROP,Justin Herbert,QB,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
 Family Fantasy,2026,8,DROP,Dontayvion Wicks,WR,Flacillionares,(FA),{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
-Family Fantasy,2026,8,DROP,Marvin Harrison Jr.,WR,Big Bosh Bashers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
-Family Fantasy,2026,8,DROP,Jake Ferguson,TE,Noah's Nifty Team,(FA),{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,activity
-Family Fantasy,2026,8,DROP,Titans D/ST,D/ST,Noah's Nifty Team,(FA),{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,activity
-Family Fantasy,2026,8,DROP,Lions D/ST,D/ST,That movie was great...,(FA),{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,activity
-Family Fantasy,2026,8,DROP,Brian Thomas Jr.,WR,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
-Family Fantasy,2026,8,DROP,Chris Rodriguez Jr.,RB,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
-Family Fantasy,2026,8,DROP,Cowboys D/ST,D/ST,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
-Family Fantasy,2026,8,DROP,Isaiah Davis,RB,Delco Dee,(FA),{8F726947-16B6-4023-8839-58DD00CD6659},0,activity
-Family Fantasy,2026,8,DROP,Ryan Fitzgerald,K,For Me to Poop On,(FA),{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,activity
-Family Fantasy,2026,8,DROP,Devaughn Vele,WR,lawrence's Lucrative Team,(FA),{D0CA38D4-82C5-48C1-8974-77C7B710B5EB},0,activity
-Family Fantasy,2026,8,DROP,Ravens D/ST,D/ST,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
-Family Fantasy,2026,8,DROP,Eddy Pineiro,K,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,8,DROP,Marvin Harrison Jr.,WR,Big Bosh Bashers,(FA),{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
+Family Fantasy,2026,8,DROP,Jake Ferguson,TE,Noah's Nifty Team,(FA),{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,snapshot
+Family Fantasy,2026,8,DROP,Titans D/ST,D/ST,Noah's Nifty Team,(FA),{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,snapshot
+Family Fantasy,2026,8,DROP,Lions D/ST,D/ST,That movie was great...,(FA),{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,snapshot
+Family Fantasy,2026,8,DROP,Brian Thomas Jr.,WR,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,snapshot
+Family Fantasy,2026,8,DROP,Chris Rodriguez Jr.,RB,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,snapshot
+Family Fantasy,2026,8,DROP,Cowboys D/ST,D/ST,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,snapshot
+Family Fantasy,2026,8,DROP,Isaiah Davis,RB,Delco Dee,(FA),{8F726947-16B6-4023-8839-58DD00CD6659},0,snapshot
+Family Fantasy,2026,8,DROP,Ryan Fitzgerald,K,For Me to Poop On,(FA),{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,snapshot
+Family Fantasy,2026,8,DROP,Devaughn Vele,WR,lawrence's Lucrative Team,(FA),{D0CA38D4-82C5-48C1-8974-77C7B710B5EB},0,snapshot
+Family Fantasy,2026,8,DROP,Ravens D/ST,D/ST,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
+Family Fantasy,2026,8,DROP,Eddy Pineiro,K,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
 Family Fantasy,2026,8,DROP,Jets D/ST,D/ST,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,9,ADD,Jake Bates,K,(FA),That movie was great...,{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,activity
+Family Fantasy,2026,9,ADD,Bills D/ST,D/ST,(FA),That movie was great...,{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,activity
+Family Fantasy,2026,9,ADD,Adonai Mitchell,WR,(FA),Jackson's Scary Team,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
+Family Fantasy,2026,9,ADD,Chiefs D/ST,D/ST,(FA),Your Mom,{F1F84656-65C6-418D-85EB-A941DF949C09},0,activity
+Family Fantasy,2026,9,ADD,Giants D/ST,D/ST,(FA),lawrence's Lucrative Team,{D0CA38D4-82C5-48C1-8974-77C7B710B5EB},0,activity
+Family Fantasy,2026,9,ADD,Jadarian Price,RB,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,9,ADD,Chris Rodriguez Jr.,RB,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,9,ADD,Jakobi Meyers,WR,Big Bosh Bashers,Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,9,ADD,Texans D/ST,D/ST,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,9,ADD,Michael Penix Jr.,QB,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,9,ADD,Chig Okonkwo,TE,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,9,ADD,Devin Singletary,RB,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,9,ADD,Cameron Dicker,K,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
+Family Fantasy,2026,9,ADD,Antonio Williams,WR,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
+Family Fantasy,2026,9,ADD,Audric Estime,RB,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
+Family Fantasy,2026,9,DROP,Tyler Loop,K,That movie was great...,(FA),{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,activity
+Family Fantasy,2026,9,DROP,Buccaneers D/ST,D/ST,That movie was great...,(FA),{5134AA18-1271-4376-B91C-1EECCCFF2E92},0,activity
+Family Fantasy,2026,9,DROP,Bengals D/ST,D/ST,Your Mom,(FA),{F1F84656-65C6-418D-85EB-A941DF949C09},0,activity
+Family Fantasy,2026,9,DROP,Jordan Mason,RB,Flacillionares,(FA),{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,9,DROP,Emanuel Wilson,RB,Flacillionares,(FA),{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,9,DROP,49ers D/ST,D/ST,Flacillionares,(FA),{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,9,DROP,Dameon Pierce,RB,lawrence's Lucrative Team,(FA),{D0CA38D4-82C5-48C1-8974-77C7B710B5EB},0,activity
+Family Fantasy,2026,9,DROP,Kenny Gainwell,RB,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,9,DROP,Baker Mayfield,QB,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,9,DROP,Commanders D/ST,D/ST,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,9,DROP,Corey Kiner,RB,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,9,DROP,Brian Robinson Jr.,RB,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
+Family Fantasy,2026,9,DROP,Chris Boswell,K,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
+Family Fantasy,2026,9,DROP,Eli Raridon,TE,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity

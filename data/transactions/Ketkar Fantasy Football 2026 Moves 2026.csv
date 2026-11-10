@@ -109,23 +109,42 @@ Ketkar Fantasy Football 2026,2026,7,DROP,Jeremiyah Love,RB,Gotham City Gridiron 
 Ketkar Fantasy Football 2026,2026,7,DROP,Terry McLaurin,WR,Gotham City Gridiron Gang ,(FA),{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,snapshot
 Ketkar Fantasy Football 2026,2026,7,DROP,49ers D/ST,D/ST,Gotham City Gridiron Gang ,(FA),{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
 Ketkar Fantasy Football 2026,2026,7,DROP,Harrison Mevis,K,Akshata's Angry Team,(FA),{DC1A85FE-EF3B-4DB2-BB4D-7CC346ED1F83},0,snapshot
-Ketkar Fantasy Football 2026,2026,8,ADD,Josh Jacobs,RB,(FA),Gotham City Gridiron Gang ,{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
-Ketkar Fantasy Football 2026,2026,8,ADD,Tre Tucker,WR,(FA),Gotham City Gridiron Gang ,{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
-Ketkar Fantasy Football 2026,2026,8,ADD,Chris Boswell,K,(FA),Sharrell’s Peril,{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
-Ketkar Fantasy Football 2026,2026,8,ADD,Tyler Warren,TE,(FA),Sharrell’s Peril,{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
-Ketkar Fantasy Football 2026,2026,8,ADD,Rams D/ST,D/ST,(FA),Akshata's Angry Team,{DC1A85FE-EF3B-4DB2-BB4D-7CC346ED1F83},0,activity
-Ketkar Fantasy Football 2026,2026,8,ADD,Matt Gay,K,(FA),Walnut Rushers,{955EB9AF-875B-4D41-91AE-55067ED13817},0,activity
-Ketkar Fantasy Football 2026,2026,8,ADD,Tyler Bass,K,(FA),FP Jets,{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
-Ketkar Fantasy Football 2026,2026,8,ADD,Jaguars D/ST,D/ST,(FA),FP Jets,{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
-Ketkar Fantasy Football 2026,2026,8,ADD,Jameson Williams,WR,(FA),FP Jets,{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
-Ketkar Fantasy Football 2026,2026,8,ADD,Geno Smith,QB,(FA),FP Jets,{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
-Ketkar Fantasy Football 2026,2026,8,DROP,Eddy Pineiro,K,Sharrell’s Peril,(FA),{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
-Ketkar Fantasy Football 2026,2026,8,DROP,Emanuel Wilson,RB,Sharrell’s Peril,(FA),{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
-Ketkar Fantasy Football 2026,2026,8,DROP,Broncos D/ST,D/ST,FP Jets,(FA),{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
-Ketkar Fantasy Football 2026,2026,8,DROP,Kirk Cousins,QB,FP Jets,(FA),{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
-Ketkar Fantasy Football 2026,2026,8,DROP,Devaughn Vele,WR,FP Jets,(FA),{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
-Ketkar Fantasy Football 2026,2026,8,DROP,Dominic Zvada,K,FP Jets,(FA),{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
-Ketkar Fantasy Football 2026,2026,8,DROP,David Montgomery,RB,Gotham City Gridiron Gang ,(FA),{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
-Ketkar Fantasy Football 2026,2026,8,DROP,Jalen Coker,WR,Gotham City Gridiron Gang ,(FA),{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
-Ketkar Fantasy Football 2026,2026,8,DROP,Ka'imi Fairbairn,K,Walnut Rushers,(FA),{955EB9AF-875B-4D41-91AE-55067ED13817},0,activity
-Ketkar Fantasy Football 2026,2026,8,DROP,Texans D/ST,D/ST,Akshata's Angry Team,(FA),{DC1A85FE-EF3B-4DB2-BB4D-7CC346ED1F83},0,activity
+Ketkar Fantasy Football 2026,2026,8,ADD,Josh Jacobs,RB,(FA),Gotham City Gridiron Gang ,{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,ADD,Tre Tucker,WR,(FA),Gotham City Gridiron Gang ,{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,ADD,Chris Boswell,K,(FA),Sharrell’s Peril,{3926B2E1-C505-4808-811A-FB79E321F033},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,ADD,Tyler Warren,TE,(FA),Sharrell’s Peril,{3926B2E1-C505-4808-811A-FB79E321F033},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,ADD,Rams D/ST,D/ST,(FA),Akshata's Angry Team,{DC1A85FE-EF3B-4DB2-BB4D-7CC346ED1F83},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,ADD,Matt Gay,K,(FA),Walnut Rushers,{955EB9AF-875B-4D41-91AE-55067ED13817},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,ADD,Tyler Bass,K,(FA),FP Jets,{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,ADD,Jaguars D/ST,D/ST,(FA),FP Jets,{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,ADD,Jameson Williams,WR,(FA),FP Jets,{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,ADD,Geno Smith,QB,(FA),FP Jets,{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,DROP,Eddy Pineiro,K,Sharrell’s Peril,(FA),{3926B2E1-C505-4808-811A-FB79E321F033},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,DROP,Emanuel Wilson,RB,Sharrell’s Peril,(FA),{3926B2E1-C505-4808-811A-FB79E321F033},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,DROP,Broncos D/ST,D/ST,FP Jets,(FA),{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,DROP,Kirk Cousins,QB,FP Jets,(FA),{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,DROP,Devaughn Vele,WR,FP Jets,(FA),{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,DROP,Dominic Zvada,K,FP Jets,(FA),{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,DROP,David Montgomery,RB,Gotham City Gridiron Gang ,(FA),{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,DROP,Jalen Coker,WR,Gotham City Gridiron Gang ,(FA),{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,DROP,Ka'imi Fairbairn,K,Walnut Rushers,(FA),{955EB9AF-875B-4D41-91AE-55067ED13817},0,snapshot
+Ketkar Fantasy Football 2026,2026,8,DROP,Texans D/ST,D/ST,Akshata's Angry Team,(FA),{DC1A85FE-EF3B-4DB2-BB4D-7CC346ED1F83},0,snapshot
+Ketkar Fantasy Football 2026,2026,9,ADD,Jonah Coleman,RB,(FA),"Lox, Stocks and 2 Skattebooms!",{B3EECEB5-F0FC-447C-9E12-EED841B68D35},0,activity
+Ketkar Fantasy Football 2026,2026,9,ADD,Ka'imi Fairbairn,K,(FA),Gotham City Gridiron Gang ,{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
+Ketkar Fantasy Football 2026,2026,9,ADD,Giants D/ST,D/ST,(FA),Gotham City Gridiron Gang ,{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
+Ketkar Fantasy Football 2026,2026,9,ADD,Bills D/ST,D/ST,(FA),Ashu’s Seahawks ,{EB42F8FA-666E-421C-86D3-2DBEA5429D63},0,activity
+Ketkar Fantasy Football 2026,2026,9,ADD,Dominic Zvada,K,(FA),Sharrell’s Peril,{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
+Ketkar Fantasy Football 2026,2026,9,ADD,Texans D/ST,D/ST,(FA),Sharrell’s Peril,{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
+Ketkar Fantasy Football 2026,2026,9,ADD,Jake Bates,K,(FA),Sharrell’s Peril,{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
+Ketkar Fantasy Football 2026,2026,9,ADD,Spencer Shrader,K,Gotham City Gridiron Gang ,Walnut Rushers,{955EB9AF-875B-4D41-91AE-55067ED13817},0,activity
+Ketkar Fantasy Football 2026,2026,9,ADD,Broncos D/ST,D/ST,(FA),Walnut Rushers,{955EB9AF-875B-4D41-91AE-55067ED13817},0,activity
+Ketkar Fantasy Football 2026,2026,9,ADD,Jalen Coker,WR,(FA),FP Jets,{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
+Ketkar Fantasy Football 2026,2026,9,ADD,Malik Willis,QB,(FA),FP Jets,{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
+Ketkar Fantasy Football 2026,2026,9,DROP,Ravens D/ST,D/ST,Ashu’s Seahawks ,(FA),{EB42F8FA-666E-421C-86D3-2DBEA5429D63},0,activity
+Ketkar Fantasy Football 2026,2026,9,DROP,Bengals D/ST,D/ST,Gotham City Gridiron Gang ,(FA),{26C04448-1F3E-4910-8543-01A4DAB0A6B5},0,activity
+Ketkar Fantasy Football 2026,2026,9,DROP,Dalton Kincaid,TE,Sharrell’s Peril,(FA),{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
+Ketkar Fantasy Football 2026,2026,9,DROP,Vikings D/ST,D/ST,Sharrell’s Peril,(FA),{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
+Ketkar Fantasy Football 2026,2026,9,DROP,Chris Boswell,K,Sharrell’s Peril,(FA),{3926B2E1-C505-4808-811A-FB79E321F033},0,activity
+Ketkar Fantasy Football 2026,2026,9,DROP,Chiefs D/ST,D/ST,Walnut Rushers,(FA),{955EB9AF-875B-4D41-91AE-55067ED13817},0,activity
+Ketkar Fantasy Football 2026,2026,9,DROP,Aaron Rodgers,QB,FP Jets,(FA),{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
+Ketkar Fantasy Football 2026,2026,9,DROP,Geno Smith,QB,FP Jets,(FA),{16AA87D0-953F-4F2A-AA87-D0953F7F2ACE},0,activity
