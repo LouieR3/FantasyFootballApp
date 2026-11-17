@@ -49,7 +49,6 @@ hannah_s2 = CRED["hannah_s2"]
 ava_s2 = CRED["ava_s2"]
 matt_s2 = CRED["matt_s2"]
 elle_s2 = CRED["elle_s2"]
-ayush_league2_s2 = CRED["ayush_league2_s2"]
 # print(league.free_agents(position='QB'))
 # print()
 # print(league.free_agents(position='WR'))
