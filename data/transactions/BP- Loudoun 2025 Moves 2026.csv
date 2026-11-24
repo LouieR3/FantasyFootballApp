@@ -199,41 +199,75 @@ BP- Loudoun 2025,2026,9,DROP,Kendre Miller,RB,"Bears, Jags, Foxes, Oh My!",(FA),
 BP- Loudoun 2025,2026,9,DROP,Eagles D/ST,D/ST,"Bears, Jags, Foxes, Oh My!",(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
 BP- Loudoun 2025,2026,9,DROP,Dallas Goedert,TE,Yahya's Crew,(FA),{02235E1C-5112-4E60-B33B-855CF6F17474},0,snapshot
 BP- Loudoun 2025,2026,9,DROP,Kendrick Bourne,WR,Yahya's Crew,(FA),{02235E1C-5112-4E60-B33B-855CF6F17474},0,snapshot
-BP- Loudoun 2025,2026,10,ADD,Tutu Atwell,WR,(FA),Hannah's Hail Mary,{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,activity
-BP- Loudoun 2025,2026,10,ADD,Panthers D/ST,D/ST,(FA),Hannah's Hail Mary,{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,activity
-BP- Loudoun 2025,2026,10,ADD,Chris Boswell,K,(FA),Hannah's Hail Mary,{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,activity
-BP- Loudoun 2025,2026,10,ADD,Cam Ward,QB,(FA),Hannah's Hail Mary,{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,activity
-BP- Loudoun 2025,2026,10,ADD,Corey Kiner,RB,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,activity
-BP- Loudoun 2025,2026,10,ADD,Audric Estime,RB,(FA),"Bears, Jags, Foxes, Oh My!",{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
-BP- Loudoun 2025,2026,10,ADD,Colts D/ST,D/ST,(FA),"Bears, Jags, Foxes, Oh My!",{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
+BP- Loudoun 2025,2026,10,ADD,Tutu Atwell,WR,(FA),Hannah's Hail Mary,{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Panthers D/ST,D/ST,(FA),Hannah's Hail Mary,{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Chris Boswell,K,(FA),Hannah's Hail Mary,{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Cam Ward,QB,(FA),Hannah's Hail Mary,{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Corey Kiner,RB,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Audric Estime,RB,(FA),"Bears, Jags, Foxes, Oh My!",{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Colts D/ST,D/ST,(FA),"Bears, Jags, Foxes, Oh My!",{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
 BP- Loudoun 2025,2026,10,ADD,Deshaun Watson,QB,(FA),"Bears, Jags, Foxes, Oh My!",{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
-BP- Loudoun 2025,2026,10,ADD,Austin Ekeler,RB,(FA),Dave's Dynamos,{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,activity
-BP- Loudoun 2025,2026,10,ADD,Packers D/ST,D/ST,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,activity
-BP- Loudoun 2025,2026,10,ADD,Konata Mumpfield,WR,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,activity
-BP- Loudoun 2025,2026,10,ADD,49ers D/ST,D/ST,(FA),Laces Out Dan,{C3E40188-7814-4A00-A401-887814CA00FA},0,activity
-BP- Loudoun 2025,2026,10,ADD,AJ Barner,TE,(FA),Laces Out Dan,{C3E40188-7814-4A00-A401-887814CA00FA},0,activity
-BP- Loudoun 2025,2026,10,ADD,Darren Waller,TE,(FA),Yahya's Crew,{02235E1C-5112-4E60-B33B-855CF6F17474},0,activity
-BP- Loudoun 2025,2026,10,ADD,Fernando Mendoza,QB,(FA),Graesser's Golden Receivers,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity
-BP- Loudoun 2025,2026,10,ADD,Darnell Washington,TE,(FA),Jeffrey's Team THAT NEVER WINS,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,activity
+BP- Loudoun 2025,2026,10,ADD,Austin Ekeler,RB,(FA),Dave's Dynamos,{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Packers D/ST,D/ST,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Konata Mumpfield,WR,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,49ers D/ST,D/ST,(FA),Laces Out Dan,{C3E40188-7814-4A00-A401-887814CA00FA},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,AJ Barner,TE,(FA),Laces Out Dan,{C3E40188-7814-4A00-A401-887814CA00FA},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Darren Waller,TE,(FA),Yahya's Crew,{02235E1C-5112-4E60-B33B-855CF6F17474},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Fernando Mendoza,QB,(FA),Graesser's Golden Receivers,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Darnell Washington,TE,(FA),Jeffrey's Team THAT NEVER WINS,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
 BP- Loudoun 2025,2026,10,ADD,Justice Hill,RB,(FA),Jeffrey's Team THAT NEVER WINS,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,activity
-BP- Loudoun 2025,2026,10,ADD,Xavier Hutchinson,WR,(FA),Jeffrey's Team THAT NEVER WINS,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,activity
-BP- Loudoun 2025,2026,10,ADD,Jason Sanders,K,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,activity
-BP- Loudoun 2025,2026,10,DROP,Terrance Ferguson,TE,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,activity
-BP- Loudoun 2025,2026,10,DROP,Kyler Murray,QB,Hannah's Hail Mary,(FA),{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,activity
-BP- Loudoun 2025,2026,10,DROP,Chase McLaughlin,K,Hannah's Hail Mary,(FA),{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,activity
-BP- Loudoun 2025,2026,10,DROP,Isaiah Davis,RB,Hannah's Hail Mary,(FA),{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,activity
-BP- Loudoun 2025,2026,10,DROP,Dohnte Meyers,WR,Hannah's Hail Mary,(FA),{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,activity
-BP- Loudoun 2025,2026,10,DROP,Brian Robinson Jr.,RB,Dave's Dynamos,(FA),{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,activity
-BP- Loudoun 2025,2026,10,DROP,Jake Ferguson,TE,Laces Out Dan,(FA),{C3E40188-7814-4A00-A401-887814CA00FA},0,activity
-BP- Loudoun 2025,2026,10,DROP,Bears D/ST,D/ST,Laces Out Dan,(FA),{C3E40188-7814-4A00-A401-887814CA00FA},0,activity
-BP- Loudoun 2025,2026,10,DROP,Michael Wilson,WR,Graesser's Golden Receivers,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity
-BP- Loudoun 2025,2026,10,DROP,Bengals D/ST,D/ST,"Bears, Jags, Foxes, Oh My!",(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
+BP- Loudoun 2025,2026,10,ADD,Xavier Hutchinson,WR,(FA),Jeffrey's Team THAT NEVER WINS,{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2026,10,ADD,Jason Sanders,K,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Terrance Ferguson,TE,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Kyler Murray,QB,Hannah's Hail Mary,(FA),{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Chase McLaughlin,K,Hannah's Hail Mary,(FA),{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Isaiah Davis,RB,Hannah's Hail Mary,(FA),{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Dohnte Meyers,WR,Hannah's Hail Mary,(FA),{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Brian Robinson Jr.,RB,Dave's Dynamos,(FA),{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Jake Ferguson,TE,Laces Out Dan,(FA),{C3E40188-7814-4A00-A401-887814CA00FA},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Bears D/ST,D/ST,Laces Out Dan,(FA),{C3E40188-7814-4A00-A401-887814CA00FA},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Michael Wilson,WR,Graesser's Golden Receivers,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Bengals D/ST,D/ST,"Bears, Jags, Foxes, Oh My!",(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
 BP- Loudoun 2025,2026,10,DROP,Cowboys D/ST,D/ST,"Bears, Jags, Foxes, Oh My!",(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
-BP- Loudoun 2025,2026,10,DROP,Joe Milton,QB,"Bears, Jags, Foxes, Oh My!",(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
-BP- Loudoun 2025,2026,10,DROP,Nick Folk,K,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,activity
-BP- Loudoun 2025,2026,10,DROP,Ja'Kobi Lane,WR,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,activity
-BP- Loudoun 2025,2026,10,DROP,Roman Wilson,WR,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,activity
-BP- Loudoun 2025,2026,10,DROP,Malik Willis,QB,Jeffrey's Team THAT NEVER WINS,(FA),{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,activity
-BP- Loudoun 2025,2026,10,DROP,Jeremy McNichols,RB,Jeffrey's Team THAT NEVER WINS,(FA),{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,activity
+BP- Loudoun 2025,2026,10,DROP,Joe Milton,QB,"Bears, Jags, Foxes, Oh My!",(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Nick Folk,K,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Ja'Kobi Lane,WR,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Roman Wilson,WR,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Malik Willis,QB,Jeffrey's Team THAT NEVER WINS,(FA),{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
+BP- Loudoun 2025,2026,10,DROP,Jeremy McNichols,RB,Jeffrey's Team THAT NEVER WINS,(FA),{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,snapshot
 BP- Loudoun 2025,2026,10,DROP,Harrison Butker,K,Jeffrey's Team THAT NEVER WINS,(FA),{DD7B52C4-07A8-4D1A-9C13-3F2F725D851E},0,activity
-BP- Loudoun 2025,2026,10,DROP,Mason Taylor,TE,Yahya's Crew,(FA),{02235E1C-5112-4E60-B33B-855CF6F17474},0,activity
+BP- Loudoun 2025,2026,10,DROP,Mason Taylor,TE,Yahya's Crew,(FA),{02235E1C-5112-4E60-B33B-855CF6F17474},0,snapshot
+BP- Loudoun 2025,2026,11,ADD,Cowboys D/ST,D/ST,(FA),Team Schottler,{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,activity
+BP- Loudoun 2025,2026,11,ADD,Elic Ayomanor,WR,(FA),Hannah's Hail Mary,{4375637E-BE98-463A-BC78-7D6AD1D285D8},0,activity
+BP- Loudoun 2025,2026,11,ADD,J.J. McCarthy,QB,(FA),Dale's Dangerous Team,{56CFC8FF-F79E-4080-8DB4-22446FAED9DE},0,activity
+BP- Loudoun 2025,2026,11,ADD,Michael Mayer,TE,(FA),Dale's Dangerous Team,{56CFC8FF-F79E-4080-8DB4-22446FAED9DE},0,activity
+BP- Loudoun 2025,2026,11,ADD,Baker Mayfield,QB,(FA),Dale's Dangerous Team,{56CFC8FF-F79E-4080-8DB4-22446FAED9DE},0,activity
+BP- Loudoun 2025,2026,11,ADD,Jets D/ST,D/ST,(FA),"Bears, Jags, Foxes, Oh My!",{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
+BP- Loudoun 2025,2026,11,ADD,Chig Okonkwo,TE,(FA),"Bears, Jags, Foxes, Oh My!",{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
+BP- Loudoun 2025,2026,11,ADD,Harrison Butker,K,(FA),"Bears, Jags, Foxes, Oh My!",{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
+BP- Loudoun 2025,2026,11,ADD,Cameron Dicker,K,(FA),Yangblood Bravesheart,{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,activity
+BP- Loudoun 2025,2026,11,ADD,Mark Andrews,TE,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,activity
+BP- Loudoun 2025,2026,11,ADD,Buccaneers D/ST,D/ST,Hannah's Hail Mary,Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,activity
+BP- Loudoun 2025,2026,11,ADD,Wil Lutz,K,(FA),Tracey Time,{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,activity
+BP- Loudoun 2025,2026,11,ADD,Chargers D/ST,D/ST,(FA),Dave's Dynamos,{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,activity
+BP- Loudoun 2025,2026,11,ADD,Bengals D/ST,D/ST,(FA),Graesser's Golden Receivers,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity
+BP- Loudoun 2025,2026,11,ADD,Roman Wilson,WR,(FA),Graesser's Golden Receivers,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity
+BP- Loudoun 2025,2026,11,ADD,Treylon Burks,WR,"Bears, Jags, Foxes, Oh My!",Graesser's Golden Receivers,{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity
+BP- Loudoun 2025,2026,11,ADD,Bears D/ST,D/ST,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,activity
+BP- Loudoun 2025,2026,11,ADD,Dallas Goedert,TE,(FA),Sporty Jess,{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,activity
+BP- Loudoun 2025,2026,11,DROP,Tyson Bagent,QB,Team Schottler,(FA),{E7CC7F46-F717-486C-97F3-AA57BBB5769A},0,activity
+BP- Loudoun 2025,2026,11,DROP,Puka Nacua,WR,Dale's Dangerous Team,(FA),{56CFC8FF-F79E-4080-8DB4-22446FAED9DE},0,activity
+BP- Loudoun 2025,2026,11,DROP,Drake Maye,QB,Dale's Dangerous Team,(FA),{56CFC8FF-F79E-4080-8DB4-22446FAED9DE},0,activity
+BP- Loudoun 2025,2026,11,DROP,Quentin Johnston,WR,Dale's Dangerous Team,(FA),{56CFC8FF-F79E-4080-8DB4-22446FAED9DE},0,activity
+BP- Loudoun 2025,2026,11,DROP,Lions D/ST,D/ST,Yangblood Bravesheart,(FA),{E2B51AC9-D133-4155-B51A-C9D133E155BA},0,activity
+BP- Loudoun 2025,2026,11,DROP,Trey Smack,K,"Bears, Jags, Foxes, Oh My!",(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
+BP- Loudoun 2025,2026,11,DROP,Colts D/ST,D/ST,"Bears, Jags, Foxes, Oh My!",(FA),{39E08083-F55A-4B88-BF41-49FD650A38A3},0,activity
+BP- Loudoun 2025,2026,11,DROP,Dominic Zvada,K,Dave's Dynamos,(FA),{2D0A9ED9-7CEF-491E-A06F-8EA650E59725},0,activity
+BP- Loudoun 2025,2026,11,DROP,Wan'Dale Robinson,WR,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,activity
+BP- Loudoun 2025,2026,11,DROP,Samaje Perine,RB,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,activity
+BP- Loudoun 2025,2026,11,DROP,Drew Lock,QB,Tracey Time,(FA),{7620C450-A7B4-4E78-82D4-83946B8B23FC},0,activity
+BP- Loudoun 2025,2026,11,DROP,Hunter Henry,TE,Graesser's Golden Receivers,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity
+BP- Loudoun 2025,2026,11,DROP,Omar Cooper Jr.,WR,Graesser's Golden Receivers,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity
+BP- Loudoun 2025,2026,11,DROP,Chris Rodriguez Jr.,RB,Graesser's Golden Receivers,(FA),{F8FBCEF4-616F-45CD-BBCE-F4616FE5CD64},0,activity
+BP- Loudoun 2025,2026,11,DROP,Cade Otton,TE,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,activity
+BP- Loudoun 2025,2026,11,DROP,Saints D/ST,D/ST,Sporty Jess,(FA),{67B61FF5-4A13-4CFA-B61F-F54A13BCFAC4},0,activity

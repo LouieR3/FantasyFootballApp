@@ -134,18 +134,38 @@ Ross' Fantasy League,2026,9,DROP,Jalen Hurts,QB,Ross' Sauces,(FA),{F8ED09F9-E354
 Ross' Fantasy League,2026,9,DROP,Cam Little,K,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
 Ross' Fantasy League,2026,9,DROP,Chris Boswell,K,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
 Ross' Fantasy League,2026,9,DROP,Cairo Santos,K,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
-Ross' Fantasy League,2026,10,ADD,Cam Little,K,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,activity
-Ross' Fantasy League,2026,10,ADD,Bryce Young,QB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Ross' Fantasy League,2026,10,ADD,Jadarian Price,RB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Ross' Fantasy League,2026,10,ADD,Audric Estime,RB,(FA),Chill YNs,{61563278-5915-4089-8B19-0BFACDFA9B38},0,activity
-Ross' Fantasy League,2026,10,TRADE,Josh Downs,WR,big beautiful lugia,Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,activity
-Ross' Fantasy League,2026,10,ADD,Emmett Johnson,RB,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,activity
-Ross' Fantasy League,2026,10,ADD,Hunter Henry,TE,(FA),Tailed Bijan Bomb,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
+Ross' Fantasy League,2026,10,ADD,Cam Little,K,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2026,10,ADD,Bryce Young,QB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2026,10,ADD,Jadarian Price,RB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2026,10,ADD,Audric Estime,RB,(FA),Chill YNs,{61563278-5915-4089-8B19-0BFACDFA9B38},0,snapshot
+Ross' Fantasy League,2026,10,TRADE,Josh Downs,WR,big beautiful lugia,Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2026,10,ADD,Emmett Johnson,RB,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2026,10,ADD,Hunter Henry,TE,(FA),Tailed Bijan Bomb,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
 Ross' Fantasy League,2026,10,ADD,Steelers D/ST,D/ST,(FA),Yung Killas,{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,activity
-Ross' Fantasy League,2026,10,TRADE,Dalton Kincaid,TE,Ross' Sauces,big beautiful lugia,{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,activity
-Ross' Fantasy League,2026,10,DROP,Tyler Loop,K,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,activity
-Ross' Fantasy League,2026,10,DROP,Braelon Allen,RB,Tailed Bijan Bomb,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
-Ross' Fantasy League,2026,10,DROP,TreVeyon Henderson,RB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Ross' Fantasy League,2026,10,DROP,Bears D/ST,D/ST,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Ross' Fantasy League,2026,10,DROP,Jonathon Brooks,RB,Chill YNs,(FA),{61563278-5915-4089-8B19-0BFACDFA9B38},0,activity
-Ross' Fantasy League,2026,10,DROP,Broncos D/ST,D/ST,Yung Killas,(FA),{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,activity
+Ross' Fantasy League,2026,10,TRADE,Dalton Kincaid,TE,Ross' Sauces,big beautiful lugia,{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,snapshot
+Ross' Fantasy League,2026,10,DROP,Tyler Loop,K,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,snapshot
+Ross' Fantasy League,2026,10,DROP,Braelon Allen,RB,Tailed Bijan Bomb,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,snapshot
+Ross' Fantasy League,2026,10,DROP,TreVeyon Henderson,RB,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2026,10,DROP,Bears D/ST,D/ST,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Ross' Fantasy League,2026,10,DROP,Jonathon Brooks,RB,Chill YNs,(FA),{61563278-5915-4089-8B19-0BFACDFA9B38},0,snapshot
+Ross' Fantasy League,2026,10,DROP,Broncos D/ST,D/ST,Yung Killas,(FA),{97D2EB78-E92D-4E1F-94B3-CE836B504199},0,snapshot
+Ross' Fantasy League,2026,11,ADD,Omarion Hampton,RB,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,activity
+Ross' Fantasy League,2026,11,ADD,Chig Okonkwo,TE,(FA),Chase Ball. Touchdown!,{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,activity
+Ross' Fantasy League,2026,11,ADD,David Montgomery,RB,(FA),Yvng Killas,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
+Ross' Fantasy League,2026,11,ADD,Chiefs D/ST,D/ST,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,activity
+Ross' Fantasy League,2026,11,TRADE,Patrick Mahomes,QB,big beautiful lugia,Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,snapshot
+Ross' Fantasy League,2026,11,ADD,Jakobi Meyers,WR,(FA),Ross' Sauces,{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,activity
+Ross' Fantasy League,2026,11,ADD,Tyler Shough,QB,(FA),Tailed Bijan Bomb,{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
+Ross' Fantasy League,2026,11,TRADE,Jaylen Waddle,WR,Ross' Sauces,big beautiful lugia,{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,snapshot
+Ross' Fantasy League,2026,11,TRADE,Matthew Stafford,QB,Ross' Sauces,big beautiful lugia,{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,snapshot
+Ross' Fantasy League,2026,11,ADD,Tyler Bass,K,(FA),big beautiful lugia,{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,activity
+Ross' Fantasy League,2026,11,ADD,Broncos D/ST,D/ST,(FA),big beautiful lugia,{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,activity
+Ross' Fantasy League,2026,11,DROP,Rhamondre Stevenson,RB,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,activity
+Ross' Fantasy League,2026,11,DROP,Chase McLaughlin,K,Chase Ball. Touchdown!,(FA),{FDCCB170-6343-4A5C-BBA2-4A7EE4C6F76A},0,activity
+Ross' Fantasy League,2026,11,DROP,Dallas Goedert,TE,Yvng Killas,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
+Ross' Fantasy League,2026,11,DROP,Tyler Allgeier,RB,Ross' Sauces,(FA),{F8ED09F9-E354-49AF-ADF7-73E9D32B62EB},0,activity
+Ross' Fantasy League,2026,11,DROP,Hunter Henry,TE,Tailed Bijan Bomb,(FA),{B644AC1E-B15A-492F-90A8-E74A28ECCC48},0,activity
+Ross' Fantasy League,2026,11,DROP,Trevor Lawrence,QB,big beautiful lugia,(FA),{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,activity
+Ross' Fantasy League,2026,11,DROP,Jalen Coker,WR,big beautiful lugia,(FA),{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,activity
+Ross' Fantasy League,2026,11,DROP,Woody Marks,RB,big beautiful lugia,(FA),{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,activity
+Ross' Fantasy League,2026,11,DROP,Browns D/ST,D/ST,big beautiful lugia,(FA),{CFEF77D1-EE9E-4B33-A5B9-5529BF6DA67A},0,activity

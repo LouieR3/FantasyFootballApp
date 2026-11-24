@@ -204,26 +204,55 @@ Family Fantasy,2026,9,DROP,Brian Robinson Jr.,RB,Ragebaiters,(FA),{6056B364-2BEC
 Family Fantasy,2026,9,DROP,Chris Boswell,K,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,snapshot
 Family Fantasy,2026,9,DROP,Eli Raridon,TE,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,snapshot
 Family Fantasy,2026,10,ADD,Eli Raridon,TE,(FA),Jackson's Scary Team,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Family Fantasy,2026,10,ADD,Ravens D/ST,D/ST,(FA),Jackson's Scary Team,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Family Fantasy,2026,10,ADD,Mack Hollins,WR,(FA),Jackson's Scary Team,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
+Family Fantasy,2026,10,ADD,Ravens D/ST,D/ST,(FA),Jackson's Scary Team,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Family Fantasy,2026,10,ADD,Mack Hollins,WR,(FA),Jackson's Scary Team,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
 Family Fantasy,2026,10,ADD,Dylan Sampson,RB,(FA),Jackson's Scary Team,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Family Fantasy,2026,10,ADD,Drew Lock,QB,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
-Family Fantasy,2026,10,ADD,Tank Dell,WR,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
-Family Fantasy,2026,10,ADD,Jordan Mason,RB,(FA),Big Bosh Bashers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
+Family Fantasy,2026,10,ADD,Drew Lock,QB,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
+Family Fantasy,2026,10,ADD,Tank Dell,WR,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
+Family Fantasy,2026,10,ADD,Jordan Mason,RB,(FA),Big Bosh Bashers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,snapshot
 Family Fantasy,2026,10,ADD,Josh Downs,WR,Big Bosh Bashers,Your Mom,{F1F84656-65C6-418D-85EB-A941DF949C09},0,activity
-Family Fantasy,2026,10,ADD,Packers D/ST,D/ST,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,10,ADD,Packers D/ST,D/ST,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,snapshot
 Family Fantasy,2026,10,ADD,Corey Kiner,RB,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
 Family Fantasy,2026,10,ADD,Commanders D/ST,D/ST,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
-Family Fantasy,2026,10,ADD,Chris Boswell,K,(FA),Noah's Nifty Team,{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,activity
-Family Fantasy,2026,10,ADD,49ers D/ST,D/ST,(FA),Noah's Nifty Team,{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,activity
-Family Fantasy,2026,10,DROP,Rashid Shaheed,WR,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Family Fantasy,2026,10,DROP,Jordyn Tyson,WR,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Family Fantasy,2026,10,DROP,Aaron Rodgers,QB,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Family Fantasy,2026,10,DROP,Chad Ryland,K,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
-Family Fantasy,2026,10,DROP,Keon Coleman,WR,Your Mom,(FA),{F1F84656-65C6-418D-85EB-A941DF949C09},0,activity
+Family Fantasy,2026,10,ADD,Chris Boswell,K,(FA),Noah's Nifty Team,{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,snapshot
+Family Fantasy,2026,10,ADD,49ers D/ST,D/ST,(FA),Noah's Nifty Team,{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,snapshot
+Family Fantasy,2026,10,DROP,Rashid Shaheed,WR,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Family Fantasy,2026,10,DROP,Jordyn Tyson,WR,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Family Fantasy,2026,10,DROP,Aaron Rodgers,QB,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Family Fantasy,2026,10,DROP,Chad Ryland,K,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,snapshot
+Family Fantasy,2026,10,DROP,Keon Coleman,WR,Your Mom,(FA),{F1F84656-65C6-418D-85EB-A941DF949C09},0,snapshot
 Family Fantasy,2026,10,DROP,Chris Rodriguez Jr.,RB,Flacillionares,(FA),{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
-Family Fantasy,2026,10,DROP,Michael Penix Jr.,QB,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
-Family Fantasy,2026,10,DROP,Chig Okonkwo,TE,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
-Family Fantasy,2026,10,DROP,Bears D/ST,D/ST,Noah's Nifty Team,(FA),{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,activity
-Family Fantasy,2026,10,DROP,Malik Willis,QB,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
-Family Fantasy,2026,10,DROP,Patriots D/ST,D/ST,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
+Family Fantasy,2026,10,DROP,Michael Penix Jr.,QB,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
+Family Fantasy,2026,10,DROP,Chig Okonkwo,TE,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,snapshot
+Family Fantasy,2026,10,DROP,Bears D/ST,D/ST,Noah's Nifty Team,(FA),{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,snapshot
+Family Fantasy,2026,10,DROP,Malik Willis,QB,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,snapshot
+Family Fantasy,2026,10,DROP,Patriots D/ST,D/ST,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,snapshot
+Family Fantasy,2026,11,ADD,Fernando Mendoza,QB,(FA),Jackson's Scary Team,{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
+Family Fantasy,2026,11,ADD,Panthers D/ST,D/ST,(FA),Delco Dee,{8F726947-16B6-4023-8839-58DD00CD6659},0,activity
+Family Fantasy,2026,11,ADD,Darren Waller,TE,(FA),Delco Dee,{8F726947-16B6-4023-8839-58DD00CD6659},0,activity
+Family Fantasy,2026,11,ADD,Pat Freiermuth,TE,ICSquirrels,Delco Dee,{8F726947-16B6-4023-8839-58DD00CD6659},0,activity
+Family Fantasy,2026,11,ADD,Cam Ward,QB,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,11,ADD,Xavier Hutchinson,WR,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,11,ADD,Chig Okonkwo,TE,(FA),ICSquirrels,{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,11,ADD,Jets D/ST,D/ST,(FA),Big Bosh Bashers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
+Family Fantasy,2026,11,ADD,Dawson Knox,TE,(FA),Big Bosh Bashers,{4656A2AD-A939-460B-96A2-ADA939760B8B},0,activity
+Family Fantasy,2026,11,ADD,Jordan Mason,RB,Big Bosh Bashers,For Me to Poop On,{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,activity
+Family Fantasy,2026,11,ADD,Chris Boswell,K,Noah's Nifty Team,Your Mom,{F1F84656-65C6-418D-85EB-A941DF949C09},0,activity
+Family Fantasy,2026,11,ADD,Jordyn Tyson,WR,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
+Family Fantasy,2026,11,ADD,Bears D/ST,D/ST,(FA),Ragebaiters,{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
+Family Fantasy,2026,11,ADD,Kenny Gainwell,RB,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,11,ADD,Lions D/ST,D/ST,(FA),Flacillionares,{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,11,DROP,Puka Nacua,WR,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
+Family Fantasy,2026,11,DROP,Eli Raridon,TE,Jackson's Scary Team,(FA),{33129857-4E92-4DF2-BA53-0AA5B27FA2F5},0,activity
+Family Fantasy,2026,11,DROP,Wan'Dale Robinson,WR,Delco Dee,(FA),{8F726947-16B6-4023-8839-58DD00CD6659},0,activity
+Family Fantasy,2026,11,DROP,George Holani,RB,Delco Dee,(FA),{8F726947-16B6-4023-8839-58DD00CD6659},0,activity
+Family Fantasy,2026,11,DROP,Bam Knight,RB,Delco Dee,(FA),{8F726947-16B6-4023-8839-58DD00CD6659},0,activity
+Family Fantasy,2026,11,DROP,Germie Bernard,WR,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,11,DROP,Devin Singletary,RB,ICSquirrels,(FA),{88877912-82AE-408B-9AD4-17D54F48BACA},0,activity
+Family Fantasy,2026,11,DROP,Ryan Flournoy,WR,Your Mom,(FA),{F1F84656-65C6-418D-85EB-A941DF949C09},0,activity
+Family Fantasy,2026,11,DROP,Mike Washington Jr.,RB,For Me to Poop On,(FA),{80A5169E-FE6E-46F3-A516-9EFE6EE6F368},0,activity
+Family Fantasy,2026,11,DROP,Malik Washington,WR,Flacillionares,(FA),{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,11,DROP,Packers D/ST,D/ST,Flacillionares,(FA),{3D72D476-8F54-423D-B1C0-E9E2C3274EEC},0,activity
+Family Fantasy,2026,11,DROP,Corey Kiner,RB,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
+Family Fantasy,2026,11,DROP,Commanders D/ST,D/ST,Ragebaiters,(FA),{6056B364-2BEC-43D7-A948-C08055FA2C5F},0,activity
+Family Fantasy,2026,11,DROP,TreVeyon Henderson,RB,Noah's Nifty Team,(FA),{1E5A87BE-D42B-42B4-AEE2-BF58906E728D},0,activity
