@@ -69,15 +69,15 @@ team_name = "Graesser's Golden Receivers"
 league = League(league_id=310334683, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 team_name = "The Golden Receivers"
 # Family League
-league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
-team_name = "Big Bosh Bashers"
+# league = League(league_id=1343668602, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
+# team_name = "Big Bosh Bashers"
 # EBC League
 # league = League(league_id=1118513122, year=year, espn_s2=espn_s2, swid=CRED["louie_swid"])
 # team_name = "P90 Asiimov"
 
 # Avas Leagueu
-# league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
-# team_name = "Big Ballsy Bozos"
+league = League(league_id=417131856, year=year, espn_s2=ava_s2, swid=CRED["ava_swid"])
+team_name = "Big Ballsy Bozos"
 
 # # Hannahs League
 # league = League(league_id=1399036372, year=year, espn_s2=hannah_s2, swid=CRED["hannah_swid"])
@@ -143,8 +143,11 @@ def fantasypros_freeagents(league, fantasypros_rank_df):
             else:
                 r = match.iloc[0]
                 pos_rank_str = r['pos_rank']  # e.g., 'RB3', 'WR2', 'TE5'
-                # Extract numeric part
-                numeric_rank = int(re.search(r'\d+', str(pos_rank_str)).group()) if pd.notnull(pos_rank_str) else 9999
+                # Extract numeric part. FantasyPros itself sometimes reports a bare
+                # position with no number (e.g. 'RB' instead of 'RB47') for a player
+                # it hasn't assigned a rank to yet -- treat that the same as no match.
+                rank_match = re.search(r'\d+', str(pos_rank_str)) if pd.notnull(pos_rank_str) else None
+                numeric_rank = int(rank_match.group()) if rank_match else 9999
                 
                 enriched.append({
                     "player_name": name,

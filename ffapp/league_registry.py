@@ -97,7 +97,13 @@ LEAGUES = [
     dict(espn_name="Ross' Fantasy League", association="Ayush (Dukes)",
          league_id=558148583, s2="ayush_s2_2026", swid="ayush_swid_2026",
          page="6_👑_Dukes_League.py", color="#c5b0d5", confirmed=False),
-    dict(espn_name="Amanda's League", association="Amanda",
+    # ESPN reports this league's own name as "Fantasy 2026" - that's what the
+    # workbook, draft files and the page's own internal join key already use.
+    # "Amanda's League" (Louie's name for it) was used as the League value for
+    # an early all_matchups.csv backfill, which the ALIASES entry below folds
+    # back onto the real name rather than leaving it a second, orphaned league.
+    dict(espn_name="Fantasy 2026", association="Amanda",
+         display="Amanda's League",
          league_id=1165085642, s2="amanda_s2", swid="amanda_swid",
          page="7_💜_Amandas_League.py", color="#e74c3c", confirmed=True),
     dict(espn_name="Ketkar Fantasy Football 2026", association="Ayush (2)",
@@ -147,6 +153,12 @@ ALIASES = {
     'Loudoun Fantasy League': 'BP- Loudoun 2025',
     # the pipelines label it without the stale year
     'BP- Loudoun': 'BP- Loudoun 2025',
+    # Louie calls it Amanda's League; ESPN calls it Fantasy 2026, and an early
+    # all_matchups.csv backfill used the former (in both a with- and without-
+    # apostrophe spelling, across different weeks) - fold both onto the real
+    # name rather than leave an orphaned league with nobody's draft attached.
+    "Amanda's League": 'Fantasy 2026',
+    'Amandas League': 'Fantasy 2026',
 }
 
 BY_NAME = {lg["espn_name"]: lg for lg in LEAGUES}
